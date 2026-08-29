@@ -14,6 +14,7 @@ import {
 
 import Dashboard from "./pages/Dashboard";
 import Quiz from "./pages/Quiz";
+import Results from "./pages/Results";
 
 /* =========================================================
    TEMPORARY PAGE
@@ -85,7 +86,6 @@ function ComingSoonPage({
             }}
           >
             <BrainCircuit size={15} />
-
             NEURAQUIZ
           </div>
 
@@ -115,7 +115,6 @@ function ComingSoonPage({
             onClick={() => navigate("/")}
           >
             <ArrowLeft size={17} />
-
             Back to Dashboard
           </button>
         </div>
@@ -125,7 +124,7 @@ function ComingSoonPage({
 }
 
 /* =========================================================
-   APPLICATION
+   APP
 ========================================================= */
 
 function App() {
@@ -145,12 +144,7 @@ function App() {
 
         <Route
           path="/results"
-          element={
-            <ComingSoonPage
-              title="Quiz Results"
-              description="Your detailed quiz result page will be added in the next update."
-            />
-          }
+          element={<Results />}
         />
 
         <Route
@@ -158,7 +152,7 @@ function App() {
           element={
             <ComingSoonPage
               title="Performance"
-              description="Your performance analytics will appear here."
+              description="Your performance analytics will be built in the next update."
             />
           }
         />
