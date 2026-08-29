@@ -13,14 +13,11 @@ import {
 } from "lucide-react";
 
 import Dashboard from "./pages/Dashboard";
+import Quiz from "./pages/Quiz";
 
-/* =====================================================
+/* =========================================================
    TEMPORARY PAGE
-
-   Abhi baaki pages empty ho sakte hain.
-   Isliye unko import nahi kar rahe.
-   Next updates me one-by-one actual pages banayenge.
-===================================================== */
+========================================================= */
 
 function ComingSoonPage({
   title,
@@ -127,107 +124,84 @@ function ComingSoonPage({
   );
 }
 
-/* =====================================================
-   APP ROUTES
-===================================================== */
+/* =========================================================
+   APPLICATION
+========================================================= */
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
 
-        {/* Dashboard */}
-
         <Route
           path="/"
           element={<Dashboard />}
         />
 
-        {/* Adaptive Quiz */}
-
         <Route
           path="/quiz"
-          element={
-            <ComingSoonPage
-              title="Adaptive Quiz"
-              description="Your intelligent adaptive quiz interface will be built in the next update."
-            />
-          }
+          element={<Quiz />}
         />
-
-        {/* Results */}
 
         <Route
           path="/results"
           element={
             <ComingSoonPage
               title="Quiz Results"
-              description="Your quiz results, scores and detailed answer analysis will appear here."
+              description="Your detailed quiz result page will be added in the next update."
             />
           }
         />
-
-        {/* Performance */}
 
         <Route
           path="/performance"
           element={
             <ComingSoonPage
               title="Performance"
-              description="Your learning progress, accuracy and performance analytics will appear here."
+              description="Your performance analytics will appear here."
             />
           }
         />
-
-        {/* Weak Topics */}
 
         <Route
           path="/weak-topics"
           element={
             <ComingSoonPage
               title="Weak Topics"
-              description="NeuraQuiz will identify the topics that need more practice and improvement."
+              description="NeuraQuiz will identify topics that need more practice."
             />
           }
         />
-
-        {/* Achievements */}
 
         <Route
           path="/achievements"
           element={
             <ComingSoonPage
               title="Achievements"
-              description="Your learning streaks, milestones, badges and achievements will appear here."
+              description="Your milestones and learning achievements will appear here."
             />
           }
         />
-
-        {/* Profile */}
 
         <Route
           path="/profile"
           element={
             <ComingSoonPage
               title="Profile"
-              description="Your student profile and learning preferences will be available here."
+              description="Your student profile and learning preferences will appear here."
             />
           }
         />
-
-        {/* Settings */}
 
         <Route
           path="/settings"
           element={
             <ComingSoonPage
               title="Settings"
-              description="Application settings and quiz preferences will be managed here."
+              description="Application and adaptive quiz settings will appear here."
             />
           }
         />
-
-        {/* Invalid URL */}
 
         <Route
           path="*"
@@ -238,6 +212,7 @@ function App() {
             />
           }
         />
+
       </Routes>
     </BrowserRouter>
   );
