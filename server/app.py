@@ -1,8 +1,14 @@
+from datetime import timedelta
+
 from flask import Flask, jsonify
 from flask_cors import CORS
 
 from config import Config
 from database import check_database_connection
+
+from models.user_model import create_user_indexes
+
+from routes.auth_routes import auth_bp
 
 
 # =========================================================
@@ -12,8 +18,21 @@ from database import check_database_connection
 app = Flask(__name__)
 
 
-# Load configuration
-app.config.from_object(Config)
+# =========================================================
+# CONFIGURATION
+# =========================================================
+
+app.config.from_object(
+    Config
+)
+
+app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(
+    days=7
+)
+
+app.config["SESSION_COOKIE_HTTPONLY"] = True
+
+app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
 
 
 # =========================================================
@@ -35,7 +54,30 @@ CORS(
 
 
 # =========================================================
-# HOME ROUTE
+# DATABASE INDEXES
+# =========================================================
+
+try:
+    create_user_indexes()
+
+except Exception as error:
+    print(
+        "MongoDB index warning:",
+        error
+    )
+
+
+# =========================================================
+# BLUEPRINTS
+# =========================================================
+
+app.register_blueprint(
+    auth_bp
+)
+
+
+# =========================================================
+# HOME
 # =========================================================
 
 @app.get("/")
@@ -51,7 +93,7 @@ def home():
 
 
 # =========================================================
-# SERVER HEALTH CHECK
+# HEALTH CHECK
 # =========================================================
 
 @app.get("/api/health")
@@ -79,11 +121,13 @@ def database_test():
         else 500
     )
 
-    return jsonify(result), status_code
+    return jsonify(
+        result
+    ), status_code
 
 
 # =========================================================
-# ERROR HANDLER - 404
+# 404
 # =========================================================
 
 @app.errorhandler(404)
@@ -97,24 +141,32 @@ def not_found(error):
 
 
 # =========================================================
-# START SERVER
+# RUN
 # =========================================================
 
 if __name__ == "__main__":
     print()
-    print("=" * 50)
+    print("=" * 55)
     print(" NeuraQuiz Backend")
-    print("=" * 50)
+    print("=" * 55)
+
     print(
         f" Server: http://127.0.0.1:{Config.FLASK_PORT}"
     )
+
     print(
         f" Health: http://127.0.0.1:{Config.FLASK_PORT}/api/health"
     )
+
     print(
         f" MongoDB: http://127.0.0.1:{Config.FLASK_PORT}/api/db-test"
     )
-    print("=" * 50)
+
+    print(
+        f" Auth: http://127.0.0.1:{Config.FLASK_PORT}/api/auth"
+    )
+
+    print("=" * 55)
     print()
 
     app.run(
