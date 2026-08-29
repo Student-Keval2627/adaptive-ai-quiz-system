@@ -15,6 +15,7 @@ import {
 import Dashboard from "./pages/Dashboard";
 import Quiz from "./pages/Quiz";
 import Results from "./pages/Results";
+import Performance from "./pages/Performance";
 
 /* =========================================================
    TEMPORARY PAGE
@@ -149,12 +150,7 @@ function App() {
 
         <Route
           path="/performance"
-          element={
-            <ComingSoonPage
-              title="Performance"
-              description="Your performance analytics will be built in the next update."
-            />
-          }
+          element={<Performance />}
         />
 
         <Route
