@@ -16,6 +16,7 @@ import Dashboard from "./pages/Dashboard";
 import Quiz from "./pages/Quiz";
 import Results from "./pages/Results";
 import Performance from "./pages/Performance";
+import WeakTopics from "./pages/WeakTopics";
 
 /* =========================================================
    TEMPORARY PAGE
@@ -155,12 +156,7 @@ function App() {
 
         <Route
           path="/weak-topics"
-          element={
-            <ComingSoonPage
-              title="Weak Topics"
-              description="NeuraQuiz will identify topics that need more practice."
-            />
-          }
+          element={<WeakTopics />}
         />
 
         <Route
