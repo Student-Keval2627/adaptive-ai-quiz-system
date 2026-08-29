@@ -6,9 +6,7 @@ from flask_cors import CORS
 from config import Config
 from database import check_database_connection
 
-from models.user_model import (
-    create_user_indexes
-)
+from models.user_model import create_user_indexes
 
 from models.quiz_model import (
     create_question_indexes,
@@ -20,31 +18,27 @@ from routes.quiz_routes import quiz_bp
 
 
 # =========================================================
-# APP
+# FLASK APP
 # =========================================================
 
 app = Flask(__name__)
 
-app.config.from_object(
-    Config
+app.config.from_object(Config)
+
+
+# =========================================================
+# SESSION CONFIG
+# =========================================================
+
+app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(
+    days=7
 )
 
+app.config["SESSION_COOKIE_HTTPONLY"] = True
 
-# =========================================================
-# SESSION
-# =========================================================
+app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
 
-app.config[
-    "PERMANENT_SESSION_LIFETIME"
-] = timedelta(days=7)
-
-app.config[
-    "SESSION_COOKIE_HTTPONLY"
-] = True
-
-app.config[
-    "SESSION_COOKIE_SAMESITE"
-] = "Lax"
+app.config["SESSION_COOKIE_SECURE"] = False
 
 
 # =========================================================
@@ -53,15 +47,25 @@ app.config[
 
 CORS(
     app,
-    resources={
-        r"/api/*": {
-            "origins": [
-                "http://localhost:5173",
-                "http://127.0.0.1:5173"
-            ]
-        }
-    },
-    supports_credentials=True
+    origins=[
+        "http://127.0.0.1:5173",
+        "http://localhost:5173",
+        "http://127.0.0.1:5174",
+        "http://localhost:5174",
+    ],
+    supports_credentials=True,
+    allow_headers=[
+        "Content-Type",
+        "Authorization",
+    ],
+    methods=[
+        "GET",
+        "POST",
+        "PUT",
+        "PATCH",
+        "DELETE",
+        "OPTIONS",
+    ],
 )
 
 
@@ -113,7 +117,7 @@ def home():
 
 
 # =========================================================
-# HEALTH
+# HEALTH CHECK
 # =========================================================
 
 @app.get("/api/health")
@@ -133,9 +137,7 @@ def health():
 
 @app.get("/api/db-test")
 def database_test():
-    result = (
-        check_database_connection()
-    )
+    result = check_database_connection()
 
     status_code = (
         200
@@ -163,7 +165,7 @@ def not_found(error):
 
 
 # =========================================================
-# RUN
+# RUN SERVER
 # =========================================================
 
 if __name__ == "__main__":
@@ -175,6 +177,14 @@ if __name__ == "__main__":
 
     print(
         f" Server: http://127.0.0.1:{Config.FLASK_PORT}"
+    )
+
+    print(
+        f" Health: http://127.0.0.1:{Config.FLASK_PORT}/api/health"
+    )
+
+    print(
+        f" Login: http://127.0.0.1:{Config.FLASK_PORT}/api/auth/login"
     )
 
     print(
