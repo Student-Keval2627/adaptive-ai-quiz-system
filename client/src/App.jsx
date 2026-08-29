@@ -18,6 +18,7 @@ import Results from "./pages/Results";
 import Performance from "./pages/Performance";
 import WeakTopics from "./pages/WeakTopics";
 import Achievements from "./pages/Achievements";
+import Profile from "./pages/Profile";
 
 function ComingSoonPage({
   title,
@@ -46,67 +47,18 @@ function ComingSoonPage({
             maxWidth: "550px",
             padding: "45px",
             borderRadius: "24px",
-            background: "rgba(20, 20, 19, 0.92)",
+            background:
+              "rgba(20, 20, 19, 0.92)",
             border:
               "1px solid rgba(255, 140, 80, 0.13)",
             textAlign: "center",
-            boxShadow:
-              "0 30px 80px rgba(0,0,0,0.35)",
           }}
         >
-          <div
-            style={{
-              width: "65px",
-              height: "65px",
-              margin: "0 auto 22px",
-              borderRadius: "18px",
-              display: "grid",
-              placeItems: "center",
-              background:
-                "linear-gradient(135deg,#ff8550,#e84c25)",
-              color: "white",
-            }}
-          >
-            <Construction size={28} />
-          </div>
+          <Construction size={32} />
 
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: "7px",
-              color: "#ff9360",
-              fontSize: "11px",
-              fontWeight: "700",
-              letterSpacing: "1px",
-              marginBottom: "12px",
-            }}
-          >
-            <BrainCircuit size={15} />
-            NEURAQUIZ
-          </div>
+          <h1>{title}</h1>
 
-          <h1
-            style={{
-              color: "#fff8ee",
-              fontSize: "32px",
-              marginBottom: "12px",
-            }}
-          >
-            {title}
-          </h1>
-
-          <p
-            style={{
-              color: "#8e877e",
-              lineHeight: "1.7",
-              fontSize: "14px",
-              marginBottom: "28px",
-            }}
-          >
-            {description}
-          </p>
+          <p>{description}</p>
 
           <button
             className="primary-button"
@@ -125,6 +77,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+
         <Route
           path="/"
           element={<Dashboard />}
@@ -157,12 +110,7 @@ function App() {
 
         <Route
           path="/profile"
-          element={
-            <ComingSoonPage
-              title="Profile"
-              description="Your student profile and learning preferences will appear here."
-            />
-          }
+          element={<Profile />}
         />
 
         <Route
@@ -184,6 +132,7 @@ function App() {
             />
           }
         />
+
       </Routes>
     </BrowserRouter>
   );
