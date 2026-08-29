@@ -6,33 +6,45 @@ from flask_cors import CORS
 from config import Config
 from database import check_database_connection
 
-from models.user_model import create_user_indexes
+from models.user_model import (
+    create_user_indexes
+)
+
+from models.quiz_model import (
+    create_question_indexes,
+    seed_questions
+)
 
 from routes.auth_routes import auth_bp
+from routes.quiz_routes import quiz_bp
 
 
 # =========================================================
-# FLASK APPLICATION
+# APP
 # =========================================================
 
 app = Flask(__name__)
-
-
-# =========================================================
-# CONFIGURATION
-# =========================================================
 
 app.config.from_object(
     Config
 )
 
-app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(
-    days=7
-)
 
-app.config["SESSION_COOKIE_HTTPONLY"] = True
+# =========================================================
+# SESSION
+# =========================================================
 
-app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
+app.config[
+    "PERMANENT_SESSION_LIFETIME"
+] = timedelta(days=7)
+
+app.config[
+    "SESSION_COOKIE_HTTPONLY"
+] = True
+
+app.config[
+    "SESSION_COOKIE_SAMESITE"
+] = "Lax"
 
 
 # =========================================================
@@ -54,15 +66,19 @@ CORS(
 
 
 # =========================================================
-# DATABASE INDEXES
+# DATABASE INITIALIZATION
 # =========================================================
 
 try:
     create_user_indexes()
 
+    create_question_indexes()
+
+    seed_questions()
+
 except Exception as error:
     print(
-        "MongoDB index warning:",
+        "MongoDB initialization warning:",
         error
     )
 
@@ -73,6 +89,10 @@ except Exception as error:
 
 app.register_blueprint(
     auth_bp
+)
+
+app.register_blueprint(
+    quiz_bp
 )
 
 
@@ -93,7 +113,7 @@ def home():
 
 
 # =========================================================
-# HEALTH CHECK
+# HEALTH
 # =========================================================
 
 @app.get("/api/health")
@@ -113,7 +133,9 @@ def health():
 
 @app.get("/api/db-test")
 def database_test():
-    result = check_database_connection()
+    result = (
+        check_database_connection()
+    )
 
     status_code = (
         200
@@ -146,6 +168,7 @@ def not_found(error):
 
 if __name__ == "__main__":
     print()
+
     print("=" * 55)
     print(" NeuraQuiz Backend")
     print("=" * 55)
@@ -155,18 +178,11 @@ if __name__ == "__main__":
     )
 
     print(
-        f" Health: http://127.0.0.1:{Config.FLASK_PORT}/api/health"
-    )
-
-    print(
-        f" MongoDB: http://127.0.0.1:{Config.FLASK_PORT}/api/db-test"
-    )
-
-    print(
-        f" Auth: http://127.0.0.1:{Config.FLASK_PORT}/api/auth"
+        f" Questions: http://127.0.0.1:{Config.FLASK_PORT}/api/quiz/questions"
     )
 
     print("=" * 55)
+
     print()
 
     app.run(

@@ -1494,3 +1494,17 @@
     justify-content: center;
   }
 }
+.quiz-loader {
+  animation: quizLoaderSpin 0.8s linear infinite;
+}
+
+@keyframes quizLoaderSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.quiz-start-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
