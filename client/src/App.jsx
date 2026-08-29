@@ -17,10 +17,7 @@ import Quiz from "./pages/Quiz";
 import Results from "./pages/Results";
 import Performance from "./pages/Performance";
 import WeakTopics from "./pages/WeakTopics";
-
-/* =========================================================
-   TEMPORARY PAGE
-========================================================= */
+import Achievements from "./pages/Achievements";
 
 function ComingSoonPage({
   title,
@@ -49,8 +46,7 @@ function ComingSoonPage({
             maxWidth: "550px",
             padding: "45px",
             borderRadius: "24px",
-            background:
-              "rgba(20, 20, 19, 0.92)",
+            background: "rgba(20, 20, 19, 0.92)",
             border:
               "1px solid rgba(255, 140, 80, 0.13)",
             textAlign: "center",
@@ -125,15 +121,10 @@ function ComingSoonPage({
   );
 }
 
-/* =========================================================
-   APP
-========================================================= */
-
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-
         <Route
           path="/"
           element={<Dashboard />}
@@ -161,12 +152,7 @@ function App() {
 
         <Route
           path="/achievements"
-          element={
-            <ComingSoonPage
-              title="Achievements"
-              description="Your milestones and learning achievements will appear here."
-            />
-          }
+          element={<Achievements />}
         />
 
         <Route
@@ -198,7 +184,6 @@ function App() {
             />
           }
         />
-
       </Routes>
     </BrowserRouter>
   );
