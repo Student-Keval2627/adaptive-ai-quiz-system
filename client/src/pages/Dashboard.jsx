@@ -8,7 +8,6 @@ import {
   Bell,
   Search,
   Flame,
-  Clock3,
   ArrowUpRight,
   Sparkles,
   ChevronRight,
@@ -17,62 +16,35 @@ import {
   Zap,
   CircleUserRound,
   MoreHorizontal,
+  CheckCircle2,
 } from "lucide-react";
 
-import { useLocation, useNavigate } from "react-router-dom";
+import {
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 
-const subjects = [
-  {
-    name: "Python",
-    topic: "Functions & OOP",
-    progress: 82,
-    icon: "PY",
-  },
-  {
-    name: "Machine Learning",
-    topic: "Regression Models",
-    progress: 68,
-    icon: "ML",
-  },
-  {
-    name: "Data Structures",
-    topic: "Trees & Graphs",
-    progress: 54,
-    icon: "DS",
-  },
-];
+import {
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 
-const recentQuizzes = [
-  {
-    subject: "Python",
-    title: "Functions & OOP",
-    score: "8/10",
-    accuracy: "80%",
-    time: "8 min",
-  },
-  {
-    subject: "Machine Learning",
-    title: "Linear Regression",
-    score: "7/10",
-    accuracy: "70%",
-    time: "11 min",
-  },
-  {
-    subject: "Data Structures",
-    title: "Arrays & Linked Lists",
-    score: "9/10",
-    accuracy: "90%",
-    time: "7 min",
-  },
-];
 
-/* =====================================================
+const API_BASE =
+  "http://127.0.0.1:5000";
+
+
+/* =========================================================
    SIDEBAR
-===================================================== */
+========================================================= */
 
-function Sidebar() {
-  const navigate = useNavigate();
-  const location = useLocation();
+function Sidebar({ user }) {
+  const navigate =
+    useNavigate();
+
+  const location =
+    useLocation();
 
   const menu = [
     {
@@ -102,13 +74,25 @@ function Sidebar() {
     },
   ];
 
+  const userName =
+    user?.name || "Student";
+
+  const firstLetter =
+    userName
+      .charAt(0)
+      .toUpperCase();
+
   return (
     <aside className="sidebar">
       <div>
         <div
           className="brand"
-          onClick={() => navigate("/")}
-          style={{ cursor: "pointer" }}
+          onClick={() =>
+            navigate("/")
+          }
+          style={{
+            cursor: "pointer",
+          }}
         >
           <div className="brand-logo">
             <BrainCircuit size={22} />
@@ -120,33 +104,55 @@ function Sidebar() {
           </div>
         </div>
 
-        <p className="sidebar-label">WORKSPACE</p>
+        <p className="sidebar-label">
+          WORKSPACE
+        </p>
 
         <nav className="sidebar-menu">
-          {menu.map(({ icon: Icon, name, path }) => {
-            const active = location.pathname === path;
+          {menu.map(
+            ({
+              icon: Icon,
+              name,
+              path,
+            }) => {
+              const active =
+                location.pathname ===
+                path;
 
-            return (
-              <button
-                key={name}
-                onClick={() => navigate(path)}
-                className={`sidebar-link ${active ? "active" : ""}`}
-              >
-                <Icon size={19} />
+              return (
+                <button
+                  key={name}
+                  onClick={() =>
+                    navigate(path)
+                  }
+                  className={`sidebar-link ${
+                    active
+                      ? "active"
+                      : ""
+                  }`}
+                >
+                  <Icon size={19} />
 
-                <span>{name}</span>
+                  <span>
+                    {name}
+                  </span>
 
-                {active && <div className="active-indicator" />}
-              </button>
-            );
-          })}
+                  {active && (
+                    <div className="active-indicator" />
+                  )}
+                </button>
+              );
+            }
+          )}
         </nav>
       </div>
 
       <div className="sidebar-bottom">
         <button
           className="sidebar-link"
-          onClick={() => navigate("/settings")}
+          onClick={() =>
+            navigate("/settings")
+          }
         >
           <Settings size={19} />
           <span>Settings</span>
@@ -154,37 +160,61 @@ function Sidebar() {
 
         <div
           className="sidebar-profile"
-          onClick={() => navigate("/profile")}
-          style={{ cursor: "pointer" }}
+          onClick={() =>
+            navigate("/profile")
+          }
+          style={{
+            cursor: "pointer",
+          }}
         >
-          <div className="profile-avatar">K</div>
-
-          <div className="profile-details">
-            <strong>Keval</strong>
-            <span>Student</span>
+          <div className="profile-avatar">
+            {firstLetter}
           </div>
 
-          <MoreHorizontal size={18} />
+          <div className="profile-details">
+            <strong>
+              {userName}
+            </strong>
+
+            <span>
+              {user?.role ||
+                "Student"}
+            </span>
+          </div>
+
+          <MoreHorizontal
+            size={18}
+          />
         </div>
       </div>
     </aside>
   );
 }
 
-/* =====================================================
-   HEADER
-===================================================== */
 
-function Header() {
-  const navigate = useNavigate();
+/* =========================================================
+   HEADER
+========================================================= */
+
+function Header({ user }) {
+  const navigate =
+    useNavigate();
+
+  const userName =
+    user?.name || "Student";
 
   return (
     <header className="topbar">
       <div>
-        <p className="welcome-small">WELCOME BACK</p>
+        <p className="welcome-small">
+          WELCOME BACK
+        </p>
 
         <h1>
-          Ready to learn, <span>Keval?</span>
+          Ready to learn,{" "}
+          <span>
+            {userName}?
+          </span>
         </h1>
       </div>
 
@@ -212,18 +242,23 @@ function Header() {
         <button
           className="avatar-button"
           type="button"
-          onClick={() => navigate("/profile")}
+          onClick={() =>
+            navigate("/profile")
+          }
         >
-          <CircleUserRound size={22} />
+          <CircleUserRound
+            size={22}
+          />
         </button>
       </div>
     </header>
   );
 }
 
-/* =====================================================
+
+/* =========================================================
    STAT CARD
-===================================================== */
+========================================================= */
 
 function StatCard({
   icon: Icon,
@@ -259,58 +294,383 @@ function StatCard({
   );
 }
 
-/* =====================================================
+
+/* =========================================================
    DASHBOARD
-===================================================== */
+========================================================= */
 
 function Dashboard() {
-  const navigate = useNavigate();
+  const navigate =
+    useNavigate();
+
+  const [user, setUser] =
+    useState(null);
+
+  const [results, setResults] =
+    useState([]);
+
+  const [loading, setLoading] =
+    useState(true);
+
+  const [error, setError] =
+    useState("");
+
+
+  /* =========================================================
+     LOAD REAL USER DATA
+  ========================================================= */
+
+  useEffect(() => {
+    const loadDashboard =
+      async () => {
+        try {
+          setLoading(true);
+          setError("");
+
+          /* =============================================
+             USER
+          ============================================== */
+
+          const userResponse =
+            await fetch(
+              `${API_BASE}/api/auth/me`,
+              {
+                credentials:
+                  "include",
+              }
+            );
+
+          const userData =
+            await userResponse.json();
+
+          if (
+            !userResponse.ok ||
+            !userData.authenticated
+          ) {
+            navigate(
+              "/login",
+              {
+                replace: true,
+              }
+            );
+
+            return;
+          }
+
+          setUser(
+            userData.user
+          );
+
+          localStorage.setItem(
+            "neuraUser",
+            JSON.stringify(
+              userData.user
+            )
+          );
+
+
+          /* =============================================
+             RESULT HISTORY
+          ============================================== */
+
+          const resultResponse =
+            await fetch(
+              `${API_BASE}/api/results?limit=50`,
+              {
+                credentials:
+                  "include",
+              }
+            );
+
+          const resultData =
+            await resultResponse.json();
+
+          if (
+            resultResponse.ok &&
+            resultData.success
+          ) {
+            setResults(
+              resultData.results ||
+                []
+            );
+          }
+
+        } catch (error) {
+          setError(
+            "Could not load dashboard data."
+          );
+        } finally {
+          setLoading(false);
+        }
+      };
+
+    loadDashboard();
+  }, [navigate]);
+
+
+  /* =========================================================
+     USER STATS
+  ========================================================= */
+
+  const stats =
+    user?.stats || {};
+
+  const accuracy =
+    stats.accuracy || 0;
+
+  const quizzesCompleted =
+    stats.quizzesCompleted || 0;
+
+  const questionsAnswered =
+    stats.questionsAnswered || 0;
+
+  const correctAnswers =
+    stats.correctAnswers || 0;
+
+  const streak =
+    stats.streak || 0;
+
+  const xp =
+    stats.xp || 0;
+
+  const level =
+    stats.level || 1;
+
+
+  /* =========================================================
+     SUBJECT PERFORMANCE
+  ========================================================= */
+
+  const subjectProgress =
+    useMemo(() => {
+      const subjects = [
+        {
+          name: "Python",
+          topic:
+            "Programming Concepts",
+          icon: "PY",
+        },
+        {
+          name:
+            "Machine Learning",
+          topic:
+            "Models & Algorithms",
+          icon: "ML",
+        },
+        {
+          name:
+            "Data Structures",
+          topic:
+            "Core Structures",
+          icon: "DS",
+        },
+      ];
+
+      return subjects.map(
+        (subject) => {
+          const subjectResults =
+            results.filter(
+              (result) =>
+                result.subject ===
+                subject.name
+            );
+
+          if (
+            subjectResults.length === 0
+          ) {
+            return {
+              ...subject,
+              progress: 0,
+              quizzes: 0,
+            };
+          }
+
+          const totalQuestions =
+            subjectResults.reduce(
+              (
+                total,
+                result
+              ) =>
+                total +
+                (result.total || 0),
+              0
+            );
+
+          const totalCorrect =
+            subjectResults.reduce(
+              (
+                total,
+                result
+              ) =>
+                total +
+                (result.score || 0),
+              0
+            );
+
+          const progress =
+            totalQuestions > 0
+              ? Math.round(
+                  (
+                    totalCorrect /
+                    totalQuestions
+                  ) * 100
+                )
+              : 0;
+
+          return {
+            ...subject,
+            progress,
+            quizzes:
+              subjectResults.length,
+          };
+        }
+      );
+    }, [results]);
+
+
+  /* =========================================================
+     FOCUS AREA
+  ========================================================= */
+
+  const focusSubject =
+    useMemo(() => {
+      const attempted =
+        subjectProgress.filter(
+          (subject) =>
+            subject.quizzes > 0
+        );
+
+      if (
+        attempted.length === 0
+      ) {
+        return null;
+      }
+
+      return [...attempted].sort(
+        (a, b) =>
+          a.progress -
+          b.progress
+      )[0];
+    }, [subjectProgress]);
+
+
+  /* =========================================================
+     RECENT QUIZZES
+  ========================================================= */
+
+  const recentQuizzes =
+    results.slice(0, 3);
+
+
+  /* =========================================================
+     LOADING
+  ========================================================= */
+
+  if (loading) {
+    return (
+      <div
+        style={{
+          minHeight: "100vh",
+          background: "#090909",
+          display: "grid",
+          placeItems: "center",
+          color: "#ff8d58",
+          fontFamily:
+            "Manrope, sans-serif",
+        }}
+      >
+        Loading your learning dashboard...
+      </div>
+    );
+  }
+
+
+  /* =========================================================
+     DASHBOARD
+  ========================================================= */
 
   return (
     <div className="app-shell">
-      {/* Background */}
-
       <div className="background-orb orb-one" />
       <div className="background-orb orb-two" />
       <div className="grid-background" />
 
-      {/* Sidebar */}
-
-      <Sidebar />
-
-      {/* Main */}
+      <Sidebar user={user} />
 
       <main className="main-content">
-        <Header />
+        <Header user={user} />
 
         <section className="dashboard-content">
 
-          {/* ================= HERO ================= */}
+          {/* =============================================
+              ERROR
+          ============================================== */}
+
+          {error && (
+            <div
+              style={{
+                marginBottom:
+                  "15px",
+                padding:
+                  "12px 15px",
+                borderRadius:
+                  "10px",
+                color:
+                  "#e89b8a",
+                background:
+                  "rgba(255,105,78,0.04)",
+                border:
+                  "1px solid rgba(255,105,78,0.1)",
+                fontSize:
+                  "10px",
+              }}
+            >
+              {error}
+            </div>
+          )}
+
+
+          {/* =============================================
+              HERO
+          ============================================== */}
 
           <section className="hero">
+
             <div className="hero-content">
+
               <div className="hero-badge">
-                <Sparkles size={15} />
+                <Sparkles
+                  size={15}
+                />
+
                 AI POWERED LEARNING
               </div>
 
               <h2>
                 Study smarter with a quiz
                 <br />
-                that <span>adapts to you.</span>
+
+                that{" "}
+                <span>
+                  adapts to you.
+                </span>
               </h2>
 
               <p>
-                NeuraQuiz analyzes every answer,
-                understands your weak topics, and
-                automatically adjusts question difficulty
-                to help you improve faster.
+                NeuraQuiz analyzes your real
+                quiz history, tracks your
+                accuracy and identifies the
+                subjects where you need more
+                practice.
               </p>
 
               <div className="hero-actions">
+
                 <button
                   className="primary-button"
-                  onClick={() => navigate("/quiz")}
+                  onClick={() =>
+                    navigate("/quiz")
+                  }
                 >
                   <div className="button-play">
                     <Play
@@ -321,95 +681,147 @@ function Dashboard() {
 
                   Start Adaptive Quiz
 
-                  <ArrowUpRight size={18} />
+                  <ArrowUpRight
+                    size={18}
+                  />
                 </button>
 
                 <button
                   className="secondary-button"
                   onClick={() =>
-                    navigate("/performance")
+                    navigate(
+                      "/performance"
+                    )
                   }
                 >
-                  <BarChart3 size={18} />
+                  <BarChart3
+                    size={18}
+                  />
 
                   View Performance
                 </button>
+
               </div>
             </div>
 
-            {/* AI Visual */}
+
+            {/* =============================================
+                AI VISUAL
+            ============================================== */}
 
             <div className="hero-visual">
+
               <div className="visual-glow" />
 
               <div className="brain-card">
+
                 <div className="brain-ring ring-three" />
                 <div className="brain-ring ring-two" />
                 <div className="brain-ring ring-one" />
 
                 <div className="brain-center">
-                  <BrainCircuit size={42} />
+                  <BrainCircuit
+                    size={42}
+                  />
                 </div>
 
                 <div className="floating-pill pill-one">
                   <Zap size={14} />
-                  Adaptive
+                  Level {level}
                 </div>
 
                 <div className="floating-pill pill-two">
-                  <Target size={14} />
-                  Personalized
+                  <Target
+                    size={14}
+                  />
+
+                  {accuracy}%
+                  Accuracy
                 </div>
 
                 <div className="floating-pill pill-three">
-                  <Sparkles size={14} />
-                  AI Powered
+                  <Sparkles
+                    size={14}
+                  />
+
+                  {xp} XP
                 </div>
+
               </div>
             </div>
+
           </section>
 
-          {/* ================= STATS ================= */}
+
+          {/* =============================================
+              REAL STATS
+          ============================================== */}
 
           <section className="stats-grid">
+
             <StatCard
               icon={Target}
               label="Overall Accuracy"
-              value="84%"
-              description="Across 126 questions"
-              badge="+6.2%"
+              value={`${accuracy}%`}
+              description={`${correctAnswers} correct from ${questionsAnswered} questions`}
+              badge={
+                questionsAnswered > 0
+                  ? "Live"
+                  : "Start learning"
+              }
             />
 
             <StatCard
               icon={BookOpen}
               label="Quizzes Completed"
-              value="24"
-              description="6 completed this week"
-              badge="+4"
+              value={
+                quizzesCompleted
+              }
+              description="Saved in your learning history"
+              badge={`${quizzesCompleted}`}
             />
 
             <StatCard
               icon={Flame}
               label="Learning Streak"
-              value="12 days"
-              description="Best streak: 18 days"
-              badge="Keep going"
+              value={`${streak} ${
+                streak === 1
+                  ? "day"
+                  : "days"
+              }`}
+              description="Complete quizzes regularly to grow it"
+              badge={
+                streak > 0
+                  ? "Active"
+                  : "Start today"
+              }
             />
 
             <StatCard
-              icon={Clock3}
-              label="Study Time"
-              value="8.4h"
-              description="This week's learning"
-              badge="+18%"
+              icon={CheckCircle2}
+              label="Questions Answered"
+              value={
+                questionsAnswered
+              }
+              description={`${correctAnswers} correct answers`}
+              badge={`${accuracy}%`}
             />
+
           </section>
 
-          {/* ================= LEARNING ================= */}
+
+          {/* =============================================
+              SUBJECT + FOCUS
+          ============================================== */}
 
           <section className="dashboard-grid">
+
+            {/* SUBJECT PROGRESS */}
+
             <div className="panel learning-panel">
+
               <div className="panel-header">
+
                 <div>
                   <p className="panel-eyebrow">
                     YOUR LEARNING
@@ -423,69 +835,112 @@ function Dashboard() {
                 <button
                   className="text-button"
                   onClick={() =>
-                    navigate("/performance")
+                    navigate(
+                      "/performance"
+                    )
                   }
                 >
                   View all
 
-                  <ChevronRight size={16} />
+                  <ChevronRight
+                    size={16}
+                  />
                 </button>
+
               </div>
 
               <div className="subject-list">
-                {subjects.map((subject) => (
-                  <div
-                    className="subject-item"
-                    key={subject.name}
-                  >
-                    <div className="subject-main">
-                      <div className="subject-icon">
-                        {subject.icon}
-                      </div>
 
-                      <div className="subject-info">
-                        <div className="subject-name-row">
-                          <strong>
-                            {subject.name}
-                          </strong>
-
-                          <span>
-                            {subject.progress}%
-                          </span>
-                        </div>
-
-                        <p>
-                          {subject.topic}
-                        </p>
-
-                        <div className="progress-track">
-                          <div
-                            className="progress-fill"
-                            style={{
-                              width: `${subject.progress}%`,
-                            }}
-                          />
-                        </div>
-                      </div>
-                    </div>
-
-                    <button
-                      className="subject-action"
-                      onClick={() =>
-                        navigate("/quiz")
+                {subjectProgress.map(
+                  (subject) => (
+                    <div
+                      className="subject-item"
+                      key={
+                        subject.name
                       }
                     >
-                      <ChevronRight size={18} />
-                    </button>
-                  </div>
-                ))}
+                      <div className="subject-main">
+
+                        <div className="subject-icon">
+                          {
+                            subject.icon
+                          }
+                        </div>
+
+                        <div className="subject-info">
+
+                          <div className="subject-name-row">
+
+                            <strong>
+                              {
+                                subject.name
+                              }
+                            </strong>
+
+                            <span>
+                              {
+                                subject.progress
+                              }
+                              %
+                            </span>
+
+                          </div>
+
+                          <p>
+                            {
+                              subject.quizzes
+                            }{" "}
+                            {subject.quizzes ===
+                            1
+                              ? "quiz"
+                              : "quizzes"}{" "}
+                            completed
+                          </p>
+
+                          <div className="progress-track">
+
+                            <div
+                              className="progress-fill"
+                              style={{
+                                width:
+                                  `${subject.progress}%`,
+                              }}
+                            />
+
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <button
+                        className="subject-action"
+                        onClick={() =>
+                          navigate(
+                            "/quiz"
+                          )
+                        }
+                      >
+                        <ChevronRight
+                          size={18}
+                        />
+                      </button>
+
+                    </div>
+                  )
+                )}
+
               </div>
             </div>
 
-            {/* ================= AI FOCUS ================= */}
+
+            {/* =============================================
+                REAL FOCUS AREA
+            ============================================== */}
 
             <div className="panel focus-panel">
+
               <div className="panel-header">
+
                 <div>
                   <p className="panel-eyebrow">
                     AI INSIGHT
@@ -497,61 +952,139 @@ function Dashboard() {
                 </div>
 
                 <div className="ai-mini-badge">
-                  <Sparkles size={14} />
+                  <Sparkles
+                    size={14}
+                  />
                   AI
                 </div>
+
               </div>
 
-              <div className="focus-score">
-                <div className="focus-circle">
-                  <span>62</span>
-                  <small>%</small>
-                </div>
+              {focusSubject ? (
+                <>
+                  <div className="focus-score">
 
-                <div>
-                  <p>
-                    Needs attention
-                  </p>
+                    <div className="focus-circle">
+                      <span>
+                        {
+                          focusSubject.progress
+                        }
+                      </span>
 
-                  <h4>
-                    Machine Learning
-                  </h4>
+                      <small>%</small>
+                    </div>
 
-                  <span>
-                    Regression Models
-                  </span>
-                </div>
-              </div>
+                    <div>
+                      <p>
+                        Needs attention
+                      </p>
 
-              <div className="ai-message">
-                <Sparkles size={17} />
+                      <h4>
+                        {
+                          focusSubject.name
+                        }
+                      </h4>
 
-                <p>
-                  You answered{" "}
-                  <strong>4 of 7</strong>{" "}
-                  regression questions correctly.
-                  A focused quiz can strengthen
-                  this topic.
-                </p>
-              </div>
+                      <span>
+                        {
+                          focusSubject.quizzes
+                        }{" "}
+                        quizzes analyzed
+                      </span>
+                    </div>
 
-              <button
-                className="focus-button"
-                onClick={() =>
-                  navigate("/weak-topics")
-                }
-              >
-                Practice weak topic
+                  </div>
 
-                <ArrowUpRight size={17} />
-              </button>
+                  <div className="ai-message">
+
+                    <Sparkles
+                      size={17}
+                    />
+
+                    <p>
+                      Your lowest current
+                      subject accuracy is{" "}
+                      <strong>
+                        {
+                          focusSubject.progress
+                        }
+                        %
+                      </strong>{" "}
+                      in{" "}
+                      <strong>
+                        {
+                          focusSubject.name
+                        }
+                      </strong>
+                      . A focused quiz can
+                      help strengthen this
+                      subject.
+                    </p>
+
+                  </div>
+
+                  <button
+                    className="focus-button"
+                    onClick={() =>
+                      navigate(
+                        "/quiz"
+                      )
+                    }
+                  >
+                    Practice weak subject
+
+                    <ArrowUpRight
+                      size={17}
+                    />
+                  </button>
+                </>
+              ) : (
+                <>
+                  <div className="ai-message">
+
+                    <Sparkles
+                      size={17}
+                    />
+
+                    <p>
+                      Complete your first
+                      quiz and NeuraQuiz
+                      will identify your
+                      weakest subject
+                      automatically.
+                    </p>
+
+                  </div>
+
+                  <button
+                    className="focus-button"
+                    onClick={() =>
+                      navigate(
+                        "/quiz"
+                      )
+                    }
+                  >
+                    Start first quiz
+
+                    <ArrowUpRight
+                      size={17}
+                    />
+                  </button>
+                </>
+              )}
+
             </div>
           </section>
 
-          {/* ================= RECENT QUIZZES ================= */}
+
+          {/* =============================================
+              REAL RECENT QUIZZES
+          ============================================== */}
 
           <section className="panel recent-panel">
+
             <div className="panel-header">
+
               <div>
                 <p className="panel-eyebrow">
                   ACTIVITY
@@ -565,91 +1098,162 @@ function Dashboard() {
               <button
                 className="text-button"
                 onClick={() =>
-                  navigate("/results")
+                  navigate(
+                    "/performance"
+                  )
                 }
               >
-                See history
+                See performance
 
-                <ChevronRight size={16} />
+                <ChevronRight
+                  size={16}
+                />
               </button>
+
             </div>
 
-            <div className="quiz-table">
+            {recentQuizzes.length >
+            0 ? (
+              <div className="quiz-table">
 
-              {/* Table Header */}
+                <div className="quiz-table-head">
+                  <span>QUIZ</span>
+                  <span>SCORE</span>
+                  <span>ACCURACY</span>
+                  <span>DATE</span>
+                  <span />
+                </div>
 
-              <div className="quiz-table-head">
-                <span>QUIZ</span>
-                <span>SCORE</span>
-                <span>ACCURACY</span>
-                <span>TIME</span>
-                <span />
-              </div>
+                {recentQuizzes.map(
+                  (
+                    quiz,
+                    index
+                  ) => {
+                    const date =
+                      quiz.createdAt
+                        ? new Date(
+                            quiz.createdAt
+                          ).toLocaleDateString(
+                            "en-IN",
+                            {
+                              day:
+                                "2-digit",
+                              month:
+                                "short",
+                            }
+                          )
+                        : "-";
 
-              {/* Table Rows */}
-
-              {recentQuizzes.map(
-                (quiz, index) => (
-                  <div
-                    className="quiz-table-row"
-                    key={quiz.title}
-                  >
-                    <div className="quiz-name">
+                    return (
                       <div
-                        className={`quiz-number number-${
-                          index + 1
-                        }`}
+                        className="quiz-table-row"
+                        key={
+                          quiz.id ||
+                          index
+                        }
                       >
-                        {index + 1}
-                      </div>
+                        <div className="quiz-name">
 
-                      <div>
+                          <div
+                            className={`quiz-number number-${
+                              index +
+                              1
+                            }`}
+                          >
+                            {index +
+                              1}
+                          </div>
+
+                          <div>
+                            <strong>
+                              {
+                                quiz.subject
+                              }
+                            </strong>
+
+                            <span>
+                              Adaptive
+                              Quiz
+                            </span>
+                          </div>
+
+                        </div>
+
                         <strong>
-                          {quiz.title}
+                          {
+                            quiz.score
+                          }
+                          /
+                          {
+                            quiz.total
+                          }
                         </strong>
 
-                        <span>
-                          {quiz.subject}
+                        <div className="accuracy">
+
+                          <span>
+                            {
+                              quiz.accuracy
+                            }
+                            %
+                          </span>
+
+                          <div className="mini-progress">
+                            <div
+                              style={{
+                                width:
+                                  `${quiz.accuracy}%`,
+                              }}
+                            />
+                          </div>
+
+                        </div>
+
+                        <span className="table-muted">
+                          {date}
                         </span>
+
+                        <button
+                          className="table-button"
+                          onClick={() =>
+                            navigate(
+                              "/performance"
+                            )
+                          }
+                        >
+                          <ChevronRight
+                            size={18}
+                          />
+                        </button>
+
                       </div>
-                    </div>
+                    );
+                  }
+                )}
 
-                    <strong>
-                      {quiz.score}
-                    </strong>
+              </div>
+            ) : (
+              <div
+                style={{
+                  padding:
+                    "35px 10px 15px",
+                  textAlign:
+                    "center",
+                  color:
+                    "#716a63",
+                  fontSize:
+                    "10px",
+                }}
+              >
+                No quiz history yet.
+                Complete your first
+                adaptive quiz to see it
+                here.
+              </div>
+            )}
 
-                    <div className="accuracy">
-                      <span>
-                        {quiz.accuracy}
-                      </span>
-
-                      <div className="mini-progress">
-                        <div
-                          style={{
-                            width:
-                              quiz.accuracy,
-                          }}
-                        />
-                      </div>
-                    </div>
-
-                    <span className="table-muted">
-                      {quiz.time}
-                    </span>
-
-                    <button
-                      className="table-button"
-                      onClick={() =>
-                        navigate("/results")
-                      }
-                    >
-                      <ChevronRight size={18} />
-                    </button>
-                  </div>
-                )
-              )}
-            </div>
           </section>
+
         </section>
       </main>
     </div>
