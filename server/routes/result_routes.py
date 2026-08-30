@@ -2,12 +2,12 @@ from flask import (
     Blueprint,
     jsonify,
     request,
-    session
+    session,
 )
 
 from models.result_model import (
     get_user_results,
-    save_quiz_result
+    save_quiz_result,
 )
 
 
@@ -18,12 +18,19 @@ from models.result_model import (
 result_bp = Blueprint(
     "results",
     __name__,
-    url_prefix="/api/results"
+    url_prefix="/api/results",
 )
 
 
+ALLOWED_SUBJECTS = [
+    "Python",
+    "Machine Learning",
+    "Data Structures",
+]
+
+
 # =========================================================
-# SAVE QUIZ RESULT
+# SAVE VERIFIED QUIZ RESULT
 # =========================================================
 
 @result_bp.post("")
@@ -33,98 +40,105 @@ def save_result():
         "user_id"
     )
 
+
     if not user_id:
         return jsonify(
             {
                 "success": False,
                 "message":
-                    "Login required"
+                    "Login required",
             }
         ), 401
+
 
     data = request.get_json(
         silent=True
     ) or {}
 
+
     subject = str(
         data.get(
             "subject",
-            ""
+            "",
         )
     ).strip()
 
+
     answers = data.get(
         "answers",
-        []
+        [],
     )
 
-    try:
-        score = int(
-            data.get(
-                "score",
-                0
-            )
-        )
 
-        total = int(
-            data.get(
-                "total",
-                0
-            )
-        )
+    # =====================================================
+    # SUBJECT VALIDATION
+    # =====================================================
 
-    except (
-        TypeError,
-        ValueError
+    if (
+        subject not in
+        ALLOWED_SUBJECTS
     ):
         return jsonify(
             {
                 "success": False,
                 "message":
-                    "Invalid score or total"
+                    "Invalid quiz subject",
             }
         ), 400
 
-    if not subject:
-        return jsonify(
-            {
-                "success": False,
-                "message":
-                    "Subject is required"
-            }
-        ), 400
 
-    if total <= 0:
-        return jsonify(
-            {
-                "success": False,
-                "message":
-                    "Quiz total must be greater than zero"
-            }
-        ), 400
-
-    if score < 0 or score > total:
-        return jsonify(
-            {
-                "success": False,
-                "message":
-                    "Invalid quiz score"
-            }
-        ), 400
+    # =====================================================
+    # ANSWERS VALIDATION
+    # =====================================================
 
     if not isinstance(
         answers,
-        list
+        list,
     ):
-        answers = []
+        return jsonify(
+            {
+                "success": False,
+                "message":
+                    "Answers must be a list",
+            }
+        ), 400
+
+
+    if len(
+        answers
+    ) == 0:
+        return jsonify(
+            {
+                "success": False,
+                "message":
+                    "Quiz answers are required",
+            }
+        ), 400
+
+
+    # =====================================================
+    # IMPORTANT
+    #
+    # We intentionally DO NOT read:
+    #
+    # data["score"]
+    # data["total"]
+    # data["accuracy"]
+    #
+    # Those values come from the browser
+    # and therefore cannot be trusted.
+    #
+    # result_model.py calculates them
+    # again from MongoDB.
+    # =====================================================
+
 
     result = save_quiz_result(
         user_id=user_id,
         subject=subject,
-        score=score,
-        total=total,
-        answers=answers
+        answers=answers,
     )
+
 
     if not result.get(
         "success"
@@ -132,6 +146,7 @@ def save_result():
         return jsonify(
             result
         ), 400
+
 
     return jsonify(
         result
@@ -149,43 +164,53 @@ def result_history():
         "user_id"
     )
 
+
     if not user_id:
         return jsonify(
             {
                 "success": False,
                 "message":
-                    "Login required"
+                    "Login required",
             }
         ), 401
+
 
     try:
         limit = int(
             request.args.get(
                 "limit",
-                10
+                10,
             )
         )
 
-    except ValueError:
+    except (
+        TypeError,
+        ValueError,
+    ):
         limit = 10
+
 
     limit = max(
         1,
         min(
             limit,
-            50
-        )
+            50,
+        ),
     )
+
 
     results = get_user_results(
         user_id,
-        limit
+        limit,
     )
+
 
     return jsonify(
         {
             "success": True,
-            "count": len(results),
-            "results": results
+            "count":
+                len(results),
+            "results":
+                results,
         }
-    )
+    ), 200
