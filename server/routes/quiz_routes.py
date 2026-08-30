@@ -1,77 +1,245 @@
 from flask import (
     Blueprint,
     jsonify,
-    request
+    request,
+    session,
 )
 
 from models.quiz_model import (
     check_question_answer,
-    get_questions
+    get_questions,
 )
 
+from utils.quiz_engine import (
+    get_next_adaptive_question,
+    start_adaptive_quiz,
+)
+
+
+# =========================================================
+# BLUEPRINT
+# =========================================================
 
 quiz_bp = Blueprint(
     "quiz",
     __name__,
-    url_prefix="/api/quiz"
+    url_prefix="/api/quiz",
 )
 
 
 # =========================================================
-# START QUIZ
+# ALLOWED SUBJECTS
+# =========================================================
+
+ALLOWED_SUBJECTS = [
+    "Python",
+    "Machine Learning",
+    "Data Structures",
+]
+
+
+# =========================================================
+# GET RANDOM QUESTIONS
 # =========================================================
 
 @quiz_bp.get("/questions")
-def quiz_questions():
-    subject = request.args.get(
-        "subject",
-        "Python"
+def questions():
+    subject = str(
+        request.args.get(
+            "subject",
+            "",
+        )
     ).strip()
 
     try:
         limit = int(
             request.args.get(
                 "limit",
-                5
+                5,
             )
         )
 
-    except ValueError:
+    except (TypeError, ValueError):
         limit = 5
 
-    # Maximum currently available per subject
     limit = max(
         1,
-        min(limit, 10)
+        min(limit, 10),
     )
 
-    allowed_subjects = [
-        "Python",
-        "Machine Learning",
-        "Data Structures"
-    ]
-
-    if subject not in allowed_subjects:
+    if subject not in ALLOWED_SUBJECTS:
         return jsonify(
             {
                 "success": False,
-                "message": "Invalid subject"
+                "message": "Invalid subject",
             }
         ), 400
 
-    questions = get_questions(
+    quiz_questions = get_questions(
         subject,
-        limit
+        limit,
     )
 
     return jsonify(
         {
             "success": True,
-            "subject": subject,
-            "count": len(questions),
-            "questions": questions
+            "questions": quiz_questions,
         }
     )
+
+
+# =========================================================
+# START ADAPTIVE QUIZ
+# =========================================================
+
+@quiz_bp.post("/start")
+def start_quiz():
+    user_id = session.get(
+        "user_id"
+    )
+
+    if not user_id:
+        return jsonify(
+            {
+                "success": False,
+                "message": "Login required",
+            }
+        ), 401
+
+    data = request.get_json(
+        silent=True
+    ) or {}
+
+    subject = str(
+        data.get(
+            "subject",
+            "",
+        )
+    ).strip()
+
+    if subject not in ALLOWED_SUBJECTS:
+        return jsonify(
+            {
+                "success": False,
+                "message": "Invalid subject",
+            }
+        ), 400
+
+    result = start_adaptive_quiz(
+        user_id=user_id,
+        subject=subject,
+    )
+
+    if not result.get(
+        "success"
+    ):
+        return jsonify(
+            result
+        ), 400
+
+    return jsonify(
+        result
+    ), 200
+
+
+# =========================================================
+# NEXT ADAPTIVE QUESTION
+# =========================================================
+
+@quiz_bp.post("/next")
+def next_question():
+    user_id = session.get(
+        "user_id"
+    )
+
+    if not user_id:
+        return jsonify(
+            {
+                "success": False,
+                "message": "Login required",
+            }
+        ), 401
+
+    data = request.get_json(
+        silent=True
+    ) or {}
+
+    subject = str(
+        data.get(
+            "subject",
+            "",
+        )
+    ).strip()
+
+    previous_question_id = str(
+        data.get(
+            "previousQuestionId",
+            "",
+        )
+    ).strip()
+
+    selected_answer = data.get(
+        "selectedAnswer"
+    )
+
+    used_question_ids = data.get(
+        "usedQuestionIds",
+        [],
+    )
+
+    if subject not in ALLOWED_SUBJECTS:
+        return jsonify(
+            {
+                "success": False,
+                "message": "Invalid subject",
+            }
+        ), 400
+
+    if not previous_question_id:
+        return jsonify(
+            {
+                "success": False,
+                "message":
+                    "Previous question ID is required",
+            }
+        ), 400
+
+    if selected_answer is None:
+        return jsonify(
+            {
+                "success": False,
+                "message":
+                    "Selected answer is required",
+            }
+        ), 400
+
+    if not isinstance(
+        used_question_ids,
+        list,
+    ):
+        used_question_ids = []
+
+    result = get_next_adaptive_question(
+        user_id=user_id,
+        subject=subject,
+        previous_question_id=
+            previous_question_id,
+        selected_answer=
+            selected_answer,
+        used_question_ids=
+            used_question_ids,
+    )
+
+    if not result.get(
+        "success"
+    ):
+        return jsonify(
+            result
+        ), 400
+
+    return jsonify(
+        result
+    ), 200
 
 
 # =========================================================
@@ -87,49 +255,49 @@ def check_answer():
     question_id = str(
         data.get(
             "questionId",
-            ""
+            "",
         )
-    )
+    ).strip()
 
-    selected_answer = str(
-        data.get(
-            "answer",
-            ""
-        )
+    selected_answer = data.get(
+        "answer"
     )
 
     if not question_id:
         return jsonify(
             {
                 "success": False,
-                "message": "Question ID is required"
+                "message":
+                    "Question ID is required",
             }
         ), 400
 
-    if not selected_answer:
+    if selected_answer is None:
         return jsonify(
             {
                 "success": False,
-                "message": "Answer is required"
+                "message":
+                    "Answer is required",
             }
         ), 400
 
     result = check_question_answer(
         question_id,
-        selected_answer
+        selected_answer,
     )
 
     if not result:
         return jsonify(
             {
                 "success": False,
-                "message": "Question not found"
+                "message":
+                    "Question not found",
             }
         ), 404
 
     return jsonify(
         {
             "success": True,
-            **result
+            **result,
         }
-    )
+    ), 200

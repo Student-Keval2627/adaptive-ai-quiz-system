@@ -1,15 +1,8 @@
 from bson import ObjectId
 
-from database import questions_collection
-
-
-# =========================================================
-# CREATE QUESTION INDEXES
-# =========================================================
-
-def create_question_indexes():
-    questions_collection.create_index("subject")
-    questions_collection.create_index("difficulty")
+from database import (
+    questions_collection
+)
 
 
 # =========================================================
@@ -17,6 +10,7 @@ def create_question_indexes():
 # =========================================================
 
 DEFAULT_QUESTIONS = [
+
     # =====================================================
     # PYTHON
     # =====================================================
@@ -25,403 +19,573 @@ DEFAULT_QUESTIONS = [
         "subject": "Python",
         "topic": "Basics",
         "difficulty": "Easy",
-        "question": "Which keyword is used to create a function in Python?",
+        "question":
+            "Which keyword is used to define a function in Python?",
         "options": [
-            "function",
-            "def",
             "func",
-            "define"
+            "define",
+            "def",
+            "function"
         ],
-        "answer": "def"
+        "answer": "def",
     },
+
+    {
+        "subject": "Python",
+        "topic": "Data Types",
+        "difficulty": "Easy",
+        "question":
+            "Which Python data type stores True or False values?",
+        "options": [
+            "str",
+            "bool",
+            "float",
+            "list"
+        ],
+        "answer": "bool",
+    },
+
     {
         "subject": "Python",
         "topic": "Collections",
         "difficulty": "Easy",
-        "question": "Which Python data type stores ordered multiple values?",
+        "question":
+            "Which collection uses key-value pairs in Python?",
         "options": [
-            "list",
-            "int",
-            "bool",
-            "float"
+            "List",
+            "Tuple",
+            "Dictionary",
+            "Set"
         ],
-        "answer": "list"
+        "answer": "Dictionary",
     },
+
     {
         "subject": "Python",
         "topic": "Functions",
-        "difficulty": "Easy",
-        "question": "What does len() return in Python?",
-        "options": [
-            "Number of items",
-            "Data type",
-            "Memory size",
-            "Variable name"
-        ],
-        "answer": "Number of items"
-    },
-    {
-        "subject": "Python",
-        "topic": "Syntax",
-        "difficulty": "Easy",
-        "question": "Which symbol is used for a single-line comment in Python?",
-        "options": [
-            "#",
-            "//",
-            "--",
-            "/*"
-        ],
-        "answer": "#"
-    },
-    {
-        "subject": "Python",
-        "topic": "Operators",
         "difficulty": "Medium",
-        "question": "Which operator performs exponentiation in Python?",
+        "question":
+            "What does the return statement do inside a Python function?",
         "options": [
-            "**",
-            "^",
-            "//",
-            "%"
+            "Stops Python",
+            "Sends a value back to the caller",
+            "Creates a loop",
+            "Imports a module"
         ],
-        "answer": "**"
+        "answer":
+            "Sends a value back to the caller",
     },
+
     {
         "subject": "Python",
         "topic": "OOP",
         "difficulty": "Medium",
-        "question": "Which keyword is used to create a class in Python?",
+        "question":
+            "Which method is commonly used as a constructor in Python classes?",
         "options": [
-            "class",
-            "object",
-            "struct",
-            "new"
+            "__start__",
+            "__init__",
+            "__create__",
+            "__main__"
         ],
-        "answer": "class"
+        "answer":
+            "__init__",
     },
+
     {
         "subject": "Python",
         "topic": "Collections",
         "difficulty": "Medium",
-        "question": "Which collection stores unique values only?",
+        "question":
+            "Which Python collection is ordered, mutable, and allows duplicate values?",
         "options": [
-            "set",
-            "list",
-            "tuple",
-            "string"
+            "List",
+            "Set",
+            "Dictionary only",
+            "Frozen set"
         ],
-        "answer": "set"
+        "answer": "List",
     },
+
+    {
+        "subject": "Python",
+        "topic": "Functions",
+        "difficulty": "Hard",
+        "question":
+            "What is a lambda function in Python?",
+        "options": [
+            "A named class",
+            "An anonymous function",
+            "A database function",
+            "A loop"
+        ],
+        "answer":
+            "An anonymous function",
+    },
+
+    {
+        "subject": "Python",
+        "topic": "OOP",
+        "difficulty": "Hard",
+        "question":
+            "Which concept allows a child class to use properties and methods of a parent class?",
+        "options": [
+            "Encapsulation",
+            "Inheritance",
+            "Iteration",
+            "Compilation"
+        ],
+        "answer":
+            "Inheritance",
+    },
+
     {
         "subject": "Python",
         "topic": "Exceptions",
-        "difficulty": "Medium",
-        "question": "Which block is used to handle exceptions in Python?",
+        "difficulty": "Hard",
+        "question":
+            "Which block executes whether an exception occurs or not?",
         "options": [
-            "try-except",
-            "if-else",
-            "switch-case",
-            "for-while"
+            "except",
+            "finally",
+            "raise",
+            "error"
         ],
-        "answer": "try-except"
+        "answer":
+            "finally",
     },
+
     {
         "subject": "Python",
-        "topic": "Functions",
+        "topic": "Generators",
         "difficulty": "Hard",
-        "question": "What is a lambda in Python?",
+        "question":
+            "Which keyword is used by a Python generator to produce values one at a time?",
         "options": [
-            "Anonymous function",
-            "Loop",
-            "Class",
-            "Module"
+            "send",
+            "return",
+            "yield",
+            "generate"
         ],
-        "answer": "Anonymous function"
+        "answer":
+            "yield",
     },
-    {
-        "subject": "Python",
-        "topic": "OOP",
-        "difficulty": "Hard",
-        "question": "Which method is normally used as a constructor in Python classes?",
-        "options": [
-            "__init__",
-            "__main__",
-            "__start__",
-            "__newclass__"
-        ],
-        "answer": "__init__"
-    },
+
 
     # =====================================================
     # MACHINE LEARNING
     # =====================================================
 
     {
-        "subject": "Machine Learning",
-        "topic": "Fundamentals",
-        "difficulty": "Easy",
-        "question": "Which learning type uses labeled training data?",
+        "subject":
+            "Machine Learning",
+        "topic":
+            "Fundamentals",
+        "difficulty":
+            "Easy",
+        "question":
+            "Machine learning is primarily used to allow computers to learn patterns from what?",
+        "options": [
+            "Data",
+            "Keyboard",
+            "Monitor",
+            "HTML"
+        ],
+        "answer":
+            "Data",
+    },
+
+    {
+        "subject":
+            "Machine Learning",
+        "topic":
+            "Learning Types",
+        "difficulty":
+            "Easy",
+        "question":
+            "Which learning type uses labeled training data?",
         "options": [
             "Supervised Learning",
             "Unsupervised Learning",
-            "Reinforcement Learning",
-            "Random Learning"
+            "Random Learning",
+            "Manual Learning"
         ],
-        "answer": "Supervised Learning"
+        "answer":
+            "Supervised Learning",
     },
+
     {
-        "subject": "Machine Learning",
-        "topic": "Regression",
-        "difficulty": "Easy",
-        "question": "Which algorithm is commonly used to predict continuous values?",
+        "subject":
+            "Machine Learning",
+        "topic":
+            "Learning Types",
+        "difficulty":
+            "Easy",
+        "question":
+            "Which learning type discovers patterns without labeled outputs?",
         "options": [
-            "Linear Regression",
-            "K-Means",
-            "Apriori",
-            "DBSCAN"
+            "Supervised Learning",
+            "Unsupervised Learning",
+            "Static Learning",
+            "Compiled Learning"
         ],
-        "answer": "Linear Regression"
+        "answer":
+            "Unsupervised Learning",
     },
+
     {
-        "subject": "Machine Learning",
-        "topic": "Training",
-        "difficulty": "Easy",
-        "question": "What is the purpose of training data?",
-        "options": [
-            "Teach patterns to the model",
-            "Design the website",
-            "Delete the model",
-            "Store passwords"
-        ],
-        "answer": "Teach patterns to the model"
-    },
-    {
-        "subject": "Machine Learning",
-        "topic": "Evaluation",
-        "difficulty": "Easy",
-        "question": "Which metric represents the percentage of correct predictions?",
-        "options": [
-            "Accuracy",
-            "Compiler",
-            "Iteration",
-            "Database"
-        ],
-        "answer": "Accuracy"
-    },
-    {
-        "subject": "Machine Learning",
-        "topic": "Overfitting",
-        "difficulty": "Medium",
-        "question": "What is overfitting?",
-        "options": [
-            "Model performs well on training data but poorly on new data",
-            "Model works perfectly everywhere",
-            "Model has no training data",
-            "Model has no features"
-        ],
-        "answer": "Model performs well on training data but poorly on new data"
-    },
-    {
-        "subject": "Machine Learning",
-        "topic": "Classification",
-        "difficulty": "Medium",
-        "question": "Which task predicts categories such as spam or not spam?",
-        "options": [
-            "Classification",
+        "subject":
+            "Machine Learning",
+        "topic":
             "Regression",
+        "difficulty":
+            "Medium",
+        "question":
+            "Which ML task is commonly used to predict a continuous numerical value?",
+        "options": [
+            "Regression",
+            "Classification",
             "Clustering",
             "Sorting"
         ],
-        "answer": "Classification"
-    },
-    {
-        "subject": "Machine Learning",
-        "topic": "Clustering",
-        "difficulty": "Medium",
-        "question": "K-Means is mainly used for which task?",
-        "options": [
-            "Clustering",
+        "answer":
             "Regression",
+    },
+
+    {
+        "subject":
+            "Machine Learning",
+        "topic":
+            "Classification",
+        "difficulty":
+            "Medium",
+        "question":
+            "Which task predicts categories such as spam or not spam?",
+        "options": [
+            "Regression",
+            "Classification",
+            "Compression",
+            "Rendering"
+        ],
+        "answer":
+            "Classification",
+    },
+
+    {
+        "subject":
+            "Machine Learning",
+        "topic":
+            "Model Evaluation",
+        "difficulty":
+            "Medium",
+        "question":
+            "Why is a test dataset used in machine learning?",
+        "options": [
+            "To evaluate the trained model on unseen data",
+            "To increase screen brightness",
+            "To store passwords",
+            "To write HTML"
+        ],
+        "answer":
+            "To evaluate the trained model on unseen data",
+    },
+
+    {
+        "subject":
+            "Machine Learning",
+        "topic":
+            "Overfitting",
+        "difficulty":
+            "Hard",
+        "question":
+            "What happens when a model performs very well on training data but poorly on unseen data?",
+        "options": [
+            "Underflow",
+            "Overfitting",
             "Compilation",
-            "Encryption"
+            "Normalization"
         ],
-        "answer": "Clustering"
+        "answer":
+            "Overfitting",
     },
+
     {
-        "subject": "Machine Learning",
-        "topic": "Dataset",
-        "difficulty": "Medium",
-        "question": "Why is a test dataset used?",
+        "subject":
+            "Machine Learning",
+        "topic":
+            "Optimization",
+        "difficulty":
+            "Hard",
+        "question":
+            "What is the main purpose of gradient descent?",
         "options": [
-            "Evaluate the model on unseen data",
-            "Train the model again",
+            "Minimize a loss function",
             "Create HTML",
-            "Delete features"
+            "Increase dataset size automatically",
+            "Encrypt the model"
         ],
-        "answer": "Evaluate the model on unseen data"
+        "answer":
+            "Minimize a loss function",
     },
+
     {
-        "subject": "Machine Learning",
-        "topic": "Features",
-        "difficulty": "Hard",
-        "question": "What is feature scaling used for?",
+        "subject":
+            "Machine Learning",
+        "topic":
+            "Feature Engineering",
+        "difficulty":
+            "Hard",
+        "question":
+            "Why is feature scaling useful for many machine learning algorithms?",
         "options": [
-            "Bring numerical features to comparable ranges",
-            "Increase dataset rows",
-            "Delete labels",
-            "Convert models into databases"
+            "It brings features to comparable numerical ranges",
+            "It deletes every feature",
+            "It converts all data into text",
+            "It guarantees 100% accuracy"
         ],
-        "answer": "Bring numerical features to comparable ranges"
+        "answer":
+            "It brings features to comparable numerical ranges",
     },
+
     {
-        "subject": "Machine Learning",
-        "topic": "Regression",
-        "difficulty": "Hard",
-        "question": "Which value measures the strength of a linear relationship between variables?",
+        "subject":
+            "Machine Learning",
+        "topic":
+            "Model Evaluation",
+        "difficulty":
+            "Hard",
+        "question":
+            "Which metric is the harmonic mean of precision and recall?",
         "options": [
-            "Correlation coefficient",
-            "Primary key",
-            "Loop counter",
-            "Queue size"
+            "Accuracy",
+            "F1 Score",
+            "R-squared",
+            "MAE"
         ],
-        "answer": "Correlation coefficient"
+        "answer":
+            "F1 Score",
     },
+
 
     # =====================================================
     # DATA STRUCTURES
     # =====================================================
 
     {
-        "subject": "Data Structures",
-        "topic": "Stack",
-        "difficulty": "Easy",
-        "question": "Which principle does a stack follow?",
+        "subject":
+            "Data Structures",
+        "topic":
+            "Arrays",
+        "difficulty":
+            "Easy",
+        "question":
+            "Which data structure stores elements in contiguous memory locations?",
         "options": [
-            "LIFO",
-            "FIFO",
-            "Random",
-            "Sorted"
-        ],
-        "answer": "LIFO"
-    },
-    {
-        "subject": "Data Structures",
-        "topic": "Queue",
-        "difficulty": "Easy",
-        "question": "Which principle does a queue follow?",
-        "options": [
-            "FIFO",
-            "LIFO",
-            "Random",
-            "Recursive"
-        ],
-        "answer": "FIFO"
-    },
-    {
-        "subject": "Data Structures",
-        "topic": "Graph",
-        "difficulty": "Easy",
-        "question": "Which structure contains vertices connected by edges?",
-        "options": [
+            "Array",
             "Graph",
-            "String",
-            "Integer",
-            "Boolean"
-        ],
-        "answer": "Graph"
-    },
-    {
-        "subject": "Data Structures",
-        "topic": "Tree",
-        "difficulty": "Easy",
-        "question": "Which data structure contains a root node and child nodes?",
-        "options": [
             "Tree",
-            "Queue",
-            "Variable",
-            "String"
+            "Queue"
         ],
-        "answer": "Tree"
+        "answer":
+            "Array",
     },
+
     {
-        "subject": "Data Structures",
-        "topic": "Array",
-        "difficulty": "Medium",
-        "question": "Array elements are normally accessed using what?",
+        "subject":
+            "Data Structures",
+        "topic":
+            "Stacks",
+        "difficulty":
+            "Easy",
+        "question":
+            "Which principle does a stack follow?",
         "options": [
-            "Index",
-            "Password",
-            "Compiler",
-            "Database"
+            "FIFO",
+            "LIFO",
+            "Random",
+            "Priority only"
         ],
-        "answer": "Index"
+        "answer":
+            "LIFO",
     },
+
     {
-        "subject": "Data Structures",
-        "topic": "Linked List",
-        "difficulty": "Medium",
-        "question": "A linked list node generally contains data and what else?",
+        "subject":
+            "Data Structures",
+        "topic":
+            "Queues",
+        "difficulty":
+            "Easy",
+        "question":
+            "Which principle does a basic queue follow?",
         "options": [
-            "A reference to another node",
-            "A database",
-            "A compiler",
-            "A password"
+            "LIFO",
+            "FIFO",
+            "Recursive",
+            "Random"
         ],
-        "answer": "A reference to another node"
+        "answer":
+            "FIFO",
     },
+
     {
-        "subject": "Data Structures",
-        "topic": "Tree",
-        "difficulty": "Medium",
-        "question": "A binary tree node can have at most how many children?",
+        "subject":
+            "Data Structures",
+        "topic":
+            "Linked Lists",
+        "difficulty":
+            "Medium",
+        "question":
+            "What does a node in a singly linked list normally contain?",
         "options": [
-            "2",
-            "1",
-            "3",
-            "Unlimited"
+            "Data and a pointer to the next node",
+            "Only a database",
+            "A complete tree",
+            "Only an index"
         ],
-        "answer": "2"
+        "answer":
+            "Data and a pointer to the next node",
     },
+
     {
-        "subject": "Data Structures",
-        "topic": "Searching",
-        "difficulty": "Medium",
-        "question": "Binary search requires the data to be:",
+        "subject":
+            "Data Structures",
+        "topic":
+            "Trees",
+        "difficulty":
+            "Medium",
+        "question":
+            "What is the topmost node of a tree called?",
+        "options": [
+            "Leaf",
+            "Root",
+            "Edge",
+            "Queue"
+        ],
+        "answer":
+            "Root",
+    },
+
+    {
+        "subject":
+            "Data Structures",
+        "topic":
+            "Searching",
+        "difficulty":
+            "Medium",
+        "question":
+            "Binary search requires the data to normally be in what state?",
         "options": [
             "Sorted",
             "Encrypted",
-            "Random",
+            "Random only",
             "Duplicated"
         ],
-        "answer": "Sorted"
+        "answer":
+            "Sorted",
     },
+
     {
-        "subject": "Data Structures",
-        "topic": "Complexity",
-        "difficulty": "Hard",
-        "question": "What is the typical time complexity of binary search?",
+        "subject":
+            "Data Structures",
+        "topic":
+            "Trees",
+        "difficulty":
+            "Hard",
+        "question":
+            "What is the maximum number of children a node can have in a binary tree?",
         "options": [
-            "O(log n)",
+            "1",
+            "2",
+            "3",
+            "Unlimited"
+        ],
+        "answer":
+            "2",
+    },
+
+    {
+        "subject":
+            "Data Structures",
+        "topic":
+            "Graphs",
+        "difficulty":
+            "Hard",
+        "question":
+            "Which traversal commonly uses a queue to explore graph vertices level by level?",
+        "options": [
+            "DFS",
+            "BFS",
+            "Binary Search",
+            "Selection Sort"
+        ],
+        "answer":
+            "BFS",
+    },
+
+    {
+        "subject":
+            "Data Structures",
+        "topic":
+            "Complexity",
+        "difficulty":
+            "Hard",
+        "question":
+            "What is the average time complexity of binary search?",
+        "options": [
             "O(n)",
+            "O(log n)",
             "O(n²)",
             "O(1)"
         ],
-        "answer": "O(log n)"
+        "answer":
+            "O(log n)",
     },
+
     {
-        "subject": "Data Structures",
-        "topic": "Graph",
-        "difficulty": "Hard",
-        "question": "Which data structure is commonly used by Breadth First Search?",
+        "subject":
+            "Data Structures",
+        "topic":
+            "Stacks",
+        "difficulty":
+            "Hard",
+        "question":
+            "Which operation removes the top element from a stack?",
         "options": [
-            "Queue",
-            "Stack",
-            "Array only",
-            "Hash only"
+            "Push",
+            "Pop",
+            "Peek",
+            "Insert"
         ],
-        "answer": "Queue"
-    }
+        "answer":
+            "Pop",
+    },
 ]
+
+
+# =========================================================
+# INDEXES
+# =========================================================
+
+def create_question_indexes():
+    questions_collection.create_index(
+        "subject"
+    )
+
+    questions_collection.create_index(
+        "difficulty"
+    )
+
+    questions_collection.create_index(
+        "topic"
+    )
+
+    questions_collection.create_index(
+        [
+            ("subject", 1),
+            ("difficulty", 1)
+        ]
+    )
 
 
 # =========================================================
@@ -429,7 +593,12 @@ DEFAULT_QUESTIONS = [
 # =========================================================
 
 def seed_questions():
-    if questions_collection.count_documents({}) > 0:
+    if (
+        questions_collection.count_documents(
+            {}
+        )
+        > 0
+    ):
         return
 
     questions_collection.insert_many(
@@ -437,52 +606,63 @@ def seed_questions():
     )
 
     print(
-        f"Seeded {len(DEFAULT_QUESTIONS)} quiz questions"
+        f"Seeded {len(DEFAULT_QUESTIONS)} quiz questions."
     )
 
 
 # =========================================================
-# GET QUESTIONS
+# SERIALIZE PUBLIC QUESTION
 # =========================================================
 
-def get_questions(subject, limit=5):
-    cursor = questions_collection.aggregate(
-        [
-            {
-                "$match": {
-                    "subject": subject
-                }
-            },
-            {
-                "$sample": {
-                    "size": limit
-                }
-            }
-        ]
-    )
+def serialize_question(question):
+    if not question:
+        return None
 
-    questions = []
+    return {
+        "id":
+            str(
+                question["_id"]
+            ),
 
-    for question in cursor:
-        questions.append(
-            {
-                "id": str(question["_id"]),
-                "subject": question["subject"],
-                "topic": question["topic"],
-                "difficulty": question["difficulty"],
-                "question": question["question"],
-                "options": question["options"]
-            }
-        )
+        "subject":
+            question.get(
+                "subject",
+                ""
+            ),
 
-    return questions
+        "topic":
+            question.get(
+                "topic",
+                ""
+            ),
+
+        "difficulty":
+            question.get(
+                "difficulty",
+                "Medium"
+            ),
+
+        "question":
+            question.get(
+                "question",
+                ""
+            ),
+
+        "options":
+            question.get(
+                "options",
+                []
+            ),
+    }
 
 
 # =========================================================
-# CHECK ANSWER
+# FIND RAW QUESTION
 # =========================================================
 
-def check_question_answer(question_id, selected_answer):
+def find_question_by_id(
+    question_id
+):
     try:
         object_id = ObjectId(
             question_id
@@ -491,29 +671,270 @@ def check_question_answer(question_id, selected_answer):
     except Exception:
         return None
 
-    question = questions_collection.find_one(
+    return questions_collection.find_one(
         {
-            "_id": object_id
+            "_id":
+                object_id
         }
+    )
+
+
+# =========================================================
+# OLD RANDOM QUESTIONS ENDPOINT SUPPORT
+# =========================================================
+
+def get_questions(
+    subject,
+    limit=5
+):
+    pipeline = [
+        {
+            "$match": {
+                "subject":
+                    subject
+            }
+        },
+
+        {
+            "$sample": {
+                "size":
+                    limit
+            }
+        }
+    ]
+
+    questions = list(
+        questions_collection.aggregate(
+            pipeline
+        )
+    )
+
+    return [
+        serialize_question(
+            question
+        )
+        for question
+        in questions
+    ]
+
+
+# =========================================================
+# CHECK ANSWER
+# =========================================================
+
+def check_question_answer(
+    question_id,
+    selected_answer
+):
+    question = (
+        find_question_by_id(
+            question_id
+        )
     )
 
     if not question:
         return None
 
-    correct_answer = question["answer"]
+    correct_answer = (
+        question.get(
+            "answer"
+        )
+    )
 
     return {
-        "correct": (
+        "correct":
             selected_answer
-            == correct_answer
-        ),
-        "correctAnswer": correct_answer,
-        "topic": question.get(
-            "topic",
-            ""
-        ),
-        "difficulty": question.get(
-            "difficulty",
-            "Medium"
-        )
+            == correct_answer,
+
+        "correctAnswer":
+            correct_answer,
+
+        "subject":
+            question.get(
+                "subject"
+            ),
+
+        "topic":
+            question.get(
+                "topic"
+            ),
+
+        "difficulty":
+            question.get(
+                "difficulty"
+            ),
     }
+
+
+# =========================================================
+# ADAPTIVE QUESTION SELECTOR
+# =========================================================
+
+def get_adaptive_question(
+    subject,
+    difficulty,
+    preferred_topic=None,
+    exclude_ids=None,
+):
+    exclude_ids = (
+        exclude_ids or []
+    )
+
+    object_ids = []
+
+    for question_id in exclude_ids:
+        try:
+            object_ids.append(
+                ObjectId(
+                    question_id
+                )
+            )
+
+        except Exception:
+            continue
+
+
+    # =====================================================
+    # BASE FILTER
+    # =====================================================
+
+    base_filter = {
+        "subject":
+            subject,
+
+        "_id": {
+            "$nin":
+                object_ids
+        }
+    }
+
+
+    # =====================================================
+    # ATTEMPT 1:
+    # preferred topic + requested difficulty
+    # =====================================================
+
+    if preferred_topic:
+        question = (
+            questions_collection.find_one(
+                {
+                    **base_filter,
+
+                    "difficulty":
+                        difficulty,
+
+                    "topic":
+                        preferred_topic,
+                }
+            )
+        )
+
+        if question:
+            return (
+                serialize_question(
+                    question
+                )
+            )
+
+
+    # =====================================================
+    # ATTEMPT 2:
+    # requested difficulty
+    # =====================================================
+
+    pipeline = [
+        {
+            "$match": {
+                **base_filter,
+
+                "difficulty":
+                    difficulty,
+            }
+        },
+
+        {
+            "$sample": {
+                "size": 1
+            }
+        }
+    ]
+
+    questions = list(
+        questions_collection.aggregate(
+            pipeline
+        )
+    )
+
+    if questions:
+        return serialize_question(
+            questions[0]
+        )
+
+
+    # =====================================================
+    # ATTEMPT 3:
+    # preferred topic with any difficulty
+    # =====================================================
+
+    if preferred_topic:
+        pipeline = [
+            {
+                "$match": {
+                    **base_filter,
+
+                    "topic":
+                        preferred_topic,
+                }
+            },
+
+            {
+                "$sample": {
+                    "size": 1
+                }
+            }
+        ]
+
+        questions = list(
+            questions_collection.aggregate(
+                pipeline
+            )
+        )
+
+        if questions:
+            return (
+                serialize_question(
+                    questions[0]
+                )
+            )
+
+
+    # =====================================================
+    # ATTEMPT 4:
+    # any unused subject question
+    # =====================================================
+
+    pipeline = [
+        {
+            "$match":
+                base_filter
+        },
+
+        {
+            "$sample": {
+                "size": 1
+            }
+        }
+    ]
+
+    questions = list(
+        questions_collection.aggregate(
+            pipeline
+        )
+    )
+
+    if not questions:
+        return None
+
+    return serialize_question(
+        questions[0]
+    )

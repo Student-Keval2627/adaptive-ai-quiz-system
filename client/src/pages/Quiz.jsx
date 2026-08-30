@@ -1,5 +1,10 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {
+  useState,
+} from "react";
+
+import {
+  useNavigate,
+} from "react-router-dom";
 
 import {
   ArrowLeft,
@@ -27,10 +32,6 @@ const API_BASE =
   "http://127.0.0.1:5000";
 
 
-/* =========================================================
-   SUBJECTS
-========================================================= */
-
 const subjects = [
   {
     name: "Python",
@@ -54,7 +55,8 @@ const subjects = [
     description:
       "Models, algorithms and ML fundamentals",
 
-    icon: BrainCircuit,
+    icon:
+      BrainCircuit,
   },
 
   {
@@ -67,18 +69,16 @@ const subjects = [
     description:
       "Arrays, stacks, queues, trees and graphs",
 
-    icon: Database,
+    icon:
+      Database,
   },
 ];
 
 
-/* =========================================================
-   QUIZ
-========================================================= */
-
 function Quiz() {
   const navigate =
     useNavigate();
+
 
   const [screen, setScreen] =
     useState("setup");
@@ -93,6 +93,11 @@ function Quiz() {
     currentIndex,
     setCurrentIndex,
   ] = useState(0);
+
+  const [
+    targetQuestionCount,
+    setTargetQuestionCount,
+  ] = useState(5);
 
   const [
     selectedAnswer,
@@ -113,25 +118,25 @@ function Quiz() {
     useState(0);
 
   const [
-    correctStreak,
-    setCorrectStreak,
-  ] = useState(0);
-
-  const [
-    difficulty,
-    setDifficulty,
-  ] = useState("Medium");
-
-  const [
     answerHistory,
     setAnswerHistory,
   ] = useState([]);
+
+  const [
+    adaptiveInfo,
+    setAdaptiveInfo,
+  ] = useState(null);
 
   const [loading, setLoading] =
     useState(false);
 
   const [checking, setChecking] =
     useState(false);
+
+  const [
+    loadingNext,
+    setLoadingNext,
+  ] = useState(false);
 
   const [saving, setSaving] =
     useState(false);
@@ -169,10 +174,14 @@ function Quiz() {
         return 5;
       }
 
-      return Math.min(
-        count,
-        10
+      return Math.max(
+        1,
+        Math.min(
+          count,
+          10
+        )
       );
+
     } catch {
       return 5;
     }
@@ -194,9 +203,26 @@ function Quiz() {
 
         const response =
           await fetch(
-            `${API_BASE}/api/quiz/questions?subject=${encodeURIComponent(
-              subject
-            )}&limit=${questionCount}`
+            `${API_BASE}/api/quiz/start`,
+            {
+              method:
+                "POST",
+
+              credentials:
+                "include",
+
+              headers: {
+                "Content-Type":
+                  "application/json",
+              },
+
+              body:
+                JSON.stringify(
+                  {
+                    subject,
+                  }
+                ),
+            }
           );
 
         const data =
@@ -208,22 +234,17 @@ function Quiz() {
         ) {
           throw new Error(
             data.message ||
-              "Failed to load questions"
+            "Could not start adaptive quiz"
           );
         }
 
-        if (
-          !data.questions ||
-          data.questions.length === 0
-        ) {
-          throw new Error(
-            "No questions found"
-          );
-        }
-
-        setQuestions(
-          data.questions
+        setTargetQuestionCount(
+          questionCount
         );
+
+        setQuestions([
+          data.question,
+        ]);
 
         setCurrentIndex(0);
 
@@ -241,24 +262,24 @@ function Quiz() {
 
         setScore(0);
 
-        setCorrectStreak(0);
-
-        setDifficulty(
-          "Medium"
-        );
-
         setAnswerHistory(
           []
+        );
+
+        setAdaptiveInfo(
+          data.adaptive
         );
 
         setScreen(
           "quiz"
         );
+
       } catch (error) {
         setError(
           error.message ||
-            "Could not connect to quiz server"
+          "Could not connect to quiz server"
         );
+
       } finally {
         setLoading(false);
       }
@@ -295,6 +316,9 @@ function Quiz() {
               method:
                 "POST",
 
+              credentials:
+                "include",
+
               headers: {
                 "Content-Type":
                   "application/json",
@@ -322,12 +346,9 @@ function Quiz() {
         ) {
           throw new Error(
             data.message ||
-              "Could not check answer"
+            "Could not check answer"
           );
         }
-
-        const isCorrect =
-          data.correct;
 
         setCorrectAnswer(
           data.correctAnswer
@@ -337,9 +358,6 @@ function Quiz() {
           true
         );
 
-        /* =============================================
-           STORE ANSWER HISTORY
-        ============================================== */
 
         const historyItem = {
           questionId:
@@ -362,60 +380,151 @@ function Quiz() {
             data.correctAnswer,
 
           correct:
-            isCorrect
+            data.correct,
         };
+
 
         setAnswerHistory(
           (previous) => [
             ...previous,
-            historyItem
+            historyItem,
           ]
         );
 
-        /* =============================================
-           SCORE + ADAPTIVE STATE
-        ============================================== */
 
-        if (isCorrect) {
+        if (data.correct) {
           setScore(
             (previous) =>
               previous + 1
           );
-
-          const newStreak =
-            correctStreak + 1;
-
-          setCorrectStreak(
-            newStreak
-          );
-
-          if (
-            newStreak >= 2
-          ) {
-            setDifficulty(
-              "Hard"
-            );
-          } else {
-            setDifficulty(
-              "Medium"
-            );
-          }
-        } else {
-          setCorrectStreak(
-            0
-          );
-
-          setDifficulty(
-            "Easy"
-          );
         }
+
       } catch (error) {
         setError(
           error.message ||
-            "Could not check answer"
+          "Could not check answer"
         );
+
       } finally {
         setChecking(false);
+      }
+    };
+
+
+  /* =========================================================
+     LOAD NEXT ADAPTIVE QUESTION
+  ========================================================= */
+
+  const loadNextQuestion =
+    async () => {
+      try {
+        setLoadingNext(
+          true
+        );
+
+        setError("");
+
+        const currentQuestion =
+          questions[
+            currentIndex
+          ];
+
+        const usedQuestionIds =
+          questions.map(
+            (question) =>
+              question.id
+          );
+
+
+        const response =
+          await fetch(
+            `${API_BASE}/api/quiz/next`,
+            {
+              method:
+                "POST",
+
+              credentials:
+                "include",
+
+              headers: {
+                "Content-Type":
+                  "application/json",
+              },
+
+              body:
+                JSON.stringify(
+                  {
+                    subject,
+
+                    previousQuestionId:
+                      currentQuestion.id,
+
+                    selectedAnswer,
+
+                    usedQuestionIds,
+                  }
+                ),
+            }
+          );
+
+
+        const data =
+          await response.json();
+
+
+        if (
+          !response.ok ||
+          !data.success
+        ) {
+          throw new Error(
+            data.message ||
+            "Could not load next adaptive question"
+          );
+        }
+
+
+        setQuestions(
+          (previous) => [
+            ...previous,
+            data.question,
+          ]
+        );
+
+
+        setCurrentIndex(
+          (previous) =>
+            previous + 1
+        );
+
+
+        setAdaptiveInfo(
+          data.adaptive
+        );
+
+
+        setSelectedAnswer(
+          null
+        );
+
+        setCorrectAnswer(
+          null
+        );
+
+        setAnswerChecked(
+          false
+        );
+
+
+      } catch (error) {
+        setError(
+          error.message ||
+          "Could not load next question"
+        );
+
+      } finally {
+        setLoadingNext(
+          false
+        );
       }
     };
 
@@ -453,7 +562,7 @@ function Quiz() {
                     score,
 
                     total:
-                      questions.length,
+                      targetQuestionCount,
 
                     answers:
                       answerHistory,
@@ -462,8 +571,10 @@ function Quiz() {
             }
           );
 
+
         const data =
           await response.json();
+
 
         if (
           !response.ok ||
@@ -471,39 +582,39 @@ function Quiz() {
         ) {
           throw new Error(
             data.message ||
-              "Could not save quiz result"
+            "Could not save quiz result"
           );
         }
 
-        /* =============================================
-           UPDATE LOCAL USER CACHE
-        ============================================== */
 
         const storedUser =
           localStorage.getItem(
             "neuraUser"
           );
 
+
         if (storedUser) {
           try {
-            const user =
+            const currentUser =
               JSON.parse(
                 storedUser
               );
 
-            user.stats =
+            currentUser.stats =
               data.stats;
 
             localStorage.setItem(
               "neuraUser",
               JSON.stringify(
-                user
+                currentUser
               )
             );
+
           } catch {
             // Ignore invalid cache
           }
         }
+
 
         navigate(
           "/results",
@@ -514,7 +625,7 @@ function Quiz() {
               score,
 
               total:
-                questions.length,
+                targetQuestionCount,
 
               accuracy:
                 data.result
@@ -533,11 +644,13 @@ function Quiz() {
           }
         );
 
+
       } catch (error) {
         setError(
           error.message ||
-            "Failed to save quiz result"
+          "Failed to save quiz result"
         );
+
       } finally {
         setSaving(false);
       }
@@ -545,39 +658,27 @@ function Quiz() {
 
 
   /* =========================================================
-     NEXT
+     NEXT BUTTON
   ========================================================= */
 
   const nextQuestion =
-    () => {
+    async () => {
+      const answeredQuestions =
+        currentIndex + 1;
+
       const isLastQuestion =
-        currentIndex ===
-        questions.length - 1;
+        answeredQuestions >=
+        targetQuestionCount;
+
 
       if (isLastQuestion) {
-        saveFinalResult();
+        await saveFinalResult();
 
         return;
       }
 
-      setCurrentIndex(
-        (previous) =>
-          previous + 1
-      );
 
-      setSelectedAnswer(
-        null
-      );
-
-      setAnswerChecked(
-        false
-      );
-
-      setCorrectAnswer(
-        null
-      );
-
-      setError("");
+      await loadNextQuestion();
     };
 
 
@@ -588,9 +689,11 @@ function Quiz() {
   if (screen === "setup") {
     return (
       <div className="quiz-page">
+
         <div className="quiz-background-glow glow-one" />
 
         <div className="quiz-background-glow glow-two" />
+
 
         <header className="quiz-topbar">
 
@@ -600,11 +703,16 @@ function Quiz() {
               navigate("/")
             }
           >
-            <ArrowLeft size={18} />
+            <ArrowLeft
+              size={18}
+            />
+
             Dashboard
           </button>
 
+
           <div className="quiz-brand">
+
             <div className="quiz-brand-icon">
               <BrainCircuit
                 size={20}
@@ -620,15 +728,20 @@ function Quiz() {
                 Adaptive AI
               </span>
             </div>
+
           </div>
 
+
           <div className="quiz-ai-status">
+
             <span className="quiz-status-dot" />
 
-            Quiz Engine Ready
+            Adaptive Engine Ready
+
           </div>
 
         </header>
+
 
         <main className="quiz-setup-container">
 
@@ -639,32 +752,36 @@ function Quiz() {
                 size={14}
               />
 
-              PERSONALIZED QUIZ
+              REAL ADAPTIVE QUIZ
             </div>
 
+
             <h1>
-              Let's build your
+              A quiz that changes
               <br />
 
               <span>
-                next challenge.
+                with every answer.
               </span>
             </h1>
 
+
             <p>
-              Choose a subject and
-              NeuraQuiz will load your
-              questions directly from
-              MongoDB.
+              Correct answers increase
+              difficulty. Incorrect answers
+              reduce difficulty and reinforce
+              weak topics.
             </p>
 
           </section>
+
 
           <section className="quiz-setup-grid">
 
             <div className="quiz-setup-card">
 
               <div className="quiz-section-heading">
+
                 <div>
                   <span>
                     STEP 01
@@ -675,8 +792,12 @@ function Quiz() {
                   </h2>
                 </div>
 
-                <Target size={20} />
+                <Target
+                  size={20}
+                />
+
               </div>
+
 
               <div className="quiz-subject-list">
 
@@ -706,13 +827,16 @@ function Quiz() {
                           )
                         }
                       >
+
                         <div className="quiz-subject-icon">
                           <Icon
                             size={20}
                           />
                         </div>
 
+
                         <div className="quiz-subject-content">
+
                           <strong>
                             {label}
                           </strong>
@@ -720,9 +844,12 @@ function Quiz() {
                           <span>
                             {description}
                           </span>
+
                         </div>
 
+
                         <div className="quiz-subject-check">
+
                           {active ? (
                             <Check
                               size={14}
@@ -732,7 +859,9 @@ function Quiz() {
                               size={16}
                             />
                           )}
+
                         </div>
+
                       </button>
                     );
                   }
@@ -741,9 +870,11 @@ function Quiz() {
               </div>
             </div>
 
+
             <div className="quiz-info-card">
 
               <div className="quiz-info-header">
+
                 <div className="quiz-info-ai-icon">
                   <BrainCircuit
                     size={24}
@@ -752,87 +883,123 @@ function Quiz() {
 
                 <div>
                   <span>
-                    AI CONFIGURATION
+                    ENGINE CONFIGURATION
                   </span>
 
                   <h3>
                     Adaptive Mode
                   </h3>
                 </div>
+
               </div>
 
+
               <p className="quiz-info-description">
-                Every completed quiz is
-                saved to your learning
-                profile.
+                The backend selects each
+                next question dynamically
+                from MongoDB.
               </p>
+
 
               <div className="quiz-info-list">
 
                 <div className="quiz-info-row">
+
                   <div>
-                    <Zap size={17} />
-                    Difficulty
+                    <Zap
+                      size={17}
+                    />
+
+                    Start Difficulty
                   </div>
 
                   <strong>
-                    Adaptive
+                    Medium
                   </strong>
+
                 </div>
 
+
                 <div className="quiz-info-row">
+
                   <div>
-                    <Target size={17} />
+                    <Target
+                      size={17}
+                    />
+
                     Questions
                   </div>
 
                   <strong>
                     {getQuestionCount()}
                   </strong>
+
                 </div>
 
+
                 <div className="quiz-info-row">
+
                   <div>
-                    <Clock3 size={17} />
-                    Result
+                    <BrainCircuit
+                      size={17}
+                    />
+
+                    Question Flow
                   </div>
 
                   <strong>
-                    Saved
+                    Adaptive
                   </strong>
+
                 </div>
 
+
                 <div className="quiz-info-row">
+
                   <div>
-                    <Flame size={17} />
-                    XP
+                    <Flame
+                      size={17}
+                    />
+
+                    Weak Topics
                   </div>
 
                   <strong>
-                    Earned
+                    Prioritized
                   </strong>
+
                 </div>
 
               </div>
 
+
               {error && (
                 <div className="quiz-ai-message">
-                  <X size={18} />
+
+                  <X
+                    size={18}
+                  />
 
                   <p>
                     {error}
                   </p>
+
                 </div>
               )}
+
 
               <button
                 className="quiz-start-button"
                 onClick={
                   startQuiz
                 }
-                disabled={loading}
+                disabled={
+                  loading
+                }
               >
+
                 <div>
+
                   {loading ? (
                     <LoaderCircle
                       size={15}
@@ -844,17 +1011,21 @@ function Quiz() {
                       fill="currentColor"
                     />
                   )}
+
                 </div>
 
+
                 {loading
-                  ? "Loading Questions..."
+                  ? "Starting Adaptive Quiz..."
                   : "Start Adaptive Quiz"}
+
 
                 {!loading && (
                   <ArrowRight
                     size={18}
                   />
                 )}
+
               </button>
 
             </div>
@@ -871,14 +1042,20 @@ function Quiz() {
   ========================================================= */
 
   const currentQuestion =
-    questions[currentIndex];
+    questions[
+      currentIndex
+    ];
+
 
   const progress =
     (
-      (currentIndex + 1)
+      (
+        currentIndex + 1
+      )
       /
-      questions.length
+      targetQuestionCount
     ) * 100;
+
 
   const isCorrect =
     answerChecked &&
@@ -886,11 +1063,21 @@ function Quiz() {
       correctAnswer;
 
 
+  const currentDifficulty =
+    currentQuestion
+      ?.difficulty ||
+    adaptiveInfo
+      ?.difficulty ||
+    "Medium";
+
+
   return (
     <div className="quiz-page quiz-running-page">
 
       <div className="quiz-background-glow glow-one" />
+
       <div className="quiz-background-glow glow-two" />
+
 
       <header className="quiz-running-topbar">
 
@@ -900,11 +1087,16 @@ function Quiz() {
             navigate("/")
           }
         >
-          <ArrowLeft size={18} />
+          <ArrowLeft
+            size={18}
+          />
+
           Exit Quiz
         </button>
 
+
         <div className="quiz-running-title">
+
           <div className="quiz-brand-icon">
             <BrainCircuit
               size={20}
@@ -920,17 +1112,23 @@ function Quiz() {
               Adaptive Quiz
             </span>
           </div>
+
         </div>
 
-        <div
-          className={`quiz-difficulty difficulty-${difficulty.toLowerCase()}`}
-        >
-          <Zap size={14} />
 
-          {difficulty}
+        <div
+          className={`quiz-difficulty difficulty-${currentDifficulty.toLowerCase()}`}
+        >
+          <Zap
+            size={14}
+          />
+
+          {currentDifficulty}
+
         </div>
 
       </header>
+
 
       <main className="quiz-question-container">
 
@@ -945,10 +1143,12 @@ function Quiz() {
               {currentIndex + 1}
 
               <small>
-                /{questions.length}
+                /
+                {targetQuestionCount}
               </small>
             </strong>
           </div>
+
 
           <div className="quiz-progress-right">
             <span>
@@ -961,38 +1161,50 @@ function Quiz() {
 
         </div>
 
+
         <div className="quiz-main-progress">
+
           <div
             style={{
               width:
                 `${progress}%`,
             }}
           />
+
         </div>
+
 
         <section className="quiz-question-card">
 
           <div className="quiz-question-top">
 
             <div className="quiz-question-category">
+
               <BrainCircuit
                 size={15}
               />
 
-              {currentQuestion.topic}
+              {
+                currentQuestion.topic
+              }
+
             </div>
 
+
             <div className="quiz-question-ai">
+
               <Sparkles
                 size={14}
               />
 
               {
-                currentQuestion.difficulty
+                currentDifficulty
               }
+
             </div>
 
           </div>
+
 
           <h1>
             {
@@ -1000,9 +1212,28 @@ function Quiz() {
             }
           </h1>
 
+
+          {adaptiveInfo?.reason && (
+            <div className="quiz-ai-message">
+
+              <Sparkles
+                size={16}
+              />
+
+              <p>
+                {
+                  adaptiveInfo.reason
+                }
+              </p>
+
+            </div>
+          )}
+
+
           <p className="quiz-select-label">
             Select one answer
           </p>
+
 
           <div className="quiz-options">
 
@@ -1016,19 +1247,23 @@ function Quiz() {
                     65 + index
                   );
 
+
                 const selected =
                   selectedAnswer ===
                   option;
+
 
                 const correctOption =
                   answerChecked &&
                   option ===
                     correctAnswer;
 
+
                 const wrongOption =
                   answerChecked &&
                   selected &&
                   !correctOption;
+
 
                 return (
                   <button
@@ -1060,21 +1295,25 @@ function Quiz() {
                         : "",
                     ].join(" ")}
                   >
+
                     <div className="quiz-option-letter">
 
                       {correctOption ? (
                         <Check
                           size={17}
                         />
+
                       ) : wrongOption ? (
                         <X
                           size={17}
                         />
+
                       ) : (
                         optionLetter
                       )}
 
                     </div>
+
 
                     <span>
                       {option}
@@ -1087,6 +1326,7 @@ function Quiz() {
 
           </div>
 
+
           {answerChecked && (
             <div
               className={`quiz-feedback ${
@@ -1095,43 +1335,62 @@ function Quiz() {
                   : "quiz-feedback-wrong"
               }`}
             >
-              <div>
-                {isCorrect ? (
-                  <Check size={18} />
-                ) : (
-                  <X size={18} />
-                )}
-              </div>
 
               <div>
+
+                {isCorrect ? (
+                  <Check
+                    size={18}
+                  />
+                ) : (
+                  <X
+                    size={18}
+                  />
+                )}
+
+              </div>
+
+
+              <div>
+
                 <strong>
                   {isCorrect
                     ? "Great answer!"
                     : "Not quite."}
                 </strong>
 
+
                 <p>
                   {isCorrect
-                    ? "Correct answer. Keep going!"
-                    : `Correct answer: ${correctAnswer}`}
+                    ? "Correct. The adaptive engine may increase difficulty."
+                    : `Correct answer: ${correctAnswer}. The next question will adapt to this result.`}
                 </p>
+
               </div>
+
             </div>
           )}
 
+
           {error && (
             <div className="quiz-feedback quiz-feedback-wrong">
-              <X size={18} />
+
+              <X
+                size={18}
+              />
 
               <p>
                 {error}
               </p>
+
             </div>
           )}
+
 
           <div className="quiz-question-actions">
 
             <div className="quiz-live-score">
+
               <Trophy
                 size={17}
               />
@@ -1143,9 +1402,12 @@ function Quiz() {
               <strong>
                 {score}
               </strong>
+
             </div>
 
+
             {!answerChecked ? (
+
               <button
                 className="quiz-check-button"
 
@@ -1158,15 +1420,18 @@ function Quiz() {
                   checkAnswer
                 }
               >
+
                 {checking
                   ? "Checking..."
                   : "Check Answer"}
+
 
                 {!checking && (
                   <ArrowRight
                     size={17}
                   />
                 )}
+
               </button>
 
             ) : (
@@ -1175,25 +1440,32 @@ function Quiz() {
                 className="quiz-check-button"
 
                 disabled={
-                  saving
+                  saving ||
+                  loadingNext
                 }
 
                 onClick={
                   nextQuestion
                 }
               >
+
                 {saving
                   ? "Saving Result..."
-                  : currentIndex ===
-                    questions.length - 1
+                  : loadingNext
+                  ? "Adapting Question..."
+                  : currentIndex + 1 >=
+                    targetQuestionCount
                   ? "View Results"
-                  : "Next Question"}
+                  : "Next Adaptive Question"}
 
-                {!saving && (
-                  <ArrowRight
-                    size={17}
-                  />
-                )}
+
+                {!saving &&
+                  !loadingNext && (
+                    <ArrowRight
+                      size={17}
+                    />
+                  )}
+
               </button>
 
             )}
@@ -1201,9 +1473,11 @@ function Quiz() {
           </div>
 
         </section>
+
       </main>
     </div>
   );
 }
+
 
 export default Quiz;
