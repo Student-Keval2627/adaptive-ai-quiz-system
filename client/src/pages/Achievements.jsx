@@ -1,3 +1,9 @@
+import {
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
+
 import { useNavigate } from "react-router-dom";
 
 import {
@@ -18,119 +24,106 @@ import {
 
 import "./Achievements.css";
 
-const achievements = [
-  {
-    title: "First Step",
-    description: "Complete your first adaptive quiz.",
-    icon: Zap,
-    unlocked: true,
-    progress: 100,
-    category: "Quiz",
-  },
-  {
-    title: "Quiz Explorer",
-    description: "Complete 10 adaptive quizzes.",
-    icon: BrainCircuit,
-    unlocked: true,
-    progress: 100,
-    category: "Quiz",
-  },
-  {
-    title: "Sharp Mind",
-    description: "Reach 80% overall quiz accuracy.",
-    icon: Target,
-    unlocked: true,
-    progress: 100,
-    category: "Accuracy",
-  },
-  {
-    title: "Learning Fire",
-    description: "Maintain a 7 day learning streak.",
-    icon: Flame,
-    unlocked: true,
-    progress: 100,
-    category: "Streak",
-  },
-  {
-    title: "Quiz Master",
-    description: "Complete 50 adaptive quizzes.",
-    icon: Trophy,
-    unlocked: false,
-    progress: 48,
-    category: "Quiz",
-  },
-  {
-    title: "Accuracy Expert",
-    description: "Reach 90% overall quiz accuracy.",
-    icon: Medal,
-    unlocked: false,
-    progress: 84,
-    category: "Accuracy",
-  },
-  {
-    title: "Unstoppable",
-    description: "Maintain a 30 day learning streak.",
-    icon: Flame,
-    unlocked: false,
-    progress: 40,
-    category: "Streak",
-  },
-  {
-    title: "Neura Champion",
-    description: "Reach student level 10.",
-    icon: Crown,
-    unlocked: false,
-    progress: 50,
-    category: "Level",
-  },
-];
 
-function AchievementCard({ achievement }) {
-  const Icon = achievement.icon;
+const API_BASE =
+  "http://127.0.0.1:5000";
+
+
+/* =========================================================
+   HELPER
+========================================================= */
+
+const calculateProgress = (
+  current,
+  target
+) => {
+  if (!target) {
+    return 0;
+  }
+
+  return Math.min(
+    100,
+    Math.round(
+      (current / target) *
+      100
+    )
+  );
+};
+
+
+/* =========================================================
+   ACHIEVEMENT CARD
+========================================================= */
+
+function AchievementCard({
+  achievement,
+}) {
+  const Icon =
+    achievement.icon;
 
   return (
     <div
-      className={`achievement-card ${
-        achievement.unlocked
-          ? "achievement-unlocked"
-          : "achievement-locked"
-      }`}
+      className={`achievement-card ${achievement.unlocked
+        ? "achievement-unlocked"
+        : "achievement-locked"
+        }`}
     >
       <div className="achievement-card-top">
+
         <div className="achievement-icon">
           <Icon size={22} />
         </div>
 
         {achievement.unlocked ? (
           <div className="achievement-state unlocked-state">
-            <CheckCircle2 size={13} />
+            <CheckCircle2
+              size={13}
+            />
+
             Unlocked
           </div>
         ) : (
           <div className="achievement-state locked-state">
             <Lock size={12} />
+
             Locked
           </div>
         )}
+
       </div>
+
 
       <span className="achievement-category">
         {achievement.category}
       </span>
 
-      <h3>{achievement.title}</h3>
 
-      <p>{achievement.description}</p>
+      <h3>
+        {achievement.title}
+      </h3>
+
+
+      <p>
+        {achievement.description}
+      </p>
+
 
       <div className="achievement-progress-info">
-        <span>Progress</span>
-        <strong>{achievement.progress}%</strong>
+        <span>
+          Progress
+        </span>
+
+        <strong>
+          {achievement.progress}%
+        </strong>
       </div>
+
 
       <div className="achievement-progress-track">
         <div
           style={{
-            width: `${achievement.progress}%`,
+            width:
+              `${achievement.progress}%`,
           }}
         />
       </div>
@@ -138,239 +131,1097 @@ function AchievementCard({ achievement }) {
   );
 }
 
-function Achievements() {
-  const navigate = useNavigate();
 
-  const unlockedCount = achievements.filter(
-    (achievement) => achievement.unlocked
-  ).length;
+/* =========================================================
+   ACHIEVEMENTS PAGE
+========================================================= */
+
+function Achievements() {
+  const navigate =
+    useNavigate();
+
+  const [user, setUser] =
+    useState(null);
+
+  const [loading, setLoading] =
+    useState(true);
+
+  const [error, setError] =
+    useState("");
+
+
+  /* =========================================================
+     LOAD USER FROM MONGODB
+  ========================================================= */
+
+  useEffect(() => {
+    const loadAchievements =
+      async () => {
+        try {
+          setLoading(true);
+          setError("");
+
+          const response =
+            await fetch(
+              `${API_BASE}/api/auth/me`,
+              {
+                credentials:
+                  "include",
+              }
+            );
+
+          const data =
+            await response.json();
+
+          if (
+            !response.ok ||
+            !data.authenticated
+          ) {
+            navigate(
+              "/login",
+              {
+                replace: true,
+              }
+            );
+
+            return;
+          }
+
+          setUser(
+            data.user
+          );
+
+          localStorage.setItem(
+            "neuraUser",
+            JSON.stringify(
+              data.user
+            )
+          );
+
+        } catch {
+          setError(
+            "Could not load achievements."
+          );
+        } finally {
+          setLoading(false);
+        }
+      };
+
+    loadAchievements();
+  }, [navigate]);
+
+
+  /* =========================================================
+     REAL USER STATS
+  ========================================================= */
+
+  const stats =
+    user?.stats || {};
+
+  const quizzesCompleted =
+    stats.quizzesCompleted || 0;
+
+  const accuracy =
+    stats.accuracy || 0;
+
+  const streak =
+    stats.streak || 0;
+
+  const xp =
+    stats.xp || 0;
+
+  const level =
+    stats.level || 1;
+
+  const questionsAnswered =
+    stats.questionsAnswered || 0;
+
+
+  /*
+    Future backend versions can store
+    bestAccuracy and bestStreak.
+
+    Until then we use current real
+    MongoDB values.
+  */
+
+  const bestAccuracy =
+    stats.bestAccuracy ??
+    accuracy;
+
+  const bestStreak =
+    stats.bestStreak ??
+    streak;
+
+
+  /* =========================================================
+     REAL ACHIEVEMENT RULES
+  ========================================================= */
+
+  const achievements =
+    useMemo(() => {
+      return [
+        {
+          id: "first-step",
+
+          title:
+            "First Step",
+
+          description:
+            "Complete your first adaptive quiz.",
+
+          icon: Zap,
+
+          category:
+            "Quiz",
+
+          current:
+            quizzesCompleted,
+
+          target: 1,
+
+          unit:
+            "quiz",
+
+          unlocked:
+            quizzesCompleted >= 1,
+
+          progress:
+            calculateProgress(
+              quizzesCompleted,
+              1
+            ),
+        },
+
+
+        {
+          id:
+            "quiz-explorer",
+
+          title:
+            "Quiz Explorer",
+
+          description:
+            "Complete 10 adaptive quizzes.",
+
+          icon:
+            BrainCircuit,
+
+          category:
+            "Quiz",
+
+          current:
+            quizzesCompleted,
+
+          target: 10,
+
+          unit:
+            "quizzes",
+
+          unlocked:
+            quizzesCompleted >=
+            10,
+
+          progress:
+            calculateProgress(
+              quizzesCompleted,
+              10
+            ),
+        },
+
+
+        {
+          id:
+            "sharp-mind",
+
+          title:
+            "Sharp Mind",
+
+          description:
+            "Reach 80% overall quiz accuracy.",
+
+          icon:
+            Target,
+
+          category:
+            "Accuracy",
+
+          current:
+            bestAccuracy,
+
+          target: 80,
+
+          unit:
+            "accuracy",
+
+          unlocked:
+            bestAccuracy >=
+            80,
+
+          progress:
+            calculateProgress(
+              bestAccuracy,
+              80
+            ),
+        },
+
+
+        {
+          id:
+            "learning-fire",
+
+          title:
+            "Learning Fire",
+
+          description:
+            "Maintain a 7 day learning streak.",
+
+          icon:
+            Flame,
+
+          category:
+            "Streak",
+
+          current:
+            bestStreak,
+
+          target: 7,
+
+          unit:
+            "days",
+
+          unlocked:
+            bestStreak >= 7,
+
+          progress:
+            calculateProgress(
+              bestStreak,
+              7
+            ),
+        },
+
+
+        {
+          id:
+            "quiz-master",
+
+          title:
+            "Quiz Master",
+
+          description:
+            "Complete 50 adaptive quizzes.",
+
+          icon:
+            Trophy,
+
+          category:
+            "Quiz",
+
+          current:
+            quizzesCompleted,
+
+          target: 50,
+
+          unit:
+            "quizzes",
+
+          unlocked:
+            quizzesCompleted >=
+            50,
+
+          progress:
+            calculateProgress(
+              quizzesCompleted,
+              50
+            ),
+        },
+
+
+        {
+          id:
+            "accuracy-expert",
+
+          title:
+            "Accuracy Expert",
+
+          description:
+            "Reach 90% overall quiz accuracy.",
+
+          icon:
+            Medal,
+
+          category:
+            "Accuracy",
+
+          current:
+            bestAccuracy,
+
+          target: 90,
+
+          unit:
+            "accuracy",
+
+          unlocked:
+            bestAccuracy >=
+            90,
+
+          progress:
+            calculateProgress(
+              bestAccuracy,
+              90
+            ),
+        },
+
+
+        {
+          id:
+            "unstoppable",
+
+          title:
+            "Unstoppable",
+
+          description:
+            "Maintain a 30 day learning streak.",
+
+          icon:
+            Flame,
+
+          category:
+            "Streak",
+
+          current:
+            bestStreak,
+
+          target: 30,
+
+          unit:
+            "days",
+
+          unlocked:
+            bestStreak >=
+            30,
+
+          progress:
+            calculateProgress(
+              bestStreak,
+              30
+            ),
+        },
+
+
+        {
+          id:
+            "neura-champion",
+
+          title:
+            "Neura Champion",
+
+          description:
+            "Reach student level 10.",
+
+          icon:
+            Crown,
+
+          category:
+            "Level",
+
+          current:
+            level,
+
+          target: 10,
+
+          unit:
+            "levels",
+
+          unlocked:
+            level >= 10,
+
+          progress:
+            calculateProgress(
+              level,
+              10
+            ),
+        },
+      ];
+
+    }, [
+      quizzesCompleted,
+      bestAccuracy,
+      bestStreak,
+      level,
+    ]);
+
+
+  /* =========================================================
+     UNLOCKED
+  ========================================================= */
+
+  const unlockedAchievements =
+    achievements.filter(
+      (achievement) =>
+        achievement.unlocked
+    );
+
+  const unlockedCount =
+    unlockedAchievements.length;
+
+
+  /* =========================================================
+     HIGHEST UNLOCKED ACHIEVEMENT
+  ========================================================= */
+
+  const highestUnlocked =
+    unlockedAchievements.length >
+      0
+      ? unlockedAchievements[
+      unlockedAchievements.length -
+      1
+      ]
+      : null;
+
+  const HighestUnlockedIcon =
+    highestUnlocked?.icon ||
+    Lock;
+  const NextAchievementIcon =
+    nextAchievement?.icon ||
+    Crown;
+
+  /* =========================================================
+     NEXT MILESTONE
+  ========================================================= */
+
+  const nextAchievement =
+    useMemo(() => {
+      const locked =
+        achievements.filter(
+          (achievement) =>
+            !achievement.unlocked
+        );
+
+      if (
+        locked.length === 0
+      ) {
+        return null;
+      }
+
+      return [...locked].sort(
+        (a, b) =>
+          b.progress -
+          a.progress
+      )[0];
+
+    }, [achievements]);
+
+
+  /* =========================================================
+     NEXT MILESTONE MESSAGE
+  ========================================================= */
+
+  const nextGoalText =
+    useMemo(() => {
+      if (!nextAchievement) {
+        return (
+          "You have unlocked every available achievement."
+        );
+      }
+
+      const remaining =
+        Math.max(
+          nextAchievement.target -
+          nextAchievement.current,
+          0
+        );
+
+      if (
+        nextAchievement.category ===
+        "Accuracy"
+      ) {
+        return (
+          `Increase your overall accuracy by ${remaining}% to unlock this achievement.`
+        );
+      }
+
+      if (
+        nextAchievement.category ===
+        "Level"
+      ) {
+        return (
+          `Reach Level ${nextAchievement.target} to unlock this achievement.`
+        );
+      }
+
+      if (
+        nextAchievement.category ===
+        "Streak"
+      ) {
+        return (
+          `Maintain your learning streak for ${remaining} more ${remaining === 1
+            ? "day"
+            : "days"
+          } to unlock this achievement.`
+        );
+      }
+
+      return (
+        `Complete ${remaining} more ${remaining === 1
+          ? "quiz"
+          : "quizzes"
+        } to unlock this achievement.`
+      );
+
+    }, [nextAchievement]);
+
+
+  /* =========================================================
+     LEVEL PROGRESS
+  ========================================================= */
+
+  const currentLevelBase =
+    (level - 1) * 500;
+
+  const nextLevelXp =
+    level * 500;
+
+  const xpInsideLevel =
+    Math.max(
+      xp -
+      currentLevelBase,
+      0
+    );
+
+  const levelProgress =
+    Math.min(
+      100,
+      Math.round(
+        (xpInsideLevel /
+          500) *
+        100
+      )
+    );
+
+
+  /* =========================================================
+     LOADING
+  ========================================================= */
+
+  if (loading) {
+    return (
+      <div
+        style={{
+          minHeight:
+            "100vh",
+
+          display:
+            "grid",
+
+          placeItems:
+            "center",
+
+          background:
+            "#090909",
+
+          color:
+            "#ff8d58",
+        }}
+      >
+        Loading achievements...
+      </div>
+    );
+  }
+
+
+  /* =========================================================
+     UI
+  ========================================================= */
 
   return (
     <div className="achievements-page">
+
       <div className="achievements-glow achievement-glow-one" />
+
       <div className="achievements-glow achievement-glow-two" />
 
-      {/* HEADER */}
+
+      {/* =====================================================
+          HEADER
+      ====================================================== */}
 
       <header className="achievements-topbar">
+
         <button
           className="achievements-back-button"
-          onClick={() => navigate("/")}
+          onClick={() =>
+            navigate("/")
+          }
         >
-          <ArrowLeft size={18} />
+          <ArrowLeft
+            size={18}
+          />
+
           Dashboard
         </button>
 
+
         <div className="achievements-brand">
+
           <div className="achievements-brand-icon">
-            <BrainCircuit size={20} />
+            <BrainCircuit
+              size={20}
+            />
           </div>
 
           <div>
-            <strong>NeuraQuiz</strong>
-            <span>Adaptive AI</span>
+            <strong>
+              NeuraQuiz
+            </strong>
+
+            <span>
+              Adaptive AI
+            </span>
           </div>
+
         </div>
+
 
         <button
           className="achievements-start-button"
-          onClick={() => navigate("/quiz")}
+          onClick={() =>
+            navigate("/quiz")
+          }
         >
-          <Play size={14} fill="currentColor" />
+          <Play
+            size={14}
+            fill="currentColor"
+          />
+
           Continue Learning
         </button>
+
       </header>
 
+
       <main className="achievements-container">
-        {/* HERO */}
+
+        {/* ===================================================
+            ERROR
+        ==================================================== */}
+
+        {error && (
+          <div
+            style={{
+              marginBottom:
+                "20px",
+
+              padding:
+                "12px 15px",
+
+              borderRadius:
+                "10px",
+
+              background:
+                "rgba(255, 120, 85, 0.05)",
+
+              border:
+                "1px solid rgba(255, 120, 85, 0.15)",
+
+              color:
+                "#e89b8a",
+            }}
+          >
+            {error}
+          </div>
+        )}
+
+
+        {/* ===================================================
+            HERO
+        ==================================================== */}
 
         <section className="achievements-hero">
+
           <div>
+
             <div className="achievements-hero-badge">
-              <Trophy size={14} />
+              <Trophy
+                size={14}
+              />
+
               LEARNING MILESTONES
             </div>
+
 
             <h1>
               Every answer builds
               <br />
-              <span>your achievement.</span>
+
+              <span>
+                your achievement.
+              </span>
             </h1>
 
+
             <p>
-              Track milestones you have unlocked and discover
-              the challenges waiting for you as your learning
-              journey continues.
+              Your achievements are
+              calculated from your real
+              quiz progress, accuracy,
+              streak, XP and learning
+              level.
             </p>
+
           </div>
+
+
+          {/* LEVEL */}
 
           <div className="achievement-level-card">
+
             <div className="achievement-level-icon">
-              <Crown size={26} />
+              <Crown
+                size={26}
+              />
             </div>
+
 
             <div className="achievement-level-content">
-              <span>CURRENT LEVEL</span>
 
-              <h3>Level 5</h3>
+              <span>
+                CURRENT LEVEL
+              </span>
 
-              <p>Adaptive Learner</p>
+              <h3>
+                Level {level}
+              </h3>
+
+              <p>
+                Adaptive Learner
+              </p>
+
 
               <div className="achievement-xp-row">
-                <span>2,460 XP</span>
-                <strong>3,000 XP</strong>
+
+                <span>
+                  {xp.toLocaleString()}
+                  {" "}
+                  XP
+                </span>
+
+                <strong>
+                  {nextLevelXp.toLocaleString()}
+                  {" "}
+                  XP
+                </strong>
+
               </div>
+
 
               <div className="achievement-xp-track">
-                <div style={{ width: "82%" }} />
+                <div
+                  style={{
+                    width:
+                      `${levelProgress}%`,
+                  }}
+                />
               </div>
+
             </div>
           </div>
+
         </section>
 
-        {/* STATS */}
+
+        {/* ===================================================
+            REAL STATS
+        ==================================================== */}
 
         <section className="achievement-stats-grid">
+
           <div className="achievement-stat-card">
+
             <div className="achievement-stat-icon">
-              <Trophy size={20} />
+              <Trophy
+                size={20}
+              />
             </div>
 
             <strong>
               {unlockedCount}
-              <small>/{achievements.length}</small>
+
+              <small>
+                /{achievements.length}
+              </small>
             </strong>
 
-            <span>Achievements</span>
+            <span>
+              Achievements
+            </span>
 
-            <p>Milestones currently unlocked</p>
+            <p>
+              Milestones currently unlocked
+            </p>
+
           </div>
+
 
           <div className="achievement-stat-card">
+
             <div className="achievement-stat-icon">
-              <Star size={20} />
+              <Star
+                size={20}
+              />
             </div>
 
-            <strong>2,460</strong>
+            <strong>
+              {xp.toLocaleString()}
+            </strong>
 
-            <span>Total XP</span>
+            <span>
+              Total XP
+            </span>
 
-            <p>Experience earned from learning</p>
+            <p>
+              Experience earned from learning
+            </p>
+
           </div>
+
 
           <div className="achievement-stat-card">
+
             <div className="achievement-stat-icon">
-              <Flame size={20} />
+              <Flame
+                size={20}
+              />
             </div>
 
-            <strong>12 days</strong>
+            <strong>
+              {streak}{" "}
+              {streak === 1
+                ? "day"
+                : "days"}
+            </strong>
 
-            <span>Current Streak</span>
+            <span>
+              Current Streak
+            </span>
 
-            <p>Best learning streak: 18 days</p>
+            <p>
+              Current learning consistency
+            </p>
+
           </div>
+
 
           <div className="achievement-stat-card">
+
             <div className="achievement-stat-icon">
-              <Target size={20} />
+              <Target
+                size={20}
+              />
             </div>
 
-            <strong>84%</strong>
+            <strong>
+              {accuracy}%
+            </strong>
 
-            <span>Accuracy</span>
+            <span>
+              Accuracy
+            </span>
 
-            <p>Your overall quiz performance</p>
+            <p>
+              Based on {questionsAnswered} answers
+            </p>
+
           </div>
+
         </section>
 
-        {/* RECENT ACHIEVEMENT */}
+
+        {/* ===================================================
+            HIGHEST UNLOCKED
+        ==================================================== */}
 
         <section className="recent-achievement-card">
+
           <div className="recent-achievement-left">
+
             <div className="recent-achievement-icon">
-              <Medal size={26} />
+              <HighestUnlockedIcon
+                size={26}
+              />
             </div>
 
-            <div>
-              <span>RECENTLY UNLOCKED</span>
 
-              <h2>Sharp Mind</h2>
+            <div>
+
+              <span>
+                HIGHEST UNLOCKED
+              </span>
+
+              <h2>
+                {highestUnlocked
+                  ? highestUnlocked.title
+                  : "Start Your Journey"}
+              </h2>
 
               <p>
-                You reached more than 80% overall quiz accuracy.
+                {highestUnlocked
+                  ? highestUnlocked.description
+                  : "Complete your first adaptive quiz to unlock your first achievement."}
               </p>
+
             </div>
+
           </div>
+
 
           <div className="recent-achievement-xp">
-            <Sparkles size={15} />
-            +250 XP
+            <Sparkles
+              size={15}
+            />
+
+            Level {level}
           </div>
+
         </section>
 
-        {/* ACHIEVEMENTS */}
+
+        {/* ===================================================
+            ACHIEVEMENTS
+        ==================================================== */}
 
         <section className="achievements-panel">
+
           <div className="achievements-panel-header">
+
             <div>
-              <span>YOUR COLLECTION</span>
-              <h2>Learning achievements</h2>
+              <span>
+                YOUR COLLECTION
+              </span>
+
+              <h2>
+                Learning achievements
+              </h2>
             </div>
+
 
             <div className="achievement-progress-badge">
-              {unlockedCount}/{achievements.length} unlocked
+              {unlockedCount}
+              /
+              {achievements.length}
+              {" "}
+              unlocked
             </div>
+
           </div>
+
 
           <div className="achievements-grid">
-            {achievements.map((achievement) => (
-              <AchievementCard
-                key={achievement.title}
-                achievement={achievement}
-              />
-            ))}
+
+            {achievements.map(
+              (achievement) => (
+                <AchievementCard
+                  key={
+                    achievement.id
+                  }
+                  achievement={
+                    achievement
+                  }
+                />
+              )
+            )}
+
           </div>
+
         </section>
 
-        {/* NEXT GOAL */}
+
+        {/* ===================================================
+            NEXT GOAL
+        ==================================================== */}
 
         <section className="achievement-next-goal">
+
           <div className="achievement-next-left">
+
             <div className="achievement-next-icon">
               <Trophy size={23} />
             </div>
 
-            <div>
-              <span>NEXT MILESTONE</span>
 
-              <h2>Quiz Master</h2>
+            <div>
+
+              <span>
+                {nextAchievement
+                  ? "NEXT MILESTONE"
+                  : "ALL MILESTONES"}
+              </span>
+
+              <h2>
+                {nextAchievement
+                  ? nextAchievement.title
+                  : "Neura Champion"}
+              </h2>
 
               <p>
-                Complete 26 more quizzes to unlock this
-                achievement.
+                {nextGoalText}
               </p>
+
             </div>
+
           </div>
+
 
           <div className="achievement-next-progress">
+
             <div>
-              <span>24 / 50 quizzes</span>
-              <strong>48%</strong>
+
+              <span>
+                {nextAchievement
+                  ? `${nextAchievement.current} / ${nextAchievement.target}`
+                  : `${achievements.length} / ${achievements.length}`}
+              </span>
+
+              <strong>
+                {nextAchievement
+                  ? `${nextAchievement.progress}%`
+                  : "100%"}
+              </strong>
+
             </div>
 
+
             <div className="achievement-next-track">
-              <div style={{ width: "48%" }} />
+
+              <div
+                style={{
+                  width:
+                    `${nextAchievement
+                      ? nextAchievement.progress
+                      : 100
+                    }%`,
+                }}
+              />
+
             </div>
+
           </div>
+
 
           <button
             className="achievement-practice-button"
-            onClick={() => navigate("/quiz")}
+            onClick={() =>
+              navigate("/quiz")
+            }
           >
-            <Zap size={15} />
+            <Zap
+              size={15}
+            />
+
             Start Quiz
           </button>
+
         </section>
+
       </main>
     </div>
   );
