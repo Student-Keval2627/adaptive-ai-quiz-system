@@ -8,6 +8,7 @@ from bson import ObjectId
 from pymongo.errors import DuplicateKeyError
 
 from database import (
+    quiz_attempts_collection,
     quiz_results_collection,
     users_collection,
 )
@@ -18,7 +19,7 @@ from models.quiz_model import (
 
 
 MAX_ANSWERS_PER_QUIZ = 20
-RESULT_VERIFICATION_VERSION = 2
+RESULT_VERIFICATION_VERSION = 3
 
 
 # =========================================================
@@ -48,9 +49,6 @@ def create_result_indexes():
             ("createdAt", -1),
         ]
     )
-
-    # Only new results contain attemptId.
-    # Old MongoDB results remain untouched.
 
     quiz_results_collection.create_index(
         [
@@ -103,7 +101,6 @@ def calculate_streak(user):
         )
 
     today = now.date()
-
     last_quiz_date = (
         last_quiz_at.date()
     )
@@ -276,6 +273,95 @@ def serialize_result(result):
 
 
 # =========================================================
+# USER ID QUERY
+# =========================================================
+
+def build_attempt_user_query(
+    object_user_id,
+):
+    return {
+        "$in": [
+            object_user_id,
+            str(object_user_id),
+        ]
+    }
+
+
+# =========================================================
+# GET ACTIVE QUIZ ATTEMPT
+# =========================================================
+
+def get_active_attempt(
+    object_user_id,
+    attempt_id,
+):
+    return (
+        quiz_attempts_collection.find_one(
+            {
+                "userId":
+                    build_attempt_user_query(
+                        object_user_id
+                    ),
+
+                "attemptId":
+                    attempt_id,
+
+                "status":
+                    "active",
+            }
+        )
+    )
+
+
+# =========================================================
+# MARK QUIZ ATTEMPT COMPLETED
+# =========================================================
+
+def mark_attempt_completed(
+    object_user_id,
+    attempt_id,
+    result_id,
+    completed_at,
+):
+    update_result = (
+        quiz_attempts_collection.update_one(
+            {
+                "userId":
+                    build_attempt_user_query(
+                        object_user_id
+                    ),
+
+                "attemptId":
+                    attempt_id,
+
+                "status":
+                    "active",
+            },
+            {
+                "$set": {
+                    "status":
+                        "completed",
+
+                    "resultId":
+                        result_id,
+
+                    "completedAt":
+                        completed_at,
+
+                    "updatedAt":
+                        completed_at,
+                }
+            },
+        )
+    )
+
+    return (
+        update_result.modified_count
+        == 1
+    )
+
+
+# =========================================================
 # VERIFY ANSWERS
 # =========================================================
 
@@ -314,11 +400,8 @@ def verify_quiz_answers(
         }
 
     verified_answers = []
-
     used_question_ids = set()
-
     score = 0
-
 
     for index, answer in enumerate(
         submitted_answers
@@ -465,7 +548,6 @@ def verify_quiz_answers(
             question_id
         )
 
-
     total = len(
         verified_answers
     )
@@ -482,23 +564,95 @@ def verify_quiz_answers(
 
     return {
         "success": True,
-
-        "score":
-            score,
-
-        "total":
-            total,
-
-        "accuracy":
-            accuracy,
-
-        "answers":
-            verified_answers,
+        "score": score,
+        "total": total,
+        "accuracy": accuracy,
+        "answers": verified_answers,
     }
 
 
 # =========================================================
-# EXISTING ATTEMPT
+# VERIFY ANSWERS BELONG TO REAL ATTEMPT
+# =========================================================
+
+def verify_attempt_questions(
+    attempt,
+    subject,
+    verified_answers,
+):
+    attempt_subject = str(
+        attempt.get(
+            "subject",
+            "",
+        )
+    ).strip()
+
+    if attempt_subject != subject:
+        return {
+            "success": False,
+            "message":
+                "Quiz subject does not match this attempt",
+        }
+
+    served_question_ids = (
+        attempt.get(
+            "questionIds",
+            [],
+        )
+    )
+
+    if not isinstance(
+        served_question_ids,
+        list,
+    ):
+        return {
+            "success": False,
+            "message":
+                "Quiz attempt question data is invalid",
+        }
+
+    served_question_ids = [
+        str(question_id).strip()
+        for question_id
+        in served_question_ids
+        if str(question_id).strip()
+    ]
+
+    submitted_question_ids = [
+        str(
+            answer.get(
+                "questionId",
+                "",
+            )
+        ).strip()
+        for answer
+        in verified_answers
+    ]
+
+    if not served_question_ids:
+        return {
+            "success": False,
+            "message":
+                "Quiz attempt contains no served questions",
+        }
+
+    if (
+        submitted_question_ids
+        != served_question_ids
+    ):
+        return {
+            "success": False,
+            "message":
+                "Submitted answers do not match the questions served in this quiz attempt",
+        }
+
+    return {
+        "success": True,
+    }
+
+
+# =========================================================
+# EXISTING RESULT FOR ATTEMPT
 # =========================================================
 
 def get_existing_attempt(
@@ -537,17 +691,13 @@ def duplicate_result_response(
 
     return {
         "success": True,
-
         "duplicate": True,
-
         "message":
             "Quiz result was already saved. No extra XP was added.",
-
         "result":
             serialize_result(
                 existing_result
             ),
-
         "stats":
             serialize_user_stats(
                 latest_user or {}
@@ -577,11 +727,13 @@ def save_quiz_result(
                 "Invalid user ID",
         }
 
+    subject = str(
+        subject or ""
+    ).strip()
 
     attempt_id = str(
         attempt_id or ""
     ).strip()
-
 
     if not attempt_id:
         return {
@@ -589,7 +741,6 @@ def save_quiz_result(
             "message":
                 "Quiz attempt ID is required",
         }
-
 
     if (
         len(attempt_id) < 8
@@ -601,7 +752,6 @@ def save_quiz_result(
                 "Invalid quiz attempt ID",
         }
 
-
     user = (
         users_collection.find_one(
             {
@@ -611,7 +761,6 @@ def save_quiz_result(
         )
     )
 
-
     if not user:
         return {
             "success": False,
@@ -619,9 +768,8 @@ def save_quiz_result(
                 "User not found",
         }
 
-
     # =====================================================
-    # DUPLICATE CHECK
+    # DUPLICATE RESULT CHECK
     # =====================================================
 
     existing_result = (
@@ -631,7 +779,6 @@ def save_quiz_result(
         )
     )
 
-
     if existing_result:
         return (
             duplicate_result_response(
@@ -640,9 +787,26 @@ def save_quiz_result(
             )
         )
 
+    # =====================================================
+    # REAL ACTIVE ATTEMPT CHECK
+    # =====================================================
+
+    attempt = (
+        get_active_attempt(
+            object_user_id,
+            attempt_id,
+        )
+    )
+
+    if not attempt:
+        return {
+            "success": False,
+            "message":
+                "Active quiz attempt not found or already completed",
+        }
 
     # =====================================================
-    # VERIFY ANSWERS
+    # VERIFY ANSWERS AGAINST QUESTION DATABASE
     # =====================================================
 
     verification = (
@@ -652,12 +816,10 @@ def save_quiz_result(
         )
     )
 
-
     if not verification.get(
         "success"
     ):
         return verification
-
 
     score = verification[
         "score"
@@ -677,6 +839,22 @@ def save_quiz_result(
         ]
     )
 
+    # =====================================================
+    # VERIFY THESE QUESTIONS WERE ACTUALLY SERVED
+    # =====================================================
+
+    attempt_verification = (
+        verify_attempt_questions(
+            attempt,
+            subject,
+            verified_answers,
+        )
+    )
+
+    if not attempt_verification.get(
+        "success"
+    ):
+        return attempt_verification
 
     # =====================================================
     # CURRENT USER STATS
@@ -728,7 +906,6 @@ def save_quiz_result(
             0,
         ) or 0
     )
-
 
     # =====================================================
     # NEW STATS
@@ -790,7 +967,6 @@ def save_quiz_result(
         timezone.utc
     )
 
-
     # =====================================================
     # RESULT DOCUMENT
     # =====================================================
@@ -830,13 +1006,8 @@ def save_quiz_result(
             now,
     }
 
-
     # =====================================================
     # INSERT RESULT
-    #
-    # Unique MongoDB index protects even
-    # if two identical requests arrive
-    # almost simultaneously.
     # =====================================================
 
     try:
@@ -869,9 +1040,8 @@ def save_quiz_result(
                 "Duplicate quiz attempt",
         }
 
-
     # =====================================================
-    # UPDATE USER
+    # UPDATE USER STATS
     # =====================================================
 
     users_collection.update_one(
@@ -879,7 +1049,6 @@ def save_quiz_result(
             "_id":
                 object_user_id
         },
-
         {
             "$set": {
                 "stats.quizzesCompleted":
@@ -918,14 +1087,26 @@ def save_quiz_result(
         }
     )
 
+    # =====================================================
+    # COMPLETE REAL QUIZ ATTEMPT
+    # =====================================================
+
+    mark_attempt_completed(
+        object_user_id=
+            object_user_id,
+        attempt_id=
+            attempt_id,
+        result_id=
+            insert_result.inserted_id,
+        completed_at=
+            now,
+    )
 
     return {
         "success": True,
-
         "duplicate": False,
-
         "message":
-            "Verified quiz result saved successfully",
+            "Verified quiz result saved and quiz attempt completed successfully",
 
         "result": {
             "id":
@@ -1008,7 +1189,6 @@ def get_user_results(
     except Exception:
         return []
 
-
     cursor = (
         quiz_results_collection
         .find(
@@ -1025,7 +1205,6 @@ def get_user_results(
             limit
         )
     )
-
 
     return [
         serialize_result(
