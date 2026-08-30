@@ -5,6 +5,7 @@ from datetime import (
 )
 
 from bson import ObjectId
+from pymongo.errors import DuplicateKeyError
 
 from database import (
     quiz_results_collection,
@@ -16,17 +17,12 @@ from models.quiz_model import (
 )
 
 
-# =========================================================
-# CONFIG
-# =========================================================
-
 MAX_ANSWERS_PER_QUIZ = 20
-
-RESULT_VERIFICATION_VERSION = 1
+RESULT_VERIFICATION_VERSION = 2
 
 
 # =========================================================
-# CREATE INDEXES
+# INDEXES
 # =========================================================
 
 def create_result_indexes():
@@ -53,9 +49,26 @@ def create_result_indexes():
         ]
     )
 
+    # Only new results contain attemptId.
+    # Old MongoDB results remain untouched.
+
+    quiz_results_collection.create_index(
+        [
+            ("userId", 1),
+            ("attemptId", 1),
+        ],
+        unique=True,
+        name="unique_user_quiz_attempt",
+        partialFilterExpression={
+            "attemptId": {
+                "$type": "string"
+            }
+        },
+    )
+
 
 # =========================================================
-# CALCULATE STREAK
+# STREAK
 # =========================================================
 
 def calculate_streak(user):
@@ -79,11 +92,9 @@ def calculate_streak(user):
         "lastQuizAt"
     )
 
-    # First quiz
     if not last_quiz_at:
         return 1
 
-    # Old MongoDB dates may be naive
     if last_quiz_at.tzinfo is None:
         last_quiz_at = (
             last_quiz_at.replace(
@@ -97,7 +108,6 @@ def calculate_streak(user):
         last_quiz_at.date()
     )
 
-    # Already completed a quiz today
     if last_quiz_date == today:
         return max(
             current_streak,
@@ -108,18 +118,165 @@ def calculate_streak(user):
         now - timedelta(days=1)
     ).date()
 
-    # Continue streak
     if last_quiz_date == yesterday:
         return (
             current_streak + 1
         )
 
-    # Streak broken
     return 1
 
 
 # =========================================================
-# VERIFY ANSWERS FROM MONGODB
+# USER STATS RESPONSE
+# =========================================================
+
+def serialize_user_stats(user):
+    stats = user.get(
+        "stats",
+        {},
+    )
+
+    return {
+        "quizzesCompleted":
+            stats.get(
+                "quizzesCompleted",
+                0,
+            ),
+
+        "questionsAnswered":
+            stats.get(
+                "questionsAnswered",
+                0,
+            ),
+
+        "correctAnswers":
+            stats.get(
+                "correctAnswers",
+                0,
+            ),
+
+        "accuracy":
+            stats.get(
+                "accuracy",
+                0,
+            ),
+
+        "bestAccuracy":
+            stats.get(
+                "bestAccuracy",
+                0,
+            ),
+
+        "xp":
+            stats.get(
+                "xp",
+                0,
+            ),
+
+        "level":
+            stats.get(
+                "level",
+                1,
+            ),
+
+        "streak":
+            stats.get(
+                "streak",
+                0,
+            ),
+
+        "bestStreak":
+            stats.get(
+                "bestStreak",
+                0,
+            ),
+    }
+
+
+# =========================================================
+# SERIALIZE RESULT
+# =========================================================
+
+def serialize_result(result):
+    if not result:
+        return None
+
+    created_at = result.get(
+        "createdAt"
+    )
+
+    score = result.get(
+        "score",
+        0,
+    )
+
+    xp_earned = result.get(
+        "xpEarned"
+    )
+
+    if xp_earned is None:
+        xp_earned = (
+            score * 20
+        ) + 50
+
+    return {
+        "id":
+            str(
+                result["_id"]
+            ),
+
+        "attemptId":
+            result.get(
+                "attemptId"
+            ),
+
+        "subject":
+            result.get(
+                "subject",
+                "",
+            ),
+
+        "score":
+            score,
+
+        "total":
+            result.get(
+                "total",
+                0,
+            ),
+
+        "accuracy":
+            result.get(
+                "accuracy",
+                0,
+            ),
+
+        "xpEarned":
+            xp_earned,
+
+        "verified":
+            result.get(
+                "verified",
+                False,
+            ),
+
+        "answers":
+            result.get(
+                "answers",
+                [],
+            ),
+
+        "createdAt":
+            (
+                created_at.isoformat()
+                if created_at
+                else None
+            ),
+    }
+
+
+# =========================================================
+# VERIFY ANSWERS
 # =========================================================
 
 def verify_quiz_answers(
@@ -176,14 +333,12 @@ def verify_quiz_answers(
                     f"Invalid answer at question {index + 1}",
             }
 
-
         question_id = str(
             answer.get(
                 "questionId",
                 "",
             )
         ).strip()
-
 
         if not question_id:
             return {
@@ -192,8 +347,6 @@ def verify_quiz_answers(
                     f"Question ID missing at question {index + 1}",
             }
 
-
-        # Prevent same question being counted twice
         if (
             question_id in
             used_question_ids
@@ -201,9 +354,8 @@ def verify_quiz_answers(
             return {
                 "success": False,
                 "message":
-                    "Duplicate question detected in quiz result",
+                    "Duplicate question detected",
             }
-
 
         selected_answer = (
             answer.get(
@@ -211,71 +363,52 @@ def verify_quiz_answers(
             )
         )
 
-
         if selected_answer is None:
             return {
                 "success": False,
                 "message":
-                    f"Selected answer missing at question {index + 1}",
+                    f"Answer missing at question {index + 1}",
             }
 
-
-        # Read original question directly
-        # from MongoDB using its ID.
         question = (
             find_question_by_id(
                 question_id
             )
         )
 
-
         if not question:
             return {
                 "success": False,
                 "message":
-                    f"Question {index + 1} does not exist",
+                    f"Question {index + 1} not found",
             }
 
-
-        question_subject = (
-            question.get(
-                "subject",
-                "",
-            )
-        )
-
-
-        # Prevent mixing questions
-        # from different subjects.
         if (
-            question_subject !=
-            subject
+            question.get(
+                "subject"
+            )
+            != subject
         ):
             return {
                 "success": False,
                 "message":
-                    "Question subject does not match quiz subject",
+                    "Question subject mismatch",
             }
-
 
         options = question.get(
             "options",
             [],
         )
 
-
-        # Selected answer must actually
-        # be one of the MongoDB options.
         if (
-            selected_answer not in
-            options
+            selected_answer
+            not in options
         ):
             return {
                 "success": False,
                 "message":
-                    f"Invalid selected answer at question {index + 1}",
+                    f"Invalid answer at question {index + 1}",
             }
-
 
         correct_answer = (
             question.get(
@@ -283,16 +416,13 @@ def verify_quiz_answers(
             )
         )
 
-
         was_correct = (
             selected_answer ==
             correct_answer
         )
 
-
         if was_correct:
             score += 1
-
 
         verified_answers.append(
             {
@@ -306,7 +436,7 @@ def verify_quiz_answers(
                     ),
 
                 "subject":
-                    question_subject,
+                    subject,
 
                 "topic":
                     question.get(
@@ -331,7 +461,6 @@ def verify_quiz_answers(
             }
         )
 
-
         used_question_ids.add(
             question_id
         )
@@ -341,18 +470,15 @@ def verify_quiz_answers(
         verified_answers
     )
 
-
     accuracy = (
         round(
             (
-                score /
-                total
+                score / total
             ) * 100
         )
         if total > 0
         else 0
     )
-
 
     return {
         "success": True,
@@ -372,28 +498,73 @@ def verify_quiz_answers(
 
 
 # =========================================================
+# EXISTING ATTEMPT
+# =========================================================
+
+def get_existing_attempt(
+    user_id,
+    attempt_id,
+):
+    return (
+        quiz_results_collection.find_one(
+            {
+                "userId":
+                    user_id,
+
+                "attemptId":
+                    attempt_id,
+            }
+        )
+    )
+
+
+# =========================================================
+# DUPLICATE RESPONSE
+# =========================================================
+
+def duplicate_result_response(
+    existing_result,
+    user_id,
+):
+    latest_user = (
+        users_collection.find_one(
+            {
+                "_id":
+                    user_id
+            }
+        )
+    )
+
+    return {
+        "success": True,
+
+        "duplicate": True,
+
+        "message":
+            "Quiz result was already saved. No extra XP was added.",
+
+        "result":
+            serialize_result(
+                existing_result
+            ),
+
+        "stats":
+            serialize_user_stats(
+                latest_user or {}
+            ),
+    }
+
+
+# =========================================================
 # SAVE VERIFIED RESULT
 # =========================================================
 
 def save_quiz_result(
     user_id,
     subject,
-    score=None,
-    total=None,
     answers=None,
+    attempt_id=None,
 ):
-    """
-    score and total remain in the
-    function signature for backward
-    compatibility.
-
-    They are NOT trusted.
-
-    Real score and total are calculated
-    from MongoDB questions and submitted
-    answers.
-    """
-
     try:
         object_user_id = ObjectId(
             user_id
@@ -404,6 +575,30 @@ def save_quiz_result(
             "success": False,
             "message":
                 "Invalid user ID",
+        }
+
+
+    attempt_id = str(
+        attempt_id or ""
+    ).strip()
+
+
+    if not attempt_id:
+        return {
+            "success": False,
+            "message":
+                "Quiz attempt ID is required",
+        }
+
+
+    if (
+        len(attempt_id) < 8
+        or len(attempt_id) > 128
+    ):
+        return {
+            "success": False,
+            "message":
+                "Invalid quiz attempt ID",
         }
 
 
@@ -426,7 +621,28 @@ def save_quiz_result(
 
 
     # =====================================================
-    # VERIFY QUIZ
+    # DUPLICATE CHECK
+    # =====================================================
+
+    existing_result = (
+        get_existing_attempt(
+            object_user_id,
+            attempt_id,
+        )
+    )
+
+
+    if existing_result:
+        return (
+            duplicate_result_response(
+                existing_result,
+                object_user_id,
+            )
+        )
+
+
+    # =====================================================
+    # VERIFY ANSWERS
     # =====================================================
 
     verification = (
@@ -443,7 +659,6 @@ def save_quiz_result(
         return verification
 
 
-    # Never use client score/total
     score = verification[
         "score"
     ]
@@ -464,14 +679,13 @@ def save_quiz_result(
 
 
     # =====================================================
-    # CURRENT STATS
+    # CURRENT USER STATS
     # =====================================================
 
     old_stats = user.get(
         "stats",
         {},
     )
-
 
     old_quizzes = int(
         old_stats.get(
@@ -480,14 +694,12 @@ def save_quiz_result(
         ) or 0
     )
 
-
     old_questions = int(
         old_stats.get(
             "questionsAnswered",
             0,
         ) or 0
     )
-
 
     old_correct = int(
         old_stats.get(
@@ -496,7 +708,6 @@ def save_quiz_result(
         ) or 0
     )
 
-
     old_xp = int(
         old_stats.get(
             "xp",
@@ -504,14 +715,12 @@ def save_quiz_result(
         ) or 0
     )
 
-
     old_best_accuracy = int(
         old_stats.get(
             "bestAccuracy",
             0,
         ) or 0
     )
-
 
     old_best_streak = int(
         old_stats.get(
@@ -522,23 +731,20 @@ def save_quiz_result(
 
 
     # =====================================================
-    # UPDATED TOTALS
+    # NEW STATS
     # =====================================================
 
     new_quizzes = (
         old_quizzes + 1
     )
 
-
     new_questions = (
         old_questions + total
     )
 
-
     new_correct = (
         old_correct + score
     )
-
 
     new_accuracy = (
         round(
@@ -551,25 +757,18 @@ def save_quiz_result(
         else 0
     )
 
-
-    # 20 XP per correct answer
-    # + 50 XP completion bonus
-
     xp_earned = (
         score * 20
     ) + 50
 
-
     new_xp = (
-        old_xp + xp_earned
+        old_xp +
+        xp_earned
     )
 
-
-    # Every 500 XP = next level
     new_level = (
         new_xp // 500
     ) + 1
-
 
     new_streak = (
         calculate_streak(
@@ -577,22 +776,15 @@ def save_quiz_result(
         )
     )
 
-
-    # Keep lifetime best values.
-    # Useful for achievements even if
-    # current accuracy/streak later drops.
-
     new_best_accuracy = max(
         old_best_accuracy,
         accuracy,
     )
 
-
     new_best_streak = max(
         old_best_streak,
         new_streak,
     )
-
 
     now = datetime.now(
         timezone.utc
@@ -606,6 +798,9 @@ def save_quiz_result(
     result_document = {
         "userId":
             object_user_id,
+
+        "attemptId":
+            attempt_id,
 
         "subject":
             subject,
@@ -636,16 +831,47 @@ def save_quiz_result(
     }
 
 
-    insert_result = (
-        quiz_results_collection
-        .insert_one(
-            result_document
+    # =====================================================
+    # INSERT RESULT
+    #
+    # Unique MongoDB index protects even
+    # if two identical requests arrive
+    # almost simultaneously.
+    # =====================================================
+
+    try:
+        insert_result = (
+            quiz_results_collection
+            .insert_one(
+                result_document
+            )
         )
-    )
+
+    except DuplicateKeyError:
+        existing_result = (
+            get_existing_attempt(
+                object_user_id,
+                attempt_id,
+            )
+        )
+
+        if existing_result:
+            return (
+                duplicate_result_response(
+                    existing_result,
+                    object_user_id,
+                )
+            )
+
+        return {
+            "success": False,
+            "message":
+                "Duplicate quiz attempt",
+        }
 
 
     # =====================================================
-    # UPDATE USER STATS
+    # UPDATE USER
     # =====================================================
 
     users_collection.update_one(
@@ -693,12 +919,10 @@ def save_quiz_result(
     )
 
 
-    # =====================================================
-    # RESPONSE
-    # =====================================================
-
     return {
         "success": True,
+
+        "duplicate": False,
 
         "message":
             "Verified quiz result saved successfully",
@@ -708,6 +932,9 @@ def save_quiz_result(
                 str(
                     insert_result.inserted_id
                 ),
+
+            "attemptId":
+                attempt_id,
 
             "subject":
                 subject,
@@ -766,7 +993,7 @@ def save_quiz_result(
 
 
 # =========================================================
-# GET USER RESULTS
+# RESULT HISTORY
 # =========================================================
 
 def get_user_results(
@@ -800,86 +1027,10 @@ def get_user_results(
     )
 
 
-    results = []
-
-
-    for result in cursor:
-        created_at = result.get(
-            "createdAt"
+    return [
+        serialize_result(
+            result
         )
-
-
-        score = result.get(
-            "score",
-            0,
-        )
-
-
-        xp_earned = result.get(
-            "xpEarned"
-        )
-
-
-        # Old results created before
-        # this update may not contain
-        # xpEarned.
-        if xp_earned is None:
-            xp_earned = (
-                score * 20
-            ) + 50
-
-
-        results.append(
-            {
-                "id":
-                    str(
-                        result["_id"]
-                    ),
-
-                "subject":
-                    result.get(
-                        "subject",
-                        "",
-                    ),
-
-                "score":
-                    score,
-
-                "total":
-                    result.get(
-                        "total",
-                        0,
-                    ),
-
-                "accuracy":
-                    result.get(
-                        "accuracy",
-                        0,
-                    ),
-
-                "xpEarned":
-                    xp_earned,
-
-                "verified":
-                    result.get(
-                        "verified",
-                        False,
-                    ),
-
-                "answers":
-                    result.get(
-                        "answers",
-                        [],
-                    ),
-
-                "createdAt":
-                    (
-                        created_at.isoformat()
-                        if created_at
-                        else None
-                    ),
-            }
-        )
-
-
-    return results
+        for result
+        in cursor
+    ]

@@ -11,10 +11,6 @@ from models.result_model import (
 )
 
 
-# =========================================================
-# BLUEPRINT
-# =========================================================
-
 result_bp = Blueprint(
     "results",
     __name__,
@@ -30,7 +26,7 @@ ALLOWED_SUBJECTS = [
 
 
 # =========================================================
-# SAVE VERIFIED QUIZ RESULT
+# SAVE RESULT
 # =========================================================
 
 @result_bp.post("")
@@ -64,15 +60,19 @@ def save_result():
     ).strip()
 
 
+    attempt_id = str(
+        data.get(
+            "attemptId",
+            "",
+        )
+    ).strip()
+
+
     answers = data.get(
         "answers",
         [],
     )
 
-
-    # =====================================================
-    # SUBJECT VALIDATION
-    # =====================================================
 
     if (
         subject not in
@@ -87,9 +87,15 @@ def save_result():
         ), 400
 
 
-    # =====================================================
-    # ANSWERS VALIDATION
-    # =====================================================
+    if not attempt_id:
+        return jsonify(
+            {
+                "success": False,
+                "message":
+                    "Quiz attempt ID is required",
+            }
+        ), 400
+
 
     if not isinstance(
         answers,
@@ -116,27 +122,11 @@ def save_result():
         ), 400
 
 
-    # =====================================================
-    # IMPORTANT
-    #
-    # We intentionally DO NOT read:
-    #
-    # data["score"]
-    # data["total"]
-    # data["accuracy"]
-    #
-    # Those values come from the browser
-    # and therefore cannot be trusted.
-    #
-    # result_model.py calculates them
-    # again from MongoDB.
-    # =====================================================
-
-
     result = save_quiz_result(
         user_id=user_id,
         subject=subject,
         answers=answers,
+        attempt_id=attempt_id,
     )
 
 
@@ -148,9 +138,21 @@ def save_result():
         ), 400
 
 
+    # New result = 201
+    # Duplicate replay = 200
+
+    status_code = (
+        200
+        if result.get(
+            "duplicate"
+        )
+        else 201
+    )
+
+
     return jsonify(
         result
-    ), 201
+    ), status_code
 
 
 # =========================================================
@@ -208,8 +210,10 @@ def result_history():
     return jsonify(
         {
             "success": True,
+
             "count":
                 len(results),
+
             "results":
                 results,
         }
