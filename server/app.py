@@ -23,7 +23,9 @@ from routes.auth_routes import auth_bp
 from routes.quiz_routes import quiz_bp
 from routes.result_routes import result_bp
 
-
+from routes.analytics_routes import (
+    analytics_bp,
+)
 # =========================================================
 # FLASK APP
 # =========================================================
@@ -123,7 +125,9 @@ app.register_blueprint(
 app.register_blueprint(
     result_bp
 )
-
+app.register_blueprint(
+    analytics_bp
+)
 
 # =========================================================
 # HOME
