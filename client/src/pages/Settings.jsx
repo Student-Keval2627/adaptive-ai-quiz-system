@@ -1,5 +1,11 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {
+  useEffect,
+  useState,
+} from "react";
+
+import {
+  useNavigate,
+} from "react-router-dom";
 
 import {
   ArrowLeft,
@@ -19,6 +25,7 @@ import {
 
 import "./Settings.css";
 
+
 const defaultSettings = {
   difficulty: "Adaptive",
   questionCount: "5",
@@ -28,18 +35,98 @@ const defaultSettings = {
   focusMode: true,
 };
 
+
+const allowedDifficulties = [
+  "Adaptive",
+  "Easy",
+  "Medium",
+  "Hard",
+];
+
+
+const allowedQuestionCounts = [
+  "5",
+  "10",
+];
+
+
+/* =========================================================
+   NORMALIZE SETTINGS
+========================================================= */
+
+function normalizeSettings(
+  storedSettings
+) {
+  return {
+    difficulty:
+      allowedDifficulties.includes(
+        storedSettings?.difficulty
+      )
+        ? storedSettings.difficulty
+        : defaultSettings.difficulty,
+
+    questionCount:
+      allowedQuestionCounts.includes(
+        String(
+          storedSettings?.questionCount
+        )
+      )
+        ? String(
+            storedSettings.questionCount
+          )
+        : defaultSettings.questionCount,
+
+    sound:
+      typeof storedSettings?.sound ===
+      "boolean"
+        ? storedSettings.sound
+        : defaultSettings.sound,
+
+    animations:
+      typeof storedSettings?.animations ===
+      "boolean"
+        ? storedSettings.animations
+        : defaultSettings.animations,
+
+    notifications:
+      typeof storedSettings?.notifications ===
+      "boolean"
+        ? storedSettings.notifications
+        : defaultSettings.notifications,
+
+    focusMode:
+      typeof storedSettings?.focusMode ===
+      "boolean"
+        ? storedSettings.focusMode
+        : defaultSettings.focusMode,
+  };
+}
+
+
+/* =========================================================
+   SETTINGS
+========================================================= */
+
 function Settings() {
-  const navigate = useNavigate();
+  const navigate =
+    useNavigate();
 
-  const [settings, setSettings] =
-    useState(defaultSettings);
+  const [
+    settings,
+    setSettings,
+  ] = useState(
+    defaultSettings
+  );
 
-  const [saved, setSaved] =
-    useState(false);
+  const [
+    saved,
+    setSaved,
+  ] = useState(false);
 
-  /* ================================================
+
+  /* =========================================================
      LOAD SAVED SETTINGS
-  ================================================= */
+  ========================================================= */
 
   useEffect(() => {
     const storedSettings =
@@ -47,54 +134,99 @@ function Settings() {
         "neuraQuizSettings"
       );
 
-    if (storedSettings) {
-      try {
-        setSettings(
-          JSON.parse(storedSettings)
+    if (!storedSettings) {
+      return;
+    }
+
+    try {
+      const parsed =
+        JSON.parse(
+          storedSettings
         );
-      } catch {
-        setSettings(defaultSettings);
-      }
+
+      const normalized =
+        normalizeSettings(
+          parsed
+        );
+
+      setSettings(
+        normalized
+      );
+
+      localStorage.setItem(
+        "neuraQuizSettings",
+        JSON.stringify(
+          normalized
+        )
+      );
+
+    } catch {
+      setSettings(
+        defaultSettings
+      );
     }
   }, []);
 
-  /* ================================================
+
+  /* =========================================================
      CHANGE SELECT
-  ================================================= */
+  ========================================================= */
 
-  const handleChange = (event) => {
-    const { name, value } =
-      event.target;
+  const handleChange =
+    (event) => {
+      const {
+        name,
+        value,
+      } = event.target;
 
-    setSettings((previous) => ({
-      ...previous,
-      [name]: value,
-    }));
+      setSettings(
+        (previous) => ({
+          ...previous,
+          [name]: value,
+        })
+      );
 
-    setSaved(false);
-  };
+      setSaved(false);
+    };
 
-  /* ================================================
+
+  /* =========================================================
      TOGGLE
-  ================================================= */
+  ========================================================= */
 
-  const toggleSetting = (name) => {
-    setSettings((previous) => ({
-      ...previous,
-      [name]: !previous[name],
-    }));
+  const toggleSetting =
+    (name) => {
+      setSettings(
+        (previous) => ({
+          ...previous,
+          [name]:
+            !previous[name],
+        })
+      );
 
-    setSaved(false);
-  };
+      setSaved(false);
+    };
 
-  /* ================================================
+
+  /* =========================================================
      SAVE
-  ================================================= */
+  ========================================================= */
 
   const saveSettings = () => {
+    const normalized =
+      normalizeSettings(
+        settings
+      );
+
+    setSettings(
+      normalized
+    );
+
     localStorage.setItem(
       "neuraQuizSettings",
-      JSON.stringify(settings)
+      JSON.stringify(
+        normalized
+      )
     );
 
     setSaved(true);
@@ -104,16 +236,21 @@ function Settings() {
     }, 2500);
   };
 
-  /* ================================================
+
+  /* =========================================================
      RESET
-  ================================================= */
+  ========================================================= */
 
   const resetSettings = () => {
-    setSettings(defaultSettings);
+    setSettings(
+      defaultSettings
+    );
 
     localStorage.setItem(
       "neuraQuizSettings",
-      JSON.stringify(defaultSettings)
+      JSON.stringify(
+        defaultSettings
+      )
     );
 
     setSaved(true);
@@ -122,184 +259,305 @@ function Settings() {
       setSaved(false);
     }, 2500);
   };
+
+
+  /* =========================================================
+     DIFFICULTY DESCRIPTION
+  ========================================================= */
+
+  const difficultyDescription = {
+    Adaptive:
+      "Starts at Medium and changes after every answer.",
+
+    Easy:
+      "Starts from Easy and adapts from your performance.",
+
+    Medium:
+      "Starts from Medium and adapts from your performance.",
+
+    Hard:
+      "Starts from Hard and adapts from your performance.",
+  };
+
 
   return (
     <div className="settings-page">
+
       <div className="settings-glow settings-glow-one" />
+
       <div className="settings-glow settings-glow-two" />
 
-      {/* =============================================
+
+      {/* =====================================================
           HEADER
-      ============================================== */}
+      ====================================================== */}
 
       <header className="settings-topbar">
+
         <button
           className="settings-back-button"
-          onClick={() => navigate("/")}
+          onClick={() =>
+            navigate("/")
+          }
         >
-          <ArrowLeft size={18} />
+          <ArrowLeft
+            size={18}
+          />
+
           Dashboard
         </button>
 
+
         <div className="settings-brand">
+
           <div className="settings-brand-icon">
-            <BrainCircuit size={20} />
+            <BrainCircuit
+              size={20}
+            />
           </div>
 
           <div>
-            <strong>NeuraQuiz</strong>
-            <span>Adaptive AI</span>
+            <strong>
+              NeuraQuiz
+            </strong>
+
+            <span>
+              Adaptive AI
+            </span>
           </div>
+
         </div>
+
 
         <button
           className="settings-save-top"
-          onClick={saveSettings}
+          onClick={
+            saveSettings
+          }
         >
-          <Save size={15} />
+          <Save
+            size={15}
+          />
+
           Save Settings
         </button>
+
       </header>
 
-      {/* =============================================
+
+      {/* =====================================================
           CONTENT
-      ============================================== */}
+      ====================================================== */}
 
       <main className="settings-container">
 
-        {/* HERO */}
+
+        {/* ===================================================
+            HERO
+        ==================================================== */}
 
         <section className="settings-hero">
+
           <div>
+
             <div className="settings-hero-badge">
-              <SettingsIcon size={14} />
+              <SettingsIcon
+                size={14}
+              />
+
               PERSONALIZATION
             </div>
+
 
             <h1>
               Learn your way.
               <br />
-              <span>Control the experience.</span>
+
+              <span>
+                Control the experience.
+              </span>
             </h1>
 
+
             <p>
-              Customize how NeuraQuiz creates your
-              adaptive quizzes and how the learning
-              interface behaves.
+              Customize how the adaptive
+              quiz engine starts, how many
+              questions you receive and
+              whether weaker topics receive
+              extra priority.
             </p>
+
           </div>
 
+
           <div className="settings-ai-card">
+
             <div className="settings-ai-icon">
-              <Sparkles size={24} />
+              <Sparkles
+                size={24}
+              />
             </div>
 
+
             <div>
-              <span>AI QUIZ MODE</span>
+
+              <span>
+                ADAPTIVE ENGINE
+              </span>
 
               <strong>
                 {settings.difficulty}
               </strong>
 
               <p>
-                Current difficulty preference
+                {
+                  difficultyDescription[
+                    settings.difficulty
+                  ]
+                }
               </p>
+
             </div>
+
 
             <div className="settings-ai-status">
               Active
             </div>
+
           </div>
+
         </section>
 
-        {/* =============================================
+
+        {/* ===================================================
             MAIN GRID
-        ============================================== */}
+        ==================================================== */}
 
         <section className="settings-main-grid">
 
-          {/* QUIZ SETTINGS */}
+
+          {/* =================================================
+              QUIZ SETTINGS
+          ================================================== */}
 
           <div className="settings-panel">
+
             <div className="settings-panel-header">
+
               <div>
-                <span>QUIZ CONFIGURATION</span>
-                <h2>Adaptive quiz settings</h2>
+                <span>
+                  QUIZ CONFIGURATION
+                </span>
+
+                <h2>
+                  Adaptive quiz settings
+                </h2>
               </div>
 
-              <BrainCircuit size={20} />
+              <BrainCircuit
+                size={20}
+              />
+
             </div>
 
-            {/* Difficulty */}
+
+            {/* DIFFICULTY */}
 
             <div className="settings-option">
+
               <div className="settings-option-left">
+
                 <div className="settings-option-icon">
-                  <Gauge size={19} />
+                  <Gauge
+                    size={19}
+                  />
                 </div>
 
+
                 <div>
+
                   <strong>
-                    Quiz Difficulty
+                    Starting Difficulty
                   </strong>
 
                   <p>
-                    Choose how difficult your quiz
-                    should be.
+                    Choose where the adaptive
+                    engine should begin.
                   </p>
+
                 </div>
+
               </div>
+
 
               <select
                 name="difficulty"
-                value={settings.difficulty}
-                onChange={handleChange}
+                value={
+                  settings.difficulty
+                }
+                onChange={
+                  handleChange
+                }
                 className="settings-select"
               >
-                <option>
+                <option value="Adaptive">
                   Adaptive
                 </option>
 
-                <option>
+                <option value="Easy">
                   Easy
                 </option>
 
-                <option>
+                <option value="Medium">
                   Medium
                 </option>
 
-                <option>
+                <option value="Hard">
                   Hard
                 </option>
               </select>
+
             </div>
 
-            {/* Questions */}
+
+            {/* QUESTIONS */}
 
             <div className="settings-option">
+
               <div className="settings-option-left">
+
                 <div className="settings-option-icon">
-                  <Target size={19} />
+                  <Target
+                    size={19}
+                  />
                 </div>
 
+
                 <div>
+
                   <strong>
                     Questions per Quiz
                   </strong>
 
                   <p>
-                    Select your preferred quiz
-                    length.
+                    Select the number of
+                    unique questions in each
+                    quiz session.
                   </p>
+
                 </div>
+
               </div>
+
 
               <select
                 name="questionCount"
                 value={
                   settings.questionCount
                 }
-                onChange={handleChange}
+                onChange={
+                  handleChange
+                }
                 className="settings-select"
               >
                 <option value="5">
@@ -309,103 +567,154 @@ function Settings() {
                 <option value="10">
                   10 Questions
                 </option>
-
-                <option value="15">
-                  15 Questions
-                </option>
               </select>
+
             </div>
 
-            {/* Focus */}
+
+            {/* FOCUS */}
 
             <div className="settings-option">
+
               <div className="settings-option-left">
+
                 <div className="settings-option-icon">
-                  <Flame size={19} />
+                  <Flame
+                    size={19}
+                  />
                 </div>
 
+
                 <div>
+
                   <strong>
                     Focus Mode
                   </strong>
 
                   <p>
-                    Prioritize questions from
-                    weaker topics.
+                    Prioritize your weak
+                    topics while adapting
+                    question difficulty.
                   </p>
+
                 </div>
+
               </div>
 
+
               <button
+                type="button"
+
                 className={`settings-toggle ${
                   settings.focusMode
                     ? "settings-toggle-active"
                     : ""
                 }`}
+
                 onClick={() =>
-                  toggleSetting("focusMode")
+                  toggleSetting(
+                    "focusMode"
+                  )
                 }
               >
                 <span />
               </button>
+
             </div>
+
           </div>
 
-          {/* EXPERIENCE */}
+
+          {/* =================================================
+              EXPERIENCE
+          ================================================== */}
 
           <div className="settings-panel">
+
             <div className="settings-panel-header">
+
               <div>
-                <span>EXPERIENCE</span>
-                <h2>Interface preferences</h2>
+                <span>
+                  EXPERIENCE
+                </span>
+
+                <h2>
+                  Interface preferences
+                </h2>
               </div>
 
-              <Zap size={20} />
+              <Zap
+                size={20}
+              />
+
             </div>
 
-            {/* Sounds */}
+
+            {/* SOUND */}
 
             <div className="settings-option">
+
               <div className="settings-option-left">
+
                 <div className="settings-option-icon">
-                  <Volume2 size={19} />
+                  <Volume2
+                    size={19}
+                  />
                 </div>
 
+
                 <div>
+
                   <strong>
                     Quiz Sounds
                   </strong>
 
                   <p>
-                    Play feedback sounds during
-                    quizzes.
+                    Play feedback sounds
+                    during quizzes.
                   </p>
+
                 </div>
+
               </div>
 
+
               <button
+                type="button"
+
                 className={`settings-toggle ${
                   settings.sound
                     ? "settings-toggle-active"
                     : ""
                 }`}
+
                 onClick={() =>
-                  toggleSetting("sound")
+                  toggleSetting(
+                    "sound"
+                  )
                 }
               >
                 <span />
               </button>
+
             </div>
 
-            {/* Animations */}
+
+            {/* ANIMATIONS */}
 
             <div className="settings-option">
+
               <div className="settings-option-left">
+
                 <div className="settings-option-icon">
-                  <Sparkles size={19} />
+                  <Sparkles
+                    size={19}
+                  />
                 </div>
 
+
                 <div>
+
                   <strong>
                     Animations
                   </strong>
@@ -414,49 +723,72 @@ function Settings() {
                     Enable smooth interface
                     animations.
                   </p>
+
                 </div>
+
               </div>
 
+
               <button
+                type="button"
+
                 className={`settings-toggle ${
                   settings.animations
                     ? "settings-toggle-active"
                     : ""
                 }`}
+
                 onClick={() =>
-                  toggleSetting("animations")
+                  toggleSetting(
+                    "animations"
+                  )
                 }
               >
                 <span />
               </button>
+
             </div>
 
-            {/* Notifications */}
+
+            {/* NOTIFICATIONS */}
 
             <div className="settings-option">
+
               <div className="settings-option-left">
+
                 <div className="settings-option-icon">
-                  <Bell size={19} />
+                  <Bell
+                    size={19}
+                  />
                 </div>
 
+
                 <div>
+
                   <strong>
                     Learning Reminders
                   </strong>
 
                   <p>
-                    Receive learning streak and
-                    practice reminders.
+                    Keep your reminder
+                    preference for future
+                    notification support.
                   </p>
+
                 </div>
+
               </div>
 
+
               <button
+                type="button"
+
                 className={`settings-toggle ${
                   settings.notifications
                     ? "settings-toggle-active"
                     : ""
                 }`}
+
                 onClick={() =>
                   toggleSetting(
                     "notifications"
@@ -465,24 +797,33 @@ function Settings() {
               >
                 <span />
               </button>
+
             </div>
+
           </div>
 
         </section>
 
-        {/* =============================================
-            AI SUMMARY
-        ============================================== */}
+
+        {/* ===================================================
+            SUMMARY
+        ==================================================== */}
 
         <section className="settings-summary-card">
+
           <div className="settings-summary-left">
+
             <div className="settings-summary-icon">
-              <BrainCircuit size={25} />
+              <BrainCircuit
+                size={25}
+              />
             </div>
 
+
             <div>
+
               <span>
-                CURRENT LEARNING CONFIGURATION
+                CURRENT QUIZ CONFIGURATION
               </span>
 
               <h2>
@@ -490,88 +831,132 @@ function Settings() {
               </h2>
 
               <p>
-                NeuraQuiz will use these preferences
-                when preparing your future adaptive
-                learning sessions.
+                These quiz preferences are
+                sent to the Flask adaptive
+                engine when your next quiz
+                starts.
               </p>
+
             </div>
+
           </div>
+
 
           <div className="settings-summary-values">
 
             <div>
-              <span>Difficulty</span>
+              <span>
+                Start Level
+              </span>
 
               <strong>
-                {settings.difficulty}
+                {
+                  settings.difficulty
+                }
               </strong>
             </div>
 
+
             <div>
-              <span>Questions</span>
+              <span>
+                Questions
+              </span>
 
               <strong>
-                {settings.questionCount}
+                {
+                  settings.questionCount
+                }
               </strong>
             </div>
 
+
             <div>
-              <span>Focus Mode</span>
+              <span>
+                Weak Topics
+              </span>
 
               <strong>
                 {settings.focusMode
-                  ? "Enabled"
-                  : "Disabled"}
+                  ? "Prioritized"
+                  : "Normal"}
               </strong>
             </div>
 
           </div>
+
         </section>
 
-        {/* =============================================
+
+        {/* ===================================================
             ACTIONS
-        ============================================== */}
+        ==================================================== */}
 
         <section className="settings-actions-card">
+
           <div>
-            <span>SETTINGS MANAGEMENT</span>
+
+            <span>
+              SETTINGS MANAGEMENT
+            </span>
 
             <h3>
               Save or restore your preferences
             </h3>
 
             <p>
-              Your settings are stored locally in
-              your browser for now.
+              Quiz configuration is stored
+              in your browser and applied
+              automatically to the adaptive
+              engine.
             </p>
+
           </div>
+
 
           <div className="settings-actions">
 
             <button
               className="settings-reset-button"
-              onClick={resetSettings}
+              onClick={
+                resetSettings
+              }
             >
-              <RotateCcw size={15} />
+              <RotateCcw
+                size={15}
+              />
+
               Reset Default
             </button>
 
+
             <button
               className="settings-main-save-button"
-              onClick={saveSettings}
+              onClick={
+                saveSettings
+              }
             >
-              <Save size={15} />
+              <Save
+                size={15}
+              />
+
               Save Changes
             </button>
 
           </div>
+
         </section>
 
-        {/* SUCCESS */}
+
+        {/* ===================================================
+            SUCCESS
+        ==================================================== */}
 
         {saved && (
           <div className="settings-saved-message">
-            <Check size={16} />
+            <Check
+              size={16}
+            />
+
             Settings saved successfully
           </div>
         )}
@@ -580,5 +965,6 @@ function Settings() {
     </div>
   );
 }
+
 
 export default Settings;

@@ -28,13 +28,20 @@ quiz_bp = Blueprint(
 
 
 # =========================================================
-# ALLOWED SUBJECTS
+# CONFIG
 # =========================================================
 
 ALLOWED_SUBJECTS = [
     "Python",
     "Machine Learning",
     "Data Structures",
+]
+
+ALLOWED_DIFFICULTIES = [
+    "Adaptive",
+    "Easy",
+    "Medium",
+    "Hard",
 ]
 
 
@@ -58,7 +65,6 @@ def questions():
                 5,
             )
         )
-
     except (TypeError, ValueError):
         limit = 5
 
@@ -85,7 +91,7 @@ def questions():
             "success": True,
             "questions": quiz_questions,
         }
-    )
+    ), 200
 
 
 # =========================================================
@@ -117,6 +123,18 @@ def start_quiz():
         )
     ).strip()
 
+    difficulty = str(
+        data.get(
+            "difficulty",
+            "Adaptive",
+        )
+    ).strip()
+
+    focus_mode = data.get(
+        "focusMode",
+        True,
+    )
+
     if subject not in ALLOWED_SUBJECTS:
         return jsonify(
             {
@@ -125,9 +143,20 @@ def start_quiz():
             }
         ), 400
 
+    if difficulty not in ALLOWED_DIFFICULTIES:
+        difficulty = "Adaptive"
+
+    if not isinstance(
+        focus_mode,
+        bool,
+    ):
+        focus_mode = True
+
     result = start_adaptive_quiz(
         user_id=user_id,
         subject=subject,
+        difficulty_mode=difficulty,
+        focus_mode=focus_mode,
     )
 
     if not result.get(
@@ -187,6 +216,18 @@ def next_question():
         [],
     )
 
+    difficulty = str(
+        data.get(
+            "difficulty",
+            "Adaptive",
+        )
+    ).strip()
+
+    focus_mode = data.get(
+        "focusMode",
+        True,
+    )
+
     if subject not in ALLOWED_SUBJECTS:
         return jsonify(
             {
@@ -199,8 +240,7 @@ def next_question():
         return jsonify(
             {
                 "success": False,
-                "message":
-                    "Previous question ID is required",
+                "message": "Previous question ID is required",
             }
         ), 400
 
@@ -208,8 +248,7 @@ def next_question():
         return jsonify(
             {
                 "success": False,
-                "message":
-                    "Selected answer is required",
+                "message": "Selected answer is required",
             }
         ), 400
 
@@ -219,15 +258,23 @@ def next_question():
     ):
         used_question_ids = []
 
+    if difficulty not in ALLOWED_DIFFICULTIES:
+        difficulty = "Adaptive"
+
+    if not isinstance(
+        focus_mode,
+        bool,
+    ):
+        focus_mode = True
+
     result = get_next_adaptive_question(
         user_id=user_id,
         subject=subject,
-        previous_question_id=
-            previous_question_id,
-        selected_answer=
-            selected_answer,
-        used_question_ids=
-            used_question_ids,
+        previous_question_id=previous_question_id,
+        selected_answer=selected_answer,
+        used_question_ids=used_question_ids,
+        difficulty_mode=difficulty,
+        focus_mode=focus_mode,
     )
 
     if not result.get(
@@ -267,8 +314,7 @@ def check_answer():
         return jsonify(
             {
                 "success": False,
-                "message":
-                    "Question ID is required",
+                "message": "Question ID is required",
             }
         ), 400
 
@@ -276,8 +322,7 @@ def check_answer():
         return jsonify(
             {
                 "success": False,
-                "message":
-                    "Answer is required",
+                "message": "Answer is required",
             }
         ), 400
 
@@ -290,8 +335,7 @@ def check_answer():
         return jsonify(
             {
                 "success": False,
-                "message":
-                    "Question not found",
+                "message": "Question not found",
             }
         ), 404
 

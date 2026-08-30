@@ -12,7 +12,6 @@ import {
   BrainCircuit,
   Check,
   ChevronRight,
-  Clock3,
   Code2,
   Database,
   Flame,
@@ -32,9 +31,22 @@ const API_BASE =
   "http://127.0.0.1:5000";
 
 
+const defaultQuizSettings = {
+  difficulty:
+    "Adaptive",
+
+  questionCount:
+    5,
+
+  focusMode:
+    true,
+};
+
+
 const subjects = [
   {
-    name: "Python",
+    name:
+      "Python",
 
     label:
       "Python Programming",
@@ -42,7 +54,8 @@ const subjects = [
     description:
       "Functions, OOP, collections and syntax",
 
-    icon: Code2,
+    icon:
+      Code2,
   },
 
   {
@@ -75,117 +88,224 @@ const subjects = [
 ];
 
 
+/* =========================================================
+   GET SETTINGS
+========================================================= */
+
+function getSavedQuizSettings() {
+  try {
+    const stored =
+      localStorage.getItem(
+        "neuraQuizSettings"
+      );
+
+
+    if (!stored) {
+      return {
+        ...defaultQuizSettings,
+      };
+    }
+
+
+    const parsed =
+      JSON.parse(
+        stored
+      );
+
+
+    const allowedDifficulties = [
+      "Adaptive",
+      "Easy",
+      "Medium",
+      "Hard",
+    ];
+
+
+    const difficulty =
+      allowedDifficulties.includes(
+        parsed.difficulty
+      )
+        ? parsed.difficulty
+        : "Adaptive";
+
+
+    const rawCount =
+      Number(
+        parsed.questionCount
+      );
+
+
+    const questionCount =
+      rawCount === 10
+        ? 10
+        : 5;
+
+
+    const focusMode =
+      typeof parsed.focusMode ===
+      "boolean"
+        ? parsed.focusMode
+        : true;
+
+
+    return {
+      difficulty,
+      questionCount,
+      focusMode,
+    };
+
+  } catch {
+    return {
+      ...defaultQuizSettings,
+    };
+  }
+}
+
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
 function Quiz() {
   const navigate =
     useNavigate();
 
 
-  const [screen, setScreen] =
-    useState("setup");
+  const [
+    screen,
+    setScreen,
+  ] = useState(
+    "setup"
+  );
 
-  const [subject, setSubject] =
-    useState("Python");
 
-  const [questions, setQuestions] =
-    useState([]);
+  const [
+    subject,
+    setSubject,
+  ] = useState(
+    "Python"
+  );
+
+
+  const [
+    questions,
+    setQuestions,
+  ] = useState(
+    []
+  );
+
 
   const [
     currentIndex,
     setCurrentIndex,
-  ] = useState(0);
+  ] = useState(
+    0
+  );
+
+
+  const [
+    activeSettings,
+    setActiveSettings,
+  ] = useState(
+    getSavedQuizSettings()
+  );
+
 
   const [
     targetQuestionCount,
     setTargetQuestionCount,
-  ] = useState(5);
+  ] = useState(
+    getSavedQuizSettings()
+      .questionCount
+  );
+
 
   const [
     selectedAnswer,
     setSelectedAnswer,
-  ] = useState(null);
+  ] = useState(
+    null
+  );
+
 
   const [
     answerChecked,
     setAnswerChecked,
-  ] = useState(false);
+  ] = useState(
+    false
+  );
+
 
   const [
     correctAnswer,
     setCorrectAnswer,
-  ] = useState(null);
+  ] = useState(
+    null
+  );
 
-  const [score, setScore] =
-    useState(0);
+
+  const [
+    score,
+    setScore,
+  ] = useState(
+    0
+  );
+
 
   const [
     answerHistory,
     setAnswerHistory,
-  ] = useState([]);
+  ] = useState(
+    []
+  );
+
 
   const [
     adaptiveInfo,
     setAdaptiveInfo,
-  ] = useState(null);
+  ] = useState(
+    null
+  );
 
-  const [loading, setLoading] =
-    useState(false);
 
-  const [checking, setChecking] =
-    useState(false);
+  const [
+    loading,
+    setLoading,
+  ] = useState(
+    false
+  );
+
+
+  const [
+    checking,
+    setChecking,
+  ] = useState(
+    false
+  );
+
 
   const [
     loadingNext,
     setLoadingNext,
-  ] = useState(false);
-
-  const [saving, setSaving] =
-    useState(false);
-
-  const [error, setError] =
-    useState("");
+  ] = useState(
+    false
+  );
 
 
-  /* =========================================================
-     QUESTION COUNT
-  ========================================================= */
+  const [
+    saving,
+    setSaving,
+  ] = useState(
+    false
+  );
 
-  const getQuestionCount = () => {
-    try {
-      const savedSettings =
-        localStorage.getItem(
-          "neuraQuizSettings"
-        );
 
-      if (!savedSettings) {
-        return 5;
-      }
-
-      const parsed =
-        JSON.parse(
-          savedSettings
-        );
-
-      const count =
-        Number(
-          parsed.questionCount
-        );
-
-      if (!count) {
-        return 5;
-      }
-
-      return Math.max(
-        1,
-        Math.min(
-          count,
-          10
-        )
-      );
-
-    } catch {
-      return 5;
-    }
-  };
+  const [
+    error,
+    setError,
+  ] = useState(
+    ""
+  );
 
 
   /* =========================================================
@@ -198,8 +318,20 @@ function Quiz() {
         setLoading(true);
         setError("");
 
-        const questionCount =
-          getQuestionCount();
+
+        const quizSettings =
+          getSavedQuizSettings();
+
+
+        setActiveSettings(
+          quizSettings
+        );
+
+
+        setTargetQuestionCount(
+          quizSettings.questionCount
+        );
+
 
         const response =
           await fetch(
@@ -220,13 +352,21 @@ function Quiz() {
                 JSON.stringify(
                   {
                     subject,
+
+                    difficulty:
+                      quizSettings.difficulty,
+
+                    focusMode:
+                      quizSettings.focusMode,
                   }
                 ),
             }
           );
 
+
         const data =
           await response.json();
+
 
         if (
           !response.ok ||
@@ -238,41 +378,51 @@ function Quiz() {
           );
         }
 
-        setTargetQuestionCount(
-          questionCount
-        );
 
         setQuestions([
           data.question,
         ]);
 
-        setCurrentIndex(0);
+
+        setCurrentIndex(
+          0
+        );
+
 
         setSelectedAnswer(
           null
         );
 
+
         setAnswerChecked(
           false
         );
+
 
         setCorrectAnswer(
           null
         );
 
-        setScore(0);
+
+        setScore(
+          0
+        );
+
 
         setAnswerHistory(
           []
         );
 
+
         setAdaptiveInfo(
           data.adaptive
         );
 
+
         setScreen(
           "quiz"
         );
+
 
       } catch (error) {
         setError(
@@ -281,7 +431,9 @@ function Quiz() {
         );
 
       } finally {
-        setLoading(false);
+        setLoading(
+          false
+        );
       }
     };
 
@@ -300,14 +452,20 @@ function Quiz() {
         return;
       }
 
+
       try {
-        setChecking(true);
+        setChecking(
+          true
+        );
+
         setError("");
+
 
         const currentQuestion =
           questions[
             currentIndex
           ];
+
 
         const response =
           await fetch(
@@ -337,8 +495,10 @@ function Quiz() {
             }
           );
 
+
         const data =
           await response.json();
+
 
         if (
           !response.ok ||
@@ -350,9 +510,11 @@ function Quiz() {
           );
         }
 
+
         setCorrectAnswer(
           data.correctAnswer
         );
+
 
         setAnswerChecked(
           true
@@ -392,12 +554,15 @@ function Quiz() {
         );
 
 
-        if (data.correct) {
+        if (
+          data.correct
+        ) {
           setScore(
             (previous) =>
               previous + 1
           );
         }
+
 
       } catch (error) {
         setError(
@@ -406,7 +571,9 @@ function Quiz() {
         );
 
       } finally {
-        setChecking(false);
+        setChecking(
+          false
+        );
       }
     };
 
@@ -424,10 +591,12 @@ function Quiz() {
 
         setError("");
 
+
         const currentQuestion =
           questions[
             currentIndex
           ];
+
 
         const usedQuestionIds =
           questions.map(
@@ -462,6 +631,12 @@ function Quiz() {
                     selectedAnswer,
 
                     usedQuestionIds,
+
+                    difficulty:
+                      activeSettings.difficulty,
+
+                    focusMode:
+                      activeSettings.focusMode,
                   }
                 ),
             }
@@ -506,9 +681,11 @@ function Quiz() {
           null
         );
 
+
         setCorrectAnswer(
           null
         );
+
 
         setAnswerChecked(
           false
@@ -530,14 +707,18 @@ function Quiz() {
 
 
   /* =========================================================
-     SAVE FINAL RESULT
+     SAVE RESULT
   ========================================================= */
 
   const saveFinalResult =
     async () => {
       try {
-        setSaving(true);
+        setSaving(
+          true
+        );
+
         setError("");
+
 
         const response =
           await fetch(
@@ -600,8 +781,10 @@ function Quiz() {
                 storedUser
               );
 
+
             currentUser.stats =
               data.stats;
+
 
             localStorage.setItem(
               "neuraUser",
@@ -611,7 +794,7 @@ function Quiz() {
             );
 
           } catch {
-            // Ignore invalid cache
+            // Ignore cache error
           }
         }
 
@@ -640,6 +823,14 @@ function Quiz() {
 
               resultId:
                 data.result.id,
+
+              difficulty:
+                activeSettings
+                  .difficulty,
+
+              focusMode:
+                activeSettings
+                  .focusMode,
             },
           }
         );
@@ -652,7 +843,9 @@ function Quiz() {
         );
 
       } finally {
-        setSaving(false);
+        setSaving(
+          false
+        );
       }
     };
 
@@ -666,12 +859,15 @@ function Quiz() {
       const answeredQuestions =
         currentIndex + 1;
 
+
       const isLastQuestion =
         answeredQuestions >=
         targetQuestionCount;
 
 
-      if (isLastQuestion) {
+      if (
+        isLastQuestion
+      ) {
         await saveFinalResult();
 
         return;
@@ -683,10 +879,16 @@ function Quiz() {
 
 
   /* =========================================================
-     SETUP SCREEN
+     SETUP
   ========================================================= */
 
-  if (screen === "setup") {
+  const latestSettings =
+    getSavedQuizSettings();
+
+
+  if (
+    screen === "setup"
+  ) {
     return (
       <div className="quiz-page">
 
@@ -733,17 +935,16 @@ function Quiz() {
 
 
           <div className="quiz-ai-status">
-
             <span className="quiz-status-dot" />
 
             Adaptive Engine Ready
-
           </div>
 
         </header>
 
 
         <main className="quiz-setup-container">
+
 
           <section className="quiz-setup-hero">
 
@@ -752,31 +953,34 @@ function Quiz() {
                 size={14}
               />
 
-              REAL ADAPTIVE QUIZ
+              PERSONALIZED ADAPTIVE QUIZ
             </div>
 
 
             <h1>
-              A quiz that changes
+              Your settings.
               <br />
 
               <span>
-                with every answer.
+                Your adaptive challenge.
               </span>
             </h1>
 
 
             <p>
-              Correct answers increase
-              difficulty. Incorrect answers
-              reduce difficulty and reinforce
-              weak topics.
+              Your saved starting
+              difficulty, quiz length and
+              Focus Mode are applied when
+              the adaptive quiz begins.
             </p>
 
           </section>
 
 
           <section className="quiz-setup-grid">
+
+
+            {/* SUBJECT */}
 
             <div className="quiz-setup-card">
 
@@ -809,11 +1013,15 @@ function Quiz() {
                     icon: Icon,
                   }) => {
                     const active =
-                      subject === name;
+                      subject ===
+                      name;
+
 
                     return (
                       <button
-                        key={name}
+                        key={
+                          name
+                        }
 
                         className={`quiz-subject-card ${
                           active
@@ -842,7 +1050,9 @@ function Quiz() {
                           </strong>
 
                           <span>
-                            {description}
+                            {
+                              description
+                            }
                           </span>
 
                         </div>
@@ -871,6 +1081,8 @@ function Quiz() {
             </div>
 
 
+            {/* ENGINE */}
+
             <div className="quiz-info-card">
 
               <div className="quiz-info-header">
@@ -881,27 +1093,33 @@ function Quiz() {
                   />
                 </div>
 
+
                 <div>
+
                   <span>
-                    ENGINE CONFIGURATION
+                    ACTIVE SETTINGS
                   </span>
 
                   <h3>
-                    Adaptive Mode
+                    {
+                      latestSettings.difficulty
+                    }
                   </h3>
+
                 </div>
 
               </div>
 
 
               <p className="quiz-info-description">
-                The backend selects each
-                next question dynamically
-                from MongoDB.
+                These settings are loaded
+                directly from your saved
+                NeuraQuiz preferences.
               </p>
 
 
               <div className="quiz-info-list">
+
 
                 <div className="quiz-info-row">
 
@@ -910,11 +1128,13 @@ function Quiz() {
                       size={17}
                     />
 
-                    Start Difficulty
+                    Start Level
                   </div>
 
                   <strong>
-                    Medium
+                    {
+                      latestSettings.difficulty
+                    }
                   </strong>
 
                 </div>
@@ -931,7 +1151,9 @@ function Quiz() {
                   </div>
 
                   <strong>
-                    {getQuestionCount()}
+                    {
+                      latestSettings.questionCount
+                    }
                   </strong>
 
                 </div>
@@ -944,7 +1166,7 @@ function Quiz() {
                       size={17}
                     />
 
-                    Question Flow
+                    Difficulty Flow
                   </div>
 
                   <strong>
@@ -961,11 +1183,15 @@ function Quiz() {
                       size={17}
                     />
 
-                    Weak Topics
+                    Focus Mode
                   </div>
 
                   <strong>
-                    Prioritized
+                    {
+                      latestSettings.focusMode
+                        ? "Enabled"
+                        : "Disabled"
+                    }
                   </strong>
 
                 </div>
@@ -990,9 +1216,11 @@ function Quiz() {
 
               <button
                 className="quiz-start-button"
+
                 onClick={
                   startQuiz
                 }
+
                 disabled={
                   loading
                 }
@@ -1016,7 +1244,7 @@ function Quiz() {
 
 
                 {loading
-                  ? "Starting Adaptive Quiz..."
+                  ? "Applying Settings..."
                   : "Start Adaptive Quiz"}
 
 
@@ -1031,7 +1259,9 @@ function Quiz() {
             </div>
 
           </section>
+
         </main>
+
       </div>
     );
   }
@@ -1103,13 +1333,17 @@ function Quiz() {
             />
           </div>
 
+
           <div>
             <strong>
               {subject}
             </strong>
 
             <span>
-              Adaptive Quiz
+              {
+                activeSettings.difficulty
+              }{" "}
+              Start
             </span>
           </div>
 
@@ -1124,7 +1358,6 @@ function Quiz() {
           />
 
           {currentDifficulty}
-
         </div>
 
       </header>
@@ -1132,31 +1365,39 @@ function Quiz() {
 
       <main className="quiz-question-container">
 
+
         <div className="quiz-progress-header">
 
           <div>
+
             <span>
               QUESTION
             </span>
+
 
             <strong>
               {currentIndex + 1}
 
               <small>
                 /
-                {targetQuestionCount}
+                {
+                  targetQuestionCount
+                }
               </small>
             </strong>
+
           </div>
 
 
           <div className="quiz-progress-right">
+
             <span>
               {Math.round(
                 progress
               )}
               %
             </span>
+
           </div>
 
         </div>
@@ -1175,6 +1416,7 @@ function Quiz() {
 
 
         <section className="quiz-question-card">
+
 
           <div className="quiz-question-top">
 
@@ -1213,7 +1455,8 @@ function Quiz() {
           </h1>
 
 
-          {adaptiveInfo?.reason && (
+          {adaptiveInfo
+            ?.reason && (
             <div className="quiz-ai-message">
 
               <Sparkles
@@ -1237,92 +1480,98 @@ function Quiz() {
 
           <div className="quiz-options">
 
-            {currentQuestion.options.map(
-              (
-                option,
-                index
-              ) => {
-                const optionLetter =
-                  String.fromCharCode(
-                    65 + index
-                  );
+            {currentQuestion
+              .options
+              .map(
+                (
+                  option,
+                  index
+                ) => {
+                  const optionLetter =
+                    String.fromCharCode(
+                      65 + index
+                    );
 
 
-                const selected =
-                  selectedAnswer ===
-                  option;
+                  const selected =
+                    selectedAnswer ===
+                    option;
 
 
-                const correctOption =
-                  answerChecked &&
-                  option ===
-                    correctAnswer;
+                  const correctOption =
+                    answerChecked &&
+                    option ===
+                      correctAnswer;
 
 
-                const wrongOption =
-                  answerChecked &&
-                  selected &&
-                  !correctOption;
+                  const wrongOption =
+                    answerChecked &&
+                    selected &&
+                    !correctOption;
 
 
-                return (
-                  <button
-                    key={option}
-
-                    disabled={
-                      answerChecked
-                    }
-
-                    onClick={() =>
-                      setSelectedAnswer(
+                  return (
+                    <button
+                      key={
                         option
-                      )
-                    }
+                      }
 
-                    className={[
-                      "quiz-option",
+                      disabled={
+                        answerChecked
+                      }
 
-                      selected
-                        ? "quiz-option-selected"
-                        : "",
+                      onClick={() =>
+                        setSelectedAnswer(
+                          option
+                        )
+                      }
 
-                      correctOption
-                        ? "quiz-option-correct"
-                        : "",
+                      className={[
+                        "quiz-option",
 
-                      wrongOption
-                        ? "quiz-option-wrong"
-                        : "",
-                    ].join(" ")}
-                  >
+                        selected
+                          ? "quiz-option-selected"
+                          : "",
 
-                    <div className="quiz-option-letter">
+                        correctOption
+                          ? "quiz-option-correct"
+                          : "",
 
-                      {correctOption ? (
-                        <Check
-                          size={17}
-                        />
-
-                      ) : wrongOption ? (
-                        <X
-                          size={17}
-                        />
-
-                      ) : (
-                        optionLetter
+                        wrongOption
+                          ? "quiz-option-wrong"
+                          : "",
+                      ].join(
+                        " "
                       )}
+                    >
 
-                    </div>
+                      <div className="quiz-option-letter">
+
+                        {correctOption ? (
+                          <Check
+                            size={17}
+                          />
+
+                        ) : wrongOption ? (
+                          <X
+                            size={17}
+                          />
+
+                        ) : (
+                          optionLetter
+                        )}
+
+                      </div>
 
 
-                    <span>
-                      {option}
-                    </span>
+                      <span>
+                        {option}
+                      </span>
 
-                  </button>
-                );
-              }
-            )}
+                    </button>
+                  );
+                }
+              )}
 
           </div>
 
@@ -1362,8 +1611,8 @@ function Quiz() {
 
                 <p>
                   {isCorrect
-                    ? "Correct. The adaptive engine may increase difficulty."
-                    : `Correct answer: ${correctAnswer}. The next question will adapt to this result.`}
+                    ? "Correct. Your next question will adapt to this answer."
+                    : `Correct answer: ${correctAnswer}. The next question will become more suitable for your current performance.`}
                 </p>
 
               </div>
@@ -1388,6 +1637,7 @@ function Quiz() {
 
 
           <div className="quiz-question-actions">
+
 
             <div className="quiz-live-score">
 
@@ -1475,6 +1725,7 @@ function Quiz() {
         </section>
 
       </main>
+
     </div>
   );
 }
