@@ -55,3 +55,4 @@ users_collection = db["users"]
 questions_collection = db["questions"]
 
 quiz_results_collection = db["quiz_results"]
+quiz_attempts_collection = db["quiz_attempts"]
