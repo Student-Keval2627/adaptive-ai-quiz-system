@@ -89,33 +89,6 @@ const subjects = [
 
 
 /* =========================================================
-   CREATE UNIQUE ATTEMPT ID
-========================================================= */
-
-function createAttemptId() {
-  if (
-    window.crypto &&
-    typeof window.crypto.randomUUID ===
-      "function"
-  ) {
-    return (
-      window.crypto.randomUUID()
-    );
-  }
-
-  return [
-    Date.now(),
-    Math.random()
-      .toString(36)
-      .slice(2),
-    Math.random()
-      .toString(36)
-      .slice(2),
-  ].join("-");
-}
-
-
-/* =========================================================
    SETTINGS
 ========================================================= */
 
@@ -157,8 +130,10 @@ function getSavedQuizSettings() {
       );
 
     const questionCount =
-      rawCount === 10
-        ? 10
+      [5, 10, 15].includes(
+        rawCount
+      )
+        ? rawCount
         : 5;
 
     const focusMode =
@@ -350,12 +325,8 @@ function Quiz() {
           getSavedQuizSettings();
 
 
-        const newAttemptId =
-          createAttemptId();
-
-
         setAttemptId(
-          newAttemptId
+          null
         );
 
 
@@ -413,6 +384,32 @@ function Quiz() {
             "Could not start adaptive quiz"
           );
         }
+
+
+        const backendAttemptId =
+          String(
+            data.attemptId ||
+            ""
+          ).trim();
+
+
+        if (!backendAttemptId) {
+          throw new Error(
+            "Quiz server did not return an attempt ID"
+          );
+        }
+
+
+        if (!data.question) {
+          throw new Error(
+            "Quiz server did not return a question"
+          );
+        }
+
+
+        setAttemptId(
+          backendAttemptId
+        );
 
 
         setQuestions([
@@ -493,6 +490,15 @@ function Quiz() {
       }
 
 
+      if (!attemptId) {
+        setError(
+          "Quiz attempt is missing. Please start a new quiz."
+        );
+
+        return;
+      }
+
+
       try {
         setChecking(
           true
@@ -525,6 +531,8 @@ function Quiz() {
               body:
                 JSON.stringify(
                   {
+                    attemptId,
+
                     questionId:
                       currentQuestion.id,
 
@@ -624,6 +632,15 @@ function Quiz() {
 
   const loadNextQuestion =
     async () => {
+      if (!attemptId) {
+        setError(
+          "Quiz attempt is missing. Please start a new quiz."
+        );
+
+        return;
+      }
+
+
       try {
         setLoadingNext(
           true
@@ -636,13 +653,6 @@ function Quiz() {
           questions[
             currentIndex
           ];
-
-
-        const usedQuestionIds =
-          questions.map(
-            (question) =>
-              question.id
-          );
 
 
         const response =
@@ -663,20 +673,12 @@ function Quiz() {
               body:
                 JSON.stringify(
                   {
-                    subject,
+                    attemptId,
 
                     previousQuestionId:
                       currentQuestion.id,
 
                     selectedAnswer,
-
-                    usedQuestionIds,
-
-                    difficulty:
-                      activeSettings.difficulty,
-
-                    focusMode:
-                      activeSettings.focusMode,
                   }
                 ),
             }
@@ -694,6 +696,23 @@ function Quiz() {
           throw new Error(
             data.message ||
             "Could not load next adaptive question"
+          );
+        }
+
+
+        if (!data.question) {
+          throw new Error(
+            "Quiz server did not return the next question"
+          );
+        }
+
+
+        if (
+          data.attemptId &&
+          data.attemptId !== attemptId
+        ) {
+          throw new Error(
+            "Quiz attempt validation failed"
           );
         }
 
