@@ -8,7 +8,7 @@ from database import users_collection
 
 
 # =========================================================
-# USER COLLECTION INDEX
+# INDEXES
 # =========================================================
 
 def create_user_indexes():
@@ -23,7 +23,7 @@ def create_user_indexes():
 # =========================================================
 
 def normalize_email(email):
-    return email.strip().lower()
+    return str(email).strip().lower()
 
 
 # =========================================================
@@ -33,15 +33,23 @@ def normalize_email(email):
 def create_user(name, email, password):
     email = normalize_email(email)
 
+    now = datetime.now(timezone.utc)
+
     user_document = {
         "name": name.strip(),
+
         "email": email,
-        "password": generate_password_hash(password),
+
+        "password": generate_password_hash(
+            password
+        ),
 
         "role": "Student",
 
         "profile": {
-            "learningGoal": "Improve AI & ML skills",
+            "learningGoal":
+                "Improve AI & ML skills",
+
             "preferredSubjects": [
                 "Python",
                 "Machine Learning",
@@ -59,8 +67,8 @@ def create_user(name, email, password):
             "level": 1
         },
 
-        "createdAt": datetime.now(timezone.utc),
-        "updatedAt": datetime.now(timezone.utc)
+        "createdAt": now,
+        "updatedAt": now
     }
 
     try:
@@ -68,16 +76,14 @@ def create_user(name, email, password):
             user_document
         )
 
-        return {
-            "success": True,
-            "user_id": str(result.inserted_id)
-        }
+        user_document["_id"] = (
+            result.inserted_id
+        )
+
+        return user_document
 
     except DuplicateKeyError:
-        return {
-            "success": False,
-            "message": "Email already registered"
-        }
+        return None
 
 
 # =========================================================
@@ -87,7 +93,8 @@ def create_user(name, email, password):
 def find_user_by_email(email):
     return users_collection.find_one(
         {
-            "email": normalize_email(email)
+            "email":
+                normalize_email(email)
         }
     )
 
@@ -98,7 +105,9 @@ def find_user_by_email(email):
 
 def find_user_by_id(user_id):
     try:
-        object_id = ObjectId(user_id)
+        object_id = ObjectId(
+            user_id
+        )
 
     except Exception:
         return None
@@ -111,33 +120,146 @@ def find_user_by_id(user_id):
 
 
 # =========================================================
-# USER RESPONSE
+# UPDATE PROFILE
+# =========================================================
+
+def update_user_profile(
+    user_id,
+    name=None,
+    learning_goal=None,
+    preferred_subjects=None
+):
+    try:
+        object_id = ObjectId(
+            user_id
+        )
+
+    except Exception:
+        return None
+
+    update_fields = {
+        "updatedAt":
+            datetime.now(
+                timezone.utc
+            )
+    }
+
+    if name is not None:
+        cleaned_name = str(
+            name
+        ).strip()
+
+        if cleaned_name:
+            update_fields["name"] = (
+                cleaned_name
+            )
+
+    if learning_goal is not None:
+        update_fields[
+            "profile.learningGoal"
+        ] = str(
+            learning_goal
+        ).strip()
+
+    if preferred_subjects is not None:
+        if isinstance(
+            preferred_subjects,
+            list
+        ):
+            allowed_subjects = [
+                "Python",
+                "Machine Learning",
+                "Data Structures"
+            ]
+
+            cleaned_subjects = [
+                subject
+                for subject
+                in preferred_subjects
+                if subject
+                in allowed_subjects
+            ]
+
+            update_fields[
+                "profile.preferredSubjects"
+            ] = cleaned_subjects
+
+    users_collection.update_one(
+        {
+            "_id": object_id
+        },
+        {
+            "$set":
+                update_fields
+        }
+    )
+
+    return find_user_by_id(
+        user_id
+    )
+
+
+# =========================================================
+# SERIALIZE USER
 # =========================================================
 
 def serialize_user(user):
     if not user:
         return None
 
+    created_at = user.get(
+        "createdAt"
+    )
+
+    updated_at = user.get(
+        "updatedAt"
+    )
+
     return {
-        "id": str(user["_id"]),
-        "name": user.get(
-            "name",
-            ""
-        ),
-        "email": user.get(
-            "email",
-            ""
-        ),
-        "role": user.get(
-            "role",
-            "Student"
-        ),
-        "profile": user.get(
-            "profile",
-            {}
-        ),
-        "stats": user.get(
-            "stats",
-            {}
-        )
+        "id":
+            str(user["_id"]),
+
+        "name":
+            user.get(
+                "name",
+                ""
+            ),
+
+        "email":
+            user.get(
+                "email",
+                ""
+            ),
+
+        "role":
+            user.get(
+                "role",
+                "Student"
+            ),
+
+        "profile":
+            user.get(
+                "profile",
+                {}
+            ),
+
+        "stats":
+            user.get(
+                "stats",
+                {}
+            ),
+
+        "createdAt":
+            (
+                created_at.isoformat()
+                if created_at
+                else None
+            ),
+
+        "updatedAt":
+            (
+                updated_at.isoformat()
+                if updated_at
+                else None
+            )
     }

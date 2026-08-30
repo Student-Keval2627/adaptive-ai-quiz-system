@@ -1,4 +1,9 @@
-import { useState } from "react";
+import {
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
+
 import { useNavigate } from "react-router-dom";
 
 import {
@@ -8,6 +13,8 @@ import {
   Edit3,
   Flame,
   GraduationCap,
+  LoaderCircle,
+  LogOut,
   Mail,
   Play,
   Save,
@@ -21,176 +28,996 @@ import {
 
 import "./Profile.css";
 
+
+const API_BASE =
+  "http://127.0.0.1:5000";
+
+
+const subjectDefinitions = [
+  {
+    name: "Python",
+    short: "PY",
+  },
+  {
+    name: "Machine Learning",
+    short: "ML",
+  },
+  {
+    name: "Data Structures",
+    short: "DS",
+  },
+];
+
+
 function Profile() {
-  const navigate = useNavigate();
+  const navigate =
+    useNavigate();
 
-  const [editing, setEditing] = useState(false);
+  const [editing, setEditing] =
+    useState(false);
 
-  const [profile, setProfile] = useState({
-    name: "Keval",
-    email: "keval@student.com",
-    role: "Student",
-    goal: "Improve AI & ML skills",
-  });
+  const [profile, setProfile] =
+    useState({
+      name: "",
+      email: "",
+      role: "Student",
+      goal: "",
+    });
 
-  const [saved, setSaved] = useState(false);
+  const [
+    originalProfile,
+    setOriginalProfile,
+  ] = useState(null);
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
+  const [user, setUser] =
+    useState(null);
 
-    setProfile((previous) => ({
-      ...previous,
-      [name]: value,
-    }));
+  const [results, setResults] =
+    useState([]);
 
+  const [loading, setLoading] =
+    useState(true);
+
+  const [saving, setSaving] =
+    useState(false);
+
+  const [loggingOut, setLoggingOut] =
+    useState(false);
+
+  const [saved, setSaved] =
+    useState(false);
+
+  const [error, setError] =
+    useState("");
+
+
+  /* =========================================================
+     LOAD PROFILE
+  ========================================================= */
+
+  useEffect(() => {
+    const loadProfile =
+      async () => {
+        try {
+          setLoading(true);
+          setError("");
+
+          /* =============================================
+             CURRENT USER
+          ============================================== */
+
+          const userResponse =
+            await fetch(
+              `${API_BASE}/api/auth/me`,
+              {
+                credentials:
+                  "include",
+              }
+            );
+
+          const userData =
+            await userResponse.json();
+
+          if (
+            !userResponse.ok ||
+            !userData.authenticated
+          ) {
+            navigate(
+              "/login",
+              {
+                replace: true,
+              }
+            );
+
+            return;
+          }
+
+          const currentUser =
+            userData.user;
+
+          setUser(currentUser);
+
+          const loadedProfile = {
+            name:
+              currentUser.name ||
+              "",
+
+            email:
+              currentUser.email ||
+              "",
+
+            role:
+              currentUser.role ||
+              "Student",
+
+            goal:
+              currentUser.profile
+                ?.learningGoal ||
+              "",
+          };
+
+          setProfile(
+            loadedProfile
+          );
+
+          setOriginalProfile(
+            loadedProfile
+          );
+
+          localStorage.setItem(
+            "neuraUser",
+            JSON.stringify(
+              currentUser
+            )
+          );
+
+
+          /* =============================================
+             QUIZ RESULTS
+          ============================================== */
+
+          const resultResponse =
+            await fetch(
+              `${API_BASE}/api/results?limit=50`,
+              {
+                credentials:
+                  "include",
+              }
+            );
+
+          const resultData =
+            await resultResponse.json();
+
+          if (
+            resultResponse.ok &&
+            resultData.success
+          ) {
+            setResults(
+              resultData.results ||
+                []
+            );
+          }
+
+        } catch {
+          setError(
+            "Could not load your profile."
+          );
+        } finally {
+          setLoading(false);
+        }
+      };
+
+    loadProfile();
+  }, [navigate]);
+
+
+  /* =========================================================
+     PROFILE INPUT
+  ========================================================= */
+
+  const handleChange =
+    (event) => {
+      const {
+        name,
+        value,
+      } = event.target;
+
+      setProfile(
+        (previous) => ({
+          ...previous,
+          [name]: value,
+        })
+      );
+
+      setSaved(false);
+      setError("");
+    };
+
+
+  /* =========================================================
+     CANCEL EDIT
+  ========================================================= */
+
+  const cancelEdit = () => {
+    if (originalProfile) {
+      setProfile(
+        originalProfile
+      );
+    }
+
+    setEditing(false);
     setSaved(false);
+    setError("");
   };
 
-  const saveProfile = () => {
-    setEditing(false);
-    setSaved(true);
 
-    localStorage.setItem(
-      "neuraProfile",
-      JSON.stringify(profile)
+  /* =========================================================
+     SAVE PROFILE TO MONGODB
+  ========================================================= */
+
+  const saveProfile =
+    async () => {
+      if (
+        !profile.name.trim()
+      ) {
+        setError(
+          "Name cannot be empty."
+        );
+
+        return;
+      }
+
+      try {
+        setSaving(true);
+        setError("");
+        setSaved(false);
+
+        const response =
+          await fetch(
+            `${API_BASE}/api/auth/profile`,
+            {
+              method: "PUT",
+
+              credentials:
+                "include",
+
+              headers: {
+                "Content-Type":
+                  "application/json",
+              },
+
+              body:
+                JSON.stringify({
+                  name:
+                    profile.name,
+
+                  learningGoal:
+                    profile.goal,
+
+                  preferredSubjects:
+                    user?.profile
+                      ?.preferredSubjects ||
+                    [
+                      "Python",
+                      "Machine Learning",
+                      "Data Structures",
+                    ],
+                }),
+            }
+          );
+
+        const data =
+          await response.json();
+
+        if (
+          !response.ok ||
+          !data.success
+        ) {
+          throw new Error(
+            data.message ||
+              "Could not save profile"
+          );
+        }
+
+        const updatedUser =
+          data.user;
+
+        setUser(
+          updatedUser
+        );
+
+        const updatedProfile = {
+          name:
+            updatedUser.name ||
+            "",
+
+          email:
+            updatedUser.email ||
+            "",
+
+          role:
+            updatedUser.role ||
+            "Student",
+
+          goal:
+            updatedUser.profile
+              ?.learningGoal ||
+            "",
+        };
+
+        setProfile(
+          updatedProfile
+        );
+
+        setOriginalProfile(
+          updatedProfile
+        );
+
+        localStorage.setItem(
+          "neuraUser",
+          JSON.stringify(
+            updatedUser
+          )
+        );
+
+        setEditing(false);
+        setSaved(true);
+
+        setTimeout(() => {
+          setSaved(false);
+        }, 2500);
+
+      } catch (error) {
+        setError(
+          error.message ||
+            "Failed to save profile."
+        );
+      } finally {
+        setSaving(false);
+      }
+    };
+
+
+  /* =========================================================
+     LOGOUT
+  ========================================================= */
+
+  const logout =
+    async () => {
+      try {
+        setLoggingOut(true);
+
+        await fetch(
+          `${API_BASE}/api/auth/logout`,
+          {
+            method: "POST",
+
+            credentials:
+              "include",
+          }
+        );
+
+      } catch {
+        // Local logout still happens
+      } finally {
+        localStorage.removeItem(
+          "neuraUser"
+        );
+
+        localStorage.removeItem(
+          "neuraProfile"
+        );
+
+        setLoggingOut(false);
+
+        navigate(
+          "/login",
+          {
+            replace: true,
+          }
+        );
+      }
+    };
+
+
+  /* =========================================================
+     REAL STATS
+  ========================================================= */
+
+  const stats =
+    user?.stats || {};
+
+  const quizzes =
+    stats.quizzesCompleted || 0;
+
+  const accuracy =
+    stats.accuracy || 0;
+
+  const streak =
+    stats.streak || 0;
+
+  const xp =
+    stats.xp || 0;
+
+  const level =
+    stats.level || 1;
+
+  const questionsAnswered =
+    stats.questionsAnswered || 0;
+
+
+  /* =========================================================
+     LEVEL PROGRESS
+  ========================================================= */
+
+  const levelBaseXp =
+    (level - 1) * 500;
+
+  const nextLevelXp =
+    level * 500;
+
+  const levelProgress =
+    Math.min(
+      100,
+      Math.max(
+        0,
+        ((xp - levelBaseXp) /
+          500) *
+          100
+      )
     );
 
-    setTimeout(() => {
-      setSaved(false);
-    }, 2500);
-  };
+
+  /* =========================================================
+     SUBJECT PERFORMANCE
+  ========================================================= */
+
+  const subjectPerformance =
+    useMemo(() => {
+      return subjectDefinitions.map(
+        (subject) => {
+          const subjectResults =
+            results.filter(
+              (result) =>
+                result.subject ===
+                subject.name
+            );
+
+          const totalQuestions =
+            subjectResults.reduce(
+              (sum, result) =>
+                sum +
+                (result.total || 0),
+              0
+            );
+
+          const totalCorrect =
+            subjectResults.reduce(
+              (sum, result) =>
+                sum +
+                (result.score || 0),
+              0
+            );
+
+          const subjectAccuracy =
+            totalQuestions > 0
+              ? Math.round(
+                  (
+                    totalCorrect /
+                    totalQuestions
+                  ) * 100
+                )
+              : 0;
+
+          return {
+            ...subject,
+
+            accuracy:
+              subjectAccuracy,
+
+            quizzes:
+              subjectResults.length,
+          };
+        }
+      );
+    }, [results]);
+
+
+  /* =========================================================
+     ATTEMPTED SUBJECTS
+  ========================================================= */
+
+  const attemptedSubjects =
+    subjectPerformance.filter(
+      (subject) =>
+        subject.quizzes > 0
+    );
+
+
+  const strongestSubject =
+    attemptedSubjects.length > 0
+      ? [...attemptedSubjects].sort(
+          (a, b) =>
+            b.accuracy -
+            a.accuracy
+        )[0]
+      : null;
+
+
+  const focusSubject =
+    attemptedSubjects.length > 0
+      ? [...attemptedSubjects].sort(
+          (a, b) =>
+            a.accuracy -
+            b.accuracy
+        )[0]
+      : null;
+
+
+  /* =========================================================
+     PREFERRED SUBJECTS
+  ========================================================= */
+
+  const preferredSubjects =
+    user?.profile
+      ?.preferredSubjects || [];
+
+  const displayedSubjects =
+    preferredSubjects.length > 0
+      ? subjectPerformance.filter(
+          (subject) =>
+            preferredSubjects.includes(
+              subject.name
+            )
+        )
+      : subjectPerformance;
+
+
+  /* =========================================================
+     QUIZ SETTINGS
+  ========================================================= */
+
+  const preferredDifficulty =
+    useMemo(() => {
+      try {
+        const savedSettings =
+          localStorage.getItem(
+            "neuraQuizSettings"
+          );
+
+        if (!savedSettings) {
+          return "Adaptive";
+        }
+
+        const parsed =
+          JSON.parse(
+            savedSettings
+          );
+
+        return (
+          parsed.difficulty ||
+          "Adaptive"
+        );
+      } catch {
+        return "Adaptive";
+      }
+    }, []);
+
+
+  /* =========================================================
+     LEARNING PROFILE
+  ========================================================= */
+
+  const learningStyle =
+    useMemo(() => {
+      if (quizzes === 0) {
+        return {
+          title:
+            "Learning profile building",
+
+          message:
+            "Complete adaptive quizzes and NeuraQuiz will build your learning profile from your real performance.",
+        };
+      }
+
+      if (accuracy >= 80) {
+        return {
+          title:
+            "Strong adaptive learner",
+
+          message:
+            "Your overall quiz accuracy is strong. Continue practicing weaker topics to maintain balanced progress.",
+        };
+      }
+
+      if (accuracy >= 60) {
+        return {
+          title:
+            "Developing adaptive learner",
+
+          message:
+            "Your performance is improving. Focused practice on lower-accuracy topics can strengthen your results.",
+        };
+      }
+
+      return {
+        title:
+          "Focused practice recommended",
+
+        message:
+          "Your quiz history shows opportunities for improvement. Short targeted quizzes can help strengthen weak areas.",
+      };
+    }, [
+      accuracy,
+      quizzes,
+    ]);
+
+
+  /* =========================================================
+     AVATAR
+  ========================================================= */
+
+  const avatarLetter =
+    profile.name
+      ?.trim()
+      .charAt(0)
+      .toUpperCase() ||
+    "S";
+
+
+  /* =========================================================
+     LOADING
+  ========================================================= */
+
+  if (loading) {
+    return (
+      <div
+        style={{
+          minHeight:
+            "100vh",
+
+          background:
+            "#090909",
+
+          display:
+            "grid",
+
+          placeItems:
+            "center",
+
+          color:
+            "#ff8d58",
+        }}
+      >
+        <div
+          style={{
+            display:
+              "flex",
+
+            alignItems:
+              "center",
+
+            gap:
+              "10px",
+          }}
+        >
+          <LoaderCircle
+            size={18}
+            className="quiz-loader"
+          />
+
+          Loading your profile...
+        </div>
+      </div>
+    );
+  }
+
 
   return (
     <div className="profile-page">
       <div className="profile-glow profile-glow-one" />
       <div className="profile-glow profile-glow-two" />
 
-      {/* HEADER */}
+
+      {/* =====================================================
+          HEADER
+      ====================================================== */}
 
       <header className="profile-topbar">
         <button
           className="profile-back-button"
-          onClick={() => navigate("/")}
+          onClick={() =>
+            navigate("/")
+          }
         >
-          <ArrowLeft size={18} />
+          <ArrowLeft
+            size={18}
+          />
+
           Dashboard
         </button>
 
+
         <div className="profile-brand">
           <div className="profile-brand-icon">
-            <BrainCircuit size={20} />
+            <BrainCircuit
+              size={20}
+            />
           </div>
 
           <div>
-            <strong>NeuraQuiz</strong>
-            <span>Adaptive AI</span>
+            <strong>
+              NeuraQuiz
+            </strong>
+
+            <span>
+              Adaptive AI
+            </span>
           </div>
         </div>
 
-        <button
-          className="profile-start-button"
-          onClick={() => navigate("/quiz")}
+
+        <div
+          style={{
+            display: "flex",
+            alignItems:
+              "center",
+            justifyContent:
+              "flex-end",
+            gap: "10px",
+          }}
         >
-          <Play size={14} fill="currentColor" />
-          Start Quiz
-        </button>
+          <button
+            className="profile-back-button"
+            onClick={logout}
+            disabled={
+              loggingOut
+            }
+          >
+            {loggingOut ? (
+              <LoaderCircle
+                size={16}
+              />
+            ) : (
+              <LogOut
+                size={16}
+              />
+            )}
+
+            {loggingOut
+              ? "Logging out..."
+              : "Logout"}
+          </button>
+
+          <button
+            className="profile-start-button"
+            onClick={() =>
+              navigate("/quiz")
+            }
+          >
+            <Play
+              size={14}
+              fill="currentColor"
+            />
+
+            Start Quiz
+          </button>
+        </div>
       </header>
+
 
       <main className="profile-container">
 
-        {/* HERO */}
+        {/* ===================================================
+            HERO
+        ==================================================== */}
 
         <section className="profile-hero">
           <div>
             <div className="profile-hero-badge">
-              <UserRound size={14} />
+              <UserRound
+                size={14}
+              />
+
               STUDENT PROFILE
             </div>
 
             <h1>
               Your learning.
               <br />
-              <span>Your progress.</span>
+
+              <span>
+                Your progress.
+              </span>
             </h1>
 
             <p>
-              Manage your learning profile, view your progress
-              and personalize how NeuraQuiz adapts to your
-              study goals.
+              Manage your learning
+              profile, view your real
+              performance and track how
+              your NeuraQuiz learning
+              journey is progressing.
             </p>
           </div>
 
+
           <div className="profile-level-card">
             <div className="profile-level-avatar">
-              K
+              {avatarLetter}
             </div>
 
             <div className="profile-level-info">
-              <span>CURRENT LEVEL</span>
+              <span>
+                CURRENT LEVEL
+              </span>
 
-              <h3>Level 5</h3>
+              <h3>
+                Level {level}
+              </h3>
 
-              <p>Adaptive Learner</p>
+              <p>
+                Adaptive Learner
+              </p>
 
               <div className="profile-level-progress-info">
-                <span>2,460 XP</span>
-                <strong>3,000 XP</strong>
+                <span>
+                  {xp.toLocaleString()}
+                  {" "}
+                  XP
+                </span>
+
+                <strong>
+                  {nextLevelXp.toLocaleString()}
+                  {" "}
+                  XP
+                </strong>
               </div>
 
               <div className="profile-level-track">
-                <div style={{ width: "82%" }} />
+                <div
+                  style={{
+                    width:
+                      `${levelProgress}%`,
+                  }}
+                />
               </div>
             </div>
           </div>
         </section>
 
-        {/* STATS */}
+
+        {/* ===================================================
+            REAL STATS
+        ==================================================== */}
 
         <section className="profile-stats-grid">
 
           <div className="profile-stat-card">
             <div className="profile-stat-icon">
-              <Trophy size={20} />
+              <Trophy
+                size={20}
+              />
             </div>
 
-            <strong>24</strong>
-            <span>Quizzes</span>
-            <p>Total quizzes completed</p>
+            <strong>
+              {quizzes}
+            </strong>
+
+            <span>
+              Quizzes
+            </span>
+
+            <p>
+              Total quizzes completed
+            </p>
           </div>
+
 
           <div className="profile-stat-card">
             <div className="profile-stat-icon">
-              <Target size={20} />
+              <Target
+                size={20}
+              />
             </div>
 
-            <strong>84%</strong>
-            <span>Accuracy</span>
-            <p>Overall quiz performance</p>
+            <strong>
+              {accuracy}%
+            </strong>
+
+            <span>
+              Accuracy
+            </span>
+
+            <p>
+              Overall quiz performance
+            </p>
           </div>
+
 
           <div className="profile-stat-card">
             <div className="profile-stat-icon">
-              <Flame size={20} />
+              <Flame
+                size={20}
+              />
             </div>
 
-            <strong>12 days</strong>
-            <span>Streak</span>
-            <p>Current learning streak</p>
+            <strong>
+              {streak}{" "}
+              {streak === 1
+                ? "day"
+                : "days"}
+            </strong>
+
+            <span>
+              Streak
+            </span>
+
+            <p>
+              Current learning streak
+            </p>
           </div>
+
 
           <div className="profile-stat-card">
             <div className="profile-stat-icon">
-              <Star size={20} />
+              <Star
+                size={20}
+              />
             </div>
 
-            <strong>2,460</strong>
-            <span>Total XP</span>
-            <p>Experience earned</p>
+            <strong>
+              {xp.toLocaleString()}
+            </strong>
+
+            <span>
+              Total XP
+            </span>
+
+            <p>
+              Experience earned
+            </p>
           </div>
 
         </section>
 
-        {/* MAIN GRID */}
+
+        {/* ===================================================
+            ERROR
+        ==================================================== */}
+
+        {error && (
+          <div
+            style={{
+              marginBottom:
+                "20px",
+
+              padding:
+                "12px 15px",
+
+              border:
+                "1px solid rgba(255, 120, 85, 0.18)",
+
+              borderRadius:
+                "10px",
+
+              background:
+                "rgba(255, 120, 85, 0.05)",
+
+              color:
+                "#e99985",
+
+              fontSize:
+                "11px",
+            }}
+          >
+            {error}
+          </div>
+        )}
+
+
+        {/* ===================================================
+            MAIN GRID
+        ==================================================== */}
 
         <section className="profile-main-grid">
 
@@ -199,223 +1026,385 @@ function Profile() {
           <div className="profile-panel">
             <div className="profile-panel-header">
               <div>
-                <span>PERSONAL INFORMATION</span>
-                <h2>Profile details</h2>
+                <span>
+                  PERSONAL INFORMATION
+                </span>
+
+                <h2>
+                  Profile details
+                </h2>
               </div>
+
 
               <button
                 className="profile-edit-button"
-                onClick={() => setEditing(!editing)}
+                onClick={
+                  editing
+                    ? cancelEdit
+                    : () =>
+                        setEditing(
+                          true
+                        )
+                }
               >
-                <Edit3 size={15} />
-                {editing ? "Cancel" : "Edit"}
+                <Edit3
+                  size={15}
+                />
+
+                {editing
+                  ? "Cancel"
+                  : "Edit"}
               </button>
             </div>
 
+
             <div className="profile-form">
+
+              {/* NAME */}
 
               <div className="profile-field">
                 <label>
-                  <UserRound size={15} />
+                  <UserRound
+                    size={15}
+                  />
+
                   Full name
                 </label>
 
                 <input
                   name="name"
-                  value={profile.name}
-                  onChange={handleChange}
-                  disabled={!editing}
+                  value={
+                    profile.name
+                  }
+                  onChange={
+                    handleChange
+                  }
+                  disabled={
+                    !editing
+                  }
                 />
               </div>
 
+
+              {/* EMAIL */}
+
               <div className="profile-field">
                 <label>
-                  <Mail size={15} />
+                  <Mail
+                    size={15}
+                  />
+
                   Email
                 </label>
 
                 <input
                   name="email"
-                  value={profile.email}
-                  onChange={handleChange}
-                  disabled={!editing}
+                  value={
+                    profile.email
+                  }
+                  disabled
                 />
               </div>
 
+
+              {/* ROLE */}
+
               <div className="profile-field">
                 <label>
-                  <GraduationCap size={15} />
+                  <GraduationCap
+                    size={15}
+                  />
+
                   Role
                 </label>
 
                 <input
                   name="role"
-                  value={profile.role}
-                  onChange={handleChange}
-                  disabled={!editing}
+                  value={
+                    profile.role
+                  }
+                  disabled
                 />
               </div>
 
+
+              {/* GOAL */}
+
               <div className="profile-field profile-field-full">
                 <label>
-                  <Target size={15} />
+                  <Target
+                    size={15}
+                  />
+
                   Learning goal
                 </label>
 
                 <input
                   name="goal"
-                  value={profile.goal}
-                  onChange={handleChange}
-                  disabled={!editing}
+                  value={
+                    profile.goal
+                  }
+                  onChange={
+                    handleChange
+                  }
+                  disabled={
+                    !editing
+                  }
                 />
               </div>
 
             </div>
 
+
             {editing && (
               <button
                 className="profile-save-button"
-                onClick={saveProfile}
+                onClick={
+                  saveProfile
+                }
+                disabled={
+                  saving
+                }
               >
-                <Save size={16} />
-                Save Profile
+                {saving ? (
+                  <LoaderCircle
+                    size={16}
+                  />
+                ) : (
+                  <Save
+                    size={16}
+                  />
+                )}
+
+                {saving
+                  ? "Saving..."
+                  : "Save Profile"}
               </button>
             )}
 
+
             {saved && (
               <div className="profile-save-message">
-                <Check size={16} />
-                Profile saved successfully
+                <Check
+                  size={16}
+                />
+
+                Profile saved to MongoDB successfully
               </div>
             )}
           </div>
 
-          {/* AI PROFILE */}
+
+          {/* =================================================
+              LEARNING PROFILE
+          ================================================== */}
 
           <div className="profile-panel profile-ai-panel">
+
             <div className="profile-panel-header">
               <div>
-                <span>AI PROFILE</span>
-                <h2>Learning style</h2>
+                <span>
+                  LEARNING PROFILE
+                </span>
+
+                <h2>
+                  Learning style
+                </h2>
               </div>
 
               <div className="profile-ai-label">
-                <Sparkles size={13} />
-                AI
+                <Sparkles
+                  size={13}
+                />
+
+                LIVE
               </div>
             </div>
+
 
             <div className="profile-ai-visual">
               <div className="profile-ai-ring profile-ring-one" />
               <div className="profile-ai-ring profile-ring-two" />
 
               <div className="profile-ai-center">
-                <BrainCircuit size={30} />
+                <BrainCircuit
+                  size={30}
+                />
               </div>
             </div>
 
+
             <div className="profile-ai-message">
-              <Sparkles size={17} />
+              <Sparkles
+                size={17}
+              />
 
               <div>
                 <strong>
-                  Focused adaptive learner
+                  {
+                    learningStyle.title
+                  }
                 </strong>
 
                 <p>
-                  You perform best with short focused quizzes
-                  followed by targeted practice on weaker topics.
+                  {
+                    learningStyle.message
+                  }
                 </p>
               </div>
             </div>
 
-            <div className="profile-learning-row">
-              <span>Preferred difficulty</span>
-              <strong>Adaptive</strong>
-            </div>
 
             <div className="profile-learning-row">
-              <span>Average session</span>
-              <strong>8 min</strong>
+              <span>
+                Preferred difficulty
+              </span>
+
+              <strong>
+                {
+                  preferredDifficulty
+                }
+              </strong>
             </div>
 
-            <div className="profile-learning-row">
-              <span>Best subject</span>
-              <strong>Python</strong>
-            </div>
 
             <div className="profile-learning-row">
-              <span>Focus subject</span>
-              <strong>Machine Learning</strong>
+              <span>
+                Questions answered
+              </span>
+
+              <strong>
+                {
+                  questionsAnswered
+                }
+              </strong>
             </div>
+
+
+            <div className="profile-learning-row">
+              <span>
+                Best subject
+              </span>
+
+              <strong>
+                {strongestSubject
+                  ? strongestSubject.name
+                  : "No data yet"}
+              </strong>
+            </div>
+
+
+            <div className="profile-learning-row">
+              <span>
+                Focus subject
+              </span>
+
+              <strong>
+                {focusSubject
+                  ? focusSubject.name
+                  : "No data yet"}
+              </strong>
+            </div>
+
 
             <button
               className="profile-practice-button"
-              onClick={() => navigate("/quiz")}
+              onClick={() =>
+                navigate("/quiz")
+              }
             >
-              <Zap size={15} />
+              <Zap
+                size={15}
+              />
+
               Continue Learning
             </button>
           </div>
 
         </section>
 
-        {/* SUBJECTS */}
+
+        {/* ===================================================
+            SUBJECTS
+        ==================================================== */}
 
         <section className="profile-panel profile-subject-panel">
+
           <div className="profile-panel-header">
             <div>
-              <span>LEARNING INTERESTS</span>
-              <h2>Preferred subjects</h2>
+              <span>
+                LEARNING INTERESTS
+              </span>
+
+              <h2>
+                Preferred subjects
+              </h2>
             </div>
           </div>
 
+
           <div className="profile-subject-grid">
 
-            <div className="profile-subject-card">
-              <div className="profile-subject-icon">
-                PY
-              </div>
+            {displayedSubjects.map(
+              (subject) => {
+                let label =
+                  "Preferred subject";
 
-              <div>
-                <strong>Python</strong>
-                <span>Primary subject</span>
-              </div>
+                if (
+                  strongestSubject &&
+                  strongestSubject.name ===
+                    subject.name
+                ) {
+                  label =
+                    "Strongest subject";
+                }
 
-              <div className="profile-subject-score">
-                88%
-              </div>
-            </div>
+                if (
+                  focusSubject &&
+                  focusSubject.name ===
+                    subject.name &&
+                  attemptedSubjects.length >
+                    1
+                ) {
+                  label =
+                    "Focus subject";
+                }
 
-            <div className="profile-subject-card">
-              <div className="profile-subject-icon">
-                ML
-              </div>
+                return (
+                  <div
+                    className="profile-subject-card"
+                    key={
+                      subject.name
+                    }
+                  >
+                    <div className="profile-subject-icon">
+                      {
+                        subject.short
+                      }
+                    </div>
 
-              <div>
-                <strong>Machine Learning</strong>
-                <span>Focus subject</span>
-              </div>
+                    <div>
+                      <strong>
+                        {
+                          subject.name
+                        }
+                      </strong>
 
-              <div className="profile-subject-score">
-                62%
-              </div>
-            </div>
+                      <span>
+                        {label}
+                      </span>
+                    </div>
 
-            <div className="profile-subject-card">
-              <div className="profile-subject-icon">
-                DS
-              </div>
-
-              <div>
-                <strong>Data Structures</strong>
-                <span>Secondary subject</span>
-              </div>
-
-              <div className="profile-subject-score">
-                76%
-              </div>
-            </div>
+                    <div className="profile-subject-score">
+                      {
+                        subject.accuracy
+                      }
+                      %
+                    </div>
+                  </div>
+                );
+              }
+            )}
 
           </div>
         </section>
