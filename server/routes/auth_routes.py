@@ -1,3 +1,8 @@
+from datetime import (
+    datetime,
+    timezone,
+)
+
 from flask import (
     Blueprint,
     jsonify,
@@ -12,6 +17,10 @@ from pymongo.errors import (
 from werkzeug.security import (
     check_password_hash,
     generate_password_hash,
+)
+
+from database import (
+    users_collection,
 )
 
 from models.quiz_model import (
@@ -99,6 +108,96 @@ def serialize_subjects():
         in subjects
         if subject
     ]
+
+
+# =========================================================
+# PASSWORD COMPATIBILITY
+#
+# Older project versions may have stored the password hash
+# under a different field name. Keep old accounts working.
+# =========================================================
+
+def get_stored_password_hash(user):
+    if not isinstance(
+        user,
+        dict,
+    ):
+        return (
+            None,
+            None,
+        )
+
+    candidate_fields = [
+        "passwordHash",
+        "password_hash",
+        "password",
+    ]
+
+    for field_name in (
+        candidate_fields
+    ):
+        value = user.get(
+            field_name
+        )
+
+        if value is None:
+            continue
+
+        value = str(
+            value
+        ).strip()
+
+        if value:
+            return (
+                value,
+                field_name,
+            )
+
+    return (
+        None,
+        None,
+    )
+
+
+def migrate_legacy_password_hash(
+    user,
+    password_hash,
+    source_field,
+):
+    if (
+        not user
+        or not password_hash
+        or source_field ==
+        "passwordHash"
+    ):
+        return
+
+    try:
+        users_collection.update_one(
+            {
+                "_id":
+                    user["_id"]
+            },
+            {
+                "$set": {
+                    "passwordHash":
+                        password_hash,
+
+                    "updatedAt":
+                        datetime.now(
+                            timezone.utc
+                        ),
+                }
+            },
+        )
+
+    except Exception as error:
+        # Login should not fail only because a legacy
+        # account could not be migrated immediately.
+        print(
+            "Password field migration warning:",
+            error,
+        )
 
 
 # =========================================================
@@ -338,20 +437,33 @@ def login():
             }
         ), 401
 
-    password_hash = str(
-        user.get(
-            "passwordHash",
-            "",
+    (
+        password_hash,
+        password_field,
+    ) = (
+        get_stored_password_hash(
+            user
         )
     )
 
-    if (
-        not password_hash
-        or not check_password_hash(
-            password_hash,
-            password,
-        )
-    ):
+    password_matches = False
+
+    if password_hash:
+        try:
+            password_matches = (
+                check_password_hash(
+                    password_hash,
+                    password,
+                )
+            )
+
+        except (
+            ValueError,
+            TypeError,
+        ):
+            password_matches = False
+
+    if not password_matches:
         return jsonify(
             {
                 "success": False,
@@ -359,6 +471,16 @@ def login():
                     "Invalid email or password",
             }
         ), 401
+
+    # Automatically migrate old accounts to the current
+    # passwordHash field after a successful login.
+    migrate_legacy_password_hash(
+        user=user,
+        password_hash=
+            password_hash,
+        source_field=
+            password_field,
+    )
 
     session.clear()
 
