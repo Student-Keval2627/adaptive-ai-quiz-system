@@ -11,10 +11,28 @@ from database import (
 
 MIN_TOPIC_ATTEMPTS_FOR_STRONG = 2
 
+WEAK_TOPIC_ACCURACY_LIMIT = 75
+
 
 # =========================================================
-# SAFE INTEGER
+# HELPERS
 # =========================================================
+
+def safe_object_id(value):
+    try:
+        if isinstance(
+            value,
+            ObjectId,
+        ):
+            return value
+
+        return ObjectId(
+            str(value)
+        )
+
+    except Exception:
+        return None
+
 
 def safe_int(
     value,
@@ -32,48 +50,95 @@ def safe_int(
         return default
 
 
+def calculate_accuracy(
+    correct,
+    answered,
+):
+    correct = safe_int(
+        correct
+    )
+
+    answered = safe_int(
+        answered
+    )
+
+    if answered <= 0:
+        return 0
+
+    return round(
+        (
+            correct /
+            answered
+        ) * 100
+    )
+
+
 # =========================================================
-# TOPIC RECOMMENDATION
+# TOPIC LEVEL
 # =========================================================
 
-def build_topic_recommendation(
-    topic,
+def get_topic_level(
     accuracy,
 ):
-    if not topic:
+    accuracy = safe_int(
+        accuracy
+    )
+
+    if accuracy < 50:
+        return "Weak"
+
+    if accuracy < 75:
+        return "Improving"
+
+    return "Strong"
+
+
+# =========================================================
+# RECOMMENDATION
+# =========================================================
+
+def build_recommendation(
+    weakest_topic,
+):
+    if not weakest_topic:
         return (
-            "Complete more quizzes to receive "
-            "personalized practice recommendations."
+            "Complete more adaptive quizzes "
+            "to unlock personalized topic recommendations."
         )
 
+    topic = weakest_topic.get(
+        "topic",
+        "this topic",
+    )
+
+    accuracy = safe_int(
+        weakest_topic.get(
+            "accuracy",
+            0,
+        )
+    )
 
     if accuracy < 40:
         return (
-            f"Focus strongly on {topic}. "
-            "Review the fundamentals and practice "
-            "more Easy and Medium questions."
+            f"Focus on {topic}. Review the fundamentals "
+            f"and practice Easy and Medium questions first."
         )
-
 
     if accuracy < 60:
         return (
-            f"Practice {topic} more often. "
-            "You understand some concepts, but "
-            "additional targeted questions will help."
+            f"Practice {topic} more frequently. "
+            f"Use Focus Mode to reinforce this weak area."
         )
-
 
     if accuracy < 75:
         return (
-            f"Continue practicing {topic}. "
-            "Your understanding is improving, but "
-            "more consistency is needed."
+            f"Keep practicing {topic}. Your understanding is "
+            f"improving, but more consistency is needed."
         )
 
-
     return (
-        f"Keep strengthening {topic} with "
-        "Medium and Hard questions."
+        f"Continue practicing {topic} with Medium and Hard "
+        f"questions to strengthen mastery."
     )
 
 
@@ -83,6 +148,9 @@ def build_topic_recommendation(
 
 def empty_analytics():
     return {
+        "totalSubjects":
+            0,
+
         "totalTopics":
             0,
 
@@ -106,13 +174,334 @@ def empty_analytics():
 
         "recommendation":
             (
-                "Complete a quiz to unlock "
-                "personalized topic analytics."
+                "Complete more adaptive quizzes "
+                "to unlock personalized topic recommendations."
             ),
+
+        "subjects":
+            [],
 
         "topics":
             [],
     }
+
+
+# =========================================================
+# BUILD DIFFICULTY STATS
+# =========================================================
+
+def build_difficulty_stats(
+    row,
+):
+    easy_answered = safe_int(
+        row.get(
+            "easyAnswered",
+            0,
+        )
+    )
+
+    easy_correct = safe_int(
+        row.get(
+            "easyCorrect",
+            0,
+        )
+    )
+
+    medium_answered = safe_int(
+        row.get(
+            "mediumAnswered",
+            0,
+        )
+    )
+
+    medium_correct = safe_int(
+        row.get(
+            "mediumCorrect",
+            0,
+        )
+    )
+
+    hard_answered = safe_int(
+        row.get(
+            "hardAnswered",
+            0,
+        )
+    )
+
+    hard_correct = safe_int(
+        row.get(
+            "hardCorrect",
+            0,
+        )
+    )
+
+    return {
+        "easy": {
+            "answered":
+                easy_answered,
+
+            "correct":
+                easy_correct,
+
+            "accuracy":
+                (
+                    calculate_accuracy(
+                        easy_correct,
+                        easy_answered,
+                    )
+                    if easy_answered > 0
+                    else None
+                ),
+        },
+
+        "medium": {
+            "answered":
+                medium_answered,
+
+            "correct":
+                medium_correct,
+
+            "accuracy":
+                (
+                    calculate_accuracy(
+                        medium_correct,
+                        medium_answered,
+                    )
+                    if medium_answered > 0
+                    else None
+                ),
+        },
+
+        "hard": {
+            "answered":
+                hard_answered,
+
+            "correct":
+                hard_correct,
+
+            "accuracy":
+                (
+                    calculate_accuracy(
+                        hard_correct,
+                        hard_answered,
+                    )
+                    if hard_answered > 0
+                    else None
+                ),
+        },
+    }
+
+
+# =========================================================
+# DATABASE AGGREGATION
+#
+# This keeps analytics scalable as quiz history grows.
+# The frontend response shape remains compatible with the
+# existing Dashboard, Performance and Weak Topics pages.
+# =========================================================
+
+def get_topic_rows(
+    user_id,
+    subject=None,
+):
+    object_user_id = (
+        safe_object_id(
+            user_id
+        )
+    )
+
+    if not object_user_id:
+        return []
+
+    match_filter = {
+        "userId":
+            object_user_id,
+
+        "verified":
+            True,
+    }
+
+    if subject:
+        match_filter[
+            "subject"
+        ] = subject
+
+    pipeline = [
+        {
+            "$match":
+                match_filter
+        },
+
+        {
+            "$unwind":
+                "$answers"
+        },
+
+        {
+            "$group": {
+                "_id": {
+                    "subject": {
+                        "$ifNull": [
+                            "$answers.subject",
+                            "$subject",
+                        ]
+                    },
+
+                    "topic": {
+                        "$ifNull": [
+                            "$answers.topic",
+                            "General",
+                        ]
+                    },
+                },
+
+                "answered": {
+                    "$sum": 1
+                },
+
+                "correct": {
+                    "$sum": {
+                        "$cond": [
+                            {
+                                "$eq": [
+                                    "$answers.correct",
+                                    True,
+                                ]
+                            },
+                            1,
+                            0,
+                        ]
+                    }
+                },
+
+                "easyAnswered": {
+                    "$sum": {
+                        "$cond": [
+                            {
+                                "$eq": [
+                                    "$answers.difficulty",
+                                    "Easy",
+                                ]
+                            },
+                            1,
+                            0,
+                        ]
+                    }
+                },
+
+                "easyCorrect": {
+                    "$sum": {
+                        "$cond": [
+                            {
+                                "$and": [
+                                    {
+                                        "$eq": [
+                                            "$answers.difficulty",
+                                            "Easy",
+                                        ]
+                                    },
+                                    {
+                                        "$eq": [
+                                            "$answers.correct",
+                                            True,
+                                        ]
+                                    },
+                                ]
+                            },
+                            1,
+                            0,
+                        ]
+                    }
+                },
+
+                "mediumAnswered": {
+                    "$sum": {
+                        "$cond": [
+                            {
+                                "$eq": [
+                                    "$answers.difficulty",
+                                    "Medium",
+                                ]
+                            },
+                            1,
+                            0,
+                        ]
+                    }
+                },
+
+                "mediumCorrect": {
+                    "$sum": {
+                        "$cond": [
+                            {
+                                "$and": [
+                                    {
+                                        "$eq": [
+                                            "$answers.difficulty",
+                                            "Medium",
+                                        ]
+                                    },
+                                    {
+                                        "$eq": [
+                                            "$answers.correct",
+                                            True,
+                                        ]
+                                    },
+                                ]
+                            },
+                            1,
+                            0,
+                        ]
+                    }
+                },
+
+                "hardAnswered": {
+                    "$sum": {
+                        "$cond": [
+                            {
+                                "$eq": [
+                                    "$answers.difficulty",
+                                    "Hard",
+                                ]
+                            },
+                            1,
+                            0,
+                        ]
+                    }
+                },
+
+                "hardCorrect": {
+                    "$sum": {
+                        "$cond": [
+                            {
+                                "$and": [
+                                    {
+                                        "$eq": [
+                                            "$answers.difficulty",
+                                            "Hard",
+                                        ]
+                                    },
+                                    {
+                                        "$eq": [
+                                            "$answers.correct",
+                                            True,
+                                        ]
+                                    },
+                                ]
+                            },
+                            1,
+                            0,
+                        ]
+                    }
+                },
+            }
+        },
+    ]
+
+    return list(
+        quiz_results_collection.aggregate(
+            pipeline
+        )
+    )
 
 
 # =========================================================
@@ -123,408 +512,233 @@ def get_user_topic_analytics(
     user_id,
     subject=None,
 ):
-    try:
-        object_user_id = ObjectId(
-            user_id
-        )
-
-    except Exception:
-        return {
-            "success": False,
-            "message":
-                "Invalid user ID",
-            "analytics":
-                empty_analytics(),
-        }
-
-
-    # =====================================================
-    # RESULT FILTER
-    # =====================================================
-
-    query = {
-        "userId":
-            object_user_id,
-
-        "verified":
-            True,
-    }
-
-
-    if subject:
-        query[
-            "subject"
-        ] = subject
-
-
-    # =====================================================
-    # LOAD QUIZ RESULTS
-    # =====================================================
-
-    cursor = (
-        quiz_results_collection
-        .find(
-            query,
-            {
-                "subject": 1,
-                "answers": 1,
-                "createdAt": 1,
-            },
-        )
-        .sort(
-            "createdAt",
-            -1,
-        )
+    rows = get_topic_rows(
+        user_id=user_id,
+        subject=subject,
     )
 
-
-    topic_stats = {}
-
-
-    total_answered = 0
-
-    total_correct = 0
-
-
-    # =====================================================
-    # PROCESS EVERY VERIFIED ANSWER
-    # =====================================================
-
-    for result in cursor:
-
-        result_subject = str(
-            result.get(
-                "subject",
-                "",
-            )
-        ).strip()
-
-
-        answers = result.get(
-            "answers",
-            [],
-        )
-
-
-        if not isinstance(
-            answers,
-            list,
-        ):
-            continue
-
-
-        for answer in answers:
-
-            if not isinstance(
-                answer,
-                dict,
-            ):
-                continue
-
-
-            topic = str(
-                answer.get(
-                    "topic",
-                    "General",
-                )
-            ).strip()
-
-
-            if not topic:
-                topic = "General"
-
-
-            difficulty = str(
-                answer.get(
-                    "difficulty",
-                    "Medium",
-                )
-            ).strip()
-
-
-            was_correct = bool(
-                answer.get(
-                    "correct",
-                    False,
-                )
-            )
-
-
-            key = (
-                result_subject,
-                topic,
-            )
-
-
-            if key not in topic_stats:
-
-                topic_stats[
-                    key
-                ] = {
-                    "subject":
-                        result_subject,
-
-                    "topic":
-                        topic,
-
-                    "answered":
-                        0,
-
-                    "correct":
-                        0,
-
-                    "easyAnswered":
-                        0,
-
-                    "easyCorrect":
-                        0,
-
-                    "mediumAnswered":
-                        0,
-
-                    "mediumCorrect":
-                        0,
-
-                    "hardAnswered":
-                        0,
-
-                    "hardCorrect":
-                        0,
-                }
-
-
-            stats = topic_stats[
-                key
-            ]
-
-
-            stats[
-                "answered"
-            ] += 1
-
-
-            total_answered += 1
-
-
-            if was_correct:
-
-                stats[
-                    "correct"
-                ] += 1
-
-                total_correct += 1
-
-
-            # =============================================
-            # DIFFICULTY STATS
-            # =============================================
-
-            normalized_difficulty = (
-                difficulty.lower()
-            )
-
-
-            if (
-                normalized_difficulty
-                == "easy"
-            ):
-
-                stats[
-                    "easyAnswered"
-                ] += 1
-
-                if was_correct:
-
-                    stats[
-                        "easyCorrect"
-                    ] += 1
-
-
-            elif (
-                normalized_difficulty
-                == "hard"
-            ):
-
-                stats[
-                    "hardAnswered"
-                ] += 1
-
-                if was_correct:
-
-                    stats[
-                        "hardCorrect"
-                    ] += 1
-
-
-            else:
-
-                stats[
-                    "mediumAnswered"
-                ] += 1
-
-                if was_correct:
-
-                    stats[
-                        "mediumCorrect"
-                    ] += 1
-
-
-    # =====================================================
-    # NO DATA
-    # =====================================================
-
-    if not topic_stats:
-
+    if not rows:
         return {
             "success": True,
             "analytics":
                 empty_analytics(),
         }
 
-
-    # =====================================================
-    # BUILD TOPIC RESPONSE
-    # =====================================================
-
     topics = []
 
+    total_answered = 0
+    total_correct = 0
 
-    for stats in (
-        topic_stats.values()
-    ):
+    subject_totals = {}
+
+    for row in rows:
+        row_id = row.get(
+            "_id",
+            {},
+        )
+
+        result_subject = str(
+            row_id.get(
+                "subject",
+                "",
+            )
+            or ""
+        ).strip()
+
+        topic_name = str(
+            row_id.get(
+                "topic",
+                "General",
+            )
+            or "General"
+        ).strip()
+
+        if not result_subject:
+            continue
+
+        if not topic_name:
+            topic_name = "General"
 
         answered = safe_int(
-            stats.get(
-                "answered"
+            row.get(
+                "answered",
+                0,
             )
         )
-
 
         correct = safe_int(
-            stats.get(
-                "correct"
+            row.get(
+                "correct",
+                0,
             )
         )
 
+        wrong = max(
+            answered - correct,
+            0,
+        )
 
         accuracy = (
-            round(
-                (
-                    correct /
-                    answered
-                ) * 100
-            )
-            if answered > 0
-            else 0
-        )
-
-
-        easy_answered = safe_int(
-            stats.get(
-                "easyAnswered"
+            calculate_accuracy(
+                correct,
+                answered,
             )
         )
 
+        topic = {
+            "subject":
+                result_subject,
 
-        easy_correct = safe_int(
-            stats.get(
-                "easyCorrect"
-            )
-        )
+            "topic":
+                topic_name,
 
+            "answered":
+                answered,
 
-        medium_answered = safe_int(
-            stats.get(
-                "mediumAnswered"
-            )
-        )
+            "correct":
+                correct,
 
+            "wrong":
+                wrong,
 
-        medium_correct = safe_int(
-            stats.get(
-                "mediumCorrect"
-            )
-        )
+            "accuracy":
+                accuracy,
 
+            "level":
+                get_topic_level(
+                    accuracy
+                ),
 
-        hard_answered = safe_int(
-            stats.get(
-                "hardAnswered"
-            )
-        )
-
-
-        hard_correct = safe_int(
-            stats.get(
-                "hardCorrect"
-            )
-        )
-
-
-        easy_accuracy = (
-            round(
-                (
-                    easy_correct /
-                    easy_answered
-                ) * 100
-            )
-            if easy_answered
-            else None
-        )
-
-
-        medium_accuracy = (
-            round(
-                (
-                    medium_correct /
-                    medium_answered
-                ) * 100
-            )
-            if medium_answered
-            else None
-        )
-
-
-        hard_accuracy = (
-            round(
-                (
-                    hard_correct /
-                    hard_answered
-                ) * 100
-            )
-            if hard_answered
-            else None
-        )
-
-
-        if accuracy < 50:
-
-            level = "Weak"
-
-
-        elif accuracy < 75:
-
-            level = "Improving"
-
-
-        else:
-
-            level = "Strong"
-
+            "difficultyStats":
+                build_difficulty_stats(
+                    row
+                ),
+        }
 
         topics.append(
+            topic
+        )
+
+        total_answered += (
+            answered
+        )
+
+        total_correct += (
+            correct
+        )
+
+        if (
+            result_subject
+            not in subject_totals
+        ):
+            subject_totals[
+                result_subject
+            ] = {
+                "subject":
+                    result_subject,
+
+                "answered":
+                    0,
+
+                "correct":
+                    0,
+            }
+
+        subject_totals[
+            result_subject
+        ][
+            "answered"
+        ] += answered
+
+        subject_totals[
+            result_subject
+        ][
+            "correct"
+        ] += correct
+
+    if not topics:
+        return {
+            "success": True,
+            "analytics":
+                empty_analytics(),
+        }
+
+    # Weakest topics first.
+    # With equal accuracy, more attempts get priority
+    # because the signal is more reliable.
+    topics.sort(
+        key=lambda item: (
+            item[
+                "accuracy"
+            ],
+            -item[
+                "answered"
+            ],
+            item[
+                "subject"
+            ].lower(),
+            item[
+                "topic"
+            ].lower(),
+        )
+    )
+
+    weakest_topic = (
+        topics[0]
+    )
+
+    strong_candidates = [
+        topic
+        for topic
+        in topics
+        if topic[
+            "answered"
+        ] >=
+        MIN_TOPIC_ATTEMPTS_FOR_STRONG
+    ]
+
+    if not strong_candidates:
+        strong_candidates = (
+            topics
+        )
+
+    strongest_topic = max(
+        strong_candidates,
+        key=lambda item: (
+            item[
+                "accuracy"
+            ],
+            item[
+                "answered"
+            ],
+        ),
+    )
+
+    subjects = []
+
+    for item in (
+        subject_totals.values()
+    ):
+        answered = safe_int(
+            item.get(
+                "answered",
+                0,
+            )
+        )
+
+        correct = safe_int(
+            item.get(
+                "correct",
+                0,
+            )
+        )
+
+        subjects.append(
             {
                 "subject":
-                    stats.get(
-                        "subject",
-                        "",
-                    ),
-
-                "topic":
-                    stats.get(
-                        "topic",
-                        "General",
-                    ),
+                    item[
+                        "subject"
+                    ],
 
                 "answered":
                     answered,
@@ -540,162 +754,39 @@ def get_user_topic_analytics(
                     ),
 
                 "accuracy":
-                    accuracy,
-
-                "level":
-                    level,
-
-                "difficultyStats": {
-                    "easy": {
-                        "answered":
-                            easy_answered,
-
-                        "correct":
-                            easy_correct,
-
-                        "accuracy":
-                            easy_accuracy,
-                    },
-
-                    "medium": {
-                        "answered":
-                            medium_answered,
-
-                        "correct":
-                            medium_correct,
-
-                        "accuracy":
-                            medium_accuracy,
-                    },
-
-                    "hard": {
-                        "answered":
-                            hard_answered,
-
-                        "correct":
-                            hard_correct,
-
-                        "accuracy":
-                            hard_accuracy,
-                    },
-                },
+                    calculate_accuracy(
+                        correct,
+                        answered,
+                    ),
             }
         )
 
-
-    # =====================================================
-    # SORT
-    #
-    # Lowest accuracy comes first.
-    # If accuracy is equal, topic with more
-    # answered questions gets higher priority.
-    # =====================================================
-
-    topics.sort(
+    subjects.sort(
         key=lambda item: (
             item[
                 "accuracy"
             ],
-
-            -item[
-                "answered"
-            ],
+            item[
+                "subject"
+            ].lower(),
         )
     )
-
-
-    weakest_topic = (
-        topics[0]
-        if topics
-        else None
-    )
-
-
-    strongest_candidates = [
-        topic
-        for topic
-        in topics
-        if topic[
-            "answered"
-        ] >=
-        MIN_TOPIC_ATTEMPTS_FOR_STRONG
-    ]
-
-
-    if strongest_candidates:
-
-        strongest_topic = max(
-            strongest_candidates,
-            key=lambda item: (
-                item[
-                    "accuracy"
-                ],
-
-                item[
-                    "answered"
-                ],
-            ),
-        )
-
-    else:
-
-        strongest_topic = max(
-            topics,
-            key=lambda item: (
-                item[
-                    "accuracy"
-                ],
-
-                item[
-                    "answered"
-                ],
-            ),
-        )
-
-
-    # =====================================================
-    # OVERALL ACCURACY
-    # =====================================================
 
     overall_accuracy = (
-        round(
-            (
-                total_correct /
-                total_answered
-            ) * 100
-        )
-        if total_answered > 0
-        else 0
-    )
-
-
-    recommended_topic = (
-        weakest_topic.get(
-            "topic"
-        )
-        if weakest_topic
-        else None
-    )
-
-
-    recommendation = (
-        build_topic_recommendation(
-            recommended_topic,
-
-            weakest_topic.get(
-                "accuracy",
-                0,
-            )
-            if weakest_topic
-            else 0,
+        calculate_accuracy(
+            total_correct,
+            total_answered,
         )
     )
-
 
     return {
         "success": True,
 
         "analytics": {
+            "totalSubjects":
+                len(
+                    subjects
+                ),
 
             "totalTopics":
                 len(
@@ -718,10 +809,17 @@ def get_user_topic_analytics(
                 strongest_topic,
 
             "recommendedTopic":
-                recommended_topic,
+                weakest_topic.get(
+                    "topic"
+                ),
 
             "recommendation":
-                recommendation,
+                build_recommendation(
+                    weakest_topic
+                ),
+
+            "subjects":
+                subjects,
 
             "topics":
                 topics,
@@ -730,51 +828,14 @@ def get_user_topic_analytics(
 
 
 # =========================================================
-# GET WEAK TOPICS ONLY
+# WEAK TOPICS
 # =========================================================
 
 def get_user_weak_topics(
     user_id,
     subject=None,
-    limit=3,
+    limit=5,
 ):
-    result = (
-        get_user_topic_analytics(
-            user_id,
-            subject,
-        )
-    )
-
-
-    if not result.get(
-        "success"
-    ):
-        return []
-
-
-    analytics = result.get(
-        "analytics",
-        {},
-    )
-
-
-    topics = analytics.get(
-        "topics",
-        [],
-    )
-
-
-    weak_topics = [
-        topic
-        for topic
-        in topics
-        if topic.get(
-            "accuracy",
-            0,
-        ) < 75
-    ]
-
-
     try:
         limit = int(
             limit
@@ -784,35 +845,71 @@ def get_user_weak_topics(
         TypeError,
         ValueError,
     ):
-        limit = 3
-
+        limit = 5
 
     limit = max(
         1,
         min(
             limit,
-            10,
+            50,
         ),
     )
 
-
-    return (
-        weak_topics[
-            :limit
-        ]
+    result = (
+        get_user_topic_analytics(
+            user_id=user_id,
+            subject=subject,
+        )
     )
+
+    analytics = (
+        result.get(
+            "analytics",
+            {}
+        )
+    )
+
+    topics = analytics.get(
+        "topics",
+        [],
+    )
+
+    weak_topics = [
+        topic
+        for topic
+        in topics
+        if safe_int(
+            topic.get(
+                "accuracy",
+                0,
+            )
+        )
+        <
+        WEAK_TOPIC_ACCURACY_LIMIT
+    ]
+
+    return weak_topics[
+        :limit
+    ]
 
 
 # =========================================================
-# GET PRIORITY TOPIC
+# PRIORITY TOPIC
 #
-# Adaptive engine can use this later.
+# Used directly by the adaptive quiz engine.
 # =========================================================
 
 def get_priority_topic(
     user_id,
     subject,
 ):
+    subject = str(
+        subject or ""
+    ).strip()
+
+    if not subject:
+        return None
+
     weak_topics = (
         get_user_weak_topics(
             user_id=user_id,
@@ -821,15 +918,11 @@ def get_priority_topic(
         )
     )
 
-
     if not weak_topics:
         return None
 
-
-    return (
-        weak_topics[
-            0
-        ].get(
-            "topic"
-        )
+    return weak_topics[
+        0
+    ].get(
+        "topic"
     )
