@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "C Programming",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which function is the usual entry point of a C program?",
+    "options": [
+      "start()",
+      "main()",
+      "run()",
+      "init()"
+    ],
+    "answer": "main()"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which symbol ends most statements in C?",
+    "options": [
+      ":",
+      ";",
+      ".",
+      ","
+    ],
+    "answer": ";"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which header file is commonly included to use printf() and scanf()?",
+    "options": [
+      "stdio.h",
+      "string.h",
+      "math.h",
+      "stdlib.h"
+    ],
+    "answer": "stdio.h"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Variables",
+    "difficulty": "Easy",
+    "question": "Which keyword declares an integer variable in C?",
+    "options": [
+      "integer",
+      "int",
+      "num",
+      "whole"
+    ],
+    "answer": "int"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Data Types",
+    "difficulty": "Easy",
+    "question": "Which C data type is commonly used to store a single character?",
+    "options": [
+      "char",
+      "string",
+      "text",
+      "byte"
+    ],
+    "answer": "char"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Data Types",
+    "difficulty": "Easy",
+    "question": "Which C data type is commonly used for decimal values with single precision?",
+    "options": [
+      "float",
+      "int",
+      "char",
+      "void"
+    ],
+    "answer": "float"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Input Output",
+    "difficulty": "Easy",
+    "question": "Which function is commonly used to print formatted output in C?",
+    "options": [
+      "printf()",
+      "scanf()",
+      "print()",
+      "writef()"
+    ],
+    "answer": "printf()"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Input Output",
+    "difficulty": "Easy",
+    "question": "Which function is commonly used to read formatted input in C?",
+    "options": [
+      "read()",
+      "scanf()",
+      "input()",
+      "getvalue()"
+    ],
+    "answer": "scanf()"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Operators",
+    "difficulty": "Easy",
+    "question": "Which operator checks equality in C?",
+    "options": [
+      "=",
+      "==",
+      "!=",
+      "==="
+    ],
+    "answer": "=="
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Operators",
+    "difficulty": "Easy",
+    "question": "Which operator represents logical AND in C?",
+    "options": [
+      "&&",
+      "||",
+      "&|",
+      "and"
+    ],
+    "answer": "&&"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Operators",
+    "difficulty": "Easy",
+    "question": "Which operator represents logical OR in C?",
+    "options": [
+      "||",
+      "&&",
+      "or",
+      "|&"
+    ],
+    "answer": "||"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Operators",
+    "difficulty": "Easy",
+    "question": "Which operator gives the remainder after integer division in C?",
+    "options": [
+      "%",
+      "/",
+      "//",
+      "rem"
+    ],
+    "answer": "%"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Conditions",
+    "difficulty": "Easy",
+    "question": "Which keyword begins a conditional statement in C?",
+    "options": [
+      "if",
+      "when",
+      "check",
+      "case"
+    ],
+    "answer": "if"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Conditions",
+    "difficulty": "Easy",
+    "question": "Which keyword provides an alternative branch after an if statement?",
+    "options": [
+      "else",
+      "otherwise",
+      "then",
+      "elif"
+    ],
+    "answer": "else"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Loops",
+    "difficulty": "Easy",
+    "question": "Which loop is commonly used when the number of iterations is known?",
+    "options": [
+      "for",
+      "switch",
+      "if",
+      "goto"
+    ],
+    "answer": "for"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Loops",
+    "difficulty": "Easy",
+    "question": "Which keyword exits a loop immediately?",
+    "options": [
+      "break",
+      "stop",
+      "exitloop",
+      "returnloop"
+    ],
+    "answer": "break"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Loops",
+    "difficulty": "Easy",
+    "question": "Which keyword skips the rest of the current loop iteration?",
+    "options": [
+      "continue",
+      "skip",
+      "next",
+      "pass"
+    ],
+    "answer": "continue"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Arrays",
+    "difficulty": "Easy",
+    "question": "What is the index of the first element of a C array?",
+    "options": [
+      "0",
+      "1",
+      "-1",
+      "Depends on size"
+    ],
+    "answer": "0"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Arrays",
+    "difficulty": "Easy",
+    "question": "Which declaration creates an array of 10 integers?",
+    "options": [
+      "int a[10];",
+      "int[10] a;",
+      "array int a(10);",
+      "int a{10};"
+    ],
+    "answer": "int a[10];"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Strings",
+    "difficulty": "Easy",
+    "question": "Which character marks the end of a C string?",
+    "options": [
+      "\\0",
+      "\\n",
+      "\\t",
+      "EOF"
+    ],
+    "answer": "\\0"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Strings",
+    "difficulty": "Easy",
+    "question": "Which header file provides functions such as strlen() and strcpy()?",
+    "options": [
+      "string.h",
+      "stdio.h",
+      "ctype.h",
+      "time.h"
+    ],
+    "answer": "string.h"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Functions",
+    "difficulty": "Easy",
+    "question": "Which keyword sends a value back from a C function?",
+    "options": [
+      "return",
+      "yield",
+      "send",
+      "back"
+    ],
+    "answer": "return"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Functions",
+    "difficulty": "Easy",
+    "question": "A function that returns no value is commonly declared with which return type?",
+    "options": [
+      "void",
+      "null",
+      "none",
+      "empty"
+    ],
+    "answer": "void"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Pointers",
+    "difficulty": "Easy",
+    "question": "Which operator obtains the address of a variable in C?",
+    "options": [
+      "&",
+      "*",
+      "@",
+      "#"
+    ],
+    "answer": "&"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Pointers",
+    "difficulty": "Easy",
+    "question": "Which operator dereferences a pointer in C?",
+    "options": [
+      "*",
+      "&",
+      "->",
+      "%"
+    ],
+    "answer": "*"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Preprocessor",
+    "difficulty": "Easy",
+    "question": "Which directive is used to include a header file in C?",
+    "options": [
+      "#include",
+      "#import",
+      "include",
+      "using"
+    ],
+    "answer": "#include"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Preprocessor",
+    "difficulty": "Easy",
+    "question": "Which directive is commonly used to define a macro constant?",
+    "options": [
+      "#define",
+      "#const",
+      "#macro",
+      "#value"
+    ],
+    "answer": "#define"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Structures",
+    "difficulty": "Easy",
+    "question": "Which keyword defines a structure type in C?",
+    "options": [
+      "struct",
+      "record",
+      "class",
+      "object"
+    ],
+    "answer": "struct"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Memory",
+    "difficulty": "Easy",
+    "question": "Which standard library function allocates a block of dynamic memory?",
+    "options": [
+      "malloc()",
+      "alloc()",
+      "new()",
+      "create()"
+    ],
+    "answer": "malloc()"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Memory",
+    "difficulty": "Easy",
+    "question": "Which function releases dynamically allocated memory in C?",
+    "options": [
+      "free()",
+      "delete()",
+      "release()",
+      "dispose()"
+    ],
+    "answer": "free()"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Files",
+    "difficulty": "Easy",
+    "question": "Which function is commonly used to open a file in C?",
+    "options": [
+      "fopen()",
+      "openfile()",
+      "fileopen()",
+      "open()"
+    ],
+    "answer": "fopen()"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Files",
+    "difficulty": "Easy",
+    "question": "Which function is commonly used to close a FILE pointer?",
+    "options": [
+      "fclose()",
+      "closefile()",
+      "close()",
+      "endfile()"
+    ],
+    "answer": "fclose()"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Switch",
+    "difficulty": "Easy",
+    "question": "Which keyword is used to define an alternative label inside a switch statement?",
+    "options": [
+      "case",
+      "when",
+      "option",
+      "branch"
+    ],
+    "answer": "case"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Switch",
+    "difficulty": "Easy",
+    "question": "Which label runs when no switch case matches?",
+    "options": [
+      "default",
+      "else",
+      "otherwise",
+      "fallback"
+    ],
+    "answer": "default"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Pointers",
+    "difficulty": "Medium",
+    "question": "If int x = 10; and int *p = &x;, what does *p evaluate to?",
+    "options": [
+      "10",
+      "Address of x",
+      "0",
+      "Size of x"
+    ],
+    "answer": "10"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Pointers",
+    "difficulty": "Medium",
+    "question": "What is stored in a pointer variable?",
+    "options": [
+      "A memory address",
+      "Only an integer value",
+      "A function name only",
+      "A type definition"
+    ],
+    "answer": "A memory address"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Pointers",
+    "difficulty": "Medium",
+    "question": "Which declaration creates a pointer to an integer?",
+    "options": [
+      "int *p;",
+      "int p*;",
+      "pointer int p;",
+      "int &p;"
+    ],
+    "answer": "int *p;"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Pointers",
+    "difficulty": "Medium",
+    "question": "What does p++ do when p is an int pointer?",
+    "options": [
+      "Moves p to the next int element",
+      "Increases the pointed value by 1",
+      "Sets p to NULL",
+      "Moves p by one bit"
+    ],
+    "answer": "Moves p to the next int element"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Arrays",
+    "difficulty": "Medium",
+    "question": "In most expressions, an array name in C decays to what?",
+    "options": [
+      "A pointer to its first element",
+      "The size of the array",
+      "A copy of all elements",
+      "A structure"
+    ],
+    "answer": "A pointer to its first element"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Arrays",
+    "difficulty": "Medium",
+    "question": "For int a[5] = {1,2,3,4,5};, what is a[3]?",
+    "options": [
+      "4",
+      "3",
+      "5",
+      "2"
+    ],
+    "answer": "4"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Arrays",
+    "difficulty": "Medium",
+    "question": "Which expression is equivalent to a[i] for an array or pointer a?",
+    "options": [
+      "*(a + i)",
+      "*a + i",
+      "&(a + i)",
+      "a * i"
+    ],
+    "answer": "*(a + i)"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Strings",
+    "difficulty": "Medium",
+    "question": "What does strlen(\"Hello\") return?",
+    "options": [
+      "5",
+      "6",
+      "4",
+      "Depends on compiler"
+    ],
+    "answer": "5"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Strings",
+    "difficulty": "Medium",
+    "question": "Which function compares two null-terminated C strings lexicographically?",
+    "options": [
+      "strcmp()",
+      "strcheck()",
+      "compare()",
+      "streq()"
+    ],
+    "answer": "strcmp()"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Strings",
+    "difficulty": "Medium",
+    "question": "Which function copies one C string into another destination buffer?",
+    "options": [
+      "strcpy()",
+      "strcmp()",
+      "strlen()",
+      "strcatlen()"
+    ],
+    "answer": "strcpy()"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Functions",
+    "difficulty": "Medium",
+    "question": "What is a function prototype used for?",
+    "options": [
+      "Declaring a function's name, return type and parameters before use",
+      "Allocating heap memory",
+      "Creating a loop",
+      "Defining a structure"
+    ],
+    "answer": "Declaring a function's name, return type and parameters before use"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Functions",
+    "difficulty": "Medium",
+    "question": "In C, function arguments are normally passed using which mechanism?",
+    "options": [
+      "By value",
+      "By reference automatically",
+      "By name",
+      "By lazy evaluation"
+    ],
+    "answer": "By value"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Functions",
+    "difficulty": "Medium",
+    "question": "How can a C function modify a caller's variable directly?",
+    "options": [
+      "Pass a pointer to the variable",
+      "Use only a local copy",
+      "Use printf()",
+      "Declare every variable static"
+    ],
+    "answer": "Pass a pointer to the variable"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Recursion",
+    "difficulty": "Medium",
+    "question": "What is essential for a recursive function to terminate?",
+    "options": [
+      "A base case",
+      "A global variable",
+      "A switch statement",
+      "A macro"
+    ],
+    "answer": "A base case"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Storage Classes",
+    "difficulty": "Medium",
+    "question": "Which storage-class keyword preserves a local variable's value between function calls?",
+    "options": [
+      "static",
+      "auto",
+      "extern",
+      "register"
+    ],
+    "answer": "static"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Storage Classes",
+    "difficulty": "Medium",
+    "question": "Which keyword declares a variable or function that is defined in another translation unit or scope?",
+    "options": [
+      "extern",
+      "static",
+      "auto",
+      "register"
+    ],
+    "answer": "extern"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Structures",
+    "difficulty": "Medium",
+    "question": "Which operator accesses a structure member through a structure variable?",
+    "options": [
+      ".",
+      "->",
+      "::",
+      "*"
+    ],
+    "answer": "."
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Structures",
+    "difficulty": "Medium",
+    "question": "Which operator accesses a structure member through a pointer to the structure?",
+    "options": [
+      "->",
+      ".",
+      "::",
+      "&"
+    ],
+    "answer": "->"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Structures",
+    "difficulty": "Medium",
+    "question": "What is a union in C designed to do?",
+    "options": [
+      "Let multiple members share the same memory region",
+      "Store every member in separate heap blocks",
+      "Create inheritance",
+      "Replace all pointers"
+    ],
+    "answer": "Let multiple members share the same memory region"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Enums",
+    "difficulty": "Medium",
+    "question": "What does an enum provide in C?",
+    "options": [
+      "Named integer constants",
+      "Dynamic arrays",
+      "String objects",
+      "Automatic memory management"
+    ],
+    "answer": "Named integer constants"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Memory",
+    "difficulty": "Medium",
+    "question": "What is the key difference between malloc() and calloc()?",
+    "options": [
+      "calloc() initializes allocated bytes to zero, while malloc() does not guarantee initialization",
+      "malloc() always returns an array",
+      "calloc() cannot allocate memory",
+      "malloc() allocates only integers"
+    ],
+    "answer": "calloc() initializes allocated bytes to zero, while malloc() does not guarantee initialization"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Memory",
+    "difficulty": "Medium",
+    "question": "Which function changes the size of a previously allocated memory block?",
+    "options": [
+      "realloc()",
+      "resize()",
+      "remalloc()",
+      "expand()"
+    ],
+    "answer": "realloc()"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Memory",
+    "difficulty": "Medium",
+    "question": "What is a memory leak?",
+    "options": [
+      "Allocated memory becomes unreachable without being freed",
+      "A pointer is set to NULL before allocation",
+      "A stack variable goes out of scope normally",
+      "A file is closed correctly"
+    ],
+    "answer": "Allocated memory becomes unreachable without being freed"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Preprocessor",
+    "difficulty": "Medium",
+    "question": "Which directive begins a conditional compilation block?",
+    "options": [
+      "#if",
+      "#loop",
+      "#case",
+      "#when"
+    ],
+    "answer": "#if"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Preprocessor",
+    "difficulty": "Medium",
+    "question": "What does #ifdef NAME test?",
+    "options": [
+      "Whether NAME is defined as a macro",
+      "Whether NAME is a function",
+      "Whether NAME is a file",
+      "Whether NAME is an integer"
+    ],
+    "answer": "Whether NAME is defined as a macro"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Bitwise Operators",
+    "difficulty": "Medium",
+    "question": "Which operator performs bitwise AND in C?",
+    "options": [
+      "&",
+      "&&",
+      "|",
+      "^"
+    ],
+    "answer": "&"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Bitwise Operators",
+    "difficulty": "Medium",
+    "question": "Which operator performs bitwise XOR in C?",
+    "options": [
+      "^",
+      "|",
+      "&",
+      "~="
+    ],
+    "answer": "^"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Bitwise Operators",
+    "difficulty": "Medium",
+    "question": "What does x << 1 generally do for a non-overflowing positive integer x?",
+    "options": [
+      "Shifts bits left by one position",
+      "Shifts bits right by one position",
+      "Sets x to zero",
+      "Complements every bit"
+    ],
+    "answer": "Shifts bits left by one position"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Files",
+    "difficulty": "Medium",
+    "question": "Which mode opens a text file for appending?",
+    "options": [
+      "\"a\"",
+      "\"r\"",
+      "\"w\"",
+      "\"x\""
+    ],
+    "answer": "\"a\""
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Files",
+    "difficulty": "Medium",
+    "question": "Which function reads a character from a stream?",
+    "options": [
+      "fgetc()",
+      "fputc()",
+      "fprintf()",
+      "fclose()"
+    ],
+    "answer": "fgetc()"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Files",
+    "difficulty": "Medium",
+    "question": "Which function writes formatted output to a FILE stream?",
+    "options": [
+      "fprintf()",
+      "fscanf()",
+      "fgets()",
+      "fread()"
+    ],
+    "answer": "fprintf()"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Command Line",
+    "difficulty": "Medium",
+    "question": "In int main(int argc, char *argv[]), what does argc represent?",
+    "options": [
+      "The number of command-line arguments",
+      "The first command-line argument",
+      "A character array length",
+      "The program exit code"
+    ],
+    "answer": "The number of command-line arguments"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Command Line",
+    "difficulty": "Medium",
+    "question": "In a typical hosted C environment, what does argv[0] usually contain?",
+    "options": [
+      "The program name or path",
+      "The number of arguments",
+      "The last user argument",
+      "A NULL pointer only"
+    ],
+    "answer": "The program name or path"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Undefined Behavior",
+    "difficulty": "Hard",
+    "question": "What is the result of accessing an array element beyond its valid bounds in C?",
+    "options": [
+      "It causes undefined behavior",
+      "It always returns zero",
+      "It automatically enlarges the array",
+      "It always triggers a compile-time error"
+    ],
+    "answer": "It causes undefined behavior"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Undefined Behavior",
+    "difficulty": "Hard",
+    "question": "What is the result of dereferencing a NULL pointer in C?",
+    "options": [
+      "Undefined behavior",
+      "Guaranteed zero",
+      "Automatic allocation",
+      "A compile-time warning only"
+    ],
+    "answer": "Undefined behavior"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Undefined Behavior",
+    "difficulty": "Hard",
+    "question": "Why is returning the address of a non-static local variable unsafe?",
+    "options": [
+      "The variable's lifetime ends when the function returns",
+      "Local variables cannot have addresses",
+      "Pointers cannot point to integers",
+      "The compiler converts it to a global variable"
+    ],
+    "answer": "The variable's lifetime ends when the function returns"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Pointers",
+    "difficulty": "Hard",
+    "question": "What type is int **p;?",
+    "options": [
+      "Pointer to pointer to int",
+      "Pointer to int array only",
+      "Integer reference",
+      "Function pointer"
+    ],
+    "answer": "Pointer to pointer to int"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Pointers",
+    "difficulty": "Hard",
+    "question": "Which declaration represents a pointer to a function taking two int arguments and returning int?",
+    "options": [
+      "int (*fp)(int, int);",
+      "int *fp(int, int);",
+      "int fp*(int, int);",
+      "function int fp(int, int);"
+    ],
+    "answer": "int (*fp)(int, int);"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Pointers",
+    "difficulty": "Hard",
+    "question": "For int a[4];, what does &a refer to?",
+    "options": [
+      "A pointer to the entire array of 4 ints",
+      "A pointer to the first int with type int *",
+      "The second element",
+      "The array length"
+    ],
+    "answer": "A pointer to the entire array of 4 ints"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Pointers",
+    "difficulty": "Hard",
+    "question": "What is the main purpose of a void * pointer in C?",
+    "options": [
+      "Represent a generic object pointer that can hold addresses of different object types",
+      "Store only function addresses",
+      "Store only NULL",
+      "Automatically manage memory"
+    ],
+    "answer": "Represent a generic object pointer that can hold addresses of different object types"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Qualifiers",
+    "difficulty": "Hard",
+    "question": "What does const int *p mean?",
+    "options": [
+      "p points to an int that should not be modified through p",
+      "p itself cannot change to another address",
+      "p is always NULL",
+      "p points only to compile-time constants"
+    ],
+    "answer": "p points to an int that should not be modified through p"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Qualifiers",
+    "difficulty": "Hard",
+    "question": "What does int *const p mean?",
+    "options": [
+      "p is a constant pointer whose stored address cannot be changed",
+      "The pointed integer cannot be modified",
+      "p is a pointer to a function",
+      "p can point only to static memory"
+    ],
+    "answer": "p is a constant pointer whose stored address cannot be changed"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Qualifiers",
+    "difficulty": "Hard",
+    "question": "What is volatile intended to indicate to the compiler?",
+    "options": [
+      "The object's value may change in ways not apparent from ordinary program flow",
+      "The object is immutable",
+      "The object must be stored on the heap",
+      "The object is automatically thread-safe"
+    ],
+    "answer": "The object's value may change in ways not apparent from ordinary program flow"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Memory",
+    "difficulty": "Hard",
+    "question": "Why must the result of realloc() be handled carefully?",
+    "options": [
+      "On failure it can return NULL while the original allocation remains valid",
+      "It always frees the original block before checking size",
+      "It always returns the same address",
+      "It can allocate only smaller blocks"
+    ],
+    "answer": "On failure it can return NULL while the original allocation remains valid"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Memory",
+    "difficulty": "Hard",
+    "question": "What is a dangling pointer?",
+    "options": [
+      "A pointer that refers to memory whose lifetime has ended or that has been freed",
+      "A pointer that is always NULL",
+      "A pointer to a global variable",
+      "A pointer declared with const"
+    ],
+    "answer": "A pointer that refers to memory whose lifetime has ended or that has been freed"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Memory",
+    "difficulty": "Hard",
+    "question": "Which allocation pattern is safest for n elements of type int when using malloc()?",
+    "options": [
+      "malloc(n * sizeof(int))",
+      "malloc(n)",
+      "malloc(sizeof(n))",
+      "malloc(int * n)"
+    ],
+    "answer": "malloc(n * sizeof(int))"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Strings",
+    "difficulty": "Hard",
+    "question": "Why can strcpy() be dangerous when the destination buffer is too small?",
+    "options": [
+      "It can write past the end of the destination buffer",
+      "It always truncates safely",
+      "It allocates a larger buffer automatically",
+      "It compares instead of copying"
+    ],
+    "answer": "It can write past the end of the destination buffer"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Strings",
+    "difficulty": "Hard",
+    "question": "What does sizeof(\"abc\") evaluate to on a conforming C implementation?",
+    "options": [
+      "4",
+      "3",
+      "2",
+      "Depends on pointer size"
+    ],
+    "answer": "4"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Arrays",
+    "difficulty": "Hard",
+    "question": "Inside a function parameter declared as int a[], what does a actually behave as?",
+    "options": [
+      "A pointer to int",
+      "A complete array object with preserved bound",
+      "A structure",
+      "A pointer to pointer to int"
+    ],
+    "answer": "A pointer to int"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Arrays",
+    "difficulty": "Hard",
+    "question": "Why can sizeof(a) inside void f(int a[]) not be used to find the caller's array length?",
+    "options": [
+      "The parameter is adjusted to a pointer type",
+      "sizeof cannot be used in functions",
+      "Arrays have no size in C",
+      "The compiler deletes the array"
+    ],
+    "answer": "The parameter is adjusted to a pointer type"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Structures",
+    "difficulty": "Hard",
+    "question": "Why can sizeof(struct S) be larger than the sum of its member sizes?",
+    "options": [
+      "Alignment padding may be inserted between or after members",
+      "Structures always reserve double memory",
+      "Every structure contains a hidden pointer",
+      "The compiler stores two copies of every field"
+    ],
+    "answer": "Alignment padding may be inserted between or after members"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Unions",
+    "difficulty": "Hard",
+    "question": "How is the size of a union generally determined?",
+    "options": [
+      "It is large enough for its largest member, subject to alignment",
+      "It is the sum of all member sizes",
+      "It is always one byte",
+      "It equals the number of members"
+    ],
+    "answer": "It is large enough for its largest member, subject to alignment"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Preprocessor",
+    "difficulty": "Hard",
+    "question": "Why should a macro parameter usually be wrapped in parentheses in expressions?",
+    "options": [
+      "To reduce precedence-related surprises after textual substitution",
+      "To make the macro allocate memory",
+      "To force runtime evaluation",
+      "To turn the macro into a function pointer"
+    ],
+    "answer": "To reduce precedence-related surprises after textual substitution"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Preprocessor",
+    "difficulty": "Hard",
+    "question": "What does the # operator do to a macro parameter in a function-like macro?",
+    "options": [
+      "Converts the parameter tokens into a string literal",
+      "Concatenates two tokens",
+      "Deletes the parameter",
+      "Evaluates the parameter at compile time"
+    ],
+    "answer": "Converts the parameter tokens into a string literal"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Preprocessor",
+    "difficulty": "Hard",
+    "question": "What does the ## operator do in a C macro?",
+    "options": [
+      "Concatenates preprocessing tokens",
+      "Starts a comment",
+      "Performs exponentiation",
+      "Creates a string literal"
+    ],
+    "answer": "Concatenates preprocessing tokens"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Compilation",
+    "difficulty": "Hard",
+    "question": "What is the purpose of a header guard?",
+    "options": [
+      "Prevent repeated processing of the same header contents in one translation unit",
+      "Encrypt header files",
+      "Speed up runtime loops",
+      "Replace all function prototypes"
+    ],
+    "answer": "Prevent repeated processing of the same header contents in one translation unit"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Compilation",
+    "difficulty": "Hard",
+    "question": "What is a translation unit in C?",
+    "options": [
+      "A source file after preprocessing, including included header contents",
+      "A single function only",
+      "The final executable file only",
+      "A CPU instruction"
+    ],
+    "answer": "A source file after preprocessing, including included header contents"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Linkage",
+    "difficulty": "Hard",
+    "question": "At file scope, what effect does static have on a function declaration?",
+    "options": [
+      "It gives the function internal linkage",
+      "It makes the function recursive",
+      "It forces inline expansion",
+      "It allocates the function on the heap"
+    ],
+    "answer": "It gives the function internal linkage"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Linkage",
+    "difficulty": "Hard",
+    "question": "What is the purpose of extern in a declaration such as extern int count;?",
+    "options": [
+      "Declare an object whose definition may exist elsewhere",
+      "Allocate count dynamically",
+      "Make count constant",
+      "Restrict count to the current block"
+    ],
+    "answer": "Declare an object whose definition may exist elsewhere"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Files",
+    "difficulty": "Hard",
+    "question": "Which function can reposition the file position indicator to a specified offset?",
+    "options": [
+      "fseek()",
+      "fmove()",
+      "fposset()",
+      "seekfile()"
+    ],
+    "answer": "fseek()"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Files",
+    "difficulty": "Hard",
+    "question": "What does ftell() return for a stream when successful?",
+    "options": [
+      "The current file position indicator value",
+      "The file name",
+      "The number of open files",
+      "The file's permissions"
+    ],
+    "answer": "The current file position indicator value"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Function Pointers",
+    "difficulty": "Hard",
+    "question": "What is a common use of function pointers in C?",
+    "options": [
+      "Callbacks and selecting behavior at runtime",
+      "Automatic garbage collection",
+      "Creating classes with inheritance",
+      "Changing variable types dynamically"
+    ],
+    "answer": "Callbacks and selecting behavior at runtime"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Bitwise Operators",
+    "difficulty": "Hard",
+    "question": "Which expression clears the bit selected by mask in x?",
+    "options": [
+      "x & ~mask",
+      "x | mask",
+      "x ^ 0",
+      "x && mask"
+    ],
+    "answer": "x & ~mask"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Bitwise Operators",
+    "difficulty": "Hard",
+    "question": "Which expression sets every bit present in mask within x?",
+    "options": [
+      "x | mask",
+      "x & ~mask",
+      "x && mask",
+      "x / mask"
+    ],
+    "answer": "x | mask"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Bitwise Operators",
+    "difficulty": "Hard",
+    "question": "Which expression toggles every bit present in mask within x?",
+    "options": [
+      "x ^ mask",
+      "x | mask",
+      "x & mask",
+      "x + mask"
+    ],
+    "answer": "x ^ mask"
+  },
+  {
+    "subject": "C Programming",
+    "topic": "Integer Types",
+    "difficulty": "Hard",
+    "question": "What is guaranteed about sizeof(char) in C?",
+    "options": [
+      "It is exactly 1",
+      "It is always 8",
+      "It equals sizeof(int)",
+      "It depends on pointer size"
+    ],
+    "answer": "It is exactly 1"
+  }
+]
