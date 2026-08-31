@@ -1,9 +1,5 @@
-from collections import defaultdict
-
-from bson import ObjectId
-
-from database import (
-    quiz_results_collection,
+from models.analytics_model import (
+    get_priority_topic,
 )
 
 from models.quiz_model import (
@@ -11,6 +7,10 @@ from models.quiz_model import (
     get_adaptive_question,
 )
 
+
+# =========================================================
+# CONFIG
+# =========================================================
 
 DIFFICULTIES = [
     "Easy",
@@ -32,14 +32,20 @@ ALLOWED_START_MODES = [
 # =========================================================
 
 def normalize_difficulty_mode(
-    difficulty_mode
+    difficulty_mode,
 ):
     mode = str(
-        difficulty_mode or "Adaptive"
+        difficulty_mode
+        or "Adaptive"
     ).strip()
 
-    if mode not in ALLOWED_START_MODES:
+
+    if (
+        mode not in
+        ALLOWED_START_MODES
+    ):
         return "Adaptive"
+
 
     return mode
 
@@ -50,7 +56,7 @@ def normalize_difficulty_mode(
 
 def calculate_next_difficulty(
     current_difficulty,
-    was_correct
+    was_correct,
 ):
     try:
         current_index = (
@@ -62,17 +68,23 @@ def calculate_next_difficulty(
     except ValueError:
         current_index = 1
 
+
     if was_correct:
+
         next_index = min(
             current_index + 1,
-            len(DIFFICULTIES) - 1,
+            len(
+                DIFFICULTIES
+            ) - 1,
         )
 
     else:
+
         next_index = max(
             current_index - 1,
             0,
         )
+
 
     return DIFFICULTIES[
         next_index
@@ -80,114 +92,36 @@ def calculate_next_difficulty(
 
 
 # =========================================================
-# HISTORICAL WEAK TOPIC
+# HISTORICAL PRIORITY TOPIC
+#
+# Uses analytics_model instead of
+# calculating topic stats again here.
 # =========================================================
 
 def get_weakest_topic(
     user_id,
-    subject
+    subject,
 ):
     if not user_id:
         return None
 
-    try:
-        object_user_id = ObjectId(
-            user_id
-        )
 
-    except Exception:
+    if not subject:
         return None
 
 
-    results = (
-        quiz_results_collection.find(
-            {
-                "userId":
-                    object_user_id,
-
-                "subject":
-                    subject,
-            }
-        )
-    )
-
-
-    topic_stats = defaultdict(
-        lambda: {
-            "total": 0,
-            "correct": 0,
-            "wrong": 0,
-        }
-    )
-
-
-    for result in results:
-        answers = result.get(
-            "answers",
-            [],
+    try:
+        return (
+            get_priority_topic(
+                user_id=user_id,
+                subject=subject,
+            )
         )
 
-        for answer in answers:
-            topic = answer.get(
-                "topic"
-            )
-
-            if not topic:
-                continue
-
-            topic_stats[
-                topic
-            ]["total"] += 1
-
-            if answer.get(
-                "correct"
-            ):
-                topic_stats[
-                    topic
-                ]["correct"] += 1
-
-            else:
-                topic_stats[
-                    topic
-                ]["wrong"] += 1
-
-
-    weakest_topic = None
-
-    weakest_accuracy = 101
-
-
-    for (
-        topic,
-        stats,
-    ) in topic_stats.items():
-
-        if (
-            stats["total"] <= 0
-            or stats["wrong"] <= 0
-        ):
-            continue
-
-
-        topic_accuracy = (
-            stats["correct"]
-            /
-            stats["total"]
-        ) * 100
-
-
-        if (
-            topic_accuracy <
-            weakest_accuracy
-        ):
-            weakest_accuracy = (
-                topic_accuracy
-            )
-
-            weakest_topic = topic
-
-
-    return weakest_topic
+    except Exception:
+        # Quiz should still work even if
+        # analytics has no historical data.
+        return None
 
 
 # =========================================================
@@ -207,9 +141,9 @@ def start_adaptive_quiz(
     )
 
 
-    # Adaptive always begins at Medium.
-    # Manual preferences choose the
-    # starting difficulty.
+    # =====================================================
+    # STARTING DIFFICULTY
+    # =====================================================
 
     if (
         difficulty_mode ==
@@ -225,16 +159,26 @@ def start_adaptive_quiz(
         )
 
 
-    weak_topic = None
+    # =====================================================
+    # PERSONALIZED TOPIC
+    # =====================================================
+
+    preferred_topic = None
+
 
     if focus_mode:
-        weak_topic = (
+
+        preferred_topic = (
             get_weakest_topic(
-                user_id,
-                subject,
+                user_id=user_id,
+                subject=subject,
             )
         )
 
+
+    # =====================================================
+    # GET FIRST QUESTION
+    # =====================================================
 
     question = (
         get_adaptive_question(
@@ -244,7 +188,7 @@ def start_adaptive_quiz(
                 starting_difficulty,
 
             preferred_topic=
-                weak_topic,
+                preferred_topic,
 
             exclude_ids=[],
         )
@@ -252,8 +196,10 @@ def start_adaptive_quiz(
 
 
     if not question:
+
         return {
             "success": False,
+
             "message":
                 "No questions available",
         }
@@ -267,27 +213,54 @@ def start_adaptive_quiz(
     )
 
 
+    actual_topic = (
+        question.get(
+            "topic",
+            "General",
+        )
+    )
+
+
+    # =====================================================
+    # REASON
+    # =====================================================
+
     if (
         difficulty_mode ==
         "Adaptive"
     ):
+
         reason = (
             "Adaptive mode starts at "
             "Medium difficulty."
         )
 
     else:
+
         reason = (
             f"Your quiz preference starts "
             f"at {difficulty_mode} difficulty."
         )
 
 
-    if weak_topic:
+    if (
+        focus_mode and
+        preferred_topic
+    ):
+
         reason += (
             f" Focus Mode is prioritizing "
-            f"your weaker topic: "
-            f"{weak_topic}."
+            f"your weak topic: "
+            f"{preferred_topic}."
+        )
+
+
+    elif focus_mode:
+
+        reason += (
+            " Focus Mode is enabled, but "
+            "there is not enough previous "
+            "quiz data to identify a weak topic yet."
         )
 
 
@@ -295,6 +268,7 @@ def start_adaptive_quiz(
         actual_difficulty !=
         starting_difficulty
     ):
+
         reason += (
             f" No unused "
             f"{starting_difficulty} question "
@@ -311,6 +285,7 @@ def start_adaptive_quiz(
             question,
 
         "adaptive": {
+
             "mode":
                 difficulty_mode,
 
@@ -326,11 +301,19 @@ def start_adaptive_quiz(
                 ),
 
             "preferredTopic":
-                weak_topic,
+                preferred_topic,
+
+            "selectedTopic":
+                actual_topic,
+
+            "personalized":
+                bool(
+                    preferred_topic
+                ),
 
             "reason":
                 reason,
-        }
+        },
     }
 
 
@@ -354,6 +337,10 @@ def get_next_adaptive_question(
     )
 
 
+    # =====================================================
+    # LOAD PREVIOUS QUESTION
+    # =====================================================
+
     previous_question = (
         find_question_by_id(
             previous_question_id
@@ -362,8 +349,10 @@ def get_next_adaptive_question(
 
 
     if not previous_question:
+
         return {
             "success": False,
+
             "message":
                 "Previous question not found",
         }
@@ -375,12 +364,18 @@ def get_next_adaptive_question(
         )
         != subject
     ):
+
         return {
             "success": False,
+
             "message":
                 "Question subject mismatch",
         }
 
+
+    # =====================================================
+    # VERIFY PREVIOUS ANSWER
+    # =====================================================
 
     correct_answer = (
         previous_question.get(
@@ -403,6 +398,14 @@ def get_next_adaptive_question(
     )
 
 
+    current_topic = (
+        previous_question.get(
+            "topic",
+            "General",
+        )
+    )
+
+
     # =====================================================
     # ADAPTIVE DIFFICULTY
     # =====================================================
@@ -415,36 +418,61 @@ def get_next_adaptive_question(
     )
 
 
+    # =====================================================
+    # PERSONALIZED TOPIC SELECTION
+    # =====================================================
+
     preferred_topic = None
 
+    topic_reason = None
 
-    # =====================================================
-    # FOCUS MODE
-    # =====================================================
 
     if focus_mode:
 
+        # If user got the current question wrong,
+        # immediately reinforce the same topic.
+
         if not was_correct:
+
             preferred_topic = (
-                previous_question.get(
-                    "topic"
+                current_topic
+            )
+
+            topic_reason = (
+                "current mistake"
+            )
+
+
+        # If correct, return to the user's
+        # historically weakest topic.
+
+        else:
+
+            historical_weak_topic = (
+                get_weakest_topic(
+                    user_id=user_id,
+                    subject=subject,
                 )
             )
 
-        else:
-            preferred_topic = (
-                get_weakest_topic(
-                    user_id,
-                    subject,
+
+            if historical_weak_topic:
+
+                preferred_topic = (
+                    historical_weak_topic
                 )
-            )
+
+                topic_reason = (
+                    "historical weakness"
+                )
 
 
     # =====================================================
-    # REASON
+    # ADAPTIVE REASON
     # =====================================================
 
     if was_correct:
+
         reason = (
             f"Correct answer. Difficulty "
             f"changed from "
@@ -453,6 +481,7 @@ def get_next_adaptive_question(
         )
 
     else:
+
         reason = (
             f"Incorrect answer. Difficulty "
             f"changed from "
@@ -465,30 +494,78 @@ def get_next_adaptive_question(
         focus_mode and
         preferred_topic
     ):
+
+        if (
+            topic_reason ==
+            "current mistake"
+        ):
+
+            reason += (
+                f" Focus Mode is reinforcing "
+                f"{preferred_topic} because "
+                f"you answered that topic "
+                f"incorrectly."
+            )
+
+        else:
+
+            reason += (
+                f" Focus Mode is prioritizing "
+                f"your historical weak topic: "
+                f"{preferred_topic}."
+            )
+
+
+    elif focus_mode:
+
         reason += (
-            f" Focus Mode is prioritizing "
-            f"{preferred_topic}."
+            " Focus Mode is enabled, but "
+            "no weak topic needs priority "
+            "right now."
         )
 
 
-    # User-selected Easy/Medium/Hard
-    # controls the starting point.
-    # After that, adaptive learning
-    # still reacts to every answer.
+    # Manual Easy / Medium / Hard only
+    # controls the starting difficulty.
+    # After quiz begins, difficulty remains adaptive.
 
     if (
         difficulty_mode !=
         "Adaptive"
     ):
+
         reason += (
             f" Your selected starting "
-            f"preference is "
-            f"{difficulty_mode}."
+            f"preference was "
+            f"{difficulty_mode}; the quiz "
+            f"is now adapting based on "
+            f"your answers."
         )
 
 
     # =====================================================
-    # SELECT QUESTION
+    # SAFE USED IDS
+    # =====================================================
+
+    if not isinstance(
+        used_question_ids,
+        list,
+    ):
+        used_question_ids = []
+
+
+    used_question_ids = [
+        str(
+            question_id
+        )
+        for question_id
+        in used_question_ids
+        if question_id
+    ]
+
+
+    # =====================================================
+    # SELECT NEXT QUESTION
     # =====================================================
 
     question = (
@@ -508,8 +585,10 @@ def get_next_adaptive_question(
 
 
     if not question:
+
         return {
             "success": False,
+
             "message":
                 "No unused questions available",
         }
@@ -523,10 +602,23 @@ def get_next_adaptive_question(
     )
 
 
+    actual_topic = (
+        question.get(
+            "topic",
+            "General",
+        )
+    )
+
+
+    # =====================================================
+    # FALLBACK INFORMATION
+    # =====================================================
+
     if (
         actual_difficulty !=
         next_difficulty
     ):
+
         reason += (
             f" No unused "
             f"{next_difficulty} question "
@@ -536,6 +628,24 @@ def get_next_adaptive_question(
         )
 
 
+    if (
+        preferred_topic and
+        actual_topic !=
+        preferred_topic
+    ):
+
+        reason += (
+            f" No suitable unused "
+            f"{preferred_topic} question "
+            f"was available, so the engine "
+            f"selected {actual_topic}."
+        )
+
+
+    # =====================================================
+    # RESPONSE
+    # =====================================================
+
     return {
         "success": True,
 
@@ -543,6 +653,7 @@ def get_next_adaptive_question(
             question,
 
         "adaptive": {
+
             "mode":
                 difficulty_mode,
 
@@ -563,7 +674,18 @@ def get_next_adaptive_question(
             "preferredTopic":
                 preferred_topic,
 
+            "selectedTopic":
+                actual_topic,
+
+            "topicPriorityReason":
+                topic_reason,
+
+            "personalized":
+                bool(
+                    preferred_topic
+                ),
+
             "reason":
                 reason,
-        }
+        },
     }
