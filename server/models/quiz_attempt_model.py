@@ -3,7 +3,7 @@ from datetime import (
     timezone,
 )
 
-import uuid
+from uuid import uuid4
 
 from bson import ObjectId
 
@@ -13,7 +13,113 @@ from database import (
 
 
 # =========================================================
-# CREATE QUIZ ATTEMPT
+# CONFIG
+# =========================================================
+
+MAX_QUESTIONS_PER_ATTEMPT = 100
+
+
+# =========================================================
+# HELPERS
+# =========================================================
+
+def safe_object_id(value):
+    try:
+        if isinstance(
+            value,
+            ObjectId,
+        ):
+            return value
+
+        return ObjectId(
+            str(value)
+        )
+
+    except Exception:
+        return None
+
+
+def build_user_query(
+    user_id,
+):
+    object_user_id = (
+        safe_object_id(
+            user_id
+        )
+    )
+
+    if not object_user_id:
+        return None
+
+    return {
+        "$in": [
+            object_user_id,
+            str(
+                object_user_id
+            ),
+        ]
+    }
+
+
+def normalize_question_id(
+    question_id,
+):
+    value = str(
+        question_id or ""
+    ).strip()
+
+    if not value:
+        return None
+
+    return value
+
+
+# =========================================================
+# INDEXES
+# =========================================================
+
+def create_quiz_attempt_indexes():
+
+    quiz_attempts_collection.create_index(
+        "userId"
+    )
+
+    quiz_attempts_collection.create_index(
+        "attemptId",
+        unique=True,
+        name=
+            "unique_quiz_attempt_id",
+    )
+
+    quiz_attempts_collection.create_index(
+        [
+            ("userId", 1),
+            ("status", 1),
+        ],
+        name=
+            "user_active_attempt_lookup",
+    )
+
+    quiz_attempts_collection.create_index(
+        [
+            ("userId", 1),
+            ("attemptId", 1),
+        ],
+        name=
+            "user_attempt_lookup",
+    )
+
+    quiz_attempts_collection.create_index(
+        "startedAt"
+    )
+
+    quiz_attempts_collection.create_index(
+        "completedAt"
+    )
+
+
+# =========================================================
+# CREATE ATTEMPT
 # =========================================================
 
 def create_quiz_attempt(
@@ -23,35 +129,48 @@ def create_quiz_attempt(
     difficulty="Adaptive",
     focus_mode=True,
 ):
-    try:
-        object_user_id = ObjectId(
+    object_user_id = (
+        safe_object_id(
             user_id
         )
-
-    except Exception:
-        return {
-            "success": False,
-            "message":
-                "Invalid user ID",
-        }
-
-
-    attempt_id = str(
-        uuid.uuid4()
     )
 
+    first_question_id = (
+        normalize_question_id(
+            first_question_id
+        )
+    )
+
+    subject = str(
+        subject or ""
+    ).strip()
+
+    difficulty = str(
+        difficulty or
+        "Adaptive"
+    ).strip()
+
+    if not object_user_id:
+        return None
+
+    if not subject:
+        return None
+
+    if not first_question_id:
+        return None
 
     now = datetime.now(
         timezone.utc
     )
 
-
-    attempt_document = {
+    attempt = {
         "userId":
             object_user_id,
 
         "attemptId":
-            attempt_id,
+            str(
+                uuid4()
+            ),
 
         "subject":
             subject,
@@ -60,16 +179,27 @@ def create_quiz_attempt(
             difficulty,
 
         "focusMode":
-            focus_mode,
+            bool(
+                focus_mode
+            ),
 
+        # Ordered list of every question
+        # officially served in this attempt.
         "questionIds": [
-            str(
-                first_question_id
-            )
+            first_question_id
         ],
+
+        # Current question is stored separately
+        # for clearer attempt state and future
+        # concurrency hardening.
+        "currentQuestionId":
+            first_question_id,
 
         "status":
             "active",
+
+        "resultId":
+            None,
 
         "startedAt":
             now,
@@ -79,64 +209,52 @@ def create_quiz_attempt(
 
         "completedAt":
             None,
-
-        "resultId":
-            None,
     }
 
-
-    try:
-        quiz_attempts_collection.insert_one(
-            attempt_document
+    result = (
+        quiz_attempts_collection
+        .insert_one(
+            attempt
         )
+    )
 
-    except Exception as error:
-        return {
-            "success": False,
-            "message":
-                f"Could not create quiz attempt: {error}",
-        }
+    attempt["_id"] = (
+        result.inserted_id
+    )
 
-
-    return {
-        "success": True,
-        "attemptId":
-            attempt_id,
-    }
+    return attempt
 
 
 # =========================================================
-# GET ACTIVE QUIZ ATTEMPT
+# GET ACTIVE ATTEMPT
 # =========================================================
 
 def get_active_quiz_attempt(
     user_id,
     attempt_id,
 ):
-    try:
-        object_user_id = ObjectId(
+    user_query = (
+        build_user_query(
             user_id
         )
-
-    except Exception:
-        return None
-
+    )
 
     attempt_id = str(
         attempt_id or ""
     ).strip()
 
-
-    if not attempt_id:
+    if (
+        not user_query or
+        not attempt_id
+    ):
         return None
-
 
     return (
         quiz_attempts_collection
         .find_one(
             {
                 "userId":
-                    object_user_id,
+                    user_query,
 
                 "attemptId":
                     attempt_id,
@@ -149,37 +267,35 @@ def get_active_quiz_attempt(
 
 
 # =========================================================
-# GET QUIZ ATTEMPT
+# GET ANY ATTEMPT
 # =========================================================
 
 def get_quiz_attempt(
     user_id,
     attempt_id,
 ):
-    try:
-        object_user_id = ObjectId(
+    user_query = (
+        build_user_query(
             user_id
         )
-
-    except Exception:
-        return None
-
+    )
 
     attempt_id = str(
         attempt_id or ""
     ).strip()
 
-
-    if not attempt_id:
+    if (
+        not user_query or
+        not attempt_id
+    ):
         return None
-
 
     return (
         quiz_attempts_collection
         .find_one(
             {
                 "userId":
-                    object_user_id,
+                    user_query,
 
                 "attemptId":
                     attempt_id,
@@ -189,7 +305,7 @@ def get_quiz_attempt(
 
 
 # =========================================================
-# ADD SERVED QUESTION
+# ADD QUESTION TO ATTEMPT
 # =========================================================
 
 def add_question_to_attempt(
@@ -197,56 +313,35 @@ def add_question_to_attempt(
     attempt_id,
     question_id,
 ):
-    try:
-        object_user_id = ObjectId(
+    user_query = (
+        build_user_query(
             user_id
         )
-
-    except Exception:
-        return {
-            "success": False,
-            "message":
-                "Invalid user ID",
-        }
-
+    )
 
     attempt_id = str(
         attempt_id or ""
     ).strip()
 
-
-    question_id = str(
-        question_id or ""
-    ).strip()
-
-
-    if not attempt_id:
-        return {
-            "success": False,
-            "message":
-                "Quiz attempt ID is required",
-        }
-
-
-    if not question_id:
-        return {
-            "success": False,
-            "message":
-                "Question ID is required",
-        }
-
-
-    now = datetime.now(
-        timezone.utc
+    question_id = (
+        normalize_question_id(
+            question_id
+        )
     )
 
+    if (
+        not user_query or
+        not attempt_id or
+        not question_id
+    ):
+        return None
 
-    result = (
+    attempt = (
         quiz_attempts_collection
-        .update_one(
+        .find_one(
             {
                 "userId":
-                    object_user_id,
+                    user_query,
 
                 "attemptId":
                     attempt_id,
@@ -254,14 +349,80 @@ def add_question_to_attempt(
                 "status":
                     "active",
             },
-
             {
-                "$addToSet": {
+                "questionIds": 1,
+            },
+        )
+    )
+
+    if not attempt:
+        return None
+
+    question_ids = (
+        attempt.get(
+            "questionIds",
+            [],
+        )
+    )
+
+    if not isinstance(
+        question_ids,
+        list,
+    ):
+        question_ids = []
+
+    # Never allow the same question twice
+    # inside one attempt.
+    if (
+        question_id in
+        [
+            str(item)
+            for item
+            in question_ids
+        ]
+    ):
+        return None
+
+    if (
+        len(
+            question_ids
+        ) >=
+        MAX_QUESTIONS_PER_ATTEMPT
+    ):
+        return None
+
+    now = datetime.now(
+        timezone.utc
+    )
+
+    result = (
+        quiz_attempts_collection
+        .update_one(
+            {
+                "userId":
+                    user_query,
+
+                "attemptId":
+                    attempt_id,
+
+                "status":
+                    "active",
+
+                "questionIds": {
+                    "$ne":
+                        question_id
+                },
+            },
+            {
+                "$push": {
                     "questionIds":
                         question_id,
                 },
 
                 "$set": {
+                    "currentQuestionId":
+                        question_id,
+
                     "updatedAt":
                         now,
                 },
@@ -269,22 +430,24 @@ def add_question_to_attempt(
         )
     )
 
+    if (
+        result.modified_count != 1
+    ):
+        return None
 
-    if result.matched_count == 0:
-        return {
-            "success": False,
-            "message":
-                "Active quiz attempt not found",
-        }
+    return (
+        get_active_quiz_attempt(
+            user_id=
+                user_id,
 
-
-    return {
-        "success": True,
-    }
+            attempt_id=
+                attempt_id,
+        )
+    )
 
 
 # =========================================================
-# VERIFY QUESTION BELONGS TO ATTEMPT
+# QUESTION BELONGS TO ATTEMPT
 # =========================================================
 
 def question_belongs_to_attempt(
@@ -294,30 +457,107 @@ def question_belongs_to_attempt(
 ):
     attempt = (
         get_active_quiz_attempt(
-            user_id,
-            attempt_id,
+            user_id=
+                user_id,
+
+            attempt_id=
+                attempt_id,
         )
     )
-
 
     if not attempt:
         return False
 
-
-    question_ids = attempt.get(
-        "questionIds",
-        [],
+    question_id = (
+        normalize_question_id(
+            question_id
+        )
     )
 
+    if not question_id:
+        return False
+
+    question_ids = (
+        attempt.get(
+            "questionIds",
+            [],
+        )
+    )
+
+    if not isinstance(
+        question_ids,
+        list,
+    ):
+        return False
 
     return (
-        str(question_id)
-        in question_ids
+        question_id
+        in
+        [
+            str(item)
+            for item
+            in question_ids
+        ]
     )
 
 
 # =========================================================
-# COMPLETE QUIZ ATTEMPT
+# CURRENT QUESTION
+# =========================================================
+
+def get_current_question_id(
+    user_id,
+    attempt_id,
+):
+    attempt = (
+        get_active_quiz_attempt(
+            user_id=
+                user_id,
+
+            attempt_id=
+                attempt_id,
+        )
+    )
+
+    if not attempt:
+        return None
+
+    current_question_id = (
+        attempt.get(
+            "currentQuestionId"
+        )
+    )
+
+    if current_question_id:
+        return str(
+            current_question_id
+        )
+
+    # Backward compatibility for attempts
+    # created before currentQuestionId existed.
+    question_ids = (
+        attempt.get(
+            "questionIds",
+            [],
+        )
+    )
+
+    if (
+        isinstance(
+            question_ids,
+            list,
+        )
+        and question_ids
+    ):
+        return str(
+            question_ids[-1]
+        )
+
+    return None
+
+
+# =========================================================
+# COMPLETE ATTEMPT
 # =========================================================
 
 def complete_quiz_attempt(
@@ -325,71 +565,49 @@ def complete_quiz_attempt(
     attempt_id,
     result_id=None,
 ):
-    try:
-        object_user_id = ObjectId(
+    user_query = (
+        build_user_query(
             user_id
         )
-
-    except Exception:
-        return {
-            "success": False,
-            "message":
-                "Invalid user ID",
-        }
-
+    )
 
     attempt_id = str(
         attempt_id or ""
     ).strip()
 
-
-    if not attempt_id:
-        return {
-            "success": False,
-            "message":
-                "Quiz attempt ID is required",
-        }
-
+    if (
+        not user_query or
+        not attempt_id
+    ):
+        return None
 
     now = datetime.now(
         timezone.utc
     )
 
-
-    update_data = {
-        "status":
-            "completed",
-
-        "completedAt":
-            now,
-
-        "updatedAt":
-            now,
-    }
-
+    normalized_result_id = None
 
     if result_id is not None:
-        try:
-            update_data[
-                "resultId"
-            ] = ObjectId(
+        object_result_id = (
+            safe_object_id(
                 result_id
             )
+        )
 
-        except Exception:
-            update_data[
-                "resultId"
-            ] = str(
+        normalized_result_id = (
+            object_result_id
+            if object_result_id
+            else str(
                 result_id
             )
-
+        )
 
     result = (
         quiz_attempts_collection
         .update_one(
             {
                 "userId":
-                    object_user_id,
+                    user_query,
 
                 "attemptId":
                     attempt_id,
@@ -397,53 +615,35 @@ def complete_quiz_attempt(
                 "status":
                     "active",
             },
-
             {
-                "$set":
-                    update_data,
+                "$set": {
+                    "status":
+                        "completed",
+
+                    "resultId":
+                        normalized_result_id,
+
+                    "completedAt":
+                        now,
+
+                    "updatedAt":
+                        now,
+                }
             },
         )
     )
 
+    if (
+        result.modified_count != 1
+    ):
+        return None
 
-    if result.matched_count == 0:
-        return {
-            "success": False,
-            "message":
-                "Active quiz attempt not found",
-        }
+    return (
+        get_quiz_attempt(
+            user_id=
+                user_id,
 
-
-    return {
-        "success": True,
-    }
-
-
-# =========================================================
-# CREATE INDEXES
-# =========================================================
-
-def create_quiz_attempt_indexes():
-    quiz_attempts_collection.create_index(
-        "userId"
-    )
-
-
-    quiz_attempts_collection.create_index(
-        "attemptId",
-        unique=True,
-        name="unique_quiz_attempt_id",
-    )
-
-
-    quiz_attempts_collection.create_index(
-        [
-            ("userId", 1),
-            ("status", 1),
-        ]
-    )
-
-
-    quiz_attempts_collection.create_index(
-        "startedAt"
+            attempt_id=
+                attempt_id,
+        )
     )
