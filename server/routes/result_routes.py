@@ -5,11 +5,19 @@ from flask import (
     session,
 )
 
+from models.quiz_model import (
+    get_available_subjects,
+)
+
 from models.result_model import (
     get_user_results,
     save_quiz_result,
 )
 
+
+# =========================================================
+# BLUEPRINT
+# =========================================================
 
 result_bp = Blueprint(
     "results",
@@ -18,24 +26,42 @@ result_bp = Blueprint(
 )
 
 
-ALLOWED_SUBJECTS = [
-    "Python",
-    "Machine Learning",
-    "Data Structures",
-]
+# =========================================================
+# HELPERS
+# =========================================================
+
+def get_logged_in_user_id():
+    return session.get(
+        "user_id"
+    )
+
+
+def clean_subject(value):
+    return str(
+        value or ""
+    ).strip()
+
+
+def subject_exists(subject):
+    if not subject:
+        return False
+
+    return (
+        subject in
+        get_available_subjects()
+    )
 
 
 # =========================================================
-# SAVE RESULT
+# SAVE QUIZ RESULT
 # =========================================================
 
 @result_bp.post("")
 @result_bp.post("/")
 def save_result():
-    user_id = session.get(
-        "user_id"
+    user_id = (
+        get_logged_in_user_id()
     )
-
 
     if not user_id:
         return jsonify(
@@ -46,19 +72,18 @@ def save_result():
             }
         ), 401
 
-
-    data = request.get_json(
-        silent=True
-    ) or {}
-
-
-    subject = str(
-        data.get(
-            "subject",
-            "",
+    data = (
+        request.get_json(
+            silent=True
         )
-    ).strip()
+        or {}
+    )
 
+    subject = clean_subject(
+        data.get(
+            "subject"
+        )
+    )
 
     attempt_id = str(
         data.get(
@@ -67,35 +92,40 @@ def save_result():
         )
     ).strip()
 
-
     answers = data.get(
-        "answers",
-        [],
+        "answers"
     )
 
+    if not subject:
+        return jsonify(
+            {
+                "success": False,
+                "message":
+                    "Subject is required",
+            }
+        ), 400
 
-    if (
-        subject not in
-        ALLOWED_SUBJECTS
+    # Dynamic validation:
+    # Any subject present in MongoDB question bank is valid.
+    if not subject_exists(
+        subject
     ):
         return jsonify(
             {
                 "success": False,
                 "message":
-                    "Invalid quiz subject",
+                    "Invalid or unavailable subject",
             }
         ), 400
-
 
     if not attempt_id:
         return jsonify(
             {
                 "success": False,
                 "message":
-                    "Quiz attempt ID is required",
+                    "Attempt ID is required",
             }
         ), 400
-
 
     if not isinstance(
         answers,
@@ -109,7 +139,6 @@ def save_result():
             }
         ), 400
 
-
     if len(
         answers
     ) == 0:
@@ -117,18 +146,19 @@ def save_result():
             {
                 "success": False,
                 "message":
-                    "Quiz answers are required",
+                    "At least one answer is required",
             }
         ), 400
 
-
-    result = save_quiz_result(
-        user_id=user_id,
-        subject=subject,
-        answers=answers,
-        attempt_id=attempt_id,
+    result = (
+        save_quiz_result(
+            user_id=user_id,
+            subject=subject,
+            answers=answers,
+            attempt_id=
+                attempt_id,
+        )
     )
-
 
     if not result.get(
         "success"
@@ -137,22 +167,18 @@ def save_result():
             result
         ), 400
 
-
-    # New result = 201
-    # Duplicate replay = 200
-
-    status_code = (
-        200
-        if result.get(
-            "duplicate"
-        )
-        else 201
-    )
-
+    # Duplicate result is still a successful response,
+    # but no XP/stats are added again.
+    if result.get(
+        "duplicate"
+    ):
+        return jsonify(
+            result
+        ), 200
 
     return jsonify(
         result
-    ), status_code
+    ), 201
 
 
 # =========================================================
@@ -161,11 +187,10 @@ def save_result():
 
 @result_bp.get("")
 @result_bp.get("/")
-def result_history():
-    user_id = session.get(
-        "user_id"
+def get_results():
+    user_id = (
+        get_logged_in_user_id()
     )
-
 
     if not user_id:
         return jsonify(
@@ -175,7 +200,6 @@ def result_history():
                     "Login required",
             }
         ), 401
-
 
     try:
         limit = int(
@@ -191,30 +215,29 @@ def result_history():
     ):
         limit = 10
 
-
     limit = max(
         1,
         min(
             limit,
-            50,
+            100,
         ),
     )
 
-
-    results = get_user_results(
-        user_id,
-        limit,
+    results = (
+        get_user_results(
+            user_id=user_id,
+            limit=limit,
+        )
     )
-
 
     return jsonify(
         {
             "success": True,
-
             "count":
-                len(results),
-
+                len(
+                    results
+                ),
             "results":
                 results,
         }
-    ), 200
+    )
