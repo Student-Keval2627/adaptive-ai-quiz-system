@@ -309,6 +309,9 @@ function Dashboard() {
   const [results, setResults] =
     useState([]);
 
+  const [analytics, setAnalytics] =
+    useState(null);
+
   const [loading, setLoading] =
     useState(true);
 
@@ -326,10 +329,6 @@ function Dashboard() {
         try {
           setLoading(true);
           setError("");
-
-          /* =============================================
-             USER
-          ============================================== */
 
           const userResponse =
             await fetch(
@@ -368,22 +367,34 @@ function Dashboard() {
             )
           );
 
-
-          /* =============================================
-             RESULT HISTORY
-          ============================================== */
-
-          const resultResponse =
-            await fetch(
+          const [
+            resultResponse,
+            analyticsResponse,
+          ] = await Promise.all([
+            fetch(
               `${API_BASE}/api/results?limit=50`,
               {
                 credentials:
                   "include",
               }
-            );
+            ),
 
-          const resultData =
-            await resultResponse.json();
+            fetch(
+              `${API_BASE}/api/analytics/topics`,
+              {
+                credentials:
+                  "include",
+              }
+            ),
+          ]);
+
+          const [
+            resultData,
+            analyticsData,
+          ] = await Promise.all([
+            resultResponse.json(),
+            analyticsResponse.json(),
+          ]);
 
           if (
             resultResponse.ok &&
@@ -392,6 +403,16 @@ function Dashboard() {
             setResults(
               resultData.results ||
                 []
+            );
+          }
+
+          if (
+            analyticsResponse.ok &&
+            analyticsData.success
+          ) {
+            setAnalytics(
+              analyticsData.analytics ||
+                null
             );
           }
 
@@ -435,6 +456,38 @@ function Dashboard() {
 
   const level =
     stats.level || 1;
+
+
+  /* =========================================================
+     TOPIC ANALYTICS
+  ========================================================= */
+
+  const weakestTopic =
+    analytics?.weakestTopic ||
+    null;
+
+  const strongestTopic =
+    analytics?.strongestTopic ||
+    null;
+
+  const recommendedTopic =
+    analytics?.recommendedTopic ||
+    null;
+
+  const recommendation =
+    analytics?.recommendation ||
+    "Complete more quizzes to unlock personalized topic recommendations.";
+
+  const overallTopicAccuracy =
+    analytics?.overallAccuracy ||
+    0;
+
+  const topicAnalytics =
+    Array.isArray(
+      analytics?.topics
+    )
+      ? analytics.topics
+      : [];
 
 
   /* =========================================================
@@ -529,7 +582,7 @@ function Dashboard() {
 
 
   /* =========================================================
-     FOCUS AREA
+     FOCUS AREA FALLBACK
   ========================================================= */
 
   const focusSubject =
@@ -585,10 +638,6 @@ function Dashboard() {
   }
 
 
-  /* =========================================================
-     DASHBOARD
-  ========================================================= */
-
   return (
     <div className="app-shell">
       <div className="background-orb orb-one" />
@@ -601,10 +650,6 @@ function Dashboard() {
         <Header user={user} />
 
         <section className="dashboard-content">
-
-          {/* =============================================
-              ERROR
-          ============================================== */}
 
           {error && (
             <div
@@ -629,10 +674,6 @@ function Dashboard() {
             </div>
           )}
 
-
-          {/* =============================================
-              HERO
-          ============================================== */}
 
           <section className="hero">
 
@@ -660,8 +701,8 @@ function Dashboard() {
                 NeuraQuiz analyzes your real
                 quiz history, tracks your
                 accuracy and identifies the
-                subjects where you need more
-                practice.
+                exact topics where you need
+                more practice.
               </p>
 
               <div className="hero-actions">
@@ -704,10 +745,6 @@ function Dashboard() {
               </div>
             </div>
 
-
-            {/* =============================================
-                AI VISUAL
-            ============================================== */}
 
             <div className="hero-visual">
 
@@ -753,10 +790,6 @@ function Dashboard() {
           </section>
 
 
-          {/* =============================================
-              REAL STATS
-          ============================================== */}
-
           <section className="stats-grid">
 
             <StatCard
@@ -799,24 +832,339 @@ function Dashboard() {
 
             <StatCard
               icon={CheckCircle2}
-              label="Questions Answered"
-              value={
-                questionsAnswered
+              label="Topic Accuracy"
+              value={`${overallTopicAccuracy}%`}
+              description={
+                topicAnalytics.length > 0
+                  ? `${topicAnalytics.length} topics analyzed`
+                  : "Complete quizzes to unlock topic analytics"
               }
-              description={`${correctAnswers} correct answers`}
-              badge={`${accuracy}%`}
+              badge={
+                topicAnalytics.length > 0
+                  ? "AI Insight"
+                  : "No data"
+              }
             />
 
           </section>
 
 
-          {/* =============================================
-              SUBJECT + FOCUS
-          ============================================== */}
+          <section
+            className="panel"
+            style={{
+              marginBottom: "18px",
+            }}
+          >
+
+            <div className="panel-header">
+
+              <div>
+                <p className="panel-eyebrow">
+                  PERSONALIZED ANALYTICS
+                </p>
+
+                <h3>
+                  Topic intelligence
+                </h3>
+              </div>
+
+              <button
+                className="text-button"
+                onClick={() =>
+                  navigate(
+                    "/weak-topics"
+                  )
+                }
+              >
+                View weak topics
+
+                <ChevronRight
+                  size={16}
+                />
+              </button>
+
+            </div>
+
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns:
+                  "repeat(3, minmax(0, 1fr))",
+                gap: "12px",
+                marginTop: "18px",
+              }}
+            >
+
+              <div
+                style={{
+                  padding: "16px",
+                  borderRadius: "14px",
+                  border:
+                    "1px solid rgba(255,255,255,0.07)",
+                  background:
+                    "rgba(255,255,255,0.025)",
+                }}
+              >
+                <p
+                  style={{
+                    margin: "0 0 8px",
+                    fontSize: "9px",
+                    letterSpacing: "1.2px",
+                    color: "#766f68",
+                    fontWeight: 700,
+                  }}
+                >
+                  WEAKEST TOPIC
+                </p>
+
+                <strong
+                  style={{
+                    display: "block",
+                    color: "#f2ede8",
+                    fontSize: "14px",
+                    marginBottom: "5px",
+                  }}
+                >
+                  {weakestTopic?.topic ||
+                    "Not identified yet"}
+                </strong>
+
+                <span
+                  style={{
+                    color: "#8b837b",
+                    fontSize: "10px",
+                  }}
+                >
+                  {weakestTopic
+                    ? `${weakestTopic.subject} • ${weakestTopic.accuracy}% accuracy`
+                    : "Complete more quizzes to unlock this insight"}
+                </span>
+              </div>
+
+              <div
+                style={{
+                  padding: "16px",
+                  borderRadius: "14px",
+                  border:
+                    "1px solid rgba(255,255,255,0.07)",
+                  background:
+                    "rgba(255,255,255,0.025)",
+                }}
+              >
+                <p
+                  style={{
+                    margin: "0 0 8px",
+                    fontSize: "9px",
+                    letterSpacing: "1.2px",
+                    color: "#766f68",
+                    fontWeight: 700,
+                  }}
+                >
+                  STRONGEST TOPIC
+                </p>
+
+                <strong
+                  style={{
+                    display: "block",
+                    color: "#f2ede8",
+                    fontSize: "14px",
+                    marginBottom: "5px",
+                  }}
+                >
+                  {strongestTopic?.topic ||
+                    "Not identified yet"}
+                </strong>
+
+                <span
+                  style={{
+                    color: "#8b837b",
+                    fontSize: "10px",
+                  }}
+                >
+                  {strongestTopic
+                    ? `${strongestTopic.subject} • ${strongestTopic.accuracy}% accuracy`
+                    : "Complete more quizzes to unlock this insight"}
+                </span>
+              </div>
+
+              <div
+                style={{
+                  padding: "16px",
+                  borderRadius: "14px",
+                  border:
+                    "1px solid rgba(255,255,255,0.07)",
+                  background:
+                    "rgba(255,141,88,0.035)",
+                }}
+              >
+                <p
+                  style={{
+                    margin: "0 0 8px",
+                    fontSize: "9px",
+                    letterSpacing: "1.2px",
+                    color: "#8b7567",
+                    fontWeight: 700,
+                  }}
+                >
+                  RECOMMENDED PRACTICE
+                </p>
+
+                <strong
+                  style={{
+                    display: "block",
+                    color: "#ff9f70",
+                    fontSize: "14px",
+                    marginBottom: "7px",
+                  }}
+                >
+                  {recommendedTopic ||
+                    "Complete a quiz"}
+                </strong>
+
+                <span
+                  style={{
+                    display: "block",
+                    color: "#8b837b",
+                    fontSize: "10px",
+                    lineHeight: 1.65,
+                  }}
+                >
+                  {recommendation}
+                </span>
+              </div>
+
+            </div>
+
+            {topicAnalytics.length > 0 && (
+              <div
+                style={{
+                  marginTop: "16px",
+                  display: "grid",
+                  gap: "10px",
+                }}
+              >
+                {topicAnalytics
+                  .slice(0, 5)
+                  .map(
+                    (
+                      topic,
+                      index
+                    ) => (
+                      <div
+                        key={`${topic.subject}-${topic.topic}-${index}`}
+                        style={{
+                          display:
+                            "grid",
+                          gridTemplateColumns:
+                            "minmax(150px, 1fr) 100px 1.5fr 55px",
+                          gap: "12px",
+                          alignItems:
+                            "center",
+                          padding:
+                            "12px 14px",
+                          borderRadius:
+                            "12px",
+                          background:
+                            "rgba(255,255,255,0.02)",
+                          border:
+                            "1px solid rgba(255,255,255,0.05)",
+                        }}
+                      >
+                        <div>
+                          <strong
+                            style={{
+                              display:
+                                "block",
+                              color:
+                                "#e9e3dd",
+                              fontSize:
+                                "11px",
+                            }}
+                          >
+                            {topic.topic}
+                          </strong>
+
+                          <span
+                            style={{
+                              color:
+                                "#716a63",
+                              fontSize:
+                                "9px",
+                            }}
+                          >
+                            {topic.subject}
+                          </span>
+                        </div>
+
+                        <span
+                          style={{
+                            color:
+                              "#8e867e",
+                            fontSize:
+                              "9px",
+                          }}
+                        >
+                          {topic.correct || 0}/
+                          {topic.answered || 0}
+                          {" "}correct
+                        </span>
+
+                        <div
+                          style={{
+                            height:
+                              "5px",
+                            borderRadius:
+                              "999px",
+                            background:
+                              "rgba(255,255,255,0.06)",
+                            overflow:
+                              "hidden",
+                          }}
+                        >
+                          <div
+                            style={{
+                              width:
+                                `${Math.max(
+                                  0,
+                                  Math.min(
+                                    Number(
+                                      topic.accuracy
+                                    ) || 0,
+                                    100
+                                  )
+                                )}%`,
+                              height:
+                                "100%",
+                              borderRadius:
+                                "999px",
+                              background:
+                                "linear-gradient(90deg, #ff8d58, #f0b07f)",
+                            }}
+                          />
+                        </div>
+
+                        <strong
+                          style={{
+                            color:
+                              "#ff9f70",
+                            textAlign:
+                              "right",
+                            fontSize:
+                              "10px",
+                          }}
+                        >
+                          {topic.accuracy}%
+                        </strong>
+                      </div>
+                    )
+                  )}
+              </div>
+            )}
+
+          </section>
+
 
           <section className="dashboard-grid">
-
-            {/* SUBJECT PROGRESS */}
 
             <div className="panel learning-panel">
 
@@ -933,10 +1281,6 @@ function Dashboard() {
             </div>
 
 
-            {/* =============================================
-                REAL FOCUS AREA
-            ============================================== */}
-
             <div className="panel focus-panel">
 
               <div className="panel-header">
@@ -960,7 +1304,90 @@ function Dashboard() {
 
               </div>
 
-              {focusSubject ? (
+              {weakestTopic ? (
+                <>
+                  <div className="focus-score">
+
+                    <div className="focus-circle">
+                      <span>
+                        {
+                          weakestTopic.accuracy
+                        }
+                      </span>
+
+                      <small>%</small>
+                    </div>
+
+                    <div>
+                      <p>
+                        Needs attention
+                      </p>
+
+                      <h4>
+                        {
+                          weakestTopic.topic
+                        }
+                      </h4>
+
+                      <span>
+                        {
+                          weakestTopic.subject
+                        }{" "}
+                        •{" "}
+                        {
+                          weakestTopic.answered
+                        }{" "}
+                        answers analyzed
+                      </span>
+                    </div>
+
+                  </div>
+
+                  <div className="ai-message">
+
+                    <Sparkles
+                      size={17}
+                    />
+
+                    <p>
+                      Your current weakest
+                      topic is{" "}
+                      <strong>
+                        {
+                          weakestTopic.topic
+                        }
+                      </strong>{" "}
+                      with{" "}
+                      <strong>
+                        {
+                          weakestTopic.accuracy
+                        }
+                        %
+                      </strong>{" "}
+                      accuracy. Focus Mode
+                      can prioritize this
+                      topic in your next
+                      adaptive quiz.
+                    </p>
+
+                  </div>
+
+                  <button
+                    className="focus-button"
+                    onClick={() =>
+                      navigate(
+                        "/quiz"
+                      )
+                    }
+                  >
+                    Practice weak topic
+
+                    <ArrowUpRight
+                      size={17}
+                    />
+                  </button>
+                </>
+              ) : focusSubject ? (
                 <>
                   <div className="focus-score">
 
@@ -1002,8 +1429,10 @@ function Dashboard() {
                     />
 
                     <p>
-                      Your lowest current
-                      subject accuracy is{" "}
+                      Topic-level analytics
+                      needs more data. Your
+                      lowest subject accuracy
+                      is currently{" "}
                       <strong>
                         {
                           focusSubject.progress
@@ -1016,9 +1445,7 @@ function Dashboard() {
                           focusSubject.name
                         }
                       </strong>
-                      . A focused quiz can
-                      help strengthen this
-                      subject.
+                      .
                     </p>
 
                   </div>
@@ -1050,7 +1477,7 @@ function Dashboard() {
                       Complete your first
                       quiz and NeuraQuiz
                       will identify your
-                      weakest subject
+                      weakest topic
                       automatically.
                     </p>
 
@@ -1076,10 +1503,6 @@ function Dashboard() {
             </div>
           </section>
 
-
-          {/* =============================================
-              REAL RECENT QUIZZES
-          ============================================== */}
 
           <section className="panel recent-panel">
 
