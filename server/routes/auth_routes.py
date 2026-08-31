@@ -372,6 +372,8 @@ def register():
     return jsonify(
         {
             "success": True,
+            "authenticated":
+                True,
             "message":
                 "Account created successfully",
             "user":
@@ -495,6 +497,8 @@ def login():
     return jsonify(
         {
             "success": True,
+            "authenticated":
+                True,
             "message":
                 "Login successful",
             "user":
@@ -521,6 +525,8 @@ def me():
         return jsonify(
             {
                 "success": False,
+                "authenticated":
+                    False,
                 "message":
                     "Login required",
             }
@@ -538,6 +544,8 @@ def me():
         return jsonify(
             {
                 "success": False,
+                "authenticated":
+                    False,
                 "message":
                     "User account not found",
             }
@@ -546,6 +554,8 @@ def me():
     return jsonify(
         {
             "success": True,
+            "authenticated":
+                True,
             "user":
                 serialize_user(
                     user
@@ -762,6 +772,8 @@ def logout():
     return jsonify(
         {
             "success": True,
+            "authenticated":
+                False,
             "message":
                 "Logged out successfully",
         }
