@@ -5,12 +5,19 @@ from datetime import (
 )
 
 from bson import ObjectId
-from pymongo.errors import DuplicateKeyError
+
+from pymongo.errors import (
+    DuplicateKeyError,
+)
 
 from database import (
-    quiz_attempts_collection,
     quiz_results_collection,
     users_collection,
+)
+
+from models.quiz_attempt_model import (
+    complete_quiz_attempt,
+    get_active_quiz_attempt,
 )
 
 from models.quiz_model import (
@@ -18,8 +25,32 @@ from models.quiz_model import (
 )
 
 
-MAX_ANSWERS_PER_QUIZ = 20
-RESULT_VERIFICATION_VERSION = 3
+# =========================================================
+# CONFIG
+# =========================================================
+
+MAX_ANSWERS_PER_QUIZ = 100
+RESULT_VERIFICATION_VERSION = 4
+
+
+# =========================================================
+# HELPERS
+# =========================================================
+
+def safe_object_id(value):
+    try:
+        if isinstance(value, ObjectId):
+            return value
+        return ObjectId(str(value))
+    except Exception:
+        return None
+
+
+def safe_int(value, default=0):
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return default
 
 
 # =========================================================
@@ -27,13 +58,8 @@ RESULT_VERIFICATION_VERSION = 3
 # =========================================================
 
 def create_result_indexes():
-    quiz_results_collection.create_index(
-        "userId"
-    )
-
-    quiz_results_collection.create_index(
-        "createdAt"
-    )
+    quiz_results_collection.create_index("userId")
+    quiz_results_collection.create_index("createdAt")
 
     quiz_results_collection.create_index(
         [
@@ -70,20 +96,18 @@ def create_result_indexes():
 # =========================================================
 
 def calculate_streak(user):
-    now = datetime.now(
-        timezone.utc
-    )
+    now = datetime.now(timezone.utc)
 
     stats = user.get(
         "stats",
         {},
     )
 
-    current_streak = int(
+    current_streak = safe_int(
         stats.get(
             "streak",
             0,
-        ) or 0
+        )
     )
 
     last_quiz_at = stats.get(
@@ -93,29 +117,35 @@ def calculate_streak(user):
     if not last_quiz_at:
         return 1
 
-    if last_quiz_at.tzinfo is None:
+    if getattr(
+        last_quiz_at,
+        "tzinfo",
+        None,
+    ) is None:
         last_quiz_at = (
             last_quiz_at.replace(
                 tzinfo=timezone.utc
             )
         )
 
-    today = now.date()
-    last_quiz_date = (
+    if (
         last_quiz_at.date()
-    )
-
-    if last_quiz_date == today:
+        == now.date()
+    ):
         return max(
             current_streak,
             1,
         )
 
     yesterday = (
-        now - timedelta(days=1)
+        now
+        - timedelta(days=1)
     ).date()
 
-    if last_quiz_date == yesterday:
+    if (
+        last_quiz_at.date()
+        == yesterday
+    ):
         return (
             current_streak + 1
         )
@@ -135,57 +165,71 @@ def serialize_user_stats(user):
 
     return {
         "quizzesCompleted":
-            stats.get(
-                "quizzesCompleted",
-                0,
+            safe_int(
+                stats.get(
+                    "quizzesCompleted",
+                    0,
+                )
             ),
-
         "questionsAnswered":
-            stats.get(
-                "questionsAnswered",
-                0,
+            safe_int(
+                stats.get(
+                    "questionsAnswered",
+                    0,
+                )
             ),
-
         "correctAnswers":
-            stats.get(
-                "correctAnswers",
-                0,
+            safe_int(
+                stats.get(
+                    "correctAnswers",
+                    0,
+                )
             ),
-
         "accuracy":
-            stats.get(
-                "accuracy",
-                0,
+            safe_int(
+                stats.get(
+                    "accuracy",
+                    0,
+                )
             ),
-
         "bestAccuracy":
-            stats.get(
-                "bestAccuracy",
-                0,
+            safe_int(
+                stats.get(
+                    "bestAccuracy",
+                    0,
+                )
             ),
-
         "xp":
-            stats.get(
-                "xp",
-                0,
+            safe_int(
+                stats.get(
+                    "xp",
+                    0,
+                )
             ),
-
         "level":
-            stats.get(
-                "level",
+            max(
                 1,
+                safe_int(
+                    stats.get(
+                        "level",
+                        1,
+                    ),
+                    1,
+                ),
             ),
-
         "streak":
-            stats.get(
-                "streak",
-                0,
+            safe_int(
+                stats.get(
+                    "streak",
+                    0,
+                )
             ),
-
         "bestStreak":
-            stats.get(
-                "bestStreak",
-                0,
+            safe_int(
+                stats.get(
+                    "bestStreak",
+                    0,
+                )
             ),
     }
 
@@ -202,9 +246,11 @@ def serialize_result(result):
         "createdAt"
     )
 
-    score = result.get(
-        "score",
-        0,
+    score = safe_int(
+        result.get(
+            "score",
+            0,
+        )
     )
 
     xp_earned = result.get(
@@ -221,48 +267,52 @@ def serialize_result(result):
             str(
                 result["_id"]
             ),
-
         "attemptId":
             result.get(
                 "attemptId"
             ),
-
         "subject":
             result.get(
                 "subject",
                 "",
             ),
-
         "score":
             score,
-
         "total":
-            result.get(
-                "total",
-                0,
+            safe_int(
+                result.get(
+                    "total",
+                    0,
+                )
             ),
-
         "accuracy":
-            result.get(
-                "accuracy",
+            safe_int(
+                result.get(
+                    "accuracy",
+                    0,
+                )
+            ),
+        "xpEarned":
+            safe_int(
+                xp_earned,
                 0,
             ),
-
-        "xpEarned":
-            xp_earned,
-
         "verified":
-            result.get(
-                "verified",
-                False,
+            bool(
+                result.get(
+                    "verified",
+                    False,
+                )
             ),
-
+        "verificationVersion":
+            result.get(
+                "verificationVersion"
+            ),
         "answers":
             result.get(
                 "answers",
                 [],
             ),
-
         "createdAt":
             (
                 created_at.isoformat()
@@ -273,102 +323,24 @@ def serialize_result(result):
 
 
 # =========================================================
-# USER ID QUERY
-# =========================================================
-
-def build_attempt_user_query(
-    object_user_id,
-):
-    return {
-        "$in": [
-            object_user_id,
-            str(object_user_id),
-        ]
-    }
-
-
-# =========================================================
-# GET ACTIVE QUIZ ATTEMPT
-# =========================================================
-
-def get_active_attempt(
-    object_user_id,
-    attempt_id,
-):
-    return (
-        quiz_attempts_collection.find_one(
-            {
-                "userId":
-                    build_attempt_user_query(
-                        object_user_id
-                    ),
-
-                "attemptId":
-                    attempt_id,
-
-                "status":
-                    "active",
-            }
-        )
-    )
-
-
-# =========================================================
-# MARK QUIZ ATTEMPT COMPLETED
-# =========================================================
-
-def mark_attempt_completed(
-    object_user_id,
-    attempt_id,
-    result_id,
-    completed_at,
-):
-    update_result = (
-        quiz_attempts_collection.update_one(
-            {
-                "userId":
-                    build_attempt_user_query(
-                        object_user_id
-                    ),
-
-                "attemptId":
-                    attempt_id,
-
-                "status":
-                    "active",
-            },
-            {
-                "$set": {
-                    "status":
-                        "completed",
-
-                    "resultId":
-                        result_id,
-
-                    "completedAt":
-                        completed_at,
-
-                    "updatedAt":
-                        completed_at,
-                }
-            },
-        )
-    )
-
-    return (
-        update_result.modified_count
-        == 1
-    )
-
-
-# =========================================================
-# VERIFY ANSWERS
+# VERIFY ANSWERS AGAINST QUESTION DATABASE
 # =========================================================
 
 def verify_quiz_answers(
     subject,
     submitted_answers,
 ):
+    subject = str(
+        subject or ""
+    ).strip()
+
+    if not subject:
+        return {
+            "success": False,
+            "message":
+                "Subject is required",
+        }
+
     if not isinstance(
         submitted_answers,
         list,
@@ -390,8 +362,7 @@ def verify_quiz_answers(
 
     if (
         len(submitted_answers)
-        >
-        MAX_ANSWERS_PER_QUIZ
+        > MAX_ANSWERS_PER_QUIZ
     ):
         return {
             "success": False,
@@ -500,8 +471,8 @@ def verify_quiz_answers(
         )
 
         was_correct = (
-            selected_answer ==
-            correct_answer
+            selected_answer
+            == correct_answer
         )
 
         if was_correct:
@@ -511,34 +482,27 @@ def verify_quiz_answers(
             {
                 "questionId":
                     question_id,
-
                 "question":
                     question.get(
                         "question",
                         "",
                     ),
-
                 "subject":
                     subject,
-
                 "topic":
                     question.get(
                         "topic",
                         "General",
                     ),
-
                 "difficulty":
                     question.get(
                         "difficulty",
                         "Medium",
                     ),
-
                 "selectedAnswer":
                     selected_answer,
-
                 "correctAnswer":
                     correct_answer,
-
                 "correct":
                     was_correct,
             }
@@ -564,10 +528,14 @@ def verify_quiz_answers(
 
     return {
         "success": True,
-        "score": score,
-        "total": total,
-        "accuracy": accuracy,
-        "answers": verified_answers,
+        "score":
+            score,
+        "total":
+            total,
+        "accuracy":
+            accuracy,
+        "answers":
+            verified_answers,
     }
 
 
@@ -587,7 +555,10 @@ def verify_attempt_questions(
         )
     ).strip()
 
-    if attempt_subject != subject:
+    if (
+        attempt_subject
+        != subject
+    ):
         return {
             "success": False,
             "message":
@@ -659,12 +630,28 @@ def get_existing_attempt(
     user_id,
     attempt_id,
 ):
+    object_user_id = (
+        safe_object_id(
+            user_id
+        )
+    )
+
+    attempt_id = str(
+        attempt_id or ""
+    ).strip()
+
+    if (
+        not object_user_id
+        or not attempt_id
+    ):
+        return None
+
     return (
-        quiz_results_collection.find_one(
+        quiz_results_collection
+        .find_one(
             {
                 "userId":
-                    user_id,
-
+                    object_user_id,
                 "attemptId":
                     attempt_id,
             }
@@ -680,14 +667,23 @@ def duplicate_result_response(
     existing_result,
     user_id,
 ):
-    latest_user = (
-        users_collection.find_one(
-            {
-                "_id":
-                    user_id
-            }
+    object_user_id = (
+        safe_object_id(
+            user_id
         )
     )
+
+    latest_user = None
+
+    if object_user_id:
+        latest_user = (
+            users_collection.find_one(
+                {
+                    "_id":
+                        object_user_id
+                }
+            )
+        )
 
     return {
         "success": True,
@@ -715,12 +711,13 @@ def save_quiz_result(
     answers=None,
     attempt_id=None,
 ):
-    try:
-        object_user_id = ObjectId(
+    object_user_id = (
+        safe_object_id(
             user_id
         )
+    )
 
-    except Exception:
+    if not object_user_id:
         return {
             "success": False,
             "message":
@@ -734,6 +731,13 @@ def save_quiz_result(
     attempt_id = str(
         attempt_id or ""
     ).strip()
+
+    if not subject:
+        return {
+            "success": False,
+            "message":
+                "Subject is required",
+        }
 
     if not attempt_id:
         return {
@@ -768,10 +772,6 @@ def save_quiz_result(
                 "User not found",
         }
 
-    # =====================================================
-    # DUPLICATE RESULT CHECK
-    # =====================================================
-
     existing_result = (
         get_existing_attempt(
             object_user_id,
@@ -787,14 +787,12 @@ def save_quiz_result(
             )
         )
 
-    # =====================================================
-    # REAL ACTIVE ATTEMPT CHECK
-    # =====================================================
-
     attempt = (
-        get_active_attempt(
-            object_user_id,
-            attempt_id,
+        get_active_quiz_attempt(
+            user_id=
+                object_user_id,
+            attempt_id=
+                attempt_id,
         )
     )
 
@@ -805,9 +803,22 @@ def save_quiz_result(
                 "Active quiz attempt not found or already completed",
         }
 
-    # =====================================================
-    # VERIFY ANSWERS AGAINST QUESTION DATABASE
-    # =====================================================
+    attempt_subject = str(
+        attempt.get(
+            "subject",
+            "",
+        )
+    ).strip()
+
+    if (
+        attempt_subject
+        != subject
+    ):
+        return {
+            "success": False,
+            "message":
+                "Quiz subject does not match this attempt",
+        }
 
     verification = (
         verify_quiz_answers(
@@ -839,10 +850,6 @@ def save_quiz_result(
         ]
     )
 
-    # =====================================================
-    # VERIFY THESE QUESTIONS WERE ACTUALLY SERVED
-    # =====================================================
-
     attempt_verification = (
         verify_attempt_questions(
             attempt,
@@ -856,60 +863,52 @@ def save_quiz_result(
     ):
         return attempt_verification
 
-    # =====================================================
-    # CURRENT USER STATS
-    # =====================================================
-
     old_stats = user.get(
         "stats",
         {},
     )
 
-    old_quizzes = int(
+    old_quizzes = safe_int(
         old_stats.get(
             "quizzesCompleted",
             0,
-        ) or 0
+        )
     )
 
-    old_questions = int(
+    old_questions = safe_int(
         old_stats.get(
             "questionsAnswered",
             0,
-        ) or 0
+        )
     )
 
-    old_correct = int(
+    old_correct = safe_int(
         old_stats.get(
             "correctAnswers",
             0,
-        ) or 0
+        )
     )
 
-    old_xp = int(
+    old_xp = safe_int(
         old_stats.get(
             "xp",
             0,
-        ) or 0
+        )
     )
 
-    old_best_accuracy = int(
+    old_best_accuracy = safe_int(
         old_stats.get(
             "bestAccuracy",
             0,
-        ) or 0
+        )
     )
 
-    old_best_streak = int(
+    old_best_streak = safe_int(
         old_stats.get(
             "bestStreak",
             0,
-        ) or 0
+        )
     )
-
-    # =====================================================
-    # NEW STATS
-    # =====================================================
 
     new_quizzes = (
         old_quizzes + 1
@@ -926,8 +925,8 @@ def save_quiz_result(
     new_accuracy = (
         round(
             (
-                new_correct /
-                new_questions
+                new_correct
+                / new_questions
             ) * 100
         )
         if new_questions > 0
@@ -939,8 +938,8 @@ def save_quiz_result(
     ) + 50
 
     new_xp = (
-        old_xp +
-        xp_earned
+        old_xp
+        + xp_earned
     )
 
     new_level = (
@@ -967,48 +966,30 @@ def save_quiz_result(
         timezone.utc
     )
 
-    # =====================================================
-    # RESULT DOCUMENT
-    # =====================================================
-
     result_document = {
         "userId":
             object_user_id,
-
         "attemptId":
             attempt_id,
-
         "subject":
             subject,
-
         "score":
             score,
-
         "total":
             total,
-
         "accuracy":
             accuracy,
-
         "answers":
             verified_answers,
-
         "xpEarned":
             xp_earned,
-
         "verified":
             True,
-
         "verificationVersion":
             RESULT_VERIFICATION_VERSION,
-
         "createdAt":
             now,
     }
-
-    # =====================================================
-    # INSERT RESULT
-    # =====================================================
 
     try:
         insert_result = (
@@ -1040,133 +1021,124 @@ def save_quiz_result(
                 "Duplicate quiz attempt",
         }
 
-    # =====================================================
-    # UPDATE USER STATS
-    # =====================================================
+    completed_attempt = (
+        complete_quiz_attempt(
+            user_id=
+                object_user_id,
+            attempt_id=
+                attempt_id,
+            result_id=
+                insert_result.inserted_id,
+        )
+    )
 
-    users_collection.update_one(
-        {
-            "_id":
-                object_user_id
-        },
-        {
-            "$set": {
-                "stats.quizzesCompleted":
-                    new_quizzes,
-
-                "stats.questionsAnswered":
-                    new_questions,
-
-                "stats.correctAnswers":
-                    new_correct,
-
-                "stats.accuracy":
-                    new_accuracy,
-
-                "stats.bestAccuracy":
-                    new_best_accuracy,
-
-                "stats.xp":
-                    new_xp,
-
-                "stats.level":
-                    new_level,
-
-                "stats.streak":
-                    new_streak,
-
-                "stats.bestStreak":
-                    new_best_streak,
-
-                "stats.lastQuizAt":
-                    now,
-
-                "updatedAt":
-                    now,
+    if not completed_attempt:
+        quiz_results_collection.delete_one(
+            {
+                "_id":
+                    insert_result.inserted_id
             }
+        )
+
+        return {
+            "success": False,
+            "message":
+                "Quiz attempt could not be completed safely",
         }
+
+    user_update = (
+        users_collection.update_one(
+            {
+                "_id":
+                    object_user_id
+            },
+            {
+                "$set": {
+                    "stats.quizzesCompleted":
+                        new_quizzes,
+                    "stats.questionsAnswered":
+                        new_questions,
+                    "stats.correctAnswers":
+                        new_correct,
+                    "stats.accuracy":
+                        new_accuracy,
+                    "stats.bestAccuracy":
+                        new_best_accuracy,
+                    "stats.xp":
+                        new_xp,
+                    "stats.level":
+                        new_level,
+                    "stats.streak":
+                        new_streak,
+                    "stats.bestStreak":
+                        new_best_streak,
+                    "stats.lastQuizAt":
+                        now,
+                    "updatedAt":
+                        now,
+                }
+            },
+        )
     )
 
-    # =====================================================
-    # COMPLETE REAL QUIZ ATTEMPT
-    # =====================================================
-
-    mark_attempt_completed(
-        object_user_id=
-            object_user_id,
-        attempt_id=
-            attempt_id,
-        result_id=
-            insert_result.inserted_id,
-        completed_at=
-            now,
-    )
+    if (
+        user_update.matched_count
+        != 1
+    ):
+        return {
+            "success": False,
+            "message":
+                "Quiz result was saved, but user statistics could not be updated",
+        }
 
     return {
         "success": True,
         "duplicate": False,
         "message":
             "Verified quiz result saved and quiz attempt completed successfully",
-
         "result": {
             "id":
                 str(
                     insert_result.inserted_id
                 ),
-
             "attemptId":
                 attempt_id,
-
             "subject":
                 subject,
-
             "score":
                 score,
-
             "total":
                 total,
-
             "accuracy":
                 accuracy,
-
             "xpEarned":
                 xp_earned,
-
             "verified":
                 True,
-
+            "verificationVersion":
+                RESULT_VERIFICATION_VERSION,
             "answers":
                 verified_answers,
-
             "createdAt":
                 now.isoformat(),
         },
-
         "stats": {
             "quizzesCompleted":
                 new_quizzes,
-
             "questionsAnswered":
                 new_questions,
-
             "correctAnswers":
                 new_correct,
-
             "accuracy":
                 new_accuracy,
-
             "bestAccuracy":
                 new_best_accuracy,
-
             "xp":
                 new_xp,
-
             "level":
                 new_level,
-
             "streak":
                 new_streak,
-
             "bestStreak":
                 new_best_streak,
         }
@@ -1181,13 +1153,30 @@ def get_user_results(
     user_id,
     limit=10,
 ):
-    try:
-        object_user_id = ObjectId(
+    object_user_id = (
+        safe_object_id(
             user_id
         )
+    )
 
-    except Exception:
+    if not object_user_id:
         return []
+
+    try:
+        limit = int(limit)
+    except (
+        TypeError,
+        ValueError,
+    ):
+        limit = 10
+
+    limit = max(
+        1,
+        min(
+            limit,
+            100,
+        ),
+    )
 
     cursor = (
         quiz_results_collection
