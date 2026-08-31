@@ -47,6 +47,7 @@ const allowedDifficulties = [
 const allowedQuestionCounts = [
   "5",
   "10",
+  "15",
 ];
 
 
@@ -566,6 +567,10 @@ function Settings() {
 
                 <option value="10">
                   10 Questions
+                </option>
+
+                <option value="15">
+                  15 Questions
                 </option>
               </select>
 
