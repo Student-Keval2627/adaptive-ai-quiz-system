@@ -1,36 +1,59 @@
 from datetime import timedelta
 
-from flask import Flask, jsonify
+from flask import (
+    Flask,
+    jsonify,
+)
+
 from flask_cors import CORS
 
 from config import Config
-from database import check_database_connection
+
+from database import (
+    check_database_connection,
+)
 
 from models.user_model import (
-    create_user_indexes
+    create_user_indexes,
 )
 
 from models.quiz_model import (
     create_question_indexes,
-    seed_questions
+    seed_questions,
+)
+
+from models.quiz_attempt_model import (
+    create_quiz_attempt_indexes,
 )
 
 from models.result_model import (
-    create_result_indexes
+    create_result_indexes,
 )
 
-from routes.auth_routes import auth_bp
-from routes.quiz_routes import quiz_bp
-from routes.result_routes import result_bp
+from routes.auth_routes import (
+    auth_bp,
+)
+
+from routes.quiz_routes import (
+    quiz_bp,
+)
+
+from routes.result_routes import (
+    result_bp,
+)
 
 from routes.analytics_routes import (
     analytics_bp,
 )
+
+
 # =========================================================
-# FLASK APP
+# APP
 # =========================================================
 
-app = Flask(__name__)
+app = Flask(
+    __name__
+)
 
 app.config.from_object(
     Config
@@ -38,12 +61,14 @@ app.config.from_object(
 
 
 # =========================================================
-# SESSION CONFIG
+# SESSION
 # =========================================================
 
 app.config[
     "PERMANENT_SESSION_LIFETIME"
-] = timedelta(days=7)
+] = timedelta(
+    days=7
+)
 
 app.config[
     "SESSION_COOKIE_HTTPONLY"
@@ -53,6 +78,8 @@ app.config[
     "SESSION_COOKIE_SAMESITE"
 ] = "Lax"
 
+# Local development uses HTTP.
+# Set this to True when deploying behind HTTPS.
 app.config[
     "SESSION_COOKIE_SECURE"
 ] = False
@@ -60,54 +87,80 @@ app.config[
 
 # =========================================================
 # CORS
+#
+# Frontend currently runs with Vite on 5173 / 5174.
+# Credentials are required because Flask sessions use
+# cookies.
 # =========================================================
 
 CORS(
     app,
-
-    origins=[
-        "http://127.0.0.1:5173",
-        "http://localhost:5173",
-        "http://127.0.0.1:5174",
-        "http://localhost:5174",
-    ],
-
+    resources={
+        r"/api/*": {
+            "origins": [
+                "http://127.0.0.1:5173",
+                "http://localhost:5173",
+                "http://127.0.0.1:5174",
+                "http://localhost:5174",
+            ]
+        }
+    },
     supports_credentials=True,
-
-    allow_headers=[
-        "Content-Type",
-        "Authorization",
-    ],
-
-    methods=[
-        "GET",
-        "POST",
-        "PUT",
-        "PATCH",
-        "DELETE",
-        "OPTIONS",
-    ],
 )
 
 
 # =========================================================
 # DATABASE INITIALIZATION
+#
+# Each initialization step is isolated so one warning does
+# not stop the remaining indexes or question-bank sync.
 # =========================================================
 
-try:
-    create_user_indexes()
+def initialize_database():
+    initialization_steps = [
+        (
+            "user indexes",
+            create_user_indexes,
+        ),
+        (
+            "question indexes",
+            create_question_indexes,
+        ),
+        (
+            "quiz attempt indexes",
+            create_quiz_attempt_indexes,
+        ),
+        (
+            "result indexes",
+            create_result_indexes,
+        ),
+        (
+            "question bank",
+            seed_questions,
+        ),
+    ]
 
-    create_question_indexes()
+    for (
+        label,
+        initializer,
+    ) in initialization_steps:
 
-    create_result_indexes()
+        try:
+            initializer()
 
-    seed_questions()
+            print(
+                f"Initialized {label}."
+            )
 
-except Exception as error:
-    print(
-        "MongoDB initialization warning:",
-        error
-    )
+        except Exception as error:
+            print(
+                f"MongoDB initialization warning "
+                f"({label}):",
+                error,
+            )
+
+
+initialize_database()
 
 
 # =========================================================
@@ -125,9 +178,11 @@ app.register_blueprint(
 app.register_blueprint(
     result_bp
 )
+
 app.register_blueprint(
     analytics_bp
 )
+
 
 # =========================================================
 # HOME
@@ -138,14 +193,10 @@ def home():
     return jsonify(
         {
             "success": True,
-            "project":
-                "Adaptive AI Quiz System",
-
-            "app":
-                "NeuraQuiz",
-
+            "name":
+                "NeuraQuiz API",
             "message":
-                "Backend server is running"
+                "Adaptive AI Quiz System backend is running",
         }
     )
 
@@ -159,9 +210,10 @@ def health():
     return jsonify(
         {
             "success": True,
-            "status": "healthy",
-            "message":
-                "NeuraQuiz API is running"
+            "status":
+                "healthy",
+            "service":
+                "NeuraQuiz API",
         }
     )
 
@@ -178,12 +230,22 @@ def database_test():
 
     status_code = (
         200
-        if result["connected"]
-        else 500
+        if result.get(
+            "connected"
+        )
+        else 503
     )
 
     return jsonify(
-        result
+        {
+            "success":
+                bool(
+                    result.get(
+                        "connected"
+                    )
+                ),
+            **result,
+        }
     ), status_code
 
 
@@ -192,12 +254,14 @@ def database_test():
 # =========================================================
 
 @app.errorhandler(404)
-def not_found(error):
+def page_not_found(
+    error,
+):
     return jsonify(
         {
             "success": False,
             "message":
-                "API route not found"
+                "Route not found",
         }
     ), 404
 
@@ -207,30 +271,10 @@ def not_found(error):
 # =========================================================
 
 if __name__ == "__main__":
-    print()
-
-    print("=" * 55)
-    print(" NeuraQuiz Backend")
-    print("=" * 55)
-
-    print(
-        f" Server: "
-        f"http://127.0.0.1:"
-        f"{Config.FLASK_PORT}"
-    )
-
-    print(
-        f" Results: "
-        f"http://127.0.0.1:"
-        f"{Config.FLASK_PORT}"
-        f"/api/results"
-    )
-
-    print("=" * 55)
-    print()
-
     app.run(
         host="127.0.0.1",
-        port=Config.FLASK_PORT,
-        debug=Config.DEBUG
+        port=
+            Config.FLASK_PORT,
+        debug=
+            Config.DEBUG,
     )
