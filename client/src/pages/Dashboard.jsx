@@ -30,16 +30,107 @@ import {
   useNavigate,
 } from "react-router-dom";
 
-
 const API_BASE =
   "http://127.0.0.1:5000";
 
+const FALLBACK_SUBJECTS = [
+  "Python",
+  "C Programming",
+  "C++",
+  "Java",
+  "JavaScript",
+  "TypeScript",
+  "Data Structures",
+  "Algorithms",
+  "SQL",
+  "DBMS",
+  "Operating Systems",
+  "Computer Networks",
+  "Object Oriented Programming",
+  "Machine Learning",
+  "Web Development",
+  "React",
+  "Node.js",
+  "Flask",
+  "Django",
+  "Git & GitHub",
+  "Software Engineering",
+  "Computer Architecture",
+];
 
-/* =========================================================
-   SIDEBAR
-========================================================= */
+function getSubjectIcon(
+  subjectName
+) {
+  const predefined = {
+    Python: "PY",
+    "Machine Learning": "ML",
+    "Data Structures": "DS",
+    "C Programming": "C",
+    "C++": "C++",
+    Java: "JV",
+    JavaScript: "JS",
+    TypeScript: "TS",
+    Algorithms: "AL",
+    SQL: "SQL",
+    DBMS: "DB",
+    "Operating Systems": "OS",
+    "Computer Networks": "CN",
+    "Object Oriented Programming": "OOP",
+    "Web Development": "WEB",
+    React: "RE",
+    "Node.js": "ND",
+    Flask: "FL",
+    Django: "DJ",
+    "Git & GitHub": "GIT",
+    "Software Engineering": "SE",
+    "Computer Architecture": "CA",
+  };
 
-function Sidebar({ user }) {
+  if (
+    predefined[
+      subjectName
+    ]
+  ) {
+    return predefined[
+      subjectName
+    ];
+  }
+
+  const words =
+    String(
+      subjectName || ""
+    )
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean);
+
+  if (
+    words.length === 0
+  ) {
+    return "AI";
+  }
+
+  if (
+    words.length === 1
+  ) {
+    return words[0]
+      .slice(0, 3)
+      .toUpperCase();
+  }
+
+  return words
+    .slice(0, 3)
+    .map(
+      (word) =>
+        word.charAt(0)
+    )
+    .join("")
+    .toUpperCase();
+}
+
+function Sidebar({
+  user,
+}) {
   const navigate =
     useNavigate();
 
@@ -48,34 +139,50 @@ function Sidebar({ user }) {
 
   const menu = [
     {
-      icon: LayoutDashboard,
-      name: "Overview",
-      path: "/",
+      icon:
+        LayoutDashboard,
+      name:
+        "Overview",
+      path:
+        "/",
     },
     {
-      icon: BrainCircuit,
-      name: "Adaptive Quiz",
-      path: "/quiz",
+      icon:
+        BrainCircuit,
+      name:
+        "Adaptive Quiz",
+      path:
+        "/quiz",
     },
     {
-      icon: BarChart3,
-      name: "Performance",
-      path: "/performance",
+      icon:
+        BarChart3,
+      name:
+        "Performance",
+      path:
+        "/performance",
     },
     {
-      icon: Target,
-      name: "Weak Topics",
-      path: "/weak-topics",
+      icon:
+        Target,
+      name:
+        "Weak Topics",
+      path:
+        "/weak-topics",
     },
     {
-      icon: Trophy,
-      name: "Achievements",
-      path: "/achievements",
+      icon:
+        Trophy,
+      name:
+        "Achievements",
+      path:
+        "/achievements",
     },
   ];
 
   const userName =
-    user?.name || "Student";
+    user?.name ||
+    "Student";
 
   const firstLetter =
     userName
@@ -91,16 +198,24 @@ function Sidebar({ user }) {
             navigate("/")
           }
           style={{
-            cursor: "pointer",
+            cursor:
+              "pointer",
           }}
         >
           <div className="brand-logo">
-            <BrainCircuit size={22} />
+            <BrainCircuit
+              size={22}
+            />
           </div>
 
           <div>
-            <h2>NeuraQuiz</h2>
-            <span>Adaptive AI</span>
+            <h2>
+              NeuraQuiz
+            </h2>
+
+            <span>
+              Adaptive AI
+            </span>
           </div>
         </div>
 
@@ -123,7 +238,9 @@ function Sidebar({ user }) {
                 <button
                   key={name}
                   onClick={() =>
-                    navigate(path)
+                    navigate(
+                      path
+                    )
                   }
                   className={`sidebar-link ${
                     active
@@ -131,7 +248,9 @@ function Sidebar({ user }) {
                       : ""
                   }`}
                 >
-                  <Icon size={19} />
+                  <Icon
+                    size={19}
+                  />
 
                   <span>
                     {name}
@@ -151,20 +270,30 @@ function Sidebar({ user }) {
         <button
           className="sidebar-link"
           onClick={() =>
-            navigate("/settings")
+            navigate(
+              "/settings"
+            )
           }
         >
-          <Settings size={19} />
-          <span>Settings</span>
+          <Settings
+            size={19}
+          />
+
+          <span>
+            Settings
+          </span>
         </button>
 
         <div
           className="sidebar-profile"
           onClick={() =>
-            navigate("/profile")
+            navigate(
+              "/profile"
+            )
           }
           style={{
-            cursor: "pointer",
+            cursor:
+              "pointer",
           }}
         >
           <div className="profile-avatar">
@@ -191,17 +320,15 @@ function Sidebar({ user }) {
   );
 }
 
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-function Header({ user }) {
+function Header({
+  user,
+}) {
   const navigate =
     useNavigate();
 
   const userName =
-    user?.name || "Student";
+    user?.name ||
+    "Student";
 
   return (
     <header className="topbar">
@@ -220,21 +347,27 @@ function Header({ user }) {
 
       <div className="topbar-actions">
         <div className="search-box">
-          <Search size={17} />
+          <Search
+            size={17}
+          />
 
           <input
             type="text"
             placeholder="Search topics..."
           />
 
-          <span>⌘ K</span>
+          <span>
+            ⌘ K
+          </span>
         </div>
 
         <button
           className="icon-button notification-button"
           type="button"
         >
-          <Bell size={19} />
+          <Bell
+            size={19}
+          />
 
           <span className="notification-dot" />
         </button>
@@ -243,7 +376,9 @@ function Header({ user }) {
           className="avatar-button"
           type="button"
           onClick={() =>
-            navigate("/profile")
+            navigate(
+              "/profile"
+            )
           }
         >
           <CircleUserRound
@@ -254,11 +389,6 @@ function Header({ user }) {
     </header>
   );
 }
-
-
-/* =========================================================
-   STAT CARD
-========================================================= */
 
 function StatCard({
   icon: Icon,
@@ -271,7 +401,9 @@ function StatCard({
     <article className="stat-card">
       <div className="stat-card-top">
         <div className="stat-icon">
-          <Icon size={20} />
+          <Icon
+            size={20}
+          />
         </div>
 
         <span className="stat-badge">
@@ -294,41 +426,66 @@ function StatCard({
   );
 }
 
-
-/* =========================================================
-   DASHBOARD
-========================================================= */
-
 function Dashboard() {
   const navigate =
     useNavigate();
 
-  const [user, setUser] =
-    useState(null);
+  const [
+    user,
+    setUser,
+  ] = useState(
+    null
+  );
 
-  const [results, setResults] =
-    useState([]);
+  const [
+    results,
+    setResults,
+  ] = useState(
+    []
+  );
 
-  const [analytics, setAnalytics] =
-    useState(null);
+  const [
+    analytics,
+    setAnalytics,
+  ] = useState(
+    null
+  );
 
-  const [loading, setLoading] =
-    useState(true);
+  const [
+    availableSubjects,
+    setAvailableSubjects,
+  ] = useState(
+    FALLBACK_SUBJECTS
+  );
 
-  const [error, setError] =
-    useState("");
+  const [
+    loading,
+    setLoading,
+  ] = useState(
+    true
+  );
 
-
-  /* =========================================================
-     LOAD REAL USER DATA
-  ========================================================= */
+  const [
+    error,
+    setError,
+  ] = useState(
+    ""
+  );
 
   useEffect(() => {
+    let active =
+      true;
+
     const loadDashboard =
       async () => {
         try {
-          setLoading(true);
-          setError("");
+          setLoading(
+            true
+          );
+
+          setError(
+            ""
+          );
 
           const userResponse =
             await fetch(
@@ -349,10 +506,15 @@ function Dashboard() {
             navigate(
               "/login",
               {
-                replace: true,
+                replace:
+                  true,
               }
             );
 
+            return;
+          }
+
+          if (!active) {
             return;
           }
 
@@ -367,42 +529,127 @@ function Dashboard() {
             )
           );
 
+          let subjects =
+            Array.isArray(
+              userData.availableSubjects
+            )
+              ? userData.availableSubjects
+                  .map(
+                    (name) =>
+                      String(
+                        name || ""
+                      ).trim()
+                  )
+                  .filter(Boolean)
+              : [];
+
+          if (
+            subjects.length ===
+            0
+          ) {
+            try {
+              const subjectResponse =
+                await fetch(
+                  `${API_BASE}/api/quiz/subjects`,
+                  {
+                    credentials:
+                      "include",
+                  }
+                );
+
+              const subjectData =
+                await subjectResponse.json();
+
+              if (
+                subjectResponse.ok &&
+                subjectData.success &&
+                Array.isArray(
+                  subjectData.subjects
+                )
+              ) {
+                subjects =
+                  subjectData.subjects
+                    .map(
+                      (item) =>
+                        String(
+                          item?.name ||
+                            ""
+                        ).trim()
+                    )
+                    .filter(Boolean);
+              }
+            } catch {
+              // Use fallback.
+            }
+          }
+
+          if (
+            subjects.length ===
+            0
+          ) {
+            subjects = [
+              ...FALLBACK_SUBJECTS,
+            ];
+          }
+
+          setAvailableSubjects(
+            [
+              ...new Set(
+                subjects
+              ),
+            ].sort(
+              (a, b) =>
+                a.localeCompare(
+                  b
+                )
+            )
+          );
+
           const [
             resultResponse,
             analyticsResponse,
-          ] = await Promise.all([
-            fetch(
-              `${API_BASE}/api/results?limit=50`,
-              {
-                credentials:
-                  "include",
-              }
-            ),
+          ] =
+            await Promise.all([
+              fetch(
+                `${API_BASE}/api/results?limit=100`,
+                {
+                  credentials:
+                    "include",
+                }
+              ),
 
-            fetch(
-              `${API_BASE}/api/analytics/topics`,
-              {
-                credentials:
-                  "include",
-              }
-            ),
-          ]);
+              fetch(
+                `${API_BASE}/api/analytics/topics`,
+                {
+                  credentials:
+                    "include",
+                }
+              ),
+            ]);
 
           const [
             resultData,
             analyticsData,
-          ] = await Promise.all([
-            resultResponse.json(),
-            analyticsResponse.json(),
-          ]);
+          ] =
+            await Promise.all([
+              resultResponse.json(),
+              analyticsResponse.json(),
+            ]);
+
+          if (!active) {
+            return;
+          }
 
           if (
             resultResponse.ok &&
             resultData.success
           ) {
             setResults(
-              resultData.results ||
-                []
+              Array.isArray(
+                resultData.results
+              )
+                ? resultData.results
+                : []
             );
           }
 
@@ -417,50 +664,70 @@ function Dashboard() {
           }
 
         } catch (error) {
+          if (!active) {
+            return;
+          }
+
           setError(
-            "Could not load dashboard data."
+            error.message ||
+              "Could not load dashboard data."
           );
+
         } finally {
-          setLoading(false);
+          if (active) {
+            setLoading(
+              false
+            );
+          }
         }
       };
 
     loadDashboard();
+
+    return () => {
+      active =
+        false;
+    };
+
   }, [navigate]);
-
-
-  /* =========================================================
-     USER STATS
-  ========================================================= */
 
   const stats =
     user?.stats || {};
 
   const accuracy =
-    stats.accuracy || 0;
+    Number(
+      stats.accuracy
+    ) || 0;
 
   const quizzesCompleted =
-    stats.quizzesCompleted || 0;
+    Number(
+      stats.quizzesCompleted
+    ) || 0;
 
   const questionsAnswered =
-    stats.questionsAnswered || 0;
+    Number(
+      stats.questionsAnswered
+    ) || 0;
 
   const correctAnswers =
-    stats.correctAnswers || 0;
+    Number(
+      stats.correctAnswers
+    ) || 0;
 
   const streak =
-    stats.streak || 0;
+    Number(
+      stats.streak
+    ) || 0;
 
   const xp =
-    stats.xp || 0;
+    Number(
+      stats.xp
+    ) || 0;
 
   const level =
-    stats.level || 1;
-
-
-  /* =========================================================
-     TOPIC ANALYTICS
-  ========================================================= */
+    Number(
+      stats.level
+    ) || 1;
 
   const weakestTopic =
     analytics?.weakestTopic ||
@@ -479,8 +746,9 @@ function Dashboard() {
     "Complete more quizzes to unlock personalized topic recommendations.";
 
   const overallTopicAccuracy =
-    analytics?.overallAccuracy ||
-    0;
+    Number(
+      analytics?.overallAccuracy
+    ) || 0;
 
   const topicAnalytics =
     Array.isArray(
@@ -489,101 +757,149 @@ function Dashboard() {
       ? analytics.topics
       : [];
 
-
-  /* =========================================================
-     SUBJECT PERFORMANCE
-  ========================================================= */
-
   const subjectProgress =
     useMemo(() => {
-      const subjects = [
-        {
-          name: "Python",
-          topic:
-            "Programming Concepts",
-          icon: "PY",
-        },
-        {
-          name:
-            "Machine Learning",
-          topic:
-            "Models & Algorithms",
-          icon: "ML",
-        },
-        {
-          name:
-            "Data Structures",
-          topic:
-            "Core Structures",
-          icon: "DS",
-        },
+      const resultSubjects =
+        results
+          .map(
+            (result) =>
+              String(
+                result?.subject ||
+                  ""
+              ).trim()
+          )
+          .filter(Boolean);
+
+      const names = [
+        ...new Set([
+          ...availableSubjects,
+          ...resultSubjects,
+        ]),
       ];
 
-      return subjects.map(
-        (subject) => {
-          const subjectResults =
-            results.filter(
-              (result) =>
-                result.subject ===
-                subject.name
-            );
+      return names
+        .map(
+          (name) => {
+            const subjectResults =
+              results.filter(
+                (result) =>
+                  result.subject ===
+                  name
+              );
 
-          if (
-            subjectResults.length === 0
-          ) {
+            const total =
+              subjectResults.reduce(
+                (
+                  sum,
+                  result
+                ) =>
+                  sum +
+                  (
+                    Number(
+                      result.total
+                    ) || 0
+                  ),
+                0
+              );
+
+            const correct =
+              subjectResults.reduce(
+                (
+                  sum,
+                  result
+                ) =>
+                  sum +
+                  (
+                    Number(
+                      result.score
+                    ) || 0
+                  ),
+                0
+              );
+
+            const progress =
+              total > 0
+                ? Math.round(
+                    (
+                      correct /
+                      total
+                    ) * 100
+                  )
+                : 0;
+
             return {
-              ...subject,
-              progress: 0,
-              quizzes: 0,
+              name,
+              icon:
+                getSubjectIcon(
+                  name
+                ),
+              progress,
+              quizzes:
+                subjectResults.length,
             };
           }
+        )
+        .sort(
+          (a, b) => {
+            if (
+              b.quizzes !==
+              a.quizzes
+            ) {
+              return (
+                b.quizzes -
+                a.quizzes
+              );
+            }
 
-          const totalQuestions =
-            subjectResults.reduce(
-              (
-                total,
-                result
-              ) =>
-                total +
-                (result.total || 0),
-              0
+            return (
+              a.name.localeCompare(
+                b.name
+              )
             );
+          }
+        );
 
-          const totalCorrect =
-            subjectResults.reduce(
-              (
-                total,
-                result
-              ) =>
-                total +
-                (result.score || 0),
-              0
-            );
+    }, [
+      availableSubjects,
+      results,
+    ]);
 
-          const progress =
-            totalQuestions > 0
-              ? Math.round(
-                  (
-                    totalCorrect /
-                    totalQuestions
-                  ) * 100
+  const preferredSubjects =
+    Array.isArray(
+      user?.profile
+        ?.preferredSubjects
+    )
+      ? user.profile
+          .preferredSubjects
+      : [];
+
+  const dashboardSubjects =
+    useMemo(() => {
+      const preferred =
+        preferredSubjects.length >
+        0
+          ? subjectProgress.filter(
+              (subject) =>
+                preferredSubjects.includes(
+                  subject.name
                 )
-              : 0;
+            )
+          : [];
 
-          return {
-            ...subject,
-            progress,
-            quizzes:
-              subjectResults.length,
-          };
-        }
+      const source =
+        preferred.length > 0
+          ? preferred
+          : subjectProgress;
+
+      return source.slice(
+        0,
+        6
       );
-    }, [results]);
 
-
-  /* =========================================================
-     FOCUS AREA FALLBACK
-  ========================================================= */
+    }, [
+      preferredSubjects,
+      subjectProgress,
+    ]);
 
   const focusSubject =
     useMemo(() => {
@@ -594,40 +910,44 @@ function Dashboard() {
         );
 
       if (
-        attempted.length === 0
+        attempted.length ===
+        0
       ) {
         return null;
       }
 
-      return [...attempted].sort(
+      return [
+        ...attempted,
+      ].sort(
         (a, b) =>
           a.progress -
           b.progress
       )[0];
-    }, [subjectProgress]);
 
-
-  /* =========================================================
-     RECENT QUIZZES
-  ========================================================= */
+    }, [
+      subjectProgress,
+    ]);
 
   const recentQuizzes =
-    results.slice(0, 3);
-
-
-  /* =========================================================
-     LOADING
-  ========================================================= */
+    results.slice(
+      0,
+      3
+    );
 
   if (loading) {
     return (
       <div
         style={{
-          minHeight: "100vh",
-          background: "#090909",
-          display: "grid",
-          placeItems: "center",
-          color: "#ff8d58",
+          minHeight:
+            "100vh",
+          background:
+            "#090909",
+          display:
+            "grid",
+          placeItems:
+            "center",
+          color:
+            "#ff8d58",
           fontFamily:
             "Manrope, sans-serif",
         }}
@@ -637,17 +957,20 @@ function Dashboard() {
     );
   }
 
-
   return (
     <div className="app-shell">
       <div className="background-orb orb-one" />
       <div className="background-orb orb-two" />
       <div className="grid-background" />
 
-      <Sidebar user={user} />
+      <Sidebar
+        user={user}
+      />
 
       <main className="main-content">
-        <Header user={user} />
+        <Header
+          user={user}
+        />
 
         <section className="dashboard-content">
 
@@ -674,23 +997,18 @@ function Dashboard() {
             </div>
           )}
 
-
           <section className="hero">
-
             <div className="hero-content">
-
               <div className="hero-badge">
                 <Sparkles
                   size={15}
                 />
-
                 AI POWERED LEARNING
               </div>
 
               <h2>
                 Study smarter with a quiz
                 <br />
-
                 that{" "}
                 <span>
                   adapts to you.
@@ -702,15 +1020,17 @@ function Dashboard() {
                 quiz history, tracks your
                 accuracy and identifies the
                 exact topics where you need
-                more practice.
+                more practice across all
+                available subjects.
               </p>
 
               <div className="hero-actions">
-
                 <button
                   className="primary-button"
                   onClick={() =>
-                    navigate("/quiz")
+                    navigate(
+                      "/quiz"
+                    )
                   }
                 >
                   <div className="button-play">
@@ -738,20 +1058,15 @@ function Dashboard() {
                   <BarChart3
                     size={18}
                   />
-
                   View Performance
                 </button>
-
               </div>
             </div>
 
-
             <div className="hero-visual">
-
               <div className="visual-glow" />
 
               <div className="brain-card">
-
                 <div className="brain-ring ring-three" />
                 <div className="brain-ring ring-two" />
                 <div className="brain-ring ring-one" />
@@ -763,7 +1078,9 @@ function Dashboard() {
                 </div>
 
                 <div className="floating-pill pill-one">
-                  <Zap size={14} />
+                  <Zap
+                    size={14}
+                  />
                   Level {level}
                 </div>
 
@@ -771,34 +1088,28 @@ function Dashboard() {
                   <Target
                     size={14}
                   />
-
-                  {accuracy}%
-                  Accuracy
+                  {accuracy}% Accuracy
                 </div>
 
                 <div className="floating-pill pill-three">
                   <Sparkles
                     size={14}
                   />
-
                   {xp} XP
                 </div>
-
               </div>
             </div>
-
           </section>
 
-
           <section className="stats-grid">
-
             <StatCard
               icon={Target}
               label="Overall Accuracy"
               value={`${accuracy}%`}
               description={`${correctAnswers} correct from ${questionsAnswered} questions`}
               badge={
-                questionsAnswered > 0
+                questionsAnswered >
+                0
                   ? "Live"
                   : "Start learning"
               }
@@ -835,29 +1146,28 @@ function Dashboard() {
               label="Topic Accuracy"
               value={`${overallTopicAccuracy}%`}
               description={
-                topicAnalytics.length > 0
+                topicAnalytics.length >
+                0
                   ? `${topicAnalytics.length} topics analyzed`
                   : "Complete quizzes to unlock topic analytics"
               }
               badge={
-                topicAnalytics.length > 0
+                topicAnalytics.length >
+                0
                   ? "AI Insight"
                   : "No data"
               }
             />
-
           </section>
-
 
           <section
             className="panel"
             style={{
-              marginBottom: "18px",
+              marginBottom:
+                "18px",
             }}
           >
-
             <div className="panel-header">
-
               <div>
                 <p className="panel-eyebrow">
                   PERSONALIZED ANALYTICS
@@ -877,28 +1187,30 @@ function Dashboard() {
                 }
               >
                 View weak topics
-
                 <ChevronRight
                   size={16}
                 />
               </button>
-
             </div>
 
             <div
               style={{
-                display: "grid",
+                display:
+                  "grid",
                 gridTemplateColumns:
                   "repeat(3, minmax(0, 1fr))",
-                gap: "12px",
-                marginTop: "18px",
+                gap:
+                  "12px",
+                marginTop:
+                  "18px",
               }}
             >
-
               <div
                 style={{
-                  padding: "16px",
-                  borderRadius: "14px",
+                  padding:
+                    "16px",
+                  borderRadius:
+                    "14px",
                   border:
                     "1px solid rgba(255,255,255,0.07)",
                   background:
@@ -907,11 +1219,16 @@ function Dashboard() {
               >
                 <p
                   style={{
-                    margin: "0 0 8px",
-                    fontSize: "9px",
-                    letterSpacing: "1.2px",
-                    color: "#766f68",
-                    fontWeight: 700,
+                    margin:
+                      "0 0 8px",
+                    fontSize:
+                      "9px",
+                    letterSpacing:
+                      "1.2px",
+                    color:
+                      "#766f68",
+                    fontWeight:
+                      700,
                   }}
                 >
                   WEAKEST TOPIC
@@ -919,10 +1236,14 @@ function Dashboard() {
 
                 <strong
                   style={{
-                    display: "block",
-                    color: "#f2ede8",
-                    fontSize: "14px",
-                    marginBottom: "5px",
+                    display:
+                      "block",
+                    color:
+                      "#f2ede8",
+                    fontSize:
+                      "14px",
+                    marginBottom:
+                      "5px",
                   }}
                 >
                   {weakestTopic?.topic ||
@@ -931,8 +1252,10 @@ function Dashboard() {
 
                 <span
                   style={{
-                    color: "#8b837b",
-                    fontSize: "10px",
+                    color:
+                      "#8b837b",
+                    fontSize:
+                      "10px",
                   }}
                 >
                   {weakestTopic
@@ -943,8 +1266,10 @@ function Dashboard() {
 
               <div
                 style={{
-                  padding: "16px",
-                  borderRadius: "14px",
+                  padding:
+                    "16px",
+                  borderRadius:
+                    "14px",
                   border:
                     "1px solid rgba(255,255,255,0.07)",
                   background:
@@ -953,11 +1278,16 @@ function Dashboard() {
               >
                 <p
                   style={{
-                    margin: "0 0 8px",
-                    fontSize: "9px",
-                    letterSpacing: "1.2px",
-                    color: "#766f68",
-                    fontWeight: 700,
+                    margin:
+                      "0 0 8px",
+                    fontSize:
+                      "9px",
+                    letterSpacing:
+                      "1.2px",
+                    color:
+                      "#766f68",
+                    fontWeight:
+                      700,
                   }}
                 >
                   STRONGEST TOPIC
@@ -965,10 +1295,14 @@ function Dashboard() {
 
                 <strong
                   style={{
-                    display: "block",
-                    color: "#f2ede8",
-                    fontSize: "14px",
-                    marginBottom: "5px",
+                    display:
+                      "block",
+                    color:
+                      "#f2ede8",
+                    fontSize:
+                      "14px",
+                    marginBottom:
+                      "5px",
                   }}
                 >
                   {strongestTopic?.topic ||
@@ -977,8 +1311,10 @@ function Dashboard() {
 
                 <span
                   style={{
-                    color: "#8b837b",
-                    fontSize: "10px",
+                    color:
+                      "#8b837b",
+                    fontSize:
+                      "10px",
                   }}
                 >
                   {strongestTopic
@@ -989,8 +1325,10 @@ function Dashboard() {
 
               <div
                 style={{
-                  padding: "16px",
-                  borderRadius: "14px",
+                  padding:
+                    "16px",
+                  borderRadius:
+                    "14px",
                   border:
                     "1px solid rgba(255,255,255,0.07)",
                   background:
@@ -999,11 +1337,16 @@ function Dashboard() {
               >
                 <p
                   style={{
-                    margin: "0 0 8px",
-                    fontSize: "9px",
-                    letterSpacing: "1.2px",
-                    color: "#8b7567",
-                    fontWeight: 700,
+                    margin:
+                      "0 0 8px",
+                    fontSize:
+                      "9px",
+                    letterSpacing:
+                      "1.2px",
+                    color:
+                      "#8b7567",
+                    fontWeight:
+                      700,
                   }}
                 >
                   RECOMMENDED PRACTICE
@@ -1011,10 +1354,14 @@ function Dashboard() {
 
                 <strong
                   style={{
-                    display: "block",
-                    color: "#ff9f70",
-                    fontSize: "14px",
-                    marginBottom: "7px",
+                    display:
+                      "block",
+                    color:
+                      "#ff9f70",
+                    fontSize:
+                      "14px",
+                    marginBottom:
+                      "7px",
                   }}
                 >
                   {recommendedTopic ||
@@ -1023,28 +1370,38 @@ function Dashboard() {
 
                 <span
                   style={{
-                    display: "block",
-                    color: "#8b837b",
-                    fontSize: "10px",
-                    lineHeight: 1.65,
+                    display:
+                      "block",
+                    color:
+                      "#8b837b",
+                    fontSize:
+                      "10px",
+                    lineHeight:
+                      1.65,
                   }}
                 >
                   {recommendation}
                 </span>
               </div>
-
             </div>
 
-            {topicAnalytics.length > 0 && (
+            {topicAnalytics.length >
+              0 && (
               <div
                 style={{
-                  marginTop: "16px",
-                  display: "grid",
-                  gap: "10px",
+                  marginTop:
+                    "16px",
+                  display:
+                    "grid",
+                  gap:
+                    "10px",
                 }}
               >
                 {topicAnalytics
-                  .slice(0, 5)
+                  .slice(
+                    0,
+                    5
+                  )
                   .map(
                     (
                       topic,
@@ -1057,7 +1414,8 @@ function Dashboard() {
                             "grid",
                           gridTemplateColumns:
                             "minmax(150px, 1fr) 100px 1.5fr 55px",
-                          gap: "12px",
+                          gap:
+                            "12px",
                           alignItems:
                             "center",
                           padding:
@@ -1160,16 +1518,11 @@ function Dashboard() {
                   )}
               </div>
             )}
-
           </section>
 
-
           <section className="dashboard-grid">
-
             <div className="panel learning-panel">
-
               <div className="panel-header">
-
                 <div>
                   <p className="panel-eyebrow">
                     YOUR LEARNING
@@ -1189,17 +1542,14 @@ function Dashboard() {
                   }
                 >
                   View all
-
                   <ChevronRight
                     size={16}
                   />
                 </button>
-
               </div>
 
               <div className="subject-list">
-
-                {subjectProgress.map(
+                {dashboardSubjects.map(
                   (subject) => (
                     <div
                       className="subject-item"
@@ -1208,45 +1558,30 @@ function Dashboard() {
                       }
                     >
                       <div className="subject-main">
-
                         <div className="subject-icon">
-                          {
-                            subject.icon
-                          }
+                          {subject.icon}
                         </div>
 
                         <div className="subject-info">
-
                           <div className="subject-name-row">
-
                             <strong>
-                              {
-                                subject.name
-                              }
+                              {subject.name}
                             </strong>
 
                             <span>
-                              {
-                                subject.progress
-                              }
-                              %
+                              {subject.progress}%
                             </span>
-
                           </div>
 
                           <p>
-                            {
-                              subject.quizzes
-                            }{" "}
-                            {subject.quizzes ===
-                            1
+                            {subject.quizzes}{" "}
+                            {subject.quizzes === 1
                               ? "quiz"
                               : "quizzes"}{" "}
                             completed
                           </p>
 
                           <div className="progress-track">
-
                             <div
                               className="progress-fill"
                               style={{
@@ -1254,10 +1589,8 @@ function Dashboard() {
                                   `${subject.progress}%`,
                               }}
                             />
-
                           </div>
                         </div>
-
                       </div>
 
                       <button
@@ -1272,19 +1605,35 @@ function Dashboard() {
                           size={18}
                         />
                       </button>
-
                     </div>
                   )
                 )}
-
               </div>
+
+              {subjectProgress.length >
+                dashboardSubjects.length && (
+                <button
+                  className="text-button"
+                  style={{
+                    marginTop:
+                      "14px",
+                  }}
+                  onClick={() =>
+                    navigate(
+                      "/performance"
+                    )
+                  }
+                >
+                  View all {subjectProgress.length} subjects
+                  <ChevronRight
+                    size={16}
+                  />
+                </button>
+              )}
             </div>
 
-
             <div className="panel focus-panel">
-
               <div className="panel-header">
-
                 <div>
                   <p className="panel-eyebrow">
                     AI INSIGHT
@@ -1301,21 +1650,19 @@ function Dashboard() {
                   />
                   AI
                 </div>
-
               </div>
 
               {weakestTopic ? (
                 <>
                   <div className="focus-score">
-
                     <div className="focus-circle">
                       <span>
-                        {
-                          weakestTopic.accuracy
-                        }
+                        {weakestTopic.accuracy}
                       </span>
 
-                      <small>%</small>
+                      <small>
+                        %
+                      </small>
                     </div>
 
                     <div>
@@ -1324,27 +1671,19 @@ function Dashboard() {
                       </p>
 
                       <h4>
-                        {
-                          weakestTopic.topic
-                        }
+                        {weakestTopic.topic}
                       </h4>
 
                       <span>
-                        {
-                          weakestTopic.subject
-                        }{" "}
+                        {weakestTopic.subject}{" "}
                         •{" "}
-                        {
-                          weakestTopic.answered
-                        }{" "}
+                        {weakestTopic.answered}{" "}
                         answers analyzed
                       </span>
                     </div>
-
                   </div>
 
                   <div className="ai-message">
-
                     <Sparkles
                       size={17}
                     />
@@ -1353,23 +1692,17 @@ function Dashboard() {
                       Your current weakest
                       topic is{" "}
                       <strong>
-                        {
-                          weakestTopic.topic
-                        }
+                        {weakestTopic.topic}
                       </strong>{" "}
                       with{" "}
                       <strong>
-                        {
-                          weakestTopic.accuracy
-                        }
-                        %
+                        {weakestTopic.accuracy}%
                       </strong>{" "}
                       accuracy. Focus Mode
                       can prioritize this
                       topic in your next
                       adaptive quiz.
                     </p>
-
                   </div>
 
                   <button
@@ -1381,7 +1714,6 @@ function Dashboard() {
                     }
                   >
                     Practice weak topic
-
                     <ArrowUpRight
                       size={17}
                     />
@@ -1390,15 +1722,14 @@ function Dashboard() {
               ) : focusSubject ? (
                 <>
                   <div className="focus-score">
-
                     <div className="focus-circle">
                       <span>
-                        {
-                          focusSubject.progress
-                        }
+                        {focusSubject.progress}
                       </span>
 
-                      <small>%</small>
+                      <small>
+                        %
+                      </small>
                     </div>
 
                     <div>
@@ -1407,23 +1738,17 @@ function Dashboard() {
                       </p>
 
                       <h4>
-                        {
-                          focusSubject.name
-                        }
+                        {focusSubject.name}
                       </h4>
 
                       <span>
-                        {
-                          focusSubject.quizzes
-                        }{" "}
+                        {focusSubject.quizzes}{" "}
                         quizzes analyzed
                       </span>
                     </div>
-
                   </div>
 
                   <div className="ai-message">
-
                     <Sparkles
                       size={17}
                     />
@@ -1434,20 +1759,14 @@ function Dashboard() {
                       lowest subject accuracy
                       is currently{" "}
                       <strong>
-                        {
-                          focusSubject.progress
-                        }
-                        %
+                        {focusSubject.progress}%
                       </strong>{" "}
                       in{" "}
                       <strong>
-                        {
-                          focusSubject.name
-                        }
+                        {focusSubject.name}
                       </strong>
                       .
                     </p>
-
                   </div>
 
                   <button
@@ -1459,7 +1778,6 @@ function Dashboard() {
                     }
                   >
                     Practice weak subject
-
                     <ArrowUpRight
                       size={17}
                     />
@@ -1468,7 +1786,6 @@ function Dashboard() {
               ) : (
                 <>
                   <div className="ai-message">
-
                     <Sparkles
                       size={17}
                     />
@@ -1480,7 +1797,6 @@ function Dashboard() {
                       weakest topic
                       automatically.
                     </p>
-
                   </div>
 
                   <button
@@ -1492,22 +1808,17 @@ function Dashboard() {
                     }
                   >
                     Start first quiz
-
                     <ArrowUpRight
                       size={17}
                     />
                   </button>
                 </>
               )}
-
             </div>
           </section>
 
-
           <section className="panel recent-panel">
-
             <div className="panel-header">
-
               <div>
                 <p className="panel-eyebrow">
                   ACTIVITY
@@ -1527,18 +1838,15 @@ function Dashboard() {
                 }
               >
                 See performance
-
                 <ChevronRight
                   size={16}
                 />
               </button>
-
             </div>
 
             {recentQuizzes.length >
             0 ? (
               <div className="quiz-table">
-
                 <div className="quiz-table-head">
                   <span>QUIZ</span>
                   <span>SCORE</span>
@@ -1576,49 +1884,32 @@ function Dashboard() {
                         }
                       >
                         <div className="quiz-name">
-
                           <div
                             className={`quiz-number number-${
-                              index +
-                              1
+                              index + 1
                             }`}
                           >
-                            {index +
-                              1}
+                            {index + 1}
                           </div>
 
                           <div>
                             <strong>
-                              {
-                                quiz.subject
-                              }
+                              {quiz.subject}
                             </strong>
 
                             <span>
-                              Adaptive
-                              Quiz
+                              Adaptive Quiz
                             </span>
                           </div>
-
                         </div>
 
                         <strong>
-                          {
-                            quiz.score
-                          }
-                          /
-                          {
-                            quiz.total
-                          }
+                          {quiz.score}/{quiz.total}
                         </strong>
 
                         <div className="accuracy">
-
                           <span>
-                            {
-                              quiz.accuracy
-                            }
-                            %
+                            {quiz.accuracy}%
                           </span>
 
                           <div className="mini-progress">
@@ -1629,7 +1920,6 @@ function Dashboard() {
                               }}
                             />
                           </div>
-
                         </div>
 
                         <span className="table-muted">
@@ -1648,12 +1938,10 @@ function Dashboard() {
                             size={18}
                           />
                         </button>
-
                       </div>
                     );
                   }
                 )}
-
               </div>
             ) : (
               <div
@@ -1674,9 +1962,7 @@ function Dashboard() {
                 here.
               </div>
             )}
-
           </section>
-
         </section>
       </main>
     </div>
