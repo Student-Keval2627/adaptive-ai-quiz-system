@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "Computer Architecture",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is computer architecture mainly concerned with?",
+    "options": [
+      "The design and organization of computer systems",
+      "Only writing application code",
+      "Only database design",
+      "Only network routing"
+    ],
+    "answer": "The design and organization of computer systems"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "CPU",
+    "difficulty": "Easy",
+    "question": "What does CPU stand for?",
+    "options": [
+      "Central Processing Unit",
+      "Computer Program Utility",
+      "Central Program Unit",
+      "Control Processing Utility"
+    ],
+    "answer": "Central Processing Unit"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "CPU",
+    "difficulty": "Easy",
+    "question": "Which CPU component performs arithmetic and logical operations?",
+    "options": [
+      "ALU",
+      "Control Unit",
+      "Cache only",
+      "Register file only"
+    ],
+    "answer": "ALU"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "CPU",
+    "difficulty": "Easy",
+    "question": "What does ALU stand for?",
+    "options": [
+      "Arithmetic Logic Unit",
+      "Application Link Unit",
+      "Advanced Logic Utility",
+      "Arithmetic Load Unit"
+    ],
+    "answer": "Arithmetic Logic Unit"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "CPU",
+    "difficulty": "Easy",
+    "question": "What is the main role of the control unit?",
+    "options": [
+      "Direct and coordinate processor operations",
+      "Store files permanently",
+      "Render graphics only",
+      "Manage network addresses"
+    ],
+    "answer": "Direct and coordinate processor operations"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Registers",
+    "difficulty": "Easy",
+    "question": "What is a CPU register?",
+    "options": [
+      "A very small, fast storage location inside the processor",
+      "A hard disk partition",
+      "A database table",
+      "A network packet"
+    ],
+    "answer": "A very small, fast storage location inside the processor"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Registers",
+    "difficulty": "Easy",
+    "question": "Which register commonly stores the address of the next instruction?",
+    "options": [
+      "Program Counter",
+      "Instruction Register",
+      "Accumulator only",
+      "Stack Pointer only"
+    ],
+    "answer": "Program Counter"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Registers",
+    "difficulty": "Easy",
+    "question": "Which register commonly holds the current instruction being decoded or executed?",
+    "options": [
+      "Instruction Register",
+      "Program Counter",
+      "Memory Address Register only",
+      "Status Register only"
+    ],
+    "answer": "Instruction Register"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Memory",
+    "difficulty": "Easy",
+    "question": "Which memory is typically faster, cache or main memory?",
+    "options": [
+      "Cache",
+      "Main memory",
+      "Both are always equal",
+      "Hard disk"
+    ],
+    "answer": "Cache"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Memory",
+    "difficulty": "Easy",
+    "question": "What is RAM mainly used for?",
+    "options": [
+      "Temporary working storage for active programs and data",
+      "Permanent archival only",
+      "Only BIOS storage",
+      "Only network configuration"
+    ],
+    "answer": "Temporary working storage for active programs and data"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Memory",
+    "difficulty": "Easy",
+    "question": "What does ROM stand for?",
+    "options": [
+      "Read Only Memory",
+      "Random Output Memory",
+      "Rapid Operating Memory",
+      "Read Output Module"
+    ],
+    "answer": "Read Only Memory"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Memory",
+    "difficulty": "Easy",
+    "question": "Which memory is non-volatile?",
+    "options": [
+      "ROM",
+      "DRAM",
+      "SRAM cache only",
+      "CPU register"
+    ],
+    "answer": "ROM"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Cache",
+    "difficulty": "Easy",
+    "question": "What is the purpose of cache memory?",
+    "options": [
+      "Reduce average memory access time by storing frequently used data",
+      "Replace the CPU",
+      "Store files permanently",
+      "Manage software licenses"
+    ],
+    "answer": "Reduce average memory access time by storing frequently used data"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Buses",
+    "difficulty": "Easy",
+    "question": "What is a system bus?",
+    "options": [
+      "A set of communication lines connecting computer components",
+      "A software process",
+      "A database schema",
+      "A graphics file"
+    ],
+    "answer": "A set of communication lines connecting computer components"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Buses",
+    "difficulty": "Easy",
+    "question": "Which bus carries memory addresses?",
+    "options": [
+      "Address bus",
+      "Data bus",
+      "Control bus only",
+      "I/O bus only"
+    ],
+    "answer": "Address bus"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Buses",
+    "difficulty": "Easy",
+    "question": "Which bus carries actual data values?",
+    "options": [
+      "Data bus",
+      "Address bus",
+      "Control bus only",
+      "Clock bus"
+    ],
+    "answer": "Data bus"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Buses",
+    "difficulty": "Easy",
+    "question": "Which bus carries signals such as read and write commands?",
+    "options": [
+      "Control bus",
+      "Address bus",
+      "Data bus",
+      "Cache bus only"
+    ],
+    "answer": "Control bus"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Instruction Cycle",
+    "difficulty": "Easy",
+    "question": "What is the first major step of the instruction cycle?",
+    "options": [
+      "Fetch",
+      "Decode",
+      "Execute",
+      "Write-back only"
+    ],
+    "answer": "Fetch"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Instruction Cycle",
+    "difficulty": "Easy",
+    "question": "What happens during the decode stage?",
+    "options": [
+      "The CPU determines what operation the instruction represents",
+      "The instruction is stored on disk",
+      "The result is printed",
+      "The cache is cleared"
+    ],
+    "answer": "The CPU determines what operation the instruction represents"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Instruction Cycle",
+    "difficulty": "Easy",
+    "question": "What happens during the execute stage?",
+    "options": [
+      "The requested operation is performed",
+      "The source code is compiled",
+      "The operating system boots",
+      "The program is saved"
+    ],
+    "answer": "The requested operation is performed"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Clock",
+    "difficulty": "Easy",
+    "question": "What does CPU clock speed commonly measure?",
+    "options": [
+      "Cycles per second",
+      "Number of registers",
+      "Cache size only",
+      "Number of instructions in a program"
+    ],
+    "answer": "Cycles per second"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Clock",
+    "difficulty": "Easy",
+    "question": "What unit is commonly used for modern CPU clock frequency?",
+    "options": [
+      "GHz",
+      "GB",
+      "Mbps",
+      "Volts only"
+    ],
+    "answer": "GHz"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Binary",
+    "difficulty": "Easy",
+    "question": "How many bits are in one byte?",
+    "options": [
+      "8",
+      "4",
+      "16",
+      "32"
+    ],
+    "answer": "8"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Binary",
+    "difficulty": "Easy",
+    "question": "Which digits are used in binary representation?",
+    "options": [
+      "0 and 1",
+      "0 through 7",
+      "0 through 9",
+      "A through F only"
+    ],
+    "answer": "0 and 1"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Storage",
+    "difficulty": "Easy",
+    "question": "Which device is generally non-volatile secondary storage?",
+    "options": [
+      "SSD",
+      "CPU register",
+      "L1 cache",
+      "DRAM only"
+    ],
+    "answer": "SSD"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "I/O",
+    "difficulty": "Easy",
+    "question": "What does I/O stand for?",
+    "options": [
+      "Input/Output",
+      "Internal Operation",
+      "Instruction Order",
+      "Integrated Output"
+    ],
+    "answer": "Input/Output"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "I/O",
+    "difficulty": "Easy",
+    "question": "Which of the following is an input device?",
+    "options": [
+      "Keyboard",
+      "Monitor",
+      "Speaker",
+      "Printer"
+    ],
+    "answer": "Keyboard"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "I/O",
+    "difficulty": "Easy",
+    "question": "Which of the following is an output device?",
+    "options": [
+      "Monitor",
+      "Keyboard",
+      "Mouse",
+      "Scanner"
+    ],
+    "answer": "Monitor"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "ISA",
+    "difficulty": "Easy",
+    "question": "What does ISA stand for in processor design?",
+    "options": [
+      "Instruction Set Architecture",
+      "Internal System Access",
+      "Integrated Software Architecture",
+      "Instruction Storage Area"
+    ],
+    "answer": "Instruction Set Architecture"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "ISA",
+    "difficulty": "Easy",
+    "question": "What does an instruction set define?",
+    "options": [
+      "Operations a processor can understand and execute",
+      "Only processor temperature limits",
+      "Only memory size",
+      "Only operating system commands"
+    ],
+    "answer": "Operations a processor can understand and execute"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "RISC",
+    "difficulty": "Easy",
+    "question": "What does RISC stand for?",
+    "options": [
+      "Reduced Instruction Set Computer",
+      "Rapid Instruction System Computer",
+      "Reduced Internal Storage Computer",
+      "Random Instruction Set Controller"
+    ],
+    "answer": "Reduced Instruction Set Computer"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "CISC",
+    "difficulty": "Easy",
+    "question": "What does CISC stand for?",
+    "options": [
+      "Complex Instruction Set Computer",
+      "Central Instruction Storage Computer",
+      "Computer Integrated System Controller",
+      "Complex Internal Software Computer"
+    ],
+    "answer": "Complex Instruction Set Computer"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Parallelism",
+    "difficulty": "Easy",
+    "question": "What is a multi-core processor?",
+    "options": [
+      "A processor containing multiple processing cores",
+      "A processor with multiple hard disks",
+      "A computer with multiple keyboards",
+      "A CPU with only one instruction"
+    ],
+    "answer": "A processor containing multiple processing cores"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Performance",
+    "difficulty": "Easy",
+    "question": "What does latency mean in computer systems?",
+    "options": [
+      "The delay before an operation completes or data becomes available",
+      "The number of files stored",
+      "The amount of RAM only",
+      "The CPU voltage"
+    ],
+    "answer": "The delay before an operation completes or data becomes available"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Registers",
+    "difficulty": "Medium",
+    "question": "What does the Memory Address Register typically hold?",
+    "options": [
+      "The address of the memory location being accessed",
+      "The data being written only",
+      "The next opcode",
+      "The stack contents"
+    ],
+    "answer": "The address of the memory location being accessed"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Registers",
+    "difficulty": "Medium",
+    "question": "What does the Memory Data Register commonly hold?",
+    "options": [
+      "Data being transferred to or from memory",
+      "Only instruction addresses",
+      "Only condition flags",
+      "Only stack pointers"
+    ],
+    "answer": "Data being transferred to or from memory"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Instruction Cycle",
+    "difficulty": "Medium",
+    "question": "What is write-back in a typical instruction pipeline?",
+    "options": [
+      "Writing a computed result to a destination register or architectural state",
+      "Writing source code to disk",
+      "Fetching the next instruction",
+      "Clearing cache lines"
+    ],
+    "answer": "Writing a computed result to a destination register or architectural state"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Pipelining",
+    "difficulty": "Medium",
+    "question": "What is instruction pipelining?",
+    "options": [
+      "Overlapping stages of multiple instructions to improve throughput",
+      "Executing only one instruction at a time",
+      "Running multiple operating systems",
+      "Caching source code"
+    ],
+    "answer": "Overlapping stages of multiple instructions to improve throughput"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Pipelining",
+    "difficulty": "Medium",
+    "question": "What is a pipeline hazard?",
+    "options": [
+      "A condition that prevents the next instruction from executing in its intended pipeline cycle",
+      "A power supply failure",
+      "A hard disk error",
+      "A syntax error"
+    ],
+    "answer": "A condition that prevents the next instruction from executing in its intended pipeline cycle"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Pipelining",
+    "difficulty": "Medium",
+    "question": "What is a data hazard?",
+    "options": [
+      "An instruction depends on a result that is not yet available",
+      "Two instructions use different registers",
+      "The cache is empty",
+      "The CPU temperature rises"
+    ],
+    "answer": "An instruction depends on a result that is not yet available"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Pipelining",
+    "difficulty": "Medium",
+    "question": "What is a control hazard?",
+    "options": [
+      "Uncertainty about the next instruction due to branches or jumps",
+      "Two instructions need the same ALU only",
+      "A cache miss",
+      "A memory parity error"
+    ],
+    "answer": "Uncertainty about the next instruction due to branches or jumps"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Pipelining",
+    "difficulty": "Medium",
+    "question": "What is a structural hazard?",
+    "options": [
+      "Two operations need the same hardware resource at the same time",
+      "A branch is mispredicted",
+      "A register value is unavailable",
+      "A page fault occurs"
+    ],
+    "answer": "Two operations need the same hardware resource at the same time"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Pipelining",
+    "difficulty": "Medium",
+    "question": "What is forwarding or bypassing used for?",
+    "options": [
+      "Reducing certain data hazard stalls by passing results directly to later pipeline stages",
+      "Skipping memory protection",
+      "Ignoring branch instructions",
+      "Sending data to storage"
+    ],
+    "answer": "Reducing certain data hazard stalls by passing results directly to later pipeline stages"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Cache",
+    "difficulty": "Medium",
+    "question": "What is a cache hit?",
+    "options": [
+      "Requested data is found in the cache",
+      "Requested data is missing from all memory",
+      "The CPU stops",
+      "A branch is predicted correctly"
+    ],
+    "answer": "Requested data is found in the cache"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Cache",
+    "difficulty": "Medium",
+    "question": "What is a cache miss?",
+    "options": [
+      "Requested data is not found in the cache",
+      "The cache contains duplicate data only",
+      "The CPU skips an instruction",
+      "The operating system crashes"
+    ],
+    "answer": "Requested data is not found in the cache"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Cache",
+    "difficulty": "Medium",
+    "question": "What is temporal locality?",
+    "options": [
+      "Recently accessed data is likely to be accessed again soon",
+      "Nearby memory addresses are likely to be accessed",
+      "Every address is equally likely",
+      "Only instructions show locality"
+    ],
+    "answer": "Recently accessed data is likely to be accessed again soon"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Cache",
+    "difficulty": "Medium",
+    "question": "What is spatial locality?",
+    "options": [
+      "Data near a recently accessed address is likely to be accessed soon",
+      "The same value is accessed repeatedly",
+      "Cache lines are always sequential",
+      "Only stack memory is cached"
+    ],
+    "answer": "Data near a recently accessed address is likely to be accessed soon"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Cache Mapping",
+    "difficulty": "Medium",
+    "question": "In a direct-mapped cache, how many cache locations can a memory block map to?",
+    "options": [
+      "Exactly one",
+      "Any cache line",
+      "Exactly two",
+      "All lines in one set"
+    ],
+    "answer": "Exactly one"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Cache Mapping",
+    "difficulty": "Medium",
+    "question": "In a fully associative cache, where can a memory block be placed?",
+    "options": [
+      "Any cache line",
+      "Only one predetermined line",
+      "Only the first line",
+      "Only even-numbered lines"
+    ],
+    "answer": "Any cache line"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Cache Mapping",
+    "difficulty": "Medium",
+    "question": "What is set-associative cache mapping?",
+    "options": [
+      "A block maps to one set but may occupy any line within that set",
+      "A block maps to exactly one line only",
+      "A block can go anywhere in the whole cache",
+      "A block never moves"
+    ],
+    "answer": "A block maps to one set but may occupy any line within that set"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Cache Policies",
+    "difficulty": "Medium",
+    "question": "What is write-through cache policy?",
+    "options": [
+      "Writes update cache and lower-level memory immediately",
+      "Writes update only cache until eviction",
+      "Writes bypass cache entirely",
+      "Reads are disabled"
+    ],
+    "answer": "Writes update cache and lower-level memory immediately"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Cache Policies",
+    "difficulty": "Medium",
+    "question": "What is write-back cache policy?",
+    "options": [
+      "Writes update cache first and modified data is written to lower memory later",
+      "Writes always skip cache",
+      "Every write updates all cache levels immediately",
+      "Only reads use cache"
+    ],
+    "answer": "Writes update cache first and modified data is written to lower memory later"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Memory Hierarchy",
+    "difficulty": "Medium",
+    "question": "Why is memory organized as a hierarchy?",
+    "options": [
+      "To balance speed, capacity, and cost",
+      "Because all memory technologies have the same speed",
+      "To avoid registers",
+      "To eliminate secondary storage"
+    ],
+    "answer": "To balance speed, capacity, and cost"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Virtual Memory",
+    "difficulty": "Medium",
+    "question": "What is virtual memory?",
+    "options": [
+      "A mechanism that gives processes a logical address space mapped to physical memory and storage",
+      "A CPU register",
+      "A cache replacement policy",
+      "A network protocol"
+    ],
+    "answer": "A mechanism that gives processes a logical address space mapped to physical memory and storage"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Virtual Memory",
+    "difficulty": "Medium",
+    "question": "What does a TLB cache?",
+    "options": [
+      "Recent virtual-to-physical address translations",
+      "Instructions only",
+      "Branch outcomes only",
+      "Disk file names"
+    ],
+    "answer": "Recent virtual-to-physical address translations"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Endianness",
+    "difficulty": "Medium",
+    "question": "What does little-endian mean?",
+    "options": [
+      "The least significant byte is stored at the lowest memory address",
+      "The most significant byte is stored first",
+      "Bits are reversed within every byte",
+      "Only integers can be stored"
+    ],
+    "answer": "The least significant byte is stored at the lowest memory address"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Endianness",
+    "difficulty": "Medium",
+    "question": "What does big-endian mean?",
+    "options": [
+      "The most significant byte is stored at the lowest memory address",
+      "The least significant byte is stored first",
+      "Bytes are stored randomly",
+      "Only network data uses memory"
+    ],
+    "answer": "The most significant byte is stored at the lowest memory address"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Interrupts",
+    "difficulty": "Medium",
+    "question": "What is an interrupt?",
+    "options": [
+      "A signal that causes the processor to suspend normal execution and handle an event",
+      "A cache replacement algorithm",
+      "A type of register",
+      "A compiler warning"
+    ],
+    "answer": "A signal that causes the processor to suspend normal execution and handle an event"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Interrupts",
+    "difficulty": "Medium",
+    "question": "What is an interrupt service routine?",
+    "options": [
+      "Code executed to handle an interrupt",
+      "A pipeline stage",
+      "A cache block",
+      "A page table"
+    ],
+    "answer": "Code executed to handle an interrupt"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "DMA",
+    "difficulty": "Medium",
+    "question": "What does DMA stand for?",
+    "options": [
+      "Direct Memory Access",
+      "Dynamic Memory Allocation",
+      "Data Mapping Address",
+      "Direct Module Arithmetic"
+    ],
+    "answer": "Direct Memory Access"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "DMA",
+    "difficulty": "Medium",
+    "question": "What is the main advantage of DMA?",
+    "options": [
+      "Devices can transfer blocks of data to or from memory with reduced CPU involvement",
+      "It increases CPU clock speed",
+      "It replaces cache",
+      "It performs branch prediction"
+    ],
+    "answer": "Devices can transfer blocks of data to or from memory with reduced CPU involvement"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "RISC vs CISC",
+    "difficulty": "Medium",
+    "question": "Which characteristic is commonly associated with RISC designs?",
+    "options": [
+      "Relatively simple instructions and regular formats",
+      "Only one register",
+      "No pipelining",
+      "No memory access instructions"
+    ],
+    "answer": "Relatively simple instructions and regular formats"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "RISC vs CISC",
+    "difficulty": "Medium",
+    "question": "Which characteristic is commonly associated with CISC designs?",
+    "options": [
+      "A richer set of more complex instructions and addressing modes",
+      "No microcode ever",
+      "Only fixed-length instructions",
+      "No memory operands"
+    ],
+    "answer": "A richer set of more complex instructions and addressing modes"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Performance",
+    "difficulty": "Medium",
+    "question": "What does CPI stand for?",
+    "options": [
+      "Cycles Per Instruction",
+      "Commands Per Input",
+      "Cache Performance Index",
+      "Clock Process Interval"
+    ],
+    "answer": "Cycles Per Instruction"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Performance",
+    "difficulty": "Medium",
+    "question": "What does IPC stand for in processor performance?",
+    "options": [
+      "Instructions Per Cycle",
+      "Interrupts Per Core",
+      "Inputs Per Cache",
+      "Internal Process Count"
+    ],
+    "answer": "Instructions Per Cycle"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Performance",
+    "difficulty": "Medium",
+    "question": "What is throughput?",
+    "options": [
+      "Amount of work completed per unit time",
+      "Delay of one operation only",
+      "Cache capacity",
+      "Clock period"
+    ],
+    "answer": "Amount of work completed per unit time"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Parallelism",
+    "difficulty": "Medium",
+    "question": "What is SIMD?",
+    "options": [
+      "Single Instruction, Multiple Data",
+      "Single Input, Multiple Devices",
+      "Sequential Instruction, Multiple Data",
+      "Shared Instruction Memory Design"
+    ],
+    "answer": "Single Instruction, Multiple Data"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Performance",
+    "difficulty": "Hard",
+    "question": "What is the classic CPU execution time equation?",
+    "options": [
+      "Instruction Count × CPI × Clock Cycle Time",
+      "Instruction Count + CPI + Clock Speed",
+      "CPI ÷ Instruction Count",
+      "Clock Rate × Cache Size"
+    ],
+    "answer": "Instruction Count × CPI × Clock Cycle Time"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Performance",
+    "difficulty": "Hard",
+    "question": "Why can increasing clock frequency fail to improve performance proportionally?",
+    "options": [
+      "Memory latency, pipeline stalls, power limits, and other bottlenecks may dominate",
+      "Clock frequency never affects performance",
+      "Higher frequency reduces instruction count automatically",
+      "All workloads are memory-free"
+    ],
+    "answer": "Memory latency, pipeline stalls, power limits, and other bottlenecks may dominate"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Amdahl's Law",
+    "difficulty": "Hard",
+    "question": "What does Amdahl's Law describe?",
+    "options": [
+      "The maximum speedup limited by the portion of execution that cannot be improved or parallelized",
+      "The relationship between cache size and power only",
+      "The number of cores in a CPU",
+      "The voltage-frequency relationship"
+    ],
+    "answer": "The maximum speedup limited by the portion of execution that cannot be improved or parallelized"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Amdahl's Law",
+    "difficulty": "Hard",
+    "question": "If 20% of a program is strictly serial, what is the maximum theoretical speedup with unlimited parallel resources?",
+    "options": [
+      "5×",
+      "10×",
+      "20×",
+      "80×"
+    ],
+    "answer": "5×"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Branch Prediction",
+    "difficulty": "Hard",
+    "question": "Why is branch prediction important in deeply pipelined processors?",
+    "options": [
+      "A wrong branch decision can waste many pipeline stages",
+      "It increases cache size",
+      "It changes the instruction set",
+      "It removes interrupts"
+    ],
+    "answer": "A wrong branch decision can waste many pipeline stages"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Branch Prediction",
+    "difficulty": "Hard",
+    "question": "What is a branch misprediction penalty?",
+    "options": [
+      "Lost cycles caused by discarding incorrectly speculated work",
+      "The number of branch instructions",
+      "Cache lookup time only",
+      "The time to fetch from ROM"
+    ],
+    "answer": "Lost cycles caused by discarding incorrectly speculated work"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Speculation",
+    "difficulty": "Hard",
+    "question": "What is speculative execution?",
+    "options": [
+      "Executing instructions before it is certain they are needed, based on predictions",
+      "Executing only verified instructions after retirement",
+      "Running code only in software simulators",
+      "Disabling branch prediction"
+    ],
+    "answer": "Executing instructions before it is certain they are needed, based on predictions"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Out-of-Order Execution",
+    "difficulty": "Hard",
+    "question": "What is out-of-order execution?",
+    "options": [
+      "Executing ready instructions in an order different from original program order while preserving correct architectural results",
+      "Reordering source code permanently",
+      "Executing instructions randomly",
+      "Running only one instruction per cycle"
+    ],
+    "answer": "Executing ready instructions in an order different from original program order while preserving correct architectural results"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Out-of-Order Execution",
+    "difficulty": "Hard",
+    "question": "Why is register renaming used?",
+    "options": [
+      "To eliminate false dependencies caused by reuse of architectural register names",
+      "To increase source-code readability",
+      "To reduce cache size",
+      "To remove true data dependencies"
+    ],
+    "answer": "To eliminate false dependencies caused by reuse of architectural register names"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Dependencies",
+    "difficulty": "Hard",
+    "question": "What is a RAW dependency?",
+    "options": [
+      "Read After Write, representing a true data dependency",
+      "Read After Writeback only",
+      "Register Allocation Warning",
+      "Random Access Write"
+    ],
+    "answer": "Read After Write, representing a true data dependency"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Dependencies",
+    "difficulty": "Hard",
+    "question": "What is a WAR dependency?",
+    "options": [
+      "Write After Read, a false name dependency",
+      "Write After Register only",
+      "A true data dependency",
+      "Write Address Register"
+    ],
+    "answer": "Write After Read, a false name dependency"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Dependencies",
+    "difficulty": "Hard",
+    "question": "What is a WAW dependency?",
+    "options": [
+      "Write After Write, a false output dependency",
+      "A true read dependency",
+      "Write Address Word",
+      "A cache miss type"
+    ],
+    "answer": "Write After Write, a false output dependency"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Superscalar",
+    "difficulty": "Hard",
+    "question": "What is a superscalar processor?",
+    "options": [
+      "A processor capable of issuing multiple instructions in one cycle when resources and dependencies allow",
+      "A processor with only one pipeline stage",
+      "A processor without cache",
+      "A processor that executes only scalar instructions"
+    ],
+    "answer": "A processor capable of issuing multiple instructions in one cycle when resources and dependencies allow"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Superscalar",
+    "difficulty": "Hard",
+    "question": "What limits superscalar instruction issue width in practice?",
+    "options": [
+      "Instruction dependencies, available execution units, fetch/decode bandwidth, and branch behavior",
+      "Only hard disk capacity",
+      "Only operating system version",
+      "Only source language"
+    ],
+    "answer": "Instruction dependencies, available execution units, fetch/decode bandwidth, and branch behavior"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Cache Coherence",
+    "difficulty": "Hard",
+    "question": "What problem does cache coherence solve in multicore systems?",
+    "options": [
+      "Keeping multiple cached copies of shared memory logically consistent",
+      "Increasing disk throughput",
+      "Managing virtual memory pages only",
+      "Scheduling processes"
+    ],
+    "answer": "Keeping multiple cached copies of shared memory logically consistent"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Cache Coherence",
+    "difficulty": "Hard",
+    "question": "What does the MESI protocol manage?",
+    "options": [
+      "Cache line states for coherence in shared-memory multiprocessors",
+      "Virtual memory page permissions only",
+      "Disk scheduling",
+      "Branch prediction tables"
+    ],
+    "answer": "Cache line states for coherence in shared-memory multiprocessors"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Cache Coherence",
+    "difficulty": "Hard",
+    "question": "What does the 'M' state in MESI mean?",
+    "options": [
+      "Modified",
+      "Mapped",
+      "Missing",
+      "Masked"
+    ],
+    "answer": "Modified"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Cache Coherence",
+    "difficulty": "Hard",
+    "question": "What does the 'S' state in MESI mean?",
+    "options": [
+      "Shared",
+      "Stored",
+      "Speculative",
+      "Stalled"
+    ],
+    "answer": "Shared"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Memory Consistency",
+    "difficulty": "Hard",
+    "question": "What is a memory consistency model?",
+    "options": [
+      "Rules defining the order in which memory operations become visible to processors",
+      "A cache replacement algorithm",
+      "A virtual memory page format",
+      "A DRAM refresh method"
+    ],
+    "answer": "Rules defining the order in which memory operations become visible to processors"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "NUMA",
+    "difficulty": "Hard",
+    "question": "What does NUMA stand for?",
+    "options": [
+      "Non-Uniform Memory Access",
+      "New Unified Memory Architecture",
+      "Non-User Memory Allocation",
+      "Network Unified Memory Access"
+    ],
+    "answer": "Non-Uniform Memory Access"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "NUMA",
+    "difficulty": "Hard",
+    "question": "What is a key characteristic of NUMA systems?",
+    "options": [
+      "Memory access time depends on which processor or node owns the memory",
+      "All memory has identical latency",
+      "Each CPU has no local memory",
+      "There is no shared address space"
+    ],
+    "answer": "Memory access time depends on which processor or node owns the memory"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Virtual Memory",
+    "difficulty": "Hard",
+    "question": "Why are multi-level page tables used?",
+    "options": [
+      "To reduce page-table memory overhead for sparse address spaces",
+      "To eliminate TLB misses",
+      "To make all memory accesses one cycle",
+      "To remove virtual memory"
+    ],
+    "answer": "To reduce page-table memory overhead for sparse address spaces"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Virtual Memory",
+    "difficulty": "Hard",
+    "question": "What is a page table walk?",
+    "options": [
+      "The process of locating a virtual-to-physical translation through page-table structures after a TLB miss",
+      "Scanning cache lines for data",
+      "Executing page replacement",
+      "Reading a file directory"
+    ],
+    "answer": "The process of locating a virtual-to-physical translation through page-table structures after a TLB miss"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "TLB",
+    "difficulty": "Hard",
+    "question": "Why can a TLB miss be expensive?",
+    "options": [
+      "The processor may need several memory accesses to walk page tables",
+      "It always causes a disk page fault",
+      "It clears all cache levels",
+      "It restarts the program"
+    ],
+    "answer": "The processor may need several memory accesses to walk page tables"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "DRAM",
+    "difficulty": "Hard",
+    "question": "Why does DRAM require refresh operations?",
+    "options": [
+      "Its storage cells gradually lose charge",
+      "Its transistors never change state",
+      "It stores data magnetically",
+      "It is non-volatile"
+    ],
+    "answer": "Its storage cells gradually lose charge"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "SRAM",
+    "difficulty": "Hard",
+    "question": "Why is SRAM commonly used for CPU caches rather than main memory?",
+    "options": [
+      "It is faster but more expensive and less dense than DRAM",
+      "It is slower but cheaper",
+      "It is non-volatile",
+      "It requires disk controllers"
+    ],
+    "answer": "It is faster but more expensive and less dense than DRAM"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Memory Performance",
+    "difficulty": "Hard",
+    "question": "What is Average Memory Access Time commonly modeled from?",
+    "options": [
+      "Hit time plus miss rate multiplied by miss penalty",
+      "Cache size divided by clock rate",
+      "Only DRAM latency",
+      "Instruction count times CPI"
+    ],
+    "answer": "Hit time plus miss rate multiplied by miss penalty"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Cache",
+    "difficulty": "Hard",
+    "question": "What is a compulsory cache miss?",
+    "options": [
+      "A miss caused by the first access to a block",
+      "A miss caused only by limited associativity",
+      "A miss caused by a full working set",
+      "A TLB miss"
+    ],
+    "answer": "A miss caused by the first access to a block"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Cache",
+    "difficulty": "Hard",
+    "question": "What is a conflict cache miss?",
+    "options": [
+      "A miss caused when blocks compete for the same cache locations in limited-associativity caches",
+      "The first ever access to a block",
+      "A miss because the cache is too small for all active data regardless of mapping",
+      "A virtual memory page fault"
+    ],
+    "answer": "A miss caused when blocks compete for the same cache locations in limited-associativity caches"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Cache",
+    "difficulty": "Hard",
+    "question": "What is a capacity cache miss?",
+    "options": [
+      "A miss because the cache cannot hold the active working set even with ideal placement",
+      "A miss caused by first access only",
+      "A branch prediction failure",
+      "A register dependency"
+    ],
+    "answer": "A miss because the cache cannot hold the active working set even with ideal placement"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Power",
+    "difficulty": "Hard",
+    "question": "Why is dynamic power strongly affected by supply voltage?",
+    "options": [
+      "Dynamic power is approximately proportional to voltage squared times frequency and capacitance",
+      "Voltage has no effect on power",
+      "Power depends only on instruction count",
+      "Voltage affects only memory size"
+    ],
+    "answer": "Dynamic power is approximately proportional to voltage squared times frequency and capacitance"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Power",
+    "difficulty": "Hard",
+    "question": "What is dynamic voltage and frequency scaling used for?",
+    "options": [
+      "Trading performance for lower power and energy consumption",
+      "Increasing cache associativity",
+      "Changing instruction set compatibility",
+      "Eliminating pipeline hazards"
+    ],
+    "answer": "Trading performance for lower power and energy consumption"
+  },
+  {
+    "subject": "Computer Architecture",
+    "topic": "Multicore",
+    "difficulty": "Hard",
+    "question": "Why does adding more CPU cores not guarantee proportional application speedup?",
+    "options": [
+      "Software may contain serial sections, synchronization overhead, and memory bottlenecks",
+      "Every application automatically uses all cores perfectly",
+      "More cores reduce clock speed to zero",
+      "Caches cannot exist in multicore CPUs"
+    ],
+    "answer": "Software may contain serial sections, synchronization overhead, and memory bottlenecks"
+  }
+]
