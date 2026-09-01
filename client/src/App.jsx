@@ -18,7 +18,6 @@ import WeakTopics from "./pages/WeakTopics";
 import Achievements from "./pages/Achievements";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
-
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 
@@ -34,15 +33,21 @@ const API_BASE =
 function ProtectedRoute({
   children,
 }) {
-  const [loading, setLoading] =
-    useState(true);
+  const [
+    loading,
+    setLoading,
+  ] = useState(true);
 
   const [
     authenticated,
     setAuthenticated,
   ] = useState(false);
 
+
   useEffect(() => {
+    let active = true;
+
+
     const checkAuthentication =
       async () => {
         try {
@@ -55,8 +60,15 @@ function ProtectedRoute({
               }
             );
 
+
           const data =
             await response.json();
+
+
+          if (!active) {
+            return;
+          }
+
 
           if (
             response.ok &&
@@ -66,42 +78,81 @@ function ProtectedRoute({
               true
             );
 
-            localStorage.setItem(
-              "neuraUser",
-              JSON.stringify(
-                data.user
-              )
-            );
+
+            if (data.user) {
+              localStorage.setItem(
+                "neuraUser",
+                JSON.stringify(
+                  data.user
+                )
+              );
+            }
+
           } else {
             setAuthenticated(
               false
             );
 
+
             localStorage.removeItem(
               "neuraUser"
             );
           }
+
         } catch {
+          if (!active) {
+            return;
+          }
+
+
           setAuthenticated(
             false
           );
+
+
+          localStorage.removeItem(
+            "neuraUser"
+          );
+
         } finally {
-          setLoading(false);
+          if (active) {
+            setLoading(
+              false
+            );
+          }
         }
       };
 
+
     checkAuthentication();
+
+
+    return () => {
+      active = false;
+    };
+
   }, []);
+
 
   if (loading) {
     return (
       <div
         style={{
-          minHeight: "100vh",
-          display: "grid",
-          placeItems: "center",
-          background: "#090909",
-          color: "#ff8d58",
+          minHeight:
+            "100vh",
+
+          display:
+            "grid",
+
+          placeItems:
+            "center",
+
+          background:
+            "#090909",
+
+          color:
+            "#ff8d58",
+
           fontFamily:
             "Manrope, sans-serif",
         }}
@@ -111,6 +162,7 @@ function ProtectedRoute({
     );
   }
 
+
   if (!authenticated) {
     return (
       <Navigate
@@ -119,6 +171,7 @@ function ProtectedRoute({
       />
     );
   }
+
 
   return children;
 }
@@ -131,19 +184,26 @@ function ProtectedRoute({
 function App() {
   return (
     <BrowserRouter>
+
       <Routes>
 
         {/* PUBLIC */}
 
         <Route
           path="/login"
-          element={<Login />}
+          element={
+            <Login />
+          }
         />
+
 
         <Route
           path="/register"
-          element={<Register />}
+          element={
+            <Register />
+          }
         />
+
 
         {/* DASHBOARD */}
 
@@ -156,6 +216,7 @@ function App() {
           }
         />
 
+
         {/* QUIZ */}
 
         <Route
@@ -166,6 +227,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+
 
         {/* RESULTS */}
 
@@ -178,6 +240,7 @@ function App() {
           }
         />
 
+
         {/* PERFORMANCE */}
 
         <Route
@@ -188,6 +251,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+
 
         {/* WEAK TOPICS */}
 
@@ -200,6 +264,7 @@ function App() {
           }
         />
 
+
         {/* ACHIEVEMENTS */}
 
         <Route
@@ -210,6 +275,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+
 
         {/* PROFILE */}
 
@@ -222,6 +288,7 @@ function App() {
           }
         />
 
+
         {/* SETTINGS */}
 
         <Route
@@ -232,6 +299,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+
 
         {/* UNKNOWN */}
 
@@ -246,8 +314,10 @@ function App() {
         />
 
       </Routes>
+
     </BrowserRouter>
   );
 }
+
 
 export default App;
