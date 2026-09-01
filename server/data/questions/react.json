@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "React",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is React primarily used for?",
+    "options": [
+      "Building user interfaces",
+      "Managing databases",
+      "Compiling operating systems",
+      "Designing network protocols"
+    ],
+    "answer": "Building user interfaces"
+  },
+  {
+    "subject": "React",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Who originally developed React?",
+    "options": [
+      "Facebook",
+      "Google",
+      "Microsoft",
+      "Apple"
+    ],
+    "answer": "Facebook"
+  },
+  {
+    "subject": "React",
+    "topic": "Components",
+    "difficulty": "Easy",
+    "question": "What is a React component?",
+    "options": [
+      "A reusable piece of UI",
+      "A database table",
+      "A CSS property",
+      "A server process"
+    ],
+    "answer": "A reusable piece of UI"
+  },
+  {
+    "subject": "React",
+    "topic": "Components",
+    "difficulty": "Easy",
+    "question": "Which type of component is most commonly used in modern React?",
+    "options": [
+      "Function component",
+      "Class-only component",
+      "Database component",
+      "XML component"
+    ],
+    "answer": "Function component"
+  },
+  {
+    "subject": "React",
+    "topic": "JSX",
+    "difficulty": "Easy",
+    "question": "What does JSX allow you to write?",
+    "options": [
+      "HTML-like syntax inside JavaScript",
+      "SQL inside CSS",
+      "Python inside HTML only",
+      "Binary code"
+    ],
+    "answer": "HTML-like syntax inside JavaScript"
+  },
+  {
+    "subject": "React",
+    "topic": "JSX",
+    "difficulty": "Easy",
+    "question": "Which attribute is used instead of class in JSX?",
+    "options": [
+      "className",
+      "cssClass",
+      "classnameonly",
+      "styleClass"
+    ],
+    "answer": "className"
+  },
+  {
+    "subject": "React",
+    "topic": "JSX",
+    "difficulty": "Easy",
+    "question": "How do you insert a JavaScript expression inside JSX?",
+    "options": [
+      "Using curly braces {}",
+      "Using square brackets []",
+      "Using angle brackets <>",
+      "Using quotes only"
+    ],
+    "answer": "Using curly braces {}"
+  },
+  {
+    "subject": "React",
+    "topic": "Props",
+    "difficulty": "Easy",
+    "question": "What are props in React?",
+    "options": [
+      "Inputs passed from a parent component to a child component",
+      "Global variables only",
+      "Database records",
+      "CSS selectors"
+    ],
+    "answer": "Inputs passed from a parent component to a child component"
+  },
+  {
+    "subject": "React",
+    "topic": "Props",
+    "difficulty": "Easy",
+    "question": "Are props normally read-only inside a component?",
+    "options": [
+      "Yes",
+      "No",
+      "Only in class components",
+      "Only in development mode"
+    ],
+    "answer": "Yes"
+  },
+  {
+    "subject": "React",
+    "topic": "State",
+    "difficulty": "Easy",
+    "question": "What is state used for in React?",
+    "options": [
+      "Data that can change and cause a component to re-render",
+      "Only static configuration",
+      "Only CSS values",
+      "Only server environment variables"
+    ],
+    "answer": "Data that can change and cause a component to re-render"
+  },
+  {
+    "subject": "React",
+    "topic": "Hooks",
+    "difficulty": "Easy",
+    "question": "Which hook is commonly used to add state to a function component?",
+    "options": [
+      "useState",
+      "useFetch",
+      "useClass",
+      "useDataOnly"
+    ],
+    "answer": "useState"
+  },
+  {
+    "subject": "React",
+    "topic": "Hooks",
+    "difficulty": "Easy",
+    "question": "Which hook is commonly used for side effects?",
+    "options": [
+      "useEffect",
+      "useState",
+      "useMemoOnly",
+      "useClass"
+    ],
+    "answer": "useEffect"
+  },
+  {
+    "subject": "React",
+    "topic": "Events",
+    "difficulty": "Easy",
+    "question": "Which prop is commonly used to handle a click event?",
+    "options": [
+      "onClick",
+      "onclick",
+      "clickEvent",
+      "onPressOnly"
+    ],
+    "answer": "onClick"
+  },
+  {
+    "subject": "React",
+    "topic": "Events",
+    "difficulty": "Easy",
+    "question": "How are React event handler names typically written?",
+    "options": [
+      "camelCase",
+      "snake_case",
+      "kebab-case",
+      "UPPERCASE"
+    ],
+    "answer": "camelCase"
+  },
+  {
+    "subject": "React",
+    "topic": "Rendering",
+    "difficulty": "Easy",
+    "question": "What causes a component to render again in common cases?",
+    "options": [
+      "A state or prop change",
+      "Only a CSS file change",
+      "Only page refresh",
+      "Only a new HTML file"
+    ],
+    "answer": "A state or prop change"
+  },
+  {
+    "subject": "React",
+    "topic": "Conditional Rendering",
+    "difficulty": "Easy",
+    "question": "Which JavaScript operator is commonly used for simple conditional rendering in JSX?",
+    "options": [
+      "&&",
+      "::",
+      "?? only",
+      "#"
+    ],
+    "answer": "&&"
+  },
+  {
+    "subject": "React",
+    "topic": "Lists",
+    "difficulty": "Easy",
+    "question": "Which array method is commonly used to render a list of elements?",
+    "options": [
+      "map()",
+      "push()",
+      "pop()",
+      "joinOnly()"
+    ],
+    "answer": "map()"
+  },
+  {
+    "subject": "React",
+    "topic": "Lists",
+    "difficulty": "Easy",
+    "question": "Which prop should be provided to elements rendered from a list?",
+    "options": [
+      "key",
+      "idonly",
+      "name",
+      "indexKey"
+    ],
+    "answer": "key"
+  },
+  {
+    "subject": "React",
+    "topic": "Forms",
+    "difficulty": "Easy",
+    "question": "What is a controlled input in React?",
+    "options": [
+      "An input whose value is controlled by React state",
+      "An input that cannot be edited",
+      "An input with no event handler",
+      "A browser-only input"
+    ],
+    "answer": "An input whose value is controlled by React state"
+  },
+  {
+    "subject": "React",
+    "topic": "Forms",
+    "difficulty": "Easy",
+    "question": "Which event is commonly used to update state as an input changes?",
+    "options": [
+      "onChange",
+      "onInputOnly",
+      "onType",
+      "onUpdate"
+    ],
+    "answer": "onChange"
+  },
+  {
+    "subject": "React",
+    "topic": "Fragments",
+    "difficulty": "Easy",
+    "question": "What is a React Fragment used for?",
+    "options": [
+      "Grouping multiple elements without adding an extra DOM node",
+      "Creating a database fragment",
+      "Splitting CSS files",
+      "Handling errors"
+    ],
+    "answer": "Grouping multiple elements without adding an extra DOM node"
+  },
+  {
+    "subject": "React",
+    "topic": "Fragments",
+    "difficulty": "Easy",
+    "question": "Which shorthand syntax can represent a React Fragment?",
+    "options": [
+      "<>...</>",
+      "[]...[]",
+      "{}...{}",
+      "()...()"
+    ],
+    "answer": "<>...</>"
+  },
+  {
+    "subject": "React",
+    "topic": "Imports",
+    "difficulty": "Easy",
+    "question": "Which statement is commonly used to import useState?",
+    "options": [
+      "import { useState } from 'react'",
+      "include useState from react",
+      "require useState only",
+      "using React.useState"
+    ],
+    "answer": "import { useState } from 'react'"
+  },
+  {
+    "subject": "React",
+    "topic": "Vite",
+    "difficulty": "Easy",
+    "question": "What is Vite commonly used for in React projects?",
+    "options": [
+      "Fast development server and build tooling",
+      "Database administration",
+      "Operating system scheduling",
+      "Image editing"
+    ],
+    "answer": "Fast development server and build tooling"
+  },
+  {
+    "subject": "React",
+    "topic": "DOM",
+    "difficulty": "Easy",
+    "question": "What is the DOM?",
+    "options": [
+      "A tree-like representation of a web document",
+      "A database object model only",
+      "A React hook",
+      "A CSS framework"
+    ],
+    "answer": "A tree-like representation of a web document"
+  },
+  {
+    "subject": "React",
+    "topic": "Virtual DOM",
+    "difficulty": "Easy",
+    "question": "What is the Virtual DOM in React?",
+    "options": [
+      "An in-memory representation used to help calculate UI updates",
+      "A second browser window",
+      "A database cache",
+      "A network protocol"
+    ],
+    "answer": "An in-memory representation used to help calculate UI updates"
+  },
+  {
+    "subject": "React",
+    "topic": "Routing",
+    "difficulty": "Easy",
+    "question": "Which library is commonly used for routing in React web apps?",
+    "options": [
+      "react-router-dom",
+      "react-database",
+      "react-http",
+      "react-css-router"
+    ],
+    "answer": "react-router-dom"
+  },
+  {
+    "subject": "React",
+    "topic": "Routing",
+    "difficulty": "Easy",
+    "question": "Which component is commonly used to define route mappings in React Router?",
+    "options": [
+      "Routes",
+      "RouterMap",
+      "SwitchOnly",
+      "Navigator"
+    ],
+    "answer": "Routes"
+  },
+  {
+    "subject": "React",
+    "topic": "Routing",
+    "difficulty": "Easy",
+    "question": "Which component is commonly used for client-side navigation without a full page reload?",
+    "options": [
+      "Link",
+      "AnchorOnly",
+      "NavigateButton",
+      "RouteLinkOnly"
+    ],
+    "answer": "Link"
+  },
+  {
+    "subject": "React",
+    "topic": "CSS",
+    "difficulty": "Easy",
+    "question": "How can a normal CSS file be used in a React component?",
+    "options": [
+      "Import the CSS file into the JavaScript or JSX file",
+      "Place CSS inside package.json only",
+      "Use SQL import",
+      "Use only inline styles"
+    ],
+    "answer": "Import the CSS file into the JavaScript or JSX file"
+  },
+  {
+    "subject": "React",
+    "topic": "State",
+    "difficulty": "Easy",
+    "question": "What does the setter returned by useState do?",
+    "options": [
+      "Schedules a state update",
+      "Reloads the browser",
+      "Changes props directly",
+      "Creates a route"
+    ],
+    "answer": "Schedules a state update"
+  },
+  {
+    "subject": "React",
+    "topic": "Hooks",
+    "difficulty": "Easy",
+    "question": "Should hooks normally be called at the top level of a React function component?",
+    "options": [
+      "Yes",
+      "No",
+      "Only inside loops",
+      "Only inside event handlers"
+    ],
+    "answer": "Yes"
+  },
+  {
+    "subject": "React",
+    "topic": "Hooks",
+    "difficulty": "Easy",
+    "question": "Can hooks normally be called conditionally inside an if statement?",
+    "options": [
+      "No",
+      "Yes, always",
+      "Only useState can",
+      "Only in production"
+    ],
+    "answer": "No"
+  },
+  {
+    "subject": "React",
+    "topic": "Components",
+    "difficulty": "Easy",
+    "question": "What should a React component name usually start with?",
+    "options": [
+      "An uppercase letter",
+      "A number",
+      "A lowercase letter only",
+      "An underscore only"
+    ],
+    "answer": "An uppercase letter"
+  },
+  {
+    "subject": "React",
+    "topic": "useEffect",
+    "difficulty": "Medium",
+    "question": "What does useEffect with an empty dependency array usually do?",
+    "options": [
+      "Runs after the initial render and cleans up on unmount if a cleanup is returned",
+      "Runs before every render",
+      "Runs only when props change",
+      "Never runs"
+    ],
+    "answer": "Runs after the initial render and cleans up on unmount if a cleanup is returned"
+  },
+  {
+    "subject": "React",
+    "topic": "useEffect",
+    "difficulty": "Medium",
+    "question": "What does omitting the dependency array from useEffect usually mean?",
+    "options": [
+      "The effect runs after every render",
+      "The effect runs only once",
+      "The effect never runs",
+      "The effect runs only on unmount"
+    ],
+    "answer": "The effect runs after every render"
+  },
+  {
+    "subject": "React",
+    "topic": "useEffect",
+    "difficulty": "Medium",
+    "question": "What is the purpose of returning a function from useEffect?",
+    "options": [
+      "Cleanup before the effect re-runs or the component unmounts",
+      "To return JSX",
+      "To update props",
+      "To create state"
+    ],
+    "answer": "Cleanup before the effect re-runs or the component unmounts"
+  },
+  {
+    "subject": "React",
+    "topic": "useEffect",
+    "difficulty": "Medium",
+    "question": "Why should values used inside an effect often appear in its dependency array?",
+    "options": [
+      "So React can re-run the effect when those referenced values change",
+      "To prevent JSX compilation",
+      "To disable re-renders",
+      "To make state global"
+    ],
+    "answer": "So React can re-run the effect when those referenced values change"
+  },
+  {
+    "subject": "React",
+    "topic": "useMemo",
+    "difficulty": "Medium",
+    "question": "What does useMemo memoize?",
+    "options": [
+      "A computed value",
+      "A DOM event",
+      "A route",
+      "A CSS file"
+    ],
+    "answer": "A computed value"
+  },
+  {
+    "subject": "React",
+    "topic": "useCallback",
+    "difficulty": "Medium",
+    "question": "What does useCallback memoize?",
+    "options": [
+      "A function reference",
+      "A rendered DOM node only",
+      "A CSS selector",
+      "A network response automatically"
+    ],
+    "answer": "A function reference"
+  },
+  {
+    "subject": "React",
+    "topic": "useRef",
+    "difficulty": "Medium",
+    "question": "What is useRef commonly used for?",
+    "options": [
+      "Holding a mutable value or DOM reference without triggering re-renders",
+      "Creating global state",
+      "Fetching data only",
+      "Declaring routes"
+    ],
+    "answer": "Holding a mutable value or DOM reference without triggering re-renders"
+  },
+  {
+    "subject": "React",
+    "topic": "useRef",
+    "difficulty": "Medium",
+    "question": "Does changing ref.current normally trigger a re-render?",
+    "options": [
+      "No",
+      "Yes",
+      "Only in strict mode",
+      "Only if it holds a DOM node"
+    ],
+    "answer": "No"
+  },
+  {
+    "subject": "React",
+    "topic": "State",
+    "difficulty": "Medium",
+    "question": "Why is directly mutating React state discouraged?",
+    "options": [
+      "React may not detect the change correctly and state updates should be treated immutably",
+      "It always crashes JavaScript",
+      "It changes props automatically",
+      "It disables hooks"
+    ],
+    "answer": "React may not detect the change correctly and state updates should be treated immutably"
+  },
+  {
+    "subject": "React",
+    "topic": "State",
+    "difficulty": "Medium",
+    "question": "When updating state based on the previous state, which pattern is safer?",
+    "options": [
+      "Pass a function to the state setter",
+      "Read the DOM directly",
+      "Mutate the old state object",
+      "Use a global variable"
+    ],
+    "answer": "Pass a function to the state setter"
+  },
+  {
+    "subject": "React",
+    "topic": "Lifting State",
+    "difficulty": "Medium",
+    "question": "What does lifting state up mean?",
+    "options": [
+      "Moving shared state to the closest common parent",
+      "Moving state into CSS",
+      "Saving state in localStorage only",
+      "Removing state entirely"
+    ],
+    "answer": "Moving shared state to the closest common parent"
+  },
+  {
+    "subject": "React",
+    "topic": "Context",
+    "difficulty": "Medium",
+    "question": "What problem does React Context help solve?",
+    "options": [
+      "Passing shared data through many component levels without manual prop drilling",
+      "Replacing all component state",
+      "Creating routes",
+      "Compiling JSX"
+    ],
+    "answer": "Passing shared data through many component levels without manual prop drilling"
+  },
+  {
+    "subject": "React",
+    "topic": "Context",
+    "difficulty": "Medium",
+    "question": "Which hook reads a context value in a function component?",
+    "options": [
+      "useContext",
+      "useState",
+      "useRef",
+      "useRouteOnly"
+    ],
+    "answer": "useContext"
+  },
+  {
+    "subject": "React",
+    "topic": "Lists",
+    "difficulty": "Medium",
+    "question": "Why should list keys be stable and unique among siblings?",
+    "options": [
+      "They help React match items correctly across renders",
+      "They improve CSS specificity",
+      "They make API requests faster",
+      "They create database IDs"
+    ],
+    "answer": "They help React match items correctly across renders"
+  },
+  {
+    "subject": "React",
+    "topic": "Lists",
+    "difficulty": "Medium",
+    "question": "Why can using an array index as a key be problematic for reorderable lists?",
+    "options": [
+      "Component state may become associated with the wrong item after reordering",
+      "Indexes are invalid JavaScript",
+      "React forbids numeric keys",
+      "It prevents rendering"
+    ],
+    "answer": "Component state may become associated with the wrong item after reordering"
+  },
+  {
+    "subject": "React",
+    "topic": "Forms",
+    "difficulty": "Medium",
+    "question": "What is an uncontrolled component?",
+    "options": [
+      "A form element whose current value is primarily managed by the DOM",
+      "A component without props",
+      "A component that cannot render",
+      "A component with no events"
+    ],
+    "answer": "A form element whose current value is primarily managed by the DOM"
+  },
+  {
+    "subject": "React",
+    "topic": "Forms",
+    "difficulty": "Medium",
+    "question": "Which hook is often used to access an uncontrolled input element?",
+    "options": [
+      "useRef",
+      "useMemo",
+      "useContext",
+      "useReducerOnly"
+    ],
+    "answer": "useRef"
+  },
+  {
+    "subject": "React",
+    "topic": "Routing",
+    "difficulty": "Medium",
+    "question": "Which hook is commonly used to navigate programmatically with React Router?",
+    "options": [
+      "useNavigate",
+      "useRoute",
+      "useLink",
+      "useRedirectOnly"
+    ],
+    "answer": "useNavigate"
+  },
+  {
+    "subject": "React",
+    "topic": "Routing",
+    "difficulty": "Medium",
+    "question": "Which hook is commonly used to read route parameters?",
+    "options": [
+      "useParams",
+      "useRouteParamsOnly",
+      "useQuery",
+      "usePath"
+    ],
+    "answer": "useParams"
+  },
+  {
+    "subject": "React",
+    "topic": "Routing",
+    "difficulty": "Medium",
+    "question": "Which hook can read the current URL location object?",
+    "options": [
+      "useLocation",
+      "useURL",
+      "usePathOnly",
+      "useNavigate"
+    ],
+    "answer": "useLocation"
+  },
+  {
+    "subject": "React",
+    "topic": "Error Boundaries",
+    "difficulty": "Medium",
+    "question": "What are error boundaries used for?",
+    "options": [
+      "Catching rendering errors in a component subtree and showing fallback UI",
+      "Catching every async error automatically",
+      "Handling only HTTP 404 errors",
+      "Replacing try/catch everywhere"
+    ],
+    "answer": "Catching rendering errors in a component subtree and showing fallback UI"
+  },
+  {
+    "subject": "React",
+    "topic": "Error Boundaries",
+    "difficulty": "Medium",
+    "question": "Do traditional error boundaries catch errors inside event handlers automatically?",
+    "options": [
+      "No",
+      "Yes",
+      "Only in production",
+      "Only with hooks"
+    ],
+    "answer": "No"
+  },
+  {
+    "subject": "React",
+    "topic": "Performance",
+    "difficulty": "Medium",
+    "question": "What does React.memo do?",
+    "options": [
+      "Can skip re-rendering a component when its props are unchanged by shallow comparison",
+      "Memoizes all application state",
+      "Caches API responses",
+      "Prevents all renders"
+    ],
+    "answer": "Can skip re-rendering a component when its props are unchanged by shallow comparison"
+  },
+  {
+    "subject": "React",
+    "topic": "Performance",
+    "difficulty": "Medium",
+    "question": "When is useMemo most appropriate?",
+    "options": [
+      "When recalculating an expensive derived value would otherwise be costly",
+      "For every primitive value",
+      "To replace useState",
+      "To create side effects"
+    ],
+    "answer": "When recalculating an expensive derived value would otherwise be costly"
+  },
+  {
+    "subject": "React",
+    "topic": "Performance",
+    "difficulty": "Medium",
+    "question": "When is useCallback most useful?",
+    "options": [
+      "When stable function identity matters, such as with memoized children or hook dependencies",
+      "For every event handler automatically",
+      "To store DOM elements",
+      "To fetch data only"
+    ],
+    "answer": "When stable function identity matters, such as with memoized children or hook dependencies"
+  },
+  {
+    "subject": "React",
+    "topic": "Custom Hooks",
+    "difficulty": "Medium",
+    "question": "What is a custom hook?",
+    "options": [
+      "A reusable function that composes React hooks and follows hook naming rules",
+      "A custom HTML element only",
+      "A CSS helper",
+      "A router plugin"
+    ],
+    "answer": "A reusable function that composes React hooks and follows hook naming rules"
+  },
+  {
+    "subject": "React",
+    "topic": "Custom Hooks",
+    "difficulty": "Medium",
+    "question": "What naming convention should a custom hook follow?",
+    "options": [
+      "Its name should start with use",
+      "Its name must end with Hook",
+      "It must start with React",
+      "It must be lowercase"
+    ],
+    "answer": "Its name should start with use"
+  },
+  {
+    "subject": "React",
+    "topic": "Strict Mode",
+    "difficulty": "Medium",
+    "question": "What is React StrictMode mainly used for in development?",
+    "options": [
+      "Highlighting potential problems and unsafe patterns",
+      "Encrypting production builds",
+      "Blocking network requests",
+      "Creating routes"
+    ],
+    "answer": "Highlighting potential problems and unsafe patterns"
+  },
+  {
+    "subject": "React",
+    "topic": "State Management",
+    "difficulty": "Medium",
+    "question": "Which hook is useful for managing more complex state transitions with a reducer function?",
+    "options": [
+      "useReducer",
+      "useMemo",
+      "useRef",
+      "useEffect"
+    ],
+    "answer": "useReducer"
+  },
+  {
+    "subject": "React",
+    "topic": "useReducer",
+    "difficulty": "Medium",
+    "question": "What does a reducer function receive?",
+    "options": [
+      "Current state and an action",
+      "Only props",
+      "Only a DOM node",
+      "Only a route"
+    ],
+    "answer": "Current state and an action"
+  },
+  {
+    "subject": "React",
+    "topic": "Data Fetching",
+    "difficulty": "Medium",
+    "question": "What is a common reason to abort an in-flight fetch when a component unmounts?",
+    "options": [
+      "To avoid unnecessary work and stale updates",
+      "To increase bundle size",
+      "To force a re-render",
+      "To reset props"
+    ],
+    "answer": "To avoid unnecessary work and stale updates"
+  },
+  {
+    "subject": "React",
+    "topic": "Composition",
+    "difficulty": "Medium",
+    "question": "What does component composition mean?",
+    "options": [
+      "Building larger UIs by combining smaller components",
+      "Inheriting every component from one base class",
+      "Putting all JSX in one file",
+      "Using only fragments"
+    ],
+    "answer": "Building larger UIs by combining smaller components"
+  },
+  {
+    "subject": "React",
+    "topic": "Children",
+    "difficulty": "Medium",
+    "question": "What does the children prop represent?",
+    "options": [
+      "Content placed between a component's opening and closing tags",
+      "Only child component state",
+      "Only DOM text nodes",
+      "Only route children"
+    ],
+    "answer": "Content placed between a component's opening and closing tags"
+  },
+  {
+    "subject": "React",
+    "topic": "Rendering",
+    "difficulty": "Hard",
+    "question": "What is reconciliation in React?",
+    "options": [
+      "The process of comparing render output and determining minimal UI updates",
+      "The process of fetching data",
+      "The process of compiling CSS",
+      "The process of creating routes"
+    ],
+    "answer": "The process of comparing render output and determining minimal UI updates"
+  },
+  {
+    "subject": "React",
+    "topic": "Rendering",
+    "difficulty": "Hard",
+    "question": "Why does changing a component's key force React to treat it as a different component instance?",
+    "options": [
+      "Keys participate in component identity during reconciliation",
+      "Keys are converted into props automatically",
+      "Keys change the component function name",
+      "Keys clear browser cache"
+    ],
+    "answer": "Keys participate in component identity during reconciliation"
+  },
+  {
+    "subject": "React",
+    "topic": "Rendering",
+    "difficulty": "Hard",
+    "question": "What can happen when a component's key changes between renders?",
+    "options": [
+      "Its local state can reset because React mounts a new instance",
+      "Its props become global",
+      "Its CSS is removed",
+      "Its imports are reloaded from disk"
+    ],
+    "answer": "Its local state can reset because React mounts a new instance"
+  },
+  {
+    "subject": "React",
+    "topic": "State",
+    "difficulty": "Hard",
+    "question": "Why can multiple state updates appear batched in React?",
+    "options": [
+      "React may group updates to reduce unnecessary renders",
+      "JavaScript cannot execute sequential updates",
+      "State setters run only once per page load",
+      "Hooks store values in localStorage"
+    ],
+    "answer": "React may group updates to reduce unnecessary renders"
+  },
+  {
+    "subject": "React",
+    "topic": "State",
+    "difficulty": "Hard",
+    "question": "Why can reading state immediately after calling its setter show the old value within the same render context?",
+    "options": [
+      "State values are snapshots for that render and updates schedule a future render",
+      "The setter failed",
+      "React state is stored only on the server",
+      "State is always asynchronous in every language"
+    ],
+    "answer": "State values are snapshots for that render and updates schedule a future render"
+  },
+  {
+    "subject": "React",
+    "topic": "State",
+    "difficulty": "Hard",
+    "question": "What problem does a functional state update solve when several updates depend on previous state?",
+    "options": [
+      "It computes each update from the latest queued state value",
+      "It disables batching",
+      "It forces synchronous DOM updates",
+      "It prevents all re-renders"
+    ],
+    "answer": "It computes each update from the latest queued state value"
+  },
+  {
+    "subject": "React",
+    "topic": "Effects",
+    "difficulty": "Hard",
+    "question": "Why can an effect enter an infinite loop?",
+    "options": [
+      "It updates a dependency that changes on every render, causing the effect to run repeatedly",
+      "useEffect always loops by design",
+      "JSX cannot contain effects",
+      "Effects run only once"
+    ],
+    "answer": "It updates a dependency that changes on every render, causing the effect to run repeatedly"
+  },
+  {
+    "subject": "React",
+    "topic": "Effects",
+    "difficulty": "Hard",
+    "question": "Why can putting a newly created object directly in an effect dependency array cause repeated executions?",
+    "options": [
+      "The object has a new reference on each render",
+      "Objects cannot be dependencies",
+      "React deep-compares objects",
+      "The dependency array is ignored"
+    ],
+    "answer": "The object has a new reference on each render"
+  },
+  {
+    "subject": "React",
+    "topic": "Effects",
+    "difficulty": "Hard",
+    "question": "What is a stale closure in React?",
+    "options": [
+      "A function captures older render values and later uses them after newer values exist",
+      "A component that was unmounted",
+      "A broken DOM reference",
+      "A cached CSS file"
+    ],
+    "answer": "A function captures older render values and later uses them after newer values exist"
+  },
+  {
+    "subject": "React",
+    "topic": "Effects",
+    "difficulty": "Hard",
+    "question": "What is a common way to avoid stale state in interval callbacks?",
+    "options": [
+      "Use functional state updates or correctly manage dependencies and refs",
+      "Mutate state directly",
+      "Remove the interval cleanup",
+      "Use global variables only"
+    ],
+    "answer": "Use functional state updates or correctly manage dependencies and refs"
+  },
+  {
+    "subject": "React",
+    "topic": "Refs",
+    "difficulty": "Hard",
+    "question": "Why should refs usually not be used for values that determine rendered output?",
+    "options": [
+      "Changing refs does not trigger re-renders",
+      "Refs cannot store values",
+      "Refs are read-only",
+      "Refs only work with class components"
+    ],
+    "answer": "Changing refs does not trigger re-renders"
+  },
+  {
+    "subject": "React",
+    "topic": "Context",
+    "difficulty": "Hard",
+    "question": "Why can a frequently changing Context value cause performance problems?",
+    "options": [
+      "Consumers of that context may re-render whenever the provided value changes",
+      "Context disables memoization globally",
+      "Context causes network requests",
+      "Context recreates the DOM tree from scratch"
+    ],
+    "answer": "Consumers of that context may re-render whenever the provided value changes"
+  },
+  {
+    "subject": "React",
+    "topic": "Context",
+    "difficulty": "Hard",
+    "question": "Why can memoizing an object passed as a Context value sometimes help?",
+    "options": [
+      "It can prevent unnecessary value reference changes when the contents are unchanged",
+      "It prevents all consumer renders forever",
+      "It turns Context into global state storage",
+      "It makes the object immutable automatically"
+    ],
+    "answer": "It can prevent unnecessary value reference changes when the contents are unchanged"
+  },
+  {
+    "subject": "React",
+    "topic": "Memoization",
+    "difficulty": "Hard",
+    "question": "Why can excessive useMemo and useCallback be counterproductive?",
+    "options": [
+      "They add complexity and memoization overhead when recomputation is cheap",
+      "They disable React rendering",
+      "They increase network latency automatically",
+      "They cannot work with hooks"
+    ],
+    "answer": "They add complexity and memoization overhead when recomputation is cheap"
+  },
+  {
+    "subject": "React",
+    "topic": "Memoization",
+    "difficulty": "Hard",
+    "question": "Why can React.memo fail to prevent a child re-render when a parent passes a new object literal each render?",
+    "options": [
+      "The prop reference changes even if its contents look the same",
+      "React.memo compares deep object contents by default",
+      "Object props are ignored",
+      "React.memo only works on class components"
+    ],
+    "answer": "The prop reference changes even if its contents look the same"
+  },
+  {
+    "subject": "React",
+    "topic": "Concurrent Rendering",
+    "difficulty": "Hard",
+    "question": "What is a key idea of concurrent rendering in modern React?",
+    "options": [
+      "React can prepare and interrupt rendering work before committing updates",
+      "React runs every component on a separate CPU thread",
+      "React eliminates the event loop",
+      "React renders only on the server"
+    ],
+    "answer": "React can prepare and interrupt rendering work before committing updates"
+  },
+  {
+    "subject": "React",
+    "topic": "Transitions",
+    "difficulty": "Hard",
+    "question": "What does startTransition help mark?",
+    "options": [
+      "A non-urgent state update that can be deprioritized",
+      "A route redirect only",
+      "A DOM animation",
+      "A server restart"
+    ],
+    "answer": "A non-urgent state update that can be deprioritized"
+  },
+  {
+    "subject": "React",
+    "topic": "Transitions",
+    "difficulty": "Hard",
+    "question": "Which hook can expose whether a transition is pending?",
+    "options": [
+      "useTransition",
+      "useEffect",
+      "useDeferredOnly",
+      "useSync"
+    ],
+    "answer": "useTransition"
+  },
+  {
+    "subject": "React",
+    "topic": "Deferred Values",
+    "difficulty": "Hard",
+    "question": "What does useDeferredValue help do?",
+    "options": [
+      "Allow a non-urgent derived value to lag behind a rapidly changing value",
+      "Store a value permanently",
+      "Prevent all re-renders",
+      "Fetch data automatically"
+    ],
+    "answer": "Allow a non-urgent derived value to lag behind a rapidly changing value"
+  },
+  {
+    "subject": "React",
+    "topic": "Suspense",
+    "difficulty": "Hard",
+    "question": "What does Suspense provide conceptually?",
+    "options": [
+      "A fallback UI while a supported child operation is waiting",
+      "An error boundary for all exceptions",
+      "A router replacement",
+      "A global state manager"
+    ],
+    "answer": "A fallback UI while a supported child operation is waiting"
+  },
+  {
+    "subject": "React",
+    "topic": "Lazy Loading",
+    "difficulty": "Hard",
+    "question": "What does React.lazy() enable?",
+    "options": [
+      "Loading a component code bundle on demand",
+      "Memoizing component state",
+      "Creating uncontrolled inputs",
+      "Running effects lazily after every render"
+    ],
+    "answer": "Loading a component code bundle on demand"
+  },
+  {
+    "subject": "React",
+    "topic": "Lazy Loading",
+    "difficulty": "Hard",
+    "question": "What is usually paired with React.lazy() to show fallback UI while code loads?",
+    "options": [
+      "Suspense",
+      "StrictMode",
+      "Fragment",
+      "Context.Provider only"
+    ],
+    "answer": "Suspense"
+  },
+  {
+    "subject": "React",
+    "topic": "Portals",
+    "difficulty": "Hard",
+    "question": "What does a React portal allow?",
+    "options": [
+      "Rendering children into a different DOM node while keeping them in the same React tree",
+      "Navigating to another route",
+      "Moving state between components",
+      "Creating a new browser tab"
+    ],
+    "answer": "Rendering children into a different DOM node while keeping them in the same React tree"
+  },
+  {
+    "subject": "React",
+    "topic": "Portals",
+    "difficulty": "Hard",
+    "question": "Why are portals useful for modals and tooltips?",
+    "options": [
+      "They can render outside restrictive DOM layout containers while preserving React relationships",
+      "They disable event bubbling",
+      "They remove the need for CSS",
+      "They automatically manage focus"
+    ],
+    "answer": "They can render outside restrictive DOM layout containers while preserving React relationships"
+  },
+  {
+    "subject": "React",
+    "topic": "Hydration",
+    "difficulty": "Hard",
+    "question": "What is hydration in React?",
+    "options": [
+      "Attaching React behavior to HTML that was already rendered on the server",
+      "Loading CSS after JavaScript",
+      "Fetching user data",
+      "Converting props to state"
+    ],
+    "answer": "Attaching React behavior to HTML that was already rendered on the server"
+  },
+  {
+    "subject": "React",
+    "topic": "Hydration",
+    "difficulty": "Hard",
+    "question": "What can cause a hydration mismatch?",
+    "options": [
+      "Server-rendered HTML differs from what the client initially renders",
+      "A CSS file loads slowly",
+      "The page uses a fragment",
+      "The app has no routes"
+    ],
+    "answer": "Server-rendered HTML differs from what the client initially renders"
+  },
+  {
+    "subject": "React",
+    "topic": "Server Rendering",
+    "difficulty": "Hard",
+    "question": "What is a major advantage of server-side rendering for initial page delivery?",
+    "options": [
+      "The client can receive meaningful HTML before the full JavaScript app initializes",
+      "It eliminates JavaScript completely",
+      "It guarantees no hydration is needed",
+      "It prevents all network requests"
+    ],
+    "answer": "The client can receive meaningful HTML before the full JavaScript app initializes"
+  },
+  {
+    "subject": "React",
+    "topic": "Architecture",
+    "difficulty": "Hard",
+    "question": "Why is deriving state from props during every render often better than storing duplicated derived state?",
+    "options": [
+      "It avoids synchronization bugs between duplicated sources of truth",
+      "Derived values cannot be computed in render",
+      "Props cannot change",
+      "State is always faster"
+    ],
+    "answer": "It avoids synchronization bugs between duplicated sources of truth"
+  },
+  {
+    "subject": "React",
+    "topic": "Architecture",
+    "difficulty": "Hard",
+    "question": "What does 'single source of truth' mean in React state design?",
+    "options": [
+      "Each piece of data should ideally have one authoritative owner",
+      "Only one component may exist",
+      "All state must be global",
+      "All data must come from the server"
+    ],
+    "answer": "Each piece of data should ideally have one authoritative owner"
+  },
+  {
+    "subject": "React",
+    "topic": "Testing",
+    "difficulty": "Hard",
+    "question": "Why do React testing libraries often encourage testing behavior rather than implementation details?",
+    "options": [
+      "Behavior-focused tests are more resilient to internal refactoring",
+      "Implementation details never change",
+      "React components cannot be unit tested",
+      "DOM queries are forbidden"
+    ],
+    "answer": "Behavior-focused tests are more resilient to internal refactoring"
+  },
+  {
+    "subject": "React",
+    "topic": "Accessibility",
+    "difficulty": "Hard",
+    "question": "Why is using a native button element often better than a clickable div?",
+    "options": [
+      "It provides built-in keyboard behavior and semantics",
+      "It always renders faster",
+      "It cannot be styled",
+      "It automatically submits all forms"
+    ],
+    "answer": "It provides built-in keyboard behavior and semantics"
+  },
+  {
+    "subject": "React",
+    "topic": "State Architecture",
+    "difficulty": "Hard",
+    "question": "When is useReducer often preferable to multiple useState calls?",
+    "options": [
+      "When state transitions are complex or closely related",
+      "When the component has no state",
+      "When only one boolean exists",
+      "When rendering static HTML"
+    ],
+    "answer": "When state transitions are complex or closely related"
+  },
+  {
+    "subject": "React",
+    "topic": "Performance",
+    "difficulty": "Hard",
+    "question": "Why is profiling important before adding React memoization?",
+    "options": [
+      "It helps identify real bottlenecks instead of optimizing blindly",
+      "Memoization cannot be removed later",
+      "Profiling changes React's behavior",
+      "React automatically memoizes after profiling"
+    ],
+    "answer": "It helps identify real bottlenecks instead of optimizing blindly"
+  }
+]
