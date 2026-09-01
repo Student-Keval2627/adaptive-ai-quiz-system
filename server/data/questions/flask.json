@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "Flask",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is Flask?",
+    "options": [
+      "A lightweight Python web framework",
+      "A JavaScript runtime",
+      "A database engine",
+      "A CSS framework"
+    ],
+    "answer": "A lightweight Python web framework"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which language is Flask written for?",
+    "options": [
+      "Python",
+      "JavaScript",
+      "Java",
+      "C++"
+    ],
+    "answer": "Python"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Installation",
+    "difficulty": "Easy",
+    "question": "Which command commonly installs Flask with pip?",
+    "options": [
+      "pip install flask",
+      "npm install flask",
+      "python install flask",
+      "flask install"
+    ],
+    "answer": "pip install flask"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Application",
+    "difficulty": "Easy",
+    "question": "Which class is used to create a Flask application object?",
+    "options": [
+      "Flask",
+      "App",
+      "Application",
+      "WebApp"
+    ],
+    "answer": "Flask"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Application",
+    "difficulty": "Easy",
+    "question": "Which argument is commonly passed when creating Flask(__name__)?",
+    "options": [
+      "__name__",
+      "__file__",
+      "__main__ only",
+      "__app__"
+    ],
+    "answer": "__name__"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Routing",
+    "difficulty": "Easy",
+    "question": "Which decorator is commonly used to define a route?",
+    "options": [
+      "@app.route()",
+      "@app.url()",
+      "@route.app()",
+      "@flask.path()"
+    ],
+    "answer": "@app.route()"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Routing",
+    "difficulty": "Easy",
+    "question": "Which route path represents the home page?",
+    "options": [
+      "/",
+      "/home.html only",
+      "root",
+      "index"
+    ],
+    "answer": "/"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Routing",
+    "difficulty": "Easy",
+    "question": "What does a Flask view function usually return?",
+    "options": [
+      "A response value such as text, HTML, or a response object",
+      "Only a database row",
+      "Only JSON files",
+      "Only integers"
+    ],
+    "answer": "A response value such as text, HTML, or a response object"
+  },
+  {
+    "subject": "Flask",
+    "topic": "HTTP Methods",
+    "difficulty": "Easy",
+    "question": "Which HTTP method is normally used to retrieve data?",
+    "options": [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE"
+    ],
+    "answer": "GET"
+  },
+  {
+    "subject": "Flask",
+    "topic": "HTTP Methods",
+    "difficulty": "Easy",
+    "question": "Which HTTP method is commonly used to submit new data?",
+    "options": [
+      "POST",
+      "GET",
+      "HEAD",
+      "OPTIONS"
+    ],
+    "answer": "POST"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Request",
+    "difficulty": "Easy",
+    "question": "Which Flask object provides access to incoming request data?",
+    "options": [
+      "request",
+      "response",
+      "sessiononly",
+      "current_app"
+    ],
+    "answer": "request"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Request",
+    "difficulty": "Easy",
+    "question": "Which attribute commonly reads query string parameters?",
+    "options": [
+      "request.args",
+      "request.queryOnly",
+      "request.paramsOnly",
+      "request.urlvars"
+    ],
+    "answer": "request.args"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Request",
+    "difficulty": "Easy",
+    "question": "Which attribute commonly reads submitted form fields?",
+    "options": [
+      "request.form",
+      "request.fields",
+      "request.bodyOnly",
+      "request.valuesOnly"
+    ],
+    "answer": "request.form"
+  },
+  {
+    "subject": "Flask",
+    "topic": "JSON",
+    "difficulty": "Easy",
+    "question": "Which Flask helper is commonly used to return JSON responses?",
+    "options": [
+      "jsonify()",
+      "to_json()",
+      "json_response()",
+      "make_json()"
+    ],
+    "answer": "jsonify()"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Templates",
+    "difficulty": "Easy",
+    "question": "Which template engine is Flask commonly associated with?",
+    "options": [
+      "Jinja",
+      "EJS",
+      "Blade",
+      "Handlebars"
+    ],
+    "answer": "Jinja"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Templates",
+    "difficulty": "Easy",
+    "question": "Which function renders an HTML template in Flask?",
+    "options": [
+      "render_template()",
+      "render_html()",
+      "template()",
+      "show_template()"
+    ],
+    "answer": "render_template()"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Templates",
+    "difficulty": "Easy",
+    "question": "Which folder is commonly used for Flask templates by default?",
+    "options": [
+      "templates",
+      "views",
+      "pages",
+      "html"
+    ],
+    "answer": "templates"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Static Files",
+    "difficulty": "Easy",
+    "question": "Which folder is commonly used for static files by default?",
+    "options": [
+      "static",
+      "assetsOnly",
+      "public",
+      "resources"
+    ],
+    "answer": "static"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Static Files",
+    "difficulty": "Easy",
+    "question": "What type of files are commonly stored in the static folder?",
+    "options": [
+      "CSS, JavaScript, and images",
+      "Only Python files",
+      "Only database files",
+      "Only templates"
+    ],
+    "answer": "CSS, JavaScript, and images"
+  },
+  {
+    "subject": "Flask",
+    "topic": "URL Building",
+    "difficulty": "Easy",
+    "question": "Which Flask helper builds URLs for routes?",
+    "options": [
+      "url_for()",
+      "make_url()",
+      "route_url()",
+      "build_path()"
+    ],
+    "answer": "url_for()"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Redirects",
+    "difficulty": "Easy",
+    "question": "Which Flask helper redirects a client to another URL?",
+    "options": [
+      "redirect()",
+      "forward()",
+      "goto()",
+      "navigate()"
+    ],
+    "answer": "redirect()"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Responses",
+    "difficulty": "Easy",
+    "question": "Which helper can create a custom response object?",
+    "options": [
+      "make_response()",
+      "new_response()",
+      "response()",
+      "build_response()"
+    ],
+    "answer": "make_response()"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Sessions",
+    "difficulty": "Easy",
+    "question": "Which Flask object is commonly used to store user-specific session data?",
+    "options": [
+      "session",
+      "request",
+      "gonly",
+      "flash"
+    ],
+    "answer": "session"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Sessions",
+    "difficulty": "Easy",
+    "question": "What must usually be configured before securely using Flask sessions?",
+    "options": [
+      "SECRET_KEY",
+      "PORT",
+      "DATABASE_NAME only",
+      "DEBUG"
+    ],
+    "answer": "SECRET_KEY"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Flash Messages",
+    "difficulty": "Easy",
+    "question": "Which function stores a one-time message for the next request?",
+    "options": [
+      "flash()",
+      "message()",
+      "notify()",
+      "alert()"
+    ],
+    "answer": "flash()"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Errors",
+    "difficulty": "Easy",
+    "question": "Which decorator can register a handler for an HTTP error code?",
+    "options": [
+      "@app.errorhandler()",
+      "@app.error()",
+      "@app.catch()",
+      "@flask.handler()"
+    ],
+    "answer": "@app.errorhandler()"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Development",
+    "difficulty": "Easy",
+    "question": "What does debug mode commonly provide during development?",
+    "options": [
+      "Automatic reload and detailed error information",
+      "Automatic production security",
+      "Database backups",
+      "Load balancing"
+    ],
+    "answer": "Automatic reload and detailed error information"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Blueprints",
+    "difficulty": "Easy",
+    "question": "What is a Flask Blueprint used for?",
+    "options": [
+      "Organizing related routes and application components",
+      "Creating database indexes",
+      "Compiling templates",
+      "Running background threads only"
+    ],
+    "answer": "Organizing related routes and application components"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Blueprints",
+    "difficulty": "Easy",
+    "question": "Which class creates a Flask Blueprint?",
+    "options": [
+      "Blueprint",
+      "Router",
+      "Module",
+      "RouteGroup"
+    ],
+    "answer": "Blueprint"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Configuration",
+    "difficulty": "Easy",
+    "question": "Where can Flask configuration values commonly be stored?",
+    "options": [
+      "app.config",
+      "app.settingsOnly",
+      "flask.envOnly",
+      "request.config"
+    ],
+    "answer": "app.config"
+  },
+  {
+    "subject": "Flask",
+    "topic": "CLI",
+    "difficulty": "Easy",
+    "question": "Which environment variable can point Flask CLI to the application?",
+    "options": [
+      "FLASK_APP",
+      "APP_FILE",
+      "PYTHON_APP",
+      "FLASK_MAIN"
+    ],
+    "answer": "FLASK_APP"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Server",
+    "difficulty": "Easy",
+    "question": "Which method can start Flask's built-in development server directly from code?",
+    "options": [
+      "app.run()",
+      "app.start()",
+      "app.listen()",
+      "app.serve()"
+    ],
+    "answer": "app.run()"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Status Codes",
+    "difficulty": "Easy",
+    "question": "Which HTTP status code usually means success?",
+    "options": [
+      "200",
+      "404",
+      "500",
+      "401"
+    ],
+    "answer": "200"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Status Codes",
+    "difficulty": "Easy",
+    "question": "Which HTTP status code usually means resource not found?",
+    "options": [
+      "404",
+      "200",
+      "201",
+      "500"
+    ],
+    "answer": "404"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Routing",
+    "difficulty": "Medium",
+    "question": "How do you capture a dynamic path segment such as a username in a route?",
+    "options": [
+      "Use angle-bracket variables like /user/<username>",
+      "Use square brackets only",
+      "Use query strings only",
+      "Use CSS selectors"
+    ],
+    "answer": "Use angle-bracket variables like /user/<username>"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Routing",
+    "difficulty": "Medium",
+    "question": "Which route converter restricts a dynamic parameter to integers?",
+    "options": [
+      "<int:id>",
+      "<number:id>",
+      "<integer=id>",
+      "<id:int>"
+    ],
+    "answer": "<int:id>"
+  },
+  {
+    "subject": "Flask",
+    "topic": "HTTP Methods",
+    "difficulty": "Medium",
+    "question": "How can a Flask route accept both GET and POST?",
+    "options": [
+      "Pass methods=['GET','POST'] to the route decorator",
+      "Create two Flask apps",
+      "Use request.all()",
+      "Use @app.route_all"
+    ],
+    "answer": "Pass methods=['GET','POST'] to the route decorator"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Request",
+    "difficulty": "Medium",
+    "question": "Which method can safely parse a JSON request body in Flask?",
+    "options": [
+      "request.get_json()",
+      "request.to_json()",
+      "request.jsonify()",
+      "request.parse_body()"
+    ],
+    "answer": "request.get_json()"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Request",
+    "difficulty": "Medium",
+    "question": "What does request.method contain?",
+    "options": [
+      "The HTTP method used for the request",
+      "The route function name",
+      "The response status",
+      "The application name"
+    ],
+    "answer": "The HTTP method used for the request"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Request",
+    "difficulty": "Medium",
+    "question": "Which attribute gives access to uploaded files?",
+    "options": [
+      "request.files",
+      "request.uploadsOnly",
+      "request.form_files",
+      "request.attachments"
+    ],
+    "answer": "request.files"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Files",
+    "difficulty": "Medium",
+    "question": "Why should uploaded filenames be sanitized before saving?",
+    "options": [
+      "To reduce risks such as path traversal and unsafe filenames",
+      "To make uploads larger",
+      "To disable MIME types",
+      "To remove all extensions"
+    ],
+    "answer": "To reduce risks such as path traversal and unsafe filenames"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Files",
+    "difficulty": "Medium",
+    "question": "Which Werkzeug helper is commonly used to sanitize uploaded filenames?",
+    "options": [
+      "secure_filename()",
+      "safe_file()",
+      "sanitize_path()",
+      "clean_upload()"
+    ],
+    "answer": "secure_filename()"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Templates",
+    "difficulty": "Medium",
+    "question": "How do you output a variable named user in a Jinja template?",
+    "options": [
+      "{{ user }}",
+      "{% user %}",
+      "<%= user %>",
+      "[[ user ]]"
+    ],
+    "answer": "{{ user }}"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Templates",
+    "difficulty": "Medium",
+    "question": "Which Jinja syntax is used for control statements such as loops?",
+    "options": [
+      "{% ... %}",
+      "{{ ... }}",
+      "<% ... %>",
+      "[[ ... ]]"
+    ],
+    "answer": "{% ... %}"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Templates",
+    "difficulty": "Medium",
+    "question": "What does template inheritance allow?",
+    "options": [
+      "Child templates can extend a shared base layout",
+      "Templates inherit Python classes",
+      "Templates copy databases",
+      "Templates bypass routing"
+    ],
+    "answer": "Child templates can extend a shared base layout"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Templates",
+    "difficulty": "Medium",
+    "question": "Which Jinja statement is used by a child template to inherit from a base template?",
+    "options": [
+      "{% extends 'base.html' %}",
+      "{% inherit 'base.html' %}",
+      "{{ extends base }}",
+      "{% include-base %}"
+    ],
+    "answer": "{% extends 'base.html' %}"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Blueprints",
+    "difficulty": "Medium",
+    "question": "How is a Blueprint attached to a Flask application?",
+    "options": [
+      "app.register_blueprint()",
+      "app.add_router()",
+      "app.include_blueprint()",
+      "app.mount_route()"
+    ],
+    "answer": "app.register_blueprint()"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Blueprints",
+    "difficulty": "Medium",
+    "question": "What does url_prefix on a Blueprint do?",
+    "options": [
+      "Adds a common URL prefix to the Blueprint's routes",
+      "Changes template folder names only",
+      "Sets the server port",
+      "Adds a database prefix"
+    ],
+    "answer": "Adds a common URL prefix to the Blueprint's routes"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Application Context",
+    "difficulty": "Medium",
+    "question": "What does current_app provide?",
+    "options": [
+      "Access to the active Flask application within an application context",
+      "The current browser window",
+      "The current database row",
+      "The current route parameter only"
+    ],
+    "answer": "Access to the active Flask application within an application context"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Application Context",
+    "difficulty": "Medium",
+    "question": "What is Flask's g object commonly used for?",
+    "options": [
+      "Request-context data shared across functions during one request",
+      "Permanent global application storage",
+      "Static files",
+      "Session cookies only"
+    ],
+    "answer": "Request-context data shared across functions during one request"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Hooks",
+    "difficulty": "Medium",
+    "question": "What does @app.before_request do?",
+    "options": [
+      "Runs a function before each matching request is handled",
+      "Runs only at server startup",
+      "Runs after every response only",
+      "Runs before Python imports"
+    ],
+    "answer": "Runs a function before each matching request is handled"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Hooks",
+    "difficulty": "Medium",
+    "question": "What does @app.after_request typically receive?",
+    "options": [
+      "The response object",
+      "Only request.json",
+      "The application config",
+      "A database cursor"
+    ],
+    "answer": "The response object"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Sessions",
+    "difficulty": "Medium",
+    "question": "Where does Flask's default session mechanism store session data?",
+    "options": [
+      "In a cryptographically signed client-side cookie",
+      "Only in server RAM",
+      "Only in MongoDB",
+      "Only in Redis"
+    ],
+    "answer": "In a cryptographically signed client-side cookie"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Sessions",
+    "difficulty": "Medium",
+    "question": "Does Flask's default signed session cookie encrypt its contents?",
+    "options": [
+      "No, it signs them for integrity but does not inherently encrypt them",
+      "Yes, always",
+      "Only in debug mode",
+      "Only on localhost"
+    ],
+    "answer": "No, it signs them for integrity but does not inherently encrypt them"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Security",
+    "difficulty": "Medium",
+    "question": "Why should SECRET_KEY be kept secret?",
+    "options": [
+      "It protects integrity of signed session and related data",
+      "It defines the route prefix",
+      "It sets the Flask version",
+      "It configures the database port"
+    ],
+    "answer": "It protects integrity of signed session and related data"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Cookies",
+    "difficulty": "Medium",
+    "question": "Which response method can set a cookie?",
+    "options": [
+      "response.set_cookie()",
+      "response.cookie()",
+      "request.set_cookie()",
+      "session.cookie()"
+    ],
+    "answer": "response.set_cookie()"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Responses",
+    "difficulty": "Medium",
+    "question": "How can a route return a custom status code with a response body?",
+    "options": [
+      "Return a tuple like (body, status_code)",
+      "Set request.status",
+      "Use print(status)",
+      "Call app.status()"
+    ],
+    "answer": "Return a tuple like (body, status_code)"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Error Handling",
+    "difficulty": "Medium",
+    "question": "Which Flask helper can immediately raise an HTTP error response?",
+    "options": [
+      "abort()",
+      "stop()",
+      "raise_http()",
+      "cancel()"
+    ],
+    "answer": "abort()"
+  },
+  {
+    "subject": "Flask",
+    "topic": "CORS",
+    "difficulty": "Medium",
+    "question": "What problem does CORS configuration address?",
+    "options": [
+      "Browser restrictions on cross-origin requests",
+      "Database locking",
+      "Template inheritance",
+      "Python imports"
+    ],
+    "answer": "Browser restrictions on cross-origin requests"
+  },
+  {
+    "subject": "Flask",
+    "topic": "CORS",
+    "difficulty": "Medium",
+    "question": "Which extension is commonly used to configure CORS in Flask?",
+    "options": [
+      "Flask-CORS",
+      "Flask-HTTP",
+      "Flask-OriginOnly",
+      "Werkzeug-CORS-Core"
+    ],
+    "answer": "Flask-CORS"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Testing",
+    "difficulty": "Medium",
+    "question": "What does app.test_client() provide?",
+    "options": [
+      "A client for making test requests without running an external server",
+      "A production HTTP load balancer",
+      "A database client",
+      "A browser automation engine"
+    ],
+    "answer": "A client for making test requests without running an external server"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Testing",
+    "difficulty": "Medium",
+    "question": "Why is a separate testing configuration useful?",
+    "options": [
+      "It isolates test settings such as databases and secrets from production",
+      "It makes tests run only in browsers",
+      "It disables assertions",
+      "It removes routes"
+    ],
+    "answer": "It isolates test settings such as databases and secrets from production"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Database",
+    "difficulty": "Medium",
+    "question": "What is Flask-SQLAlchemy?",
+    "options": [
+      "A Flask extension integrating SQLAlchemy with Flask",
+      "A NoSQL database",
+      "A template engine",
+      "A test runner"
+    ],
+    "answer": "A Flask extension integrating SQLAlchemy with Flask"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Database",
+    "difficulty": "Medium",
+    "question": "Can Flask be used with MongoDB instead of SQL databases?",
+    "options": [
+      "Yes",
+      "No",
+      "Only in debug mode",
+      "Only through Django"
+    ],
+    "answer": "Yes"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Configuration",
+    "difficulty": "Medium",
+    "question": "Why are environment variables useful for Flask configuration?",
+    "options": [
+      "They keep environment-specific values out of hardcoded source",
+      "They replace routing",
+      "They render templates",
+      "They automatically encrypt databases"
+    ],
+    "answer": "They keep environment-specific values out of hardcoded source"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Production",
+    "difficulty": "Medium",
+    "question": "Should Flask's built-in development server normally be used as the production server?",
+    "options": [
+      "No",
+      "Yes, always",
+      "Only with debug=True",
+      "Only for APIs"
+    ],
+    "answer": "No"
+  },
+  {
+    "subject": "Flask",
+    "topic": "WSGI",
+    "difficulty": "Medium",
+    "question": "What does WSGI define?",
+    "options": [
+      "A standard interface between Python web applications and web servers",
+      "A CSS syntax",
+      "A database protocol",
+      "A browser API"
+    ],
+    "answer": "A standard interface between Python web applications and web servers"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Application Factory",
+    "difficulty": "Hard",
+    "question": "What is the application factory pattern in Flask?",
+    "options": [
+      "Creating the Flask app inside a function such as create_app()",
+      "Creating one global route per file",
+      "Using only class-based views",
+      "Starting multiple development servers"
+    ],
+    "answer": "Creating the Flask app inside a function such as create_app()"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Application Factory",
+    "difficulty": "Hard",
+    "question": "Why is the application factory pattern useful?",
+    "options": [
+      "It supports multiple configurations, testing, and cleaner initialization",
+      "It eliminates configuration files",
+      "It prevents Blueprints",
+      "It automatically deploys the app"
+    ],
+    "answer": "It supports multiple configurations, testing, and cleaner initialization"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Contexts",
+    "difficulty": "Hard",
+    "question": "What is an application context?",
+    "options": [
+      "A context that makes application-specific objects such as current_app and g available",
+      "A browser tab",
+      "A database transaction only",
+      "A Python module import"
+    ],
+    "answer": "A context that makes application-specific objects such as current_app and g available"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Contexts",
+    "difficulty": "Hard",
+    "question": "What is a request context?",
+    "options": [
+      "A context that exposes request-specific objects such as request and session",
+      "A global permanent variable",
+      "A template cache",
+      "A database connection pool only"
+    ],
+    "answer": "A context that exposes request-specific objects such as request and session"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Contexts",
+    "difficulty": "Hard",
+    "question": "Why does accessing request outside a request context raise an error?",
+    "options": [
+      "request is a context-local proxy requiring an active request context",
+      "request exists only in JavaScript",
+      "Flask disables globals",
+      "The route decorator is missing"
+    ],
+    "answer": "request is a context-local proxy requiring an active request context"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Contexts",
+    "difficulty": "Hard",
+    "question": "What does app.app_context() allow in tests or scripts?",
+    "options": [
+      "Temporarily push an application context",
+      "Start a production server",
+      "Create a request automatically",
+      "Open a browser"
+    ],
+    "answer": "Temporarily push an application context"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Local Proxies",
+    "difficulty": "Hard",
+    "question": "What is current_app technically exposed as in Flask?",
+    "options": [
+      "A context-local proxy to the active application",
+      "A global Flask instance copied into every module",
+      "A database session",
+      "A Blueprint"
+    ],
+    "answer": "A context-local proxy to the active application"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Blueprints",
+    "difficulty": "Hard",
+    "question": "Why are Blueprints useful in large applications?",
+    "options": [
+      "They separate routes and related logic into modular components without creating separate Flask apps",
+      "They provide database replication",
+      "They replace WSGI",
+      "They automatically generate tests"
+    ],
+    "answer": "They separate routes and related logic into modular components without creating separate Flask apps"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Blueprints",
+    "difficulty": "Hard",
+    "question": "Can the same Blueprint object be registered more than once under appropriate configuration?",
+    "options": [
+      "Yes, in supported scenarios with distinct registration options such as names or prefixes",
+      "No, never",
+      "Only in debug mode",
+      "Only without routes"
+    ],
+    "answer": "Yes, in supported scenarios with distinct registration options such as names or prefixes"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "Why should user-provided HTML not be marked safe in Jinja without validation or sanitization?",
+    "options": [
+      "It can introduce cross-site scripting vulnerabilities",
+      "It prevents template inheritance",
+      "It disables CSS",
+      "It causes database deadlocks"
+    ],
+    "answer": "It can introduce cross-site scripting vulnerabilities"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What does Jinja autoescaping help prevent in HTML templates?",
+    "options": [
+      "Many common XSS risks from untrusted text output",
+      "SQL injection automatically",
+      "CSRF automatically",
+      "Session fixation automatically"
+    ],
+    "answer": "Many common XSS risks from untrusted text output"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What additional protection is commonly needed for state-changing form requests in cookie-authenticated apps?",
+    "options": [
+      "CSRF protection",
+      "More CSS",
+      "A second template engine",
+      "Disabling sessions"
+    ],
+    "answer": "CSRF protection"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What does the HttpOnly cookie flag do?",
+    "options": [
+      "Prevents JavaScript from reading the cookie through document.cookie",
+      "Encrypts the cookie automatically",
+      "Prevents the browser from sending it",
+      "Makes the cookie permanent"
+    ],
+    "answer": "Prevents JavaScript from reading the cookie through document.cookie"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What does the Secure cookie flag do?",
+    "options": [
+      "Restricts cookie transmission to secure HTTPS requests",
+      "Hashes the cookie value",
+      "Makes the cookie read-only in Python",
+      "Prevents expiration"
+    ],
+    "answer": "Restricts cookie transmission to secure HTTPS requests"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What does SameSite on a session cookie help control?",
+    "options": [
+      "When the browser includes the cookie on cross-site requests",
+      "How the cookie is encrypted",
+      "How long the server runs",
+      "Which Blueprint receives the request"
+    ],
+    "answer": "When the browser includes the cookie on cross-site requests"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Authentication",
+    "difficulty": "Hard",
+    "question": "Why should passwords be hashed with a dedicated password hashing algorithm?",
+    "options": [
+      "To make offline guessing attacks significantly more expensive",
+      "So passwords can be decrypted later",
+      "To make sessions unnecessary",
+      "To remove the need for salts"
+    ],
+    "answer": "To make offline guessing attacks significantly more expensive"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Authentication",
+    "difficulty": "Hard",
+    "question": "Which Werkzeug helpers are commonly used for password hashing and verification?",
+    "options": [
+      "generate_password_hash() and check_password_hash()",
+      "hash() and verify()",
+      "encrypt_password() and decrypt_password()",
+      "password_encode() and password_decode()"
+    ],
+    "answer": "generate_password_hash() and check_password_hash()"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Sessions",
+    "difficulty": "Hard",
+    "question": "Why should sensitive secrets generally not be stored directly in Flask's default client-side session?",
+    "options": [
+      "The cookie is signed but its contents are not inherently confidential",
+      "The session cannot store strings",
+      "The session is stored only in logs",
+      "The session deletes itself immediately"
+    ],
+    "answer": "The cookie is signed but its contents are not inherently confidential"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Sessions",
+    "difficulty": "Hard",
+    "question": "When would server-side session storage be preferable?",
+    "options": [
+      "When session data should remain confidential, be revocable centrally, or exceed practical cookie limits",
+      "When the app has no users",
+      "When templates are disabled",
+      "When only GET routes exist"
+    ],
+    "answer": "When session data should remain confidential, be revocable centrally, or exceed practical cookie limits"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Error Handling",
+    "difficulty": "Hard",
+    "question": "Why should production error responses avoid exposing stack traces?",
+    "options": [
+      "Stack traces can reveal internal implementation details and sensitive information",
+      "Browsers cannot display text",
+      "Flask cannot generate stack traces",
+      "They always break HTTP"
+    ],
+    "answer": "Stack traces can reveal internal implementation details and sensitive information"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Error Handling",
+    "difficulty": "Hard",
+    "question": "Why is centralized error handling useful in APIs?",
+    "options": [
+      "It provides consistent error formats and reduces duplicated handling logic",
+      "It prevents all exceptions",
+      "It replaces validation",
+      "It disables logging"
+    ],
+    "answer": "It provides consistent error formats and reduces duplicated handling logic"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Database",
+    "difficulty": "Hard",
+    "question": "Why should database connections or clients be reused appropriately instead of reconnecting on every small operation?",
+    "options": [
+      "Connection setup is expensive and pooling or reuse improves efficiency",
+      "Flask cannot reconnect",
+      "Databases allow only one connection",
+      "It prevents all query errors"
+    ],
+    "answer": "Connection setup is expensive and pooling or reuse improves efficiency"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Database",
+    "difficulty": "Hard",
+    "question": "Why are database transactions important in Flask applications performing multiple related writes?",
+    "options": [
+      "They help preserve consistency when all related operations must succeed or fail together",
+      "They make all queries faster",
+      "They replace authentication",
+      "They prevent network failures"
+    ],
+    "answer": "They help preserve consistency when all related operations must succeed or fail together"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Concurrency",
+    "difficulty": "Hard",
+    "question": "Why should request-specific data not be stored in ordinary module-level global variables?",
+    "options": [
+      "Concurrent requests can interfere with shared mutable global state",
+      "Flask prohibits global variables syntactically",
+      "Globals are always immutable",
+      "Python deletes globals after every request"
+    ],
+    "answer": "Concurrent requests can interfere with shared mutable global state"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Concurrency",
+    "difficulty": "Hard",
+    "question": "What should be used for request-scoped temporary data instead of a shared mutable global?",
+    "options": [
+      "Context-local tools such as g when appropriate",
+      "A module-level dictionary",
+      "A global list",
+      "A class static variable"
+    ],
+    "answer": "Context-local tools such as g when appropriate"
+  },
+  {
+    "subject": "Flask",
+    "topic": "WSGI",
+    "difficulty": "Hard",
+    "question": "What is the role of a WSGI server such as Gunicorn?",
+    "options": [
+      "Host the Flask WSGI application and manage production HTTP worker processes",
+      "Compile Jinja templates into JavaScript",
+      "Replace Flask routing",
+      "Manage MongoDB indexes"
+    ],
+    "answer": "Host the Flask WSGI application and manage production HTTP worker processes"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Production",
+    "difficulty": "Hard",
+    "question": "Why is a reverse proxy such as Nginx often placed in front of a Flask WSGI server?",
+    "options": [
+      "To handle concerns such as TLS termination, static files, buffering, and proxying",
+      "To replace Python code",
+      "To compile Flask",
+      "To store user sessions automatically"
+    ],
+    "answer": "To handle concerns such as TLS termination, static files, buffering, and proxying"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Production",
+    "difficulty": "Hard",
+    "question": "Why is debug mode unsafe in production?",
+    "options": [
+      "Detailed debugger capabilities can expose sensitive information or enable dangerous interaction",
+      "It disables all routes",
+      "It makes Flask read-only",
+      "It prevents HTTPS"
+    ],
+    "answer": "Detailed debugger capabilities can expose sensitive information or enable dangerous interaction"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Performance",
+    "difficulty": "Hard",
+    "question": "Why should long-running CPU-heavy work usually not execute directly inside a request handler?",
+    "options": [
+      "It can occupy workers and increase request latency for other users",
+      "Flask cannot execute Python loops",
+      "It automatically corrupts sessions",
+      "It disables JSON"
+    ],
+    "answer": "It can occupy workers and increase request latency for other users"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Background Jobs",
+    "difficulty": "Hard",
+    "question": "What is a common approach for long-running background work in a Flask system?",
+    "options": [
+      "Use a task queue or worker system outside the request lifecycle",
+      "Keep the HTTP request open indefinitely",
+      "Use only global variables",
+      "Run everything in Jinja"
+    ],
+    "answer": "Use a task queue or worker system outside the request lifecycle"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Testing",
+    "difficulty": "Hard",
+    "question": "Why should tests use isolated databases or fixtures?",
+    "options": [
+      "To avoid corrupting real data and make tests repeatable",
+      "To increase production traffic",
+      "To avoid writing assertions",
+      "To disable transactions"
+    ],
+    "answer": "To avoid corrupting real data and make tests repeatable"
+  },
+  {
+    "subject": "Flask",
+    "topic": "Architecture",
+    "difficulty": "Hard",
+    "question": "Why is separating route handlers, business logic, and data-access code useful?",
+    "options": [
+      "It improves maintainability, reuse, and testability",
+      "It guarantees no bugs",
+      "It removes the need for Blueprints",
+      "It makes every request asynchronous"
+    ],
+    "answer": "It improves maintainability, reuse, and testability"
+  },
+  {
+    "subject": "Flask",
+    "topic": "API Design",
+    "difficulty": "Hard",
+    "question": "Why should API input validation happen before business logic or database writes?",
+    "options": [
+      "Invalid or malicious data can be rejected early and consistently",
+      "Flask validates every custom rule automatically",
+      "It removes the need for authentication",
+      "It guarantees database performance"
+    ],
+    "answer": "Invalid or malicious data can be rejected early and consistently"
+  }
+]
