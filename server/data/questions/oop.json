@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What does OOP stand for?",
+    "options": [
+      "Object Oriented Programming",
+      "Ordered Operation Processing",
+      "Object Operation Protocol",
+      "Open Object Processing"
+    ],
+    "answer": "Object Oriented Programming"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is an object in OOP?",
+    "options": [
+      "An instance of a class",
+      "A database table",
+      "A loop",
+      "A compiler"
+    ],
+    "answer": "An instance of a class"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is a class?",
+    "options": [
+      "A blueprint for creating objects",
+      "A running process",
+      "A database query",
+      "A network packet"
+    ],
+    "answer": "A blueprint for creating objects"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Encapsulation",
+    "difficulty": "Easy",
+    "question": "What is encapsulation?",
+    "options": [
+      "Bundling data and methods together while controlling access",
+      "Splitting one class into many files only",
+      "Running methods in parallel",
+      "Creating only public variables"
+    ],
+    "answer": "Bundling data and methods together while controlling access"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Abstraction",
+    "difficulty": "Easy",
+    "question": "What is abstraction?",
+    "options": [
+      "Showing essential features while hiding unnecessary implementation details",
+      "Copying every field",
+      "Making all methods public",
+      "Removing inheritance"
+    ],
+    "answer": "Showing essential features while hiding unnecessary implementation details"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Inheritance",
+    "difficulty": "Easy",
+    "question": "What is inheritance?",
+    "options": [
+      "A mechanism where one class acquires features of another class",
+      "A method for deleting objects",
+      "A database join",
+      "A loop structure"
+    ],
+    "answer": "A mechanism where one class acquires features of another class"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Polymorphism",
+    "difficulty": "Easy",
+    "question": "What is polymorphism?",
+    "options": [
+      "The ability to use one interface with multiple implementations",
+      "The ability to store only one object",
+      "A way to hide all methods",
+      "A memory allocation technique"
+    ],
+    "answer": "The ability to use one interface with multiple implementations"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Objects",
+    "difficulty": "Easy",
+    "question": "Which two things commonly describe an object?",
+    "options": [
+      "State and behavior",
+      "Rows and columns",
+      "Packets and frames",
+      "Files and folders"
+    ],
+    "answer": "State and behavior"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Classes",
+    "difficulty": "Easy",
+    "question": "What do data members usually represent?",
+    "options": [
+      "Object state",
+      "Only method names",
+      "Only inheritance rules",
+      "Only constructors"
+    ],
+    "answer": "Object state"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Methods",
+    "difficulty": "Easy",
+    "question": "What do methods usually represent?",
+    "options": [
+      "Object behavior",
+      "Only object memory size",
+      "Only class names",
+      "Only variables"
+    ],
+    "answer": "Object behavior"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Constructors",
+    "difficulty": "Easy",
+    "question": "What is a constructor mainly used for?",
+    "options": [
+      "Initializing a newly created object",
+      "Destroying an object",
+      "Sorting objects",
+      "Creating a database"
+    ],
+    "answer": "Initializing a newly created object"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Destructors",
+    "difficulty": "Easy",
+    "question": "What is a destructor mainly associated with?",
+    "options": [
+      "Cleaning up when an object is destroyed",
+      "Creating a class",
+      "Overloading a method",
+      "Declaring an interface"
+    ],
+    "answer": "Cleaning up when an object is destroyed"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Access Control",
+    "difficulty": "Easy",
+    "question": "Which access level generally allows use from outside the class?",
+    "options": [
+      "Public",
+      "Private",
+      "Hidden",
+      "Local"
+    ],
+    "answer": "Public"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Access Control",
+    "difficulty": "Easy",
+    "question": "Which access level generally restricts direct use to the same class?",
+    "options": [
+      "Private",
+      "Public",
+      "Global",
+      "Shared"
+    ],
+    "answer": "Private"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Inheritance",
+    "difficulty": "Easy",
+    "question": "What is a base class?",
+    "options": [
+      "A class from which another class inherits",
+      "A class that cannot have methods",
+      "A temporary object",
+      "A database schema"
+    ],
+    "answer": "A class from which another class inherits"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Inheritance",
+    "difficulty": "Easy",
+    "question": "What is a derived class?",
+    "options": [
+      "A class that inherits from another class",
+      "A class with no members",
+      "A class used only for input",
+      "A class stored on disk"
+    ],
+    "answer": "A class that inherits from another class"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Polymorphism",
+    "difficulty": "Easy",
+    "question": "Method overloading is commonly considered which type of polymorphism?",
+    "options": [
+      "Compile-time polymorphism",
+      "Runtime polymorphism only",
+      "No polymorphism",
+      "Network polymorphism"
+    ],
+    "answer": "Compile-time polymorphism"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Polymorphism",
+    "difficulty": "Easy",
+    "question": "Method overriding is commonly associated with which type of polymorphism?",
+    "options": [
+      "Runtime polymorphism",
+      "Compile-time polymorphism only",
+      "No polymorphism",
+      "Static data binding only"
+    ],
+    "answer": "Runtime polymorphism"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Overloading",
+    "difficulty": "Easy",
+    "question": "What is method overloading?",
+    "options": [
+      "Using the same method name with different parameter lists",
+      "Replacing a parent method with identical behavior only",
+      "Calling one method twice",
+      "Creating two classes"
+    ],
+    "answer": "Using the same method name with different parameter lists"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Overriding",
+    "difficulty": "Easy",
+    "question": "What is method overriding?",
+    "options": [
+      "A child class provides a new implementation of an inherited method",
+      "A class has two constructors",
+      "A method has two return statements",
+      "A variable changes type"
+    ],
+    "answer": "A child class provides a new implementation of an inherited method"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Interfaces",
+    "difficulty": "Easy",
+    "question": "What is an interface mainly used for?",
+    "options": [
+      "Defining a contract of behavior",
+      "Storing object data only",
+      "Replacing every class",
+      "Managing files"
+    ],
+    "answer": "Defining a contract of behavior"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Abstract Classes",
+    "difficulty": "Easy",
+    "question": "What is an abstract class?",
+    "options": [
+      "A class intended to provide incomplete or shared behavior for subclasses",
+      "A class with no name",
+      "A class that must have only public fields",
+      "A class stored outside memory"
+    ],
+    "answer": "A class intended to provide incomplete or shared behavior for subclasses"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Relationships",
+    "difficulty": "Easy",
+    "question": "What does association describe?",
+    "options": [
+      "A relationship between independent objects or classes",
+      "Only inheritance",
+      "Only object creation",
+      "Only memory allocation"
+    ],
+    "answer": "A relationship between independent objects or classes"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Relationships",
+    "difficulty": "Easy",
+    "question": "What does composition represent?",
+    "options": [
+      "A strong whole-part relationship where parts belong to the whole",
+      "A temporary function call",
+      "A database join",
+      "A method overload"
+    ],
+    "answer": "A strong whole-part relationship where parts belong to the whole"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Relationships",
+    "difficulty": "Easy",
+    "question": "What does aggregation represent?",
+    "options": [
+      "A weaker whole-part relationship where parts can exist independently",
+      "A type of sorting",
+      "A destructor call",
+      "A network connection"
+    ],
+    "answer": "A weaker whole-part relationship where parts can exist independently"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Message Passing",
+    "difficulty": "Easy",
+    "question": "What does message passing mean in OOP?",
+    "options": [
+      "Objects communicate by invoking methods or sending requests",
+      "Objects exchange only files",
+      "Classes are copied automatically",
+      "Memory is shared without methods"
+    ],
+    "answer": "Objects communicate by invoking methods or sending requests"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Object Identity",
+    "difficulty": "Easy",
+    "question": "What does object identity refer to?",
+    "options": [
+      "The distinct existence of an object even if its state matches another object",
+      "Only the object's class name",
+      "Only its memory size",
+      "Only its methods"
+    ],
+    "answer": "The distinct existence of an object even if its state matches another object"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "State",
+    "difficulty": "Easy",
+    "question": "What is object state typically represented by?",
+    "options": [
+      "The current values of its fields or attributes",
+      "Only method names",
+      "Only constructor code",
+      "Only access modifiers"
+    ],
+    "answer": "The current values of its fields or attributes"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Behavior",
+    "difficulty": "Easy",
+    "question": "What is object behavior typically represented by?",
+    "options": [
+      "Its methods or operations",
+      "Only its field values",
+      "Only its inheritance tree",
+      "Only its class name"
+    ],
+    "answer": "Its methods or operations"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Reusability",
+    "difficulty": "Easy",
+    "question": "Which OOP feature directly supports reusing behavior from an existing class?",
+    "options": [
+      "Inheritance",
+      "Encapsulation only",
+      "Abstraction only",
+      "Object identity"
+    ],
+    "answer": "Inheritance"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Modularity",
+    "difficulty": "Easy",
+    "question": "How does OOP support modularity?",
+    "options": [
+      "By organizing related data and behavior into classes and objects",
+      "By putting all code in one function",
+      "By avoiding methods",
+      "By removing interfaces"
+    ],
+    "answer": "By organizing related data and behavior into classes and objects"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Maintainability",
+    "difficulty": "Easy",
+    "question": "Why can encapsulation improve maintainability?",
+    "options": [
+      "Internal implementation can change without exposing all details to users of the class",
+      "It removes all dependencies automatically",
+      "It prevents every bug",
+      "It makes all fields global"
+    ],
+    "answer": "Internal implementation can change without exposing all details to users of the class"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Inheritance",
+    "difficulty": "Easy",
+    "question": "What is single inheritance?",
+    "options": [
+      "A class inherits from one direct parent class",
+      "A class inherits from two parents",
+      "A class inherits from itself",
+      "A class has one object"
+    ],
+    "answer": "A class inherits from one direct parent class"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Inheritance",
+    "difficulty": "Easy",
+    "question": "What is multilevel inheritance?",
+    "options": [
+      "A chain where a class inherits from a class that itself inherits from another",
+      "A class with many methods",
+      "A class with multiple objects only",
+      "A class implementing one interface"
+    ],
+    "answer": "A chain where a class inherits from a class that itself inherits from another"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Encapsulation",
+    "difficulty": "Medium",
+    "question": "Which design best demonstrates encapsulation?",
+    "options": [
+      "Private fields with controlled public methods",
+      "All fields public and directly modified",
+      "No methods in the class",
+      "Only static global variables"
+    ],
+    "answer": "Private fields with controlled public methods"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Abstraction",
+    "difficulty": "Medium",
+    "question": "How does an interface support abstraction?",
+    "options": [
+      "It describes required behavior without exposing implementation details",
+      "It stores every implementation detail",
+      "It prevents polymorphism",
+      "It replaces objects"
+    ],
+    "answer": "It describes required behavior without exposing implementation details"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Polymorphism",
+    "difficulty": "Medium",
+    "question": "What is dynamic dispatch?",
+    "options": [
+      "Selecting an overridden method implementation at runtime based on the actual object",
+      "Selecting an overloaded method only at compile time",
+      "Creating an object dynamically",
+      "Deleting an object"
+    ],
+    "answer": "Selecting an overridden method implementation at runtime based on the actual object"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Binding",
+    "difficulty": "Medium",
+    "question": "What is early binding?",
+    "options": [
+      "Resolving a method or function call at compile time when possible",
+      "Resolving every method at runtime",
+      "Binding objects to databases",
+      "Allocating heap memory"
+    ],
+    "answer": "Resolving a method or function call at compile time when possible"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Binding",
+    "difficulty": "Medium",
+    "question": "What is late binding?",
+    "options": [
+      "Resolving the target method at runtime",
+      "Creating variables late",
+      "Delaying object construction only",
+      "Loading source files"
+    ],
+    "answer": "Resolving the target method at runtime"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Overloading",
+    "difficulty": "Medium",
+    "question": "Which change usually creates a valid overload?",
+    "options": [
+      "Changing the parameter list",
+      "Changing only the return type",
+      "Changing only the method body",
+      "Changing only access visibility"
+    ],
+    "answer": "Changing the parameter list"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Overriding",
+    "difficulty": "Medium",
+    "question": "For overriding, what must generally remain compatible?",
+    "options": [
+      "The inherited method contract and signature rules",
+      "The class name",
+      "The number of objects",
+      "The file name"
+    ],
+    "answer": "The inherited method contract and signature rules"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Inheritance",
+    "difficulty": "Medium",
+    "question": "What is hierarchical inheritance?",
+    "options": [
+      "Multiple child classes inherit from the same parent class",
+      "One child inherits from many parents",
+      "One object contains many objects",
+      "A class inherits from itself"
+    ],
+    "answer": "Multiple child classes inherit from the same parent class"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Inheritance",
+    "difficulty": "Medium",
+    "question": "What is multiple inheritance?",
+    "options": [
+      "A class inherits from more than one parent class",
+      "Many objects are created from one class",
+      "One class has many methods",
+      "A child class has one parent"
+    ],
+    "answer": "A class inherits from more than one parent class"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Relationships",
+    "difficulty": "Medium",
+    "question": "What is an 'is-a' relationship usually associated with?",
+    "options": [
+      "Inheritance",
+      "Composition",
+      "Aggregation only",
+      "Message passing"
+    ],
+    "answer": "Inheritance"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Relationships",
+    "difficulty": "Medium",
+    "question": "What is a 'has-a' relationship usually associated with?",
+    "options": [
+      "Composition or aggregation",
+      "Inheritance only",
+      "Method overloading",
+      "Dynamic dispatch"
+    ],
+    "answer": "Composition or aggregation"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Composition",
+    "difficulty": "Medium",
+    "question": "Why is composition often preferred over inheritance for flexible design?",
+    "options": [
+      "It allows behavior to be assembled from contained objects with looser coupling",
+      "It always uses less memory",
+      "It eliminates all interfaces",
+      "It prevents object creation"
+    ],
+    "answer": "It allows behavior to be assembled from contained objects with looser coupling"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Constructors",
+    "difficulty": "Medium",
+    "question": "What is constructor overloading?",
+    "options": [
+      "Providing multiple constructors with different parameter lists",
+      "Overriding a parent destructor",
+      "Creating multiple classes with one constructor",
+      "Calling the same constructor twice automatically"
+    ],
+    "answer": "Providing multiple constructors with different parameter lists"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Constructors",
+    "difficulty": "Medium",
+    "question": "Why might a default constructor be useful?",
+    "options": [
+      "It allows object creation without explicit constructor arguments",
+      "It prevents inheritance",
+      "It makes every field public",
+      "It disables polymorphism"
+    ],
+    "answer": "It allows object creation without explicit constructor arguments"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Copying",
+    "difficulty": "Medium",
+    "question": "What is a shallow copy?",
+    "options": [
+      "A copy where referenced nested objects may still be shared",
+      "A copy that recursively duplicates every nested object",
+      "A copy with no fields",
+      "A copy of the class definition only"
+    ],
+    "answer": "A copy where referenced nested objects may still be shared"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Copying",
+    "difficulty": "Medium",
+    "question": "What is a deep copy?",
+    "options": [
+      "A copy that also duplicates relevant nested mutable objects",
+      "A reference to the same object only",
+      "A class declaration copy",
+      "A method override"
+    ],
+    "answer": "A copy that also duplicates relevant nested mutable objects"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Immutability",
+    "difficulty": "Medium",
+    "question": "What is an immutable object?",
+    "options": [
+      "An object whose observable state cannot change after construction",
+      "An object that cannot be created",
+      "An object with no methods",
+      "An object that must be global"
+    ],
+    "answer": "An object whose observable state cannot change after construction"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Interfaces",
+    "difficulty": "Medium",
+    "question": "Why are interfaces useful for polymorphism?",
+    "options": [
+      "Different classes can provide different implementations of the same contract",
+      "They force every class to share state",
+      "They prevent overriding",
+      "They require inheritance from a concrete class"
+    ],
+    "answer": "Different classes can provide different implementations of the same contract"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Abstract Classes",
+    "difficulty": "Medium",
+    "question": "When is an abstract class useful?",
+    "options": [
+      "When related subclasses should share state or implementation while leaving some behavior abstract",
+      "When no shared behavior exists and only unrelated classes are used",
+      "Only for database access",
+      "Only for static functions"
+    ],
+    "answer": "When related subclasses should share state or implementation while leaving some behavior abstract"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Access Control",
+    "difficulty": "Medium",
+    "question": "What is the purpose of protected access in many OOP languages?",
+    "options": [
+      "Allow access within the class and typically its subclasses while restricting wider access",
+      "Make a member public everywhere",
+      "Make a member global",
+      "Prevent subclass access"
+    ],
+    "answer": "Allow access within the class and typically its subclasses while restricting wider access"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Static Members",
+    "difficulty": "Medium",
+    "question": "What is a static class member generally associated with?",
+    "options": [
+      "The class itself rather than each individual object",
+      "Only one method call",
+      "Only local variables",
+      "A database transaction"
+    ],
+    "answer": "The class itself rather than each individual object"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Instance Members",
+    "difficulty": "Medium",
+    "question": "What is an instance member associated with?",
+    "options": [
+      "A particular object instance",
+      "Only the class definition",
+      "Only interfaces",
+      "Only global scope"
+    ],
+    "answer": "A particular object instance"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Method Parameters",
+    "difficulty": "Medium",
+    "question": "What is pass-by-value conceptually?",
+    "options": [
+      "The called method receives a copy of the supplied value",
+      "The called method always receives the original variable itself",
+      "The object is deleted after the call",
+      "The parameter becomes static"
+    ],
+    "answer": "The called method receives a copy of the supplied value"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "How does exception handling support object-oriented programs?",
+    "options": [
+      "It separates normal logic from error-handling paths",
+      "It replaces inheritance",
+      "It removes constructors",
+      "It prevents every runtime error"
+    ],
+    "answer": "It separates normal logic from error-handling paths"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "SOLID",
+    "difficulty": "Medium",
+    "question": "What does the Single Responsibility Principle suggest?",
+    "options": [
+      "A class should have one main reason to change",
+      "A class should have only one method",
+      "A class should have only one object",
+      "A class should never inherit"
+    ],
+    "answer": "A class should have one main reason to change"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "SOLID",
+    "difficulty": "Medium",
+    "question": "What does the Open/Closed Principle suggest?",
+    "options": [
+      "Software entities should be open for extension but closed for modification",
+      "All classes should be open to public access",
+      "Methods should never be overridden",
+      "Objects should never change state"
+    ],
+    "answer": "Software entities should be open for extension but closed for modification"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "SOLID",
+    "difficulty": "Medium",
+    "question": "What does the Liskov Substitution Principle require?",
+    "options": [
+      "Subtypes should be usable wherever their base types are expected without breaking correctness",
+      "Every class must have a subclass",
+      "All methods must be static",
+      "Inheritance should never be used"
+    ],
+    "answer": "Subtypes should be usable wherever their base types are expected without breaking correctness"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "SOLID",
+    "difficulty": "Medium",
+    "question": "What does Interface Segregation Principle suggest?",
+    "options": [
+      "Prefer small focused interfaces over forcing clients to depend on methods they do not use",
+      "Every class should implement one huge interface",
+      "Interfaces should contain state only",
+      "Interfaces should never be inherited"
+    ],
+    "answer": "Prefer small focused interfaces over forcing clients to depend on methods they do not use"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "SOLID",
+    "difficulty": "Medium",
+    "question": "What does Dependency Inversion Principle suggest?",
+    "options": [
+      "Depend on abstractions rather than concrete implementations",
+      "Depend only on global variables",
+      "Avoid interfaces",
+      "Make high-level modules depend directly on low-level details"
+    ],
+    "answer": "Depend on abstractions rather than concrete implementations"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Cohesion",
+    "difficulty": "Medium",
+    "question": "What does high cohesion mean?",
+    "options": [
+      "A class has closely related responsibilities",
+      "A class depends on many unrelated systems",
+      "A class has many global variables",
+      "A class inherits from many parents"
+    ],
+    "answer": "A class has closely related responsibilities"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Coupling",
+    "difficulty": "Medium",
+    "question": "What does low coupling mean?",
+    "options": [
+      "Classes have minimal unnecessary dependencies on one another",
+      "All classes share the same global state",
+      "Every class directly creates every dependency",
+      "Classes cannot communicate"
+    ],
+    "answer": "Classes have minimal unnecessary dependencies on one another"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Dependency Injection",
+    "difficulty": "Medium",
+    "question": "What is dependency injection?",
+    "options": [
+      "Providing an object's dependencies from outside instead of creating them internally",
+      "Copying an object deeply",
+      "Overriding every method",
+      "Creating only static classes"
+    ],
+    "answer": "Providing an object's dependencies from outside instead of creating them internally"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "UML",
+    "difficulty": "Medium",
+    "question": "What does a UML class diagram commonly show?",
+    "options": [
+      "Classes, attributes, methods, and relationships",
+      "Only runtime memory",
+      "Only source code lines",
+      "Only database rows"
+    ],
+    "answer": "Classes, attributes, methods, and relationships"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Design Principles",
+    "difficulty": "Hard",
+    "question": "Why can deep inheritance hierarchies become difficult to maintain?",
+    "options": [
+      "Behavior and dependencies become spread across many levels and harder to reason about",
+      "They always make programs faster",
+      "They remove polymorphism",
+      "They eliminate coupling"
+    ],
+    "answer": "Behavior and dependencies become spread across many levels and harder to reason about"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Composition",
+    "difficulty": "Hard",
+    "question": "What does 'favor composition over inheritance' usually mean?",
+    "options": [
+      "Prefer assembling behavior from collaborating objects when inheritance would create unnecessary coupling",
+      "Never use inheritance under any circumstances",
+      "Always store objects in arrays",
+      "Avoid interfaces"
+    ],
+    "answer": "Prefer assembling behavior from collaborating objects when inheritance would create unnecessary coupling"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Substitutability",
+    "difficulty": "Hard",
+    "question": "Which design problem violates Liskov Substitution Principle?",
+    "options": [
+      "A subclass changes expected behavior so code using the base type breaks",
+      "A subclass adds a private helper method",
+      "A class uses composition",
+      "A method has local variables"
+    ],
+    "answer": "A subclass changes expected behavior so code using the base type breaks"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Polymorphism",
+    "difficulty": "Hard",
+    "question": "What is subtype polymorphism?",
+    "options": [
+      "Using objects of different subclasses through a common base type or interface",
+      "Using one method name with different parameter counts only",
+      "Converting primitive types",
+      "Copying objects"
+    ],
+    "answer": "Using objects of different subclasses through a common base type or interface"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Polymorphism",
+    "difficulty": "Hard",
+    "question": "What is parametric polymorphism?",
+    "options": [
+      "Writing generic code parameterized by types",
+      "Overriding a method in a subclass",
+      "Using only interfaces",
+      "Calling methods dynamically by name"
+    ],
+    "answer": "Writing generic code parameterized by types"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Polymorphism",
+    "difficulty": "Hard",
+    "question": "What is ad-hoc polymorphism commonly associated with?",
+    "options": [
+      "Overloading where behavior depends on the specific argument types",
+      "Inheritance only",
+      "Dynamic dispatch only",
+      "Object identity"
+    ],
+    "answer": "Overloading where behavior depends on the specific argument types"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Dynamic Dispatch",
+    "difficulty": "Hard",
+    "question": "What information is commonly used at runtime to select an overridden method?",
+    "options": [
+      "The actual runtime type of the receiver object",
+      "Only the variable name",
+      "Only the file name",
+      "Only the declared return type"
+    ],
+    "answer": "The actual runtime type of the receiver object"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Virtual Methods",
+    "difficulty": "Hard",
+    "question": "Why can calling overridable methods from constructors be risky?",
+    "options": [
+      "Subclass state may not yet be fully initialized when the overridden method runs",
+      "Constructors cannot call methods",
+      "Virtual methods are always static",
+      "It prevents object allocation"
+    ],
+    "answer": "Subclass state may not yet be fully initialized when the overridden method runs"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Object Slicing",
+    "difficulty": "Hard",
+    "question": "What is object slicing in languages such as C++?",
+    "options": [
+      "Derived-specific state is lost when a derived object is copied into a base object by value",
+      "An object is split across threads",
+      "A class is divided into files",
+      "A pointer is deleted"
+    ],
+    "answer": "Derived-specific state is lost when a derived object is copied into a base object by value"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Multiple Inheritance",
+    "difficulty": "Hard",
+    "question": "What is the diamond problem?",
+    "options": [
+      "Ambiguity caused when a class inherits the same base through multiple paths",
+      "A sorting problem",
+      "A memory leak pattern",
+      "A database normalization issue"
+    ],
+    "answer": "Ambiguity caused when a class inherits the same base through multiple paths"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Multiple Inheritance",
+    "difficulty": "Hard",
+    "question": "What is one common way languages avoid or manage the diamond problem?",
+    "options": [
+      "Restrict class multiple inheritance or provide explicit mechanisms such as virtual inheritance",
+      "Disable all interfaces",
+      "Use only global functions",
+      "Remove constructors"
+    ],
+    "answer": "Restrict class multiple inheritance or provide explicit mechanisms such as virtual inheritance"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Object Lifetime",
+    "difficulty": "Hard",
+    "question": "Why is deterministic destruction useful in resource-managing objects?",
+    "options": [
+      "Resources can be released predictably when object lifetime ends",
+      "It makes every object immutable",
+      "It prevents all exceptions",
+      "It removes the need for constructors"
+    ],
+    "answer": "Resources can be released predictably when object lifetime ends"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "RAII",
+    "difficulty": "Hard",
+    "question": "What OOP-oriented resource management principle ties resource ownership to object lifetime?",
+    "options": [
+      "RAII",
+      "MVC",
+      "FIFO",
+      "CRUD"
+    ],
+    "answer": "RAII"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Immutability",
+    "difficulty": "Hard",
+    "question": "Why can immutable objects simplify concurrent programming?",
+    "options": [
+      "Their state cannot change after creation, reducing synchronization needs for shared reads",
+      "They automatically run on one thread",
+      "They eliminate all memory allocation",
+      "They cannot be referenced"
+    ],
+    "answer": "Their state cannot change after creation, reducing synchronization needs for shared reads"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Value Objects",
+    "difficulty": "Hard",
+    "question": "What is a value object usually identified by?",
+    "options": [
+      "Its contained values rather than object identity",
+      "Its memory address only",
+      "Its database primary key only",
+      "Its inheritance depth"
+    ],
+    "answer": "Its contained values rather than object identity"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Entities",
+    "difficulty": "Hard",
+    "question": "How does an entity differ from a value object in domain modeling?",
+    "options": [
+      "An entity has a persistent identity distinct from its current attribute values",
+      "An entity cannot contain methods",
+      "An entity is always immutable",
+      "An entity has no state"
+    ],
+    "answer": "An entity has a persistent identity distinct from its current attribute values"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Design Patterns",
+    "difficulty": "Hard",
+    "question": "What problem does the Strategy pattern address?",
+    "options": [
+      "Encapsulating interchangeable algorithms behind a common interface",
+      "Ensuring only one object exists",
+      "Notifying observers of state changes",
+      "Creating object families only"
+    ],
+    "answer": "Encapsulating interchangeable algorithms behind a common interface"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Design Patterns",
+    "difficulty": "Hard",
+    "question": "What problem does the Factory Method pattern address?",
+    "options": [
+      "Delegating object creation to subclasses or specialized creation logic",
+      "Synchronizing threads",
+      "Caching database queries",
+      "Sorting objects"
+    ],
+    "answer": "Delegating object creation to subclasses or specialized creation logic"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Design Patterns",
+    "difficulty": "Hard",
+    "question": "What does the Observer pattern model?",
+    "options": [
+      "One-to-many notification when an observed object's state changes",
+      "One object with no dependencies",
+      "Only inheritance chains",
+      "A database transaction"
+    ],
+    "answer": "One-to-many notification when an observed object's state changes"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Design Patterns",
+    "difficulty": "Hard",
+    "question": "What does the Decorator pattern allow?",
+    "options": [
+      "Adding responsibilities to an object dynamically through wrapping",
+      "Changing a class's inheritance at runtime",
+      "Creating only one instance",
+      "Removing all methods"
+    ],
+    "answer": "Adding responsibilities to an object dynamically through wrapping"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Design Patterns",
+    "difficulty": "Hard",
+    "question": "What does the Adapter pattern do?",
+    "options": [
+      "Converts one interface into another expected by a client",
+      "Creates a global object",
+      "Clones an object deeply",
+      "Prevents method calls"
+    ],
+    "answer": "Converts one interface into another expected by a client"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Design Patterns",
+    "difficulty": "Hard",
+    "question": "What does the Singleton pattern attempt to ensure?",
+    "options": [
+      "A class has one shared instance with controlled access",
+      "A class has many subclasses",
+      "Every method is static",
+      "Every object is immutable"
+    ],
+    "answer": "A class has one shared instance with controlled access"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Design Patterns",
+    "difficulty": "Hard",
+    "question": "Why is Singleton often criticized?",
+    "options": [
+      "It can introduce global state and hidden coupling that complicate testing",
+      "It prevents object creation entirely",
+      "It always uses too much memory",
+      "It cannot contain methods"
+    ],
+    "answer": "It can introduce global state and hidden coupling that complicate testing"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Dependency Injection",
+    "difficulty": "Hard",
+    "question": "Why does dependency injection improve testability?",
+    "options": [
+      "Dependencies can be replaced with test doubles or alternate implementations",
+      "It removes all dependencies",
+      "It prevents interfaces",
+      "It automatically writes tests"
+    ],
+    "answer": "Dependencies can be replaced with test doubles or alternate implementations"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Coupling",
+    "difficulty": "Hard",
+    "question": "What is temporal coupling?",
+    "options": [
+      "A dependency where operations must occur in a specific order for correctness",
+      "A relationship based only on inheritance",
+      "A database lock",
+      "A compile-time type constraint"
+    ],
+    "answer": "A dependency where operations must occur in a specific order for correctness"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Law of Demeter",
+    "difficulty": "Hard",
+    "question": "What does the Law of Demeter encourage?",
+    "options": [
+      "Objects should communicate mainly with close collaborators rather than navigating deep object chains",
+      "Every object should know every other object",
+      "All methods should be static",
+      "All fields should be public"
+    ],
+    "answer": "Objects should communicate mainly with close collaborators rather than navigating deep object chains"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Tell Don't Ask",
+    "difficulty": "Hard",
+    "question": "What does the 'Tell, Don't Ask' principle encourage?",
+    "options": [
+      "Tell objects to perform behavior instead of pulling out data and making decisions externally",
+      "Avoid all method calls",
+      "Use only getters",
+      "Expose internal state publicly"
+    ],
+    "answer": "Tell objects to perform behavior instead of pulling out data and making decisions externally"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Anemic Model",
+    "difficulty": "Hard",
+    "question": "What is an anemic domain model?",
+    "options": [
+      "A model where domain objects mostly contain data while behavior lives elsewhere",
+      "A model with too many constructors",
+      "A model without classes",
+      "A model with only abstract classes"
+    ],
+    "answer": "A model where domain objects mostly contain data while behavior lives elsewhere"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Testing",
+    "difficulty": "Hard",
+    "question": "Why can highly coupled classes be difficult to unit test?",
+    "options": [
+      "They depend on many concrete collaborators that are hard to isolate",
+      "They always have too few methods",
+      "They cannot instantiate objects",
+      "They are always abstract"
+    ],
+    "answer": "They depend on many concrete collaborators that are hard to isolate"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Refactoring",
+    "difficulty": "Hard",
+    "question": "What is refactoring?",
+    "options": [
+      "Improving internal code structure without changing externally observable behavior",
+      "Adding new features only",
+      "Rewriting software in another language",
+      "Deleting tests"
+    ],
+    "answer": "Improving internal code structure without changing externally observable behavior"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Refactoring",
+    "difficulty": "Hard",
+    "question": "What code smell is suggested by a class having too many unrelated responsibilities?",
+    "options": [
+      "God Object or Large Class",
+      "Data Transfer Object",
+      "Value Object",
+      "Factory Method"
+    ],
+    "answer": "God Object or Large Class"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Contracts",
+    "difficulty": "Hard",
+    "question": "What is Design by Contract based on?",
+    "options": [
+      "Preconditions, postconditions, and invariants",
+      "Only inheritance rules",
+      "Only method overloading",
+      "Only database constraints"
+    ],
+    "answer": "Preconditions, postconditions, and invariants"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "topic": "Invariants",
+    "difficulty": "Hard",
+    "question": "What is a class invariant?",
+    "options": [
+      "A condition that should remain true for valid objects across public operations",
+      "A variable that never exists",
+      "A method that cannot return",
+      "A constructor parameter only"
+    ],
+    "answer": "A condition that should remain true for valid objects across public operations"
+  }
+]
