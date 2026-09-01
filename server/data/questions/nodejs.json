@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "Node.js",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is Node.js?",
+    "options": [
+      "A JavaScript runtime built on the V8 engine",
+      "A database system",
+      "A CSS framework",
+      "A browser extension"
+    ],
+    "answer": "A JavaScript runtime built on the V8 engine"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which language is primarily used with Node.js?",
+    "options": [
+      "JavaScript",
+      "Python",
+      "Java",
+      "C#"
+    ],
+    "answer": "JavaScript"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which command runs a Node.js file named app.js?",
+    "options": [
+      "node app.js",
+      "run app.js",
+      "npm app.js",
+      "nodejs-run app.js"
+    ],
+    "answer": "node app.js"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "NPM",
+    "difficulty": "Easy",
+    "question": "What does npm commonly stand for?",
+    "options": [
+      "Node Package Manager",
+      "New Program Module",
+      "Network Package Method",
+      "Node Process Manager"
+    ],
+    "answer": "Node Package Manager"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "NPM",
+    "difficulty": "Easy",
+    "question": "Which command initializes a new package.json interactively?",
+    "options": [
+      "npm init",
+      "npm start",
+      "npm create-json",
+      "node init"
+    ],
+    "answer": "npm init"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "NPM",
+    "difficulty": "Easy",
+    "question": "Which command installs dependencies listed in package.json?",
+    "options": [
+      "npm install",
+      "npm run",
+      "node install",
+      "npm fetch-only"
+    ],
+    "answer": "npm install"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "NPM",
+    "difficulty": "Easy",
+    "question": "Which file stores project metadata and dependency information?",
+    "options": [
+      "package.json",
+      "node.json",
+      "npm.config",
+      "project.node"
+    ],
+    "answer": "package.json"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Modules",
+    "difficulty": "Easy",
+    "question": "Which CommonJS function loads another module?",
+    "options": [
+      "require()",
+      "importOnly()",
+      "include()",
+      "loadModule()"
+    ],
+    "answer": "require()"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Modules",
+    "difficulty": "Easy",
+    "question": "Which CommonJS object is commonly used to export values from a module?",
+    "options": [
+      "module.exports",
+      "module.return",
+      "exports.defaultOnly",
+      "node.exports"
+    ],
+    "answer": "module.exports"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Modules",
+    "difficulty": "Easy",
+    "question": "Which syntax is used to import an ES module binding?",
+    "options": [
+      "import",
+      "require-only",
+      "include",
+      "using"
+    ],
+    "answer": "import"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Modules",
+    "difficulty": "Easy",
+    "question": "Which keyword exposes a binding from an ES module?",
+    "options": [
+      "export",
+      "public",
+      "expose",
+      "return"
+    ],
+    "answer": "export"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "File System",
+    "difficulty": "Easy",
+    "question": "Which built-in module is commonly used to work with files?",
+    "options": [
+      "fs",
+      "http",
+      "path-only",
+      "os-only"
+    ],
+    "answer": "fs"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Path",
+    "difficulty": "Easy",
+    "question": "Which built-in module provides utilities for file and directory paths?",
+    "options": [
+      "path",
+      "fs",
+      "url-only",
+      "process"
+    ],
+    "answer": "path"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "HTTP",
+    "difficulty": "Easy",
+    "question": "Which built-in module can create an HTTP server?",
+    "options": [
+      "http",
+      "server",
+      "net-only",
+      "web"
+    ],
+    "answer": "http"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "HTTP",
+    "difficulty": "Easy",
+    "question": "Which method creates a basic HTTP server using the http module?",
+    "options": [
+      "http.createServer()",
+      "http.newServer()",
+      "http.listen()",
+      "http.startServer()"
+    ],
+    "answer": "http.createServer()"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "HTTP",
+    "difficulty": "Easy",
+    "question": "Which method starts a Node.js server listening on a port?",
+    "options": [
+      "server.listen()",
+      "server.start()",
+      "server.open()",
+      "server.run()"
+    ],
+    "answer": "server.listen()"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Process",
+    "difficulty": "Easy",
+    "question": "Which global object provides information about the current Node.js process?",
+    "options": [
+      "process",
+      "node",
+      "runtime",
+      "globalProcess"
+    ],
+    "answer": "process"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Process",
+    "difficulty": "Easy",
+    "question": "Which property commonly gives command-line arguments?",
+    "options": [
+      "process.argv",
+      "process.argsOnly",
+      "process.command",
+      "process.cli"
+    ],
+    "answer": "process.argv"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Environment",
+    "difficulty": "Easy",
+    "question": "Where are environment variables commonly accessed?",
+    "options": [
+      "process.env",
+      "process.vars",
+      "env.global",
+      "node.envOnly"
+    ],
+    "answer": "process.env"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Console",
+    "difficulty": "Easy",
+    "question": "Which method prints a message to standard output?",
+    "options": [
+      "console.log()",
+      "print()",
+      "System.out.println()",
+      "echo()"
+    ],
+    "answer": "console.log()"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Timers",
+    "difficulty": "Easy",
+    "question": "Which function schedules a callback to run once after a delay?",
+    "options": [
+      "setTimeout()",
+      "setInterval()",
+      "wait()",
+      "sleep()"
+    ],
+    "answer": "setTimeout()"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Timers",
+    "difficulty": "Easy",
+    "question": "Which function repeatedly runs a callback at a fixed interval?",
+    "options": [
+      "setInterval()",
+      "setTimeout()",
+      "repeat()",
+      "loopTimer()"
+    ],
+    "answer": "setInterval()"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Events",
+    "difficulty": "Easy",
+    "question": "Which built-in class is commonly used for event-driven programming?",
+    "options": [
+      "EventEmitter",
+      "EventLoop",
+      "EmitterNode",
+      "NodeEvent"
+    ],
+    "answer": "EventEmitter"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Events",
+    "difficulty": "Easy",
+    "question": "Which method registers an event listener on an EventEmitter?",
+    "options": [
+      "on()",
+      "listen()",
+      "attach()",
+      "handle()"
+    ],
+    "answer": "on()"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Events",
+    "difficulty": "Easy",
+    "question": "Which method emits a named event?",
+    "options": [
+      "emit()",
+      "fire()",
+      "triggerOnly()",
+      "sendEvent()"
+    ],
+    "answer": "emit()"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Buffers",
+    "difficulty": "Easy",
+    "question": "What is a Buffer commonly used for in Node.js?",
+    "options": [
+      "Working with raw binary data",
+      "Creating CSS styles",
+      "Managing SQL schemas",
+      "Rendering HTML only"
+    ],
+    "answer": "Working with raw binary data"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Streams",
+    "difficulty": "Easy",
+    "question": "What is a stream?",
+    "options": [
+      "An interface for processing data piece by piece",
+      "A database table",
+      "A route definition",
+      "A package manager"
+    ],
+    "answer": "An interface for processing data piece by piece"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Async",
+    "difficulty": "Easy",
+    "question": "What does async before a function cause it to return?",
+    "options": [
+      "A Promise",
+      "A Buffer",
+      "A Stream",
+      "A callback only"
+    ],
+    "answer": "A Promise"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Async",
+    "difficulty": "Easy",
+    "question": "Which keyword waits for a Promise inside an async function?",
+    "options": [
+      "await",
+      "wait",
+      "yield-only",
+      "pause"
+    ],
+    "answer": "await"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Errors",
+    "difficulty": "Easy",
+    "question": "Which JavaScript statement is used to handle exceptions?",
+    "options": [
+      "try...catch",
+      "if...else",
+      "switch",
+      "for...of"
+    ],
+    "answer": "try...catch"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Express",
+    "difficulty": "Easy",
+    "question": "What is Express commonly used for?",
+    "options": [
+      "Building web servers and APIs in Node.js",
+      "Compiling JavaScript",
+      "Managing MongoDB internally",
+      "Creating CSS layouts"
+    ],
+    "answer": "Building web servers and APIs in Node.js"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Express",
+    "difficulty": "Easy",
+    "question": "Which Express method usually handles GET requests?",
+    "options": [
+      "app.get()",
+      "app.fetch()",
+      "app.read()",
+      "app.routeGet()"
+    ],
+    "answer": "app.get()"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Express",
+    "difficulty": "Easy",
+    "question": "Which Express method usually handles POST requests?",
+    "options": [
+      "app.post()",
+      "app.send()",
+      "app.create()",
+      "app.write()"
+    ],
+    "answer": "app.post()"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Express",
+    "difficulty": "Easy",
+    "question": "Which Express method starts the application server on a port?",
+    "options": [
+      "app.listen()",
+      "app.run()",
+      "app.start()",
+      "app.open()"
+    ],
+    "answer": "app.listen()"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Event Loop",
+    "difficulty": "Medium",
+    "question": "What is the Node.js event loop responsible for?",
+    "options": [
+      "Coordinating asynchronous callbacks and non-blocking operations",
+      "Compiling JavaScript syntax only",
+      "Managing CSS styles",
+      "Creating database tables"
+    ],
+    "answer": "Coordinating asynchronous callbacks and non-blocking operations"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Event Loop",
+    "difficulty": "Medium",
+    "question": "Why is blocking the event loop harmful in a Node.js server?",
+    "options": [
+      "It delays handling of other requests and callbacks",
+      "It increases parallelism",
+      "It makes file I/O asynchronous",
+      "It improves throughput automatically"
+    ],
+    "answer": "It delays handling of other requests and callbacks"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Async",
+    "difficulty": "Medium",
+    "question": "What is a callback?",
+    "options": [
+      "A function passed to another function to run later",
+      "A process environment variable",
+      "A package file",
+      "A stream buffer only"
+    ],
+    "answer": "A function passed to another function to run later"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Promises",
+    "difficulty": "Medium",
+    "question": "Which Promise method handles a fulfilled result?",
+    "options": [
+      "then()",
+      "catch()",
+      "reject()",
+      "finallyOnly()"
+    ],
+    "answer": "then()"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Promises",
+    "difficulty": "Medium",
+    "question": "Which Promise method handles a rejection?",
+    "options": [
+      "catch()",
+      "then()",
+      "resolve()",
+      "awaitOnly()"
+    ],
+    "answer": "catch()"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Promises",
+    "difficulty": "Medium",
+    "question": "What does Promise.all() do?",
+    "options": [
+      "Waits for all input Promises to fulfill and rejects if one rejects",
+      "Returns only the fastest Promise",
+      "Ignores failures",
+      "Runs every Promise synchronously"
+    ],
+    "answer": "Waits for all input Promises to fulfill and rejects if one rejects"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "File System",
+    "difficulty": "Medium",
+    "question": "Which fs method reads a file asynchronously using a callback API?",
+    "options": [
+      "fs.readFile()",
+      "fs.readFileSync()",
+      "fs.openOnly()",
+      "fs.readNow()"
+    ],
+    "answer": "fs.readFile()"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "File System",
+    "difficulty": "Medium",
+    "question": "Which fs method reads a file synchronously?",
+    "options": [
+      "fs.readFileSync()",
+      "fs.readFile()",
+      "fs.syncRead()",
+      "fs.getFile()"
+    ],
+    "answer": "fs.readFileSync()"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "File System",
+    "difficulty": "Medium",
+    "question": "Why should synchronous file APIs be avoided in high-throughput request handlers?",
+    "options": [
+      "They block the event loop until the operation finishes",
+      "They always lose data",
+      "They cannot read text",
+      "They require Express"
+    ],
+    "answer": "They block the event loop until the operation finishes"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Streams",
+    "difficulty": "Medium",
+    "question": "Which stream type is used to read data?",
+    "options": [
+      "Readable",
+      "Writable",
+      "Transform-only",
+      "Duplex-only"
+    ],
+    "answer": "Readable"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Streams",
+    "difficulty": "Medium",
+    "question": "Which stream type is used to write data?",
+    "options": [
+      "Writable",
+      "Readable",
+      "Buffer-only",
+      "EventOnly"
+    ],
+    "answer": "Writable"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Streams",
+    "difficulty": "Medium",
+    "question": "What is a Duplex stream?",
+    "options": [
+      "A stream that is both readable and writable",
+      "A stream that only transforms data",
+      "A stream that only buffers data",
+      "A network port"
+    ],
+    "answer": "A stream that is both readable and writable"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Streams",
+    "difficulty": "Medium",
+    "question": "What is a Transform stream?",
+    "options": [
+      "A duplex stream that modifies data as it passes through",
+      "A read-only stream",
+      "A write-only stream",
+      "A file descriptor"
+    ],
+    "answer": "A duplex stream that modifies data as it passes through"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Streams",
+    "difficulty": "Medium",
+    "question": "What does readable.pipe(writable) commonly do?",
+    "options": [
+      "Connects a readable stream to a writable stream",
+      "Copies a package.json file",
+      "Creates a child process",
+      "Starts an HTTP server"
+    ],
+    "answer": "Connects a readable stream to a writable stream"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Buffers",
+    "difficulty": "Medium",
+    "question": "Which method creates a Buffer from a string?",
+    "options": [
+      "Buffer.from()",
+      "Buffer.make()",
+      "Buffer.string()",
+      "Buffer.createText()"
+    ],
+    "answer": "Buffer.from()"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Modules",
+    "difficulty": "Medium",
+    "question": "What is module caching in CommonJS?",
+    "options": [
+      "A loaded module is generally reused from cache on later require() calls",
+      "Every require reloads the file",
+      "Modules are cached only on GitHub",
+      "Only JSON files are cached"
+    ],
+    "answer": "A loaded module is generally reused from cache on later require() calls"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Modules",
+    "difficulty": "Medium",
+    "question": "What does setting \"type\": \"module\" in package.json commonly enable for .js files?",
+    "options": [
+      "ES module interpretation",
+      "TypeScript compilation",
+      "CommonJS-only mode",
+      "Automatic bundling"
+    ],
+    "answer": "ES module interpretation"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Package Management",
+    "difficulty": "Medium",
+    "question": "What is package-lock.json used for?",
+    "options": [
+      "Recording an exact dependency tree for reproducible installs",
+      "Storing source code",
+      "Replacing package.json",
+      "Managing environment variables"
+    ],
+    "answer": "Recording an exact dependency tree for reproducible installs"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Package Management",
+    "difficulty": "Medium",
+    "question": "What does a caret such as ^1.2.3 usually allow in semantic version ranges before 1.0 caveats?",
+    "options": [
+      "Compatible updates without changing the leftmost nonzero major version",
+      "Only exactly 1.2.3",
+      "Any future major version",
+      "Only patch version 1.2.3"
+    ],
+    "answer": "Compatible updates without changing the leftmost nonzero major version"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Express",
+    "difficulty": "Medium",
+    "question": "What is Express middleware?",
+    "options": [
+      "A function that can inspect or modify req/res and optionally pass control onward",
+      "A database table",
+      "A Node.js thread",
+      "A package lock"
+    ],
+    "answer": "A function that can inspect or modify req/res and optionally pass control onward"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Express",
+    "difficulty": "Medium",
+    "question": "Which function usually passes control to the next Express middleware?",
+    "options": [
+      "next()",
+      "continue()",
+      "pass()",
+      "forward()"
+    ],
+    "answer": "next()"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Express",
+    "difficulty": "Medium",
+    "question": "Which built-in Express middleware parses JSON request bodies?",
+    "options": [
+      "express.json()",
+      "express.body()",
+      "express.parse()",
+      "express.jsonBodyOnly()"
+    ],
+    "answer": "express.json()"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Express",
+    "difficulty": "Medium",
+    "question": "What is req.params commonly used for?",
+    "options": [
+      "Route parameter values",
+      "Query string values only",
+      "Response headers",
+      "Environment variables"
+    ],
+    "answer": "Route parameter values"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Express",
+    "difficulty": "Medium",
+    "question": "What is req.query commonly used for?",
+    "options": [
+      "Query string parameters",
+      "Route path parameters only",
+      "Request body only",
+      "Cookies only"
+    ],
+    "answer": "Query string parameters"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Express",
+    "difficulty": "Medium",
+    "question": "What is req.body commonly used for?",
+    "options": [
+      "Parsed request body data",
+      "Route name",
+      "Server port",
+      "Process ID"
+    ],
+    "answer": "Parsed request body data"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "HTTP",
+    "difficulty": "Medium",
+    "question": "What does HTTP status code 201 commonly mean?",
+    "options": [
+      "Created",
+      "OK only",
+      "Not Found",
+      "Forbidden"
+    ],
+    "answer": "Created"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "HTTP",
+    "difficulty": "Medium",
+    "question": "What does HTTP status code 500 indicate?",
+    "options": [
+      "Internal Server Error",
+      "Unauthorized",
+      "Created",
+      "No Content"
+    ],
+    "answer": "Internal Server Error"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Environment",
+    "difficulty": "Medium",
+    "question": "Why are environment variables commonly used for secrets and configuration?",
+    "options": [
+      "They keep environment-specific values out of hardcoded source",
+      "They encrypt all secrets automatically",
+      "They replace authentication",
+      "They prevent runtime errors"
+    ],
+    "answer": "They keep environment-specific values out of hardcoded source"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Process",
+    "difficulty": "Medium",
+    "question": "What does process.exitCode allow you to do?",
+    "options": [
+      "Set the eventual process exit status without immediately terminating",
+      "Restart Node.js",
+      "Create a child process",
+      "Change the PID"
+    ],
+    "answer": "Set the eventual process exit status without immediately terminating"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Child Processes",
+    "difficulty": "Medium",
+    "question": "Which built-in module can start external processes?",
+    "options": [
+      "child_process",
+      "process.only",
+      "spawn_module",
+      "exec_module_only"
+    ],
+    "answer": "child_process"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Child Processes",
+    "difficulty": "Medium",
+    "question": "Which child_process function starts a process without using a shell by default and streams its I/O?",
+    "options": [
+      "spawn()",
+      "exec()",
+      "forkOnly()",
+      "run()"
+    ],
+    "answer": "spawn()"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Testing",
+    "difficulty": "Medium",
+    "question": "What is the purpose of automated tests in a Node.js project?",
+    "options": [
+      "Verify expected behavior and reduce regressions",
+      "Replace production monitoring",
+      "Remove dependency management",
+      "Compile packages"
+    ],
+    "answer": "Verify expected behavior and reduce regressions"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Security",
+    "difficulty": "Medium",
+    "question": "Why should user input be validated on the server?",
+    "options": [
+      "Clients cannot be trusted to send only valid or safe data",
+      "Browsers always validate perfectly",
+      "Validation is only for styling",
+      "It improves DNS resolution"
+    ],
+    "answer": "Clients cannot be trusted to send only valid or safe data"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Event Loop",
+    "difficulty": "Hard",
+    "question": "Which kind of callback is processed through the microtask queue after the current JavaScript stack?",
+    "options": [
+      "Promise reaction callbacks",
+      "setTimeout callbacks only",
+      "File system callbacks only",
+      "Incoming TCP connections only"
+    ],
+    "answer": "Promise reaction callbacks"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Event Loop",
+    "difficulty": "Hard",
+    "question": "What is process.nextTick() known for in Node.js?",
+    "options": [
+      "Scheduling a callback to run before the event loop continues to later phases",
+      "Running after all timers only",
+      "Creating a new thread",
+      "Restarting the process"
+    ],
+    "answer": "Scheduling a callback to run before the event loop continues to later phases"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Event Loop",
+    "difficulty": "Hard",
+    "question": "Why can excessive process.nextTick() usage starve I/O?",
+    "options": [
+      "Its queue can keep executing before the event loop advances to I/O phases",
+      "It blocks only DNS",
+      "It disables Promises",
+      "It creates too many files"
+    ],
+    "answer": "Its queue can keep executing before the event loop advances to I/O phases"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Event Loop",
+    "difficulty": "Hard",
+    "question": "What is the relationship between Node.js and libuv?",
+    "options": [
+      "libuv provides the event loop and cross-platform asynchronous I/O support",
+      "libuv is Node.js's package manager",
+      "libuv compiles JavaScript source",
+      "libuv is an Express router"
+    ],
+    "answer": "libuv provides the event loop and cross-platform asynchronous I/O support"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Thread Pool",
+    "difficulty": "Hard",
+    "question": "Which operations may use libuv's worker thread pool?",
+    "options": [
+      "Certain file system, DNS, compression, and cryptographic operations",
+      "All JavaScript execution",
+      "All HTTP parsing only",
+      "Every timer callback"
+    ],
+    "answer": "Certain file system, DNS, compression, and cryptographic operations"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Worker Threads",
+    "difficulty": "Hard",
+    "question": "What are worker_threads mainly useful for?",
+    "options": [
+      "Running CPU-intensive JavaScript work in parallel threads",
+      "Replacing HTTP servers",
+      "Managing npm packages",
+      "Creating database indexes"
+    ],
+    "answer": "Running CPU-intensive JavaScript work in parallel threads"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Worker Threads",
+    "difficulty": "Hard",
+    "question": "Do worker threads share the same JavaScript heap by default?",
+    "options": [
+      "No, each worker has its own isolate, though memory can be shared explicitly",
+      "Yes, always",
+      "Only in Express",
+      "Only for Buffers"
+    ],
+    "answer": "No, each worker has its own isolate, though memory can be shared explicitly"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Cluster",
+    "difficulty": "Hard",
+    "question": "What is the cluster module historically used for?",
+    "options": [
+      "Running multiple Node.js processes that can share server workloads",
+      "Creating multiple npm registries",
+      "Splitting one Promise into many",
+      "Managing worker-thread memory"
+    ],
+    "answer": "Running multiple Node.js processes that can share server workloads"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Streams",
+    "difficulty": "Hard",
+    "question": "What is backpressure in Node.js streams?",
+    "options": [
+      "A mechanism to prevent a fast producer from overwhelming a slower consumer",
+      "A network firewall rule",
+      "A Promise rejection",
+      "A package dependency conflict"
+    ],
+    "answer": "A mechanism to prevent a fast producer from overwhelming a slower consumer"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Streams",
+    "difficulty": "Hard",
+    "question": "What does writable.write() returning false indicate?",
+    "options": [
+      "The internal buffer is full enough that the producer should pause until drain",
+      "The write permanently failed",
+      "The stream is closed",
+      "The data was not accepted at all"
+    ],
+    "answer": "The internal buffer is full enough that the producer should pause until drain"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Streams",
+    "difficulty": "Hard",
+    "question": "Which event indicates that a writable stream can accept more data after backpressure?",
+    "options": [
+      "drain",
+      "ready",
+      "resumeOnly",
+      "flush"
+    ],
+    "answer": "drain"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Streams",
+    "difficulty": "Hard",
+    "question": "Why are streams memory-efficient for large files?",
+    "options": [
+      "They process data in chunks rather than loading the entire file into memory",
+      "They compress every file automatically",
+      "They store data only on disk",
+      "They disable buffering completely"
+    ],
+    "answer": "They process data in chunks rather than loading the entire file into memory"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Errors",
+    "difficulty": "Hard",
+    "question": "What is an unhandled Promise rejection?",
+    "options": [
+      "A rejected Promise with no rejection handler attached in time",
+      "A callback that returns undefined",
+      "A successful async function",
+      "A stream that ends"
+    ],
+    "answer": "A rejected Promise with no rejection handler attached in time"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Errors",
+    "difficulty": "Hard",
+    "question": "Why should operational errors usually be handled differently from programmer bugs?",
+    "options": [
+      "Operational failures may be recoverable, while programmer bugs often require fixing the code",
+      "They are exactly the same",
+      "Programmer bugs should always be ignored",
+      "Operational errors cannot be logged"
+    ],
+    "answer": "Operational failures may be recoverable, while programmer bugs often require fixing the code"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "Why is using eval() on untrusted input dangerous?",
+    "options": [
+      "It can execute attacker-controlled JavaScript",
+      "It only causes syntax highlighting issues",
+      "It disables npm",
+      "It changes HTTP ports"
+    ],
+    "answer": "It can execute attacker-controlled JavaScript"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What is prototype pollution?",
+    "options": [
+      "Manipulating object prototype properties so many objects inherit attacker-controlled values",
+      "A memory leak in Buffers only",
+      "A DNS poisoning attack",
+      "A file permission error"
+    ],
+    "answer": "Manipulating object prototype properties so many objects inherit attacker-controlled values"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "Why should dependency vulnerabilities be monitored in Node.js projects?",
+    "options": [
+      "Third-party packages can introduce exploitable security flaws",
+      "npm packages cannot contain code",
+      "Dependencies are never executed",
+      "Only Node.js core can have vulnerabilities"
+    ],
+    "answer": "Third-party packages can introduce exploitable security flaws"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "NPM Security",
+    "difficulty": "Hard",
+    "question": "Which npm command reports known vulnerabilities in installed dependency trees?",
+    "options": [
+      "npm audit",
+      "npm secure",
+      "npm scan-only",
+      "npm verify-package"
+    ],
+    "answer": "npm audit"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Modules",
+    "difficulty": "Hard",
+    "question": "What is tree shaking primarily associated with?",
+    "options": [
+      "Removing unused exports during bundling, especially with statically analyzable ES modules",
+      "Clearing Node.js module cache",
+      "Deleting package-lock.json",
+      "Restarting the event loop"
+    ],
+    "answer": "Removing unused exports during bundling, especially with statically analyzable ES modules"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Modules",
+    "difficulty": "Hard",
+    "question": "What is dynamic import() useful for?",
+    "options": [
+      "Loading an ES module asynchronously at runtime",
+      "Loading CommonJS synchronously only",
+      "Installing npm packages",
+      "Creating worker threads"
+    ],
+    "answer": "Loading an ES module asynchronously at runtime"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "HTTP",
+    "difficulty": "Hard",
+    "question": "Why are keep-alive connections useful in HTTP servers?",
+    "options": [
+      "They allow multiple requests to reuse an existing TCP connection",
+      "They force one request per connection",
+      "They disable caching",
+      "They encrypt traffic by themselves"
+    ],
+    "answer": "They allow multiple requests to reuse an existing TCP connection"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "HTTP",
+    "difficulty": "Hard",
+    "question": "What does HTTP request streaming allow a server to do?",
+    "options": [
+      "Process request body data incrementally as it arrives",
+      "Receive the entire body only after buffering it",
+      "Skip validation automatically",
+      "Convert HTTP to WebSocket"
+    ],
+    "answer": "Process request body data incrementally as it arrives"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Express",
+    "difficulty": "Hard",
+    "question": "What is the purpose of Express error-handling middleware?",
+    "options": [
+      "Centralize handling of errors passed through the middleware chain",
+      "Catch every process-level crash automatically",
+      "Replace try/catch in all async code by itself",
+      "Handle only 404 routes"
+    ],
+    "answer": "Centralize handling of errors passed through the middleware chain"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Express",
+    "difficulty": "Hard",
+    "question": "How is Express error-handling middleware commonly distinguished from normal middleware?",
+    "options": [
+      "It has four parameters: err, req, res, next",
+      "It must be the first middleware",
+      "It can only use GET",
+      "It has no next parameter"
+    ],
+    "answer": "It has four parameters: err, req, res, next"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Architecture",
+    "difficulty": "Hard",
+    "question": "Why is separating routes, services, and data-access logic useful?",
+    "options": [
+      "It reduces coupling and improves maintainability and testing",
+      "It guarantees zero bugs",
+      "It removes the need for APIs",
+      "It makes all code synchronous"
+    ],
+    "answer": "It reduces coupling and improves maintainability and testing"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Architecture",
+    "difficulty": "Hard",
+    "question": "What is dependency injection useful for in Node.js services?",
+    "options": [
+      "Supplying dependencies externally so implementations can be replaced or tested easily",
+      "Installing npm packages",
+      "Creating environment variables",
+      "Managing process IDs"
+    ],
+    "answer": "Supplying dependencies externally so implementations can be replaced or tested easily"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Performance",
+    "difficulty": "Hard",
+    "question": "Why is CPU-bound work problematic on the main Node.js thread?",
+    "options": [
+      "It can block the event loop and delay all other JavaScript callbacks",
+      "It automatically runs on multiple cores",
+      "It only slows the current function",
+      "It improves network latency"
+    ],
+    "answer": "It can block the event loop and delay all other JavaScript callbacks"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Performance",
+    "difficulty": "Hard",
+    "question": "Which technique can reduce repeated expensive calculations in a Node.js API?",
+    "options": [
+      "Caching",
+      "Adding more synchronous loops",
+      "Disabling keep-alive",
+      "Removing indexes"
+    ],
+    "answer": "Caching"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Performance",
+    "difficulty": "Hard",
+    "question": "What should usually be measured before optimizing a Node.js application?",
+    "options": [
+      "Real performance bottlenecks using profiling or monitoring",
+      "Only source file count",
+      "Only package names",
+      "Only server hostname"
+    ],
+    "answer": "Real performance bottlenecks using profiling or monitoring"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Processes",
+    "difficulty": "Hard",
+    "question": "Why should a production Node.js service handle termination signals such as SIGTERM?",
+    "options": [
+      "To shut down gracefully, stop accepting work, and clean up resources",
+      "To speed up npm install",
+      "To restart the CPU",
+      "To clear package-lock.json"
+    ],
+    "answer": "To shut down gracefully, stop accepting work, and clean up resources"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Processes",
+    "difficulty": "Hard",
+    "question": "What is graceful shutdown?",
+    "options": [
+      "Stopping new work while allowing in-flight work to finish and cleaning up resources",
+      "Immediately killing the process without cleanup",
+      "Deleting logs before exit",
+      "Closing only database connections while accepting requests"
+    ],
+    "answer": "Stopping new work while allowing in-flight work to finish and cleaning up resources"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Observability",
+    "difficulty": "Hard",
+    "question": "Why are structured logs useful in backend services?",
+    "options": [
+      "They are easier for tools to parse, search, and correlate",
+      "They automatically prevent errors",
+      "They replace metrics",
+      "They encrypt requests"
+    ],
+    "answer": "They are easier for tools to parse, search, and correlate"
+  },
+  {
+    "subject": "Node.js",
+    "topic": "Scalability",
+    "difficulty": "Hard",
+    "question": "Why should stateless API servers avoid storing important session state only in process memory when horizontally scaled?",
+    "options": [
+      "Requests may reach different server instances and process memory is not shared",
+      "Process memory is always persisted",
+      "Load balancers disable sessions",
+      "Node.js cannot store objects in memory"
+    ],
+    "answer": "Requests may reach different server instances and process memory is not shared"
+  }
+]
