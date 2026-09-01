@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "SQL",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which SQL statement is used to retrieve data from a table?",
+    "options": [
+      "SELECT",
+      "GET",
+      "FETCHROW",
+      "READ"
+    ],
+    "answer": "SELECT"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which SQL statement is used to add a new row to a table?",
+    "options": [
+      "INSERT",
+      "ADDROW",
+      "APPEND",
+      "CREATE ROW"
+    ],
+    "answer": "INSERT"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which SQL statement is used to modify existing rows?",
+    "options": [
+      "UPDATE",
+      "CHANGE",
+      "MODIFYROW",
+      "ALTER ROW"
+    ],
+    "answer": "UPDATE"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which SQL statement is used to remove rows from a table?",
+    "options": [
+      "DELETE",
+      "REMOVE",
+      "DROP ROW",
+      "CLEAR"
+    ],
+    "answer": "DELETE"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Filtering",
+    "difficulty": "Easy",
+    "question": "Which clause filters rows in a SELECT query?",
+    "options": [
+      "WHERE",
+      "HAVING",
+      "ORDER BY",
+      "GROUP BY"
+    ],
+    "answer": "WHERE"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Sorting",
+    "difficulty": "Easy",
+    "question": "Which clause sorts query results?",
+    "options": [
+      "ORDER BY",
+      "SORT BY",
+      "GROUP BY",
+      "ARRANGE BY"
+    ],
+    "answer": "ORDER BY"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Sorting",
+    "difficulty": "Easy",
+    "question": "Which keyword sorts results in descending order?",
+    "options": [
+      "DESC",
+      "DOWN",
+      "REVERSE",
+      "DSC"
+    ],
+    "answer": "DESC"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Sorting",
+    "difficulty": "Easy",
+    "question": "Which keyword sorts results in ascending order?",
+    "options": [
+      "ASC",
+      "UP",
+      "FORWARD",
+      "ASCE"
+    ],
+    "answer": "ASC"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Distinct",
+    "difficulty": "Easy",
+    "question": "Which keyword removes duplicate rows from a SELECT result?",
+    "options": [
+      "DISTINCT",
+      "UNIQUEONLY",
+      "DIFFERENT",
+      "NODUP"
+    ],
+    "answer": "DISTINCT"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Aliases",
+    "difficulty": "Easy",
+    "question": "Which keyword is commonly used to assign an alias to a column or table?",
+    "options": [
+      "AS",
+      "ALIAS",
+      "NAME",
+      "RENAME"
+    ],
+    "answer": "AS"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Aggregate Functions",
+    "difficulty": "Easy",
+    "question": "Which function counts rows?",
+    "options": [
+      "COUNT()",
+      "SUM()",
+      "TOTAL()",
+      "ROWS()"
+    ],
+    "answer": "COUNT()"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Aggregate Functions",
+    "difficulty": "Easy",
+    "question": "Which function returns the sum of numeric values?",
+    "options": [
+      "SUM()",
+      "ADD()",
+      "TOTAL()",
+      "COUNT()"
+    ],
+    "answer": "SUM()"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Aggregate Functions",
+    "difficulty": "Easy",
+    "question": "Which function returns the average of numeric values?",
+    "options": [
+      "AVG()",
+      "MEAN()",
+      "AVERAGE()",
+      "MID()"
+    ],
+    "answer": "AVG()"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Aggregate Functions",
+    "difficulty": "Easy",
+    "question": "Which function returns the largest value?",
+    "options": [
+      "MAX()",
+      "TOP()",
+      "HIGH()",
+      "GREATESTROW()"
+    ],
+    "answer": "MAX()"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Aggregate Functions",
+    "difficulty": "Easy",
+    "question": "Which function returns the smallest value?",
+    "options": [
+      "MIN()",
+      "LOW()",
+      "SMALL()",
+      "BOTTOM()"
+    ],
+    "answer": "MIN()"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Grouping",
+    "difficulty": "Easy",
+    "question": "Which clause groups rows that share the same values?",
+    "options": [
+      "GROUP BY",
+      "ORDER BY",
+      "WHERE",
+      "HAVING"
+    ],
+    "answer": "GROUP BY"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Grouping",
+    "difficulty": "Easy",
+    "question": "Which clause filters groups after GROUP BY?",
+    "options": [
+      "HAVING",
+      "WHERE",
+      "FILTER BY",
+      "GROUP WHERE"
+    ],
+    "answer": "HAVING"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Patterns",
+    "difficulty": "Easy",
+    "question": "Which operator is commonly used for pattern matching?",
+    "options": [
+      "LIKE",
+      "MATCHES",
+      "PATTERN",
+      "CONTAINS"
+    ],
+    "answer": "LIKE"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Patterns",
+    "difficulty": "Easy",
+    "question": "In a LIKE pattern, which wildcard usually represents any sequence of characters?",
+    "options": [
+      "%",
+      "_",
+      "*",
+      "?"
+    ],
+    "answer": "%"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Patterns",
+    "difficulty": "Easy",
+    "question": "In a LIKE pattern, which wildcard usually represents exactly one character?",
+    "options": [
+      "_",
+      "%",
+      "*",
+      "?"
+    ],
+    "answer": "_"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Nulls",
+    "difficulty": "Easy",
+    "question": "Which condition checks whether a value is NULL?",
+    "options": [
+      "IS NULL",
+      "= NULL",
+      "NULL()",
+      "IS EMPTY"
+    ],
+    "answer": "IS NULL"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Nulls",
+    "difficulty": "Easy",
+    "question": "Which condition checks whether a value is not NULL?",
+    "options": [
+      "IS NOT NULL",
+      "!= NULL",
+      "NOT NULL()",
+      "<> EMPTY"
+    ],
+    "answer": "IS NOT NULL"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Ranges",
+    "difficulty": "Easy",
+    "question": "Which operator checks whether a value lies within an inclusive range?",
+    "options": [
+      "BETWEEN",
+      "RANGE",
+      "WITHIN",
+      "INSIDE"
+    ],
+    "answer": "BETWEEN"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Lists",
+    "difficulty": "Easy",
+    "question": "Which operator tests whether a value matches any value in a list?",
+    "options": [
+      "IN",
+      "ANYOF",
+      "LIST",
+      "MEMBER"
+    ],
+    "answer": "IN"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Tables",
+    "difficulty": "Easy",
+    "question": "Which statement creates a new table?",
+    "options": [
+      "CREATE TABLE",
+      "MAKE TABLE",
+      "NEW TABLE",
+      "BUILD TABLE"
+    ],
+    "answer": "CREATE TABLE"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Tables",
+    "difficulty": "Easy",
+    "question": "Which statement permanently removes a table definition and its data?",
+    "options": [
+      "DROP TABLE",
+      "DELETE TABLE",
+      "REMOVE TABLE",
+      "CLEAR TABLE"
+    ],
+    "answer": "DROP TABLE"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Tables",
+    "difficulty": "Easy",
+    "question": "Which statement changes the structure of an existing table?",
+    "options": [
+      "ALTER TABLE",
+      "UPDATE TABLE",
+      "CHANGE TABLE",
+      "MODIFY DATA"
+    ],
+    "answer": "ALTER TABLE"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Constraints",
+    "difficulty": "Easy",
+    "question": "Which constraint uniquely identifies each row in a table?",
+    "options": [
+      "PRIMARY KEY",
+      "FOREIGN KEY",
+      "CHECK",
+      "DEFAULT"
+    ],
+    "answer": "PRIMARY KEY"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Constraints",
+    "difficulty": "Easy",
+    "question": "Which constraint references a key in another table?",
+    "options": [
+      "FOREIGN KEY",
+      "PRIMARY KEY",
+      "UNIQUEONLY",
+      "CHECK"
+    ],
+    "answer": "FOREIGN KEY"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Constraints",
+    "difficulty": "Easy",
+    "question": "Which constraint prevents NULL values in a column?",
+    "options": [
+      "NOT NULL",
+      "NONEMPTY",
+      "REQUIRED",
+      "NO NULLS"
+    ],
+    "answer": "NOT NULL"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Constraints",
+    "difficulty": "Easy",
+    "question": "Which constraint prevents duplicate values in a column or set of columns?",
+    "options": [
+      "UNIQUE",
+      "DISTINCT",
+      "PRIMARYONLY",
+      "NODUP"
+    ],
+    "answer": "UNIQUE"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Joins",
+    "difficulty": "Easy",
+    "question": "Which join returns rows with matching values in both tables?",
+    "options": [
+      "INNER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "CROSS JOIN"
+    ],
+    "answer": "INNER JOIN"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Joins",
+    "difficulty": "Easy",
+    "question": "Which join returns all rows from the left table plus matching rows from the right table?",
+    "options": [
+      "LEFT JOIN",
+      "INNER JOIN",
+      "RIGHT JOIN",
+      "CROSS JOIN"
+    ],
+    "answer": "LEFT JOIN"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Joins",
+    "difficulty": "Easy",
+    "question": "Which join returns the Cartesian product of two tables?",
+    "options": [
+      "CROSS JOIN",
+      "INNER JOIN",
+      "LEFT JOIN",
+      "SELF JOIN"
+    ],
+    "answer": "CROSS JOIN"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Joins",
+    "difficulty": "Medium",
+    "question": "What does a FULL OUTER JOIN return?",
+    "options": [
+      "All matching rows plus nonmatching rows from both tables",
+      "Only matching rows",
+      "Only rows from the left table",
+      "Only rows from the right table"
+    ],
+    "answer": "All matching rows plus nonmatching rows from both tables"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Joins",
+    "difficulty": "Medium",
+    "question": "What is a self join?",
+    "options": [
+      "A table joined to itself",
+      "A join without a condition",
+      "A join across databases only",
+      "A join that removes duplicates"
+    ],
+    "answer": "A table joined to itself"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Joins",
+    "difficulty": "Medium",
+    "question": "Which clause usually specifies how rows from joined tables are matched?",
+    "options": [
+      "ON",
+      "WHEREONLY",
+      "USING TABLE",
+      "MATCH"
+    ],
+    "answer": "ON"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Subqueries",
+    "difficulty": "Medium",
+    "question": "What is a subquery?",
+    "options": [
+      "A query nested inside another SQL statement",
+      "A temporary table only",
+      "A stored procedure",
+      "A database backup"
+    ],
+    "answer": "A query nested inside another SQL statement"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Subqueries",
+    "difficulty": "Medium",
+    "question": "What is a correlated subquery?",
+    "options": [
+      "A subquery that refers to columns from the outer query",
+      "A subquery that never uses outer values",
+      "A query joining only two tables",
+      "A query without WHERE"
+    ],
+    "answer": "A subquery that refers to columns from the outer query"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Subqueries",
+    "difficulty": "Medium",
+    "question": "Which operator tests whether a subquery returns at least one row?",
+    "options": [
+      "EXISTS",
+      "INONLY",
+      "HASROW",
+      "FOUND"
+    ],
+    "answer": "EXISTS"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Set Operations",
+    "difficulty": "Medium",
+    "question": "What does UNION do?",
+    "options": [
+      "Combines result sets and removes duplicates",
+      "Combines result sets and keeps all duplicates",
+      "Joins columns side by side",
+      "Creates a table"
+    ],
+    "answer": "Combines result sets and removes duplicates"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Set Operations",
+    "difficulty": "Medium",
+    "question": "What does UNION ALL do?",
+    "options": [
+      "Combines result sets and keeps duplicates",
+      "Removes duplicates",
+      "Sorts both queries automatically",
+      "Performs an outer join"
+    ],
+    "answer": "Combines result sets and keeps duplicates"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Set Operations",
+    "difficulty": "Medium",
+    "question": "What does INTERSECT return?",
+    "options": [
+      "Rows common to both result sets",
+      "Rows only in the first result",
+      "All rows from both results",
+      "A Cartesian product"
+    ],
+    "answer": "Rows common to both result sets"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Set Operations",
+    "difficulty": "Medium",
+    "question": "What does EXCEPT or MINUS typically return?",
+    "options": [
+      "Rows from the first result that are not in the second",
+      "Rows common to both results",
+      "All duplicates only",
+      "Joined columns"
+    ],
+    "answer": "Rows from the first result that are not in the second"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Grouping",
+    "difficulty": "Medium",
+    "question": "Why can WHERE not directly filter on an aggregate such as COUNT(*) in the same query block?",
+    "options": [
+      "WHERE is evaluated before grouping and aggregation",
+      "WHERE runs after ORDER BY",
+      "Aggregates are not allowed anywhere in SQL",
+      "COUNT works only in subqueries"
+    ],
+    "answer": "WHERE is evaluated before grouping and aggregation"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Grouping",
+    "difficulty": "Medium",
+    "question": "Which clause should be used to require COUNT(*) > 5 for each group?",
+    "options": [
+      "HAVING",
+      "WHERE",
+      "ORDER BY",
+      "LIMIT"
+    ],
+    "answer": "HAVING"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Conditional Logic",
+    "difficulty": "Medium",
+    "question": "Which SQL expression provides conditional branching inside a query?",
+    "options": [
+      "CASE",
+      "IFONLY",
+      "SWITCH",
+      "WHENONLY"
+    ],
+    "answer": "CASE"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Nulls",
+    "difficulty": "Medium",
+    "question": "Which function commonly returns the first non-NULL expression from a list?",
+    "options": [
+      "COALESCE()",
+      "NULLFIRST()",
+      "NVLONLY()",
+      "FIRSTVALUE()"
+    ],
+    "answer": "COALESCE()"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Nulls",
+    "difficulty": "Medium",
+    "question": "What does NULLIF(a, b) return when a equals b?",
+    "options": [
+      "NULL",
+      "a",
+      "b",
+      "0"
+    ],
+    "answer": "NULL"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Transactions",
+    "difficulty": "Medium",
+    "question": "Which statement permanently saves changes made in the current transaction?",
+    "options": [
+      "COMMIT",
+      "SAVE",
+      "APPLY",
+      "FINISH"
+    ],
+    "answer": "COMMIT"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Transactions",
+    "difficulty": "Medium",
+    "question": "Which statement undoes uncommitted changes in a transaction?",
+    "options": [
+      "ROLLBACK",
+      "UNDO",
+      "REVERTTABLE",
+      "RESET"
+    ],
+    "answer": "ROLLBACK"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Transactions",
+    "difficulty": "Medium",
+    "question": "What is a SAVEPOINT used for?",
+    "options": [
+      "Marking a point in a transaction to which a partial rollback can occur",
+      "Backing up the whole database",
+      "Creating an index",
+      "Saving query text"
+    ],
+    "answer": "Marking a point in a transaction to which a partial rollback can occur"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Views",
+    "difficulty": "Medium",
+    "question": "What is a database view?",
+    "options": [
+      "A stored query that behaves like a virtual table",
+      "A physical copy of every row always",
+      "An index only",
+      "A transaction log"
+    ],
+    "answer": "A stored query that behaves like a virtual table"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Indexes",
+    "difficulty": "Medium",
+    "question": "What is the main purpose of an index?",
+    "options": [
+      "Speed up data retrieval for suitable queries",
+      "Guarantee every query is O(1)",
+      "Replace primary keys",
+      "Store backups"
+    ],
+    "answer": "Speed up data retrieval for suitable queries"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Indexes",
+    "difficulty": "Medium",
+    "question": "What is a common tradeoff of adding indexes?",
+    "options": [
+      "Faster reads but extra storage and slower writes",
+      "Slower reads and faster writes only",
+      "No effect on writes",
+      "Indexes reduce storage usage"
+    ],
+    "answer": "Faster reads but extra storage and slower writes"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Constraints",
+    "difficulty": "Medium",
+    "question": "What does a CHECK constraint do?",
+    "options": [
+      "Enforces a condition on inserted or updated values",
+      "Creates an index automatically",
+      "Joins two tables",
+      "Encrypts a column"
+    ],
+    "answer": "Enforces a condition on inserted or updated values"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Constraints",
+    "difficulty": "Medium",
+    "question": "What does a DEFAULT constraint or default value provide?",
+    "options": [
+      "A value used when an INSERT omits the column",
+      "A backup key",
+      "A foreign key target",
+      "A sort order"
+    ],
+    "answer": "A value used when an INSERT omits the column"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Keys",
+    "difficulty": "Medium",
+    "question": "What is a composite primary key?",
+    "options": [
+      "A primary key made from multiple columns",
+      "Two separate primary keys in one table",
+      "A foreign key plus an index",
+      "A key generated by a trigger only"
+    ],
+    "answer": "A primary key made from multiple columns"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Keys",
+    "difficulty": "Medium",
+    "question": "What is a candidate key?",
+    "options": [
+      "A minimal set of columns that can uniquely identify a row",
+      "Any nullable column",
+      "Only a foreign key",
+      "A nonunique index"
+    ],
+    "answer": "A minimal set of columns that can uniquely identify a row"
+  },
+  {
+    "subject": "SQL",
+    "topic": "DML",
+    "difficulty": "Medium",
+    "question": "What is the difference between DELETE and TRUNCATE in common SQL systems?",
+    "options": [
+      "DELETE removes selected rows while TRUNCATE removes all rows more directly",
+      "TRUNCATE supports WHERE and DELETE does not",
+      "DELETE removes the table definition",
+      "TRUNCATE always fires row-level DELETE logic identically"
+    ],
+    "answer": "DELETE removes selected rows while TRUNCATE removes all rows more directly"
+  },
+  {
+    "subject": "SQL",
+    "topic": "DDL",
+    "difficulty": "Medium",
+    "question": "Which category includes CREATE, ALTER, and DROP?",
+    "options": [
+      "DDL",
+      "DML",
+      "DCL",
+      "TCL only"
+    ],
+    "answer": "DDL"
+  },
+  {
+    "subject": "SQL",
+    "topic": "DML",
+    "difficulty": "Medium",
+    "question": "Which category includes INSERT, UPDATE, and DELETE?",
+    "options": [
+      "DML",
+      "DDL",
+      "DCL",
+      "TCL"
+    ],
+    "answer": "DML"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Permissions",
+    "difficulty": "Medium",
+    "question": "Which statement commonly gives privileges to a user or role?",
+    "options": [
+      "GRANT",
+      "ALLOW",
+      "PERMIT",
+      "AUTHORIZEONLY"
+    ],
+    "answer": "GRANT"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Permissions",
+    "difficulty": "Medium",
+    "question": "Which statement commonly removes previously granted privileges?",
+    "options": [
+      "REVOKE",
+      "DENYONLY",
+      "REMOVE PRIVILEGE",
+      "UNGRANT"
+    ],
+    "answer": "REVOKE"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Window Functions",
+    "difficulty": "Medium",
+    "question": "What does ROW_NUMBER() assign within a window?",
+    "options": [
+      "A unique sequential number to each row",
+      "The same rank for ties",
+      "A running sum only",
+      "A random number"
+    ],
+    "answer": "A unique sequential number to each row"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Window Functions",
+    "difficulty": "Medium",
+    "question": "Which clause defines the rows over which a window function operates?",
+    "options": [
+      "OVER",
+      "WINDOW BY",
+      "PARTITIONONLY",
+      "FRAMEONLY"
+    ],
+    "answer": "OVER"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Window Functions",
+    "difficulty": "Medium",
+    "question": "What does PARTITION BY do inside OVER()?",
+    "options": [
+      "Divides rows into groups for separate window calculations",
+      "Physically partitions the table on disk",
+      "Filters rows before SELECT",
+      "Creates a primary key"
+    ],
+    "answer": "Divides rows into groups for separate window calculations"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Window Functions",
+    "difficulty": "Hard",
+    "question": "What is the difference between ROW_NUMBER() and RANK() when ties occur?",
+    "options": [
+      "RANK() gives tied rows the same rank and may leave gaps, while ROW_NUMBER() remains unique",
+      "ROW_NUMBER() gives ties the same number",
+      "RANK() never leaves gaps",
+      "They are always identical"
+    ],
+    "answer": "RANK() gives tied rows the same rank and may leave gaps, while ROW_NUMBER() remains unique"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Window Functions",
+    "difficulty": "Hard",
+    "question": "How does DENSE_RANK() differ from RANK()?",
+    "options": [
+      "DENSE_RANK() does not leave gaps after ties",
+      "DENSE_RANK() gives unique numbers to ties",
+      "RANK() never handles ties",
+      "DENSE_RANK() works only with aggregates"
+    ],
+    "answer": "DENSE_RANK() does not leave gaps after ties"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Window Functions",
+    "difficulty": "Hard",
+    "question": "Which window function can access a value from a previous row in the window ordering?",
+    "options": [
+      "LAG()",
+      "LEAD()",
+      "PREV()",
+      "OFFSETROW()"
+    ],
+    "answer": "LAG()"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Window Functions",
+    "difficulty": "Hard",
+    "question": "Which window function can access a value from a following row in the window ordering?",
+    "options": [
+      "LEAD()",
+      "LAG()",
+      "NEXTROW()",
+      "FOLLOW()"
+    ],
+    "answer": "LEAD()"
+  },
+  {
+    "subject": "SQL",
+    "topic": "CTE",
+    "difficulty": "Hard",
+    "question": "What is a common table expression introduced with WITH?",
+    "options": [
+      "A named temporary result set usable within a statement",
+      "A permanent table",
+      "A stored index",
+      "A transaction log"
+    ],
+    "answer": "A named temporary result set usable within a statement"
+  },
+  {
+    "subject": "SQL",
+    "topic": "CTE",
+    "difficulty": "Hard",
+    "question": "What is a recursive CTE commonly used for?",
+    "options": [
+      "Hierarchical or iterative queries such as traversing parent-child relationships",
+      "Only sorting",
+      "Only inserts",
+      "Only transactions"
+    ],
+    "answer": "Hierarchical or iterative queries such as traversing parent-child relationships"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Optimization",
+    "difficulty": "Hard",
+    "question": "What does an execution plan describe?",
+    "options": [
+      "How the database intends to execute a query",
+      "The schema backup schedule",
+      "User permissions",
+      "Transaction isolation only"
+    ],
+    "answer": "How the database intends to execute a query"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Optimization",
+    "difficulty": "Hard",
+    "question": "Why can SELECT * be undesirable in production queries?",
+    "options": [
+      "It may read unnecessary columns and make queries less stable and efficient",
+      "It is invalid SQL",
+      "It always disables indexes",
+      "It returns duplicate rows automatically"
+    ],
+    "answer": "It may read unnecessary columns and make queries less stable and efficient"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Optimization",
+    "difficulty": "Hard",
+    "question": "Why can applying a function to an indexed column in a WHERE predicate sometimes hurt index usage?",
+    "options": [
+      "The transformed expression may prevent direct use of the index structure",
+      "Functions always disable SQL parsing",
+      "Indexes cannot store numeric values",
+      "WHERE cannot contain functions"
+    ],
+    "answer": "The transformed expression may prevent direct use of the index structure"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Optimization",
+    "difficulty": "Hard",
+    "question": "What is selectivity in the context of an index?",
+    "options": [
+      "How well a column or predicate distinguishes a small subset of rows",
+      "The number of SELECT statements",
+      "The number of indexes in a database",
+      "The order of table columns"
+    ],
+    "answer": "How well a column or predicate distinguishes a small subset of rows"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Indexes",
+    "difficulty": "Hard",
+    "question": "What is a covering index?",
+    "options": [
+      "An index containing all columns needed by a query so the base table may not need to be read",
+      "An index on every table column",
+      "A unique index only",
+      "A backup index"
+    ],
+    "answer": "An index containing all columns needed by a query so the base table may not need to be read"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Indexes",
+    "difficulty": "Hard",
+    "question": "Why does column order matter in a multi-column B-tree index?",
+    "options": [
+      "Queries can efficiently use leading portions of the index key",
+      "The order changes table row storage always",
+      "Only the last column can be searched",
+      "SQL ignores multi-column indexes"
+    ],
+    "answer": "Queries can efficiently use leading portions of the index key"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Transactions",
+    "difficulty": "Hard",
+    "question": "What does ACID stand for?",
+    "options": [
+      "Atomicity, Consistency, Isolation, Durability",
+      "Accuracy, Control, Integrity, Data",
+      "Atomicity, Concurrency, Indexing, Durability",
+      "Access, Consistency, Isolation, Dependency"
+    ],
+    "answer": "Atomicity, Consistency, Isolation, Durability"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Transactions",
+    "difficulty": "Hard",
+    "question": "What does atomicity guarantee?",
+    "options": [
+      "A transaction's operations are treated as an all-or-nothing unit",
+      "All transactions run in parallel",
+      "All queries use indexes",
+      "Data is always sorted"
+    ],
+    "answer": "A transaction's operations are treated as an all-or-nothing unit"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Transactions",
+    "difficulty": "Hard",
+    "question": "What does durability guarantee?",
+    "options": [
+      "Committed changes survive system failures according to the database guarantees",
+      "Transactions cannot be rolled back before commit",
+      "Rows are never deleted",
+      "Every query is cached"
+    ],
+    "answer": "Committed changes survive system failures according to the database guarantees"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Isolation",
+    "difficulty": "Hard",
+    "question": "What is a dirty read?",
+    "options": [
+      "Reading data written by another transaction that has not yet committed",
+      "Reading duplicate rows",
+      "Reading from a view",
+      "Reading a table without an index"
+    ],
+    "answer": "Reading data written by another transaction that has not yet committed"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Isolation",
+    "difficulty": "Hard",
+    "question": "What is a non-repeatable read?",
+    "options": [
+      "Reading the same row twice and seeing different committed values because another transaction changed it",
+      "Reading the same row twice with the same value",
+      "Reading an uncommitted insert only",
+      "Reading rows in a different sort order"
+    ],
+    "answer": "Reading the same row twice and seeing different committed values because another transaction changed it"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Isolation",
+    "difficulty": "Hard",
+    "question": "What is a phantom read?",
+    "options": [
+      "Re-running a range query and seeing a different set of rows due to another committed transaction",
+      "Reading an uncommitted value",
+      "Reading a NULL value",
+      "Reading from a dropped table"
+    ],
+    "answer": "Re-running a range query and seeing a different set of rows due to another committed transaction"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Isolation",
+    "difficulty": "Hard",
+    "question": "Which standard isolation level provides the strongest isolation among the common four levels?",
+    "options": [
+      "SERIALIZABLE",
+      "READ UNCOMMITTED",
+      "READ COMMITTED",
+      "REPEATABLE READ"
+    ],
+    "answer": "SERIALIZABLE"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Locks",
+    "difficulty": "Hard",
+    "question": "What is a deadlock in a database?",
+    "options": [
+      "Transactions wait on each other's locks in a cycle",
+      "A table has no primary key",
+      "A query returns no rows",
+      "An index becomes fragmented"
+    ],
+    "answer": "Transactions wait on each other's locks in a cycle"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Locks",
+    "difficulty": "Hard",
+    "question": "What is optimistic concurrency control based on?",
+    "options": [
+      "Assuming conflicts are relatively rare and detecting them when updating or committing",
+      "Locking every row before reading",
+      "Disabling transactions",
+      "Using only serializable isolation"
+    ],
+    "answer": "Assuming conflicts are relatively rare and detecting them when updating or committing"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Normalization",
+    "difficulty": "Hard",
+    "question": "What is the main goal of database normalization?",
+    "options": [
+      "Reduce redundancy and undesirable update anomalies",
+      "Increase duplicate data",
+      "Eliminate all joins",
+      "Replace keys with indexes"
+    ],
+    "answer": "Reduce redundancy and undesirable update anomalies"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Normalization",
+    "difficulty": "Hard",
+    "question": "What does First Normal Form generally require?",
+    "options": [
+      "Atomic column values and no repeating groups",
+      "Every table must have two primary keys",
+      "No foreign keys",
+      "Every column must be numeric"
+    ],
+    "answer": "Atomic column values and no repeating groups"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Normalization",
+    "difficulty": "Hard",
+    "question": "What does Second Normal Form additionally address beyond 1NF?",
+    "options": [
+      "Partial dependency on part of a composite candidate key",
+      "Transitive dependency only",
+      "Join dependency",
+      "Multivalued dependency only"
+    ],
+    "answer": "Partial dependency on part of a composite candidate key"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Normalization",
+    "difficulty": "Hard",
+    "question": "What does Third Normal Form mainly eliminate?",
+    "options": [
+      "Transitive dependencies of non-key attributes on keys",
+      "All foreign keys",
+      "All composite keys",
+      "Every NULL"
+    ],
+    "answer": "Transitive dependencies of non-key attributes on keys"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Normalization",
+    "difficulty": "Hard",
+    "question": "What is denormalization?",
+    "options": [
+      "Intentionally introducing redundancy to improve some read patterns",
+      "Removing all indexes",
+      "Deleting duplicate result rows",
+      "Converting SQL to NoSQL automatically"
+    ],
+    "answer": "Intentionally introducing redundancy to improve some read patterns"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Joins",
+    "difficulty": "Hard",
+    "question": "Why can a predicate on the right table in the WHERE clause turn a LEFT JOIN effectively into an INNER JOIN?",
+    "options": [
+      "Rows with NULL right-side values fail the WHERE condition",
+      "LEFT JOIN never preserves unmatched rows",
+      "WHERE runs before FROM",
+      "JOIN conditions cannot contain predicates"
+    ],
+    "answer": "Rows with NULL right-side values fail the WHERE condition"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Subqueries",
+    "difficulty": "Hard",
+    "question": "Why can NOT IN behave unexpectedly if the subquery returns NULL?",
+    "options": [
+      "SQL three-valued logic can make comparisons evaluate to UNKNOWN",
+      "NULL is treated as zero",
+      "NOT IN ignores the subquery",
+      "The query becomes a CROSS JOIN"
+    ],
+    "answer": "SQL three-valued logic can make comparisons evaluate to UNKNOWN"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Subqueries",
+    "difficulty": "Hard",
+    "question": "Which pattern is often safer than NOT IN when NULLs may appear?",
+    "options": [
+      "NOT EXISTS",
+      "UNION ALL",
+      "CROSS JOIN",
+      "GROUP BY"
+    ],
+    "answer": "NOT EXISTS"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Aggregates",
+    "difficulty": "Hard",
+    "question": "What does COUNT(column_name) do with NULL values?",
+    "options": [
+      "It excludes NULL values",
+      "It counts NULL values as zero",
+      "It counts only NULL values",
+      "It throws an error"
+    ],
+    "answer": "It excludes NULL values"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Aggregates",
+    "difficulty": "Hard",
+    "question": "What does COUNT(*) count?",
+    "options": [
+      "Rows, regardless of NULL values in individual columns",
+      "Only non-NULL columns",
+      "Only distinct rows",
+      "Only primary key values"
+    ],
+    "answer": "Rows, regardless of NULL values in individual columns"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Materialized Views",
+    "difficulty": "Hard",
+    "question": "How does a materialized view differ from a normal view?",
+    "options": [
+      "A materialized view stores query results physically and usually needs refresh logic",
+      "A normal view always stores all rows physically",
+      "A materialized view cannot be queried",
+      "They are always identical"
+    ],
+    "answer": "A materialized view stores query results physically and usually needs refresh logic"
+  },
+  {
+    "subject": "SQL",
+    "topic": "Partitioning",
+    "difficulty": "Hard",
+    "question": "What is table partitioning commonly used for?",
+    "options": [
+      "Dividing a large logical table into manageable physical segments",
+      "Replacing all indexes",
+      "Encrypting every row",
+      "Removing foreign keys"
+    ],
+    "answer": "Dividing a large logical table into manageable physical segments"
+  }
+]
