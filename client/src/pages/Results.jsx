@@ -255,6 +255,7 @@ function Results() {
 
 
   const xpEarned =
+    savedResult?.xpEarned ??
     routeResult.xpEarned ??
     (
       score * 20 + 50
