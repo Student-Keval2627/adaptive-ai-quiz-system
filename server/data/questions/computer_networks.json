@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "Computer Networks",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is a computer network?",
+    "options": [
+      "A group of connected devices that can communicate and share resources",
+      "A single computer program",
+      "A database table",
+      "A CPU instruction set"
+    ],
+    "answer": "A group of connected devices that can communicate and share resources"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What does LAN stand for?",
+    "options": [
+      "Local Area Network",
+      "Large Access Node",
+      "Linked Application Network",
+      "Local Access Number"
+    ],
+    "answer": "Local Area Network"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What does WAN stand for?",
+    "options": [
+      "Wide Area Network",
+      "Wireless Access Node",
+      "Web Area Network",
+      "Wide Application Number"
+    ],
+    "answer": "Wide Area Network"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Devices",
+    "difficulty": "Easy",
+    "question": "Which device forwards packets between different networks?",
+    "options": [
+      "Router",
+      "Switch",
+      "Hub",
+      "Repeater"
+    ],
+    "answer": "Router"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Devices",
+    "difficulty": "Easy",
+    "question": "Which device commonly forwards Ethernet frames using MAC addresses?",
+    "options": [
+      "Switch",
+      "Router",
+      "Modem",
+      "Gateway only"
+    ],
+    "answer": "Switch"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Devices",
+    "difficulty": "Easy",
+    "question": "Which simple network device sends incoming data to all ports?",
+    "options": [
+      "Hub",
+      "Switch",
+      "Router",
+      "Firewall"
+    ],
+    "answer": "Hub"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "OSI Model",
+    "difficulty": "Easy",
+    "question": "How many layers are in the OSI model?",
+    "options": [
+      "7",
+      "5",
+      "4",
+      "8"
+    ],
+    "answer": "7"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "OSI Model",
+    "difficulty": "Easy",
+    "question": "Which OSI layer is responsible for routing packets?",
+    "options": [
+      "Network layer",
+      "Data Link layer",
+      "Transport layer",
+      "Application layer"
+    ],
+    "answer": "Network layer"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "OSI Model",
+    "difficulty": "Easy",
+    "question": "Which OSI layer is responsible for end-to-end transport?",
+    "options": [
+      "Transport layer",
+      "Physical layer",
+      "Session layer",
+      "Presentation layer"
+    ],
+    "answer": "Transport layer"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "OSI Model",
+    "difficulty": "Easy",
+    "question": "Which OSI layer transmits raw bits over the medium?",
+    "options": [
+      "Physical layer",
+      "Network layer",
+      "Application layer",
+      "Session layer"
+    ],
+    "answer": "Physical layer"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "TCP IP",
+    "difficulty": "Easy",
+    "question": "Which protocol provides reliable connection-oriented transport?",
+    "options": [
+      "TCP",
+      "UDP",
+      "IP",
+      "ARP"
+    ],
+    "answer": "TCP"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "TCP IP",
+    "difficulty": "Easy",
+    "question": "Which transport protocol is connectionless?",
+    "options": [
+      "UDP",
+      "TCP",
+      "HTTP",
+      "FTP"
+    ],
+    "answer": "UDP"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "IP",
+    "difficulty": "Easy",
+    "question": "What does IP stand for?",
+    "options": [
+      "Internet Protocol",
+      "Internal Process",
+      "Integrated Packet",
+      "Internet Port"
+    ],
+    "answer": "Internet Protocol"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "IP",
+    "difficulty": "Easy",
+    "question": "How many bits are in an IPv4 address?",
+    "options": [
+      "32",
+      "64",
+      "128",
+      "16"
+    ],
+    "answer": "32"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "IP",
+    "difficulty": "Easy",
+    "question": "How many bits are in an IPv6 address?",
+    "options": [
+      "128",
+      "64",
+      "32",
+      "256"
+    ],
+    "answer": "128"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "IP",
+    "difficulty": "Easy",
+    "question": "Which IPv4 address represents localhost?",
+    "options": [
+      "127.0.0.1",
+      "0.0.0.0",
+      "255.255.255.255",
+      "192.168.1.1"
+    ],
+    "answer": "127.0.0.1"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "DNS",
+    "difficulty": "Easy",
+    "question": "What does DNS do?",
+    "options": [
+      "Maps domain names to IP addresses",
+      "Encrypts all packets",
+      "Assigns MAC addresses",
+      "Routes Ethernet frames"
+    ],
+    "answer": "Maps domain names to IP addresses"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "DHCP",
+    "difficulty": "Easy",
+    "question": "What does DHCP commonly provide to a client?",
+    "options": [
+      "IP configuration automatically",
+      "Domain registration",
+      "File compression",
+      "Email encryption"
+    ],
+    "answer": "IP configuration automatically"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "HTTP",
+    "difficulty": "Easy",
+    "question": "Which protocol is commonly used to transfer web pages?",
+    "options": [
+      "HTTP",
+      "SMTP",
+      "FTP only",
+      "ARP"
+    ],
+    "answer": "HTTP"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "HTTP",
+    "difficulty": "Easy",
+    "question": "Which secure protocol is normally used for encrypted web traffic?",
+    "options": [
+      "HTTPS",
+      "HTTP",
+      "FTP",
+      "Telnet"
+    ],
+    "answer": "HTTPS"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Email",
+    "difficulty": "Easy",
+    "question": "Which protocol is commonly used to send email between mail servers?",
+    "options": [
+      "SMTP",
+      "POP3",
+      "IMAP only",
+      "DNS"
+    ],
+    "answer": "SMTP"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Email",
+    "difficulty": "Easy",
+    "question": "Which protocol is commonly used by clients to retrieve and synchronize email while keeping messages on the server?",
+    "options": [
+      "IMAP",
+      "SMTP",
+      "ARP",
+      "DHCP"
+    ],
+    "answer": "IMAP"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Ports",
+    "difficulty": "Easy",
+    "question": "What is the default port for HTTP?",
+    "options": [
+      "80",
+      "443",
+      "21",
+      "25"
+    ],
+    "answer": "80"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Ports",
+    "difficulty": "Easy",
+    "question": "What is the default port for HTTPS?",
+    "options": [
+      "443",
+      "80",
+      "22",
+      "53"
+    ],
+    "answer": "443"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Ports",
+    "difficulty": "Easy",
+    "question": "What is the default port for SSH?",
+    "options": [
+      "22",
+      "23",
+      "21",
+      "25"
+    ],
+    "answer": "22"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Ports",
+    "difficulty": "Easy",
+    "question": "What is the default port for DNS queries in common cases?",
+    "options": [
+      "53",
+      "80",
+      "443",
+      "110"
+    ],
+    "answer": "53"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "MAC",
+    "difficulty": "Easy",
+    "question": "What is a MAC address used for?",
+    "options": [
+      "Identifying a network interface at the data-link layer",
+      "Identifying a website domain",
+      "Encrypting traffic",
+      "Assigning transport ports"
+    ],
+    "answer": "Identifying a network interface at the data-link layer"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "ARP",
+    "difficulty": "Easy",
+    "question": "What does ARP resolve in IPv4 networks?",
+    "options": [
+      "IP addresses to MAC addresses",
+      "MAC addresses to domain names",
+      "Ports to processes only",
+      "URLs to IP addresses"
+    ],
+    "answer": "IP addresses to MAC addresses"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Topologies",
+    "difficulty": "Easy",
+    "question": "Which topology connects all devices to a central device?",
+    "options": [
+      "Star",
+      "Ring",
+      "Bus",
+      "Mesh only"
+    ],
+    "answer": "Star"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Topologies",
+    "difficulty": "Easy",
+    "question": "Which topology connects devices in a closed loop?",
+    "options": [
+      "Ring",
+      "Star",
+      "Bus",
+      "Tree only"
+    ],
+    "answer": "Ring"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Wireless",
+    "difficulty": "Easy",
+    "question": "Which technology is commonly used for wireless LANs?",
+    "options": [
+      "Wi-Fi",
+      "Ethernet cable only",
+      "SATA",
+      "HDMI"
+    ],
+    "answer": "Wi-Fi"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Security",
+    "difficulty": "Easy",
+    "question": "What is a firewall mainly used for?",
+    "options": [
+      "Control and filter network traffic",
+      "Increase monitor resolution",
+      "Compile programs",
+      "Store database tables"
+    ],
+    "answer": "Control and filter network traffic"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Troubleshooting",
+    "difficulty": "Easy",
+    "question": "Which utility is commonly used to test whether a remote host is reachable?",
+    "options": [
+      "ping",
+      "mkdir",
+      "grep",
+      "format"
+    ],
+    "answer": "ping"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Troubleshooting",
+    "difficulty": "Easy",
+    "question": "Which utility shows the route packets take toward a destination?",
+    "options": [
+      "traceroute",
+      "ping only",
+      "ls",
+      "whoami"
+    ],
+    "answer": "traceroute"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "OSI Model",
+    "difficulty": "Medium",
+    "question": "Which OSI layer is responsible for framing and MAC addressing?",
+    "options": [
+      "Data Link layer",
+      "Transport layer",
+      "Session layer",
+      "Application layer"
+    ],
+    "answer": "Data Link layer"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "OSI Model",
+    "difficulty": "Medium",
+    "question": "Which OSI layer handles data representation, translation, and encryption concepts?",
+    "options": [
+      "Presentation layer",
+      "Physical layer",
+      "Network layer",
+      "Data Link layer"
+    ],
+    "answer": "Presentation layer"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "TCP",
+    "difficulty": "Medium",
+    "question": "What is the purpose of the TCP three-way handshake?",
+    "options": [
+      "Establish a reliable connection and synchronize sequence numbers",
+      "Resolve domain names",
+      "Assign IP addresses",
+      "Encrypt application data"
+    ],
+    "answer": "Establish a reliable connection and synchronize sequence numbers"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "TCP",
+    "difficulty": "Medium",
+    "question": "Which TCP flag is used to begin connection establishment?",
+    "options": [
+      "SYN",
+      "FIN",
+      "RST",
+      "ACK only"
+    ],
+    "answer": "SYN"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "TCP",
+    "difficulty": "Medium",
+    "question": "Which TCP flag is commonly used to acknowledge received data?",
+    "options": [
+      "ACK",
+      "SYN",
+      "FIN",
+      "URG only"
+    ],
+    "answer": "ACK"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "TCP",
+    "difficulty": "Medium",
+    "question": "Which TCP flag is commonly used to gracefully close one direction of a connection?",
+    "options": [
+      "FIN",
+      "SYN",
+      "PSH only",
+      "ECE"
+    ],
+    "answer": "FIN"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "UDP",
+    "difficulty": "Medium",
+    "question": "Why is UDP often used for real-time applications?",
+    "options": [
+      "It has low overhead and does not wait for retransmissions by default",
+      "It guarantees delivery",
+      "It always encrypts packets",
+      "It requires a handshake"
+    ],
+    "answer": "It has low overhead and does not wait for retransmissions by default"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Subnetting",
+    "difficulty": "Medium",
+    "question": "What is a subnet mask used for?",
+    "options": [
+      "Identify the network and host portions of an IPv4 address",
+      "Encrypt an IP address",
+      "Assign port numbers",
+      "Convert MAC to DNS"
+    ],
+    "answer": "Identify the network and host portions of an IPv4 address"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Subnetting",
+    "difficulty": "Medium",
+    "question": "What does /24 mean in IPv4 CIDR notation?",
+    "options": [
+      "The first 24 bits are the network prefix",
+      "There are exactly 24 hosts",
+      "The address uses 24 bytes",
+      "The network has 24 routers"
+    ],
+    "answer": "The first 24 bits are the network prefix"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Subnetting",
+    "difficulty": "Medium",
+    "question": "How many total IPv4 addresses are in a /24 subnet?",
+    "options": [
+      "256",
+      "254",
+      "128",
+      "512"
+    ],
+    "answer": "256"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Private IP",
+    "difficulty": "Medium",
+    "question": "Which IPv4 range is a private address range?",
+    "options": [
+      "10.0.0.0/8",
+      "8.8.8.0/24",
+      "1.1.1.0/24",
+      "224.0.0.0/4"
+    ],
+    "answer": "10.0.0.0/8"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Private IP",
+    "difficulty": "Medium",
+    "question": "Which IPv4 range is also private?",
+    "options": [
+      "192.168.0.0/16",
+      "172.0.0.0/8",
+      "11.0.0.0/8",
+      "100.0.0.0/8"
+    ],
+    "answer": "192.168.0.0/16"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "NAT",
+    "difficulty": "Medium",
+    "question": "What is NAT mainly used for?",
+    "options": [
+      "Translate addresses between private and public networks",
+      "Resolve hostnames",
+      "Encrypt TCP sessions",
+      "Assign MAC addresses"
+    ],
+    "answer": "Translate addresses between private and public networks"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "NAT",
+    "difficulty": "Medium",
+    "question": "What does PAT allow?",
+    "options": [
+      "Multiple private hosts to share one public IP using different port mappings",
+      "One MAC address to have multiple hostnames only",
+      "A router to avoid IP addresses",
+      "Every packet to use the same port"
+    ],
+    "answer": "Multiple private hosts to share one public IP using different port mappings"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Routing",
+    "difficulty": "Medium",
+    "question": "What is a routing table?",
+    "options": [
+      "A table containing paths or next hops for destination networks",
+      "A list of DNS records only",
+      "A list of switch MAC addresses",
+      "A firewall password file"
+    ],
+    "answer": "A table containing paths or next hops for destination networks"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Routing",
+    "difficulty": "Medium",
+    "question": "What is a default route used for?",
+    "options": [
+      "Forward traffic when no more specific route matches",
+      "Route only local traffic",
+      "Resolve DNS",
+      "Assign DHCP addresses"
+    ],
+    "answer": "Forward traffic when no more specific route matches"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Switching",
+    "difficulty": "Medium",
+    "question": "What does an Ethernet switch learn to build its forwarding table?",
+    "options": [
+      "Source MAC addresses seen on ports",
+      "Destination IP addresses only",
+      "DNS names",
+      "TCP sequence numbers"
+    ],
+    "answer": "Source MAC addresses seen on ports"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Switching",
+    "difficulty": "Medium",
+    "question": "What is a broadcast domain?",
+    "options": [
+      "A set of devices that receive the same Layer 2 broadcast",
+      "All devices on the Internet",
+      "A single TCP connection",
+      "A DNS zone only"
+    ],
+    "answer": "A set of devices that receive the same Layer 2 broadcast"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "VLAN",
+    "difficulty": "Medium",
+    "question": "What is a VLAN?",
+    "options": [
+      "A logical Layer 2 network that can separate broadcast domains",
+      "A VPN tunnel only",
+      "A public IP address",
+      "A routing protocol"
+    ],
+    "answer": "A logical Layer 2 network that can separate broadcast domains"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "VLAN",
+    "difficulty": "Medium",
+    "question": "What is an access port on a switch commonly used for?",
+    "options": [
+      "Carry traffic for a single VLAN to an end device",
+      "Carry many VLANs using tags",
+      "Connect only routers",
+      "Run DNS"
+    ],
+    "answer": "Carry traffic for a single VLAN to an end device"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "VLAN",
+    "difficulty": "Medium",
+    "question": "What is a trunk port commonly used for?",
+    "options": [
+      "Carry traffic for multiple VLANs between network devices",
+      "Connect one untagged host only",
+      "Assign IP addresses",
+      "Resolve ARP"
+    ],
+    "answer": "Carry traffic for multiple VLANs between network devices"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "DNS",
+    "difficulty": "Medium",
+    "question": "Which DNS record maps a hostname to an IPv4 address?",
+    "options": [
+      "A",
+      "AAAA",
+      "MX",
+      "CNAME"
+    ],
+    "answer": "A"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "DNS",
+    "difficulty": "Medium",
+    "question": "Which DNS record maps a hostname to an IPv6 address?",
+    "options": [
+      "AAAA",
+      "A",
+      "MX",
+      "PTR"
+    ],
+    "answer": "AAAA"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "DNS",
+    "difficulty": "Medium",
+    "question": "Which DNS record identifies a mail server for a domain?",
+    "options": [
+      "MX",
+      "A",
+      "TXT only",
+      "PTR"
+    ],
+    "answer": "MX"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "DNS",
+    "difficulty": "Medium",
+    "question": "What does a CNAME record provide?",
+    "options": [
+      "An alias from one domain name to another canonical name",
+      "An IPv4 address directly only",
+      "A mail server priority only",
+      "A reverse lookup only"
+    ],
+    "answer": "An alias from one domain name to another canonical name"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "DHCP",
+    "difficulty": "Medium",
+    "question": "Which sequence describes the common DHCP lease process?",
+    "options": [
+      "Discover, Offer, Request, Acknowledge",
+      "Request, Discover, Offer, Close",
+      "SYN, SYN-ACK, ACK, FIN",
+      "Query, Reply, Commit, Reset"
+    ],
+    "answer": "Discover, Offer, Request, Acknowledge"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "HTTP",
+    "difficulty": "Medium",
+    "question": "Which HTTP method is normally used to retrieve a resource?",
+    "options": [
+      "GET",
+      "POST",
+      "PUT only",
+      "DELETE only"
+    ],
+    "answer": "GET"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "HTTP",
+    "difficulty": "Medium",
+    "question": "Which HTTP method is commonly used to submit data or create a subordinate resource?",
+    "options": [
+      "POST",
+      "GET",
+      "HEAD only",
+      "TRACE"
+    ],
+    "answer": "POST"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "HTTP",
+    "difficulty": "Medium",
+    "question": "What does HTTP status code 404 mean?",
+    "options": [
+      "Resource not found",
+      "Success",
+      "Unauthorized",
+      "Server error"
+    ],
+    "answer": "Resource not found"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "HTTP",
+    "difficulty": "Medium",
+    "question": "What does HTTP status code 200 generally mean?",
+    "options": [
+      "Success",
+      "Redirect",
+      "Client error",
+      "Server error"
+    ],
+    "answer": "Success"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "TLS",
+    "difficulty": "Medium",
+    "question": "What does TLS primarily provide?",
+    "options": [
+      "Encryption, integrity, and endpoint authentication support for network communication",
+      "IP address assignment",
+      "MAC learning",
+      "Routing updates"
+    ],
+    "answer": "Encryption, integrity, and endpoint authentication support for network communication"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "ICMP",
+    "difficulty": "Medium",
+    "question": "Which protocol does ping commonly use?",
+    "options": [
+      "ICMP",
+      "TCP",
+      "UDP only",
+      "ARP only"
+    ],
+    "answer": "ICMP"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "MTU",
+    "difficulty": "Medium",
+    "question": "What does MTU describe?",
+    "options": [
+      "The largest packet or frame payload size that can be sent without fragmentation at a given layer/interface context",
+      "The maximum TCP port number",
+      "The number of routers in a path",
+      "The DNS cache size"
+    ],
+    "answer": "The largest packet or frame payload size that can be sent without fragmentation at a given layer/interface context"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "TCP",
+    "difficulty": "Hard",
+    "question": "Why does TCP use sequence numbers?",
+    "options": [
+      "To order bytes and detect missing or duplicate data",
+      "To assign IP addresses",
+      "To encrypt packets",
+      "To select DNS servers"
+    ],
+    "answer": "To order bytes and detect missing or duplicate data"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "TCP",
+    "difficulty": "Hard",
+    "question": "What is TCP flow control designed to prevent?",
+    "options": [
+      "A sender overwhelming the receiver's available buffer",
+      "Routers from changing paths",
+      "DNS from caching too long",
+      "Switches from learning MAC addresses"
+    ],
+    "answer": "A sender overwhelming the receiver's available buffer"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "TCP",
+    "difficulty": "Hard",
+    "question": "What is TCP congestion control designed to address?",
+    "options": [
+      "Overloading the network with too much traffic",
+      "Receiver buffer size only",
+      "DNS resolution failures",
+      "ARP cache entries"
+    ],
+    "answer": "Overloading the network with too much traffic"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "TCP",
+    "difficulty": "Hard",
+    "question": "What is the TCP congestion window?",
+    "options": [
+      "A sender-side limit related to how much unacknowledged data may be in the network",
+      "The receiver's application buffer only",
+      "The number of open sockets",
+      "The Ethernet frame size"
+    ],
+    "answer": "A sender-side limit related to how much unacknowledged data may be in the network"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "TCP",
+    "difficulty": "Hard",
+    "question": "What does TCP slow start do?",
+    "options": [
+      "Rapidly increases the congestion window from a small starting value until a threshold or congestion signal",
+      "Reduces every connection to one byte permanently",
+      "Disables acknowledgements",
+      "Avoids retransmissions"
+    ],
+    "answer": "Rapidly increases the congestion window from a small starting value until a threshold or congestion signal"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "TCP",
+    "difficulty": "Hard",
+    "question": "What is fast retransmit commonly triggered by?",
+    "options": [
+      "Multiple duplicate acknowledgements indicating a likely missing segment",
+      "A DNS timeout",
+      "A DHCP lease renewal",
+      "A MAC address change"
+    ],
+    "answer": "Multiple duplicate acknowledgements indicating a likely missing segment"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "TCP",
+    "difficulty": "Hard",
+    "question": "What does the TCP receive window advertise?",
+    "options": [
+      "How much additional data the receiver can currently accept",
+      "The sender's IP address",
+      "The current DNS TTL",
+      "The router hop count"
+    ],
+    "answer": "How much additional data the receiver can currently accept"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "TCP",
+    "difficulty": "Hard",
+    "question": "What is the purpose of TCP's TIME_WAIT state?",
+    "options": [
+      "Allow delayed duplicate segments to expire and support reliable connection closure",
+      "Wait for DNS resolution",
+      "Reserve a DHCP address",
+      "Pause congestion control"
+    ],
+    "answer": "Allow delayed duplicate segments to expire and support reliable connection closure"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Routing",
+    "difficulty": "Hard",
+    "question": "What does longest-prefix matching mean in IP routing?",
+    "options": [
+      "Choose the route with the most specific matching network prefix",
+      "Choose the physically longest cable path",
+      "Choose the route with the largest metric",
+      "Choose the oldest routing entry"
+    ],
+    "answer": "Choose the route with the most specific matching network prefix"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Routing",
+    "difficulty": "Hard",
+    "question": "Which routing protocol is a link-state interior gateway protocol?",
+    "options": [
+      "OSPF",
+      "RIP",
+      "BGP only",
+      "ARP"
+    ],
+    "answer": "OSPF"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Routing",
+    "difficulty": "Hard",
+    "question": "Which routing protocol is commonly described as a distance-vector protocol?",
+    "options": [
+      "RIP",
+      "OSPF",
+      "IS-IS only",
+      "Ethernet"
+    ],
+    "answer": "RIP"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Routing",
+    "difficulty": "Hard",
+    "question": "Which routing protocol is primarily used between autonomous systems on the Internet?",
+    "options": [
+      "BGP",
+      "OSPF",
+      "RIP only",
+      "STP"
+    ],
+    "answer": "BGP"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Routing",
+    "difficulty": "Hard",
+    "question": "What is an autonomous system in Internet routing?",
+    "options": [
+      "A collection of IP networks under a common routing administration",
+      "A single switch port",
+      "A DNS record",
+      "A TCP session"
+    ],
+    "answer": "A collection of IP networks under a common routing administration"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "BGP",
+    "difficulty": "Hard",
+    "question": "What does the AS_PATH attribute in BGP represent?",
+    "options": [
+      "The sequence of autonomous systems a route advertisement has traversed",
+      "The list of switch MAC addresses",
+      "The DNS lookup path",
+      "The TCP port sequence"
+    ],
+    "answer": "The sequence of autonomous systems a route advertisement has traversed"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Subnetting",
+    "difficulty": "Hard",
+    "question": "How many usable host addresses are typically available in a traditional IPv4 /26 subnet?",
+    "options": [
+      "62",
+      "64",
+      "60",
+      "126"
+    ],
+    "answer": "62"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Subnetting",
+    "difficulty": "Hard",
+    "question": "What is the subnet mask for IPv4 /27?",
+    "options": [
+      "255.255.255.224",
+      "255.255.255.0",
+      "255.255.255.192",
+      "255.255.255.240"
+    ],
+    "answer": "255.255.255.224"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Subnetting",
+    "difficulty": "Hard",
+    "question": "How many total IPv4 addresses are in a /30 subnet?",
+    "options": [
+      "4",
+      "2",
+      "8",
+      "16"
+    ],
+    "answer": "4"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "IPv6",
+    "difficulty": "Hard",
+    "question": "What is a major reason IPv6 was introduced?",
+    "options": [
+      "To provide a vastly larger address space than IPv4",
+      "To remove routing",
+      "To replace TCP with UDP",
+      "To eliminate DNS"
+    ],
+    "answer": "To provide a vastly larger address space than IPv4"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "IPv6",
+    "difficulty": "Hard",
+    "question": "Which prefix identifies IPv6 link-local addresses?",
+    "options": [
+      "fe80::/10",
+      "2000::/3",
+      "fc00::/7",
+      "::1/128"
+    ],
+    "answer": "fe80::/10"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "IPv6",
+    "difficulty": "Hard",
+    "question": "What is ::1 in IPv6?",
+    "options": [
+      "Loopback address",
+      "Default route",
+      "Broadcast address",
+      "Unspecified network prefix"
+    ],
+    "answer": "Loopback address"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Ethernet",
+    "difficulty": "Hard",
+    "question": "What is the purpose of the Ethernet Frame Check Sequence?",
+    "options": [
+      "Detect transmission errors in a frame",
+      "Encrypt the frame",
+      "Assign a VLAN automatically",
+      "Select the route"
+    ],
+    "answer": "Detect transmission errors in a frame"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Switching",
+    "difficulty": "Hard",
+    "question": "Why is Spanning Tree Protocol used in switched Ethernet networks?",
+    "options": [
+      "Prevent Layer 2 forwarding loops",
+      "Assign IPv4 addresses",
+      "Encrypt switch traffic",
+      "Resolve DNS names"
+    ],
+    "answer": "Prevent Layer 2 forwarding loops"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Switching",
+    "difficulty": "Hard",
+    "question": "What can happen during a Layer 2 switching loop?",
+    "options": [
+      "Broadcast storms and repeated frame circulation",
+      "TCP becomes encrypted",
+      "IP addresses become private",
+      "DNS records are deleted"
+    ],
+    "answer": "Broadcast storms and repeated frame circulation"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "VLAN",
+    "difficulty": "Hard",
+    "question": "Which standard is commonly used for VLAN tagging on Ethernet trunks?",
+    "options": [
+      "IEEE 802.1Q",
+      "IEEE 802.11",
+      "IEEE 802.3u only",
+      "RFC 1918"
+    ],
+    "answer": "IEEE 802.1Q"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "ARP",
+    "difficulty": "Hard",
+    "question": "What is ARP spoofing?",
+    "options": [
+      "Sending forged ARP information to associate an attacker's MAC address with another IP",
+      "Changing a DNS MX record",
+      "Encrypting ARP packets",
+      "Blocking DHCP requests"
+    ],
+    "answer": "Sending forged ARP information to associate an attacker's MAC address with another IP"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "DNS",
+    "difficulty": "Hard",
+    "question": "What is DNS caching used for?",
+    "options": [
+      "Reuse recent DNS answers to reduce lookup latency and DNS traffic",
+      "Encrypt all DNS packets",
+      "Assign IP addresses",
+      "Store MAC tables"
+    ],
+    "answer": "Reuse recent DNS answers to reduce lookup latency and DNS traffic"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "DNS",
+    "difficulty": "Hard",
+    "question": "What does TTL in a DNS record control?",
+    "options": [
+      "How long the record may be cached",
+      "The maximum TCP segment size",
+      "The router hop count for DNS packets",
+      "The number of DNS servers"
+    ],
+    "answer": "How long the record may be cached"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What is a man-in-the-middle attack?",
+    "options": [
+      "An attacker secretly intercepts and possibly alters communication between parties",
+      "A router forwards packets normally",
+      "A DNS server caches results",
+      "A client renews DHCP"
+    ],
+    "answer": "An attacker secretly intercepts and possibly alters communication between parties"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What is a denial-of-service attack intended to do?",
+    "options": [
+      "Make a service unavailable or degraded by exhausting resources",
+      "Improve network throughput",
+      "Encrypt DNS records",
+      "Assign private IPs"
+    ],
+    "answer": "Make a service unavailable or degraded by exhausting resources"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "TLS",
+    "difficulty": "Hard",
+    "question": "What is the main purpose of a digital certificate in TLS?",
+    "options": [
+      "Bind a public key to an identity through a trusted validation mechanism",
+      "Assign an IP address",
+      "Create a VLAN",
+      "Increase bandwidth"
+    ],
+    "answer": "Bind a public key to an identity through a trusted validation mechanism"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "TLS",
+    "difficulty": "Hard",
+    "question": "Why does TLS typically use asymmetric cryptography during connection setup and symmetric cryptography for bulk data?",
+    "options": [
+      "Asymmetric cryptography helps establish/authenticate keys, while symmetric cryptography is faster for large data volumes",
+      "Symmetric cryptography cannot encrypt data",
+      "Asymmetric cryptography cannot use keys",
+      "TLS uses no symmetric encryption"
+    ],
+    "answer": "Asymmetric cryptography helps establish/authenticate keys, while symmetric cryptography is faster for large data volumes"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "QoS",
+    "difficulty": "Hard",
+    "question": "What is Quality of Service in networking?",
+    "options": [
+      "Techniques for prioritizing and managing traffic based on performance requirements",
+      "A DNS protocol",
+      "A routing loop prevention method only",
+      "A type of IP address"
+    ],
+    "answer": "Techniques for prioritizing and managing traffic based on performance requirements"
+  },
+  {
+    "subject": "Computer Networks",
+    "topic": "Load Balancing",
+    "difficulty": "Hard",
+    "question": "What does a network or application load balancer do?",
+    "options": [
+      "Distributes client traffic across multiple backend servers",
+      "Assigns MAC addresses",
+      "Replaces DNS entirely",
+      "Encrypts every packet by itself"
+    ],
+    "answer": "Distributes client traffic across multiple backend servers"
+  }
+]
