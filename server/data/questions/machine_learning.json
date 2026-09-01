@@ -40,16 +40,16 @@
   },
   {
     "subject": "Machine Learning",
-    "topic": "Supervised Learning",
+    "topic": "Training",
     "difficulty": "Easy",
-    "question": "Which learning type uses labeled training data?",
+    "question": "What is an epoch in machine learning training?",
     "options": [
-      "Supervised learning",
-      "Unsupervised learning",
-      "Reinforcement learning only",
-      "Random learning"
+      "One complete pass through the training dataset",
+      "One test prediction only",
+      "One input feature",
+      "One class label"
     ],
-    "answer": "Supervised learning"
+    "answer": "One complete pass through the training dataset"
   },
   {
     "subject": "Machine Learning",
@@ -92,16 +92,16 @@
   },
   {
     "subject": "Machine Learning",
-    "topic": "Clustering",
-    "difficulty": "Easy",
-    "question": "What is clustering used for?",
+    "topic": "Data Splitting",
+    "difficulty": "Medium",
+    "question": "What is a stratified train-test split designed to preserve?",
     "options": [
-      "Grouping similar data points without predefined labels",
-      "Predicting exact numeric values only",
-      "Sorting files",
-      "Encrypting data"
+      "Approximately the same class proportions in each split",
+      "Exactly the same rows in each split",
+      "Only numeric features",
+      "The original row order in every case"
     ],
-    "answer": "Grouping similar data points without predefined labels"
+    "answer": "Approximately the same class proportions in each split"
   },
   {
     "subject": "Machine Learning",

@@ -81,14 +81,14 @@
     "subject": "Data Structures",
     "topic": "Stacks",
     "difficulty": "Easy",
-    "question": "Which principle does a stack follow?",
+    "question": "What is stack underflow?",
     "options": [
-      "LIFO",
-      "FIFO",
-      "Priority order only",
-      "Random order"
+      "Trying to remove or access an item from an empty stack",
+      "Adding an item to a full fixed-size stack",
+      "Sorting a stack",
+      "Copying a stack"
     ],
-    "answer": "LIFO"
+    "answer": "Trying to remove or access an item from an empty stack"
   },
   {
     "subject": "Data Structures",
@@ -133,14 +133,14 @@
     "subject": "Data Structures",
     "topic": "Queues",
     "difficulty": "Easy",
-    "question": "Which principle does a basic queue follow?",
+    "question": "What is queue overflow in a fixed-size queue?",
     "options": [
-      "FIFO",
-      "LIFO",
-      "Random order",
-      "Sorted order only"
+      "Trying to insert when no storage position is available",
+      "Removing the front element",
+      "Reading the rear element",
+      "Reversing the queue"
     ],
-    "answer": "FIFO"
+    "answer": "Trying to insert when no storage position is available"
   },
   {
     "subject": "Data Structures",
