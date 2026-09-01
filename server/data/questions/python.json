@@ -1,0 +1,1029 @@
+[
+  {
+    "subject": "Python",
+    "topic": "Strings",
+    "difficulty": "Easy",
+    "question": "Which string method converts all letters to lowercase?",
+    "options": [
+      "lower()",
+      "small()",
+      "casefold_only()",
+      "downcase()"
+    ],
+    "answer": "lower()"
+  },
+  {
+    "subject": "Python",
+    "topic": "Strings",
+    "difficulty": "Easy",
+    "question": "Which string method removes leading and trailing whitespace by default?",
+    "options": [
+      "strip()",
+      "trim()",
+      "clean()",
+      "remove_space()"
+    ],
+    "answer": "strip()"
+  },
+  {
+    "subject": "Python",
+    "topic": "Strings",
+    "difficulty": "Easy",
+    "question": "Which method splits a string into a list using a separator?",
+    "options": [
+      "split()",
+      "divide()",
+      "partition_only()",
+      "tokenize()"
+    ],
+    "answer": "split()"
+  },
+  {
+    "subject": "Python",
+    "topic": "Strings",
+    "difficulty": "Easy",
+    "question": "Which method joins an iterable of strings using a separator string?",
+    "options": [
+      "join()",
+      "merge()",
+      "combine()",
+      "concat()"
+    ],
+    "answer": "join()"
+  },
+  {
+    "subject": "Python",
+    "topic": "Lists",
+    "difficulty": "Easy",
+    "question": "Which list method adds one item to the end of a list?",
+    "options": [
+      "append()",
+      "add()",
+      "push()",
+      "insert_end()"
+    ],
+    "answer": "append()"
+  },
+  {
+    "subject": "Python",
+    "topic": "Lists",
+    "difficulty": "Easy",
+    "question": "Which list method adds all items from another iterable to the end?",
+    "options": [
+      "extend()",
+      "append_all()",
+      "merge()",
+      "concat()"
+    ],
+    "answer": "extend()"
+  },
+  {
+    "subject": "Python",
+    "topic": "Lists",
+    "difficulty": "Easy",
+    "question": "Which list method removes and returns an item by index?",
+    "options": [
+      "pop()",
+      "delete()",
+      "remove_at()",
+      "discard()"
+    ],
+    "answer": "pop()"
+  },
+  {
+    "subject": "Python",
+    "topic": "Tuples",
+    "difficulty": "Easy",
+    "question": "Which statement about tuples is correct?",
+    "options": [
+      "Tuples are immutable sequences",
+      "Tuples are always mutable",
+      "Tuples cannot contain mixed types",
+      "Tuples are dictionaries"
+    ],
+    "answer": "Tuples are immutable sequences"
+  },
+  {
+    "subject": "Python",
+    "topic": "Sets",
+    "difficulty": "Easy",
+    "question": "Which collection type stores unique unordered elements?",
+    "options": [
+      "set",
+      "list",
+      "tuple",
+      "str"
+    ],
+    "answer": "set"
+  },
+  {
+    "subject": "Python",
+    "topic": "Sets",
+    "difficulty": "Easy",
+    "question": "Which set operator computes an intersection?",
+    "options": [
+      "&",
+      "|",
+      "^",
+      "+ only"
+    ],
+    "answer": "&"
+  },
+  {
+    "subject": "Python",
+    "topic": "Dictionaries",
+    "difficulty": "Easy",
+    "question": "Which dictionary method safely returns a value for a key and can provide a default?",
+    "options": [
+      "get()",
+      "fetch()",
+      "find()",
+      "lookup()"
+    ],
+    "answer": "get()"
+  },
+  {
+    "subject": "Python",
+    "topic": "Dictionaries",
+    "difficulty": "Easy",
+    "question": "Which dictionary method returns key-value pairs as view objects?",
+    "options": [
+      "items()",
+      "pairs()",
+      "entries()",
+      "values_with_keys()"
+    ],
+    "answer": "items()"
+  },
+  {
+    "subject": "Python",
+    "topic": "Comprehensions",
+    "difficulty": "Easy",
+    "question": "What does a list comprehension create?",
+    "options": [
+      "A list from an iterable expression",
+      "A generator only",
+      "A dictionary only",
+      "A function"
+    ],
+    "answer": "A list from an iterable expression"
+  },
+  {
+    "subject": "Python",
+    "topic": "Functions",
+    "difficulty": "Easy",
+    "question": "Which keyword allows a function to return a value to its caller?",
+    "options": [
+      "return",
+      "yield_only",
+      "send",
+      "output"
+    ],
+    "answer": "return"
+  },
+  {
+    "subject": "Python",
+    "topic": "Functions",
+    "difficulty": "Easy",
+    "question": "What does *args collect in a function definition?",
+    "options": [
+      "Extra positional arguments",
+      "Extra keyword arguments",
+      "Only integers",
+      "Only default values"
+    ],
+    "answer": "Extra positional arguments"
+  },
+  {
+    "subject": "Python",
+    "topic": "Functions",
+    "difficulty": "Easy",
+    "question": "What does **kwargs collect in a function definition?",
+    "options": [
+      "Extra keyword arguments",
+      "Extra positional arguments",
+      "Only strings",
+      "Only local variables"
+    ],
+    "answer": "Extra keyword arguments"
+  },
+  {
+    "subject": "Python",
+    "topic": "Exceptions",
+    "difficulty": "Easy",
+    "question": "Which block contains code that may raise an exception?",
+    "options": [
+      "try",
+      "catch",
+      "finally_only",
+      "error"
+    ],
+    "answer": "try"
+  },
+  {
+    "subject": "Python",
+    "topic": "Exceptions",
+    "difficulty": "Easy",
+    "question": "Which block handles a matching exception in Python?",
+    "options": [
+      "except",
+      "catch",
+      "handle",
+      "rescue"
+    ],
+    "answer": "except"
+  },
+  {
+    "subject": "Python",
+    "topic": "Files",
+    "difficulty": "Easy",
+    "question": "Which built-in function opens a file?",
+    "options": [
+      "open()",
+      "file()",
+      "readfile()",
+      "load()"
+    ],
+    "answer": "open()"
+  },
+  {
+    "subject": "Python",
+    "topic": "Files",
+    "difficulty": "Easy",
+    "question": "Which file mode opens a text file for writing and truncates existing content?",
+    "options": [
+      "w",
+      "r",
+      "a",
+      "x only"
+    ],
+    "answer": "w"
+  },
+  {
+    "subject": "Python",
+    "topic": "Files",
+    "difficulty": "Easy",
+    "question": "Which file mode appends data to the end of an existing file?",
+    "options": [
+      "a",
+      "w",
+      "r",
+      "t only"
+    ],
+    "answer": "a"
+  },
+  {
+    "subject": "Python",
+    "topic": "Modules",
+    "difficulty": "Easy",
+    "question": "Which keyword loads a Python module?",
+    "options": [
+      "import",
+      "include",
+      "require",
+      "using"
+    ],
+    "answer": "import"
+  },
+  {
+    "subject": "Python",
+    "topic": "Modules",
+    "difficulty": "Easy",
+    "question": "What is pip commonly used for?",
+    "options": [
+      "Installing and managing Python packages",
+      "Compiling Python to machine code only",
+      "Creating virtual machines",
+      "Running unit tests only"
+    ],
+    "answer": "Installing and managing Python packages"
+  },
+  {
+    "subject": "Python",
+    "topic": "Virtual Environments",
+    "difficulty": "Easy",
+    "question": "Why use a virtual environment?",
+    "options": [
+      "To isolate project dependencies",
+      "To increase CPU speed",
+      "To replace pip",
+      "To create databases automatically"
+    ],
+    "answer": "To isolate project dependencies"
+  },
+  {
+    "subject": "Python",
+    "topic": "Boolean Logic",
+    "difficulty": "Easy",
+    "question": "Which keyword represents logical negation?",
+    "options": [
+      "not",
+      "! only",
+      "negate",
+      "inverse"
+    ],
+    "answer": "not"
+  },
+  {
+    "subject": "Python",
+    "topic": "Iteration",
+    "difficulty": "Easy",
+    "question": "Which built-in function returns both index and value while iterating?",
+    "options": [
+      "enumerate()",
+      "index()",
+      "range_only()",
+      "zip()"
+    ],
+    "answer": "enumerate()"
+  },
+  {
+    "subject": "Python",
+    "topic": "Iteration",
+    "difficulty": "Easy",
+    "question": "Which built-in function combines items from multiple iterables position by position?",
+    "options": [
+      "zip()",
+      "pair()",
+      "combine()",
+      "map_only()"
+    ],
+    "answer": "zip()"
+  },
+  {
+    "subject": "Python",
+    "topic": "Scopes",
+    "difficulty": "Medium",
+    "question": "What does the LEGB rule describe?",
+    "options": [
+      "The order Python searches Local, Enclosing, Global, and Built-in scopes",
+      "The order of list operations",
+      "Exception priority",
+      "Import resolution only"
+    ],
+    "answer": "The order Python searches Local, Enclosing, Global, and Built-in scopes"
+  },
+  {
+    "subject": "Python",
+    "topic": "Scopes",
+    "difficulty": "Medium",
+    "question": "Which keyword lets a function assign to a module-level variable?",
+    "options": [
+      "global",
+      "module",
+      "outer",
+      "public"
+    ],
+    "answer": "global"
+  },
+  {
+    "subject": "Python",
+    "topic": "Scopes",
+    "difficulty": "Medium",
+    "question": "Which keyword lets an inner function assign to a variable in an enclosing function scope?",
+    "options": [
+      "nonlocal",
+      "global",
+      "outer",
+      "closure"
+    ],
+    "answer": "nonlocal"
+  },
+  {
+    "subject": "Python",
+    "topic": "Iterators",
+    "difficulty": "Medium",
+    "question": "What protocol must an iterator implement?",
+    "options": [
+      "__iter__() and __next__()",
+      "__len__() and __getitem__() only",
+      "__call__() only",
+      "__enter__() and __exit__()"
+    ],
+    "answer": "__iter__() and __next__()"
+  },
+  {
+    "subject": "Python",
+    "topic": "Generators",
+    "difficulty": "Medium",
+    "question": "What does yield do in a function?",
+    "options": [
+      "Produces a value and pauses generator execution",
+      "Returns permanently like return",
+      "Creates a list immediately",
+      "Raises StopIteration immediately"
+    ],
+    "answer": "Produces a value and pauses generator execution"
+  },
+  {
+    "subject": "Python",
+    "topic": "Generators",
+    "difficulty": "Medium",
+    "question": "Why can generators be memory-efficient?",
+    "options": [
+      "They produce values lazily instead of storing all results at once",
+      "They store all results in C arrays",
+      "They disable garbage collection",
+      "They always run in parallel"
+    ],
+    "answer": "They produce values lazily instead of storing all results at once"
+  },
+  {
+    "subject": "Python",
+    "topic": "Decorators",
+    "difficulty": "Medium",
+    "question": "What is a decorator?",
+    "options": [
+      "A callable that wraps or modifies another callable or class",
+      "A CSS-like syntax feature",
+      "A package installer",
+      "A file serializer"
+    ],
+    "answer": "A callable that wraps or modifies another callable or class"
+  },
+  {
+    "subject": "Python",
+    "topic": "Decorators",
+    "difficulty": "Medium",
+    "question": "Which syntax applies a decorator named timer to a function?",
+    "options": [
+      "@timer",
+      "decorator(timer)",
+      "[timer]",
+      "use timer"
+    ],
+    "answer": "@timer"
+  },
+  {
+    "subject": "Python",
+    "topic": "Closures",
+    "difficulty": "Medium",
+    "question": "What is a closure?",
+    "options": [
+      "A function that retains access to variables from an enclosing scope",
+      "A closed file object only",
+      "An exception handler",
+      "A class constructor"
+    ],
+    "answer": "A function that retains access to variables from an enclosing scope"
+  },
+  {
+    "subject": "Python",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "What does self conventionally refer to in an instance method?",
+    "options": [
+      "The current object instance",
+      "The parent class",
+      "The module",
+      "The class itself always"
+    ],
+    "answer": "The current object instance"
+  },
+  {
+    "subject": "Python",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "Which decorator is used for a method that receives the class as its first argument?",
+    "options": [
+      "@classmethod",
+      "@staticmethod",
+      "@property",
+      "@class"
+    ],
+    "answer": "@classmethod"
+  },
+  {
+    "subject": "Python",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "Which decorator is used for a method that receives neither instance nor class automatically?",
+    "options": [
+      "@staticmethod",
+      "@classmethod",
+      "@property",
+      "@function"
+    ],
+    "answer": "@staticmethod"
+  },
+  {
+    "subject": "Python",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "What does @property allow?",
+    "options": [
+      "Method-style logic to be accessed with attribute syntax",
+      "Automatic inheritance",
+      "Static method creation",
+      "Package installation"
+    ],
+    "answer": "Method-style logic to be accessed with attribute syntax"
+  },
+  {
+    "subject": "Python",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "What does super() commonly provide?",
+    "options": [
+      "Access to parent-class behavior according to the method resolution order",
+      "A global namespace",
+      "A faster constructor",
+      "A static class reference only"
+    ],
+    "answer": "Access to parent-class behavior according to the method resolution order"
+  },
+  {
+    "subject": "Python",
+    "topic": "Data Model",
+    "difficulty": "Medium",
+    "question": "Which special method defines len(obj)?",
+    "options": [
+      "__len__",
+      "__size__",
+      "__count__",
+      "__length__"
+    ],
+    "answer": "__len__"
+  },
+  {
+    "subject": "Python",
+    "topic": "Data Model",
+    "difficulty": "Medium",
+    "question": "Which special method is used for a developer-oriented string representation?",
+    "options": [
+      "__repr__",
+      "__str__ only",
+      "__print__",
+      "__show__"
+    ],
+    "answer": "__repr__"
+  },
+  {
+    "subject": "Python",
+    "topic": "Context Managers",
+    "difficulty": "Medium",
+    "question": "What is the main purpose of a context manager?",
+    "options": [
+      "Set up and clean up resources reliably around a block of code",
+      "Create global variables",
+      "Run code in a separate process",
+      "Define decorators only"
+    ],
+    "answer": "Set up and clean up resources reliably around a block of code"
+  },
+  {
+    "subject": "Python",
+    "topic": "Context Managers",
+    "difficulty": "Medium",
+    "question": "Which statement uses a context manager?",
+    "options": [
+      "with",
+      "using",
+      "context",
+      "manage"
+    ],
+    "answer": "with"
+  },
+  {
+    "subject": "Python",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "When does a finally block run?",
+    "options": [
+      "After try/except processing whether or not an exception occurred, barring process termination",
+      "Only when no exception occurs",
+      "Only when an exception occurs",
+      "Before try"
+    ],
+    "answer": "After try/except processing whether or not an exception occurred, barring process termination"
+  },
+  {
+    "subject": "Python",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "Which keyword explicitly raises an exception?",
+    "options": [
+      "raise",
+      "throw",
+      "error",
+      "except"
+    ],
+    "answer": "raise"
+  },
+  {
+    "subject": "Python",
+    "topic": "Copying",
+    "difficulty": "Medium",
+    "question": "What is a shallow copy?",
+    "options": [
+      "A new outer object that may still reference the same nested objects",
+      "A recursive copy of every nested object",
+      "A reference to the same outer object",
+      "A serialized object"
+    ],
+    "answer": "A new outer object that may still reference the same nested objects"
+  },
+  {
+    "subject": "Python",
+    "topic": "Copying",
+    "difficulty": "Medium",
+    "question": "Which function performs a deep copy from the copy module?",
+    "options": [
+      "copy.deepcopy()",
+      "copy.copy()",
+      "deepcopy.copy()",
+      "clone()"
+    ],
+    "answer": "copy.deepcopy()"
+  },
+  {
+    "subject": "Python",
+    "topic": "Comprehensions",
+    "difficulty": "Medium",
+    "question": "What does {x: x*x for x in range(3)} create?",
+    "options": [
+      "A dictionary",
+      "A set",
+      "A list",
+      "A tuple"
+    ],
+    "answer": "A dictionary"
+  },
+  {
+    "subject": "Python",
+    "topic": "Sorting",
+    "difficulty": "Medium",
+    "question": "What is the difference between sorted() and list.sort()?",
+    "options": [
+      "sorted() returns a new list, while list.sort() mutates the list in place",
+      "Both always mutate the original",
+      "sorted() works only on lists",
+      "list.sort() returns a sorted copy"
+    ],
+    "answer": "sorted() returns a new list, while list.sort() mutates the list in place"
+  },
+  {
+    "subject": "Python",
+    "topic": "Lambda",
+    "difficulty": "Medium",
+    "question": "What is a lambda expression?",
+    "options": [
+      "A small anonymous function expression",
+      "A loop expression",
+      "A class decorator",
+      "A module alias"
+    ],
+    "answer": "A small anonymous function expression"
+  },
+  {
+    "subject": "Python",
+    "topic": "Type Hints",
+    "difficulty": "Medium",
+    "question": "What is the main purpose of type hints?",
+    "options": [
+      "Improve static analysis, tooling, and code readability without enforcing types at runtime by default",
+      "Force runtime type checks automatically",
+      "Compile Python to Java",
+      "Replace tests"
+    ],
+    "answer": "Improve static analysis, tooling, and code readability without enforcing types at runtime by default"
+  },
+  {
+    "subject": "Python",
+    "topic": "Descriptors",
+    "difficulty": "Hard",
+    "question": "What is a descriptor in Python?",
+    "options": [
+      "An object defining methods such as __get__, __set__, or __delete__ to customize attribute access",
+      "A file metadata record",
+      "A function annotation only",
+      "A package manifest"
+    ],
+    "answer": "An object defining methods such as __get__, __set__, or __delete__ to customize attribute access"
+  },
+  {
+    "subject": "Python",
+    "topic": "Descriptors",
+    "difficulty": "Hard",
+    "question": "Why is property implemented as a descriptor-like mechanism?",
+    "options": [
+      "It customizes attribute access through getter, setter, and deleter behavior",
+      "It creates class variables only",
+      "It disables inheritance",
+      "It stores values in globals"
+    ],
+    "answer": "It customizes attribute access through getter, setter, and deleter behavior"
+  },
+  {
+    "subject": "Python",
+    "topic": "MRO",
+    "difficulty": "Hard",
+    "question": "What does MRO stand for?",
+    "options": [
+      "Method Resolution Order",
+      "Module Runtime Operation",
+      "Memory Reference Object",
+      "Method Return Option"
+    ],
+    "answer": "Method Resolution Order"
+  },
+  {
+    "subject": "Python",
+    "topic": "MRO",
+    "difficulty": "Hard",
+    "question": "What problem does Python's C3 linearization help solve?",
+    "options": [
+      "Determining a consistent method resolution order in multiple inheritance",
+      "Sorting dictionaries",
+      "Scheduling threads",
+      "Resolving imports only"
+    ],
+    "answer": "Determining a consistent method resolution order in multiple inheritance"
+  },
+  {
+    "subject": "Python",
+    "topic": "Metaclasses",
+    "difficulty": "Hard",
+    "question": "What is a metaclass?",
+    "options": [
+      "A class whose instances are themselves classes",
+      "A parent class only",
+      "A decorator function",
+      "A module loader"
+    ],
+    "answer": "A class whose instances are themselves classes"
+  },
+  {
+    "subject": "Python",
+    "topic": "Metaclasses",
+    "difficulty": "Hard",
+    "question": "What is the default metaclass for most Python classes?",
+    "options": [
+      "type",
+      "object",
+      "class",
+      "meta"
+    ],
+    "answer": "type"
+  },
+  {
+    "subject": "Python",
+    "topic": "Memory Management",
+    "difficulty": "Hard",
+    "question": "What is reference counting used for in CPython?",
+    "options": [
+      "Tracking how many references point to an object to help reclaim memory",
+      "Counting function calls",
+      "Tracking imports",
+      "Counting threads"
+    ],
+    "answer": "Tracking how many references point to an object to help reclaim memory"
+  },
+  {
+    "subject": "Python",
+    "topic": "Memory Management",
+    "difficulty": "Hard",
+    "question": "Why does CPython also need a cyclic garbage collector?",
+    "options": [
+      "Reference counting alone cannot reclaim unreachable reference cycles",
+      "Reference counting cannot reclaim strings",
+      "It manages only global variables",
+      "It compiles bytecode"
+    ],
+    "answer": "Reference counting alone cannot reclaim unreachable reference cycles"
+  },
+  {
+    "subject": "Python",
+    "topic": "GIL",
+    "difficulty": "Hard",
+    "question": "What does GIL stand for in CPython?",
+    "options": [
+      "Global Interpreter Lock",
+      "General Instruction Layer",
+      "Global Import Loader",
+      "Garbage Integration Lock"
+    ],
+    "answer": "Global Interpreter Lock"
+  },
+  {
+    "subject": "Python",
+    "topic": "GIL",
+    "difficulty": "Hard",
+    "question": "What is a key effect of the CPython GIL for CPU-bound Python bytecode?",
+    "options": [
+      "Only one thread executes Python bytecode at a time within a process in standard CPython builds",
+      "Threads cannot perform I/O concurrently",
+      "Processes cannot run in parallel",
+      "Asyncio is disabled"
+    ],
+    "answer": "Only one thread executes Python bytecode at a time within a process in standard CPython builds"
+  },
+  {
+    "subject": "Python",
+    "topic": "Concurrency",
+    "difficulty": "Hard",
+    "question": "When is threading often useful in Python despite the GIL?",
+    "options": [
+      "For I/O-bound workloads where threads spend time waiting",
+      "For every CPU-bound loop automatically",
+      "Only for multiprocessing",
+      "Only for GUI code"
+    ],
+    "answer": "For I/O-bound workloads where threads spend time waiting"
+  },
+  {
+    "subject": "Python",
+    "topic": "Concurrency",
+    "difficulty": "Hard",
+    "question": "When is multiprocessing often preferred over threading?",
+    "options": [
+      "For CPU-bound work that benefits from multiple interpreter processes",
+      "For tiny string operations only",
+      "When no parallelism is needed",
+      "Only for file I/O"
+    ],
+    "answer": "For CPU-bound work that benefits from multiple interpreter processes"
+  },
+  {
+    "subject": "Python",
+    "topic": "Asyncio",
+    "difficulty": "Hard",
+    "question": "What is asyncio primarily designed for?",
+    "options": [
+      "Cooperative concurrency for many I/O-bound tasks",
+      "Automatic CPU parallelism across cores",
+      "Replacing all threads",
+      "Compiling Python faster"
+    ],
+    "answer": "Cooperative concurrency for many I/O-bound tasks"
+  },
+  {
+    "subject": "Python",
+    "topic": "Asyncio",
+    "difficulty": "Hard",
+    "question": "What does await do inside an async function?",
+    "options": [
+      "Suspends the coroutine until an awaitable progresses or completes, allowing other tasks to run",
+      "Blocks the entire process always",
+      "Creates a thread automatically",
+      "Returns from the function permanently"
+    ],
+    "answer": "Suspends the coroutine until an awaitable progresses or completes, allowing other tasks to run"
+  },
+  {
+    "subject": "Python",
+    "topic": "Asyncio",
+    "difficulty": "Hard",
+    "question": "What is an event loop?",
+    "options": [
+      "A scheduler that drives asynchronous tasks and callbacks",
+      "A Python for-loop optimization",
+      "A garbage collector",
+      "A package installer"
+    ],
+    "answer": "A scheduler that drives asynchronous tasks and callbacks"
+  },
+  {
+    "subject": "Python",
+    "topic": "Closures",
+    "difficulty": "Hard",
+    "question": "What is late binding in Python closures?",
+    "options": [
+      "Captured variable names are looked up when the inner function runs rather than copied when created",
+      "Variables are always copied immediately",
+      "Closures cannot access loops",
+      "Only globals are captured"
+    ],
+    "answer": "Captured variable names are looked up when the inner function runs rather than copied when created"
+  },
+  {
+    "subject": "Python",
+    "topic": "Closures",
+    "difficulty": "Hard",
+    "question": "Which technique commonly avoids late-binding surprises in loop-created lambdas?",
+    "options": [
+      "Bind the current value as a default argument",
+      "Use global variables",
+      "Use eval()",
+      "Convert the lambda to a string"
+    ],
+    "answer": "Bind the current value as a default argument"
+  },
+  {
+    "subject": "Python",
+    "topic": "Data Model",
+    "difficulty": "Hard",
+    "question": "What does __slots__ primarily do?",
+    "options": [
+      "Restricts normal instance attribute storage to declared slots and can reduce per-instance memory",
+      "Makes a class immutable",
+      "Disables inheritance",
+      "Creates static methods"
+    ],
+    "answer": "Restricts normal instance attribute storage to declared slots and can reduce per-instance memory"
+  },
+  {
+    "subject": "Python",
+    "topic": "Data Model",
+    "difficulty": "Hard",
+    "question": "What is monkey patching?",
+    "options": [
+      "Changing attributes or behavior of modules or classes at runtime",
+      "Editing Python bytecode manually only",
+      "Installing patches with pip only",
+      "Garbage collecting objects"
+    ],
+    "answer": "Changing attributes or behavior of modules or classes at runtime"
+  },
+  {
+    "subject": "Python",
+    "topic": "Imports",
+    "difficulty": "Hard",
+    "question": "Why can circular imports cause problems?",
+    "options": [
+      "Modules may access each other before initialization has completed",
+      "Python forbids importing more than one module",
+      "They always create infinite loops at runtime",
+      "They disable package installation"
+    ],
+    "answer": "Modules may access each other before initialization has completed"
+  },
+  {
+    "subject": "Python",
+    "topic": "Imports",
+    "difficulty": "Hard",
+    "question": "What does if __name__ == '__main__': commonly control?",
+    "options": [
+      "Code that should run when the file is executed directly rather than imported",
+      "Code that runs only during import",
+      "Class construction",
+      "Package metadata"
+    ],
+    "answer": "Code that should run when the file is executed directly rather than imported"
+  },
+  {
+    "subject": "Python",
+    "topic": "Serialization",
+    "difficulty": "Hard",
+    "question": "Why should untrusted pickle data not be loaded?",
+    "options": [
+      "Unpickling can execute arbitrary code",
+      "Pickle supports only numbers",
+      "Pickle cannot store classes",
+      "Unpickling always deletes files"
+    ],
+    "answer": "Unpickling can execute arbitrary code"
+  },
+  {
+    "subject": "Python",
+    "topic": "Dataclasses",
+    "difficulty": "Hard",
+    "question": "What does @dataclass mainly provide?",
+    "options": [
+      "Automatic generation of common methods such as __init__ and __repr__ based on annotated fields",
+      "Runtime type enforcement",
+      "Automatic database persistence",
+      "Thread safety"
+    ],
+    "answer": "Automatic generation of common methods such as __init__ and __repr__ based on annotated fields"
+  },
+  {
+    "subject": "Python",
+    "topic": "Protocols",
+    "difficulty": "Hard",
+    "question": "What is duck typing?",
+    "options": [
+      "Using an object based on supported behavior rather than requiring a specific declared class",
+      "Converting every object to the same class",
+      "Runtime inheritance checks only",
+      "A serialization technique"
+    ],
+    "answer": "Using an object based on supported behavior rather than requiring a specific declared class"
+  },
+  {
+    "subject": "Python",
+    "topic": "Protocols",
+    "difficulty": "Hard",
+    "question": "What does typing.Protocol support?",
+    "options": [
+      "Structural subtyping based on required members",
+      "Runtime inheritance only",
+      "Automatic serialization",
+      "Database protocols"
+    ],
+    "answer": "Structural subtyping based on required members"
+  },
+  {
+    "subject": "Python",
+    "topic": "Performance",
+    "difficulty": "Hard",
+    "question": "Why can repeated string concatenation in a large loop be inefficient?",
+    "options": [
+      "Strings are immutable, so repeated concatenation can create many intermediate objects",
+      "Strings are mutable and must be copied twice",
+      "Python cannot concatenate strings",
+      "The GIL forbids concatenation"
+    ],
+    "answer": "Strings are immutable, so repeated concatenation can create many intermediate objects"
+  }
+]
