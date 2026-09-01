@@ -1,0 +1,1029 @@
+[
+  {
+    "subject": "Data Structures",
+    "topic": "Arrays",
+    "difficulty": "Easy",
+    "question": "What is an array?",
+    "options": [
+      "A collection of elements stored in contiguous memory locations",
+      "A collection that always stores key-value pairs",
+      "A recursive function",
+      "A graph traversal method"
+    ],
+    "answer": "A collection of elements stored in contiguous memory locations"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Arrays",
+    "difficulty": "Easy",
+    "question": "What is the typical time complexity of accessing an array element by index?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n^2)"
+    ],
+    "answer": "O(1)"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Arrays",
+    "difficulty": "Easy",
+    "question": "What is the typical time complexity of linear search in an unsorted array?",
+    "options": [
+      "O(n)",
+      "O(1)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "answer": "O(n)"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Linked Lists",
+    "difficulty": "Easy",
+    "question": "What does a singly linked list node usually store?",
+    "options": [
+      "Data and a reference to the next node",
+      "Only data",
+      "Data and references to both previous and next nodes",
+      "Only an array index"
+    ],
+    "answer": "Data and a reference to the next node"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Linked Lists",
+    "difficulty": "Easy",
+    "question": "What is the first node of a linked list commonly called?",
+    "options": [
+      "Head",
+      "Root",
+      "Top",
+      "Front pointer only"
+    ],
+    "answer": "Head"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Linked Lists",
+    "difficulty": "Easy",
+    "question": "What does the last node in a singly linked list usually reference?",
+    "options": [
+      "None or null",
+      "The first node always",
+      "Itself",
+      "The previous node only"
+    ],
+    "answer": "None or null"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Stacks",
+    "difficulty": "Easy",
+    "question": "Which principle does a stack follow?",
+    "options": [
+      "LIFO",
+      "FIFO",
+      "Priority order only",
+      "Random order"
+    ],
+    "answer": "LIFO"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Stacks",
+    "difficulty": "Easy",
+    "question": "What does LIFO stand for?",
+    "options": [
+      "Last In, First Out",
+      "Last Input, First Output",
+      "Linked Input, Fast Output",
+      "Lowest Index, First Out"
+    ],
+    "answer": "Last In, First Out"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Stacks",
+    "difficulty": "Easy",
+    "question": "Which operation adds an item to a stack?",
+    "options": [
+      "Push",
+      "Pop",
+      "Peek",
+      "Dequeue"
+    ],
+    "answer": "Push"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Stacks",
+    "difficulty": "Easy",
+    "question": "Which operation removes the top item from a stack?",
+    "options": [
+      "Pop",
+      "Push",
+      "Peek",
+      "Enqueue"
+    ],
+    "answer": "Pop"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Queues",
+    "difficulty": "Easy",
+    "question": "Which principle does a basic queue follow?",
+    "options": [
+      "FIFO",
+      "LIFO",
+      "Random order",
+      "Sorted order only"
+    ],
+    "answer": "FIFO"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Queues",
+    "difficulty": "Easy",
+    "question": "What does FIFO stand for?",
+    "options": [
+      "First In, First Out",
+      "Fast Input, Fast Output",
+      "First Index, Final Output",
+      "Fixed Input, Fixed Output"
+    ],
+    "answer": "First In, First Out"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Queues",
+    "difficulty": "Easy",
+    "question": "Which operation adds an item to the rear of a queue?",
+    "options": [
+      "Enqueue",
+      "Push",
+      "Pop",
+      "Peek"
+    ],
+    "answer": "Enqueue"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Queues",
+    "difficulty": "Easy",
+    "question": "Which operation removes an item from the front of a queue?",
+    "options": [
+      "Dequeue",
+      "Enqueue",
+      "Push",
+      "Insert"
+    ],
+    "answer": "Dequeue"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Trees",
+    "difficulty": "Easy",
+    "question": "What is the top node of a tree called?",
+    "options": [
+      "Root",
+      "Head",
+      "Leaf",
+      "Parent only"
+    ],
+    "answer": "Root"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Trees",
+    "difficulty": "Easy",
+    "question": "What is a leaf node?",
+    "options": [
+      "A node with no children",
+      "A node with exactly one child",
+      "The root node only",
+      "A node with two parents"
+    ],
+    "answer": "A node with no children"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Binary Trees",
+    "difficulty": "Easy",
+    "question": "What is a binary tree?",
+    "options": [
+      "A tree in which each node has at most two children",
+      "A tree with exactly two nodes",
+      "A tree with only numeric values",
+      "A complete graph"
+    ],
+    "answer": "A tree in which each node has at most two children"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Binary Search Trees",
+    "difficulty": "Easy",
+    "question": "What property does a Binary Search Tree usually maintain?",
+    "options": [
+      "Left subtree values are smaller and right subtree values are larger according to the chosen ordering",
+      "Every node has exactly two children",
+      "All leaves have equal values",
+      "Nodes are stored in insertion order only"
+    ],
+    "answer": "Left subtree values are smaller and right subtree values are larger according to the chosen ordering"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Heaps",
+    "difficulty": "Easy",
+    "question": "What is a max-heap?",
+    "options": [
+      "A complete binary tree where each parent is at least as large as its children",
+      "A sorted linked list",
+      "A graph with maximum edges",
+      "A stack with priorities"
+    ],
+    "answer": "A complete binary tree where each parent is at least as large as its children"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Heaps",
+    "difficulty": "Easy",
+    "question": "What is a min-heap?",
+    "options": [
+      "A complete binary tree where each parent is no greater than its children",
+      "A descending array",
+      "A queue sorted alphabetically",
+      "A graph with minimum edges"
+    ],
+    "answer": "A complete binary tree where each parent is no greater than its children"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Hash Tables",
+    "difficulty": "Easy",
+    "question": "What does a hash table primarily store?",
+    "options": [
+      "Key-value associations",
+      "Only sorted values",
+      "Only tree nodes",
+      "Only graph edges"
+    ],
+    "answer": "Key-value associations"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Hash Tables",
+    "difficulty": "Easy",
+    "question": "What does a hash function do?",
+    "options": [
+      "Maps a key to a hash value or bucket index",
+      "Sorts the entire table",
+      "Traverses a tree",
+      "Balances a heap"
+    ],
+    "answer": "Maps a key to a hash value or bucket index"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Graphs",
+    "difficulty": "Easy",
+    "question": "What is a graph made of?",
+    "options": [
+      "Vertices and edges",
+      "Only arrays",
+      "Only stacks",
+      "Rows and columns only"
+    ],
+    "answer": "Vertices and edges"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Graphs",
+    "difficulty": "Easy",
+    "question": "What is a directed graph?",
+    "options": [
+      "A graph whose edges have direction",
+      "A graph with no edges",
+      "A graph with only one vertex",
+      "A tree only"
+    ],
+    "answer": "A graph whose edges have direction"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Graphs",
+    "difficulty": "Easy",
+    "question": "What is an undirected graph?",
+    "options": [
+      "A graph whose edges have no direction",
+      "A graph with only one-way edges",
+      "A graph with no vertices",
+      "A heap"
+    ],
+    "answer": "A graph whose edges have no direction"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Traversal",
+    "difficulty": "Easy",
+    "question": "Which data structure is commonly used by Breadth-First Search?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Heap",
+      "Hash table"
+    ],
+    "answer": "Queue"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Traversal",
+    "difficulty": "Easy",
+    "question": "Which data structure is commonly used by iterative Depth-First Search?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Priority queue only",
+      "Array index only"
+    ],
+    "answer": "Stack"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Arrays",
+    "difficulty": "Medium",
+    "question": "Why is inserting at the beginning of an array typically O(n)?",
+    "options": [
+      "Existing elements may need to be shifted",
+      "Arrays cannot be modified",
+      "The array must always be sorted",
+      "A hash function must run"
+    ],
+    "answer": "Existing elements may need to be shifted"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Dynamic Arrays",
+    "difficulty": "Medium",
+    "question": "How do dynamic arrays usually grow when capacity is exhausted?",
+    "options": [
+      "Allocate a larger block and copy or move existing elements",
+      "Add a linked-list node only",
+      "Sort the array first",
+      "Convert to a tree"
+    ],
+    "answer": "Allocate a larger block and copy or move existing elements"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Dynamic Arrays",
+    "difficulty": "Medium",
+    "question": "What is the amortized time complexity of appending to a dynamic array?",
+    "options": [
+      "O(1)",
+      "O(n) for every append",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "answer": "O(1)"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Linked Lists",
+    "difficulty": "Medium",
+    "question": "What advantage does a linked list have over an array for insertion after a known node?",
+    "options": [
+      "It can often be done in O(1) without shifting later elements",
+      "It always uses less memory",
+      "It supports O(1) random access",
+      "It is always sorted"
+    ],
+    "answer": "It can often be done in O(1) without shifting later elements"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Linked Lists",
+    "difficulty": "Medium",
+    "question": "What is a doubly linked list node typically connected to?",
+    "options": [
+      "Both the previous and next nodes",
+      "Only the next node",
+      "Only the previous node",
+      "Every other node"
+    ],
+    "answer": "Both the previous and next nodes"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Linked Lists",
+    "difficulty": "Medium",
+    "question": "What is a circular linked list?",
+    "options": [
+      "A linked list where the last node links back to the first node",
+      "A list whose nodes are stored in a circle in memory",
+      "A list with no head",
+      "A sorted list only"
+    ],
+    "answer": "A linked list where the last node links back to the first node"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Stacks",
+    "difficulty": "Medium",
+    "question": "Which problem is naturally solved using a stack?",
+    "options": [
+      "Checking balanced parentheses",
+      "Level-order traversal",
+      "Shortest path in an unweighted graph",
+      "Scheduling by arrival order only"
+    ],
+    "answer": "Checking balanced parentheses"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Queues",
+    "difficulty": "Medium",
+    "question": "What is a circular queue designed to improve in an array implementation?",
+    "options": [
+      "Reuse freed positions by wrapping indices around",
+      "Sort queued items",
+      "Remove the need for front and rear indices",
+      "Allow random deletion"
+    ],
+    "answer": "Reuse freed positions by wrapping indices around"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Priority Queues",
+    "difficulty": "Medium",
+    "question": "What does a priority queue remove first?",
+    "options": [
+      "The item with the highest or lowest priority according to its ordering rule",
+      "The oldest item always",
+      "The newest item always",
+      "A random item"
+    ],
+    "answer": "The item with the highest or lowest priority according to its ordering rule"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Heaps",
+    "difficulty": "Medium",
+    "question": "What is the time complexity of inserting into a binary heap?",
+    "options": [
+      "O(log n)",
+      "O(1) worst case",
+      "O(n) always",
+      "O(n log n)"
+    ],
+    "answer": "O(log n)"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Heaps",
+    "difficulty": "Medium",
+    "question": "What is the time complexity of reading the minimum from a min-heap without removing it?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)"
+    ],
+    "answer": "O(1)"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Binary Search Trees",
+    "difficulty": "Medium",
+    "question": "What is the average search complexity in a reasonably balanced BST?",
+    "options": [
+      "O(log n)",
+      "O(1)",
+      "O(n^2)",
+      "O(n log n)"
+    ],
+    "answer": "O(log n)"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Binary Search Trees",
+    "difficulty": "Medium",
+    "question": "What can the worst-case search complexity of an unbalanced BST become?",
+    "options": [
+      "O(n)",
+      "O(1)",
+      "O(log log n)",
+      "O(n log n)"
+    ],
+    "answer": "O(n)"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Tree Traversal",
+    "difficulty": "Medium",
+    "question": "What is the order of inorder traversal?",
+    "options": [
+      "Left, Root, Right",
+      "Root, Left, Right",
+      "Left, Right, Root",
+      "Right, Root, Left only"
+    ],
+    "answer": "Left, Root, Right"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Tree Traversal",
+    "difficulty": "Medium",
+    "question": "What is the order of preorder traversal?",
+    "options": [
+      "Root, Left, Right",
+      "Left, Root, Right",
+      "Left, Right, Root",
+      "Right, Left, Root"
+    ],
+    "answer": "Root, Left, Right"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Tree Traversal",
+    "difficulty": "Medium",
+    "question": "What is the order of postorder traversal?",
+    "options": [
+      "Left, Right, Root",
+      "Root, Left, Right",
+      "Left, Root, Right",
+      "Root, Right, Left"
+    ],
+    "answer": "Left, Right, Root"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Hash Tables",
+    "difficulty": "Medium",
+    "question": "What is a hash collision?",
+    "options": [
+      "Two different keys map to the same bucket or hash location",
+      "A key maps to no value",
+      "A table becomes sorted",
+      "A hash function returns a negative number only"
+    ],
+    "answer": "Two different keys map to the same bucket or hash location"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Hash Tables",
+    "difficulty": "Medium",
+    "question": "What is separate chaining?",
+    "options": [
+      "Handling collisions by storing multiple entries in the same bucket structure",
+      "Using multiple hash tables for every key",
+      "Sorting colliding keys",
+      "Deleting one colliding key"
+    ],
+    "answer": "Handling collisions by storing multiple entries in the same bucket structure"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Hash Tables",
+    "difficulty": "Medium",
+    "question": "What is open addressing?",
+    "options": [
+      "Handling collisions by probing alternative table positions",
+      "Using linked lists outside the table",
+      "Storing every key twice",
+      "Using no hash function"
+    ],
+    "answer": "Handling collisions by probing alternative table positions"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Graphs",
+    "difficulty": "Medium",
+    "question": "What is an adjacency list?",
+    "options": [
+      "A representation storing each vertex with its neighboring vertices",
+      "A matrix containing only weights",
+      "A sorted list of all graph paths",
+      "A tree representation only"
+    ],
+    "answer": "A representation storing each vertex with its neighboring vertices"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Graphs",
+    "difficulty": "Medium",
+    "question": "What is an adjacency matrix?",
+    "options": [
+      "A matrix whose entries indicate edges or weights between vertex pairs",
+      "A list of vertices only",
+      "A heap of edges",
+      "A queue of neighbors"
+    ],
+    "answer": "A matrix whose entries indicate edges or weights between vertex pairs"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Graphs",
+    "difficulty": "Medium",
+    "question": "Which graph representation is usually more space-efficient for sparse graphs?",
+    "options": [
+      "Adjacency list",
+      "Adjacency matrix",
+      "Dense matrix only",
+      "Incidence matrix always"
+    ],
+    "answer": "Adjacency list"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Traversal",
+    "difficulty": "Medium",
+    "question": "What is the time complexity of BFS with an adjacency-list representation?",
+    "options": [
+      "O(V + E)",
+      "O(VE)",
+      "O(V^2) always",
+      "O(log V)"
+    ],
+    "answer": "O(V + E)"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Traversal",
+    "difficulty": "Medium",
+    "question": "What is the time complexity of DFS with an adjacency-list representation?",
+    "options": [
+      "O(V + E)",
+      "O(VE)",
+      "O(E log V)",
+      "O(1)"
+    ],
+    "answer": "O(V + E)"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Tries",
+    "difficulty": "Medium",
+    "question": "What is a trie commonly used for?",
+    "options": [
+      "Efficient prefix-based string lookup",
+      "Heap sorting",
+      "Graph cycle detection",
+      "Numeric matrix multiplication"
+    ],
+    "answer": "Efficient prefix-based string lookup"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Disjoint Sets",
+    "difficulty": "Medium",
+    "question": "What problem does a disjoint-set union structure solve?",
+    "options": [
+      "Maintaining groups of elements with find and union operations",
+      "Sorting arrays",
+      "Balancing binary trees only",
+      "Hashing strings"
+    ],
+    "answer": "Maintaining groups of elements with find and union operations"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "AVL Trees",
+    "difficulty": "Hard",
+    "question": "What condition does an AVL tree maintain?",
+    "options": [
+      "For every node, the heights of left and right subtrees differ by at most 1",
+      "Every node has exactly two children",
+      "All leaves have identical keys",
+      "The tree is always complete"
+    ],
+    "answer": "For every node, the heights of left and right subtrees differ by at most 1"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "AVL Trees",
+    "difficulty": "Hard",
+    "question": "What operation restores balance in an AVL tree after certain insertions or deletions?",
+    "options": [
+      "Tree rotations",
+      "Hashing",
+      "Queue reversal",
+      "Heapify only"
+    ],
+    "answer": "Tree rotations"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Red-Black Trees",
+    "difficulty": "Hard",
+    "question": "Why are red-black trees useful?",
+    "options": [
+      "They maintain logarithmic-height search trees with less strict balancing than AVL trees",
+      "They guarantee O(1) search",
+      "They store only Boolean values",
+      "They require no rotations"
+    ],
+    "answer": "They maintain logarithmic-height search trees with less strict balancing than AVL trees"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "B-Trees",
+    "difficulty": "Hard",
+    "question": "Why are B-trees well suited for disks and databases?",
+    "options": [
+      "Their high branching factor reduces the number of storage accesses",
+      "They require one disk block per key",
+      "They are binary trees",
+      "They never split nodes"
+    ],
+    "answer": "Their high branching factor reduces the number of storage accesses"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "B+ Trees",
+    "difficulty": "Hard",
+    "question": "Where are record pointers or data entries commonly stored in a B+ tree?",
+    "options": [
+      "Leaf nodes",
+      "Root only",
+      "Every internal node only",
+      "Outside the tree entirely"
+    ],
+    "answer": "Leaf nodes"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Segment Trees",
+    "difficulty": "Hard",
+    "question": "What is a segment tree commonly used for?",
+    "options": [
+      "Efficient range queries with point or range updates",
+      "Hash table collision handling",
+      "Graph traversal only",
+      "String prefix matching only"
+    ],
+    "answer": "Efficient range queries with point or range updates"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Segment Trees",
+    "difficulty": "Hard",
+    "question": "What is the typical time complexity of a range query in a segment tree?",
+    "options": [
+      "O(log n)",
+      "O(1) always",
+      "O(n) always",
+      "O(n log n)"
+    ],
+    "answer": "O(log n)"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Fenwick Trees",
+    "difficulty": "Hard",
+    "question": "What is a Fenwick tree primarily used for?",
+    "options": [
+      "Efficient prefix sums and point updates",
+      "Balancing BSTs",
+      "Graph connectivity only",
+      "String searching"
+    ],
+    "answer": "Efficient prefix sums and point updates"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Fenwick Trees",
+    "difficulty": "Hard",
+    "question": "What is the typical time complexity of update and prefix-sum operations in a Fenwick tree?",
+    "options": [
+      "O(log n)",
+      "O(1)",
+      "O(n)",
+      "O(n log n)"
+    ],
+    "answer": "O(log n)"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Disjoint Sets",
+    "difficulty": "Hard",
+    "question": "What does path compression improve in disjoint-set union?",
+    "options": [
+      "It flattens find paths so future operations are faster",
+      "It sorts each set",
+      "It removes duplicate elements",
+      "It balances a heap"
+    ],
+    "answer": "It flattens find paths so future operations are faster"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Disjoint Sets",
+    "difficulty": "Hard",
+    "question": "What does union by rank or size do?",
+    "options": [
+      "Attaches the smaller or shallower tree under the larger or deeper root to keep trees shallow",
+      "Sorts all set elements",
+      "Merges only equal-sized sets",
+      "Creates a linked list"
+    ],
+    "answer": "Attaches the smaller or shallower tree under the larger or deeper root to keep trees shallow"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Graphs",
+    "difficulty": "Hard",
+    "question": "What is a strongly connected component in a directed graph?",
+    "options": [
+      "A maximal set of vertices where every vertex is reachable from every other vertex",
+      "A set of vertices with no edges",
+      "A tree component",
+      "A group with identical degrees"
+    ],
+    "answer": "A maximal set of vertices where every vertex is reachable from every other vertex"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Graphs",
+    "difficulty": "Hard",
+    "question": "What is a topological ordering?",
+    "options": [
+      "A linear ordering of a DAG's vertices where every directed edge goes from earlier to later",
+      "A sorted list of edge weights",
+      "A BFS traversal of any graph",
+      "A heap ordering"
+    ],
+    "answer": "A linear ordering of a DAG's vertices where every directed edge goes from earlier to later"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Graphs",
+    "difficulty": "Hard",
+    "question": "Why can a graph with a directed cycle not have a valid topological ordering?",
+    "options": [
+      "The cycle creates contradictory precedence requirements",
+      "Topological sort requires weighted edges",
+      "Cycles make all indegrees zero",
+      "DAGs must be complete"
+    ],
+    "answer": "The cycle creates contradictory precedence requirements"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Graphs",
+    "difficulty": "Hard",
+    "question": "What is an articulation point?",
+    "options": [
+      "A vertex whose removal increases the number of connected components in an undirected graph",
+      "A vertex with maximum degree only",
+      "A root in a tree only",
+      "A vertex with no neighbors"
+    ],
+    "answer": "A vertex whose removal increases the number of connected components in an undirected graph"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Graphs",
+    "difficulty": "Hard",
+    "question": "What is a bridge in an undirected graph?",
+    "options": [
+      "An edge whose removal increases the number of connected components",
+      "Any edge incident to the root",
+      "An edge with maximum weight",
+      "A self-loop"
+    ],
+    "answer": "An edge whose removal increases the number of connected components"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Heaps",
+    "difficulty": "Hard",
+    "question": "What is the time complexity of building a binary heap from an unsorted array using bottom-up heap construction?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(log n)",
+      "O(n^2)"
+    ],
+    "answer": "O(n)"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Hash Tables",
+    "difficulty": "Hard",
+    "question": "What is load factor in a hash table?",
+    "options": [
+      "The ratio of stored entries to available buckets or table capacity",
+      "The average key size",
+      "The number of collisions only",
+      "The hash function output size"
+    ],
+    "answer": "The ratio of stored entries to available buckets or table capacity"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Hash Tables",
+    "difficulty": "Hard",
+    "question": "Why is resizing a hash table often necessary as load factor grows?",
+    "options": [
+      "To keep expected lookup and insertion performance efficient",
+      "To sort all keys",
+      "To eliminate the hash function",
+      "To reduce key uniqueness"
+    ],
+    "answer": "To keep expected lookup and insertion performance efficient"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Hash Tables",
+    "difficulty": "Hard",
+    "question": "Why can open addressing suffer from clustering?",
+    "options": [
+      "Probing patterns can create groups of occupied slots that increase probe lengths",
+      "Buckets become linked lists",
+      "Keys are automatically sorted",
+      "Every collision deletes an entry"
+    ],
+    "answer": "Probing patterns can create groups of occupied slots that increase probe lengths"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Persistent Structures",
+    "difficulty": "Hard",
+    "question": "What is a persistent data structure?",
+    "options": [
+      "A structure that preserves access to previous versions after updates",
+      "A structure stored only on disk",
+      "A structure that cannot change internally",
+      "A database backup"
+    ],
+    "answer": "A structure that preserves access to previous versions after updates"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Amortized Analysis",
+    "difficulty": "Hard",
+    "question": "What does amortized analysis measure?",
+    "options": [
+      "Average cost per operation over a sequence, even if some individual operations are expensive",
+      "Worst-case cost of one operation only",
+      "Memory usage only",
+      "Expected cost under random input only"
+    ],
+    "answer": "Average cost per operation over a sequence, even if some individual operations are expensive"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Trees",
+    "difficulty": "Hard",
+    "question": "What is the height of a perfectly balanced binary tree with n nodes asymptotically?",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(1)",
+      "O(n log n)"
+    ],
+    "answer": "O(log n)"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Tries",
+    "difficulty": "Hard",
+    "question": "What is the main tradeoff of a trie compared with a hash table for strings?",
+    "options": [
+      "Tries support prefix operations naturally but may use more memory",
+      "Tries cannot search strings",
+      "Tries require sorted input",
+      "Hash tables support prefix search more naturally"
+    ],
+    "answer": "Tries support prefix operations naturally but may use more memory"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Sparse Tables",
+    "difficulty": "Hard",
+    "question": "What is a sparse table best suited for?",
+    "options": [
+      "Static range queries on data that does not need frequent updates",
+      "Frequent arbitrary insertions and deletions",
+      "Hashing dynamic keys",
+      "Graph edge updates"
+    ],
+    "answer": "Static range queries on data that does not need frequent updates"
+  },
+  {
+    "subject": "Data Structures",
+    "topic": "Bloom Filters",
+    "difficulty": "Hard",
+    "question": "What is a Bloom filter?",
+    "options": [
+      "A space-efficient probabilistic structure for membership tests that can have false positives but no false negatives under standard use",
+      "A balanced search tree",
+      "A graph traversal structure",
+      "A perfect hash table"
+    ],
+    "answer": "A space-efficient probabilistic structure for membership tests that can have false positives but no false negatives under standard use"
+  }
+]
