@@ -37,8 +37,27 @@ const API_BASE =
 
 const FALLBACK_SUBJECTS = [
   "Python",
-  "Machine Learning",
+  "C Programming",
+  "C++",
+  "Java",
+  "JavaScript",
+  "TypeScript",
   "Data Structures",
+  "Algorithms",
+  "SQL",
+  "DBMS",
+  "Operating Systems",
+  "Computer Networks",
+  "Object Oriented Programming",
+  "Machine Learning",
+  "Web Development",
+  "React",
+  "Node.js",
+  "Flask",
+  "Django",
+  "Git & GitHub",
+  "Software Engineering",
+  "Computer Architecture",
 ];
 
 
