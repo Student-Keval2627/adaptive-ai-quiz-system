@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "Django",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is Django?",
+    "options": [
+      "A high-level Python web framework",
+      "A JavaScript runtime",
+      "A database engine",
+      "A CSS library"
+    ],
+    "answer": "A high-level Python web framework"
+  },
+  {
+    "subject": "Django",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which programming language is Django built with?",
+    "options": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "C++"
+    ],
+    "answer": "Python"
+  },
+  {
+    "subject": "Django",
+    "topic": "Installation",
+    "difficulty": "Easy",
+    "question": "Which command commonly installs Django?",
+    "options": [
+      "pip install django",
+      "npm install django",
+      "python django install",
+      "django setup"
+    ],
+    "answer": "pip install django"
+  },
+  {
+    "subject": "Django",
+    "topic": "Project",
+    "difficulty": "Easy",
+    "question": "Which command creates a new Django project named mysite?",
+    "options": [
+      "django-admin startproject mysite",
+      "django start mysite",
+      "python createproject mysite",
+      "django-admin new mysite"
+    ],
+    "answer": "django-admin startproject mysite"
+  },
+  {
+    "subject": "Django",
+    "topic": "App",
+    "difficulty": "Easy",
+    "question": "Which command creates a Django app named blog?",
+    "options": [
+      "python manage.py startapp blog",
+      "django-admin newapp blog",
+      "python manage.py create blog",
+      "django startapp blog"
+    ],
+    "answer": "python manage.py startapp blog"
+  },
+  {
+    "subject": "Django",
+    "topic": "Server",
+    "difficulty": "Easy",
+    "question": "Which command runs Django's development server?",
+    "options": [
+      "python manage.py runserver",
+      "python manage.py serve",
+      "django run",
+      "django-admin server"
+    ],
+    "answer": "python manage.py runserver"
+  },
+  {
+    "subject": "Django",
+    "topic": "Configuration",
+    "difficulty": "Easy",
+    "question": "Which file commonly contains Django project settings?",
+    "options": [
+      "settings.py",
+      "config.py",
+      "project.py",
+      "django.json"
+    ],
+    "answer": "settings.py"
+  },
+  {
+    "subject": "Django",
+    "topic": "URLs",
+    "difficulty": "Easy",
+    "question": "Which file commonly defines project URL patterns?",
+    "options": [
+      "urls.py",
+      "routes.py",
+      "paths.py",
+      "links.py"
+    ],
+    "answer": "urls.py"
+  },
+  {
+    "subject": "Django",
+    "topic": "Views",
+    "difficulty": "Easy",
+    "question": "What does a Django view usually do?",
+    "options": [
+      "Receives a request and returns a response",
+      "Stores only database records",
+      "Defines CSS",
+      "Runs migrations only"
+    ],
+    "answer": "Receives a request and returns a response"
+  },
+  {
+    "subject": "Django",
+    "topic": "Views",
+    "difficulty": "Easy",
+    "question": "Which class represents an HTTP response?",
+    "options": [
+      "HttpResponse",
+      "RequestResponse",
+      "WebResponse",
+      "DjangoResponseOnly"
+    ],
+    "answer": "HttpResponse"
+  },
+  {
+    "subject": "Django",
+    "topic": "Templates",
+    "difficulty": "Easy",
+    "question": "What are Django templates mainly used for?",
+    "options": [
+      "Generating dynamic HTML",
+      "Creating database indexes",
+      "Defining models only",
+      "Running tests only"
+    ],
+    "answer": "Generating dynamic HTML"
+  },
+  {
+    "subject": "Django",
+    "topic": "Templates",
+    "difficulty": "Easy",
+    "question": "Which function is commonly used to render a template from a view?",
+    "options": [
+      "render()",
+      "template()",
+      "show()",
+      "render_html()"
+    ],
+    "answer": "render()"
+  },
+  {
+    "subject": "Django",
+    "topic": "Models",
+    "difficulty": "Easy",
+    "question": "What is a Django model?",
+    "options": [
+      "A Python class that represents database data",
+      "A CSS component",
+      "A URL route",
+      "A template tag"
+    ],
+    "answer": "A Python class that represents database data"
+  },
+  {
+    "subject": "Django",
+    "topic": "Models",
+    "difficulty": "Easy",
+    "question": "Which base class do Django models usually inherit from?",
+    "options": [
+      "models.Model",
+      "django.ModelBase",
+      "db.ModelOnly",
+      "ModelObject"
+    ],
+    "answer": "models.Model"
+  },
+  {
+    "subject": "Django",
+    "topic": "ORM",
+    "difficulty": "Easy",
+    "question": "What does ORM stand for?",
+    "options": [
+      "Object-Relational Mapping",
+      "Object Request Manager",
+      "Online Resource Model",
+      "Operational Record Mapping"
+    ],
+    "answer": "Object-Relational Mapping"
+  },
+  {
+    "subject": "Django",
+    "topic": "Admin",
+    "difficulty": "Easy",
+    "question": "What is Django admin mainly used for?",
+    "options": [
+      "Managing application data through an automatically generated interface",
+      "Writing CSS",
+      "Compiling Python",
+      "Managing DNS"
+    ],
+    "answer": "Managing application data through an automatically generated interface"
+  },
+  {
+    "subject": "Django",
+    "topic": "Admin",
+    "difficulty": "Easy",
+    "question": "Which command creates an admin superuser?",
+    "options": [
+      "python manage.py createsuperuser",
+      "python manage.py superuser",
+      "django-admin adduser",
+      "python manage.py createadmin"
+    ],
+    "answer": "python manage.py createsuperuser"
+  },
+  {
+    "subject": "Django",
+    "topic": "Migrations",
+    "difficulty": "Easy",
+    "question": "Which command creates migration files from model changes?",
+    "options": [
+      "python manage.py makemigrations",
+      "python manage.py migrateonly",
+      "django migrate-create",
+      "python manage.py syncdb"
+    ],
+    "answer": "python manage.py makemigrations"
+  },
+  {
+    "subject": "Django",
+    "topic": "Migrations",
+    "difficulty": "Easy",
+    "question": "Which command applies database migrations?",
+    "options": [
+      "python manage.py migrate",
+      "python manage.py apply",
+      "django-admin migrate-all",
+      "python manage.py dbupdate"
+    ],
+    "answer": "python manage.py migrate"
+  },
+  {
+    "subject": "Django",
+    "topic": "Static Files",
+    "difficulty": "Easy",
+    "question": "What are static files in Django?",
+    "options": [
+      "Files such as CSS, JavaScript, and images",
+      "Database rows",
+      "Python models only",
+      "Migration files only"
+    ],
+    "answer": "Files such as CSS, JavaScript, and images"
+  },
+  {
+    "subject": "Django",
+    "topic": "Forms",
+    "difficulty": "Easy",
+    "question": "What is Django Forms used for?",
+    "options": [
+      "Building and validating HTML forms",
+      "Managing database indexes only",
+      "Routing requests",
+      "Creating migrations"
+    ],
+    "answer": "Building and validating HTML forms"
+  },
+  {
+    "subject": "Django",
+    "topic": "Authentication",
+    "difficulty": "Easy",
+    "question": "Does Django include a built-in authentication system?",
+    "options": [
+      "Yes",
+      "No",
+      "Only with Flask",
+      "Only for admin pages"
+    ],
+    "answer": "Yes"
+  },
+  {
+    "subject": "Django",
+    "topic": "Authentication",
+    "difficulty": "Easy",
+    "question": "Which built-in Django model commonly represents users?",
+    "options": [
+      "User",
+      "AccountOnly",
+      "Profile",
+      "Member"
+    ],
+    "answer": "User"
+  },
+  {
+    "subject": "Django",
+    "topic": "Requests",
+    "difficulty": "Easy",
+    "question": "Which object contains information about an incoming request?",
+    "options": [
+      "HttpRequest",
+      "HttpResponse",
+      "RequestModel",
+      "WebRequestOnly"
+    ],
+    "answer": "HttpRequest"
+  },
+  {
+    "subject": "Django",
+    "topic": "URLs",
+    "difficulty": "Easy",
+    "question": "Which function commonly maps a URL path to a view?",
+    "options": [
+      "path()",
+      "route()",
+      "urlmap()",
+      "link()"
+    ],
+    "answer": "path()"
+  },
+  {
+    "subject": "Django",
+    "topic": "Redirects",
+    "difficulty": "Easy",
+    "question": "Which shortcut function redirects to another URL or view?",
+    "options": [
+      "redirect()",
+      "goto()",
+      "forward()",
+      "navigate()"
+    ],
+    "answer": "redirect()"
+  },
+  {
+    "subject": "Django",
+    "topic": "404",
+    "difficulty": "Easy",
+    "question": "Which shortcut can return an object or raise a 404 error?",
+    "options": [
+      "get_object_or_404()",
+      "get_or_error()",
+      "fetch_or_404()",
+      "find_object()"
+    ],
+    "answer": "get_object_or_404()"
+  },
+  {
+    "subject": "Django",
+    "topic": "Settings",
+    "difficulty": "Easy",
+    "question": "What does INSTALLED_APPS contain?",
+    "options": [
+      "Enabled Django applications and components",
+      "Database rows",
+      "URL paths only",
+      "Environment variables only"
+    ],
+    "answer": "Enabled Django applications and components"
+  },
+  {
+    "subject": "Django",
+    "topic": "Middleware",
+    "difficulty": "Easy",
+    "question": "What is middleware in Django?",
+    "options": [
+      "A layer that processes requests and responses globally",
+      "A database model",
+      "A template engine",
+      "A static file only"
+    ],
+    "answer": "A layer that processes requests and responses globally"
+  },
+  {
+    "subject": "Django",
+    "topic": "CSRF",
+    "difficulty": "Easy",
+    "question": "What does CSRF stand for?",
+    "options": [
+      "Cross-Site Request Forgery",
+      "Client Server Response Format",
+      "Cross Server Routing Function",
+      "Client-Side Render Framework"
+    ],
+    "answer": "Cross-Site Request Forgery"
+  },
+  {
+    "subject": "Django",
+    "topic": "Templates",
+    "difficulty": "Easy",
+    "question": "Which template syntax displays a variable?",
+    "options": [
+      "{{ variable }}",
+      "{% variable %}",
+      "[[ variable ]]",
+      "<%= variable %>"
+    ],
+    "answer": "{{ variable }}"
+  },
+  {
+    "subject": "Django",
+    "topic": "Templates",
+    "difficulty": "Easy",
+    "question": "Which template syntax is used for tags such as loops and conditions?",
+    "options": [
+      "{% ... %}",
+      "{{ ... }}",
+      "[[ ... ]]",
+      "<% ... %>"
+    ],
+    "answer": "{% ... %}"
+  },
+  {
+    "subject": "Django",
+    "topic": "Database",
+    "difficulty": "Easy",
+    "question": "Which database is used by default in a new Django project?",
+    "options": [
+      "SQLite",
+      "MySQL",
+      "MongoDB",
+      "PostgreSQL"
+    ],
+    "answer": "SQLite"
+  },
+  {
+    "subject": "Django",
+    "topic": "Architecture",
+    "difficulty": "Easy",
+    "question": "Which pattern is Django commonly described as using?",
+    "options": [
+      "Model-Template-View",
+      "Model-View-Controller only",
+      "Model-Route-View",
+      "Template-Controller-Model"
+    ],
+    "answer": "Model-Template-View"
+  },
+  {
+    "subject": "Django",
+    "topic": "Models",
+    "difficulty": "Medium",
+    "question": "Which field type is commonly used for short text?",
+    "options": [
+      "CharField",
+      "TextFieldOnly",
+      "StringField",
+      "ShortText"
+    ],
+    "answer": "CharField"
+  },
+  {
+    "subject": "Django",
+    "topic": "Models",
+    "difficulty": "Medium",
+    "question": "Which field type is commonly used for large text content?",
+    "options": [
+      "TextField",
+      "CharField only",
+      "LongStringField",
+      "BlobField"
+    ],
+    "answer": "TextField"
+  },
+  {
+    "subject": "Django",
+    "topic": "Models",
+    "difficulty": "Medium",
+    "question": "Which field is commonly used to store a date and time?",
+    "options": [
+      "DateTimeField",
+      "TimeStampOnly",
+      "DateFieldOnly",
+      "ClockField"
+    ],
+    "answer": "DateTimeField"
+  },
+  {
+    "subject": "Django",
+    "topic": "Models",
+    "difficulty": "Medium",
+    "question": "What does null=True usually control on a model field?",
+    "options": [
+      "Whether the database column may store NULL",
+      "Whether the HTML form may be empty only",
+      "Whether the field is hidden",
+      "Whether the field is indexed"
+    ],
+    "answer": "Whether the database column may store NULL"
+  },
+  {
+    "subject": "Django",
+    "topic": "Models",
+    "difficulty": "Medium",
+    "question": "What does blank=True usually affect?",
+    "options": [
+      "Validation allowing an empty value in forms and model validation",
+      "Database NULL storage only",
+      "Database indexing",
+      "Primary key creation"
+    ],
+    "answer": "Validation allowing an empty value in forms and model validation"
+  },
+  {
+    "subject": "Django",
+    "topic": "Models",
+    "difficulty": "Medium",
+    "question": "What does unique=True enforce?",
+    "options": [
+      "Unique values for that field at the database level where supported",
+      "Automatic sorting",
+      "Automatic indexing only",
+      "A foreign key"
+    ],
+    "answer": "Unique values for that field at the database level where supported"
+  },
+  {
+    "subject": "Django",
+    "topic": "Relations",
+    "difficulty": "Medium",
+    "question": "Which field represents a many-to-one relationship?",
+    "options": [
+      "ForeignKey",
+      "ManyToManyField",
+      "OneToOneField",
+      "RelationField"
+    ],
+    "answer": "ForeignKey"
+  },
+  {
+    "subject": "Django",
+    "topic": "Relations",
+    "difficulty": "Medium",
+    "question": "Which field represents a many-to-many relationship?",
+    "options": [
+      "ManyToManyField",
+      "ForeignKey",
+      "OneToOneField",
+      "MultiForeignKey"
+    ],
+    "answer": "ManyToManyField"
+  },
+  {
+    "subject": "Django",
+    "topic": "Relations",
+    "difficulty": "Medium",
+    "question": "Which field represents a one-to-one relationship?",
+    "options": [
+      "OneToOneField",
+      "ForeignKey",
+      "ManyToManyField",
+      "UniqueForeignField"
+    ],
+    "answer": "OneToOneField"
+  },
+  {
+    "subject": "Django",
+    "topic": "ORM",
+    "difficulty": "Medium",
+    "question": "Which manager is commonly used to query model objects?",
+    "options": [
+      "objects",
+      "querysetOnly",
+      "managerOnly",
+      "db"
+    ],
+    "answer": "objects"
+  },
+  {
+    "subject": "Django",
+    "topic": "ORM",
+    "difficulty": "Medium",
+    "question": "Which method returns all records for a model?",
+    "options": [
+      "Model.objects.all()",
+      "Model.all()",
+      "Model.objects.getall()",
+      "Model.query()"
+    ],
+    "answer": "Model.objects.all()"
+  },
+  {
+    "subject": "Django",
+    "topic": "ORM",
+    "difficulty": "Medium",
+    "question": "Which QuerySet method filters records by conditions?",
+    "options": [
+      "filter()",
+      "where()",
+      "select()",
+      "match()"
+    ],
+    "answer": "filter()"
+  },
+  {
+    "subject": "Django",
+    "topic": "ORM",
+    "difficulty": "Medium",
+    "question": "Which QuerySet method is intended to return a single matching object?",
+    "options": [
+      "get()",
+      "firstOnly()",
+      "single()",
+      "find()"
+    ],
+    "answer": "get()"
+  },
+  {
+    "subject": "Django",
+    "topic": "ORM",
+    "difficulty": "Medium",
+    "question": "Which QuerySet method sorts results?",
+    "options": [
+      "order_by()",
+      "sort()",
+      "arrange()",
+      "order()"
+    ],
+    "answer": "order_by()"
+  },
+  {
+    "subject": "Django",
+    "topic": "ORM",
+    "difficulty": "Medium",
+    "question": "Which QuerySet method excludes matching records?",
+    "options": [
+      "exclude()",
+      "not_filter()",
+      "remove()",
+      "without()"
+    ],
+    "answer": "exclude()"
+  },
+  {
+    "subject": "Django",
+    "topic": "ORM",
+    "difficulty": "Medium",
+    "question": "What does QuerySet.first() return when no object exists?",
+    "options": [
+      "None",
+      "An exception always",
+      "False",
+      "An empty QuerySet"
+    ],
+    "answer": "None"
+  },
+  {
+    "subject": "Django",
+    "topic": "ORM",
+    "difficulty": "Medium",
+    "question": "What does QuerySet.exists() efficiently check?",
+    "options": [
+      "Whether at least one row matches",
+      "Whether a table exists",
+      "Whether migrations exist",
+      "Whether the database server is online"
+    ],
+    "answer": "Whether at least one row matches"
+  },
+  {
+    "subject": "Django",
+    "topic": "Class-Based Views",
+    "difficulty": "Medium",
+    "question": "What is a class-based view?",
+    "options": [
+      "A view implemented as a Python class",
+      "A model method only",
+      "A template tag",
+      "A URL converter"
+    ],
+    "answer": "A view implemented as a Python class"
+  },
+  {
+    "subject": "Django",
+    "topic": "Class-Based Views",
+    "difficulty": "Medium",
+    "question": "Which generic view displays a list of objects?",
+    "options": [
+      "ListView",
+      "ObjectListOnly",
+      "ManyView",
+      "CollectionView"
+    ],
+    "answer": "ListView"
+  },
+  {
+    "subject": "Django",
+    "topic": "Class-Based Views",
+    "difficulty": "Medium",
+    "question": "Which generic view displays a single object?",
+    "options": [
+      "DetailView",
+      "SingleView",
+      "ObjectViewOnly",
+      "ShowView"
+    ],
+    "answer": "DetailView"
+  },
+  {
+    "subject": "Django",
+    "topic": "Forms",
+    "difficulty": "Medium",
+    "question": "What is ModelForm used for?",
+    "options": [
+      "Creating a form based on a Django model",
+      "Creating a model from HTML",
+      "Generating migrations only",
+      "Rendering admin pages only"
+    ],
+    "answer": "Creating a form based on a Django model"
+  },
+  {
+    "subject": "Django",
+    "topic": "Forms",
+    "difficulty": "Medium",
+    "question": "Which method checks whether a bound Django form passes validation?",
+    "options": [
+      "is_valid()",
+      "validate()",
+      "check()",
+      "valid()"
+    ],
+    "answer": "is_valid()"
+  },
+  {
+    "subject": "Django",
+    "topic": "Forms",
+    "difficulty": "Medium",
+    "question": "Where are validated form values commonly available?",
+    "options": [
+      "form.cleaned_data",
+      "form.validatedOnly",
+      "form.data_clean",
+      "form.values"
+    ],
+    "answer": "form.cleaned_data"
+  },
+  {
+    "subject": "Django",
+    "topic": "Authentication",
+    "difficulty": "Medium",
+    "question": "Which function authenticates submitted credentials?",
+    "options": [
+      "authenticate()",
+      "login()",
+      "verify_user()",
+      "check_user()"
+    ],
+    "answer": "authenticate()"
+  },
+  {
+    "subject": "Django",
+    "topic": "Authentication",
+    "difficulty": "Medium",
+    "question": "Which function attaches an authenticated user to the session?",
+    "options": [
+      "login()",
+      "authenticate()",
+      "signinOnly()",
+      "session_user()"
+    ],
+    "answer": "login()"
+  },
+  {
+    "subject": "Django",
+    "topic": "Authentication",
+    "difficulty": "Medium",
+    "question": "Which function removes the authenticated user's session state?",
+    "options": [
+      "logout()",
+      "signoutOnly()",
+      "remove_user()",
+      "clear_login()"
+    ],
+    "answer": "logout()"
+  },
+  {
+    "subject": "Django",
+    "topic": "Authentication",
+    "difficulty": "Medium",
+    "question": "Which decorator restricts a view to authenticated users?",
+    "options": [
+      "login_required",
+      "auth_requiredOnly",
+      "user_required",
+      "require_login()"
+    ],
+    "answer": "login_required"
+  },
+  {
+    "subject": "Django",
+    "topic": "Templates",
+    "difficulty": "Medium",
+    "question": "Which template tag is commonly used to inherit from a base template?",
+    "options": [
+      "{% extends 'base.html' %}",
+      "{% inherit 'base.html' %}",
+      "{% base 'base.html' %}",
+      "{{ extends }}"
+    ],
+    "answer": "{% extends 'base.html' %}"
+  },
+  {
+    "subject": "Django",
+    "topic": "Templates",
+    "difficulty": "Medium",
+    "question": "Which template tag inserts another template file?",
+    "options": [
+      "{% include 'file.html' %}",
+      "{% import 'file.html' %}",
+      "{% render 'file.html' %}",
+      "{% insert 'file.html' %}"
+    ],
+    "answer": "{% include 'file.html' %}"
+  },
+  {
+    "subject": "Django",
+    "topic": "Static Files",
+    "difficulty": "Medium",
+    "question": "Which template tag library is loaded to use the static template tag?",
+    "options": [
+      "{% load static %}",
+      "{% import static %}",
+      "{% use static %}",
+      "{% static load %}"
+    ],
+    "answer": "{% load static %}"
+  },
+  {
+    "subject": "Django",
+    "topic": "Admin",
+    "difficulty": "Medium",
+    "question": "How is a model commonly made visible in Django admin?",
+    "options": [
+      "Register it with admin.site.register() or @admin.register",
+      "Add it only to urls.py",
+      "Run makemigrations",
+      "Add it to middleware"
+    ],
+    "answer": "Register it with admin.site.register() or @admin.register"
+  },
+  {
+    "subject": "Django",
+    "topic": "Middleware",
+    "difficulty": "Medium",
+    "question": "Where is middleware order configured?",
+    "options": [
+      "The MIDDLEWARE setting",
+      "INSTALLED_APPS only",
+      "urls.py",
+      "models.py"
+    ],
+    "answer": "The MIDDLEWARE setting"
+  },
+  {
+    "subject": "Django",
+    "topic": "Testing",
+    "difficulty": "Medium",
+    "question": "Which base class is commonly used for Django tests with database support?",
+    "options": [
+      "TestCase",
+      "UnitTestOnly",
+      "DjangoCase",
+      "AppTest"
+    ],
+    "answer": "TestCase"
+  },
+  {
+    "subject": "Django",
+    "topic": "ORM",
+    "difficulty": "Hard",
+    "question": "Why are Django QuerySets called lazy?",
+    "options": [
+      "They generally delay database execution until results are needed",
+      "They never execute SQL",
+      "They always cache forever",
+      "They run only in background threads"
+    ],
+    "answer": "They generally delay database execution until results are needed"
+  },
+  {
+    "subject": "Django",
+    "topic": "ORM",
+    "difficulty": "Hard",
+    "question": "What problem does select_related() primarily solve?",
+    "options": [
+      "Reducing extra queries for single-valued relationships using SQL joins",
+      "Prefetching many-to-many relationships with separate queries only",
+      "Creating indexes",
+      "Applying migrations"
+    ],
+    "answer": "Reducing extra queries for single-valued relationships using SQL joins"
+  },
+  {
+    "subject": "Django",
+    "topic": "ORM",
+    "difficulty": "Hard",
+    "question": "What problem does prefetch_related() primarily solve?",
+    "options": [
+      "Reducing extra queries for many-valued relationships using additional queries and Python-side joining",
+      "Joining only foreign keys in one SQL statement",
+      "Creating database views",
+      "Caching templates"
+    ],
+    "answer": "Reducing extra queries for many-valued relationships using additional queries and Python-side joining"
+  },
+  {
+    "subject": "Django",
+    "topic": "ORM",
+    "difficulty": "Hard",
+    "question": "What is the N+1 query problem?",
+    "options": [
+      "One initial query triggers many additional queries for related objects",
+      "A migration creates too many tables",
+      "A form validates too many fields",
+      "A URL pattern matches too many routes"
+    ],
+    "answer": "One initial query triggers many additional queries for related objects"
+  },
+  {
+    "subject": "Django",
+    "topic": "ORM",
+    "difficulty": "Hard",
+    "question": "What does annotate() add to QuerySet results?",
+    "options": [
+      "Calculated values per returned object or row",
+      "Only comments in generated SQL",
+      "New database columns permanently",
+      "Template variables only"
+    ],
+    "answer": "Calculated values per returned object or row"
+  },
+  {
+    "subject": "Django",
+    "topic": "ORM",
+    "difficulty": "Hard",
+    "question": "What does aggregate() usually return?",
+    "options": [
+      "A dictionary of summary values computed across a QuerySet",
+      "A QuerySet of model objects",
+      "A new model class",
+      "A migration file"
+    ],
+    "answer": "A dictionary of summary values computed across a QuerySet"
+  },
+  {
+    "subject": "Django",
+    "topic": "ORM",
+    "difficulty": "Hard",
+    "question": "What is an F() expression useful for?",
+    "options": [
+      "Referring to model field values directly in database-side expressions",
+      "Creating forms only",
+      "Accessing request files",
+      "Rendering templates"
+    ],
+    "answer": "Referring to model field values directly in database-side expressions"
+  },
+  {
+    "subject": "Django",
+    "topic": "ORM",
+    "difficulty": "Hard",
+    "question": "What is a Q() object useful for?",
+    "options": [
+      "Building complex query conditions such as OR and negation",
+      "Creating database connections",
+      "Serializing JSON",
+      "Creating middleware"
+    ],
+    "answer": "Building complex query conditions such as OR and negation"
+  },
+  {
+    "subject": "Django",
+    "topic": "Transactions",
+    "difficulty": "Hard",
+    "question": "What does transaction.atomic() provide?",
+    "options": [
+      "A block where database operations are committed together or rolled back on failure",
+      "Automatic model validation only",
+      "A global database lock",
+      "Query caching"
+    ],
+    "answer": "A block where database operations are committed together or rolled back on failure"
+  },
+  {
+    "subject": "Django",
+    "topic": "Transactions",
+    "difficulty": "Hard",
+    "question": "Why are transactions important for multiple related writes?",
+    "options": [
+      "They help prevent partial updates when all writes should succeed together",
+      "They make templates faster",
+      "They replace authentication",
+      "They remove the need for validation"
+    ],
+    "answer": "They help prevent partial updates when all writes should succeed together"
+  },
+  {
+    "subject": "Django",
+    "topic": "Signals",
+    "difficulty": "Hard",
+    "question": "What are Django signals used for?",
+    "options": [
+      "Allowing decoupled code to react to framework or model events",
+      "Replacing URL routing",
+      "Creating CSS files",
+      "Running SQL manually only"
+    ],
+    "answer": "Allowing decoupled code to react to framework or model events"
+  },
+  {
+    "subject": "Django",
+    "topic": "Signals",
+    "difficulty": "Hard",
+    "question": "Why should Django signals be used carefully?",
+    "options": [
+      "They can create hidden control flow and make behavior harder to trace",
+      "They cannot access models",
+      "They disable transactions",
+      "They always run asynchronously"
+    ],
+    "answer": "They can create hidden control flow and make behavior harder to trace"
+  },
+  {
+    "subject": "Django",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What built-in protection does Django provide against CSRF in normal form workflows?",
+    "options": [
+      "CSRF middleware and CSRF tokens",
+      "Automatic password encryption only",
+      "CORS headers by default",
+      "Automatic API key rotation"
+    ],
+    "answer": "CSRF middleware and CSRF tokens"
+  },
+  {
+    "subject": "Django",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What does Django's autoescaping in templates help prevent?",
+    "options": [
+      "Many common XSS vulnerabilities from untrusted output",
+      "SQL injection automatically",
+      "CSRF automatically",
+      "Session fixation automatically"
+    ],
+    "answer": "Many common XSS vulnerabilities from untrusted output"
+  },
+  {
+    "subject": "Django",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "Why should raw SQL queries use parameters instead of string concatenation?",
+    "options": [
+      "To reduce SQL injection risk",
+      "To make templates faster",
+      "To avoid migrations",
+      "To disable transactions"
+    ],
+    "answer": "To reduce SQL injection risk"
+  },
+  {
+    "subject": "Django",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "Why should DEBUG be False in production?",
+    "options": [
+      "Detailed error pages can expose sensitive application information",
+      "Django cannot serve static files when DEBUG is True",
+      "Database migrations fail in debug mode",
+      "Templates do not render in debug mode"
+    ],
+    "answer": "Detailed error pages can expose sensitive application information"
+  },
+  {
+    "subject": "Django",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What is ALLOWED_HOSTS used for?",
+    "options": [
+      "Restricting which Host headers Django accepts",
+      "Choosing database hosts only",
+      "Configuring CORS origins only",
+      "Defining login permissions"
+    ],
+    "answer": "Restricting which Host headers Django accepts"
+  },
+  {
+    "subject": "Django",
+    "topic": "Authentication",
+    "difficulty": "Hard",
+    "question": "Why is using get_user_model() preferred over importing User directly in reusable code?",
+    "options": [
+      "It supports projects with a custom user model",
+      "It is always faster",
+      "It disables migrations",
+      "It creates users automatically"
+    ],
+    "answer": "It supports projects with a custom user model"
+  },
+  {
+    "subject": "Django",
+    "topic": "Authentication",
+    "difficulty": "Hard",
+    "question": "When should a custom user model ideally be configured?",
+    "options": [
+      "At the beginning of a project before initial migrations",
+      "Only after deployment",
+      "Only after creating superusers",
+      "Never"
+    ],
+    "answer": "At the beginning of a project before initial migrations"
+  },
+  {
+    "subject": "Django",
+    "topic": "Migrations",
+    "difficulty": "Hard",
+    "question": "What is a data migration?",
+    "options": [
+      "A migration that transforms or populates data in addition to schema changes",
+      "A migration that only renames files",
+      "A template migration",
+      "A static file copy"
+    ],
+    "answer": "A migration that transforms or populates data in addition to schema changes"
+  },
+  {
+    "subject": "Django",
+    "topic": "Migrations",
+    "difficulty": "Hard",
+    "question": "Why should migrations be committed to version control?",
+    "options": [
+      "They record schema evolution so environments can apply consistent changes",
+      "They contain user passwords",
+      "They replace database backups",
+      "They are temporary cache files"
+    ],
+    "answer": "They record schema evolution so environments can apply consistent changes"
+  },
+  {
+    "subject": "Django",
+    "topic": "Middleware",
+    "difficulty": "Hard",
+    "question": "Why does middleware order matter?",
+    "options": [
+      "Request and response processing is chained, so earlier middleware can affect later middleware",
+      "Django sorts middleware automatically",
+      "Middleware runs only once",
+      "Order only changes comments"
+    ],
+    "answer": "Request and response processing is chained, so earlier middleware can affect later middleware"
+  },
+  {
+    "subject": "Django",
+    "topic": "Class-Based Views",
+    "difficulty": "Hard",
+    "question": "What is a mixin in Django class-based views?",
+    "options": [
+      "A reusable class providing focused behavior to combine with views",
+      "A template file",
+      "A model manager only",
+      "A URL converter"
+    ],
+    "answer": "A reusable class providing focused behavior to combine with views"
+  },
+  {
+    "subject": "Django",
+    "topic": "Class-Based Views",
+    "difficulty": "Hard",
+    "question": "Why can multiple mixins require care?",
+    "options": [
+      "Python method resolution order affects which implementation is chosen",
+      "Mixins cannot define methods",
+      "Django ignores mixin order",
+      "Mixins disable inheritance"
+    ],
+    "answer": "Python method resolution order affects which implementation is chosen"
+  },
+  {
+    "subject": "Django",
+    "topic": "Caching",
+    "difficulty": "Hard",
+    "question": "What is Django's cache framework used for?",
+    "options": [
+      "Storing expensive results so repeated work can be avoided",
+      "Replacing the database permanently",
+      "Creating migrations",
+      "Handling authentication only"
+    ],
+    "answer": "Storing expensive results so repeated work can be avoided"
+  },
+  {
+    "subject": "Django",
+    "topic": "Caching",
+    "difficulty": "Hard",
+    "question": "What is per-view caching?",
+    "options": [
+      "Caching the response generated by a particular view",
+      "Caching only model fields",
+      "Caching URL patterns",
+      "Caching migrations"
+    ],
+    "answer": "Caching the response generated by a particular view"
+  },
+  {
+    "subject": "Django",
+    "topic": "Performance",
+    "difficulty": "Hard",
+    "question": "Why should database query counts be monitored in Django views?",
+    "options": [
+      "Unexpected extra queries can severely hurt performance",
+      "Queries are always free",
+      "Django executes only one query per request",
+      "Query counts only affect tests"
+    ],
+    "answer": "Unexpected extra queries can severely hurt performance"
+  },
+  {
+    "subject": "Django",
+    "topic": "Performance",
+    "difficulty": "Hard",
+    "question": "Why is pagination useful for large QuerySets?",
+    "options": [
+      "It limits the amount of data fetched and rendered at once",
+      "It creates indexes automatically",
+      "It prevents all slow queries",
+      "It removes the need for ordering"
+    ],
+    "answer": "It limits the amount of data fetched and rendered at once"
+  },
+  {
+    "subject": "Django",
+    "topic": "Deployment",
+    "difficulty": "Hard",
+    "question": "What is the role of a production WSGI server such as Gunicorn for a traditional Django app?",
+    "options": [
+      "Run the Django application using production worker processes",
+      "Compile templates to JavaScript",
+      "Replace Django ORM",
+      "Serve as the database"
+    ],
+    "answer": "Run the Django application using production worker processes"
+  },
+  {
+    "subject": "Django",
+    "topic": "Deployment",
+    "difficulty": "Hard",
+    "question": "What is ASGI designed to support beyond traditional synchronous WSGI use cases?",
+    "options": [
+      "Asynchronous protocols and long-lived connections such as WebSockets",
+      "Only static files",
+      "Only database migrations",
+      "Only admin pages"
+    ],
+    "answer": "Asynchronous protocols and long-lived connections such as WebSockets"
+  },
+  {
+    "subject": "Django",
+    "topic": "Deployment",
+    "difficulty": "Hard",
+    "question": "Why is collectstatic commonly run before deployment?",
+    "options": [
+      "To gather static assets into a single deployment location",
+      "To migrate the database",
+      "To create superusers",
+      "To compile Python bytecode only"
+    ],
+    "answer": "To gather static assets into a single deployment location"
+  },
+  {
+    "subject": "Django",
+    "topic": "Architecture",
+    "difficulty": "Hard",
+    "question": "Why is separating business logic from views beneficial?",
+    "options": [
+      "It improves reuse, testing, and maintainability",
+      "It removes the need for models",
+      "It guarantees faster SQL",
+      "It prevents all errors"
+    ],
+    "answer": "It improves reuse, testing, and maintainability"
+  },
+  {
+    "subject": "Django",
+    "topic": "Testing",
+    "difficulty": "Hard",
+    "question": "Why should tests avoid relying on production data?",
+    "options": [
+      "Tests should be isolated, repeatable, and safe",
+      "Production data always makes tests faster",
+      "Django requires production data",
+      "Fixtures cannot be used"
+    ],
+    "answer": "Tests should be isolated, repeatable, and safe"
+  }
+]
