@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "Software Engineering",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is software engineering?",
+    "options": [
+      "A systematic approach to developing and maintaining software",
+      "Only writing code quickly",
+      "Only testing finished programs",
+      "Only managing hardware"
+    ],
+    "answer": "A systematic approach to developing and maintaining software"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "SDLC",
+    "difficulty": "Easy",
+    "question": "What does SDLC stand for?",
+    "options": [
+      "Software Development Life Cycle",
+      "System Design Logic Control",
+      "Software Data Link Cycle",
+      "System Development Logic Code"
+    ],
+    "answer": "Software Development Life Cycle"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "SDLC",
+    "difficulty": "Easy",
+    "question": "Which phase usually focuses on understanding what the customer needs?",
+    "options": [
+      "Requirements analysis",
+      "Deployment",
+      "Maintenance only",
+      "Coding only"
+    ],
+    "answer": "Requirements analysis"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Requirements",
+    "difficulty": "Easy",
+    "question": "What is a functional requirement?",
+    "options": [
+      "A description of what the system should do",
+      "A description of system performance only",
+      "A coding standard",
+      "A database backup"
+    ],
+    "answer": "A description of what the system should do"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Requirements",
+    "difficulty": "Easy",
+    "question": "What is a non-functional requirement?",
+    "options": [
+      "A quality or constraint such as performance, security, or usability",
+      "A user-visible feature only",
+      "A source code file",
+      "A test case only"
+    ],
+    "answer": "A quality or constraint such as performance, security, or usability"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Design",
+    "difficulty": "Easy",
+    "question": "What is software design?",
+    "options": [
+      "Planning the structure, components, and interactions of a system",
+      "Writing only test cases",
+      "Deploying software only",
+      "Creating user accounts"
+    ],
+    "answer": "Planning the structure, components, and interactions of a system"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Testing",
+    "difficulty": "Easy",
+    "question": "What is software testing?",
+    "options": [
+      "Evaluating software to find defects and verify expected behavior",
+      "Only writing documentation",
+      "Only deploying code",
+      "Only gathering requirements"
+    ],
+    "answer": "Evaluating software to find defects and verify expected behavior"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Testing",
+    "difficulty": "Easy",
+    "question": "What is unit testing?",
+    "options": [
+      "Testing a small unit such as a function or class",
+      "Testing the entire system only",
+      "Testing network cables",
+      "Testing production hardware"
+    ],
+    "answer": "Testing a small unit such as a function or class"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Testing",
+    "difficulty": "Easy",
+    "question": "What is integration testing?",
+    "options": [
+      "Testing interactions between combined components",
+      "Testing one function only",
+      "Testing only the UI color",
+      "Testing only user passwords"
+    ],
+    "answer": "Testing interactions between combined components"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Testing",
+    "difficulty": "Easy",
+    "question": "What is system testing?",
+    "options": [
+      "Testing the complete integrated system",
+      "Testing a single method",
+      "Testing only database indexes",
+      "Testing only requirements documents"
+    ],
+    "answer": "Testing the complete integrated system"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Maintenance",
+    "difficulty": "Easy",
+    "question": "What is software maintenance?",
+    "options": [
+      "Modifying software after delivery to fix, improve, or adapt it",
+      "Deleting the project after release",
+      "Only creating test cases",
+      "Only writing requirements"
+    ],
+    "answer": "Modifying software after delivery to fix, improve, or adapt it"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Version Control",
+    "difficulty": "Easy",
+    "question": "Why is version control useful?",
+    "options": [
+      "It tracks changes and supports collaboration",
+      "It replaces testing",
+      "It writes requirements automatically",
+      "It removes all bugs"
+    ],
+    "answer": "It tracks changes and supports collaboration"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Agile",
+    "difficulty": "Easy",
+    "question": "What is Agile software development?",
+    "options": [
+      "An iterative approach emphasizing collaboration and frequent delivery",
+      "A single long development phase",
+      "A testing-only method",
+      "A database design tool"
+    ],
+    "answer": "An iterative approach emphasizing collaboration and frequent delivery"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Scrum",
+    "difficulty": "Easy",
+    "question": "What is Scrum?",
+    "options": [
+      "An Agile framework for managing iterative development",
+      "A programming language",
+      "A database protocol",
+      "A testing tool"
+    ],
+    "answer": "An Agile framework for managing iterative development"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Scrum",
+    "difficulty": "Easy",
+    "question": "What is a sprint in Scrum?",
+    "options": [
+      "A fixed time-box for completing selected work",
+      "A production outage",
+      "A coding standard",
+      "A requirements document"
+    ],
+    "answer": "A fixed time-box for completing selected work"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Scrum",
+    "difficulty": "Easy",
+    "question": "Who is responsible for maximizing product value and managing the product backlog?",
+    "options": [
+      "Product Owner",
+      "Scrum Master",
+      "Tester only",
+      "Database Administrator"
+    ],
+    "answer": "Product Owner"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Scrum",
+    "difficulty": "Easy",
+    "question": "What is the role of the Scrum Master?",
+    "options": [
+      "Help the team follow Scrum and remove impediments",
+      "Write all code alone",
+      "Own every product requirement",
+      "Approve database access only"
+    ],
+    "answer": "Help the team follow Scrum and remove impediments"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Backlog",
+    "difficulty": "Easy",
+    "question": "What is a product backlog?",
+    "options": [
+      "A prioritized list of desired product work",
+      "A list of deleted files",
+      "A list of production servers",
+      "A list of completed tests only"
+    ],
+    "answer": "A prioritized list of desired product work"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "User Stories",
+    "difficulty": "Easy",
+    "question": "What is a user story?",
+    "options": [
+      "A short description of a feature from a user's perspective",
+      "A database record",
+      "A bug report only",
+      "A code comment"
+    ],
+    "answer": "A short description of a feature from a user's perspective"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Documentation",
+    "difficulty": "Easy",
+    "question": "Why is software documentation useful?",
+    "options": [
+      "It helps users and developers understand the system",
+      "It replaces source code",
+      "It makes testing unnecessary",
+      "It removes maintenance work"
+    ],
+    "answer": "It helps users and developers understand the system"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "UML",
+    "difficulty": "Easy",
+    "question": "What does UML stand for?",
+    "options": [
+      "Unified Modeling Language",
+      "Universal Machine Logic",
+      "User Management Layer",
+      "Unified Module Link"
+    ],
+    "answer": "Unified Modeling Language"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "UML",
+    "difficulty": "Easy",
+    "question": "What does a use case diagram mainly show?",
+    "options": [
+      "Actors and their interactions with system functionality",
+      "Database schemas only",
+      "Source code structure only",
+      "Network topology only"
+    ],
+    "answer": "Actors and their interactions with system functionality"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "UML",
+    "difficulty": "Easy",
+    "question": "What does a class diagram mainly show?",
+    "options": [
+      "Classes, attributes, methods, and relationships",
+      "Only user stories",
+      "Only test cases",
+      "Only deployment servers"
+    ],
+    "answer": "Classes, attributes, methods, and relationships"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Quality",
+    "difficulty": "Easy",
+    "question": "What does software quality refer to?",
+    "options": [
+      "How well software satisfies requirements and quality expectations",
+      "Only how fast code is written",
+      "Only the number of files",
+      "Only the UI design"
+    ],
+    "answer": "How well software satisfies requirements and quality expectations"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Defects",
+    "difficulty": "Easy",
+    "question": "What is a software bug?",
+    "options": [
+      "A defect that causes incorrect or unexpected behavior",
+      "A required feature",
+      "A design pattern",
+      "A deployment script"
+    ],
+    "answer": "A defect that causes incorrect or unexpected behavior"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Code Review",
+    "difficulty": "Easy",
+    "question": "What is code review?",
+    "options": [
+      "Examining code changes to find issues and improve quality",
+      "Executing the application only",
+      "Writing database queries only",
+      "Creating a release"
+    ],
+    "answer": "Examining code changes to find issues and improve quality"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Refactoring",
+    "difficulty": "Easy",
+    "question": "What is refactoring?",
+    "options": [
+      "Improving internal code structure without changing intended external behavior",
+      "Adding only new features",
+      "Deleting tests",
+      "Changing programming languages"
+    ],
+    "answer": "Improving internal code structure without changing intended external behavior"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Deployment",
+    "difficulty": "Easy",
+    "question": "What is deployment?",
+    "options": [
+      "Making software available in a target environment",
+      "Writing the first requirement",
+      "Only testing locally",
+      "Only designing classes"
+    ],
+    "answer": "Making software available in a target environment"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "CI",
+    "difficulty": "Easy",
+    "question": "What does CI stand for in software development?",
+    "options": [
+      "Continuous Integration",
+      "Code Inspection",
+      "Central Installation",
+      "Continuous Inspection only"
+    ],
+    "answer": "Continuous Integration"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "CD",
+    "difficulty": "Easy",
+    "question": "What does Continuous Delivery focus on?",
+    "options": [
+      "Keeping software in a releasable state through automated pipelines",
+      "Writing only documentation",
+      "Avoiding testing",
+      "Deploying manually only"
+    ],
+    "answer": "Keeping software in a releasable state through automated pipelines"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Risk",
+    "difficulty": "Easy",
+    "question": "What is a project risk?",
+    "options": [
+      "An uncertain event that may negatively affect project objectives",
+      "A completed task",
+      "A successful deployment",
+      "A coding convention"
+    ],
+    "answer": "An uncertain event that may negatively affect project objectives"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Estimation",
+    "difficulty": "Easy",
+    "question": "What is effort estimation?",
+    "options": [
+      "Predicting the work required to complete software tasks",
+      "Counting only source files",
+      "Choosing a programming language",
+      "Creating a database backup"
+    ],
+    "answer": "Predicting the work required to complete software tasks"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Architecture",
+    "difficulty": "Easy",
+    "question": "What is software architecture?",
+    "options": [
+      "The high-level structure and major components of a software system",
+      "A single function",
+      "A test case list",
+      "A deployment command only"
+    ],
+    "answer": "The high-level structure and major components of a software system"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Modularity",
+    "difficulty": "Easy",
+    "question": "What is modularity?",
+    "options": [
+      "Dividing software into separate, manageable components",
+      "Putting all code in one file",
+      "Avoiding interfaces",
+      "Using only one function"
+    ],
+    "answer": "Dividing software into separate, manageable components"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Waterfall",
+    "difficulty": "Medium",
+    "question": "What is a major characteristic of the Waterfall model?",
+    "options": [
+      "Development proceeds through largely sequential phases",
+      "Requirements are never documented",
+      "Testing happens before coding only",
+      "Every phase runs in parallel"
+    ],
+    "answer": "Development proceeds through largely sequential phases"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Waterfall",
+    "difficulty": "Medium",
+    "question": "What is a common weakness of Waterfall for changing requirements?",
+    "options": [
+      "Late changes can be expensive because earlier phases may need rework",
+      "It has no documentation",
+      "It cannot produce software",
+      "It prevents testing"
+    ],
+    "answer": "Late changes can be expensive because earlier phases may need rework"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Agile",
+    "difficulty": "Medium",
+    "question": "Why does Agile favor frequent delivery?",
+    "options": [
+      "It enables faster feedback and adaptation",
+      "It eliminates requirements",
+      "It prevents testing",
+      "It avoids customer involvement"
+    ],
+    "answer": "It enables faster feedback and adaptation"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Scrum",
+    "difficulty": "Medium",
+    "question": "What is a sprint review for?",
+    "options": [
+      "Inspecting the increment with stakeholders and gathering feedback",
+      "Assigning salaries",
+      "Writing all test cases",
+      "Creating database indexes"
+    ],
+    "answer": "Inspecting the increment with stakeholders and gathering feedback"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Scrum",
+    "difficulty": "Medium",
+    "question": "What is a sprint retrospective for?",
+    "options": [
+      "Reflecting on how the team worked and identifying improvements",
+      "Approving only code style",
+      "Planning product marketing",
+      "Creating deployment servers"
+    ],
+    "answer": "Reflecting on how the team worked and identifying improvements"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Requirements",
+    "difficulty": "Medium",
+    "question": "What is requirements validation?",
+    "options": [
+      "Checking that documented requirements are correct, complete, feasible, and aligned with stakeholder needs",
+      "Writing code from requirements automatically",
+      "Deleting conflicting requirements only",
+      "Deploying a prototype"
+    ],
+    "answer": "Checking that documented requirements are correct, complete, feasible, and aligned with stakeholder needs"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Requirements",
+    "difficulty": "Medium",
+    "question": "What is requirements traceability?",
+    "options": [
+      "Linking requirements to related design, implementation, and test artifacts",
+      "Tracking only developer attendance",
+      "Tracking only source file names",
+      "Tracking only deployments"
+    ],
+    "answer": "Linking requirements to related design, implementation, and test artifacts"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Prototyping",
+    "difficulty": "Medium",
+    "question": "Why is prototyping useful?",
+    "options": [
+      "It helps clarify requirements and gather early feedback",
+      "It guarantees final architecture quality",
+      "It eliminates documentation",
+      "It replaces testing"
+    ],
+    "answer": "It helps clarify requirements and gather early feedback"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Design",
+    "difficulty": "Medium",
+    "question": "What is high cohesion?",
+    "options": [
+      "A module has closely related responsibilities",
+      "A module depends on many unrelated modules",
+      "A module has many global variables",
+      "A module has no behavior"
+    ],
+    "answer": "A module has closely related responsibilities"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Design",
+    "difficulty": "Medium",
+    "question": "What is low coupling?",
+    "options": [
+      "Modules have minimal unnecessary dependencies on one another",
+      "Every module depends on every other module",
+      "Modules cannot communicate",
+      "Modules must share global state"
+    ],
+    "answer": "Modules have minimal unnecessary dependencies on one another"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Design Principles",
+    "difficulty": "Medium",
+    "question": "What does separation of concerns encourage?",
+    "options": [
+      "Different responsibilities should be handled by distinct parts of the system",
+      "All logic should be in one class",
+      "Testing should be removed",
+      "Interfaces should be avoided"
+    ],
+    "answer": "Different responsibilities should be handled by distinct parts of the system"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Design Principles",
+    "difficulty": "Medium",
+    "question": "What does DRY stand for?",
+    "options": [
+      "Don't Repeat Yourself",
+      "Design Rules Yield",
+      "Data Reuse Yield",
+      "Develop Rapidly Yourself"
+    ],
+    "answer": "Don't Repeat Yourself"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Design Principles",
+    "difficulty": "Medium",
+    "question": "What does KISS generally encourage?",
+    "options": [
+      "Keep designs as simple as practical",
+      "Use only one class",
+      "Avoid all abstractions",
+      "Skip requirements"
+    ],
+    "answer": "Keep designs as simple as practical"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "SOLID",
+    "difficulty": "Medium",
+    "question": "What does the Single Responsibility Principle suggest?",
+    "options": [
+      "A module or class should have one primary reason to change",
+      "A class should have only one method",
+      "A project should have one developer",
+      "A system should use one database"
+    ],
+    "answer": "A module or class should have one primary reason to change"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "SOLID",
+    "difficulty": "Medium",
+    "question": "What does the Open/Closed Principle suggest?",
+    "options": [
+      "Software entities should be open for extension but closed for modification",
+      "Code should never change",
+      "Classes should be public",
+      "Modules should avoid interfaces"
+    ],
+    "answer": "Software entities should be open for extension but closed for modification"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Testing",
+    "difficulty": "Medium",
+    "question": "What is regression testing?",
+    "options": [
+      "Re-running tests to ensure changes did not break existing behavior",
+      "Testing only new features manually",
+      "Testing database speed only",
+      "Testing user stories only"
+    ],
+    "answer": "Re-running tests to ensure changes did not break existing behavior"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Testing",
+    "difficulty": "Medium",
+    "question": "What is acceptance testing?",
+    "options": [
+      "Verifying the system satisfies business or user acceptance criteria",
+      "Testing one function only",
+      "Testing source formatting",
+      "Testing server temperature"
+    ],
+    "answer": "Verifying the system satisfies business or user acceptance criteria"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Testing",
+    "difficulty": "Medium",
+    "question": "What is black-box testing?",
+    "options": [
+      "Testing behavior without relying on internal implementation details",
+      "Testing only private methods",
+      "Testing source code visually",
+      "Testing only databases"
+    ],
+    "answer": "Testing behavior without relying on internal implementation details"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Testing",
+    "difficulty": "Medium",
+    "question": "What is white-box testing?",
+    "options": [
+      "Testing with knowledge of internal code structure and logic",
+      "Testing only the user interface",
+      "Testing production servers only",
+      "Testing without source code knowledge"
+    ],
+    "answer": "Testing with knowledge of internal code structure and logic"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Testing",
+    "difficulty": "Medium",
+    "question": "What is test coverage?",
+    "options": [
+      "A measure of how much code or behavior is exercised by tests",
+      "A count of developers",
+      "A measure of deployment speed",
+      "A requirements document"
+    ],
+    "answer": "A measure of how much code or behavior is exercised by tests"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Code Review",
+    "difficulty": "Medium",
+    "question": "Why are small pull requests easier to review?",
+    "options": [
+      "They reduce cognitive load and make changes easier to understand",
+      "They remove the need for tests",
+      "They automatically prevent bugs",
+      "They always deploy faster"
+    ],
+    "answer": "They reduce cognitive load and make changes easier to understand"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Configuration Management",
+    "difficulty": "Medium",
+    "question": "What is software configuration management?",
+    "options": [
+      "Controlling and tracking changes to software artifacts and environments",
+      "Managing only passwords",
+      "Managing only database tables",
+      "Creating UI mockups"
+    ],
+    "answer": "Controlling and tracking changes to software artifacts and environments"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "CI",
+    "difficulty": "Medium",
+    "question": "What is the main purpose of Continuous Integration?",
+    "options": [
+      "Frequently integrate changes and automatically verify them",
+      "Deploy every commit to production automatically",
+      "Avoid code reviews",
+      "Avoid branching"
+    ],
+    "answer": "Frequently integrate changes and automatically verify them"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "CI/CD",
+    "difficulty": "Medium",
+    "question": "Why are automated tests important in CI pipelines?",
+    "options": [
+      "They provide fast feedback on whether changes broke expected behavior",
+      "They replace version control",
+      "They remove the need for developers",
+      "They prevent all deployment failures"
+    ],
+    "answer": "They provide fast feedback on whether changes broke expected behavior"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Deployment",
+    "difficulty": "Medium",
+    "question": "What is a rollback?",
+    "options": [
+      "Returning to a previous stable software version after a problematic release",
+      "Deleting all project history",
+      "Rewriting requirements",
+      "Removing tests"
+    ],
+    "answer": "Returning to a previous stable software version after a problematic release"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Deployment",
+    "difficulty": "Medium",
+    "question": "What is a staging environment?",
+    "options": [
+      "A pre-production environment used to test releases in production-like conditions",
+      "A developer's text editor",
+      "A requirements document",
+      "A source control branch only"
+    ],
+    "answer": "A pre-production environment used to test releases in production-like conditions"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Architecture",
+    "difficulty": "Medium",
+    "question": "What is layered architecture?",
+    "options": [
+      "Organizing the system into layers with distinct responsibilities",
+      "Using only one module",
+      "Storing every feature in the database",
+      "Deploying one server per user"
+    ],
+    "answer": "Organizing the system into layers with distinct responsibilities"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Architecture",
+    "difficulty": "Medium",
+    "question": "What is client-server architecture?",
+    "options": [
+      "Clients request services from one or more servers",
+      "All logic runs only on the client",
+      "No network communication occurs",
+      "Every client is a database"
+    ],
+    "answer": "Clients request services from one or more servers"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Architecture",
+    "difficulty": "Medium",
+    "question": "What is a monolithic application?",
+    "options": [
+      "An application packaged and deployed as a single main unit",
+      "An application with no modules",
+      "A system with no database",
+      "A system with no frontend"
+    ],
+    "answer": "An application packaged and deployed as a single main unit"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Microservices",
+    "difficulty": "Medium",
+    "question": "What is a microservice?",
+    "options": [
+      "A small independently deployable service focused on a business capability",
+      "A tiny function only",
+      "A database row",
+      "A frontend component only"
+    ],
+    "answer": "A small independently deployable service focused on a business capability"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Risk",
+    "difficulty": "Medium",
+    "question": "What is risk mitigation?",
+    "options": [
+      "Taking actions to reduce the probability or impact of a risk",
+      "Ignoring all risks",
+      "Deleting the risk register",
+      "Adding more developers automatically"
+    ],
+    "answer": "Taking actions to reduce the probability or impact of a risk"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Estimation",
+    "difficulty": "Medium",
+    "question": "What are story points used for in Agile teams?",
+    "options": [
+      "Relative estimation of effort, complexity, or uncertainty",
+      "Exact hours worked",
+      "Developer salaries",
+      "Number of code lines"
+    ],
+    "answer": "Relative estimation of effort, complexity, or uncertainty"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Technical Debt",
+    "difficulty": "Medium",
+    "question": "What is technical debt?",
+    "options": [
+      "Future cost created by taking shortcuts or postponing needed technical improvements",
+      "A project budget deficit only",
+      "Unpaid developer salaries",
+      "A database storage fee"
+    ],
+    "answer": "Future cost created by taking shortcuts or postponing needed technical improvements"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Architecture",
+    "difficulty": "Hard",
+    "question": "What is architectural coupling?",
+    "options": [
+      "The degree to which major system components depend on one another",
+      "The number of classes in a system",
+      "The number of developers",
+      "The number of tests"
+    ],
+    "answer": "The degree to which major system components depend on one another"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Architecture",
+    "difficulty": "Hard",
+    "question": "Why is loose coupling valuable in large systems?",
+    "options": [
+      "Changes in one component are less likely to force changes in many others",
+      "It prevents all runtime errors",
+      "It removes the need for APIs",
+      "It guarantees higher performance"
+    ],
+    "answer": "Changes in one component are less likely to force changes in many others"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "question": "What is a common tradeoff of microservices?",
+    "options": [
+      "Independent deployment improves flexibility but distributed-system complexity increases",
+      "They eliminate network failures",
+      "They remove the need for observability",
+      "They guarantee simpler testing"
+    ],
+    "answer": "Independent deployment improves flexibility but distributed-system complexity increases"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Distributed Systems",
+    "difficulty": "Hard",
+    "question": "Why are distributed transactions harder than local transactions?",
+    "options": [
+      "Multiple services and networks can fail independently and coordination is required",
+      "They never need consistency",
+      "They execute on one process only",
+      "They cannot use databases"
+    ],
+    "answer": "Multiple services and networks can fail independently and coordination is required"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Event-Driven Architecture",
+    "difficulty": "Hard",
+    "question": "What is event-driven architecture?",
+    "options": [
+      "A design where components communicate by producing and reacting to events",
+      "A design where every component shares one database table",
+      "A design without asynchronous behavior",
+      "A testing strategy"
+    ],
+    "answer": "A design where components communicate by producing and reacting to events"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Event-Driven Architecture",
+    "difficulty": "Hard",
+    "question": "What is eventual consistency?",
+    "options": [
+      "Different replicas or services may temporarily differ but converge later",
+      "Every read always sees the latest write globally",
+      "All updates happen in one transaction",
+      "No data is replicated"
+    ],
+    "answer": "Different replicas or services may temporarily differ but converge later"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Design Patterns",
+    "difficulty": "Hard",
+    "question": "What problem does the Strategy pattern solve?",
+    "options": [
+      "Encapsulating interchangeable algorithms behind a common interface",
+      "Ensuring one global instance",
+      "Creating database tables",
+      "Managing user stories"
+    ],
+    "answer": "Encapsulating interchangeable algorithms behind a common interface"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Design Patterns",
+    "difficulty": "Hard",
+    "question": "What does the Observer pattern model?",
+    "options": [
+      "One-to-many notification when an observed object's state changes",
+      "A one-time database migration",
+      "A deployment rollback",
+      "A build pipeline"
+    ],
+    "answer": "One-to-many notification when an observed object's state changes"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Design Patterns",
+    "difficulty": "Hard",
+    "question": "What does the Adapter pattern do?",
+    "options": [
+      "Converts one interface into another expected by a client",
+      "Creates only one instance",
+      "Adds database indexes",
+      "Runs test cases"
+    ],
+    "answer": "Converts one interface into another expected by a client"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "SOLID",
+    "difficulty": "Hard",
+    "question": "What does the Liskov Substitution Principle require?",
+    "options": [
+      "Subtypes should be usable wherever their base types are expected without breaking correctness",
+      "Every class must have a subclass",
+      "Every interface must have one method",
+      "Inheritance should never be used"
+    ],
+    "answer": "Subtypes should be usable wherever their base types are expected without breaking correctness"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "SOLID",
+    "difficulty": "Hard",
+    "question": "What does Interface Segregation Principle encourage?",
+    "options": [
+      "Small focused interfaces rather than large interfaces clients do not fully use",
+      "One interface for the whole system",
+      "No interfaces",
+      "Only abstract classes"
+    ],
+    "answer": "Small focused interfaces rather than large interfaces clients do not fully use"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "SOLID",
+    "difficulty": "Hard",
+    "question": "What does Dependency Inversion Principle encourage?",
+    "options": [
+      "High-level code should depend on abstractions rather than concrete low-level details",
+      "Every module should create its own dependencies directly",
+      "Avoid dependency injection",
+      "Use global state"
+    ],
+    "answer": "High-level code should depend on abstractions rather than concrete low-level details"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Testing",
+    "difficulty": "Hard",
+    "question": "What is mutation testing?",
+    "options": [
+      "Deliberately modifying code to check whether tests detect the changes",
+      "Changing test names",
+      "Testing user interface colors",
+      "Running only production tests"
+    ],
+    "answer": "Deliberately modifying code to check whether tests detect the changes"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Testing",
+    "difficulty": "Hard",
+    "question": "What does the testing pyramid encourage?",
+    "options": [
+      "Many fast unit tests, fewer integration tests, and fewer end-to-end tests",
+      "Only end-to-end tests",
+      "Only manual tests",
+      "No integration tests"
+    ],
+    "answer": "Many fast unit tests, fewer integration tests, and fewer end-to-end tests"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Testing",
+    "difficulty": "Hard",
+    "question": "Why can flaky tests be harmful?",
+    "options": [
+      "They fail unpredictably and reduce trust in the test suite",
+      "They always improve coverage",
+      "They reduce build time",
+      "They replace monitoring"
+    ],
+    "answer": "They fail unpredictably and reduce trust in the test suite"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Testing",
+    "difficulty": "Hard",
+    "question": "What is contract testing?",
+    "options": [
+      "Testing whether interactions between services conform to an agreed interface contract",
+      "Testing employment contracts",
+      "Testing only database transactions",
+      "Testing only frontend components"
+    ],
+    "answer": "Testing whether interactions between services conform to an agreed interface contract"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Observability",
+    "difficulty": "Hard",
+    "question": "What are the three commonly cited pillars of observability?",
+    "options": [
+      "Logs, metrics, and traces",
+      "Code, tests, and comments",
+      "CPU, RAM, and disk",
+      "Users, roles, and permissions"
+    ],
+    "answer": "Logs, metrics, and traces"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Reliability",
+    "difficulty": "Hard",
+    "question": "What is fault tolerance?",
+    "options": [
+      "The ability of a system to continue operating despite some failures",
+      "The ability to prevent every bug",
+      "The ability to avoid monitoring",
+      "The ability to run without backups"
+    ],
+    "answer": "The ability of a system to continue operating despite some failures"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Reliability",
+    "difficulty": "Hard",
+    "question": "What is graceful degradation?",
+    "options": [
+      "Continuing to provide reduced functionality when some components fail",
+      "Shutting down immediately on any error",
+      "Ignoring all failures",
+      "Removing all features before release"
+    ],
+    "answer": "Continuing to provide reduced functionality when some components fail"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Resilience",
+    "difficulty": "Hard",
+    "question": "What is a circuit breaker pattern used for?",
+    "options": [
+      "Preventing repeated calls to a failing dependency and allowing recovery time",
+      "Encrypting API requests",
+      "Managing database schemas",
+      "Creating test doubles"
+    ],
+    "answer": "Preventing repeated calls to a failing dependency and allowing recovery time"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Resilience",
+    "difficulty": "Hard",
+    "question": "Why should retries use backoff?",
+    "options": [
+      "To avoid overwhelming a failing service with immediate repeated requests",
+      "To make retries faster than normal",
+      "To guarantee success",
+      "To remove timeouts"
+    ],
+    "answer": "To avoid overwhelming a failing service with immediate repeated requests"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What does secure-by-design mean?",
+    "options": [
+      "Security is considered throughout architecture and development rather than added only at the end",
+      "Only penetration testing matters",
+      "Security belongs only to operations teams",
+      "Security is handled only by firewalls"
+    ],
+    "answer": "Security is considered throughout architecture and development rather than added only at the end"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What is threat modeling?",
+    "options": [
+      "Systematically identifying assets, threats, attack paths, and mitigations",
+      "Writing only security test cases",
+      "Encrypting every database field",
+      "Running antivirus software"
+    ],
+    "answer": "Systematically identifying assets, threats, attack paths, and mitigations"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Deployment",
+    "difficulty": "Hard",
+    "question": "What is blue-green deployment?",
+    "options": [
+      "Running old and new environments in parallel and switching traffic between them",
+      "Deploying only at night",
+      "Using two databases with no application changes",
+      "Deploying to two branches only"
+    ],
+    "answer": "Running old and new environments in parallel and switching traffic between them"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Deployment",
+    "difficulty": "Hard",
+    "question": "What is canary deployment?",
+    "options": [
+      "Releasing a new version to a small subset of users or traffic before wider rollout",
+      "Deploying only to test servers",
+      "Deploying without monitoring",
+      "Deploying every commit to everyone immediately"
+    ],
+    "answer": "Releasing a new version to a small subset of users or traffic before wider rollout"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Architecture",
+    "difficulty": "Hard",
+    "question": "What is architectural fitness?",
+    "options": [
+      "How well architecture supports current and evolving quality requirements",
+      "How many classes are in the codebase",
+      "How quickly code compiles",
+      "How many developers know the system"
+    ],
+    "answer": "How well architecture supports current and evolving quality requirements"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Technical Debt",
+    "difficulty": "Hard",
+    "question": "Why should technical debt be managed explicitly?",
+    "options": [
+      "Uncontrolled debt increases future change cost and defect risk",
+      "It always disappears automatically",
+      "It only affects documentation",
+      "It never affects delivery speed"
+    ],
+    "answer": "Uncontrolled debt increases future change cost and defect risk"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Refactoring",
+    "difficulty": "Hard",
+    "question": "What makes refactoring safer?",
+    "options": [
+      "A reliable automated test suite that detects behavior changes",
+      "Removing tests first",
+      "Changing many unrelated things together",
+      "Avoiding version control"
+    ],
+    "answer": "A reliable automated test suite that detects behavior changes"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Domain Modeling",
+    "difficulty": "Hard",
+    "question": "What is domain-driven design primarily concerned with?",
+    "options": [
+      "Modeling software around business concepts and domain knowledge",
+      "Designing only database schemas",
+      "Designing only user interfaces",
+      "Choosing programming languages"
+    ],
+    "answer": "Modeling software around business concepts and domain knowledge"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Domain Modeling",
+    "difficulty": "Hard",
+    "question": "What is a bounded context in domain-driven design?",
+    "options": [
+      "A defined boundary within which a particular domain model and terminology apply",
+      "A network firewall boundary",
+      "A sprint time-box",
+      "A database transaction"
+    ],
+    "answer": "A defined boundary within which a particular domain model and terminology apply"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Architecture",
+    "difficulty": "Hard",
+    "question": "What is an anti-corruption layer in domain-driven design?",
+    "options": [
+      "A translation boundary that protects one domain model from another system's model",
+      "A security firewall only",
+      "A test framework",
+      "A code formatter"
+    ],
+    "answer": "A translation boundary that protects one domain model from another system's model"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "DevOps",
+    "difficulty": "Hard",
+    "question": "What is the core goal of DevOps?",
+    "options": [
+      "Improve collaboration and automate the path from development to reliable operations",
+      "Replace developers with operations",
+      "Eliminate testing",
+      "Avoid monitoring"
+    ],
+    "answer": "Improve collaboration and automate the path from development to reliable operations"
+  },
+  {
+    "subject": "Software Engineering",
+    "topic": "Architecture",
+    "difficulty": "Hard",
+    "question": "Why are architecture decision records useful?",
+    "options": [
+      "They document important technical decisions, context, and tradeoffs for future understanding",
+      "They replace source code comments",
+      "They replace testing",
+      "They are used only for budgeting"
+    ],
+    "answer": "They document important technical decisions, context, and tradeoffs for future understanding"
+  }
+]
