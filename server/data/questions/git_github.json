@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "Git & GitHub",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is Git?",
+    "options": [
+      "A distributed version control system",
+      "A web browser",
+      "A database engine",
+      "A programming language"
+    ],
+    "answer": "A distributed version control system"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is GitHub?",
+    "options": [
+      "A platform for hosting and collaborating on Git repositories",
+      "A replacement for Git",
+      "A local compiler",
+      "A database server"
+    ],
+    "answer": "A platform for hosting and collaborating on Git repositories"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Repository",
+    "difficulty": "Easy",
+    "question": "Which command creates a new Git repository in the current folder?",
+    "options": [
+      "git init",
+      "git start",
+      "git new",
+      "git repo"
+    ],
+    "answer": "git init"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Repository",
+    "difficulty": "Easy",
+    "question": "Which command copies an existing remote repository to your computer?",
+    "options": [
+      "git clone",
+      "git copy",
+      "git fetchonly",
+      "git init"
+    ],
+    "answer": "git clone"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Status",
+    "difficulty": "Easy",
+    "question": "Which command shows the current working tree status?",
+    "options": [
+      "git status",
+      "git state",
+      "git info",
+      "git check"
+    ],
+    "answer": "git status"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Staging",
+    "difficulty": "Easy",
+    "question": "Which command stages a file named app.py?",
+    "options": [
+      "git add app.py",
+      "git stageonly app.py",
+      "git commit app.py",
+      "git push app.py"
+    ],
+    "answer": "git add app.py"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Staging",
+    "difficulty": "Easy",
+    "question": "Which command stages all changes in the current repository?",
+    "options": [
+      "git add .",
+      "git stage all",
+      "git commit .",
+      "git push ."
+    ],
+    "answer": "git add ."
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Commits",
+    "difficulty": "Easy",
+    "question": "Which command creates a commit with a message?",
+    "options": [
+      "git commit -m \"message\"",
+      "git save \"message\"",
+      "git push -m \"message\"",
+      "git log -m \"message\""
+    ],
+    "answer": "git commit -m \"message\""
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Commits",
+    "difficulty": "Easy",
+    "question": "What is a Git commit?",
+    "options": [
+      "A saved snapshot of staged changes",
+      "A remote repository only",
+      "A branch name",
+      "A GitHub issue"
+    ],
+    "answer": "A saved snapshot of staged changes"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "History",
+    "difficulty": "Easy",
+    "question": "Which command displays commit history?",
+    "options": [
+      "git log",
+      "git historyonly",
+      "git commits",
+      "git showall"
+    ],
+    "answer": "git log"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Branches",
+    "difficulty": "Easy",
+    "question": "What is a Git branch?",
+    "options": [
+      "An independent line of development",
+      "A deleted repository",
+      "A remote server",
+      "A commit message"
+    ],
+    "answer": "An independent line of development"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Branches",
+    "difficulty": "Easy",
+    "question": "Which command lists local branches?",
+    "options": [
+      "git branch",
+      "git list branch",
+      "git branchesonly",
+      "git status branch"
+    ],
+    "answer": "git branch"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Branches",
+    "difficulty": "Easy",
+    "question": "Which command creates a branch named feature?",
+    "options": [
+      "git branch feature",
+      "git create feature",
+      "git new branch feature",
+      "git add branch feature"
+    ],
+    "answer": "git branch feature"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Branches",
+    "difficulty": "Easy",
+    "question": "Which modern command switches to an existing branch named feature?",
+    "options": [
+      "git switch feature",
+      "git move feature",
+      "git branch feature only",
+      "git jump feature"
+    ],
+    "answer": "git switch feature"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Branches",
+    "difficulty": "Easy",
+    "question": "Which command creates and switches to a new branch named feature?",
+    "options": [
+      "git switch -c feature",
+      "git switch feature -m",
+      "git branch -m feature only",
+      "git init feature"
+    ],
+    "answer": "git switch -c feature"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Merging",
+    "difficulty": "Easy",
+    "question": "Which command merges a branch named feature into the current branch?",
+    "options": [
+      "git merge feature",
+      "git join feature",
+      "git combine feature",
+      "git pull feature only"
+    ],
+    "answer": "git merge feature"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Remote",
+    "difficulty": "Easy",
+    "question": "Which command lists configured remote repositories?",
+    "options": [
+      "git remote",
+      "git remotesonly",
+      "git remote list",
+      "git origin"
+    ],
+    "answer": "git remote"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Remote",
+    "difficulty": "Easy",
+    "question": "What is origin commonly used to represent?",
+    "options": [
+      "The default name of a remote repository",
+      "The first commit",
+      "The main branch only",
+      "The local repository root"
+    ],
+    "answer": "The default name of a remote repository"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Push",
+    "difficulty": "Easy",
+    "question": "Which command uploads local commits from main to origin?",
+    "options": [
+      "git push origin main",
+      "git send origin main",
+      "git upload main",
+      "git commit origin main"
+    ],
+    "answer": "git push origin main"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Pull",
+    "difficulty": "Easy",
+    "question": "Which command fetches remote changes and integrates them into the current branch?",
+    "options": [
+      "git pull",
+      "git clone",
+      "git add",
+      "git status"
+    ],
+    "answer": "git pull"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Fetch",
+    "difficulty": "Easy",
+    "question": "Which command downloads remote updates without automatically merging them into the current branch?",
+    "options": [
+      "git fetch",
+      "git pull",
+      "git push",
+      "git merge"
+    ],
+    "answer": "git fetch"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Gitignore",
+    "difficulty": "Easy",
+    "question": "What is .gitignore used for?",
+    "options": [
+      "Telling Git which untracked files or patterns should usually be ignored",
+      "Deleting tracked files from history automatically",
+      "Encrypting files",
+      "Storing commit messages"
+    ],
+    "answer": "Telling Git which untracked files or patterns should usually be ignored"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Gitignore",
+    "difficulty": "Easy",
+    "question": "Which file is commonly used to ignore node_modules?",
+    "options": [
+      ".gitignore",
+      ".gitconfig",
+      ".gitattributes",
+      ".github"
+    ],
+    "answer": ".gitignore"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Diff",
+    "difficulty": "Easy",
+    "question": "Which command shows unstaged changes by default?",
+    "options": [
+      "git diff",
+      "git statusonly",
+      "git log",
+      "git showbranch"
+    ],
+    "answer": "git diff"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "GitHub",
+    "difficulty": "Easy",
+    "question": "What is a pull request on GitHub?",
+    "options": [
+      "A proposal to review and merge changes from one branch into another",
+      "A command to download Git",
+      "A deleted branch",
+      "A local commit"
+    ],
+    "answer": "A proposal to review and merge changes from one branch into another"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "GitHub",
+    "difficulty": "Easy",
+    "question": "What is a GitHub issue commonly used for?",
+    "options": [
+      "Tracking bugs, tasks, or feature requests",
+      "Storing Git commits only",
+      "Hosting local files without a repository",
+      "Replacing branches"
+    ],
+    "answer": "Tracking bugs, tasks, or feature requests"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "GitHub",
+    "difficulty": "Easy",
+    "question": "What is a README file commonly used for?",
+    "options": [
+      "Explaining a project and how to use it",
+      "Storing Git object hashes only",
+      "Replacing source code",
+      "Configuring DNS"
+    ],
+    "answer": "Explaining a project and how to use it"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "GitHub",
+    "difficulty": "Easy",
+    "question": "What does forking a GitHub repository create?",
+    "options": [
+      "A copy of the repository under another GitHub account or organization",
+      "A new commit in the original repository only",
+      "A deleted clone",
+      "A temporary branch on your computer"
+    ],
+    "answer": "A copy of the repository under another GitHub account or organization"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Clone",
+    "difficulty": "Easy",
+    "question": "What does git clone normally create locally?",
+    "options": [
+      "A working copy plus repository history and remote configuration",
+      "Only one source file",
+      "Only the latest commit message",
+      "Only a .gitignore file"
+    ],
+    "answer": "A working copy plus repository history and remote configuration"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "HEAD",
+    "difficulty": "Easy",
+    "question": "What does HEAD usually point to in Git?",
+    "options": [
+      "The currently checked-out commit, usually through a branch reference",
+      "The first commit only",
+      "The remote repository URL",
+      "The staging area"
+    ],
+    "answer": "The currently checked-out commit, usually through a branch reference"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Main Branch",
+    "difficulty": "Easy",
+    "question": "Which branch name is commonly used as the default primary branch today?",
+    "options": [
+      "main",
+      "feature",
+      "devonly",
+      "release"
+    ],
+    "answer": "main"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Tags",
+    "difficulty": "Easy",
+    "question": "What is a Git tag commonly used for?",
+    "options": [
+      "Marking important points such as releases",
+      "Deleting branches",
+      "Ignoring files",
+      "Resolving conflicts"
+    ],
+    "answer": "Marking important points such as releases"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Config",
+    "difficulty": "Easy",
+    "question": "Which command displays Git configuration values?",
+    "options": [
+      "git config --list",
+      "git settings",
+      "git config showonly",
+      "git status --config"
+    ],
+    "answer": "git config --list"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Config",
+    "difficulty": "Easy",
+    "question": "Which Git setting stores the author email for commits?",
+    "options": [
+      "user.email",
+      "author.mail",
+      "git.email",
+      "profile.email"
+    ],
+    "answer": "user.email"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Staging",
+    "difficulty": "Medium",
+    "question": "What is the Git staging area?",
+    "options": [
+      "An intermediate area where changes are selected for the next commit",
+      "The remote repository",
+      "The working directory only",
+      "The deleted file archive"
+    ],
+    "answer": "An intermediate area where changes are selected for the next commit"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Staging",
+    "difficulty": "Medium",
+    "question": "Which command shows differences between staged changes and the last commit?",
+    "options": [
+      "git diff --staged",
+      "git diff only",
+      "git log --staged",
+      "git status --diff"
+    ],
+    "answer": "git diff --staged"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Restore",
+    "difficulty": "Medium",
+    "question": "Which command can restore a modified tracked file in the working tree from the index or a specified source?",
+    "options": [
+      "git restore",
+      "git recoveronly",
+      "git undo",
+      "git resetfile"
+    ],
+    "answer": "git restore"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Restore",
+    "difficulty": "Medium",
+    "question": "Which command removes a file from the staging area while keeping its working-tree changes?",
+    "options": [
+      "git restore --staged file",
+      "git delete --staged file",
+      "git clean file",
+      "git push --undo file"
+    ],
+    "answer": "git restore --staged file"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Reset",
+    "difficulty": "Medium",
+    "question": "What does git reset --soft HEAD~1 generally do?",
+    "options": [
+      "Moves HEAD back one commit while keeping the reverted commit's changes staged",
+      "Deletes all working files",
+      "Removes the repository",
+      "Pushes a revert commit"
+    ],
+    "answer": "Moves HEAD back one commit while keeping the reverted commit's changes staged"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Reset",
+    "difficulty": "Medium",
+    "question": "What does git reset --hard do to matching working-tree and index changes?",
+    "options": [
+      "It discards them to match the target commit",
+      "It preserves all changes staged",
+      "It creates a new revert commit",
+      "It only renames the branch"
+    ],
+    "answer": "It discards them to match the target commit"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Revert",
+    "difficulty": "Medium",
+    "question": "What does git revert do?",
+    "options": [
+      "Creates a new commit that reverses changes introduced by an earlier commit",
+      "Deletes the earlier commit from all history",
+      "Resets the repository without a commit",
+      "Removes the remote"
+    ],
+    "answer": "Creates a new commit that reverses changes introduced by an earlier commit"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Merge Conflicts",
+    "difficulty": "Medium",
+    "question": "What is a merge conflict?",
+    "options": [
+      "Git cannot automatically reconcile competing changes",
+      "Two branches have identical content",
+      "A remote repository is offline",
+      "A commit has no message"
+    ],
+    "answer": "Git cannot automatically reconcile competing changes"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Merge Conflicts",
+    "difficulty": "Medium",
+    "question": "What must you usually do after manually resolving merge-conflict markers in files?",
+    "options": [
+      "Stage the resolved files and complete the merge or rebase",
+      "Run git clone again",
+      "Delete .git",
+      "Create a new repository"
+    ],
+    "answer": "Stage the resolved files and complete the merge or rebase"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Rebase",
+    "difficulty": "Medium",
+    "question": "What does git rebase usually do?",
+    "options": [
+      "Replays commits onto a new base",
+      "Combines all repositories",
+      "Deletes remote history",
+      "Only renames branches"
+    ],
+    "answer": "Replays commits onto a new base"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Rebase",
+    "difficulty": "Medium",
+    "question": "Why is rebase often used on a local feature branch before merging?",
+    "options": [
+      "To create a cleaner linear history",
+      "To encrypt commits",
+      "To remove all branch names",
+      "To avoid committing changes"
+    ],
+    "answer": "To create a cleaner linear history"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Merge",
+    "difficulty": "Medium",
+    "question": "What is a fast-forward merge?",
+    "options": [
+      "Moving the branch pointer forward because no divergent commits need combining",
+      "A merge that always creates a merge commit",
+      "A force push",
+      "A shallow clone"
+    ],
+    "answer": "Moving the branch pointer forward because no divergent commits need combining"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Merge",
+    "difficulty": "Medium",
+    "question": "What is a merge commit?",
+    "options": [
+      "A commit with multiple parent commits that records merged histories",
+      "A deleted commit",
+      "A tag",
+      "A local configuration file"
+    ],
+    "answer": "A commit with multiple parent commits that records merged histories"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Remote",
+    "difficulty": "Medium",
+    "question": "Which command adds a remote named origin?",
+    "options": [
+      "git remote add origin <url>",
+      "git origin add <url>",
+      "git add remote origin <url>",
+      "git remote origin <url>"
+    ],
+    "answer": "git remote add origin <url>"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Remote",
+    "difficulty": "Medium",
+    "question": "Which command changes the URL of an existing remote named origin?",
+    "options": [
+      "git remote set-url origin <url>",
+      "git remote change origin <url>",
+      "git origin update <url>",
+      "git config origin-url <url>"
+    ],
+    "answer": "git remote set-url origin <url>"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Tracking Branches",
+    "difficulty": "Medium",
+    "question": "What is an upstream branch?",
+    "options": [
+      "A remote-tracking branch associated with a local branch for push and pull defaults",
+      "The first branch ever created",
+      "A deleted branch",
+      "A tag branch"
+    ],
+    "answer": "A remote-tracking branch associated with a local branch for push and pull defaults"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Tracking Branches",
+    "difficulty": "Medium",
+    "question": "Which command can push main and set origin/main as its upstream?",
+    "options": [
+      "git push -u origin main",
+      "git upstream main",
+      "git track origin main",
+      "git branch -u main only"
+    ],
+    "answer": "git push -u origin main"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Fetch",
+    "difficulty": "Medium",
+    "question": "What is origin/main in a local repository?",
+    "options": [
+      "A remote-tracking reference representing the last fetched state of main on origin",
+      "The remote repository itself",
+      "A local branch automatically checked out",
+      "A tag"
+    ],
+    "answer": "A remote-tracking reference representing the last fetched state of main on origin"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Cherry Pick",
+    "difficulty": "Medium",
+    "question": "What does git cherry-pick do?",
+    "options": [
+      "Applies the changes introduced by selected commit(s) onto the current branch",
+      "Deletes selected commits",
+      "Merges every branch",
+      "Copies an entire repository"
+    ],
+    "answer": "Applies the changes introduced by selected commit(s) onto the current branch"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Stash",
+    "difficulty": "Medium",
+    "question": "What does git stash commonly do?",
+    "options": [
+      "Temporarily saves uncommitted working changes so you can work with a cleaner tree",
+      "Deletes local history",
+      "Pushes changes to GitHub",
+      "Creates a release"
+    ],
+    "answer": "Temporarily saves uncommitted working changes so you can work with a cleaner tree"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Stash",
+    "difficulty": "Medium",
+    "question": "Which command reapplies the latest stash and removes it from the stash list if successful?",
+    "options": [
+      "git stash pop",
+      "git stash restore",
+      "git pop",
+      "git apply stash only"
+    ],
+    "answer": "git stash pop"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Tags",
+    "difficulty": "Medium",
+    "question": "Which command creates an annotated tag named v1.0?",
+    "options": [
+      "git tag -a v1.0 -m \"release\"",
+      "git tag v1.0 --pushonly",
+      "git release v1.0",
+      "git branch tag v1.0"
+    ],
+    "answer": "git tag -a v1.0 -m \"release\""
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Tags",
+    "difficulty": "Medium",
+    "question": "Which command pushes tag v1.0 to origin?",
+    "options": [
+      "git push origin v1.0",
+      "git tag push v1.0",
+      "git upload tag v1.0",
+      "git push-tag v1.0"
+    ],
+    "answer": "git push origin v1.0"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Gitignore",
+    "difficulty": "Medium",
+    "question": "If a file is already tracked, will adding it to .gitignore automatically stop Git from tracking it?",
+    "options": [
+      "No",
+      "Yes",
+      "Only on GitHub",
+      "Only after restart"
+    ],
+    "answer": "No"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Gitignore",
+    "difficulty": "Medium",
+    "question": "Which command removes a tracked file from the index but keeps the local file?",
+    "options": [
+      "git rm --cached file",
+      "git delete --local file",
+      "git clean file",
+      "git restore --cached file"
+    ],
+    "answer": "git rm --cached file"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "GitHub",
+    "difficulty": "Medium",
+    "question": "What is branch protection on GitHub used for?",
+    "options": [
+      "Enforcing rules such as reviews or status checks before merging",
+      "Encrypting a branch",
+      "Preventing all commits forever",
+      "Deleting stale branches automatically only"
+    ],
+    "answer": "Enforcing rules such as reviews or status checks before merging"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "GitHub",
+    "difficulty": "Medium",
+    "question": "What is a GitHub Action?",
+    "options": [
+      "An automation workflow capability for CI/CD and repository tasks",
+      "A Git branch command",
+      "A Git storage format",
+      "A pull request comment only"
+    ],
+    "answer": "An automation workflow capability for CI/CD and repository tasks"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "GitHub",
+    "difficulty": "Medium",
+    "question": "Where are GitHub Actions workflow files normally stored?",
+    "options": [
+      ".github/workflows/",
+      ".git/actions/",
+      "actions/",
+      "github-ci/"
+    ],
+    "answer": ".github/workflows/"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "GitHub",
+    "difficulty": "Medium",
+    "question": "What is a repository collaborator?",
+    "options": [
+      "A user granted permission to work on a repository",
+      "A local Git branch only",
+      "A release tag",
+      "A merge conflict"
+    ],
+    "answer": "A user granted permission to work on a repository"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Pull Requests",
+    "difficulty": "Medium",
+    "question": "What is a code review in a pull request?",
+    "options": [
+      "Examining proposed changes and giving feedback before merge",
+      "Running git init",
+      "Deleting old commits",
+      "Creating a fork only"
+    ],
+    "answer": "Examining proposed changes and giving feedback before merge"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Pull Requests",
+    "difficulty": "Medium",
+    "question": "What does merging a pull request do?",
+    "options": [
+      "Integrates the pull request's changes into the target branch according to the chosen merge method",
+      "Deletes the target branch always",
+      "Removes all commit history",
+      "Clones the repository"
+    ],
+    "answer": "Integrates the pull request's changes into the target branch according to the chosen merge method"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Commit Hash",
+    "difficulty": "Medium",
+    "question": "What is a commit hash used for?",
+    "options": [
+      "Identifying a specific Git commit",
+      "Naming only remote repositories",
+      "Storing branch permissions",
+      "Representing a file size"
+    ],
+    "answer": "Identifying a specific Git commit"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Detached HEAD",
+    "difficulty": "Medium",
+    "question": "What does detached HEAD mean?",
+    "options": [
+      "HEAD points directly to a commit rather than to a local branch",
+      "The repository has no commits",
+      "The remote is disconnected",
+      "The .git folder is missing"
+    ],
+    "answer": "HEAD points directly to a commit rather than to a local branch"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Internals",
+    "difficulty": "Hard",
+    "question": "What type of object stores file contents in Git's object database?",
+    "options": [
+      "Blob",
+      "Tree",
+      "Commit",
+      "Tag only"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Internals",
+    "difficulty": "Hard",
+    "question": "What type of Git object records directory structure and references blobs or other trees?",
+    "options": [
+      "Tree",
+      "Blob",
+      "Commit only",
+      "Branch"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Internals",
+    "difficulty": "Hard",
+    "question": "What information does a Git commit object directly reference?",
+    "options": [
+      "A tree plus parent commit information and metadata",
+      "Only a branch name",
+      "Only a remote URL",
+      "Only a list of changed lines"
+    ],
+    "answer": "A tree plus parent commit information and metadata"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Internals",
+    "difficulty": "Hard",
+    "question": "What is a branch reference internally?",
+    "options": [
+      "A movable reference that points to a commit",
+      "A full copy of all files",
+      "A special merge object",
+      "A remote server"
+    ],
+    "answer": "A movable reference that points to a commit"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Internals",
+    "difficulty": "Hard",
+    "question": "Why are Git commits often described as immutable?",
+    "options": [
+      "Changing commit contents or metadata produces a different object hash",
+      "Git physically locks old commits forever",
+      "Commits cannot be referenced",
+      "Git stores commits only on GitHub"
+    ],
+    "answer": "Changing commit contents or metadata produces a different object hash"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Rebase",
+    "difficulty": "Hard",
+    "question": "Why does rebasing published commits change their commit hashes?",
+    "options": [
+      "Rebase creates new commit objects with different parent relationships",
+      "Git randomizes hashes every time",
+      "Branch names are included in every hash only",
+      "The remote server changes the author"
+    ],
+    "answer": "Rebase creates new commit objects with different parent relationships"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Rebase",
+    "difficulty": "Hard",
+    "question": "Why should rebasing shared public history be done carefully?",
+    "options": [
+      "It rewrites commit identities and can disrupt collaborators who based work on the old history",
+      "It deletes the remote repository",
+      "It removes all tags",
+      "It disables future merges"
+    ],
+    "answer": "It rewrites commit identities and can disrupt collaborators who based work on the old history"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Interactive Rebase",
+    "difficulty": "Hard",
+    "question": "What can git rebase -i be used for?",
+    "options": [
+      "Reordering, squashing, editing, or dropping local commits",
+      "Cloning a repository",
+      "Creating remotes",
+      "Ignoring files"
+    ],
+    "answer": "Reordering, squashing, editing, or dropping local commits"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Squash",
+    "difficulty": "Hard",
+    "question": "What does squashing commits mean?",
+    "options": [
+      "Combining multiple commits into fewer commits",
+      "Deleting the repository",
+      "Creating extra branches",
+      "Fetching tags"
+    ],
+    "answer": "Combining multiple commits into fewer commits"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Merge Strategies",
+    "difficulty": "Hard",
+    "question": "What does a squash merge on GitHub commonly do?",
+    "options": [
+      "Combines pull request changes into a single commit on the target branch",
+      "Preserves every branch commit and adds a merge commit only",
+      "Deletes the target branch",
+      "Rebases the target branch onto the feature branch"
+    ],
+    "answer": "Combines pull request changes into a single commit on the target branch"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Merge Strategies",
+    "difficulty": "Hard",
+    "question": "What does 'Rebase and merge' on GitHub generally do?",
+    "options": [
+      "Replays pull request commits onto the target branch without a merge commit",
+      "Creates a merge commit with two parents",
+      "Deletes all source commits",
+      "Creates a tag instead of a merge"
+    ],
+    "answer": "Replays pull request commits onto the target branch without a merge commit"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Force Push",
+    "difficulty": "Hard",
+    "question": "Why can git push --force be dangerous?",
+    "options": [
+      "It can overwrite remote branch history and discard collaborators' commits",
+      "It always deletes the repository",
+      "It disables GitHub Actions",
+      "It converts branches into tags"
+    ],
+    "answer": "It can overwrite remote branch history and discard collaborators' commits"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Force Push",
+    "difficulty": "Hard",
+    "question": "Why is --force-with-lease generally safer than --force?",
+    "options": [
+      "It refuses to overwrite the remote branch if it changed unexpectedly since your last known state",
+      "It never rewrites history",
+      "It only works on tags",
+      "It automatically merges all remote commits"
+    ],
+    "answer": "It refuses to overwrite the remote branch if it changed unexpectedly since your last known state"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Reflog",
+    "difficulty": "Hard",
+    "question": "What is git reflog useful for?",
+    "options": [
+      "Finding recent local reference movements to recover commits that became unreachable from branches",
+      "Viewing GitHub issues",
+      "Listing only remote branches",
+      "Changing author email"
+    ],
+    "answer": "Finding recent local reference movements to recover commits that became unreachable from branches"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Reflog",
+    "difficulty": "Hard",
+    "question": "Can reflog normally help recover a commit after an accidental local reset?",
+    "options": [
+      "Yes, if the relevant reflog entry still exists",
+      "No, never",
+      "Only if the commit was pushed to GitHub",
+      "Only for merge commits"
+    ],
+    "answer": "Yes, if the relevant reflog entry still exists"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Bisect",
+    "difficulty": "Hard",
+    "question": "What is git bisect used for?",
+    "options": [
+      "Binary searching commit history to find the commit that introduced a bug",
+      "Splitting a repository into two remotes",
+      "Dividing a commit into two commits only",
+      "Creating feature branches"
+    ],
+    "answer": "Binary searching commit history to find the commit that introduced a bug"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Blame",
+    "difficulty": "Hard",
+    "question": "What does git blame show?",
+    "options": [
+      "Which commit and author last changed each line of a file",
+      "Which user owns the repository",
+      "Which branch caused a merge conflict automatically",
+      "Which files are ignored"
+    ],
+    "answer": "Which commit and author last changed each line of a file"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Submodules",
+    "difficulty": "Hard",
+    "question": "What is a Git submodule?",
+    "options": [
+      "A reference to another Git repository at a specific commit inside a parent repository",
+      "A branch inside another branch",
+      "A compressed commit",
+      "A GitHub issue template"
+    ],
+    "answer": "A reference to another Git repository at a specific commit inside a parent repository"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Submodules",
+    "difficulty": "Hard",
+    "question": "Why can submodules require extra care after cloning a repository?",
+    "options": [
+      "The referenced nested repositories may need to be initialized and updated separately",
+      "They are automatically converted to normal folders",
+      "They cannot be cloned",
+      "They erase parent history"
+    ],
+    "answer": "The referenced nested repositories may need to be initialized and updated separately"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Shallow Clone",
+    "difficulty": "Hard",
+    "question": "What is a shallow clone?",
+    "options": [
+      "A clone containing limited commit history, often created with --depth",
+      "A clone without files",
+      "A repository with no branches",
+      "A read-only GitHub fork"
+    ],
+    "answer": "A clone containing limited commit history, often created with --depth"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Sparse Checkout",
+    "difficulty": "Hard",
+    "question": "What is sparse checkout used for?",
+    "options": [
+      "Checking out only selected paths from a repository working tree",
+      "Fetching only tags",
+      "Deleting remote branches",
+      "Compressing Git objects"
+    ],
+    "answer": "Checking out only selected paths from a repository working tree"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Hooks",
+    "difficulty": "Hard",
+    "question": "What is a Git hook?",
+    "options": [
+      "A script triggered by certain Git events such as commits or pushes",
+      "A remote branch",
+      "A merge strategy",
+      "A GitHub issue"
+    ],
+    "answer": "A script triggered by certain Git events such as commits or pushes"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Hooks",
+    "difficulty": "Hard",
+    "question": "What is a pre-commit hook commonly used for?",
+    "options": [
+      "Running checks before a commit is created",
+      "Pushing commits automatically to every remote",
+      "Deleting old branches",
+      "Changing commit hashes after push"
+    ],
+    "answer": "Running checks before a commit is created"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "GitHub Actions",
+    "difficulty": "Hard",
+    "question": "What is a workflow trigger such as push or pull_request called in GitHub Actions configuration?",
+    "options": [
+      "An event",
+      "A runner",
+      "An artifact",
+      "A secret"
+    ],
+    "answer": "An event"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "GitHub Actions",
+    "difficulty": "Hard",
+    "question": "What is a GitHub Actions runner?",
+    "options": [
+      "A machine or environment that executes workflow jobs",
+      "A repository branch",
+      "A pull request reviewer",
+      "A Git tag"
+    ],
+    "answer": "A machine or environment that executes workflow jobs"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "GitHub Actions",
+    "difficulty": "Hard",
+    "question": "What is an artifact in GitHub Actions?",
+    "options": [
+      "A file or collection of files saved from a workflow run for later use or download",
+      "A branch pointer",
+      "A commit object",
+      "A Git remote"
+    ],
+    "answer": "A file or collection of files saved from a workflow run for later use or download"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "GitHub Security",
+    "difficulty": "Hard",
+    "question": "What are GitHub repository secrets used for?",
+    "options": [
+      "Storing sensitive values for workflows without hardcoding them in source",
+      "Making commits private inside a public repository",
+      "Encrypting every Git object",
+      "Hiding branch names"
+    ],
+    "answer": "Storing sensitive values for workflows without hardcoding them in source"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "GitHub Security",
+    "difficulty": "Hard",
+    "question": "Why should API keys not be committed to a Git repository?",
+    "options": [
+      "They can be exposed through repository history even after later deletion",
+      "Git cannot store text files",
+      "They make commits too large",
+      "GitHub automatically deletes repositories containing keys"
+    ],
+    "answer": "They can be exposed through repository history even after later deletion"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "History Rewriting",
+    "difficulty": "Hard",
+    "question": "If a secret was committed and pushed, is deleting it in a later commit enough to remove it from history?",
+    "options": [
+      "No, the secret can remain in earlier commits and should be rotated and history cleaned if necessary",
+      "Yes, always",
+      "Only if the file was tracked",
+      "Only on private repositories"
+    ],
+    "answer": "No, the secret can remain in earlier commits and should be rotated and history cleaned if necessary"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Git LFS",
+    "difficulty": "Hard",
+    "question": "What is Git LFS designed for?",
+    "options": [
+      "Managing large binary files by storing lightweight pointers in Git and large content separately",
+      "Replacing Git commit history",
+      "Hosting GitHub Actions",
+      "Creating pull requests"
+    ],
+    "answer": "Managing large binary files by storing lightweight pointers in Git and large content separately"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Signatures",
+    "difficulty": "Hard",
+    "question": "What is a signed Git commit intended to provide?",
+    "options": [
+      "Cryptographic evidence that a commit was created by a holder of a signing key",
+      "Encryption of the repository contents",
+      "Automatic branch protection",
+      "A smaller commit hash"
+    ],
+    "answer": "Cryptographic evidence that a commit was created by a holder of a signing key"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "GitHub Flow",
+    "difficulty": "Hard",
+    "question": "What is the core idea of GitHub Flow?",
+    "options": [
+      "Use short-lived branches, pull requests, review, and merge into a deployable main branch",
+      "Use only one branch and never review changes",
+      "Rebase all public history daily",
+      "Avoid continuous integration"
+    ],
+    "answer": "Use short-lived branches, pull requests, review, and merge into a deployable main branch"
+  },
+  {
+    "subject": "Git & GitHub",
+    "topic": "Protected Branches",
+    "difficulty": "Hard",
+    "question": "Why are required status checks useful on a protected branch?",
+    "options": [
+      "They prevent merging until configured automated checks pass",
+      "They prevent local commits",
+      "They delete failed pull requests",
+      "They disable code review"
+    ],
+    "answer": "They prevent merging until configured automated checks pass"
+  }
+]
