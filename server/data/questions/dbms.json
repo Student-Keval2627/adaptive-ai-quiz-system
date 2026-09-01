@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "DBMS",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What does DBMS stand for?",
+    "options": [
+      "Database Management System",
+      "Data Backup Management Service",
+      "Database Mapping Structure",
+      "Digital Base Management Software"
+    ],
+    "answer": "Database Management System"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is the main purpose of a DBMS?",
+    "options": [
+      "Store, manage, and retrieve data efficiently",
+      "Compile programs",
+      "Design web pages",
+      "Manage operating system processes"
+    ],
+    "answer": "Store, manage, and retrieve data efficiently"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which of the following is an example of a DBMS?",
+    "options": [
+      "MySQL",
+      "HTML",
+      "Python",
+      "Linux Kernel"
+    ],
+    "answer": "MySQL"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Data Models",
+    "difficulty": "Easy",
+    "question": "Which data model organizes data into tables?",
+    "options": [
+      "Relational model",
+      "Hierarchical model",
+      "Network model only",
+      "Object code model"
+    ],
+    "answer": "Relational model"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Tables",
+    "difficulty": "Easy",
+    "question": "What is a row in a relational table commonly called?",
+    "options": [
+      "Tuple",
+      "Attribute",
+      "Schema",
+      "Domain"
+    ],
+    "answer": "Tuple"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Tables",
+    "difficulty": "Easy",
+    "question": "What is a column in a relational table commonly called?",
+    "options": [
+      "Attribute",
+      "Tuple",
+      "Record only",
+      "Relation instance"
+    ],
+    "answer": "Attribute"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Keys",
+    "difficulty": "Easy",
+    "question": "Which key uniquely identifies a row in a table?",
+    "options": [
+      "Primary key",
+      "Foreign key",
+      "Composite value",
+      "Domain key"
+    ],
+    "answer": "Primary key"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Keys",
+    "difficulty": "Easy",
+    "question": "Which key references a key in another table?",
+    "options": [
+      "Foreign key",
+      "Primary key",
+      "Candidate key only",
+      "Super key only"
+    ],
+    "answer": "Foreign key"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Keys",
+    "difficulty": "Easy",
+    "question": "What is a candidate key?",
+    "options": [
+      "A minimal key that can uniquely identify a row",
+      "A key that must contain NULL",
+      "A duplicated key",
+      "A foreign key only"
+    ],
+    "answer": "A minimal key that can uniquely identify a row"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Keys",
+    "difficulty": "Easy",
+    "question": "What is a super key?",
+    "options": [
+      "Any set of attributes that uniquely identifies a row",
+      "Only the selected primary key",
+      "A foreign key with an index",
+      "A key used only in NoSQL"
+    ],
+    "answer": "Any set of attributes that uniquely identifies a row"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Constraints",
+    "difficulty": "Easy",
+    "question": "Which constraint prevents NULL values in a column?",
+    "options": [
+      "NOT NULL",
+      "UNIQUE",
+      "CHECK",
+      "DEFAULT"
+    ],
+    "answer": "NOT NULL"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Constraints",
+    "difficulty": "Easy",
+    "question": "Which constraint prevents duplicate values?",
+    "options": [
+      "UNIQUE",
+      "FOREIGN KEY",
+      "DEFAULT",
+      "CHECK only"
+    ],
+    "answer": "UNIQUE"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Constraints",
+    "difficulty": "Easy",
+    "question": "Which constraint enforces a condition on column values?",
+    "options": [
+      "CHECK",
+      "DEFAULT",
+      "PRIMARY KEY only",
+      "INDEX"
+    ],
+    "answer": "CHECK"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Normalization",
+    "difficulty": "Easy",
+    "question": "What is the main goal of normalization?",
+    "options": [
+      "Reduce redundancy and update anomalies",
+      "Increase duplicate data",
+      "Remove all keys",
+      "Avoid all joins"
+    ],
+    "answer": "Reduce redundancy and update anomalies"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Normalization",
+    "difficulty": "Easy",
+    "question": "Which normal form requires atomic values?",
+    "options": [
+      "First Normal Form",
+      "Second Normal Form",
+      "Third Normal Form",
+      "BCNF"
+    ],
+    "answer": "First Normal Form"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Transactions",
+    "difficulty": "Easy",
+    "question": "What is a transaction?",
+    "options": [
+      "A logical unit of database work",
+      "A database table",
+      "An index only",
+      "A query result only"
+    ],
+    "answer": "A logical unit of database work"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Transactions",
+    "difficulty": "Easy",
+    "question": "Which transaction property means all operations happen or none happen?",
+    "options": [
+      "Atomicity",
+      "Consistency",
+      "Isolation",
+      "Durability"
+    ],
+    "answer": "Atomicity"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Transactions",
+    "difficulty": "Easy",
+    "question": "Which ACID property ensures committed data survives failures?",
+    "options": [
+      "Durability",
+      "Atomicity",
+      "Isolation",
+      "Consistency"
+    ],
+    "answer": "Durability"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Transactions",
+    "difficulty": "Easy",
+    "question": "Which command saves a transaction permanently?",
+    "options": [
+      "COMMIT",
+      "ROLLBACK",
+      "SAVEPOINT",
+      "BEGIN"
+    ],
+    "answer": "COMMIT"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Transactions",
+    "difficulty": "Easy",
+    "question": "Which command undoes uncommitted changes?",
+    "options": [
+      "ROLLBACK",
+      "COMMIT",
+      "SAVE",
+      "END"
+    ],
+    "answer": "ROLLBACK"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Indexes",
+    "difficulty": "Easy",
+    "question": "What is the main purpose of an index?",
+    "options": [
+      "Speed up data retrieval",
+      "Replace tables",
+      "Store passwords",
+      "Create transactions"
+    ],
+    "answer": "Speed up data retrieval"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Views",
+    "difficulty": "Easy",
+    "question": "What is a view?",
+    "options": [
+      "A virtual table based on a query",
+      "A physical disk partition",
+      "An index type",
+      "A transaction log"
+    ],
+    "answer": "A virtual table based on a query"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Schemas",
+    "difficulty": "Easy",
+    "question": "What does a database schema describe?",
+    "options": [
+      "The logical structure of the database",
+      "Only current row values",
+      "The operating system",
+      "The network topology"
+    ],
+    "answer": "The logical structure of the database"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Integrity",
+    "difficulty": "Easy",
+    "question": "What does entity integrity require for a primary key?",
+    "options": [
+      "It must be unique and not NULL",
+      "It must be a foreign key",
+      "It must contain text",
+      "It must always be composite"
+    ],
+    "answer": "It must be unique and not NULL"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Integrity",
+    "difficulty": "Easy",
+    "question": "What does referential integrity protect?",
+    "options": [
+      "Valid relationships between referenced and referencing rows",
+      "Only primary key sorting",
+      "Only index creation",
+      "File permissions"
+    ],
+    "answer": "Valid relationships between referenced and referencing rows"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Relational Algebra",
+    "difficulty": "Easy",
+    "question": "Which relational algebra operation selects rows?",
+    "options": [
+      "Selection",
+      "Projection",
+      "Join only",
+      "Rename only"
+    ],
+    "answer": "Selection"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Relational Algebra",
+    "difficulty": "Easy",
+    "question": "Which relational algebra operation selects columns?",
+    "options": [
+      "Projection",
+      "Selection",
+      "Union only",
+      "Difference only"
+    ],
+    "answer": "Projection"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Joins",
+    "difficulty": "Easy",
+    "question": "What does a join combine?",
+    "options": [
+      "Related rows from two or more tables",
+      "Only columns from one table",
+      "Only indexes",
+      "Only transactions"
+    ],
+    "answer": "Related rows from two or more tables"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Architecture",
+    "difficulty": "Easy",
+    "question": "Which DBMS layer describes how data is physically stored?",
+    "options": [
+      "Internal level",
+      "Conceptual level",
+      "External level",
+      "Application level"
+    ],
+    "answer": "Internal level"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Architecture",
+    "difficulty": "Easy",
+    "question": "Which DBMS layer presents user-specific views?",
+    "options": [
+      "External level",
+      "Internal level",
+      "Physical level",
+      "Storage engine only"
+    ],
+    "answer": "External level"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Architecture",
+    "difficulty": "Easy",
+    "question": "Which DBMS layer describes the overall logical database structure?",
+    "options": [
+      "Conceptual level",
+      "External level",
+      "Internal level",
+      "File level"
+    ],
+    "answer": "Conceptual level"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Users",
+    "difficulty": "Easy",
+    "question": "Who is mainly responsible for managing database security, backup, and administration?",
+    "options": [
+      "Database Administrator",
+      "Frontend Developer",
+      "Network Cable Technician",
+      "End user only"
+    ],
+    "answer": "Database Administrator"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Backup",
+    "difficulty": "Easy",
+    "question": "Why are database backups important?",
+    "options": [
+      "To recover data after loss or failure",
+      "To increase query syntax",
+      "To replace indexes",
+      "To avoid transactions"
+    ],
+    "answer": "To recover data after loss or failure"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Recovery",
+    "difficulty": "Easy",
+    "question": "What is database recovery?",
+    "options": [
+      "Restoring the database to a consistent state after failure",
+      "Sorting tables",
+      "Creating new users",
+      "Deleting old indexes"
+    ],
+    "answer": "Restoring the database to a consistent state after failure"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Normalization",
+    "difficulty": "Medium",
+    "question": "What problem does Second Normal Form mainly remove?",
+    "options": [
+      "Partial dependency on part of a composite key",
+      "Transitive dependency only",
+      "All foreign keys",
+      "Every NULL value"
+    ],
+    "answer": "Partial dependency on part of a composite key"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Normalization",
+    "difficulty": "Medium",
+    "question": "What problem does Third Normal Form mainly remove?",
+    "options": [
+      "Transitive dependency of non-key attributes",
+      "Partial dependency only",
+      "All composite keys",
+      "All duplicate rows"
+    ],
+    "answer": "Transitive dependency of non-key attributes"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Normalization",
+    "difficulty": "Medium",
+    "question": "What does BCNF require?",
+    "options": [
+      "Every determinant must be a candidate key",
+      "Every table must have one column",
+      "Every attribute must be numeric",
+      "No foreign keys are allowed"
+    ],
+    "answer": "Every determinant must be a candidate key"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Functional Dependencies",
+    "difficulty": "Medium",
+    "question": "What does A -> B mean in functional dependency notation?",
+    "options": [
+      "A determines B",
+      "B determines A",
+      "A and B are foreign keys",
+      "A is less than B"
+    ],
+    "answer": "A determines B"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Functional Dependencies",
+    "difficulty": "Medium",
+    "question": "What is a transitive dependency?",
+    "options": [
+      "A non-key attribute depends on another non-key attribute that depends on a key",
+      "A key depends directly on itself",
+      "Two tables are joined",
+      "A foreign key is NULL"
+    ],
+    "answer": "A non-key attribute depends on another non-key attribute that depends on a key"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Transactions",
+    "difficulty": "Medium",
+    "question": "What does transaction consistency mean?",
+    "options": [
+      "A transaction moves the database from one valid state to another",
+      "Every transaction is isolated completely",
+      "Every write is immediately durable",
+      "Every transaction has one statement"
+    ],
+    "answer": "A transaction moves the database from one valid state to another"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Transactions",
+    "difficulty": "Medium",
+    "question": "What does transaction isolation mean?",
+    "options": [
+      "Concurrent transactions should not interfere in ways that violate the chosen isolation guarantees",
+      "Transactions must use separate databases",
+      "Only one user can connect",
+      "Every transaction must be read-only"
+    ],
+    "answer": "Concurrent transactions should not interfere in ways that violate the chosen isolation guarantees"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Concurrency",
+    "difficulty": "Medium",
+    "question": "What is a dirty read?",
+    "options": [
+      "Reading uncommitted data written by another transaction",
+      "Reading duplicate rows",
+      "Reading from an index",
+      "Reading a deleted schema"
+    ],
+    "answer": "Reading uncommitted data written by another transaction"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Concurrency",
+    "difficulty": "Medium",
+    "question": "What is a non-repeatable read?",
+    "options": [
+      "Reading the same row twice and seeing different committed values",
+      "Reading the same result twice",
+      "Reading a NULL twice",
+      "Reading from two tables"
+    ],
+    "answer": "Reading the same row twice and seeing different committed values"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Concurrency",
+    "difficulty": "Medium",
+    "question": "What is a phantom read?",
+    "options": [
+      "A repeated range query returns a different set of rows due to another transaction",
+      "A row changes one column only",
+      "A query reads uncommitted data",
+      "A table has no primary key"
+    ],
+    "answer": "A repeated range query returns a different set of rows due to another transaction"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Locks",
+    "difficulty": "Medium",
+    "question": "What is a shared lock generally used for?",
+    "options": [
+      "Reading data while allowing other compatible reads",
+      "Writing data exclusively",
+      "Dropping tables",
+      "Creating schemas"
+    ],
+    "answer": "Reading data while allowing other compatible reads"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Locks",
+    "difficulty": "Medium",
+    "question": "What is an exclusive lock generally used for?",
+    "options": [
+      "Writing data while blocking incompatible access",
+      "Allowing unlimited writers",
+      "Reading without any restrictions",
+      "Creating views only"
+    ],
+    "answer": "Writing data while blocking incompatible access"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Deadlocks",
+    "difficulty": "Medium",
+    "question": "What is a database deadlock?",
+    "options": [
+      "Transactions wait for each other's resources in a cycle",
+      "A transaction commits successfully",
+      "A query has no WHERE clause",
+      "A table contains duplicates"
+    ],
+    "answer": "Transactions wait for each other's resources in a cycle"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Deadlocks",
+    "difficulty": "Medium",
+    "question": "Which technique can help detect deadlocks?",
+    "options": [
+      "Wait-for graph",
+      "Binary search",
+      "Hashing only",
+      "Normalization"
+    ],
+    "answer": "Wait-for graph"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Indexes",
+    "difficulty": "Medium",
+    "question": "Why can too many indexes reduce write performance?",
+    "options": [
+      "Each insert, update, or delete may require index maintenance",
+      "Indexes prevent caching",
+      "Indexes disable transactions",
+      "Indexes duplicate the database server"
+    ],
+    "answer": "Each insert, update, or delete may require index maintenance"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Indexes",
+    "difficulty": "Medium",
+    "question": "Which tree structure is commonly used for database indexes?",
+    "options": [
+      "B+ Tree",
+      "Binary Search Tree only",
+      "Trie only",
+      "AVL tree only"
+    ],
+    "answer": "B+ Tree"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Indexes",
+    "difficulty": "Medium",
+    "question": "What is a clustered index conceptually associated with?",
+    "options": [
+      "Organizing table data according to the index key or closely tying storage order to it",
+      "Creating only unique keys",
+      "Storing index entries separately with no effect on row organization",
+      "Encrypting table data"
+    ],
+    "answer": "Organizing table data according to the index key or closely tying storage order to it"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Indexes",
+    "difficulty": "Medium",
+    "question": "What is a secondary index?",
+    "options": [
+      "An additional access path separate from the primary storage organization",
+      "A backup database",
+      "A second primary key",
+      "A transaction log"
+    ],
+    "answer": "An additional access path separate from the primary storage organization"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Query Processing",
+    "difficulty": "Medium",
+    "question": "What is query optimization?",
+    "options": [
+      "Choosing an efficient execution plan for a query",
+      "Rewriting SQL formatting only",
+      "Creating more tables",
+      "Disabling indexes"
+    ],
+    "answer": "Choosing an efficient execution plan for a query"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Query Processing",
+    "difficulty": "Medium",
+    "question": "What is a query execution plan?",
+    "options": [
+      "A sequence of physical operations the DBMS uses to execute a query",
+      "A schema diagram",
+      "A user permission file",
+      "A database backup"
+    ],
+    "answer": "A sequence of physical operations the DBMS uses to execute a query"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Storage",
+    "difficulty": "Medium",
+    "question": "What is a page in database storage?",
+    "options": [
+      "A fixed-size unit of data transferred between disk and memory",
+      "A web page",
+      "A SQL view",
+      "A transaction"
+    ],
+    "answer": "A fixed-size unit of data transferred between disk and memory"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Buffer Management",
+    "difficulty": "Medium",
+    "question": "What is the purpose of a buffer pool?",
+    "options": [
+      "Cache database pages in memory to reduce disk I/O",
+      "Store only user passwords",
+      "Replace transaction logs",
+      "Compile SQL"
+    ],
+    "answer": "Cache database pages in memory to reduce disk I/O"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Recovery",
+    "difficulty": "Medium",
+    "question": "What is a transaction log used for?",
+    "options": [
+      "Record changes to support recovery and durability",
+      "Store table names only",
+      "Replace indexes",
+      "Define user roles"
+    ],
+    "answer": "Record changes to support recovery and durability"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Recovery",
+    "difficulty": "Medium",
+    "question": "What is write-ahead logging?",
+    "options": [
+      "Log records are written before the corresponding changed data pages are persisted",
+      "Data pages are always written before logs",
+      "Logs are optional for transactions",
+      "Only reads are logged"
+    ],
+    "answer": "Log records are written before the corresponding changed data pages are persisted"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Recovery",
+    "difficulty": "Medium",
+    "question": "What is a checkpoint used for?",
+    "options": [
+      "Reduce recovery work by recording a known recovery position/state",
+      "Normalize tables",
+      "Create an index",
+      "Join tables"
+    ],
+    "answer": "Reduce recovery work by recording a known recovery position/state"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "ER Model",
+    "difficulty": "Medium",
+    "question": "What does an entity represent in an ER model?",
+    "options": [
+      "A distinguishable real-world object or concept",
+      "Only a database column",
+      "Only a query",
+      "A transaction log"
+    ],
+    "answer": "A distinguishable real-world object or concept"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "ER Model",
+    "difficulty": "Medium",
+    "question": "What does a relationship represent in an ER model?",
+    "options": [
+      "An association between entities",
+      "A single attribute only",
+      "A database backup",
+      "A SQL index"
+    ],
+    "answer": "An association between entities"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "ER Model",
+    "difficulty": "Medium",
+    "question": "What does cardinality describe in an ER relationship?",
+    "options": [
+      "How many entity instances can participate in the relationship",
+      "Column data type size only",
+      "Number of indexes",
+      "Number of transactions"
+    ],
+    "answer": "How many entity instances can participate in the relationship"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "ER Model",
+    "difficulty": "Medium",
+    "question": "What is a weak entity?",
+    "options": [
+      "An entity that depends on another entity for identification",
+      "A table without rows",
+      "An entity with no attributes",
+      "A duplicated entity"
+    ],
+    "answer": "An entity that depends on another entity for identification"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Relational Algebra",
+    "difficulty": "Medium",
+    "question": "What does the Cartesian product operation produce?",
+    "options": [
+      "All combinations of tuples from two relations",
+      "Only matching tuples",
+      "Only common columns",
+      "Only distinct tuples"
+    ],
+    "answer": "All combinations of tuples from two relations"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Relational Algebra",
+    "difficulty": "Medium",
+    "question": "What does relational division help express?",
+    "options": [
+      "Queries involving 'for all' conditions",
+      "Only sorting",
+      "Only grouping",
+      "Only arithmetic division"
+    ],
+    "answer": "Queries involving 'for all' conditions"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Views",
+    "difficulty": "Medium",
+    "question": "Why can views improve security?",
+    "options": [
+      "They can expose only selected rows or columns to users",
+      "They encrypt all data automatically",
+      "They remove the need for permissions",
+      "They prevent backups"
+    ],
+    "answer": "They can expose only selected rows or columns to users"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Distributed DBMS",
+    "difficulty": "Medium",
+    "question": "What is a distributed database?",
+    "options": [
+      "A database whose data is stored across multiple networked sites",
+      "A database with multiple tables only",
+      "A database stored in one file",
+      "A database without transactions"
+    ],
+    "answer": "A database whose data is stored across multiple networked sites"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Normalization",
+    "difficulty": "Hard",
+    "question": "What is a lossless decomposition?",
+    "options": [
+      "A decomposition whose relations can be joined to reconstruct the original relation without spurious tuples",
+      "A decomposition that removes all keys",
+      "A decomposition that deletes duplicate rows",
+      "A decomposition with only one table"
+    ],
+    "answer": "A decomposition whose relations can be joined to reconstruct the original relation without spurious tuples"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Normalization",
+    "difficulty": "Hard",
+    "question": "What is dependency preservation in decomposition?",
+    "options": [
+      "Functional dependencies can be enforced without joining decomposed relations",
+      "All attributes remain in one table",
+      "Every relation has the same primary key",
+      "No foreign keys are used"
+    ],
+    "answer": "Functional dependencies can be enforced without joining decomposed relations"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Normalization",
+    "difficulty": "Hard",
+    "question": "Which normal form specifically deals with nontrivial multivalued dependencies?",
+    "options": [
+      "Fourth Normal Form",
+      "Second Normal Form",
+      "Third Normal Form",
+      "First Normal Form"
+    ],
+    "answer": "Fourth Normal Form"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Normalization",
+    "difficulty": "Hard",
+    "question": "Which normal form is associated with join dependencies?",
+    "options": [
+      "Fifth Normal Form",
+      "First Normal Form",
+      "Second Normal Form",
+      "BCNF only"
+    ],
+    "answer": "Fifth Normal Form"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Functional Dependencies",
+    "difficulty": "Hard",
+    "question": "What is attribute closure used for?",
+    "options": [
+      "Determine which attributes are functionally implied by a set of attributes",
+      "Sort attributes alphabetically",
+      "Create indexes",
+      "Calculate storage size"
+    ],
+    "answer": "Determine which attributes are functionally implied by a set of attributes"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Functional Dependencies",
+    "difficulty": "Hard",
+    "question": "What is a minimal cover of functional dependencies?",
+    "options": [
+      "An equivalent simplified set of dependencies with minimal structure",
+      "A primary key only",
+      "A schema without foreign keys",
+      "A list of all attributes"
+    ],
+    "answer": "An equivalent simplified set of dependencies with minimal structure"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Concurrency Control",
+    "difficulty": "Hard",
+    "question": "What is serializability?",
+    "options": [
+      "A correctness criterion where a concurrent schedule is equivalent to some serial execution",
+      "Running only one query ever",
+      "Sorting transactions by ID",
+      "Executing all reads before writes"
+    ],
+    "answer": "A correctness criterion where a concurrent schedule is equivalent to some serial execution"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Concurrency Control",
+    "difficulty": "Hard",
+    "question": "What is conflict serializability based on?",
+    "options": [
+      "Reordering non-conflicting operations to obtain a serial schedule",
+      "Comparing transaction timestamps only",
+      "Using no locks",
+      "Running transactions alphabetically"
+    ],
+    "answer": "Reordering non-conflicting operations to obtain a serial schedule"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Concurrency Control",
+    "difficulty": "Hard",
+    "question": "Which graph is used to test conflict serializability?",
+    "options": [
+      "Precedence graph",
+      "B+ tree",
+      "ER diagram",
+      "Wait-for graph only"
+    ],
+    "answer": "Precedence graph"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Concurrency Control",
+    "difficulty": "Hard",
+    "question": "What does two-phase locking require?",
+    "options": [
+      "A growing phase for acquiring locks followed by a shrinking phase for releasing locks",
+      "Two transactions only",
+      "Two lock types only",
+      "Two database replicas"
+    ],
+    "answer": "A growing phase for acquiring locks followed by a shrinking phase for releasing locks"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Concurrency Control",
+    "difficulty": "Hard",
+    "question": "What does strict two-phase locking usually require?",
+    "options": [
+      "Exclusive locks are held until commit or rollback",
+      "All locks are released before writes",
+      "No shared locks are allowed",
+      "Transactions never wait"
+    ],
+    "answer": "Exclusive locks are held until commit or rollback"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Concurrency Control",
+    "difficulty": "Hard",
+    "question": "What is timestamp ordering used for?",
+    "options": [
+      "Concurrency control based on transaction timestamps",
+      "Indexing rows by creation date only",
+      "Sorting query output",
+      "Backup scheduling"
+    ],
+    "answer": "Concurrency control based on transaction timestamps"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "MVCC",
+    "difficulty": "Hard",
+    "question": "What is MVCC designed to provide?",
+    "options": [
+      "Concurrent access using multiple versions of data",
+      "Only one version of each row",
+      "A replacement for transactions",
+      "Automatic normalization"
+    ],
+    "answer": "Concurrent access using multiple versions of data"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "MVCC",
+    "difficulty": "Hard",
+    "question": "Why can MVCC reduce read-write blocking?",
+    "options": [
+      "Readers may access an older consistent version while writers create a new version",
+      "It disables writes during reads",
+      "It removes transaction isolation",
+      "It stores no history"
+    ],
+    "answer": "Readers may access an older consistent version while writers create a new version"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Recovery",
+    "difficulty": "Hard",
+    "question": "What is the purpose of UNDO during crash recovery?",
+    "options": [
+      "Reverse effects of transactions that did not commit",
+      "Repeat committed transactions only",
+      "Create indexes",
+      "Normalize data"
+    ],
+    "answer": "Reverse effects of transactions that did not commit"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Recovery",
+    "difficulty": "Hard",
+    "question": "What is the purpose of REDO during crash recovery?",
+    "options": [
+      "Reapply necessary effects of committed transactions",
+      "Undo committed transactions",
+      "Remove logs",
+      "Rebuild schemas only"
+    ],
+    "answer": "Reapply necessary effects of committed transactions"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Recovery",
+    "difficulty": "Hard",
+    "question": "What is a fuzzy checkpoint?",
+    "options": [
+      "A checkpoint taken without stopping all database activity",
+      "A damaged checkpoint",
+      "A checkpoint without log records",
+      "A full database backup"
+    ],
+    "answer": "A checkpoint taken without stopping all database activity"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Indexes",
+    "difficulty": "Hard",
+    "question": "Why are B+ trees well suited for database indexes?",
+    "options": [
+      "They keep keys ordered and provide high fan-out, reducing disk I/O",
+      "They require one node per row",
+      "They store no keys in internal nodes",
+      "They work only in memory"
+    ],
+    "answer": "They keep keys ordered and provide high fan-out, reducing disk I/O"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Indexes",
+    "difficulty": "Hard",
+    "question": "Where are data entries or row pointers commonly stored in a B+ tree?",
+    "options": [
+      "Leaf nodes",
+      "Root only",
+      "Every internal node only",
+      "Transaction log"
+    ],
+    "answer": "Leaf nodes"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Indexes",
+    "difficulty": "Hard",
+    "question": "What is index selectivity?",
+    "options": [
+      "How effectively an indexed value narrows the number of matching rows",
+      "The number of tables in the schema",
+      "The number of index pages only",
+      "The number of users"
+    ],
+    "answer": "How effectively an indexed value narrows the number of matching rows"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Query Optimization",
+    "difficulty": "Hard",
+    "question": "Why is join order important in query optimization?",
+    "options": [
+      "Different join orders can create very different intermediate result sizes and costs",
+      "Join order changes the schema",
+      "Only one join order is valid SQL",
+      "Join order affects only column names"
+    ],
+    "answer": "Different join orders can create very different intermediate result sizes and costs"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Query Optimization",
+    "difficulty": "Hard",
+    "question": "What is predicate pushdown?",
+    "options": [
+      "Applying filters as early as possible to reduce intermediate data",
+      "Moving predicates into application code",
+      "Removing WHERE clauses",
+      "Converting joins to Cartesian products"
+    ],
+    "answer": "Applying filters as early as possible to reduce intermediate data"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Query Optimization",
+    "difficulty": "Hard",
+    "question": "What information do database statistics provide to the optimizer?",
+    "options": [
+      "Estimates about row counts, value distributions, and selectivity",
+      "User passwords",
+      "Exact future query sequence",
+      "Only table names"
+    ],
+    "answer": "Estimates about row counts, value distributions, and selectivity"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Distributed DBMS",
+    "difficulty": "Hard",
+    "question": "What does horizontal fragmentation do in a distributed database?",
+    "options": [
+      "Splits a relation by rows",
+      "Splits a relation by columns",
+      "Copies all data to every site",
+      "Deletes keys"
+    ],
+    "answer": "Splits a relation by rows"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Distributed DBMS",
+    "difficulty": "Hard",
+    "question": "What does vertical fragmentation do?",
+    "options": [
+      "Splits a relation by columns while preserving enough key information for reconstruction",
+      "Splits rows by range only",
+      "Replicates every table",
+      "Deletes attributes permanently"
+    ],
+    "answer": "Splits a relation by columns while preserving enough key information for reconstruction"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Distributed DBMS",
+    "difficulty": "Hard",
+    "question": "What is data replication?",
+    "options": [
+      "Maintaining copies of data at multiple sites",
+      "Splitting a table into columns",
+      "Deleting old versions",
+      "Creating indexes only"
+    ],
+    "answer": "Maintaining copies of data at multiple sites"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Distributed Transactions",
+    "difficulty": "Hard",
+    "question": "What is the purpose of two-phase commit?",
+    "options": [
+      "Coordinate atomic commit of a distributed transaction across participants",
+      "Create two backups",
+      "Run two queries in parallel",
+      "Normalize two tables"
+    ],
+    "answer": "Coordinate atomic commit of a distributed transaction across participants"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Distributed Transactions",
+    "difficulty": "Hard",
+    "question": "What is a major drawback of basic two-phase commit?",
+    "options": [
+      "It can block participants if the coordinator fails at a critical time",
+      "It cannot commit transactions",
+      "It works only on one server",
+      "It prevents logging"
+    ],
+    "answer": "It can block participants if the coordinator fails at a critical time"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "CAP Theorem",
+    "difficulty": "Hard",
+    "question": "What three properties are discussed by the CAP theorem?",
+    "options": [
+      "Consistency, Availability, Partition tolerance",
+      "Concurrency, Atomicity, Performance",
+      "Caching, Accuracy, Persistence",
+      "Consistency, Atomicity, Privacy"
+    ],
+    "answer": "Consistency, Availability, Partition tolerance"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "CAP Theorem",
+    "difficulty": "Hard",
+    "question": "During a network partition, what tradeoff does CAP highlight?",
+    "options": [
+      "A distributed system must choose between stronger consistency and availability for affected operations",
+      "The system must disable storage",
+      "The system must choose between SQL and NoSQL",
+      "The system cannot use replication"
+    ],
+    "answer": "A distributed system must choose between stronger consistency and availability for affected operations"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "NoSQL",
+    "difficulty": "Hard",
+    "question": "What is eventual consistency?",
+    "options": [
+      "Replicas may temporarily differ but are expected to converge if updates stop",
+      "Every read always returns the latest committed write globally",
+      "Transactions are always serializable",
+      "Data is never replicated"
+    ],
+    "answer": "Replicas may temporarily differ but are expected to converge if updates stop"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Sharding",
+    "difficulty": "Hard",
+    "question": "What is sharding?",
+    "options": [
+      "Partitioning data across multiple database nodes",
+      "Creating multiple indexes on one table",
+      "Backing up one table twice",
+      "Encrypting rows"
+    ],
+    "answer": "Partitioning data across multiple database nodes"
+  },
+  {
+    "subject": "DBMS",
+    "topic": "Data Independence",
+    "difficulty": "Hard",
+    "question": "What is logical data independence?",
+    "options": [
+      "Ability to change the conceptual schema without requiring changes to external views or applications where possible",
+      "Ability to change disk layout only",
+      "Ability to remove transactions",
+      "Ability to rename every table automatically"
+    ],
+    "answer": "Ability to change the conceptual schema without requiring changes to external views or applications where possible"
+  }
+]
