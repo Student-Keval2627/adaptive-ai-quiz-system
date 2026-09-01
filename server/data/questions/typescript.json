@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "TypeScript",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is TypeScript?",
+    "options": [
+      "A typed superset of JavaScript",
+      "A database language",
+      "A CSS framework",
+      "A Python library"
+    ],
+    "answer": "A typed superset of JavaScript"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Who develops TypeScript?",
+    "options": [
+      "Microsoft",
+      "Google",
+      "Meta",
+      "Apple"
+    ],
+    "answer": "Microsoft"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What file extension is commonly used for TypeScript files?",
+    "options": [
+      ".ts",
+      ".js",
+      ".py",
+      ".java"
+    ],
+    "answer": ".ts"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Compilation",
+    "difficulty": "Easy",
+    "question": "What does the TypeScript compiler usually produce?",
+    "options": [
+      "JavaScript",
+      "Python",
+      "CSS",
+      "SQL"
+    ],
+    "answer": "JavaScript"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Compilation",
+    "difficulty": "Easy",
+    "question": "Which command commonly runs the TypeScript compiler?",
+    "options": [
+      "tsc",
+      "tsrun",
+      "typescript",
+      "compile-ts"
+    ],
+    "answer": "tsc"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Types",
+    "difficulty": "Easy",
+    "question": "Which type represents text values?",
+    "options": [
+      "string",
+      "text",
+      "chararray",
+      "varchar"
+    ],
+    "answer": "string"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Types",
+    "difficulty": "Easy",
+    "question": "Which type represents numeric values?",
+    "options": [
+      "number",
+      "int",
+      "float-only",
+      "numeric"
+    ],
+    "answer": "number"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Types",
+    "difficulty": "Easy",
+    "question": "Which type represents true or false values?",
+    "options": [
+      "boolean",
+      "bool-only",
+      "logic",
+      "bit"
+    ],
+    "answer": "boolean"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Types",
+    "difficulty": "Easy",
+    "question": "Which type is used when a value can be anything?",
+    "options": [
+      "any",
+      "object-only",
+      "unknown-only",
+      "dynamic"
+    ],
+    "answer": "any"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Variables",
+    "difficulty": "Easy",
+    "question": "Which keyword declares a block-scoped variable whose value can change?",
+    "options": [
+      "let",
+      "const",
+      "varonly",
+      "define"
+    ],
+    "answer": "let"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Variables",
+    "difficulty": "Easy",
+    "question": "Which keyword declares a block-scoped variable that cannot be reassigned?",
+    "options": [
+      "const",
+      "let",
+      "var",
+      "static"
+    ],
+    "answer": "const"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Type Inference",
+    "difficulty": "Easy",
+    "question": "What is type inference?",
+    "options": [
+      "TypeScript determines a type from the assigned value",
+      "TypeScript removes all types",
+      "The user always writes explicit types",
+      "JavaScript guesses runtime values"
+    ],
+    "answer": "TypeScript determines a type from the assigned value"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Arrays",
+    "difficulty": "Easy",
+    "question": "Which syntax declares an array of numbers?",
+    "options": [
+      "number[]",
+      "number()",
+      "array<number-only>",
+      "[number] only"
+    ],
+    "answer": "number[]"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Arrays",
+    "difficulty": "Easy",
+    "question": "Which generic syntax also declares an array of strings?",
+    "options": [
+      "Array<string>",
+      "List<string>",
+      "string(Array)",
+      "Collection<string>"
+    ],
+    "answer": "Array<string>"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Tuples",
+    "difficulty": "Easy",
+    "question": "What is a tuple in TypeScript?",
+    "options": [
+      "An array-like value with fixed positions and known types",
+      "A dynamic object with no types",
+      "A database row only",
+      "A function type"
+    ],
+    "answer": "An array-like value with fixed positions and known types"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Enums",
+    "difficulty": "Easy",
+    "question": "What is an enum used for?",
+    "options": [
+      "Defining a set of named constants",
+      "Creating database tables",
+      "Declaring functions only",
+      "Styling components"
+    ],
+    "answer": "Defining a set of named constants"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Functions",
+    "difficulty": "Easy",
+    "question": "How do you annotate a function parameter named age as a number?",
+    "options": [
+      "age: number",
+      "number age",
+      "age => number",
+      "age<number>"
+    ],
+    "answer": "age: number"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Functions",
+    "difficulty": "Easy",
+    "question": "How do you annotate a function return type as string?",
+    "options": [
+      "): string",
+      "=> string only",
+      ": returns string",
+      "-> string"
+    ],
+    "answer": "): string"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Functions",
+    "difficulty": "Easy",
+    "question": "Which return type is commonly used when a function returns nothing useful?",
+    "options": [
+      "void",
+      "none",
+      "null-only",
+      "empty"
+    ],
+    "answer": "void"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Objects",
+    "difficulty": "Easy",
+    "question": "How can an object's property type be described in TypeScript?",
+    "options": [
+      "Using an object type annotation",
+      "Only with classes",
+      "Only with enums",
+      "Only with arrays"
+    ],
+    "answer": "Using an object type annotation"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Interfaces",
+    "difficulty": "Easy",
+    "question": "What is an interface commonly used for?",
+    "options": [
+      "Describing the shape of an object",
+      "Creating runtime objects automatically",
+      "Compiling JavaScript",
+      "Managing CSS"
+    ],
+    "answer": "Describing the shape of an object"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Interfaces",
+    "difficulty": "Easy",
+    "question": "Which keyword declares an interface?",
+    "options": [
+      "interface",
+      "typeOnly",
+      "class",
+      "shape"
+    ],
+    "answer": "interface"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Type Aliases",
+    "difficulty": "Easy",
+    "question": "Which keyword declares a type alias?",
+    "options": [
+      "type",
+      "alias",
+      "typedef-only",
+      "interface"
+    ],
+    "answer": "type"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Optional Properties",
+    "difficulty": "Easy",
+    "question": "Which symbol marks an optional property?",
+    "options": [
+      "?",
+      "!",
+      "*",
+      "&"
+    ],
+    "answer": "?"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Union Types",
+    "difficulty": "Easy",
+    "question": "Which operator creates a union type?",
+    "options": [
+      "|",
+      "&",
+      "+",
+      "|| only"
+    ],
+    "answer": "|"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Literal Types",
+    "difficulty": "Easy",
+    "question": "What is a literal type?",
+    "options": [
+      "A type restricted to a specific value or set of specific values",
+      "A type with no values",
+      "A runtime-only type",
+      "A database field"
+    ],
+    "answer": "A type restricted to a specific value or set of specific values"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Classes",
+    "difficulty": "Easy",
+    "question": "Does TypeScript support classes?",
+    "options": [
+      "Yes",
+      "No",
+      "Only through Java",
+      "Only in browsers"
+    ],
+    "answer": "Yes"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Classes",
+    "difficulty": "Easy",
+    "question": "Which keyword creates a class?",
+    "options": [
+      "class",
+      "object",
+      "struct-only",
+      "type"
+    ],
+    "answer": "class"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Access Modifiers",
+    "difficulty": "Easy",
+    "question": "Which access modifier allows use from anywhere?",
+    "options": [
+      "public",
+      "private",
+      "protected",
+      "internal"
+    ],
+    "answer": "public"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Access Modifiers",
+    "difficulty": "Easy",
+    "question": "Which access modifier restricts access to the same class?",
+    "options": [
+      "private",
+      "public",
+      "protected",
+      "global"
+    ],
+    "answer": "private"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Inheritance",
+    "difficulty": "Easy",
+    "question": "Which keyword is used for class inheritance?",
+    "options": [
+      "extends",
+      "inherits",
+      "implements",
+      "super"
+    ],
+    "answer": "extends"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Interfaces",
+    "difficulty": "Easy",
+    "question": "Which keyword is used when a class follows an interface contract?",
+    "options": [
+      "implements",
+      "extends",
+      "inherits",
+      "uses"
+    ],
+    "answer": "implements"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Modules",
+    "difficulty": "Easy",
+    "question": "Which keyword exports a value from a module?",
+    "options": [
+      "export",
+      "public",
+      "expose",
+      "module"
+    ],
+    "answer": "export"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Modules",
+    "difficulty": "Easy",
+    "question": "Which keyword imports values from another module?",
+    "options": [
+      "import",
+      "include",
+      "require-only",
+      "using"
+    ],
+    "answer": "import"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Unknown",
+    "difficulty": "Medium",
+    "question": "How does unknown differ from any?",
+    "options": [
+      "unknown requires type checking before many operations, while any largely bypasses checks",
+      "unknown and any are identical",
+      "unknown can only hold strings",
+      "any is safer than unknown"
+    ],
+    "answer": "unknown requires type checking before many operations, while any largely bypasses checks"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Never",
+    "difficulty": "Medium",
+    "question": "What does the never type represent?",
+    "options": [
+      "Values that should never occur, such as a function that always throws",
+      "A missing value only",
+      "Any primitive value",
+      "Only null"
+    ],
+    "answer": "Values that should never occur, such as a function that always throws"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Narrowing",
+    "difficulty": "Medium",
+    "question": "What is type narrowing?",
+    "options": [
+      "Refining a broader type into a more specific type based on checks",
+      "Converting all values to strings",
+      "Removing type annotations",
+      "Making a type generic"
+    ],
+    "answer": "Refining a broader type into a more specific type based on checks"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Narrowing",
+    "difficulty": "Medium",
+    "question": "Which JavaScript operator is commonly used for primitive type narrowing?",
+    "options": [
+      "typeof",
+      "instanceof-only",
+      "in-only",
+      "as"
+    ],
+    "answer": "typeof"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Narrowing",
+    "difficulty": "Medium",
+    "question": "Which operator can narrow based on class constructor relationships?",
+    "options": [
+      "instanceof",
+      "typeof",
+      "in",
+      "extends"
+    ],
+    "answer": "instanceof"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Narrowing",
+    "difficulty": "Medium",
+    "question": "Which operator can narrow object unions by checking whether a property exists?",
+    "options": [
+      "in",
+      "typeof",
+      "as",
+      "new"
+    ],
+    "answer": "in"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Type Assertions",
+    "difficulty": "Medium",
+    "question": "What does a type assertion do?",
+    "options": [
+      "Tells the compiler to treat a value as a specified type without runtime validation",
+      "Converts the runtime value automatically",
+      "Validates API data at runtime",
+      "Changes JavaScript output behavior"
+    ],
+    "answer": "Tells the compiler to treat a value as a specified type without runtime validation"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Type Assertions",
+    "difficulty": "Medium",
+    "question": "Which syntax is commonly used for a type assertion?",
+    "options": [
+      "value as Type",
+      "value -> Type",
+      "Type(value) always",
+      "value: Type at runtime"
+    ],
+    "answer": "value as Type"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Interfaces",
+    "difficulty": "Medium",
+    "question": "Can interfaces extend other interfaces?",
+    "options": [
+      "Yes",
+      "No",
+      "Only classes can",
+      "Only one time in a project"
+    ],
+    "answer": "Yes"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Interfaces",
+    "difficulty": "Medium",
+    "question": "Can multiple interface declarations with the same name merge?",
+    "options": [
+      "Yes, interfaces support declaration merging",
+      "No, never",
+      "Only type aliases merge",
+      "Only enums merge"
+    ],
+    "answer": "Yes, interfaces support declaration merging"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Type Aliases",
+    "difficulty": "Medium",
+    "question": "Can type aliases participate in declaration merging like interfaces?",
+    "options": [
+      "No",
+      "Yes, always",
+      "Only for primitives",
+      "Only with classes"
+    ],
+    "answer": "No"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Intersections",
+    "difficulty": "Medium",
+    "question": "Which operator creates an intersection type?",
+    "options": [
+      "&",
+      "|",
+      "+",
+      "&& only"
+    ],
+    "answer": "&"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Intersections",
+    "difficulty": "Medium",
+    "question": "What does A & B mean for object types?",
+    "options": [
+      "A value must satisfy both A and B",
+      "A value may satisfy either A or B",
+      "A extends B automatically",
+      "A excludes B"
+    ],
+    "answer": "A value must satisfy both A and B"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Generics",
+    "difficulty": "Medium",
+    "question": "What are generics used for?",
+    "options": [
+      "Writing reusable code that works with multiple types while preserving type information",
+      "Removing all types",
+      "Creating runtime enums only",
+      "Avoiding functions"
+    ],
+    "answer": "Writing reusable code that works with multiple types while preserving type information"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Generics",
+    "difficulty": "Medium",
+    "question": "Which syntax commonly declares a generic type parameter T?",
+    "options": [
+      "<T>",
+      "[T]",
+      "{T}",
+      "(T)"
+    ],
+    "answer": "<T>"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Generics",
+    "difficulty": "Medium",
+    "question": "What does a generic constraint do?",
+    "options": [
+      "Limits which types may be used for a generic parameter",
+      "Removes the generic parameter",
+      "Converts all values to one type",
+      "Creates a union automatically"
+    ],
+    "answer": "Limits which types may be used for a generic parameter"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Generics",
+    "difficulty": "Medium",
+    "question": "Which syntax constrains T to types compatible with U?",
+    "options": [
+      "T extends U",
+      "T implements U",
+      "T as U",
+      "T in U"
+    ],
+    "answer": "T extends U"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Keyof",
+    "difficulty": "Medium",
+    "question": "What does keyof T produce?",
+    "options": [
+      "A union of property keys of T",
+      "A list of property values",
+      "A runtime array",
+      "A boolean"
+    ],
+    "answer": "A union of property keys of T"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Indexed Access",
+    "difficulty": "Medium",
+    "question": "What does T[K] represent in a type position?",
+    "options": [
+      "The type of property K on T",
+      "A runtime property lookup only",
+      "A generic array",
+      "A tuple length"
+    ],
+    "answer": "The type of property K on T"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Readonly",
+    "difficulty": "Medium",
+    "question": "What does readonly on a property mean?",
+    "options": [
+      "The property cannot be reassigned through that type after initialization",
+      "The property is hidden",
+      "The property is private",
+      "The property is removed at runtime"
+    ],
+    "answer": "The property cannot be reassigned through that type after initialization"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Readonly",
+    "difficulty": "Medium",
+    "question": "Does readonly guarantee deep immutability?",
+    "options": [
+      "No, nested objects can still be mutable unless also constrained",
+      "Yes, always",
+      "Only for arrays",
+      "Only for classes"
+    ],
+    "answer": "No, nested objects can still be mutable unless also constrained"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Optional Parameters",
+    "difficulty": "Medium",
+    "question": "How do you mark a function parameter as optional?",
+    "options": [
+      "Add ? after the parameter name",
+      "Use * before the name",
+      "Use optional keyword",
+      "Use | undefined only and nothing else"
+    ],
+    "answer": "Add ? after the parameter name"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Default Parameters",
+    "difficulty": "Medium",
+    "question": "What happens when a default parameter value is provided and the argument is omitted?",
+    "options": [
+      "The default value is used",
+      "The function throws automatically",
+      "The parameter becomes never",
+      "The parameter becomes null only"
+    ],
+    "answer": "The default value is used"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Function Overloads",
+    "difficulty": "Medium",
+    "question": "What are function overload signatures used for?",
+    "options": [
+      "Describing multiple valid call signatures for one implementation",
+      "Creating multiple runtime functions automatically",
+      "Replacing generics entirely",
+      "Declaring async functions only"
+    ],
+    "answer": "Describing multiple valid call signatures for one implementation"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Classes",
+    "difficulty": "Medium",
+    "question": "What does an abstract class represent?",
+    "options": [
+      "A base class that cannot be instantiated directly and may contain abstract members",
+      "A class with no methods",
+      "A runtime interface only",
+      "A final class"
+    ],
+    "answer": "A base class that cannot be instantiated directly and may contain abstract members"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Classes",
+    "difficulty": "Medium",
+    "question": "Which keyword marks an abstract class member?",
+    "options": [
+      "abstract",
+      "virtual",
+      "override-only",
+      "interface"
+    ],
+    "answer": "abstract"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Classes",
+    "difficulty": "Medium",
+    "question": "What does protected mean on a class member?",
+    "options": [
+      "Accessible within the class and its subclasses",
+      "Accessible everywhere",
+      "Accessible only outside the class",
+      "Equivalent to private"
+    ],
+    "answer": "Accessible within the class and its subclasses"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Classes",
+    "difficulty": "Medium",
+    "question": "What does static mean on a class member?",
+    "options": [
+      "The member belongs to the class itself rather than instances",
+      "The member cannot change",
+      "The member is private",
+      "The member is abstract"
+    ],
+    "answer": "The member belongs to the class itself rather than instances"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Utility Types",
+    "difficulty": "Medium",
+    "question": "What does Partial<T> do?",
+    "options": [
+      "Makes all properties of T optional",
+      "Makes all properties required",
+      "Removes all properties",
+      "Makes all properties readonly"
+    ],
+    "answer": "Makes all properties of T optional"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Utility Types",
+    "difficulty": "Medium",
+    "question": "What does Required<T> do?",
+    "options": [
+      "Makes all optional properties of T required",
+      "Makes all properties optional",
+      "Makes T generic",
+      "Removes readonly"
+    ],
+    "answer": "Makes all optional properties of T required"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Utility Types",
+    "difficulty": "Medium",
+    "question": "What does Readonly<T> do?",
+    "options": [
+      "Makes all properties of T readonly",
+      "Makes T immutable at runtime",
+      "Removes methods",
+      "Makes every property optional"
+    ],
+    "answer": "Makes all properties of T readonly"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Utility Types",
+    "difficulty": "Medium",
+    "question": "What does Pick<T, K> do?",
+    "options": [
+      "Creates a type using selected properties K from T",
+      "Removes K from T",
+      "Makes K optional",
+      "Creates a union of values"
+    ],
+    "answer": "Creates a type using selected properties K from T"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Utility Types",
+    "difficulty": "Medium",
+    "question": "What does Omit<T, K> do?",
+    "options": [
+      "Creates a type from T without properties K",
+      "Selects only K",
+      "Makes K readonly",
+      "Makes T optional"
+    ],
+    "answer": "Creates a type from T without properties K"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Conditional Types",
+    "difficulty": "Hard",
+    "question": "What is a conditional type?",
+    "options": [
+      "A type that selects one type or another based on an assignability condition",
+      "A runtime if statement",
+      "A union with booleans only",
+      "A generic class"
+    ],
+    "answer": "A type that selects one type or another based on an assignability condition"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Conditional Types",
+    "difficulty": "Hard",
+    "question": "Which syntax is used for a conditional type?",
+    "options": [
+      "T extends U ? X : Y",
+      "if T extends U then X else Y",
+      "T ? U : X",
+      "T in U => X"
+    ],
+    "answer": "T extends U ? X : Y"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Conditional Types",
+    "difficulty": "Hard",
+    "question": "What is a distributive conditional type?",
+    "options": [
+      "A conditional type that distributes over union members when the checked type is a naked type parameter",
+      "A conditional that runs at runtime",
+      "A mapped type over object keys only",
+      "A union that becomes an intersection automatically"
+    ],
+    "answer": "A conditional type that distributes over union members when the checked type is a naked type parameter"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Infer",
+    "difficulty": "Hard",
+    "question": "What does infer do inside a conditional type?",
+    "options": [
+      "Introduces a type variable inferred from a matched structure",
+      "Runs JavaScript inference at runtime",
+      "Declares a generic constraint only",
+      "Converts unknown to any"
+    ],
+    "answer": "Introduces a type variable inferred from a matched structure"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Mapped Types",
+    "difficulty": "Hard",
+    "question": "What is a mapped type?",
+    "options": [
+      "A type created by iterating over a set of property keys",
+      "A runtime object map",
+      "A generic function only",
+      "A tuple transformation only"
+    ],
+    "answer": "A type created by iterating over a set of property keys"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Mapped Types",
+    "difficulty": "Hard",
+    "question": "Which syntax is central to mapped types?",
+    "options": [
+      "[K in keyof T]",
+      "for K of T",
+      "K extends keyof T only",
+      "map<T>()"
+    ],
+    "answer": "[K in keyof T]"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Mapped Types",
+    "difficulty": "Hard",
+    "question": "Can mapped types add or remove readonly and optional modifiers?",
+    "options": [
+      "Yes",
+      "No",
+      "Only readonly can change",
+      "Only optional can change"
+    ],
+    "answer": "Yes"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Template Literal Types",
+    "difficulty": "Hard",
+    "question": "What are template literal types used for?",
+    "options": [
+      "Constructing string literal types from other literal types",
+      "Formatting runtime strings only",
+      "Creating JSX",
+      "Defining regex at runtime"
+    ],
+    "answer": "Constructing string literal types from other literal types"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Discriminated Unions",
+    "difficulty": "Hard",
+    "question": "What is a discriminated union?",
+    "options": [
+      "A union of object types sharing a literal property used to distinguish variants",
+      "A union of only primitive values",
+      "An intersection type",
+      "A tuple union"
+    ],
+    "answer": "A union of object types sharing a literal property used to distinguish variants"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Exhaustiveness",
+    "difficulty": "Hard",
+    "question": "How is never often used in exhaustive switch checks?",
+    "options": [
+      "To ensure no union variant remains unhandled",
+      "To represent undefined",
+      "To disable strict mode",
+      "To convert unions to any"
+    ],
+    "answer": "To ensure no union variant remains unhandled"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Variance",
+    "difficulty": "Hard",
+    "question": "What does covariance generally describe?",
+    "options": [
+      "Type compatibility that follows the same direction as the related type parameter",
+      "Compatibility that reverses direction",
+      "No relationship between types",
+      "Runtime inheritance only"
+    ],
+    "answer": "Type compatibility that follows the same direction as the related type parameter"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Variance",
+    "difficulty": "Hard",
+    "question": "What does contravariance generally describe?",
+    "options": [
+      "Type compatibility that reverses direction for a type parameter",
+      "The same direction as covariance",
+      "A type alias merge",
+      "Runtime narrowing"
+    ],
+    "answer": "Type compatibility that reverses direction for a type parameter"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Structural Typing",
+    "difficulty": "Hard",
+    "question": "What does structural typing mean in TypeScript?",
+    "options": [
+      "Compatibility is based mainly on the shape of values rather than explicit nominal declarations",
+      "Types must share the same class name",
+      "Only inheritance determines compatibility",
+      "Runtime prototypes are always checked"
+    ],
+    "answer": "Compatibility is based mainly on the shape of values rather than explicit nominal declarations"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Excess Property Checks",
+    "difficulty": "Hard",
+    "question": "What are excess property checks intended to catch?",
+    "options": [
+      "Unexpected properties in certain object literal assignments",
+      "Missing runtime methods",
+      "Extra array elements only",
+      "Unused imports"
+    ],
+    "answer": "Unexpected properties in certain object literal assignments"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Declaration Files",
+    "difficulty": "Hard",
+    "question": "What is a .d.ts file?",
+    "options": [
+      "A declaration file describing TypeScript types without implementation code",
+      "A compiled JavaScript file",
+      "A runtime module",
+      "A test file"
+    ],
+    "answer": "A declaration file describing TypeScript types without implementation code"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Declaration Files",
+    "difficulty": "Hard",
+    "question": "What is DefinitelyTyped?",
+    "options": [
+      "A repository of community-maintained type declarations for many JavaScript libraries",
+      "A TypeScript compiler mode",
+      "A runtime type checker",
+      "A bundler"
+    ],
+    "answer": "A repository of community-maintained type declarations for many JavaScript libraries"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "tsconfig",
+    "difficulty": "Hard",
+    "question": "What is tsconfig.json used for?",
+    "options": [
+      "Configuring TypeScript compiler options and project files",
+      "Managing npm package versions only",
+      "Storing runtime environment variables",
+      "Defining HTTP routes"
+    ],
+    "answer": "Configuring TypeScript compiler options and project files"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Strict Mode",
+    "difficulty": "Hard",
+    "question": "What does the strict compiler option broadly enable?",
+    "options": [
+      "A family of stricter type-checking options",
+      "Runtime validation",
+      "Automatic code formatting",
+      "ESLint rules only"
+    ],
+    "answer": "A family of stricter type-checking options"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Strict Null Checks",
+    "difficulty": "Hard",
+    "question": "What does strictNullChecks change?",
+    "options": [
+      "null and undefined become distinct types that must be handled explicitly",
+      "null becomes the same as any",
+      "undefined is removed from JavaScript",
+      "All variables become optional"
+    ],
+    "answer": "null and undefined become distinct types that must be handled explicitly"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "No Implicit Any",
+    "difficulty": "Hard",
+    "question": "What does noImplicitAny help detect?",
+    "options": [
+      "Places where TypeScript would otherwise infer any without an explicit annotation",
+      "Any explicit use of any",
+      "All JavaScript imports",
+      "Runtime type mismatches"
+    ],
+    "answer": "Places where TypeScript would otherwise infer any without an explicit annotation"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Generics",
+    "difficulty": "Hard",
+    "question": "Why is a generic function often safer than using any?",
+    "options": [
+      "It preserves relationships between input and output types",
+      "It disables type checking",
+      "It performs runtime validation automatically",
+      "It avoids compilation"
+    ],
+    "answer": "It preserves relationships between input and output types"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Generics",
+    "difficulty": "Hard",
+    "question": "What does a constraint like T extends { id: string } guarantee?",
+    "options": [
+      "T must have at least an id property of type string",
+      "T must equal exactly that object type",
+      "T cannot have other properties",
+      "T becomes a class"
+    ],
+    "answer": "T must have at least an id property of type string"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Indexed Access",
+    "difficulty": "Hard",
+    "question": "What does T[keyof T] often represent?",
+    "options": [
+      "A union of the value types of T's properties",
+      "A union of the keys only",
+      "The runtime values of T",
+      "A mapped type"
+    ],
+    "answer": "A union of the value types of T's properties"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Utility Types",
+    "difficulty": "Hard",
+    "question": "What does Record<K, V> represent?",
+    "options": [
+      "An object type with keys K and values V",
+      "A tuple of K and V",
+      "A runtime Map only",
+      "A database record"
+    ],
+    "answer": "An object type with keys K and values V"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Utility Types",
+    "difficulty": "Hard",
+    "question": "What does Exclude<T, U> do?",
+    "options": [
+      "Removes from T the union members assignable to U",
+      "Keeps only members assignable to U",
+      "Turns T into U",
+      "Creates an intersection"
+    ],
+    "answer": "Removes from T the union members assignable to U"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Utility Types",
+    "difficulty": "Hard",
+    "question": "What does Extract<T, U> do?",
+    "options": [
+      "Keeps from T the union members assignable to U",
+      "Removes U from T",
+      "Converts T to an object",
+      "Makes T optional"
+    ],
+    "answer": "Keeps from T the union members assignable to U"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Utility Types",
+    "difficulty": "Hard",
+    "question": "What does NonNullable<T> do?",
+    "options": [
+      "Removes null and undefined from T",
+      "Makes all properties required",
+      "Makes T readonly",
+      "Removes never"
+    ],
+    "answer": "Removes null and undefined from T"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Utility Types",
+    "difficulty": "Hard",
+    "question": "What does ReturnType<F> obtain?",
+    "options": [
+      "The return type of a function type F",
+      "The parameter types only",
+      "The runtime return value",
+      "A function's name"
+    ],
+    "answer": "The return type of a function type F"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Utility Types",
+    "difficulty": "Hard",
+    "question": "What does Parameters<F> produce?",
+    "options": [
+      "A tuple of the parameter types of function type F",
+      "The return type",
+      "A runtime arguments array",
+      "A union of parameter names"
+    ],
+    "answer": "A tuple of the parameter types of function type F"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Decorators",
+    "difficulty": "Hard",
+    "question": "What are decorators conceptually used for in TypeScript ecosystems?",
+    "options": [
+      "Attaching metadata or transformation behavior to declarations under supported decorator semantics",
+      "Replacing interfaces",
+      "Creating runtime types automatically",
+      "Compiling CSS"
+    ],
+    "answer": "Attaching metadata or transformation behavior to declarations under supported decorator semantics"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Runtime Types",
+    "difficulty": "Hard",
+    "question": "Does TypeScript normally enforce type annotations at runtime after compilation?",
+    "options": [
+      "No",
+      "Yes, always",
+      "Only for interfaces",
+      "Only for generics"
+    ],
+    "answer": "No"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Runtime Validation",
+    "difficulty": "Hard",
+    "question": "Why is runtime validation still needed for API data?",
+    "options": [
+      "External data can violate compile-time assumptions because TypeScript types are erased",
+      "The compiler validates HTTP responses automatically",
+      "Interfaces become runtime validators",
+      "JSON is always type-safe"
+    ],
+    "answer": "External data can violate compile-time assumptions because TypeScript types are erased"
+  },
+  {
+    "subject": "TypeScript",
+    "topic": "Type Erasure",
+    "difficulty": "Hard",
+    "question": "What is type erasure in TypeScript?",
+    "options": [
+      "Most type annotations are removed when compiling to JavaScript",
+      "Types are encrypted",
+      "Types are stored in the browser",
+      "The compiler deletes runtime values"
+    ],
+    "answer": "Most type annotations are removed when compiling to JavaScript"
+  }
+]
