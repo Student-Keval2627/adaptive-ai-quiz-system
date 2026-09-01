@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "Java",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which method is the usual entry point of a Java application?",
+    "options": [
+      "main()",
+      "start()",
+      "run()",
+      "init()"
+    ],
+    "answer": "main()"
+  },
+  {
+    "subject": "Java",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which keyword is used to define a class in Java?",
+    "options": [
+      "class",
+      "struct",
+      "object",
+      "type"
+    ],
+    "answer": "class"
+  },
+  {
+    "subject": "Java",
+    "topic": "Data Types",
+    "difficulty": "Easy",
+    "question": "Which primitive type stores whole numbers commonly using 32 bits?",
+    "options": [
+      "int",
+      "float",
+      "char",
+      "boolean"
+    ],
+    "answer": "int"
+  },
+  {
+    "subject": "Java",
+    "topic": "Data Types",
+    "difficulty": "Easy",
+    "question": "Which primitive type stores true or false values?",
+    "options": [
+      "boolean",
+      "bool",
+      "int",
+      "char"
+    ],
+    "answer": "boolean"
+  },
+  {
+    "subject": "Java",
+    "topic": "Data Types",
+    "difficulty": "Easy",
+    "question": "Which primitive type stores a single Unicode character?",
+    "options": [
+      "char",
+      "String",
+      "byte",
+      "text"
+    ],
+    "answer": "char"
+  },
+  {
+    "subject": "Java",
+    "topic": "Strings",
+    "difficulty": "Easy",
+    "question": "Which class is commonly used to store text in Java?",
+    "options": [
+      "String",
+      "Text",
+      "CharArray",
+      "StringBufferOnly"
+    ],
+    "answer": "String"
+  },
+  {
+    "subject": "Java",
+    "topic": "Operators",
+    "difficulty": "Easy",
+    "question": "Which operator checks equality between primitive values?",
+    "options": [
+      "==",
+      "=",
+      "===",
+      "!="
+    ],
+    "answer": "=="
+  },
+  {
+    "subject": "Java",
+    "topic": "Operators",
+    "difficulty": "Easy",
+    "question": "Which operator represents logical AND in Java?",
+    "options": [
+      "&&",
+      "||",
+      "&|",
+      "and"
+    ],
+    "answer": "&&"
+  },
+  {
+    "subject": "Java",
+    "topic": "Operators",
+    "difficulty": "Easy",
+    "question": "Which operator gives the remainder after integer division?",
+    "options": [
+      "%",
+      "/",
+      "//",
+      "rem"
+    ],
+    "answer": "%"
+  },
+  {
+    "subject": "Java",
+    "topic": "Conditions",
+    "difficulty": "Easy",
+    "question": "Which keyword begins a conditional statement in Java?",
+    "options": [
+      "if",
+      "when",
+      "case",
+      "check"
+    ],
+    "answer": "if"
+  },
+  {
+    "subject": "Java",
+    "topic": "Conditions",
+    "difficulty": "Easy",
+    "question": "Which keyword provides an alternative branch after if?",
+    "options": [
+      "else",
+      "otherwise",
+      "elif",
+      "then"
+    ],
+    "answer": "else"
+  },
+  {
+    "subject": "Java",
+    "topic": "Loops",
+    "difficulty": "Easy",
+    "question": "Which loop is commonly used when the number of iterations is known?",
+    "options": [
+      "for",
+      "switch",
+      "if",
+      "try"
+    ],
+    "answer": "for"
+  },
+  {
+    "subject": "Java",
+    "topic": "Loops",
+    "difficulty": "Easy",
+    "question": "Which keyword exits a loop immediately?",
+    "options": [
+      "break",
+      "stop",
+      "exit",
+      "returnloop"
+    ],
+    "answer": "break"
+  },
+  {
+    "subject": "Java",
+    "topic": "Loops",
+    "difficulty": "Easy",
+    "question": "Which keyword skips the rest of the current loop iteration?",
+    "options": [
+      "continue",
+      "skip",
+      "next",
+      "pass"
+    ],
+    "answer": "continue"
+  },
+  {
+    "subject": "Java",
+    "topic": "Arrays",
+    "difficulty": "Easy",
+    "question": "What is the index of the first element in a Java array?",
+    "options": [
+      "0",
+      "1",
+      "-1",
+      "Depends on type"
+    ],
+    "answer": "0"
+  },
+  {
+    "subject": "Java",
+    "topic": "Arrays",
+    "difficulty": "Easy",
+    "question": "Which declaration creates an array of 5 integers?",
+    "options": [
+      "int[] a = new int[5];",
+      "int a = new int[5];",
+      "array<int> a(5);",
+      "int a[5];"
+    ],
+    "answer": "int[] a = new int[5];"
+  },
+  {
+    "subject": "Java",
+    "topic": "Methods",
+    "difficulty": "Easy",
+    "question": "Which keyword sends a value back from a Java method?",
+    "options": [
+      "return",
+      "yield",
+      "send",
+      "back"
+    ],
+    "answer": "return"
+  },
+  {
+    "subject": "Java",
+    "topic": "Methods",
+    "difficulty": "Easy",
+    "question": "Which return type is used when a method returns no value?",
+    "options": [
+      "void",
+      "none",
+      "null",
+      "empty"
+    ],
+    "answer": "void"
+  },
+  {
+    "subject": "Java",
+    "topic": "OOP",
+    "difficulty": "Easy",
+    "question": "Which keyword creates a new object?",
+    "options": [
+      "new",
+      "create",
+      "make",
+      "alloc"
+    ],
+    "answer": "new"
+  },
+  {
+    "subject": "Java",
+    "topic": "OOP",
+    "difficulty": "Easy",
+    "question": "Which keyword refers to the current object inside an instance method?",
+    "options": [
+      "this",
+      "self",
+      "current",
+      "object"
+    ],
+    "answer": "this"
+  },
+  {
+    "subject": "Java",
+    "topic": "Inheritance",
+    "difficulty": "Easy",
+    "question": "Which keyword is used for class inheritance in Java?",
+    "options": [
+      "extends",
+      "inherits",
+      "implements",
+      "super"
+    ],
+    "answer": "extends"
+  },
+  {
+    "subject": "Java",
+    "topic": "Interfaces",
+    "difficulty": "Easy",
+    "question": "Which keyword is used when a class provides implementations for an interface?",
+    "options": [
+      "implements",
+      "extends",
+      "inherits",
+      "uses"
+    ],
+    "answer": "implements"
+  },
+  {
+    "subject": "Java",
+    "topic": "Access Modifiers",
+    "difficulty": "Easy",
+    "question": "Which access modifier allows a member to be accessed from anywhere?",
+    "options": [
+      "public",
+      "private",
+      "protected",
+      "package"
+    ],
+    "answer": "public"
+  },
+  {
+    "subject": "Java",
+    "topic": "Access Modifiers",
+    "difficulty": "Easy",
+    "question": "Which access modifier restricts a member to its own class?",
+    "options": [
+      "private",
+      "public",
+      "protected",
+      "global"
+    ],
+    "answer": "private"
+  },
+  {
+    "subject": "Java",
+    "topic": "Constructors",
+    "difficulty": "Easy",
+    "question": "What special member is called when an object is created?",
+    "options": [
+      "Constructor",
+      "Destructor",
+      "Interface",
+      "Package"
+    ],
+    "answer": "Constructor"
+  },
+  {
+    "subject": "Java",
+    "topic": "Exceptions",
+    "difficulty": "Easy",
+    "question": "Which block contains code that may throw an exception?",
+    "options": [
+      "try",
+      "catch",
+      "throw",
+      "finallyonly"
+    ],
+    "answer": "try"
+  },
+  {
+    "subject": "Java",
+    "topic": "Exceptions",
+    "difficulty": "Easy",
+    "question": "Which block handles a matching exception?",
+    "options": [
+      "catch",
+      "except",
+      "handle",
+      "error"
+    ],
+    "answer": "catch"
+  },
+  {
+    "subject": "Java",
+    "topic": "Packages",
+    "difficulty": "Easy",
+    "question": "Which keyword declares a package at the top of a Java source file?",
+    "options": [
+      "package",
+      "namespace",
+      "module",
+      "using"
+    ],
+    "answer": "package"
+  },
+  {
+    "subject": "Java",
+    "topic": "Collections",
+    "difficulty": "Easy",
+    "question": "Which interface represents an ordered collection that can contain duplicates?",
+    "options": [
+      "List",
+      "Set",
+      "Map",
+      "QueueOnly"
+    ],
+    "answer": "List"
+  },
+  {
+    "subject": "Java",
+    "topic": "Collections",
+    "difficulty": "Easy",
+    "question": "Which interface represents a collection that does not allow duplicate elements?",
+    "options": [
+      "Set",
+      "List",
+      "Map",
+      "Array"
+    ],
+    "answer": "Set"
+  },
+  {
+    "subject": "Java",
+    "topic": "Collections",
+    "difficulty": "Easy",
+    "question": "Which interface stores key-value associations?",
+    "options": [
+      "Map",
+      "List",
+      "Set",
+      "CollectionOnly"
+    ],
+    "answer": "Map"
+  },
+  {
+    "subject": "Java",
+    "topic": "Output",
+    "difficulty": "Easy",
+    "question": "Which expression prints a line to standard output?",
+    "options": [
+      "System.out.println()",
+      "System.in.println()",
+      "Console.writeLine()",
+      "print.line()"
+    ],
+    "answer": "System.out.println()"
+  },
+  {
+    "subject": "Java",
+    "topic": "Static",
+    "difficulty": "Easy",
+    "question": "Which keyword marks a member as belonging to the class rather than each object?",
+    "options": [
+      "static",
+      "global",
+      "shared",
+      "classonly"
+    ],
+    "answer": "static"
+  },
+  {
+    "subject": "Java",
+    "topic": "Final",
+    "difficulty": "Easy",
+    "question": "Which keyword can make a variable assignable only once?",
+    "options": [
+      "final",
+      "const",
+      "fixed",
+      "readonly"
+    ],
+    "answer": "final"
+  },
+  {
+    "subject": "Java",
+    "topic": "Strings",
+    "difficulty": "Medium",
+    "question": "Which method compares the contents of two String objects?",
+    "options": [
+      "equals()",
+      "==",
+      "compareRef()",
+      "same()"
+    ],
+    "answer": "equals()"
+  },
+  {
+    "subject": "Java",
+    "topic": "Strings",
+    "difficulty": "Medium",
+    "question": "Why is String considered immutable in Java?",
+    "options": [
+      "Its value cannot be changed after the String object is created",
+      "It cannot be stored in variables",
+      "It cannot be compared",
+      "It is always static"
+    ],
+    "answer": "Its value cannot be changed after the String object is created"
+  },
+  {
+    "subject": "Java",
+    "topic": "Strings",
+    "difficulty": "Medium",
+    "question": "Which mutable class is commonly used for efficient string building in single-threaded code?",
+    "options": [
+      "StringBuilder",
+      "String",
+      "Character",
+      "TextBuilderOnly"
+    ],
+    "answer": "StringBuilder"
+  },
+  {
+    "subject": "Java",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "What is method overloading?",
+    "options": [
+      "Defining methods with the same name but different parameter lists",
+      "Replacing a superclass method only",
+      "Calling a method recursively",
+      "Using private methods"
+    ],
+    "answer": "Defining methods with the same name but different parameter lists"
+  },
+  {
+    "subject": "Java",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "What is method overriding?",
+    "options": [
+      "A subclass provides a new implementation of an inherited method with a compatible signature",
+      "Two methods share a name in one class with different parameters",
+      "A method calls itself",
+      "A method becomes static"
+    ],
+    "answer": "A subclass provides a new implementation of an inherited method with a compatible signature"
+  },
+  {
+    "subject": "Java",
+    "topic": "Inheritance",
+    "difficulty": "Medium",
+    "question": "Which keyword accesses members of the immediate superclass?",
+    "options": [
+      "super",
+      "base",
+      "parent",
+      "this"
+    ],
+    "answer": "super"
+  },
+  {
+    "subject": "Java",
+    "topic": "Polymorphism",
+    "difficulty": "Medium",
+    "question": "What enables runtime polymorphism in Java?",
+    "options": [
+      "Method overriding with dynamic method dispatch",
+      "Only method overloading",
+      "Static methods",
+      "Primitive conversion"
+    ],
+    "answer": "Method overriding with dynamic method dispatch"
+  },
+  {
+    "subject": "Java",
+    "topic": "Abstract Classes",
+    "difficulty": "Medium",
+    "question": "Which keyword declares an abstract class or method?",
+    "options": [
+      "abstract",
+      "virtual",
+      "interfaceonly",
+      "partial"
+    ],
+    "answer": "abstract"
+  },
+  {
+    "subject": "Java",
+    "topic": "Interfaces",
+    "difficulty": "Medium",
+    "question": "Can a Java class implement more than one interface?",
+    "options": [
+      "Yes",
+      "No",
+      "Only if final",
+      "Only if abstract"
+    ],
+    "answer": "Yes"
+  },
+  {
+    "subject": "Java",
+    "topic": "Constructors",
+    "difficulty": "Medium",
+    "question": "Can constructors be inherited by subclasses in Java?",
+    "options": [
+      "No",
+      "Yes, always",
+      "Only public constructors",
+      "Only default constructors"
+    ],
+    "answer": "No"
+  },
+  {
+    "subject": "Java",
+    "topic": "Constructors",
+    "difficulty": "Medium",
+    "question": "Which statement can invoke another constructor in the same class?",
+    "options": [
+      "this(...)",
+      "super(...)",
+      "self(...)",
+      "newthis(...)"
+    ],
+    "answer": "this(...)"
+  },
+  {
+    "subject": "Java",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "Which keyword explicitly throws an exception object?",
+    "options": [
+      "throw",
+      "throws",
+      "raise",
+      "except"
+    ],
+    "answer": "throw"
+  },
+  {
+    "subject": "Java",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "What does the throws clause in a method declaration indicate?",
+    "options": [
+      "Exceptions that the method may propagate to its caller",
+      "Exceptions already caught by the method",
+      "A loop exit condition",
+      "A constructor call"
+    ],
+    "answer": "Exceptions that the method may propagate to its caller"
+  },
+  {
+    "subject": "Java",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "Which block normally executes whether or not an exception is thrown?",
+    "options": [
+      "finally",
+      "catch",
+      "throw",
+      "throws"
+    ],
+    "answer": "finally"
+  },
+  {
+    "subject": "Java",
+    "topic": "Collections",
+    "difficulty": "Medium",
+    "question": "Which class is a resizable-array implementation of List?",
+    "options": [
+      "ArrayList",
+      "LinkedHashSet",
+      "HashMap",
+      "TreeMap"
+    ],
+    "answer": "ArrayList"
+  },
+  {
+    "subject": "Java",
+    "topic": "Collections",
+    "difficulty": "Medium",
+    "question": "Which class implements List using a doubly linked list?",
+    "options": [
+      "LinkedList",
+      "ArrayList",
+      "HashSet",
+      "VectorMap"
+    ],
+    "answer": "LinkedList"
+  },
+  {
+    "subject": "Java",
+    "topic": "Collections",
+    "difficulty": "Medium",
+    "question": "Which class is a hash-table based implementation of Map?",
+    "options": [
+      "HashMap",
+      "TreeMap",
+      "ArrayList",
+      "HashSetOnly"
+    ],
+    "answer": "HashMap"
+  },
+  {
+    "subject": "Java",
+    "topic": "Collections",
+    "difficulty": "Medium",
+    "question": "Which class keeps map keys sorted according to natural order or a comparator?",
+    "options": [
+      "TreeMap",
+      "HashMap",
+      "LinkedList",
+      "ArrayDeque"
+    ],
+    "answer": "TreeMap"
+  },
+  {
+    "subject": "Java",
+    "topic": "Collections",
+    "difficulty": "Medium",
+    "question": "Which class is commonly used as a hash-based Set implementation?",
+    "options": [
+      "HashSet",
+      "ArrayList",
+      "HashMap",
+      "TreeMap"
+    ],
+    "answer": "HashSet"
+  },
+  {
+    "subject": "Java",
+    "topic": "Generics",
+    "difficulty": "Medium",
+    "question": "What is a major purpose of generics in Java?",
+    "options": [
+      "Provide type-safe reusable classes and methods",
+      "Disable inheritance",
+      "Replace exceptions",
+      "Create primitive-only classes"
+    ],
+    "answer": "Provide type-safe reusable classes and methods"
+  },
+  {
+    "subject": "Java",
+    "topic": "Generics",
+    "difficulty": "Medium",
+    "question": "Which syntax declares a generic class with type parameter T?",
+    "options": [
+      "class Box<T>",
+      "class Box(T)",
+      "generic Box<T>",
+      "class<T> Box"
+    ],
+    "answer": "class Box<T>"
+  },
+  {
+    "subject": "Java",
+    "topic": "Enums",
+    "difficulty": "Medium",
+    "question": "What is an enum used for?",
+    "options": [
+      "Representing a fixed set of named constants",
+      "Creating dynamic arrays",
+      "Replacing interfaces",
+      "Managing threads"
+    ],
+    "answer": "Representing a fixed set of named constants"
+  },
+  {
+    "subject": "Java",
+    "topic": "Wrappers",
+    "difficulty": "Medium",
+    "question": "Which wrapper class corresponds to primitive int?",
+    "options": [
+      "Integer",
+      "Int",
+      "NumberInt",
+      "Long"
+    ],
+    "answer": "Integer"
+  },
+  {
+    "subject": "Java",
+    "topic": "Autoboxing",
+    "difficulty": "Medium",
+    "question": "What is autoboxing?",
+    "options": [
+      "Automatic conversion from a primitive to its corresponding wrapper object",
+      "Automatic conversion from String to int only",
+      "Object cloning",
+      "Garbage collection"
+    ],
+    "answer": "Automatic conversion from a primitive to its corresponding wrapper object"
+  },
+  {
+    "subject": "Java",
+    "topic": "Files",
+    "difficulty": "Medium",
+    "question": "Which class represents a path in the modern java.nio.file API?",
+    "options": [
+      "Path",
+      "FilePathOnly",
+      "Route",
+      "Location"
+    ],
+    "answer": "Path"
+  },
+  {
+    "subject": "Java",
+    "topic": "Streams",
+    "difficulty": "Medium",
+    "question": "What is the Java Stream API mainly used for?",
+    "options": [
+      "Declarative processing of data sequences",
+      "Reading only network sockets",
+      "Creating threads directly",
+      "Replacing classes"
+    ],
+    "answer": "Declarative processing of data sequences"
+  },
+  {
+    "subject": "Java",
+    "topic": "Lambdas",
+    "difficulty": "Medium",
+    "question": "What does a lambda expression provide in Java?",
+    "options": [
+      "A concise implementation of a functional interface",
+      "A new primitive type",
+      "Multiple class inheritance",
+      "Direct memory access"
+    ],
+    "answer": "A concise implementation of a functional interface"
+  },
+  {
+    "subject": "Java",
+    "topic": "Functional Interfaces",
+    "difficulty": "Medium",
+    "question": "What is a functional interface?",
+    "options": [
+      "An interface with exactly one abstract method",
+      "An interface with no methods",
+      "A class with static methods only",
+      "An abstract class with one constructor"
+    ],
+    "answer": "An interface with exactly one abstract method"
+  },
+  {
+    "subject": "Java",
+    "topic": "Threads",
+    "difficulty": "Medium",
+    "question": "Which interface can be implemented to define a task for a thread?",
+    "options": [
+      "Runnable",
+      "Comparable",
+      "Serializable",
+      "Iterable"
+    ],
+    "answer": "Runnable"
+  },
+  {
+    "subject": "Java",
+    "topic": "Threads",
+    "difficulty": "Medium",
+    "question": "Which method starts a new Thread's execution?",
+    "options": [
+      "start()",
+      "run() directly",
+      "begin()",
+      "executeThread()"
+    ],
+    "answer": "start()"
+  },
+  {
+    "subject": "Java",
+    "topic": "Synchronization",
+    "difficulty": "Medium",
+    "question": "Which keyword can protect a critical section using an object's monitor?",
+    "options": [
+      "synchronized",
+      "volatileonly",
+      "locked",
+      "atomic"
+    ],
+    "answer": "synchronized"
+  },
+  {
+    "subject": "Java",
+    "topic": "Memory",
+    "difficulty": "Medium",
+    "question": "Which memory area generally stores objects created with new?",
+    "options": [
+      "Heap",
+      "Stack only",
+      "Method parameters only",
+      "CPU register"
+    ],
+    "answer": "Heap"
+  },
+  {
+    "subject": "Java",
+    "topic": "Garbage Collection",
+    "difficulty": "Medium",
+    "question": "What does Java garbage collection primarily reclaim?",
+    "options": [
+      "Heap objects that are no longer reachable",
+      "All local variables immediately",
+      "Static methods",
+      "Primitive constants"
+    ],
+    "answer": "Heap objects that are no longer reachable"
+  },
+  {
+    "subject": "Java",
+    "topic": "JVM",
+    "difficulty": "Hard",
+    "question": "What is bytecode in Java?",
+    "options": [
+      "Platform-independent instructions executed or compiled by the JVM",
+      "Native machine code produced directly by javac only",
+      "Source comments",
+      "Database queries"
+    ],
+    "answer": "Platform-independent instructions executed or compiled by the JVM"
+  },
+  {
+    "subject": "Java",
+    "topic": "JVM",
+    "difficulty": "Hard",
+    "question": "What is the role of the JIT compiler in a JVM?",
+    "options": [
+      "Compile frequently executed bytecode into native machine code at runtime",
+      "Parse Java source before javac",
+      "Allocate only stack variables",
+      "Replace garbage collection"
+    ],
+    "answer": "Compile frequently executed bytecode into native machine code at runtime"
+  },
+  {
+    "subject": "Java",
+    "topic": "Class Loading",
+    "difficulty": "Hard",
+    "question": "What is a class loader responsible for?",
+    "options": [
+      "Loading class definitions into the JVM",
+      "Executing SQL queries",
+      "Creating every object",
+      "Managing only threads"
+    ],
+    "answer": "Loading class definitions into the JVM"
+  },
+  {
+    "subject": "Java",
+    "topic": "Class Loading",
+    "difficulty": "Hard",
+    "question": "What does the parent delegation model of class loading generally do?",
+    "options": [
+      "Ask a parent class loader to load a class before the child tries",
+      "Load child classes before core classes",
+      "Disable bootstrap loading",
+      "Compile classes twice"
+    ],
+    "answer": "Ask a parent class loader to load a class before the child tries"
+  },
+  {
+    "subject": "Java",
+    "topic": "Memory Model",
+    "difficulty": "Hard",
+    "question": "What does the Java Memory Model define?",
+    "options": [
+      "Rules for visibility and ordering of memory actions between threads",
+      "The exact physical RAM layout",
+      "Only garbage collector behavior",
+      "Only stack frame sizes"
+    ],
+    "answer": "Rules for visibility and ordering of memory actions between threads"
+  },
+  {
+    "subject": "Java",
+    "topic": "Concurrency",
+    "difficulty": "Hard",
+    "question": "What problem does the volatile keyword primarily address?",
+    "options": [
+      "Visibility of updates and ordering constraints for a variable between threads",
+      "Mutual exclusion for complex compound operations",
+      "Automatic deadlock prevention",
+      "Object immutability"
+    ],
+    "answer": "Visibility of updates and ordering constraints for a variable between threads"
+  },
+  {
+    "subject": "Java",
+    "topic": "Concurrency",
+    "difficulty": "Hard",
+    "question": "Why is count++ not guaranteed atomic even if count is volatile?",
+    "options": [
+      "It is a read-modify-write sequence containing multiple actions",
+      "volatile disables arithmetic",
+      "++ works only on local variables",
+      "The JVM ignores volatile on integers"
+    ],
+    "answer": "It is a read-modify-write sequence containing multiple actions"
+  },
+  {
+    "subject": "Java",
+    "topic": "Concurrency",
+    "difficulty": "Hard",
+    "question": "Which class provides atomic operations on an int value?",
+    "options": [
+      "AtomicInteger",
+      "Integer",
+      "VolatileInteger",
+      "SynchronizedInt"
+    ],
+    "answer": "AtomicInteger"
+  },
+  {
+    "subject": "Java",
+    "topic": "Concurrency",
+    "difficulty": "Hard",
+    "question": "What is a deadlock?",
+    "options": [
+      "Threads wait indefinitely for resources held by one another",
+      "A thread finishes normally",
+      "A thread sleeps temporarily",
+      "Two threads read the same immutable value"
+    ],
+    "answer": "Threads wait indefinitely for resources held by one another"
+  },
+  {
+    "subject": "Java",
+    "topic": "Concurrency",
+    "difficulty": "Hard",
+    "question": "What does ExecutorService provide?",
+    "options": [
+      "A higher-level API for managing and executing asynchronous tasks",
+      "A replacement for collections",
+      "Automatic serialization",
+      "Class loading"
+    ],
+    "answer": "A higher-level API for managing and executing asynchronous tasks"
+  },
+  {
+    "subject": "Java",
+    "topic": "Concurrency",
+    "difficulty": "Hard",
+    "question": "What is CompletableFuture commonly used for?",
+    "options": [
+      "Composing asynchronous computations",
+      "Creating abstract classes",
+      "Declaring checked exceptions",
+      "Replacing arrays"
+    ],
+    "answer": "Composing asynchronous computations"
+  },
+  {
+    "subject": "Java",
+    "topic": "Collections",
+    "difficulty": "Hard",
+    "question": "Why must keys used in HashMap have a consistent relationship between equals() and hashCode()?",
+    "options": [
+      "Equal keys must produce equal hash codes for correct lookup behavior",
+      "hashCode() controls object lifetime",
+      "equals() is ignored by HashMap",
+      "HashMap sorts by hashCode only"
+    ],
+    "answer": "Equal keys must produce equal hash codes for correct lookup behavior"
+  },
+  {
+    "subject": "Java",
+    "topic": "Collections",
+    "difficulty": "Hard",
+    "question": "What can happen if a HashMap key is mutated in a way that changes its hashCode after insertion?",
+    "options": [
+      "The entry may become difficult or impossible to retrieve using the mutated key",
+      "The map automatically rehashes that single key immediately",
+      "The JVM rejects the mutation",
+      "The key becomes final"
+    ],
+    "answer": "The entry may become difficult or impossible to retrieve using the mutated key"
+  },
+  {
+    "subject": "Java",
+    "topic": "Collections",
+    "difficulty": "Hard",
+    "question": "Which collection is designed for concurrent key-value access with high concurrency?",
+    "options": [
+      "ConcurrentHashMap",
+      "HashMap",
+      "TreeMap",
+      "LinkedHashMapOnly"
+    ],
+    "answer": "ConcurrentHashMap"
+  },
+  {
+    "subject": "Java",
+    "topic": "Generics",
+    "difficulty": "Hard",
+    "question": "What is type erasure in Java generics?",
+    "options": [
+      "Most generic type information is removed or translated during compilation for runtime compatibility",
+      "Generic types are deleted from source code",
+      "Objects lose their classes at runtime",
+      "The JVM removes method bodies"
+    ],
+    "answer": "Most generic type information is removed or translated during compilation for runtime compatibility"
+  },
+  {
+    "subject": "Java",
+    "topic": "Generics",
+    "difficulty": "Hard",
+    "question": "What does ? extends Number represent?",
+    "options": [
+      "An unknown type that is Number or a subtype of Number",
+      "Any superclass of Number",
+      "Exactly Number only",
+      "A primitive numeric type"
+    ],
+    "answer": "An unknown type that is Number or a subtype of Number"
+  },
+  {
+    "subject": "Java",
+    "topic": "Generics",
+    "difficulty": "Hard",
+    "question": "What does ? super Integer represent?",
+    "options": [
+      "An unknown type that is Integer or a supertype of Integer",
+      "A subtype of Integer only",
+      "Exactly Object only",
+      "A primitive int"
+    ],
+    "answer": "An unknown type that is Integer or a supertype of Integer"
+  },
+  {
+    "subject": "Java",
+    "topic": "Generics",
+    "difficulty": "Hard",
+    "question": "What does the PECS guideline stand for?",
+    "options": [
+      "Producer Extends, Consumer Super",
+      "Pointer Extends, Class Super",
+      "Primitive Equals, Class Same",
+      "Producer Equals, Consumer Static"
+    ],
+    "answer": "Producer Extends, Consumer Super"
+  },
+  {
+    "subject": "Java",
+    "topic": "Exceptions",
+    "difficulty": "Hard",
+    "question": "What distinguishes checked exceptions from unchecked exceptions?",
+    "options": [
+      "Checked exceptions are generally enforced by the compiler for handling or declaration",
+      "Unchecked exceptions cannot be caught",
+      "Checked exceptions extend RuntimeException",
+      "Unchecked exceptions must always be declared"
+    ],
+    "answer": "Checked exceptions are generally enforced by the compiler for handling or declaration"
+  },
+  {
+    "subject": "Java",
+    "topic": "Exceptions",
+    "difficulty": "Hard",
+    "question": "Which class is the common superclass of most unchecked exceptions?",
+    "options": [
+      "RuntimeException",
+      "IOException",
+      "ErrorOnly",
+      "ThrowableObject"
+    ],
+    "answer": "RuntimeException"
+  },
+  {
+    "subject": "Java",
+    "topic": "Exceptions",
+    "difficulty": "Hard",
+    "question": "What is try-with-resources designed to do?",
+    "options": [
+      "Automatically close resources implementing AutoCloseable",
+      "Retry failed operations",
+      "Catch every exception silently",
+      "Allocate heap memory"
+    ],
+    "answer": "Automatically close resources implementing AutoCloseable"
+  },
+  {
+    "subject": "Java",
+    "topic": "Reflection",
+    "difficulty": "Hard",
+    "question": "What does Java reflection allow?",
+    "options": [
+      "Inspecting and interacting with classes, methods, and fields at runtime",
+      "Changing bytecode into source automatically",
+      "Multiple class inheritance",
+      "Disabling access checks permanently"
+    ],
+    "answer": "Inspecting and interacting with classes, methods, and fields at runtime"
+  },
+  {
+    "subject": "Java",
+    "topic": "Annotations",
+    "difficulty": "Hard",
+    "question": "What is an annotation in Java?",
+    "options": [
+      "Metadata attached to program elements",
+      "A replacement for classes",
+      "A runtime thread",
+      "A collection type"
+    ],
+    "answer": "Metadata attached to program elements"
+  },
+  {
+    "subject": "Java",
+    "topic": "Immutability",
+    "difficulty": "Hard",
+    "question": "Which design choice helps make a Java class immutable?",
+    "options": [
+      "Use final fields and avoid exposing mutable internal state",
+      "Expose setters for every field",
+      "Return internal mutable collections directly",
+      "Make all methods synchronized only"
+    ],
+    "answer": "Use final fields and avoid exposing mutable internal state"
+  },
+  {
+    "subject": "Java",
+    "topic": "Object Methods",
+    "difficulty": "Hard",
+    "question": "Why should hashCode() generally be overridden when equals() is overridden?",
+    "options": [
+      "To preserve the contract required by hash-based collections",
+      "Because equals() cannot compile otherwise",
+      "To enable inheritance",
+      "To reduce object size"
+    ],
+    "answer": "To preserve the contract required by hash-based collections"
+  },
+  {
+    "subject": "Java",
+    "topic": "Object Methods",
+    "difficulty": "Hard",
+    "question": "What is the default behavior of Object.equals() if a class does not override it?",
+    "options": [
+      "Reference identity comparison",
+      "Deep field comparison",
+      "String comparison",
+      "Hash code comparison only"
+    ],
+    "answer": "Reference identity comparison"
+  },
+  {
+    "subject": "Java",
+    "topic": "Streams",
+    "difficulty": "Hard",
+    "question": "What does lazy evaluation mean for intermediate Stream operations?",
+    "options": [
+      "They are generally not executed until a terminal operation requires results",
+      "They always run in a background thread",
+      "They modify the source immediately",
+      "They cache every element automatically"
+    ],
+    "answer": "They are generally not executed until a terminal operation requires results"
+  },
+  {
+    "subject": "Java",
+    "topic": "Streams",
+    "difficulty": "Hard",
+    "question": "Which Stream operation is terminal?",
+    "options": [
+      "collect()",
+      "map()",
+      "filter()",
+      "peek()"
+    ],
+    "answer": "collect()"
+  },
+  {
+    "subject": "Java",
+    "topic": "Streams",
+    "difficulty": "Hard",
+    "question": "Why should side effects be minimized in stream pipelines?",
+    "options": [
+      "They can make behavior harder to reason about and problematic with parallel execution",
+      "Streams forbid all state",
+      "Side effects improve ordering guarantees",
+      "The compiler rejects mutable variables"
+    ],
+    "answer": "They can make behavior harder to reason about and problematic with parallel execution"
+  },
+  {
+    "subject": "Java",
+    "topic": "Serialization",
+    "difficulty": "Hard",
+    "question": "What does the transient keyword do for default Java serialization?",
+    "options": [
+      "Marks a field to be skipped by default serialization",
+      "Makes a field thread-safe",
+      "Makes a field final",
+      "Moves a field to static storage"
+    ],
+    "answer": "Marks a field to be skipped by default serialization"
+  },
+  {
+    "subject": "Java",
+    "topic": "Serialization",
+    "difficulty": "Hard",
+    "question": "What is serialVersionUID used for?",
+    "options": [
+      "Version compatibility checking during Java object serialization",
+      "Thread identification",
+      "Package naming",
+      "HashMap indexing"
+    ],
+    "answer": "Version compatibility checking during Java object serialization"
+  },
+  {
+    "subject": "Java",
+    "topic": "Records",
+    "difficulty": "Hard",
+    "question": "What is a Java record primarily intended for?",
+    "options": [
+      "Concise declaration of immutable-like data carrier classes",
+      "Replacing all interfaces",
+      "Creating mutable thread pools",
+      "Defining packages"
+    ],
+    "answer": "Concise declaration of immutable-like data carrier classes"
+  },
+  {
+    "subject": "Java",
+    "topic": "Sealed Classes",
+    "difficulty": "Hard",
+    "question": "What do sealed classes control?",
+    "options": [
+      "Which classes or interfaces may directly extend or implement them",
+      "Which methods can throw exceptions",
+      "Which fields can be serialized",
+      "Which objects are garbage collected"
+    ],
+    "answer": "Which classes or interfaces may directly extend or implement them"
+  }
+]
