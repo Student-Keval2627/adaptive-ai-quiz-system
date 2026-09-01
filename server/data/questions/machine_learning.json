@@ -1,0 +1,1029 @@
+[
+  {
+    "subject": "Machine Learning",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is machine learning?",
+    "options": [
+      "A method where systems learn patterns from data to make predictions or decisions",
+      "A database query language",
+      "A type of operating system",
+      "A CSS framework"
+    ],
+    "answer": "A method where systems learn patterns from data to make predictions or decisions"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is a feature in machine learning?",
+    "options": [
+      "An input variable used by a model",
+      "The final model score only",
+      "A database table",
+      "A test report"
+    ],
+    "answer": "An input variable used by a model"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is a label in supervised learning?",
+    "options": [
+      "The target value the model tries to predict",
+      "An input feature only",
+      "A model parameter",
+      "A missing value"
+    ],
+    "answer": "The target value the model tries to predict"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Supervised Learning",
+    "difficulty": "Easy",
+    "question": "Which learning type uses labeled training data?",
+    "options": [
+      "Supervised learning",
+      "Unsupervised learning",
+      "Reinforcement learning only",
+      "Random learning"
+    ],
+    "answer": "Supervised learning"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Unsupervised Learning",
+    "difficulty": "Easy",
+    "question": "Which learning type works with data that has no target labels?",
+    "options": [
+      "Unsupervised learning",
+      "Supervised learning",
+      "Regression only",
+      "Classification only"
+    ],
+    "answer": "Unsupervised learning"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Regression",
+    "difficulty": "Easy",
+    "question": "What type of output does regression usually predict?",
+    "options": [
+      "A continuous numeric value",
+      "A category only",
+      "A cluster label only",
+      "A Boolean only"
+    ],
+    "answer": "A continuous numeric value"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Classification",
+    "difficulty": "Easy",
+    "question": "What type of output does classification usually predict?",
+    "options": [
+      "A class or category",
+      "A continuous numeric value only",
+      "A database key",
+      "A random number"
+    ],
+    "answer": "A class or category"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Clustering",
+    "difficulty": "Easy",
+    "question": "What is clustering used for?",
+    "options": [
+      "Grouping similar data points without predefined labels",
+      "Predicting exact numeric values only",
+      "Sorting files",
+      "Encrypting data"
+    ],
+    "answer": "Grouping similar data points without predefined labels"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Training",
+    "difficulty": "Easy",
+    "question": "What is a training dataset used for?",
+    "options": [
+      "Fitting model parameters from examples",
+      "Only reporting final accuracy",
+      "Only storing predictions",
+      "Only selecting colors"
+    ],
+    "answer": "Fitting model parameters from examples"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Testing",
+    "difficulty": "Easy",
+    "question": "What is a test dataset used for?",
+    "options": [
+      "Evaluating model performance on unseen data",
+      "Training the model directly",
+      "Creating new features only",
+      "Storing model weights"
+    ],
+    "answer": "Evaluating model performance on unseen data"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Validation",
+    "difficulty": "Easy",
+    "question": "What is a validation dataset commonly used for?",
+    "options": [
+      "Tuning model choices and hyperparameters",
+      "Final unbiased testing only",
+      "Replacing training data",
+      "Creating labels"
+    ],
+    "answer": "Tuning model choices and hyperparameters"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Overfitting",
+    "difficulty": "Easy",
+    "question": "What is overfitting?",
+    "options": [
+      "The model learns training data too closely and performs poorly on unseen data",
+      "The model is too simple to learn patterns",
+      "The dataset has no features",
+      "The model always predicts correctly"
+    ],
+    "answer": "The model learns training data too closely and performs poorly on unseen data"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Underfitting",
+    "difficulty": "Easy",
+    "question": "What is underfitting?",
+    "options": [
+      "The model is too simple to capture important patterns",
+      "The model memorizes training data",
+      "The model has too many trees",
+      "The data is perfectly balanced"
+    ],
+    "answer": "The model is too simple to capture important patterns"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Preprocessing",
+    "difficulty": "Easy",
+    "question": "Why is data preprocessing important?",
+    "options": [
+      "It prepares raw data into a form suitable for modeling",
+      "It guarantees perfect accuracy",
+      "It removes the need for testing",
+      "It replaces feature engineering"
+    ],
+    "answer": "It prepares raw data into a form suitable for modeling"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Missing Data",
+    "difficulty": "Easy",
+    "question": "What is imputation?",
+    "options": [
+      "Filling in missing values using a chosen strategy",
+      "Deleting every feature",
+      "Scaling all values to zero",
+      "Encoding categories only"
+    ],
+    "answer": "Filling in missing values using a chosen strategy"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Scaling",
+    "difficulty": "Easy",
+    "question": "What is feature scaling?",
+    "options": [
+      "Transforming features to comparable numeric scales",
+      "Removing labels",
+      "Sorting rows alphabetically",
+      "Reducing model size only"
+    ],
+    "answer": "Transforming features to comparable numeric scales"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Normalization",
+    "difficulty": "Easy",
+    "question": "What does min-max scaling typically map values to?",
+    "options": [
+      "A fixed range such as 0 to 1",
+      "Only negative values",
+      "A list of categories",
+      "Random values"
+    ],
+    "answer": "A fixed range such as 0 to 1"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Standardization",
+    "difficulty": "Easy",
+    "question": "What does standardization commonly transform a feature toward?",
+    "options": [
+      "Mean near 0 and standard deviation near 1",
+      "Values only between 0 and 1",
+      "Only integer values",
+      "Only positive values"
+    ],
+    "answer": "Mean near 0 and standard deviation near 1"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Encoding",
+    "difficulty": "Easy",
+    "question": "What is one-hot encoding used for?",
+    "options": [
+      "Representing categorical values as binary indicator columns",
+      "Scaling numeric features",
+      "Removing outliers",
+      "Selecting labels"
+    ],
+    "answer": "Representing categorical values as binary indicator columns"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Metrics",
+    "difficulty": "Easy",
+    "question": "What is accuracy in classification?",
+    "options": [
+      "The fraction of predictions that are correct",
+      "The number of features",
+      "The training time",
+      "The number of classes"
+    ],
+    "answer": "The fraction of predictions that are correct"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Metrics",
+    "difficulty": "Easy",
+    "question": "What does precision measure?",
+    "options": [
+      "Among predicted positives, how many are actually positive",
+      "Among actual positives, how many were found",
+      "Overall correct predictions only",
+      "Average squared error"
+    ],
+    "answer": "Among predicted positives, how many are actually positive"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Metrics",
+    "difficulty": "Easy",
+    "question": "What does recall measure?",
+    "options": [
+      "Among actual positives, how many were correctly identified",
+      "Among predicted positives, how many were correct",
+      "Only true negatives",
+      "Average error"
+    ],
+    "answer": "Among actual positives, how many were correctly identified"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Metrics",
+    "difficulty": "Easy",
+    "question": "What is the F1 score?",
+    "options": [
+      "The harmonic mean of precision and recall",
+      "The arithmetic mean of accuracy and loss",
+      "The number of classes",
+      "The square root of MSE"
+    ],
+    "answer": "The harmonic mean of precision and recall"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Confusion Matrix",
+    "difficulty": "Easy",
+    "question": "What does a confusion matrix summarize?",
+    "options": [
+      "Counts of predicted versus actual classes",
+      "Feature correlations only",
+      "Model weights only",
+      "Training epochs"
+    ],
+    "answer": "Counts of predicted versus actual classes"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Algorithms",
+    "difficulty": "Easy",
+    "question": "Which algorithm is commonly used for linear regression tasks?",
+    "options": [
+      "Linear Regression",
+      "K-Means",
+      "Apriori only",
+      "DBSCAN only"
+    ],
+    "answer": "Linear Regression"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Algorithms",
+    "difficulty": "Easy",
+    "question": "Which algorithm is commonly used for clustering?",
+    "options": [
+      "K-Means",
+      "Logistic Regression",
+      "Linear Regression",
+      "Naive Bayes only"
+    ],
+    "answer": "K-Means"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Algorithms",
+    "difficulty": "Easy",
+    "question": "Which algorithm is commonly used for classification?",
+    "options": [
+      "Logistic Regression",
+      "K-Means only",
+      "PCA only",
+      "Linear Regression only"
+    ],
+    "answer": "Logistic Regression"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Bias Variance",
+    "difficulty": "Medium",
+    "question": "What does high bias usually indicate?",
+    "options": [
+      "The model is too simple and tends to underfit",
+      "The model is too complex and overfits",
+      "The labels are missing",
+      "The data is always noisy"
+    ],
+    "answer": "The model is too simple and tends to underfit"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Bias Variance",
+    "difficulty": "Medium",
+    "question": "What does high variance usually indicate?",
+    "options": [
+      "The model is overly sensitive to the training data and may overfit",
+      "The model is always too simple",
+      "The model has no parameters",
+      "The model ignores training data"
+    ],
+    "answer": "The model is overly sensitive to the training data and may overfit"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Cross Validation",
+    "difficulty": "Medium",
+    "question": "What is k-fold cross-validation?",
+    "options": [
+      "Splitting data into k parts and rotating which part is used for validation",
+      "Training k unrelated datasets",
+      "Using k features only",
+      "Running the model k times on the same training split"
+    ],
+    "answer": "Splitting data into k parts and rotating which part is used for validation"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Cross Validation",
+    "difficulty": "Medium",
+    "question": "Why is cross-validation useful?",
+    "options": [
+      "It provides a more robust estimate of model generalization than a single split",
+      "It guarantees zero overfitting",
+      "It replaces all test data",
+      "It always speeds up training"
+    ],
+    "answer": "It provides a more robust estimate of model generalization than a single split"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Regularization",
+    "difficulty": "Medium",
+    "question": "What is regularization used for?",
+    "options": [
+      "Penalizing model complexity to reduce overfitting",
+      "Increasing training labels",
+      "Removing all features",
+      "Making every model nonlinear"
+    ],
+    "answer": "Penalizing model complexity to reduce overfitting"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Regularization",
+    "difficulty": "Medium",
+    "question": "What effect does L1 regularization often have?",
+    "options": [
+      "It can drive some coefficients exactly to zero",
+      "It always makes all coefficients equal",
+      "It removes the intercept only",
+      "It increases every coefficient"
+    ],
+    "answer": "It can drive some coefficients exactly to zero"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Regularization",
+    "difficulty": "Medium",
+    "question": "What effect does L2 regularization usually have?",
+    "options": [
+      "It shrinks coefficients toward zero without usually forcing many exactly to zero",
+      "It deletes all features",
+      "It converts regression into clustering",
+      "It makes coefficients binary"
+    ],
+    "answer": "It shrinks coefficients toward zero without usually forcing many exactly to zero"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Logistic Regression",
+    "difficulty": "Medium",
+    "question": "What does logistic regression commonly model for binary classification?",
+    "options": [
+      "The probability of a class using a logistic function",
+      "A continuous unbounded target only",
+      "Cluster membership without labels",
+      "Only ranking scores"
+    ],
+    "answer": "The probability of a class using a logistic function"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Decision Trees",
+    "difficulty": "Medium",
+    "question": "What does a decision tree split data on?",
+    "options": [
+      "Feature-based conditions chosen to improve prediction purity or reduce error",
+      "Random labels only",
+      "Only target values",
+      "Only row indices"
+    ],
+    "answer": "Feature-based conditions chosen to improve prediction purity or reduce error"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Decision Trees",
+    "difficulty": "Medium",
+    "question": "Why can deep decision trees overfit?",
+    "options": [
+      "They can create very specific rules that match training noise",
+      "They cannot use enough features",
+      "They always predict the majority class",
+      "They perform no splits"
+    ],
+    "answer": "They can create very specific rules that match training noise"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Random Forest",
+    "difficulty": "Medium",
+    "question": "What is a random forest?",
+    "options": [
+      "An ensemble of decision trees built with randomness in data and features",
+      "A single very deep tree",
+      "A clustering algorithm only",
+      "A neural network"
+    ],
+    "answer": "An ensemble of decision trees built with randomness in data and features"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Ensembles",
+    "difficulty": "Medium",
+    "question": "What is bagging?",
+    "options": [
+      "Training multiple models on resampled datasets and combining their predictions",
+      "Training models strictly one after another to fix previous errors",
+      "Reducing features with PCA",
+      "Scaling numeric values"
+    ],
+    "answer": "Training multiple models on resampled datasets and combining their predictions"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Ensembles",
+    "difficulty": "Medium",
+    "question": "What is boosting?",
+    "options": [
+      "Building models sequentially so later models focus more on previous errors",
+      "Training independent models in parallel only",
+      "Removing weak learners",
+      "Randomly dropping features"
+    ],
+    "answer": "Building models sequentially so later models focus more on previous errors"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "KNN",
+    "difficulty": "Medium",
+    "question": "How does K-Nearest Neighbors make a classification prediction?",
+    "options": [
+      "It uses the labels of nearby training points",
+      "It fits a global linear equation",
+      "It builds decision rules recursively",
+      "It learns neural weights"
+    ],
+    "answer": "It uses the labels of nearby training points"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "KNN",
+    "difficulty": "Medium",
+    "question": "Why is feature scaling important for KNN?",
+    "options": [
+      "Distance calculations can be dominated by features with larger numeric scales",
+      "KNN cannot process numeric features",
+      "Scaling changes the labels",
+      "Scaling removes neighbors"
+    ],
+    "answer": "Distance calculations can be dominated by features with larger numeric scales"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "SVM",
+    "difficulty": "Medium",
+    "question": "What does a Support Vector Machine try to maximize in classification?",
+    "options": [
+      "The margin between classes",
+      "The number of features",
+      "Training set size",
+      "The number of clusters"
+    ],
+    "answer": "The margin between classes"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Naive Bayes",
+    "difficulty": "Medium",
+    "question": "What simplifying assumption does Naive Bayes make?",
+    "options": [
+      "Features are conditionally independent given the class",
+      "All features are identical",
+      "Labels are continuous",
+      "Data must be linearly separable"
+    ],
+    "answer": "Features are conditionally independent given the class"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "PCA",
+    "difficulty": "Medium",
+    "question": "What is PCA mainly used for?",
+    "options": [
+      "Reducing dimensionality while preserving as much variance as possible",
+      "Classification with labels",
+      "Generating missing labels",
+      "Balancing classes"
+    ],
+    "answer": "Reducing dimensionality while preserving as much variance as possible"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "PCA",
+    "difficulty": "Medium",
+    "question": "What are principal components?",
+    "options": [
+      "New orthogonal directions that capture variance in the data",
+      "Original class labels",
+      "Cluster centers only",
+      "Random features"
+    ],
+    "answer": "New orthogonal directions that capture variance in the data"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Clustering",
+    "difficulty": "Medium",
+    "question": "What does K in K-Means represent?",
+    "options": [
+      "The number of clusters",
+      "The number of features",
+      "The number of epochs",
+      "The number of labels"
+    ],
+    "answer": "The number of clusters"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Clustering",
+    "difficulty": "Medium",
+    "question": "What does K-Means try to minimize?",
+    "options": [
+      "Within-cluster squared distances to cluster centroids",
+      "Classification error only",
+      "Number of features",
+      "Validation folds"
+    ],
+    "answer": "Within-cluster squared distances to cluster centroids"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Imbalanced Data",
+    "difficulty": "Medium",
+    "question": "Why can accuracy be misleading on highly imbalanced classification data?",
+    "options": [
+      "A model can score high by predicting the majority class most of the time",
+      "Accuracy ignores all predictions",
+      "Accuracy uses only false positives",
+      "Accuracy cannot handle binary classes"
+    ],
+    "answer": "A model can score high by predicting the majority class most of the time"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "ROC AUC",
+    "difficulty": "Medium",
+    "question": "What does ROC AUC broadly measure?",
+    "options": [
+      "How well a classifier ranks positives above negatives across thresholds",
+      "Only accuracy at one threshold",
+      "Only recall",
+      "Mean squared error"
+    ],
+    "answer": "How well a classifier ranks positives above negatives across thresholds"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Regression Metrics",
+    "difficulty": "Medium",
+    "question": "What does Mean Absolute Error measure?",
+    "options": [
+      "Average absolute difference between predictions and actual values",
+      "Average squared difference only",
+      "Classification accuracy",
+      "Feature variance"
+    ],
+    "answer": "Average absolute difference between predictions and actual values"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Regression Metrics",
+    "difficulty": "Medium",
+    "question": "What does Mean Squared Error emphasize compared with MAE?",
+    "options": [
+      "Larger errors receive greater penalty because errors are squared",
+      "All errors receive identical penalty",
+      "Only positive errors count",
+      "Only classification errors count"
+    ],
+    "answer": "Larger errors receive greater penalty because errors are squared"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Hyperparameters",
+    "difficulty": "Medium",
+    "question": "What is a hyperparameter?",
+    "options": [
+      "A setting chosen before or around training that controls model behavior",
+      "A value learned directly as a model parameter",
+      "A target label",
+      "A missing value"
+    ],
+    "answer": "A setting chosen before or around training that controls model behavior"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Gradient Descent",
+    "difficulty": "Hard",
+    "question": "What does gradient descent do?",
+    "options": [
+      "Iteratively updates parameters in the direction that reduces the loss",
+      "Randomly changes labels",
+      "Selects clusters without an objective",
+      "Calculates only accuracy"
+    ],
+    "answer": "Iteratively updates parameters in the direction that reduces the loss"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Gradient Descent",
+    "difficulty": "Hard",
+    "question": "What can happen if the learning rate is too large?",
+    "options": [
+      "Training may overshoot minima or diverge",
+      "Training always converges faster",
+      "The loss becomes exactly zero",
+      "The model uses fewer features automatically"
+    ],
+    "answer": "Training may overshoot minima or diverge"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Gradient Descent",
+    "difficulty": "Hard",
+    "question": "What can happen if the learning rate is extremely small?",
+    "options": [
+      "Training can converge very slowly",
+      "Training always diverges",
+      "The model becomes a tree",
+      "The dataset becomes imbalanced"
+    ],
+    "answer": "Training can converge very slowly"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Optimization",
+    "difficulty": "Hard",
+    "question": "What is stochastic gradient descent?",
+    "options": [
+      "An optimization method that updates parameters using individual examples or small random batches",
+      "Gradient descent using the entire dataset for every update only",
+      "A clustering algorithm",
+      "A feature selection method"
+    ],
+    "answer": "An optimization method that updates parameters using individual examples or small random batches"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Optimization",
+    "difficulty": "Hard",
+    "question": "What is a local minimum?",
+    "options": [
+      "A point lower than nearby points but not necessarily the lowest possible overall",
+      "The absolute highest loss",
+      "A classification threshold",
+      "A cluster centroid"
+    ],
+    "answer": "A point lower than nearby points but not necessarily the lowest possible overall"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Neural Networks",
+    "difficulty": "Hard",
+    "question": "What is an activation function used for in a neural network?",
+    "options": [
+      "Introducing nonlinearity into the model",
+      "Initializing labels",
+      "Scaling only input features",
+      "Selecting test data"
+    ],
+    "answer": "Introducing nonlinearity into the model"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Neural Networks",
+    "difficulty": "Hard",
+    "question": "What does ReLU return for a negative input in its standard form?",
+    "options": [
+      "0",
+      "The same negative value",
+      "1",
+      "The absolute value"
+    ],
+    "answer": "0"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Neural Networks",
+    "difficulty": "Hard",
+    "question": "What is backpropagation used for?",
+    "options": [
+      "Computing gradients of the loss with respect to network parameters",
+      "Generating labels",
+      "Splitting training and test data",
+      "Clustering examples"
+    ],
+    "answer": "Computing gradients of the loss with respect to network parameters"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Neural Networks",
+    "difficulty": "Hard",
+    "question": "What is the vanishing gradient problem?",
+    "options": [
+      "Gradients become extremely small, making early layers learn slowly",
+      "Gradients become infinite immediately",
+      "The model loses all input data",
+      "The network has no activations"
+    ],
+    "answer": "Gradients become extremely small, making early layers learn slowly"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Neural Networks",
+    "difficulty": "Hard",
+    "question": "What is dropout used for during neural-network training?",
+    "options": [
+      "Randomly disabling some activations to reduce overfitting",
+      "Deleting training samples permanently",
+      "Removing labels",
+      "Increasing feature count"
+    ],
+    "answer": "Randomly disabling some activations to reduce overfitting"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Data Leakage",
+    "difficulty": "Hard",
+    "question": "What is data leakage?",
+    "options": [
+      "Training uses information that would not legitimately be available at prediction time",
+      "The dataset is too small",
+      "Some rows contain missing values",
+      "Features have different scales"
+    ],
+    "answer": "Training uses information that would not legitimately be available at prediction time"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Data Leakage",
+    "difficulty": "Hard",
+    "question": "Why should scaling parameters be fitted only on the training split?",
+    "options": [
+      "Fitting on all data can leak information from validation or test sets",
+      "Scaling cannot use numeric data",
+      "Test data must remain unscaled",
+      "Training data should never be transformed"
+    ],
+    "answer": "Fitting on all data can leak information from validation or test sets"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Feature Selection",
+    "difficulty": "Hard",
+    "question": "What is feature selection?",
+    "options": [
+      "Choosing a subset of useful original features",
+      "Creating only synthetic features",
+      "Reducing dimensions only through projection",
+      "Removing labels"
+    ],
+    "answer": "Choosing a subset of useful original features"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Feature Engineering",
+    "difficulty": "Hard",
+    "question": "What is feature engineering?",
+    "options": [
+      "Creating or transforming input variables to improve model learning",
+      "Changing target labels randomly",
+      "Only normalizing data",
+      "Only deleting columns"
+    ],
+    "answer": "Creating or transforming input variables to improve model learning"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Calibration",
+    "difficulty": "Hard",
+    "question": "What does probability calibration evaluate?",
+    "options": [
+      "Whether predicted probabilities correspond to observed outcome frequencies",
+      "Whether classes are balanced",
+      "Whether features are standardized",
+      "Whether training loss is zero"
+    ],
+    "answer": "Whether predicted probabilities correspond to observed outcome frequencies"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Thresholds",
+    "difficulty": "Hard",
+    "question": "Why might a classifier threshold be changed from 0.5?",
+    "options": [
+      "To trade off precision, recall, or other costs based on the application",
+      "Because probabilities cannot be below 0.5",
+      "To change feature scaling",
+      "To retrain automatically"
+    ],
+    "answer": "To trade off precision, recall, or other costs based on the application"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Ensembles",
+    "difficulty": "Hard",
+    "question": "Why can bagging reduce variance?",
+    "options": [
+      "Averaging diverse models can smooth individual model fluctuations",
+      "It increases bias to infinity",
+      "It removes all features",
+      "It always produces identical models"
+    ],
+    "answer": "Averaging diverse models can smooth individual model fluctuations"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Boosting",
+    "difficulty": "Hard",
+    "question": "Why can boosting overfit if pushed too aggressively?",
+    "options": [
+      "Later learners may start fitting noise and outliers",
+      "Boosting never uses errors",
+      "Each learner is completely independent",
+      "It cannot model nonlinearities"
+    ],
+    "answer": "Later learners may start fitting noise and outliers"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Model Selection",
+    "difficulty": "Hard",
+    "question": "Why should the final test set be evaluated only after model selection is complete?",
+    "options": [
+      "Repeated test-set use can bias decisions toward that test set",
+      "The test set cannot contain labels",
+      "Test data must be larger than training data",
+      "Models cannot predict test examples twice"
+    ],
+    "answer": "Repeated test-set use can bias decisions toward that test set"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Class Imbalance",
+    "difficulty": "Hard",
+    "question": "What is class weighting used for?",
+    "options": [
+      "Assigning greater loss importance to underrepresented or costly classes",
+      "Changing feature scales",
+      "Reducing the number of classes",
+      "Removing all majority samples"
+    ],
+    "answer": "Assigning greater loss importance to underrepresented or costly classes"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Class Imbalance",
+    "difficulty": "Hard",
+    "question": "What is oversampling?",
+    "options": [
+      "Increasing representation of minority-class examples in training data",
+      "Removing minority samples",
+      "Changing test labels",
+      "Scaling features above 1"
+    ],
+    "answer": "Increasing representation of minority-class examples in training data"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Model Interpretability",
+    "difficulty": "Hard",
+    "question": "What does feature importance try to describe?",
+    "options": [
+      "How strongly input features contribute to model predictions or decisions",
+      "Which rows are missing",
+      "Which classes are balanced",
+      "How fast the CPU trains"
+    ],
+    "answer": "How strongly input features contribute to model predictions or decisions"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Model Interpretability",
+    "difficulty": "Hard",
+    "question": "What is a partial dependence plot used for?",
+    "options": [
+      "Showing the average predicted effect of one or more features while averaging over others",
+      "Showing training loss only",
+      "Showing raw labels only",
+      "Showing cluster counts"
+    ],
+    "answer": "Showing the average predicted effect of one or more features while averaging over others"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Concept Drift",
+    "difficulty": "Hard",
+    "question": "What is concept drift?",
+    "options": [
+      "The relationship between inputs and target changes over time",
+      "The feature names change",
+      "The model file moves",
+      "The training set gets shuffled"
+    ],
+    "answer": "The relationship between inputs and target changes over time"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Distribution Shift",
+    "difficulty": "Hard",
+    "question": "What is covariate shift?",
+    "options": [
+      "The input feature distribution changes while the conditional target relationship is assumed stable",
+      "The target labels are removed",
+      "The model changes algorithms",
+      "Only the class names change"
+    ],
+    "answer": "The input feature distribution changes while the conditional target relationship is assumed stable"
+  },
+  {
+    "subject": "Machine Learning",
+    "topic": "Reproducibility",
+    "difficulty": "Hard",
+    "question": "Why are random seeds used in ML experiments?",
+    "options": [
+      "To make randomized steps more reproducible when the software and environment allow it",
+      "To improve model accuracy automatically",
+      "To prevent overfitting completely",
+      "To create more features"
+    ],
+    "answer": "To make randomized steps more reproducible when the software and environment allow it"
+  }
+]
