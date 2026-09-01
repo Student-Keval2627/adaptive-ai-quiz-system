@@ -1,4 +1,5 @@
 import {
+  useEffect,
   useState,
 } from "react";
 
@@ -43,49 +44,463 @@ const defaultQuizSettings = {
 };
 
 
-const subjects = [
+/* =========================================================
+   FALLBACK SUBJECTS
+
+   These are used only if the backend subject endpoint
+   cannot be loaded. The real subject list comes from:
+   GET /api/quiz/subjects
+========================================================= */
+
+const fallbackSubjects = [
   {
     name:
       "Python",
 
-    label:
-      "Python Programming",
-
-    description:
-      "Functions, OOP, collections and syntax",
-
-    icon:
-      Code2,
+    questionCount:
+      100,
   },
 
   {
     name:
-      "Machine Learning",
+      "C Programming",
 
-    label:
-      "Machine Learning",
+    questionCount:
+      100,
+  },
 
-    description:
-      "Models, algorithms and ML fundamentals",
+  {
+    name:
+      "C++",
 
-    icon:
-      BrainCircuit,
+    questionCount:
+      100,
+  },
+
+  {
+    name:
+      "Java",
+
+    questionCount:
+      100,
+  },
+
+  {
+    name:
+      "JavaScript",
+
+    questionCount:
+      100,
+  },
+
+  {
+    name:
+      "TypeScript",
+
+    questionCount:
+      100,
   },
 
   {
     name:
       "Data Structures",
 
-    label:
-      "Data Structures",
+    questionCount:
+      100,
+  },
 
-    description:
-      "Arrays, stacks, queues, trees and graphs",
+  {
+    name:
+      "Algorithms",
 
-    icon:
-      Database,
+    questionCount:
+      100,
+  },
+
+  {
+    name:
+      "SQL",
+
+    questionCount:
+      100,
+  },
+
+  {
+    name:
+      "DBMS",
+
+    questionCount:
+      100,
+  },
+
+  {
+    name:
+      "Operating Systems",
+
+    questionCount:
+      100,
+  },
+
+  {
+    name:
+      "Computer Networks",
+
+    questionCount:
+      100,
+  },
+
+  {
+    name:
+      "Object Oriented Programming",
+
+    questionCount:
+      100,
+  },
+
+  {
+    name:
+      "Machine Learning",
+
+    questionCount:
+      100,
+  },
+
+  {
+    name:
+      "Web Development",
+
+    questionCount:
+      100,
+  },
+
+  {
+    name:
+      "React",
+
+    questionCount:
+      100,
+  },
+
+  {
+    name:
+      "Node.js",
+
+    questionCount:
+      100,
+  },
+
+  {
+    name:
+      "Flask",
+
+    questionCount:
+      100,
+  },
+
+  {
+    name:
+      "Django",
+
+    questionCount:
+      100,
+  },
+
+  {
+    name:
+      "Git & GitHub",
+
+    questionCount:
+      100,
+  },
+
+  {
+    name:
+      "Software Engineering",
+
+    questionCount:
+      100,
+  },
+
+  {
+    name:
+      "Computer Architecture",
+
+    questionCount:
+      100,
   },
 ];
+
+
+/* =========================================================
+   SUBJECT UI METADATA
+
+   Backend decides which subjects actually exist.
+   This function only controls labels, descriptions and icons.
+========================================================= */
+
+function getSubjectMeta(
+  subjectName
+) {
+  const metadata = {
+    Python: {
+      label:
+        "Python Programming",
+
+      description:
+        "Functions, OOP, collections and syntax",
+
+      icon:
+        Code2,
+    },
+
+    "C Programming": {
+      label:
+        "C Programming",
+
+      description:
+        "Pointers, functions, arrays and core C concepts",
+
+      icon:
+        Code2,
+    },
+
+    "C++": {
+      label:
+        "C++ Programming",
+
+      description:
+        "OOP, STL, pointers and modern C++ concepts",
+
+      icon:
+        Code2,
+    },
+
+    Java: {
+      label:
+        "Java Programming",
+
+      description:
+        "OOP, collections, exceptions and Java fundamentals",
+
+      icon:
+        Code2,
+    },
+
+    JavaScript: {
+      label:
+        "JavaScript",
+
+      description:
+        "Functions, objects, DOM and modern JavaScript",
+
+      icon:
+        Code2,
+    },
+
+    TypeScript: {
+      label:
+        "TypeScript",
+
+      description:
+        "Types, interfaces and typed JavaScript development",
+
+      icon:
+        Code2,
+    },
+
+    "Data Structures": {
+      label:
+        "Data Structures",
+
+      description:
+        "Arrays, stacks, queues, trees and graphs",
+
+      icon:
+        Database,
+    },
+
+    Algorithms: {
+      label:
+        "Algorithms",
+
+      description:
+        "Searching, sorting, complexity and problem solving",
+
+      icon:
+        BrainCircuit,
+    },
+
+    SQL: {
+      label:
+        "SQL",
+
+      description:
+        "Queries, joins, grouping and database operations",
+
+      icon:
+        Database,
+    },
+
+    DBMS: {
+      label:
+        "Database Management Systems",
+
+      description:
+        "Normalization, transactions, keys and database design",
+
+      icon:
+        Database,
+    },
+
+    "Operating Systems": {
+      label:
+        "Operating Systems",
+
+      description:
+        "Processes, scheduling, memory and file systems",
+
+      icon:
+        BrainCircuit,
+    },
+
+    "Computer Networks": {
+      label:
+        "Computer Networks",
+
+      description:
+        "OSI, TCP/IP, protocols and networking fundamentals",
+
+      icon:
+        BrainCircuit,
+    },
+
+    "Object Oriented Programming": {
+      label:
+        "Object Oriented Programming",
+
+      description:
+        "Classes, inheritance, polymorphism and abstraction",
+
+      icon:
+        Code2,
+    },
+
+    "Machine Learning": {
+      label:
+        "Machine Learning",
+
+      description:
+        "Models, algorithms and ML fundamentals",
+
+      icon:
+        BrainCircuit,
+    },
+
+    "Web Development": {
+      label:
+        "Web Development",
+
+      description:
+        "HTML, CSS, JavaScript and web fundamentals",
+
+      icon:
+        Code2,
+    },
+
+    React: {
+      label:
+        "React",
+
+      description:
+        "Components, hooks, state and React patterns",
+
+      icon:
+        Code2,
+    },
+
+    "Node.js": {
+      label:
+        "Node.js",
+
+      description:
+        "Server-side JavaScript, APIs and Node fundamentals",
+
+      icon:
+        Code2,
+    },
+
+    Flask: {
+      label:
+        "Flask",
+
+      description:
+        "Python web APIs, routing and Flask fundamentals",
+
+      icon:
+        Code2,
+    },
+
+    Django: {
+      label:
+        "Django",
+
+      description:
+        "Models, views, URLs and Django development",
+
+      icon:
+        Code2,
+    },
+
+    "Git & GitHub": {
+      label:
+        "Git & GitHub",
+
+      description:
+        "Version control, branches, commits and collaboration",
+
+      icon:
+        Code2,
+    },
+
+    "Software Engineering": {
+      label:
+        "Software Engineering",
+
+      description:
+        "SDLC, testing, design and development practices",
+
+      icon:
+        BrainCircuit,
+    },
+
+    "Computer Architecture": {
+      label:
+        "Computer Architecture",
+
+      description:
+        "CPU, memory, instruction cycles and architecture",
+
+      icon:
+        BrainCircuit,
+    },
+  };
+
+
+  return (
+    metadata[
+      subjectName
+    ] || {
+      label:
+        subjectName,
+
+      description:
+        "Adaptive practice questions for this subject",
+
+      icon:
+        BrainCircuit,
+    }
+  );
+}
 
 
 /* =========================================================
@@ -99,16 +514,19 @@ function getSavedQuizSettings() {
         "neuraQuizSettings"
       );
 
+
     if (!stored) {
       return {
         ...defaultQuizSettings,
       };
     }
 
+
     const parsed =
       JSON.parse(
         stored
       );
+
 
     const allowedDifficulties = [
       "Adaptive",
@@ -117,6 +535,7 @@ function getSavedQuizSettings() {
       "Hard",
     ];
 
+
     const difficulty =
       allowedDifficulties.includes(
         parsed.difficulty
@@ -124,10 +543,12 @@ function getSavedQuizSettings() {
         ? parsed.difficulty
         : "Adaptive";
 
+
     const rawCount =
       Number(
         parsed.questionCount
       );
+
 
     const questionCount =
       [5, 10, 15].includes(
@@ -136,17 +557,20 @@ function getSavedQuizSettings() {
         ? rawCount
         : 5;
 
+
     const focusMode =
       typeof parsed.focusMode ===
       "boolean"
         ? parsed.focusMode
         : true;
 
+
     return {
       difficulty,
       questionCount,
       focusMode,
     };
+
 
   } catch {
     return {
@@ -170,6 +594,22 @@ function Quiz() {
     setScreen,
   ] = useState(
     "setup"
+  );
+
+
+  const [
+    availableSubjects,
+    setAvailableSubjects,
+  ] = useState(
+    fallbackSubjects
+  );
+
+
+  const [
+    loadingSubjects,
+    setLoadingSubjects,
+  ] = useState(
+    true
   );
 
 
@@ -311,11 +751,156 @@ function Quiz() {
 
 
   /* =========================================================
+     LOAD DYNAMIC SUBJECTS
+  ========================================================= */
+
+  useEffect(() => {
+    let active = true;
+
+
+    const loadSubjects =
+      async () => {
+        try {
+          setLoadingSubjects(
+            true
+          );
+
+
+          const response =
+            await fetch(
+              `${API_BASE}/api/quiz/subjects`,
+              {
+                credentials:
+                  "include",
+              }
+            );
+
+
+          const data =
+            await response.json();
+
+
+          if (
+            !response.ok ||
+            !data.success
+          ) {
+            throw new Error(
+              data.message ||
+              "Could not load subjects"
+            );
+          }
+
+
+          const backendSubjects =
+            Array.isArray(
+              data.subjects
+            )
+              ? data.subjects
+                  .filter(
+                    (item) =>
+                      item &&
+                      typeof item.name ===
+                        "string" &&
+                      item.name.trim()
+                  )
+                  .map(
+                    (item) => ({
+                      name:
+                        item.name.trim(),
+
+                      questionCount:
+                        Number(
+                          item.questionCount
+                        ) || 0,
+                    })
+                  )
+              : [];
+
+
+          if (
+            !active ||
+            backendSubjects.length === 0
+          ) {
+            return;
+          }
+
+
+          setAvailableSubjects(
+            backendSubjects
+          );
+
+
+          setSubject(
+            (currentSubject) => {
+              const currentExists =
+                backendSubjects.some(
+                  (item) =>
+                    item.name ===
+                    currentSubject
+                );
+
+
+              if (currentExists) {
+                return currentSubject;
+              }
+
+
+              return (
+                backendSubjects[0]
+                  .name
+              );
+            }
+          );
+
+
+        } catch (error) {
+          if (!active) {
+            return;
+          }
+
+
+          // Keep starter subjects as a safe fallback.
+          // The quiz can still work while the backend is
+          // being restarted or updated.
+          setAvailableSubjects(
+            fallbackSubjects
+          );
+
+
+        } finally {
+          if (active) {
+            setLoadingSubjects(
+              false
+            );
+          }
+        }
+      };
+
+
+    loadSubjects();
+
+
+    return () => {
+      active = false;
+    };
+  }, []);
+
+
+  /* =========================================================
      START QUIZ
   ========================================================= */
 
   const startQuiz =
     async () => {
+      if (!subject) {
+        setError(
+          "Please select a subject."
+        );
+
+        return;
+      }
+
+
       try {
         setLoading(true);
         setError("");
@@ -462,10 +1047,12 @@ function Quiz() {
           null
         );
 
+
         setError(
           error.message ||
           "Could not connect to quiz server"
         );
+
 
       } finally {
         setLoading(
@@ -576,6 +1163,10 @@ function Quiz() {
           question:
             currentQuestion.question,
 
+          subject:
+            currentQuestion.subject ||
+            subject,
+
           topic:
             data.topic ||
             currentQuestion.topic,
@@ -617,6 +1208,7 @@ function Quiz() {
           error.message ||
           "Could not check answer"
         );
+
 
       } finally {
         setChecking(
@@ -709,7 +1301,8 @@ function Quiz() {
 
         if (
           data.attemptId &&
-          data.attemptId !== attemptId
+          data.attemptId !==
+            attemptId
         ) {
           throw new Error(
             "Quiz attempt validation failed"
@@ -756,6 +1349,7 @@ function Quiz() {
           error.message ||
           "Could not load next question"
         );
+
 
       } finally {
         setLoadingNext(
@@ -858,8 +1452,9 @@ function Quiz() {
               )
             );
 
+
           } catch {
-            // Ignore local cache errors
+            // Ignore local cache errors.
           }
         }
 
@@ -912,6 +1507,7 @@ function Quiz() {
           error.message ||
           "Failed to save quiz result"
         );
+
 
       } finally {
         setSaving(
@@ -986,6 +1582,7 @@ function Quiz() {
               <BrainCircuit size={20} />
             </div>
 
+
             <div>
               <strong>
                 NeuraQuiz
@@ -1001,7 +1598,10 @@ function Quiz() {
 
           <div className="quiz-ai-status">
             <span className="quiz-status-dot" />
-            Adaptive Engine Ready
+
+            {loadingSubjects
+              ? "Loading Subjects..."
+              : `${availableSubjects.length} Subjects Ready`}
           </div>
 
         </header>
@@ -1028,10 +1628,11 @@ function Quiz() {
 
 
             <p>
-              Your saved starting difficulty,
-              quiz length and Focus Mode are
-              applied when the adaptive quiz
-              begins.
+              Choose any subject available
+              in the live question bank.
+              Your saved difficulty, quiz
+              length and Focus Mode are
+              applied automatically.
             </p>
 
           </section>
@@ -1053,6 +1654,7 @@ function Quiz() {
                   </h2>
                 </div>
 
+
                 <Target size={20} />
 
               </div>
@@ -1060,16 +1662,29 @@ function Quiz() {
 
               <div className="quiz-subject-list">
 
-                {subjects.map(
-                  ({
-                    name,
-                    label,
-                    description,
-                    icon: Icon,
-                  }) => {
+                {availableSubjects.map(
+                  (subjectItem) => {
+                    const {
+                      name,
+                      questionCount,
+                    } =
+                      subjectItem;
+
+
+                    const {
+                      label,
+                      description,
+                      icon: Icon,
+                    } =
+                      getSubjectMeta(
+                        name
+                      );
+
+
                     const active =
                       subject ===
                       name;
+
 
                     return (
                       <button
@@ -1099,9 +1714,19 @@ function Quiz() {
                             {label}
                           </strong>
 
+
                           <span>
                             {description}
                           </span>
+
+
+                          {questionCount > 0 && (
+                            <span>
+                              {questionCount}
+                              {" "}
+                              questions available
+                            </span>
+                          )}
 
                         </div>
 
@@ -1110,6 +1735,7 @@ function Quiz() {
 
                           {active ? (
                             <Check size={14} />
+
                           ) : (
                             <ChevronRight size={16} />
                           )}
@@ -1122,6 +1748,7 @@ function Quiz() {
                 )}
 
               </div>
+
             </div>
 
 
@@ -1213,6 +1840,20 @@ function Quiz() {
 
                 </div>
 
+
+                <div className="quiz-info-row">
+
+                  <div>
+                    <Database size={17} />
+                    Subject Bank
+                  </div>
+
+                  <strong>
+                    {availableSubjects.length}
+                  </strong>
+
+                </div>
+
               </div>
 
 
@@ -1232,7 +1873,12 @@ function Quiz() {
               <button
                 className="quiz-start-button"
                 onClick={startQuiz}
-                disabled={loading}
+
+                disabled={
+                  loading ||
+                  loadingSubjects ||
+                  !subject
+                }
               >
 
                 <div>
@@ -1242,6 +1888,7 @@ function Quiz() {
                       size={15}
                       className="quiz-loader"
                     />
+
                   ) : (
                     <Play
                       size={15}
@@ -1254,12 +1901,15 @@ function Quiz() {
 
                 {loading
                   ? "Applying Settings..."
+                  : loadingSubjects
+                  ? "Loading Subjects..."
                   : "Start Adaptive Quiz"}
 
 
-                {!loading && (
-                  <ArrowRight size={18} />
-                )}
+                {!loading &&
+                  !loadingSubjects && (
+                    <ArrowRight size={18} />
+                  )}
 
               </button>
 
@@ -1284,14 +1934,57 @@ function Quiz() {
     ];
 
 
+  if (!currentQuestion) {
+    return (
+      <div className="quiz-page">
+
+        <main className="quiz-setup-container">
+
+          <section className="quiz-setup-card">
+
+            <div className="quiz-ai-message">
+
+              <X size={18} />
+
+              <p>
+                Quiz question could not be loaded.
+              </p>
+
+            </div>
+
+
+            <button
+              className="quiz-start-button"
+
+              onClick={() =>
+                setScreen(
+                  "setup"
+                )
+              }
+            >
+              Back to Quiz Setup
+            </button>
+
+          </section>
+
+        </main>
+
+      </div>
+    );
+  }
+
+
   const progress =
-    (
+    Math.min(
+      100,
       (
-        currentIndex + 1
-      )
-      /
-      targetQuestionCount
-    ) * 100;
+        (
+          currentIndex + 1
+        )
+        /
+        targetQuestionCount
+      ) * 100
+    );
 
 
   const isCorrect =
@@ -1475,7 +2168,7 @@ function Quiz() {
 
                 return (
                   <button
-                    key={option}
+                    key={`${currentQuestion.id}-${index}`}
 
                     disabled={
                       answerChecked
@@ -1544,6 +2237,7 @@ function Quiz() {
 
                 {isCorrect ? (
                   <Check size={18} />
+
                 ) : (
                   <X size={18} />
                 )}
