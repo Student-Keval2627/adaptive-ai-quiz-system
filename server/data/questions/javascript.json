@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "JavaScript",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which keyword declares a block-scoped variable that can be reassigned?",
+    "options": [
+      "let",
+      "const",
+      "varonly",
+      "define"
+    ],
+    "answer": "let"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which keyword declares a block-scoped variable that cannot be reassigned?",
+    "options": [
+      "const",
+      "let",
+      "var",
+      "fixed"
+    ],
+    "answer": "const"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Data Types",
+    "difficulty": "Easy",
+    "question": "Which JavaScript primitive type represents true or false values?",
+    "options": [
+      "boolean",
+      "bool",
+      "number",
+      "string"
+    ],
+    "answer": "boolean"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Data Types",
+    "difficulty": "Easy",
+    "question": "Which JavaScript type is used for textual data?",
+    "options": [
+      "string",
+      "text",
+      "char",
+      "varchar"
+    ],
+    "answer": "string"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Data Types",
+    "difficulty": "Easy",
+    "question": "Which value represents the intentional absence of an object value?",
+    "options": [
+      "null",
+      "undefinedonly",
+      "false",
+      "0"
+    ],
+    "answer": "null"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Operators",
+    "difficulty": "Easy",
+    "question": "Which operator checks strict equality in JavaScript?",
+    "options": [
+      "===",
+      "==",
+      "=",
+      "!="
+    ],
+    "answer": "==="
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Operators",
+    "difficulty": "Easy",
+    "question": "Which operator represents logical AND?",
+    "options": [
+      "&&",
+      "||",
+      "&|",
+      "and"
+    ],
+    "answer": "&&"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Operators",
+    "difficulty": "Easy",
+    "question": "Which operator represents logical OR?",
+    "options": [
+      "||",
+      "&&",
+      "or",
+      "|&"
+    ],
+    "answer": "||"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Conditions",
+    "difficulty": "Easy",
+    "question": "Which keyword begins a conditional statement?",
+    "options": [
+      "if",
+      "when",
+      "case",
+      "check"
+    ],
+    "answer": "if"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Conditions",
+    "difficulty": "Easy",
+    "question": "Which keyword provides an alternative branch after if?",
+    "options": [
+      "else",
+      "otherwise",
+      "elif",
+      "then"
+    ],
+    "answer": "else"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Loops",
+    "difficulty": "Easy",
+    "question": "Which loop is commonly used when the number of iterations is known?",
+    "options": [
+      "for",
+      "switch",
+      "if",
+      "try"
+    ],
+    "answer": "for"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Loops",
+    "difficulty": "Easy",
+    "question": "Which keyword exits a loop immediately?",
+    "options": [
+      "break",
+      "stop",
+      "exitloop",
+      "returnloop"
+    ],
+    "answer": "break"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Loops",
+    "difficulty": "Easy",
+    "question": "Which keyword skips the rest of the current loop iteration?",
+    "options": [
+      "continue",
+      "skip",
+      "next",
+      "pass"
+    ],
+    "answer": "continue"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Functions",
+    "difficulty": "Easy",
+    "question": "Which keyword is commonly used to declare a traditional function?",
+    "options": [
+      "function",
+      "def",
+      "func",
+      "method"
+    ],
+    "answer": "function"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Functions",
+    "difficulty": "Easy",
+    "question": "Which keyword sends a value back from a function?",
+    "options": [
+      "return",
+      "yieldonly",
+      "send",
+      "back"
+    ],
+    "answer": "return"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Arrays",
+    "difficulty": "Easy",
+    "question": "What is the index of the first element in a JavaScript array?",
+    "options": [
+      "0",
+      "1",
+      "-1",
+      "Depends on length"
+    ],
+    "answer": "0"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Arrays",
+    "difficulty": "Easy",
+    "question": "Which method adds an element to the end of an array?",
+    "options": [
+      "push()",
+      "pop()",
+      "shift()",
+      "slice()"
+    ],
+    "answer": "push()"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Arrays",
+    "difficulty": "Easy",
+    "question": "Which method removes the last element from an array?",
+    "options": [
+      "pop()",
+      "push()",
+      "shift()",
+      "unshift()"
+    ],
+    "answer": "pop()"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Arrays",
+    "difficulty": "Easy",
+    "question": "Which property returns the number of elements in an array?",
+    "options": [
+      "length",
+      "size",
+      "count",
+      "items"
+    ],
+    "answer": "length"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Objects",
+    "difficulty": "Easy",
+    "question": "Which syntax creates an empty object literal?",
+    "options": [
+      "{}",
+      "[]",
+      "()",
+      "<>"
+    ],
+    "answer": "{}"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Objects",
+    "difficulty": "Easy",
+    "question": "Which operator can access a property such as user.name?",
+    "options": [
+      ".",
+      "::",
+      "->",
+      "#"
+    ],
+    "answer": "."
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Strings",
+    "difficulty": "Easy",
+    "question": "Which property gives the length of a string?",
+    "options": [
+      "length",
+      "size",
+      "count",
+      "chars"
+    ],
+    "answer": "length"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Console",
+    "difficulty": "Easy",
+    "question": "Which method commonly prints a value to the browser console?",
+    "options": [
+      "console.log()",
+      "print()",
+      "System.out.println()",
+      "echo()"
+    ],
+    "answer": "console.log()"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "DOM",
+    "difficulty": "Easy",
+    "question": "Which method selects an element by its id?",
+    "options": [
+      "document.getElementById()",
+      "document.findId()",
+      "document.queryId()",
+      "document.selectById()"
+    ],
+    "answer": "document.getElementById()"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "DOM",
+    "difficulty": "Easy",
+    "question": "Which method selects the first element matching a CSS selector?",
+    "options": [
+      "document.querySelector()",
+      "document.getSelector()",
+      "document.match()",
+      "document.find()"
+    ],
+    "answer": "document.querySelector()"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Events",
+    "difficulty": "Easy",
+    "question": "Which method attaches an event listener to an element?",
+    "options": [
+      "addEventListener()",
+      "onEvent()",
+      "listen()",
+      "attachListenerOnly()"
+    ],
+    "answer": "addEventListener()"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "JSON",
+    "difficulty": "Easy",
+    "question": "Which method converts a JavaScript value into a JSON string?",
+    "options": [
+      "JSON.stringify()",
+      "JSON.parse()",
+      "JSON.encodeOnly()",
+      "JSON.toText()"
+    ],
+    "answer": "JSON.stringify()"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "JSON",
+    "difficulty": "Easy",
+    "question": "Which method converts a JSON string into a JavaScript value?",
+    "options": [
+      "JSON.parse()",
+      "JSON.stringify()",
+      "JSON.decodeOnly()",
+      "JSON.read()"
+    ],
+    "answer": "JSON.parse()"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Timers",
+    "difficulty": "Easy",
+    "question": "Which function schedules code to run once after a delay?",
+    "options": [
+      "setTimeout()",
+      "setInterval()",
+      "wait()",
+      "delay()"
+    ],
+    "answer": "setTimeout()"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Timers",
+    "difficulty": "Easy",
+    "question": "Which function repeatedly runs code at a specified interval?",
+    "options": [
+      "setInterval()",
+      "setTimeout()",
+      "repeat()",
+      "loopTimer()"
+    ],
+    "answer": "setInterval()"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Scope",
+    "difficulty": "Easy",
+    "question": "Which keyword has function scope rather than block scope?",
+    "options": [
+      "var",
+      "let",
+      "const",
+      "block"
+    ],
+    "answer": "var"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Type Checking",
+    "difficulty": "Easy",
+    "question": "Which operator returns a string describing the type of a value?",
+    "options": [
+      "typeof",
+      "type",
+      "instance",
+      "kindof"
+    ],
+    "answer": "typeof"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Numbers",
+    "difficulty": "Easy",
+    "question": "Which built-in function can convert a string such as '42' to an integer?",
+    "options": [
+      "parseInt()",
+      "toIntegerOnly()",
+      "NumberInt()",
+      "int()"
+    ],
+    "answer": "parseInt()"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Comments",
+    "difficulty": "Easy",
+    "question": "Which syntax starts a single-line comment in JavaScript?",
+    "options": [
+      "//",
+      "#",
+      "--",
+      "<!--"
+    ],
+    "answer": "//"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Equality",
+    "difficulty": "Medium",
+    "question": "What is the main difference between == and ===?",
+    "options": [
+      "=== compares without type coercion while == may coerce types",
+      "== is stricter than ===",
+      "=== works only on strings",
+      "== compares object contents deeply"
+    ],
+    "answer": "=== compares without type coercion while == may coerce types"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Functions",
+    "difficulty": "Medium",
+    "question": "What is an arrow function?",
+    "options": [
+      "A concise function expression using =>",
+      "A function that always returns a Promise",
+      "A method bound automatically to classes",
+      "A generator function only"
+    ],
+    "answer": "A concise function expression using =>"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Functions",
+    "difficulty": "Medium",
+    "question": "What does a higher-order function do?",
+    "options": [
+      "Takes functions as arguments or returns a function",
+      "Runs only in strict mode",
+      "Can only be async",
+      "Must be recursive"
+    ],
+    "answer": "Takes functions as arguments or returns a function"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Callbacks",
+    "difficulty": "Medium",
+    "question": "What is a callback function?",
+    "options": [
+      "A function passed to another function to be invoked later",
+      "A function that always calls itself",
+      "A class constructor",
+      "A browser event object"
+    ],
+    "answer": "A function passed to another function to be invoked later"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Closures",
+    "difficulty": "Medium",
+    "question": "What is a closure?",
+    "options": [
+      "A function together with access to its surrounding lexical scope",
+      "A closed browser tab",
+      "A private class only",
+      "A loop that cannot break"
+    ],
+    "answer": "A function together with access to its surrounding lexical scope"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Scope",
+    "difficulty": "Medium",
+    "question": "What is lexical scope?",
+    "options": [
+      "Scope determined by where code is written",
+      "Scope determined only at runtime by call order",
+      "Global scope only",
+      "Scope of object properties"
+    ],
+    "answer": "Scope determined by where code is written"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Arrays",
+    "difficulty": "Medium",
+    "question": "Which array method creates a new array by transforming every element?",
+    "options": [
+      "map()",
+      "filter()",
+      "reduce()",
+      "forEach()"
+    ],
+    "answer": "map()"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Arrays",
+    "difficulty": "Medium",
+    "question": "Which array method creates a new array containing elements that pass a test?",
+    "options": [
+      "filter()",
+      "map()",
+      "reduce()",
+      "sort()"
+    ],
+    "answer": "filter()"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Arrays",
+    "difficulty": "Medium",
+    "question": "Which array method combines elements into a single accumulated result?",
+    "options": [
+      "reduce()",
+      "map()",
+      "filter()",
+      "find()"
+    ],
+    "answer": "reduce()"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Arrays",
+    "difficulty": "Medium",
+    "question": "Which array method returns the first element that satisfies a predicate?",
+    "options": [
+      "find()",
+      "filter()",
+      "map()",
+      "includesOnly()"
+    ],
+    "answer": "find()"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Objects",
+    "difficulty": "Medium",
+    "question": "What does Object.keys(obj) return?",
+    "options": [
+      "An array of the object's own enumerable property names",
+      "An array of all values only",
+      "A deep clone",
+      "A JSON string"
+    ],
+    "answer": "An array of the object's own enumerable property names"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Objects",
+    "difficulty": "Medium",
+    "question": "What does Object.values(obj) return?",
+    "options": [
+      "An array of the object's own enumerable property values",
+      "Property names only",
+      "A Map object",
+      "A string"
+    ],
+    "answer": "An array of the object's own enumerable property values"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Objects",
+    "difficulty": "Medium",
+    "question": "What does object destructuring allow?",
+    "options": [
+      "Extracting properties into variables using concise syntax",
+      "Deleting all properties",
+      "Creating prototypes only",
+      "Converting an object to JSON automatically"
+    ],
+    "answer": "Extracting properties into variables using concise syntax"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Spread Syntax",
+    "difficulty": "Medium",
+    "question": "What does the spread syntax ...arr commonly do in an array literal?",
+    "options": [
+      "Expands iterable elements into the new array",
+      "Deletes duplicate values",
+      "Sorts the array",
+      "Converts the array to an object"
+    ],
+    "answer": "Expands iterable elements into the new array"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Rest Parameters",
+    "difficulty": "Medium",
+    "question": "What does a rest parameter such as ...args collect?",
+    "options": [
+      "Remaining arguments into an array",
+      "All global variables",
+      "Only one argument",
+      "Object methods only"
+    ],
+    "answer": "Remaining arguments into an array"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Promises",
+    "difficulty": "Medium",
+    "question": "What does a Promise represent?",
+    "options": [
+      "The eventual completion or failure of an asynchronous operation",
+      "A synchronous loop",
+      "A class inheritance relationship",
+      "A DOM element"
+    ],
+    "answer": "The eventual completion or failure of an asynchronous operation"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Promises",
+    "difficulty": "Medium",
+    "question": "Which method handles a fulfilled Promise value?",
+    "options": [
+      "then()",
+      "catch()",
+      "finally()",
+      "throw()"
+    ],
+    "answer": "then()"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Promises",
+    "difficulty": "Medium",
+    "question": "Which method handles a rejected Promise?",
+    "options": [
+      "catch()",
+      "then()",
+      "resolve()",
+      "awaitOnly()"
+    ],
+    "answer": "catch()"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Async Await",
+    "difficulty": "Medium",
+    "question": "What does async before a function declaration cause the function to return?",
+    "options": [
+      "A Promise",
+      "A generator",
+      "A DOM node",
+      "A synchronous callback only"
+    ],
+    "answer": "A Promise"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Async Await",
+    "difficulty": "Medium",
+    "question": "Where can await normally be used?",
+    "options": [
+      "Inside an async function or supported module top level",
+      "Inside any ordinary function without restriction",
+      "Only inside constructors",
+      "Only inside loops"
+    ],
+    "answer": "Inside an async function or supported module top level"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Classes",
+    "difficulty": "Medium",
+    "question": "Which keyword creates a subclass in JavaScript class syntax?",
+    "options": [
+      "extends",
+      "inherits",
+      "implements",
+      "superclass"
+    ],
+    "answer": "extends"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Classes",
+    "difficulty": "Medium",
+    "question": "Which method name is used as the class constructor?",
+    "options": [
+      "constructor",
+      "init",
+      "new",
+      "create"
+    ],
+    "answer": "constructor"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Classes",
+    "difficulty": "Medium",
+    "question": "Which keyword calls the parent class constructor?",
+    "options": [
+      "super",
+      "parent",
+      "base",
+      "this"
+    ],
+    "answer": "super"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Modules",
+    "difficulty": "Medium",
+    "question": "Which keyword exposes a binding from an ES module?",
+    "options": [
+      "export",
+      "public",
+      "expose",
+      "module"
+    ],
+    "answer": "export"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Modules",
+    "difficulty": "Medium",
+    "question": "Which keyword loads an exported binding from another ES module?",
+    "options": [
+      "import",
+      "include",
+      "requireonly",
+      "using"
+    ],
+    "answer": "import"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "DOM",
+    "difficulty": "Medium",
+    "question": "What does element.classList.add('active') do?",
+    "options": [
+      "Adds the CSS class active to the element",
+      "Replaces all classes with active",
+      "Creates a new DOM element",
+      "Adds an inline style only"
+    ],
+    "answer": "Adds the CSS class active to the element"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "DOM",
+    "difficulty": "Medium",
+    "question": "Which property changes or reads the text content of an element without parsing HTML?",
+    "options": [
+      "textContent",
+      "innerHTML",
+      "outerHTML",
+      "nodeHTML"
+    ],
+    "answer": "textContent"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Events",
+    "difficulty": "Medium",
+    "question": "What does event.preventDefault() do?",
+    "options": [
+      "Prevents the browser's default action for the event",
+      "Stops all JavaScript execution",
+      "Removes every event listener",
+      "Stops event propagation automatically"
+    ],
+    "answer": "Prevents the browser's default action for the event"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Events",
+    "difficulty": "Medium",
+    "question": "What does event.stopPropagation() do?",
+    "options": [
+      "Stops the event from continuing through the propagation path",
+      "Prevents the default browser action",
+      "Deletes the event target",
+      "Reloads the page"
+    ],
+    "answer": "Stops the event from continuing through the propagation path"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Storage",
+    "difficulty": "Medium",
+    "question": "What is localStorage used for?",
+    "options": [
+      "Persisting string key-value data in the browser across sessions",
+      "Storing server-side files",
+      "Creating cookies only",
+      "Running database queries"
+    ],
+    "answer": "Persisting string key-value data in the browser across sessions"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Storage",
+    "difficulty": "Medium",
+    "question": "How does sessionStorage differ from localStorage?",
+    "options": [
+      "sessionStorage is scoped to a browser tab/session and is cleared when that session ends",
+      "sessionStorage is stored on the server",
+      "localStorage expires after every request",
+      "sessionStorage stores only numbers"
+    ],
+    "answer": "sessionStorage is scoped to a browser tab/session and is cleared when that session ends"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Error Handling",
+    "difficulty": "Medium",
+    "question": "Which statement is used to handle exceptions?",
+    "options": [
+      "try...catch",
+      "if...else",
+      "switch...case",
+      "for...of"
+    ],
+    "answer": "try...catch"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Error Handling",
+    "difficulty": "Medium",
+    "question": "Which keyword explicitly throws an exception?",
+    "options": [
+      "throw",
+      "raise",
+      "error",
+      "rejectonly"
+    ],
+    "answer": "throw"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Execution Model",
+    "difficulty": "Hard",
+    "question": "What is the JavaScript call stack responsible for?",
+    "options": [
+      "Tracking active function execution contexts",
+      "Storing browser cookies",
+      "Running CSS animations only",
+      "Persisting localStorage"
+    ],
+    "answer": "Tracking active function execution contexts"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Event Loop",
+    "difficulty": "Hard",
+    "question": "What is the role of the event loop?",
+    "options": [
+      "Coordinate the call stack with queued asynchronous callbacks",
+      "Compile JavaScript into CSS",
+      "Store object prototypes",
+      "Manage only DOM nodes"
+    ],
+    "answer": "Coordinate the call stack with queued asynchronous callbacks"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Event Loop",
+    "difficulty": "Hard",
+    "question": "Which queue generally has priority after the current stack completes: Promise reactions or timer callbacks?",
+    "options": [
+      "Promise reaction microtasks",
+      "Timer callback tasks",
+      "They always run simultaneously",
+      "Order is random"
+    ],
+    "answer": "Promise reaction microtasks"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Event Loop",
+    "difficulty": "Hard",
+    "question": "What is a microtask in JavaScript runtimes?",
+    "options": [
+      "A queued job such as a Promise reaction processed before the next task",
+      "A CSS animation frame only",
+      "A synchronous function call",
+      "A browser cookie"
+    ],
+    "answer": "A queued job such as a Promise reaction processed before the next task"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Hoisting",
+    "difficulty": "Hard",
+    "question": "What happens to a var declaration during hoisting?",
+    "options": [
+      "Its declaration is processed before execution and initialized to undefined",
+      "It remains completely inaccessible before its line",
+      "It is initialized to null",
+      "It becomes block scoped"
+    ],
+    "answer": "Its declaration is processed before execution and initialized to undefined"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Hoisting",
+    "difficulty": "Hard",
+    "question": "What is the temporal dead zone associated with?",
+    "options": [
+      "Accessing let or const bindings before their declaration is evaluated",
+      "Using var after declaration",
+      "Calling a function after it returns",
+      "Using arrays out of bounds"
+    ],
+    "answer": "Accessing let or const bindings before their declaration is evaluated"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Closures",
+    "difficulty": "Hard",
+    "question": "Why can closures preserve state between function calls?",
+    "options": [
+      "They retain access to variables from their lexical environment",
+      "They copy all global variables into localStorage",
+      "They disable garbage collection entirely",
+      "They convert variables to constants"
+    ],
+    "answer": "They retain access to variables from their lexical environment"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "this",
+    "difficulty": "Hard",
+    "question": "How is this determined for a regular function call in non-arrow functions?",
+    "options": [
+      "By how the function is called",
+      "Always by where the function is defined",
+      "Always the global object",
+      "Always undefined in every mode"
+    ],
+    "answer": "By how the function is called"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "this",
+    "difficulty": "Hard",
+    "question": "How does an arrow function handle this?",
+    "options": [
+      "It captures this lexically from the surrounding scope",
+      "It creates its own dynamic this",
+      "It always binds this to window",
+      "It always binds this to the function object"
+    ],
+    "answer": "It captures this lexically from the surrounding scope"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Prototypes",
+    "difficulty": "Hard",
+    "question": "What is the prototype chain used for?",
+    "options": [
+      "Property and method lookup through linked prototype objects",
+      "Promise scheduling",
+      "DOM event bubbling only",
+      "Module imports"
+    ],
+    "answer": "Property and method lookup through linked prototype objects"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Prototypes",
+    "difficulty": "Hard",
+    "question": "What does Object.create(proto) do?",
+    "options": [
+      "Creates a new object using proto as its prototype",
+      "Clones proto deeply",
+      "Freezes proto",
+      "Creates a class automatically"
+    ],
+    "answer": "Creates a new object using proto as its prototype"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Property Descriptors",
+    "difficulty": "Hard",
+    "question": "What does Object.defineProperty() allow you to control?",
+    "options": [
+      "Property value and descriptor flags such as writable and enumerable",
+      "Only object inheritance",
+      "Only array length",
+      "Promise state"
+    ],
+    "answer": "Property value and descriptor flags such as writable and enumerable"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Property Descriptors",
+    "difficulty": "Hard",
+    "question": "What does Object.freeze(obj) do?",
+    "options": [
+      "Prevents adding, removing, or changing own properties at the top level",
+      "Deeply freezes all nested objects automatically",
+      "Deletes the prototype",
+      "Converts obj to JSON"
+    ],
+    "answer": "Prevents adding, removing, or changing own properties at the top level"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Symbols",
+    "difficulty": "Hard",
+    "question": "What is a Symbol primarily useful for?",
+    "options": [
+      "Creating unique primitive property keys",
+      "Creating numeric constants",
+      "Replacing strings in JSON",
+      "Defining classes only"
+    ],
+    "answer": "Creating unique primitive property keys"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Iterators",
+    "difficulty": "Hard",
+    "question": "Which method makes an object iterable under the iteration protocol?",
+    "options": [
+      "[Symbol.iterator]()",
+      "iterator()",
+      "nextOnly()",
+      "forEach()"
+    ],
+    "answer": "[Symbol.iterator]()"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Generators",
+    "difficulty": "Hard",
+    "question": "Which syntax declares a generator function?",
+    "options": [
+      "function*",
+      "generator function",
+      "async* only",
+      "function =>*"
+    ],
+    "answer": "function*"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Generators",
+    "difficulty": "Hard",
+    "question": "Which keyword pauses a generator and produces a value?",
+    "options": [
+      "yield",
+      "returnonly",
+      "await",
+      "pause"
+    ],
+    "answer": "yield"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Promises",
+    "difficulty": "Hard",
+    "question": "What does Promise.all() do?",
+    "options": [
+      "Waits for all input Promises to fulfill and rejects if any rejects",
+      "Returns the first settled Promise only",
+      "Runs Promises synchronously",
+      "Ignores rejected Promises"
+    ],
+    "answer": "Waits for all input Promises to fulfill and rejects if any rejects"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Promises",
+    "difficulty": "Hard",
+    "question": "What does Promise.race() settle with?",
+    "options": [
+      "The first input Promise to settle",
+      "Only the first fulfilled Promise",
+      "All results as an array",
+      "The last Promise to settle"
+    ],
+    "answer": "The first input Promise to settle"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Promises",
+    "difficulty": "Hard",
+    "question": "What does Promise.allSettled() return after all inputs settle?",
+    "options": [
+      "An array describing fulfillment or rejection of each input",
+      "Only fulfilled values",
+      "The first rejection only",
+      "A boolean"
+    ],
+    "answer": "An array describing fulfillment or rejection of each input"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Async Await",
+    "difficulty": "Hard",
+    "question": "What happens when await is used with a rejected Promise inside an async function?",
+    "options": [
+      "It throws the rejection reason at that point",
+      "It converts the rejection to null",
+      "It ignores the rejection",
+      "It automatically retries"
+    ],
+    "answer": "It throws the rejection reason at that point"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Modules",
+    "difficulty": "Hard",
+    "question": "What is a key property of ES modules regarding top-level scope?",
+    "options": [
+      "Top-level declarations are module-scoped rather than added to the global object",
+      "Every top-level variable becomes global",
+      "Modules cannot use strict mode",
+      "Modules run only in browsers"
+    ],
+    "answer": "Top-level declarations are module-scoped rather than added to the global object"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Modules",
+    "difficulty": "Hard",
+    "question": "What does dynamic import() return?",
+    "options": [
+      "A Promise that resolves to a module namespace object",
+      "The module source string directly",
+      "A synchronous object only",
+      "A DOM node"
+    ],
+    "answer": "A Promise that resolves to a module namespace object"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Memory",
+    "difficulty": "Hard",
+    "question": "What is a common cause of memory leaks in browser JavaScript?",
+    "options": [
+      "Keeping unnecessary references to objects or detached DOM nodes",
+      "Using const variables",
+      "Calling JSON.parse()",
+      "Using strict equality"
+    ],
+    "answer": "Keeping unnecessary references to objects or detached DOM nodes"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Weak Collections",
+    "difficulty": "Hard",
+    "question": "What is special about keys in WeakMap?",
+    "options": [
+      "They do not prevent referenced key objects from being garbage-collected",
+      "They must be strings",
+      "They are sorted automatically",
+      "They are copied deeply"
+    ],
+    "answer": "They do not prevent referenced key objects from being garbage-collected"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Proxy",
+    "difficulty": "Hard",
+    "question": "What does a Proxy object allow?",
+    "options": [
+      "Intercepting fundamental operations on another object",
+      "Running code in another thread",
+      "Freezing all objects globally",
+      "Replacing the event loop"
+    ],
+    "answer": "Intercepting fundamental operations on another object"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Reflect",
+    "difficulty": "Hard",
+    "question": "What is Reflect commonly used for?",
+    "options": [
+      "Performing object operations through standardized methods",
+      "Creating DOM elements only",
+      "Scheduling microtasks only",
+      "Parsing JSON"
+    ],
+    "answer": "Performing object operations through standardized methods"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Coercion",
+    "difficulty": "Hard",
+    "question": "What does Number('') evaluate to?",
+    "options": [
+      "0",
+      "NaN",
+      "undefined",
+      "null"
+    ],
+    "answer": "0"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Coercion",
+    "difficulty": "Hard",
+    "question": "What does Boolean('false') evaluate to?",
+    "options": [
+      "true",
+      "false",
+      "undefined",
+      "NaN"
+    ],
+    "answer": "true"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "NaN",
+    "difficulty": "Hard",
+    "question": "Which built-in method reliably checks whether a value is the number NaN without coercion?",
+    "options": [
+      "Number.isNaN()",
+      "isNaN() only",
+      "value === NaN",
+      "typeof value === 'NaN'"
+    ],
+    "answer": "Number.isNaN()"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Descriptors",
+    "difficulty": "Hard",
+    "question": "What is the default value of enumerable when a property is created with Object.defineProperty() and enumerable is omitted?",
+    "options": [
+      "false",
+      "true",
+      "undefined at runtime",
+      "Depends on the property value"
+    ],
+    "answer": "false"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Private Fields",
+    "difficulty": "Hard",
+    "question": "Which syntax declares a private class field in modern JavaScript?",
+    "options": [
+      "#name",
+      "private name",
+      "_name only",
+      "@name"
+    ],
+    "answer": "#name"
+  },
+  {
+    "subject": "JavaScript",
+    "topic": "Optional Chaining",
+    "difficulty": "Hard",
+    "question": "What does optional chaining ?. do when the value before it is null or undefined?",
+    "options": [
+      "Stops the chain and returns undefined",
+      "Throws a SyntaxError",
+      "Converts the value to an empty object",
+      "Returns null in every case"
+    ],
+    "answer": "Stops the chain and returns undefined"
+  }
+]
