@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "Web Development",
+    "topic": "HTML",
+    "difficulty": "Easy",
+    "question": "What does HTML stand for?",
+    "options": [
+      "HyperText Markup Language",
+      "HighText Machine Language",
+      "Hyper Transfer Markup Language",
+      "Home Tool Markup Language"
+    ],
+    "answer": "HyperText Markup Language"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTML",
+    "difficulty": "Easy",
+    "question": "Which HTML tag is used for the largest heading?",
+    "options": [
+      "<h1>",
+      "<head>",
+      "<h6>",
+      "<title>"
+    ],
+    "answer": "<h1>"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTML",
+    "difficulty": "Easy",
+    "question": "Which HTML tag is used to create a paragraph?",
+    "options": [
+      "<p>",
+      "<para>",
+      "<text>",
+      "<section>"
+    ],
+    "answer": "<p>"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTML",
+    "difficulty": "Easy",
+    "question": "Which HTML tag is commonly used to create a hyperlink?",
+    "options": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<url>"
+    ],
+    "answer": "<a>"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTML",
+    "difficulty": "Easy",
+    "question": "Which attribute specifies the destination URL of an anchor element?",
+    "options": [
+      "href",
+      "src",
+      "targetonly",
+      "link"
+    ],
+    "answer": "href"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTML",
+    "difficulty": "Easy",
+    "question": "Which HTML tag is used to display an image?",
+    "options": [
+      "<img>",
+      "<image>",
+      "<pictureonly>",
+      "<src>"
+    ],
+    "answer": "<img>"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTML",
+    "difficulty": "Easy",
+    "question": "Which attribute specifies the image source for an img element?",
+    "options": [
+      "src",
+      "href",
+      "alt",
+      "pathonly"
+    ],
+    "answer": "src"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTML",
+    "difficulty": "Easy",
+    "question": "Which attribute provides alternative text for an image?",
+    "options": [
+      "alt",
+      "titleonly",
+      "text",
+      "name"
+    ],
+    "answer": "alt"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTML",
+    "difficulty": "Easy",
+    "question": "Which HTML element is commonly used for an unordered list?",
+    "options": [
+      "<ul>",
+      "<ol>",
+      "<li>",
+      "<list>"
+    ],
+    "answer": "<ul>"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTML",
+    "difficulty": "Easy",
+    "question": "Which HTML element represents a list item?",
+    "options": [
+      "<li>",
+      "<item>",
+      "<ul>",
+      "<ol>"
+    ],
+    "answer": "<li>"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTML",
+    "difficulty": "Easy",
+    "question": "Which HTML element is used to create a form?",
+    "options": [
+      "<form>",
+      "<input>",
+      "<fieldsetonly>",
+      "<submit>"
+    ],
+    "answer": "<form>"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTML",
+    "difficulty": "Easy",
+    "question": "Which input type is used for password fields?",
+    "options": [
+      "password",
+      "text",
+      "secret",
+      "hiddenonly"
+    ],
+    "answer": "password"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTML",
+    "difficulty": "Easy",
+    "question": "Which HTML tag is used for a line break?",
+    "options": [
+      "<br>",
+      "<break>",
+      "<lb>",
+      "<newline>"
+    ],
+    "answer": "<br>"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "CSS",
+    "difficulty": "Easy",
+    "question": "What does CSS stand for?",
+    "options": [
+      "Cascading Style Sheets",
+      "Computer Style Syntax",
+      "Creative Sheet System",
+      "Color Style Structure"
+    ],
+    "answer": "Cascading Style Sheets"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "CSS",
+    "difficulty": "Easy",
+    "question": "Which CSS property changes text color?",
+    "options": [
+      "color",
+      "font-color",
+      "text-color",
+      "foreground"
+    ],
+    "answer": "color"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "CSS",
+    "difficulty": "Easy",
+    "question": "Which CSS property changes the background color of an element?",
+    "options": [
+      "background-color",
+      "color",
+      "bgcoloronly",
+      "background-text"
+    ],
+    "answer": "background-color"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "CSS",
+    "difficulty": "Easy",
+    "question": "Which CSS property controls font size?",
+    "options": [
+      "font-size",
+      "text-size",
+      "size",
+      "font-style"
+    ],
+    "answer": "font-size"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "CSS",
+    "difficulty": "Easy",
+    "question": "Which CSS property controls the space inside an element's border?",
+    "options": [
+      "padding",
+      "margin",
+      "gaponly",
+      "spacing"
+    ],
+    "answer": "padding"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "CSS",
+    "difficulty": "Easy",
+    "question": "Which CSS property controls the space outside an element's border?",
+    "options": [
+      "margin",
+      "padding",
+      "gaponly",
+      "outline"
+    ],
+    "answer": "margin"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "CSS",
+    "difficulty": "Easy",
+    "question": "Which selector targets an element with id='main'?",
+    "options": [
+      "#main",
+      ".main",
+      "main#only",
+      "*main"
+    ],
+    "answer": "#main"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "CSS",
+    "difficulty": "Easy",
+    "question": "Which selector targets elements with class='card'?",
+    "options": [
+      ".card",
+      "#card",
+      "card#",
+      "*card"
+    ],
+    "answer": ".card"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "CSS",
+    "difficulty": "Easy",
+    "question": "Which CSS property makes an element a flex container?",
+    "options": [
+      "display: flex",
+      "position: flex",
+      "flex: display",
+      "layout: flex"
+    ],
+    "answer": "display: flex"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "JavaScript",
+    "difficulty": "Easy",
+    "question": "Which language is commonly used to add interactivity to web pages?",
+    "options": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "SQL"
+    ],
+    "answer": "JavaScript"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "JavaScript",
+    "difficulty": "Easy",
+    "question": "Which method selects the first element matching a CSS selector?",
+    "options": [
+      "document.querySelector()",
+      "document.getSelector()",
+      "document.find()",
+      "document.select()"
+    ],
+    "answer": "document.querySelector()"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "JavaScript",
+    "difficulty": "Easy",
+    "question": "Which method is used to attach an event handler to a DOM element?",
+    "options": [
+      "addEventListener()",
+      "addEvent()",
+      "listenEvent()",
+      "onHandler()"
+    ],
+    "answer": "addEventListener()"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTTP",
+    "difficulty": "Easy",
+    "question": "Which HTTP method is usually used to retrieve data?",
+    "options": [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE"
+    ],
+    "answer": "GET"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTTP",
+    "difficulty": "Easy",
+    "question": "Which HTTP method is commonly used to submit new data?",
+    "options": [
+      "POST",
+      "GET",
+      "HEAD",
+      "OPTIONS"
+    ],
+    "answer": "POST"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTTP",
+    "difficulty": "Easy",
+    "question": "What does HTTP status code 404 mean?",
+    "options": [
+      "Not Found",
+      "OK",
+      "Unauthorized",
+      "Internal Server Error"
+    ],
+    "answer": "Not Found"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTTP",
+    "difficulty": "Easy",
+    "question": "What does HTTP status code 200 generally mean?",
+    "options": [
+      "OK",
+      "Not Found",
+      "Forbidden",
+      "Created only"
+    ],
+    "answer": "OK"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "URLs",
+    "difficulty": "Easy",
+    "question": "What does URL stand for?",
+    "options": [
+      "Uniform Resource Locator",
+      "Universal Request Link",
+      "Unified Resource Location",
+      "User Routing Locator"
+    ],
+    "answer": "Uniform Resource Locator"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Browsers",
+    "difficulty": "Easy",
+    "question": "What does a web browser primarily do?",
+    "options": [
+      "Fetch and render web content",
+      "Compile operating systems",
+      "Store only databases",
+      "Replace web servers"
+    ],
+    "answer": "Fetch and render web content"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Frontend",
+    "difficulty": "Easy",
+    "question": "What is frontend development mainly concerned with?",
+    "options": [
+      "The user-facing part of a web application",
+      "Database backups only",
+      "Server hardware only",
+      "Operating system kernels"
+    ],
+    "answer": "The user-facing part of a web application"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Backend",
+    "difficulty": "Easy",
+    "question": "What is backend development mainly concerned with?",
+    "options": [
+      "Server-side logic, data, and APIs",
+      "Only colors and layouts",
+      "Only HTML headings",
+      "Only browser extensions"
+    ],
+    "answer": "Server-side logic, data, and APIs"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Responsive Design",
+    "difficulty": "Easy",
+    "question": "What is responsive web design?",
+    "options": [
+      "Designing pages to adapt to different screen sizes",
+      "Making pages load only on phones",
+      "Using only fixed widths",
+      "Disabling mobile access"
+    ],
+    "answer": "Designing pages to adapt to different screen sizes"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTML",
+    "difficulty": "Medium",
+    "question": "What is semantic HTML?",
+    "options": [
+      "Using elements that describe the meaning and structure of content",
+      "Using only div elements",
+      "Writing CSS inside HTML",
+      "Using JavaScript for every element"
+    ],
+    "answer": "Using elements that describe the meaning and structure of content"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTML",
+    "difficulty": "Medium",
+    "question": "Which semantic element is appropriate for primary site navigation?",
+    "options": [
+      "<nav>",
+      "<div>",
+      "<span>",
+      "<mainonly>"
+    ],
+    "answer": "<nav>"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTML",
+    "difficulty": "Medium",
+    "question": "Which semantic element represents the main unique content of a document?",
+    "options": [
+      "<main>",
+      "<bodyonly>",
+      "<sectiononly>",
+      "<articleonly>"
+    ],
+    "answer": "<main>"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTML",
+    "difficulty": "Medium",
+    "question": "Why is the label element important in forms?",
+    "options": [
+      "It improves accessibility by associating text with a form control",
+      "It automatically validates every field",
+      "It encrypts form data",
+      "It submits the form"
+    ],
+    "answer": "It improves accessibility by associating text with a form control"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Forms",
+    "difficulty": "Medium",
+    "question": "What does the required attribute do on a supported form control?",
+    "options": [
+      "Prevents normal form submission when the field is empty",
+      "Makes the field read-only",
+      "Encrypts the field value",
+      "Hides the field"
+    ],
+    "answer": "Prevents normal form submission when the field is empty"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Forms",
+    "difficulty": "Medium",
+    "question": "What is the purpose of the name attribute on a form control during submission?",
+    "options": [
+      "It provides the key used for that control's submitted value",
+      "It sets the CSS class",
+      "It sets the placeholder",
+      "It changes the URL protocol"
+    ],
+    "answer": "It provides the key used for that control's submitted value"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "CSS",
+    "difficulty": "Medium",
+    "question": "What does box-sizing: border-box change?",
+    "options": [
+      "Declared width and height include padding and border",
+      "Margin is included in width",
+      "The element becomes flex",
+      "The border is removed"
+    ],
+    "answer": "Declared width and height include padding and border"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "CSS",
+    "difficulty": "Medium",
+    "question": "What is CSS specificity used for?",
+    "options": [
+      "Determining which competing selector rule has priority",
+      "Calculating element width",
+      "Loading fonts",
+      "Creating animations only"
+    ],
+    "answer": "Determining which competing selector rule has priority"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "CSS",
+    "difficulty": "Medium",
+    "question": "Which selector generally has higher specificity?",
+    "options": [
+      "An ID selector",
+      "A class selector",
+      "An element selector",
+      "The universal selector"
+    ],
+    "answer": "An ID selector"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "CSS",
+    "difficulty": "Medium",
+    "question": "What does position: fixed do?",
+    "options": [
+      "Positions an element relative to the viewport in normal cases",
+      "Keeps the element in normal flow only",
+      "Positions relative to its parent content box only",
+      "Makes the element a flex item"
+    ],
+    "answer": "Positions an element relative to the viewport in normal cases"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "CSS",
+    "difficulty": "Medium",
+    "question": "What does position: absolute normally position an element relative to?",
+    "options": [
+      "Its nearest positioned ancestor, or an initial containing block if none exists",
+      "Always the viewport only",
+      "Always its previous sibling",
+      "Always the document body text flow"
+    ],
+    "answer": "Its nearest positioned ancestor, or an initial containing block if none exists"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Flexbox",
+    "difficulty": "Medium",
+    "question": "Which Flexbox property controls alignment along the main axis?",
+    "options": [
+      "justify-content",
+      "align-items",
+      "align-contentonly",
+      "flex-wrap"
+    ],
+    "answer": "justify-content"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Flexbox",
+    "difficulty": "Medium",
+    "question": "Which Flexbox property controls alignment along the cross axis for items in a line?",
+    "options": [
+      "align-items",
+      "justify-content",
+      "gap",
+      "flex-direction"
+    ],
+    "answer": "align-items"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "CSS Grid",
+    "difficulty": "Medium",
+    "question": "Which declaration creates a grid container?",
+    "options": [
+      "display: grid",
+      "position: grid",
+      "grid: display",
+      "layout: grid"
+    ],
+    "answer": "display: grid"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Responsive Design",
+    "difficulty": "Medium",
+    "question": "What are CSS media queries used for?",
+    "options": [
+      "Applying styles based on device or viewport conditions",
+      "Sending HTTP requests",
+      "Querying databases",
+      "Loading JavaScript modules"
+    ],
+    "answer": "Applying styles based on device or viewport conditions"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "JavaScript",
+    "difficulty": "Medium",
+    "question": "What is event delegation?",
+    "options": [
+      "Handling events on a common ancestor instead of attaching handlers to many children",
+      "Running events in separate threads",
+      "Preventing all bubbling",
+      "Replacing DOM nodes automatically"
+    ],
+    "answer": "Handling events on a common ancestor instead of attaching handlers to many children"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "JavaScript",
+    "difficulty": "Medium",
+    "question": "Why is event delegation useful for dynamically added elements?",
+    "options": [
+      "The ancestor handler can respond even when matching children are added later",
+      "Dynamic elements cannot receive events directly",
+      "It disables bubbling",
+      "It forces page reloads"
+    ],
+    "answer": "The ancestor handler can respond even when matching children are added later"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTTP",
+    "difficulty": "Medium",
+    "question": "What does HTTP status code 201 usually indicate?",
+    "options": [
+      "A resource was successfully created",
+      "The resource was not found",
+      "Authentication failed",
+      "The server crashed"
+    ],
+    "answer": "A resource was successfully created"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTTP",
+    "difficulty": "Medium",
+    "question": "What does HTTP status code 401 usually indicate?",
+    "options": [
+      "Authentication is required or failed",
+      "The resource was created",
+      "The request succeeded",
+      "The server is permanently unavailable"
+    ],
+    "answer": "Authentication is required or failed"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTTP",
+    "difficulty": "Medium",
+    "question": "What does HTTP status code 403 usually indicate?",
+    "options": [
+      "The server understood the request but refuses to authorize it",
+      "The resource does not exist",
+      "The request succeeded",
+      "The resource was created"
+    ],
+    "answer": "The server understood the request but refuses to authorize it"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTTP",
+    "difficulty": "Medium",
+    "question": "What does HTTP status code 500 indicate?",
+    "options": [
+      "Internal Server Error",
+      "Not Found",
+      "Created",
+      "Redirect only"
+    ],
+    "answer": "Internal Server Error"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "REST",
+    "difficulty": "Medium",
+    "question": "What does REST commonly model around in web APIs?",
+    "options": [
+      "Resources manipulated through standard HTTP semantics",
+      "Only database tables",
+      "Only HTML documents",
+      "Only WebSocket messages"
+    ],
+    "answer": "Resources manipulated through standard HTTP semantics"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "REST",
+    "difficulty": "Medium",
+    "question": "Which HTTP method is commonly used for a full replacement of a resource?",
+    "options": [
+      "PUT",
+      "GET",
+      "DELETE",
+      "HEAD"
+    ],
+    "answer": "PUT"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "REST",
+    "difficulty": "Medium",
+    "question": "Which HTTP method is commonly used for a partial update?",
+    "options": [
+      "PATCH",
+      "GET",
+      "OPTIONS",
+      "TRACE"
+    ],
+    "answer": "PATCH"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Cookies",
+    "difficulty": "Medium",
+    "question": "What is an HTTP cookie?",
+    "options": [
+      "Small data stored by the browser and sent with matching requests",
+      "A server-side database table only",
+      "A JavaScript module",
+      "A CSS file"
+    ],
+    "answer": "Small data stored by the browser and sent with matching requests"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Sessions",
+    "difficulty": "Medium",
+    "question": "What is a server-side session commonly used for?",
+    "options": [
+      "Maintaining user-specific state across multiple requests",
+      "Rendering CSS",
+      "Compiling JavaScript",
+      "Creating DNS records"
+    ],
+    "answer": "Maintaining user-specific state across multiple requests"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Authentication",
+    "difficulty": "Medium",
+    "question": "What is authentication?",
+    "options": [
+      "Verifying who a user or client is",
+      "Deciding what an authenticated user may do",
+      "Encrypting every database column",
+      "Validating HTML syntax"
+    ],
+    "answer": "Verifying who a user or client is"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Authorization",
+    "difficulty": "Medium",
+    "question": "What is authorization?",
+    "options": [
+      "Determining what an authenticated user is allowed to access or do",
+      "Verifying a password only",
+      "Resolving DNS",
+      "Rendering HTML"
+    ],
+    "answer": "Determining what an authenticated user is allowed to access or do"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "CORS",
+    "difficulty": "Medium",
+    "question": "What does CORS control?",
+    "options": [
+      "Whether browsers allow cross-origin requests based on server-provided policy",
+      "Database normalization",
+      "CSS inheritance",
+      "TCP routing"
+    ],
+    "answer": "Whether browsers allow cross-origin requests based on server-provided policy"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "JSON",
+    "difficulty": "Medium",
+    "question": "Why is JSON commonly used in web APIs?",
+    "options": [
+      "It is a lightweight text format widely supported for structured data exchange",
+      "It automatically encrypts data",
+      "It replaces HTTP",
+      "It stores images directly"
+    ],
+    "answer": "It is a lightweight text format widely supported for structured data exchange"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Fetch API",
+    "difficulty": "Medium",
+    "question": "What does fetch() return in modern browser JavaScript?",
+    "options": [
+      "A Promise",
+      "A DOM element",
+      "A JSON object immediately",
+      "A CSS rule"
+    ],
+    "answer": "A Promise"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Frontend Architecture",
+    "difficulty": "Medium",
+    "question": "What is a component in modern frontend development?",
+    "options": [
+      "A reusable unit of UI and behavior",
+      "A database transaction",
+      "A network packet",
+      "A server process only"
+    ],
+    "answer": "A reusable unit of UI and behavior"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Build Tools",
+    "difficulty": "Medium",
+    "question": "What is a bundler commonly used for?",
+    "options": [
+      "Combining and transforming application assets for delivery",
+      "Managing DNS only",
+      "Running database backups",
+      "Replacing browsers"
+    ],
+    "answer": "Combining and transforming application assets for delivery"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Browser Rendering",
+    "difficulty": "Hard",
+    "question": "What is the DOM?",
+    "options": [
+      "A tree-like object representation of an HTML document exposed to scripts",
+      "A database schema",
+      "A CSS compiler",
+      "A network protocol"
+    ],
+    "answer": "A tree-like object representation of an HTML document exposed to scripts"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Browser Rendering",
+    "difficulty": "Hard",
+    "question": "What is the CSSOM?",
+    "options": [
+      "A representation of parsed CSS rules used by the browser",
+      "A JavaScript package manager",
+      "A database object mapper",
+      "A web server cache"
+    ],
+    "answer": "A representation of parsed CSS rules used by the browser"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Browser Rendering",
+    "difficulty": "Hard",
+    "question": "What is the render tree built from?",
+    "options": [
+      "Relevant DOM nodes combined with computed style information",
+      "Only JavaScript source",
+      "Only network responses",
+      "Only images"
+    ],
+    "answer": "Relevant DOM nodes combined with computed style information"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Browser Rendering",
+    "difficulty": "Hard",
+    "question": "What is layout or reflow in a browser?",
+    "options": [
+      "Calculating element geometry and positions",
+      "Downloading HTML",
+      "Running DNS lookup",
+      "Parsing JSON only"
+    ],
+    "answer": "Calculating element geometry and positions"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Browser Rendering",
+    "difficulty": "Hard",
+    "question": "What is repainting?",
+    "options": [
+      "Redrawing visual pixels after style changes that do not necessarily require layout",
+      "Recalculating DNS",
+      "Rebuilding the database",
+      "Reloading JavaScript modules only"
+    ],
+    "answer": "Redrawing visual pixels after style changes that do not necessarily require layout"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Performance",
+    "difficulty": "Hard",
+    "question": "What does lazy loading of images aim to do?",
+    "options": [
+      "Delay loading off-screen images until they are likely needed",
+      "Load every image before HTML",
+      "Disable browser cache",
+      "Compress CSS only"
+    ],
+    "answer": "Delay loading off-screen images until they are likely needed"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Performance",
+    "difficulty": "Hard",
+    "question": "What is code splitting?",
+    "options": [
+      "Dividing application JavaScript into smaller chunks that can be loaded as needed",
+      "Deleting duplicate code manually only",
+      "Splitting HTML into two files",
+      "Using multiple databases"
+    ],
+    "answer": "Dividing application JavaScript into smaller chunks that can be loaded as needed"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Performance",
+    "difficulty": "Hard",
+    "question": "What is tree shaking?",
+    "options": [
+      "Removing unused exported code during bundling when possible",
+      "Reordering DOM nodes",
+      "Compressing images",
+      "Clearing browser history"
+    ],
+    "answer": "Removing unused exported code during bundling when possible"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Caching",
+    "difficulty": "Hard",
+    "question": "What does Cache-Control: max-age tell a client or intermediary cache?",
+    "options": [
+      "How long a response may be considered fresh under the directive",
+      "How large a response may be",
+      "How many users may access it",
+      "How many redirects are allowed"
+    ],
+    "answer": "How long a response may be considered fresh under the directive"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Caching",
+    "difficulty": "Hard",
+    "question": "What is an ETag used for?",
+    "options": [
+      "Validating whether a cached representation has changed",
+      "Encrypting cookies",
+      "Setting CORS policy",
+      "Assigning session IDs only"
+    ],
+    "answer": "Validating whether a cached representation has changed"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What is Cross-Site Scripting (XSS)?",
+    "options": [
+      "Injection of malicious script content that executes in another user's browser context",
+      "A database deadlock",
+      "A DNS routing error",
+      "A CSS specificity issue"
+    ],
+    "answer": "Injection of malicious script content that executes in another user's browser context"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What is a primary defense against reflected or stored XSS when rendering untrusted text?",
+    "options": [
+      "Context-appropriate output escaping or sanitization",
+      "Disabling HTTPS",
+      "Using GET instead of POST",
+      "Increasing session timeout"
+    ],
+    "answer": "Context-appropriate output escaping or sanitization"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What is Cross-Site Request Forgery (CSRF)?",
+    "options": [
+      "Tricking an authenticated user's browser into sending an unwanted request",
+      "Injecting SQL into a database only",
+      "Breaking TLS encryption",
+      "Stealing DNS records"
+    ],
+    "answer": "Tricking an authenticated user's browser into sending an unwanted request"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "Which cookie attribute helps reduce cross-site request risks by controlling when cookies are sent?",
+    "options": [
+      "SameSite",
+      "Alt",
+      "Accept",
+      "OriginOnly"
+    ],
+    "answer": "SameSite"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What does the HttpOnly cookie attribute do?",
+    "options": [
+      "Prevents JavaScript from reading the cookie through document.cookie",
+      "Encrypts the cookie automatically",
+      "Prevents the browser from sending it",
+      "Makes the cookie permanent"
+    ],
+    "answer": "Prevents JavaScript from reading the cookie through document.cookie"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What does the Secure cookie attribute require?",
+    "options": [
+      "The cookie is sent only over secure HTTPS connections",
+      "The cookie is encrypted at rest automatically",
+      "JavaScript cannot read it",
+      "The cookie has no expiration"
+    ],
+    "answer": "The cookie is sent only over secure HTTPS connections"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What is Content Security Policy mainly used for?",
+    "options": [
+      "Restricting which sources of scripts and other resources a page may load or execute",
+      "Configuring database indexes",
+      "Changing DNS TTL",
+      "Compressing HTML"
+    ],
+    "answer": "Restricting which sources of scripts and other resources a page may load or execute"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What is SQL injection?",
+    "options": [
+      "Manipulating database queries through unsafe handling of untrusted input",
+      "Injecting CSS into HTML",
+      "Changing DNS responses",
+      "Overloading the CPU"
+    ],
+    "answer": "Manipulating database queries through unsafe handling of untrusted input"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What is the safest general approach to avoid SQL injection in application queries?",
+    "options": [
+      "Use parameterized queries or prepared statements",
+      "Concatenate escaped-looking user strings manually",
+      "Use only GET requests",
+      "Hide the database URL"
+    ],
+    "answer": "Use parameterized queries or prepared statements"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Authentication",
+    "difficulty": "Hard",
+    "question": "Why should passwords be stored using a slow password-hashing function rather than plain hashing?",
+    "options": [
+      "It makes large-scale password guessing more expensive",
+      "It allows passwords to be decrypted later",
+      "It removes the need for salts",
+      "It makes passwords shorter"
+    ],
+    "answer": "It makes large-scale password guessing more expensive"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Authentication",
+    "difficulty": "Hard",
+    "question": "What is a salt in password hashing?",
+    "options": [
+      "A unique random value combined with a password before hashing",
+      "The user's email address only",
+      "The encryption key used to decrypt the password",
+      "A session cookie"
+    ],
+    "answer": "A unique random value combined with a password before hashing"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "JWT",
+    "difficulty": "Hard",
+    "question": "What is a JWT?",
+    "options": [
+      "A compact token format that can carry signed claims",
+      "A database query language",
+      "A browser rendering engine",
+      "A CSS framework"
+    ],
+    "answer": "A compact token format that can carry signed claims"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "JWT",
+    "difficulty": "Hard",
+    "question": "What is an important security fact about the payload of a normally signed JWT?",
+    "options": [
+      "It is encoded but not necessarily encrypted",
+      "It is always encrypted",
+      "It cannot be decoded by clients",
+      "It contains only a signature"
+    ],
+    "answer": "It is encoded but not necessarily encrypted"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTTP",
+    "difficulty": "Hard",
+    "question": "What does idempotent mean for an HTTP method?",
+    "options": [
+      "Repeating the same request should have the same intended effect as sending it once",
+      "The response must always be cached",
+      "The method cannot have a body",
+      "The method must be GET"
+    ],
+    "answer": "Repeating the same request should have the same intended effect as sending it once"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTTP",
+    "difficulty": "Hard",
+    "question": "Which common HTTP methods are intended to be idempotent?",
+    "options": [
+      "GET, PUT, and DELETE",
+      "POST only",
+      "CONNECT only",
+      "PATCH always by definition"
+    ],
+    "answer": "GET, PUT, and DELETE"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTTP",
+    "difficulty": "Hard",
+    "question": "What is content negotiation in HTTP?",
+    "options": [
+      "Selecting a representation based on request and response metadata such as Accept headers",
+      "Negotiating TCP ports",
+      "Choosing a database schema",
+      "Selecting a CSS selector"
+    ],
+    "answer": "Selecting a representation based on request and response metadata such as Accept headers"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "HTTP",
+    "difficulty": "Hard",
+    "question": "What does a 304 Not Modified response indicate?",
+    "options": [
+      "The client's cached representation can still be used",
+      "The resource was deleted",
+      "The request is unauthorized",
+      "The server created a resource"
+    ],
+    "answer": "The client's cached representation can still be used"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "CORS",
+    "difficulty": "Hard",
+    "question": "What is a CORS preflight request?",
+    "options": [
+      "An OPTIONS request used by the browser to check whether a cross-origin request is permitted",
+      "A DNS query before every request",
+      "A TCP handshake",
+      "A page reload"
+    ],
+    "answer": "An OPTIONS request used by the browser to check whether a cross-origin request is permitted"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "CORS",
+    "difficulty": "Hard",
+    "question": "Why cannot Access-Control-Allow-Origin be '*' for credentialed browser requests?",
+    "options": [
+      "Credentialed CORS requires an explicit allowed origin rather than the wildcard",
+      "Browsers do not support credentials",
+      "Cookies work only with GET",
+      "CORS applies only to images"
+    ],
+    "answer": "Credentialed CORS requires an explicit allowed origin rather than the wildcard"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "WebSockets",
+    "difficulty": "Hard",
+    "question": "What problem are WebSockets designed to solve?",
+    "options": [
+      "Persistent full-duplex communication between client and server",
+      "Static file compression",
+      "Database normalization",
+      "CSS animation"
+    ],
+    "answer": "Persistent full-duplex communication between client and server"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Architecture",
+    "difficulty": "Hard",
+    "question": "What is server-side rendering?",
+    "options": [
+      "Generating HTML on the server before sending it to the client",
+      "Rendering only CSS on the server",
+      "Running database queries in the browser",
+      "Using only static files"
+    ],
+    "answer": "Generating HTML on the server before sending it to the client"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Architecture",
+    "difficulty": "Hard",
+    "question": "What is client-side rendering?",
+    "options": [
+      "Rendering much of the UI in the browser using JavaScript",
+      "Generating all HTML only on the server",
+      "Rendering only images",
+      "Sending no JavaScript"
+    ],
+    "answer": "Rendering much of the UI in the browser using JavaScript"
+  },
+  {
+    "subject": "Web Development",
+    "topic": "Accessibility",
+    "difficulty": "Hard",
+    "question": "Why is keyboard accessibility important?",
+    "options": [
+      "Users who cannot use a mouse still need to navigate and operate the interface",
+      "It increases database speed",
+      "It replaces responsive design",
+      "It disables screen readers"
+    ],
+    "answer": "Users who cannot use a mouse still need to navigate and operate the interface"
+  }
+]
