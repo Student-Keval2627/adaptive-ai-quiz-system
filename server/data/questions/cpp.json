@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "C++",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which function is the usual entry point of a C++ program?",
+    "options": [
+      "start()",
+      "main()",
+      "run()",
+      "init()"
+    ],
+    "answer": "main()"
+  },
+  {
+    "subject": "C++",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which header is commonly included to use std::cout and std::cin?",
+    "options": [
+      "iostream",
+      "stdio.h",
+      "string.h",
+      "vector.h"
+    ],
+    "answer": "iostream"
+  },
+  {
+    "subject": "C++",
+    "topic": "Input Output",
+    "difficulty": "Easy",
+    "question": "Which object is commonly used for standard output in C++?",
+    "options": [
+      "std::cout",
+      "std::cin",
+      "std::cerrin",
+      "std::input"
+    ],
+    "answer": "std::cout"
+  },
+  {
+    "subject": "C++",
+    "topic": "Input Output",
+    "difficulty": "Easy",
+    "question": "Which object is commonly used for standard input in C++?",
+    "options": [
+      "std::cin",
+      "std::cout",
+      "std::print",
+      "std::read"
+    ],
+    "answer": "std::cin"
+  },
+  {
+    "subject": "C++",
+    "topic": "Variables",
+    "difficulty": "Easy",
+    "question": "Which keyword declares an integer variable in C++?",
+    "options": [
+      "int",
+      "integer",
+      "num",
+      "whole"
+    ],
+    "answer": "int"
+  },
+  {
+    "subject": "C++",
+    "topic": "Data Types",
+    "difficulty": "Easy",
+    "question": "Which built-in type stores true or false values in C++?",
+    "options": [
+      "bool",
+      "char",
+      "float",
+      "byte"
+    ],
+    "answer": "bool"
+  },
+  {
+    "subject": "C++",
+    "topic": "Data Types",
+    "difficulty": "Easy",
+    "question": "Which type is commonly used to store a single character in C++?",
+    "options": [
+      "char",
+      "string",
+      "text",
+      "byte"
+    ],
+    "answer": "char"
+  },
+  {
+    "subject": "C++",
+    "topic": "Operators",
+    "difficulty": "Easy",
+    "question": "Which operator checks equality in C++?",
+    "options": [
+      "==",
+      "=",
+      "===",
+      "!="
+    ],
+    "answer": "=="
+  },
+  {
+    "subject": "C++",
+    "topic": "Operators",
+    "difficulty": "Easy",
+    "question": "Which operator represents logical AND in C++?",
+    "options": [
+      "&&",
+      "||",
+      "&|",
+      "andthen"
+    ],
+    "answer": "&&"
+  },
+  {
+    "subject": "C++",
+    "topic": "Operators",
+    "difficulty": "Easy",
+    "question": "Which operator returns the remainder after integer division?",
+    "options": [
+      "%",
+      "/",
+      "//",
+      "rem"
+    ],
+    "answer": "%"
+  },
+  {
+    "subject": "C++",
+    "topic": "Conditions",
+    "difficulty": "Easy",
+    "question": "Which keyword begins a conditional statement in C++?",
+    "options": [
+      "if",
+      "when",
+      "check",
+      "case"
+    ],
+    "answer": "if"
+  },
+  {
+    "subject": "C++",
+    "topic": "Conditions",
+    "difficulty": "Easy",
+    "question": "Which keyword provides an alternative branch after if?",
+    "options": [
+      "else",
+      "otherwise",
+      "then",
+      "elif"
+    ],
+    "answer": "else"
+  },
+  {
+    "subject": "C++",
+    "topic": "Loops",
+    "difficulty": "Easy",
+    "question": "Which loop is commonly used when the number of iterations is known?",
+    "options": [
+      "for",
+      "switch",
+      "if",
+      "goto"
+    ],
+    "answer": "for"
+  },
+  {
+    "subject": "C++",
+    "topic": "Loops",
+    "difficulty": "Easy",
+    "question": "Which keyword exits a loop immediately?",
+    "options": [
+      "break",
+      "stop",
+      "exitloop",
+      "returnloop"
+    ],
+    "answer": "break"
+  },
+  {
+    "subject": "C++",
+    "topic": "Loops",
+    "difficulty": "Easy",
+    "question": "Which keyword skips the remainder of the current loop iteration?",
+    "options": [
+      "continue",
+      "skip",
+      "next",
+      "pass"
+    ],
+    "answer": "continue"
+  },
+  {
+    "subject": "C++",
+    "topic": "Arrays",
+    "difficulty": "Easy",
+    "question": "What is the index of the first element in a C++ array?",
+    "options": [
+      "0",
+      "1",
+      "-1",
+      "Depends on size"
+    ],
+    "answer": "0"
+  },
+  {
+    "subject": "C++",
+    "topic": "Arrays",
+    "difficulty": "Easy",
+    "question": "Which declaration creates an array of 10 integers?",
+    "options": [
+      "int a[10];",
+      "int[10] a;",
+      "array int a(10);",
+      "int a{10};"
+    ],
+    "answer": "int a[10];"
+  },
+  {
+    "subject": "C++",
+    "topic": "Strings",
+    "difficulty": "Easy",
+    "question": "Which standard type is commonly used for strings in modern C++?",
+    "options": [
+      "std::string",
+      "charonly",
+      "text",
+      "StringBuffer"
+    ],
+    "answer": "std::string"
+  },
+  {
+    "subject": "C++",
+    "topic": "Functions",
+    "difficulty": "Easy",
+    "question": "Which keyword returns a value from a function?",
+    "options": [
+      "return",
+      "yield",
+      "send",
+      "back"
+    ],
+    "answer": "return"
+  },
+  {
+    "subject": "C++",
+    "topic": "Functions",
+    "difficulty": "Easy",
+    "question": "Which return type is commonly used for a function that returns no value?",
+    "options": [
+      "void",
+      "none",
+      "null",
+      "empty"
+    ],
+    "answer": "void"
+  },
+  {
+    "subject": "C++",
+    "topic": "References",
+    "difficulty": "Easy",
+    "question": "Which symbol is used in a reference declaration such as int &r = x;?",
+    "options": [
+      "&",
+      "*",
+      "@",
+      "#"
+    ],
+    "answer": "&"
+  },
+  {
+    "subject": "C++",
+    "topic": "Pointers",
+    "difficulty": "Easy",
+    "question": "Which operator obtains the address of a variable?",
+    "options": [
+      "&",
+      "*",
+      "@",
+      "#"
+    ],
+    "answer": "&"
+  },
+  {
+    "subject": "C++",
+    "topic": "Pointers",
+    "difficulty": "Easy",
+    "question": "Which operator dereferences a pointer?",
+    "options": [
+      "*",
+      "&",
+      "->",
+      "%"
+    ],
+    "answer": "*"
+  },
+  {
+    "subject": "C++",
+    "topic": "Classes",
+    "difficulty": "Easy",
+    "question": "Which keyword defines a class in C++?",
+    "options": [
+      "class",
+      "structonly",
+      "object",
+      "record"
+    ],
+    "answer": "class"
+  },
+  {
+    "subject": "C++",
+    "topic": "Classes",
+    "difficulty": "Easy",
+    "question": "Which access specifier allows class members to be used from outside the class?",
+    "options": [
+      "public",
+      "private",
+      "protectedonly",
+      "internal"
+    ],
+    "answer": "public"
+  },
+  {
+    "subject": "C++",
+    "topic": "Classes",
+    "difficulty": "Easy",
+    "question": "Which access specifier hides class members from direct outside access?",
+    "options": [
+      "private",
+      "public",
+      "open",
+      "global"
+    ],
+    "answer": "private"
+  },
+  {
+    "subject": "C++",
+    "topic": "Constructors",
+    "difficulty": "Easy",
+    "question": "What is the special member function called when an object is created?",
+    "options": [
+      "Constructor",
+      "Destructor",
+      "Operator function",
+      "Friend function"
+    ],
+    "answer": "Constructor"
+  },
+  {
+    "subject": "C++",
+    "topic": "Destructors",
+    "difficulty": "Easy",
+    "question": "Which symbol appears before a destructor name?",
+    "options": [
+      "~",
+      "!",
+      "@",
+      "#"
+    ],
+    "answer": "~"
+  },
+  {
+    "subject": "C++",
+    "topic": "STL",
+    "difficulty": "Easy",
+    "question": "Which STL container is a dynamic array?",
+    "options": [
+      "std::vector",
+      "std::map",
+      "std::set",
+      "std::queue"
+    ],
+    "answer": "std::vector"
+  },
+  {
+    "subject": "C++",
+    "topic": "STL",
+    "difficulty": "Easy",
+    "question": "Which STL container stores key-value pairs ordered by key?",
+    "options": [
+      "std::map",
+      "std::vector",
+      "std::stack",
+      "std::array"
+    ],
+    "answer": "std::map"
+  },
+  {
+    "subject": "C++",
+    "topic": "STL",
+    "difficulty": "Easy",
+    "question": "Which STL container follows LIFO behavior?",
+    "options": [
+      "std::stack",
+      "std::queue",
+      "std::map",
+      "std::list"
+    ],
+    "answer": "std::stack"
+  },
+  {
+    "subject": "C++",
+    "topic": "STL",
+    "difficulty": "Easy",
+    "question": "Which STL container follows FIFO behavior?",
+    "options": [
+      "std::queue",
+      "std::stack",
+      "std::set",
+      "std::vector"
+    ],
+    "answer": "std::queue"
+  },
+  {
+    "subject": "C++",
+    "topic": "Namespaces",
+    "difficulty": "Easy",
+    "question": "Which keyword introduces a namespace in C++?",
+    "options": [
+      "namespace",
+      "package",
+      "module",
+      "scope"
+    ],
+    "answer": "namespace"
+  },
+  {
+    "subject": "C++",
+    "topic": "Namespaces",
+    "difficulty": "Easy",
+    "question": "Which operator accesses a name inside a namespace or class scope?",
+    "options": [
+      "::",
+      ".",
+      "->",
+      ":"
+    ],
+    "answer": "::"
+  },
+  {
+    "subject": "C++",
+    "topic": "References",
+    "difficulty": "Medium",
+    "question": "What is a reference in C++?",
+    "options": [
+      "An alias for an existing object",
+      "A dynamically allocated object only",
+      "A special integer",
+      "A macro"
+    ],
+    "answer": "An alias for an existing object"
+  },
+  {
+    "subject": "C++",
+    "topic": "References",
+    "difficulty": "Medium",
+    "question": "What is a major difference between a reference and a pointer?",
+    "options": [
+      "A reference must normally refer to an object once initialized",
+      "A pointer cannot be null",
+      "A reference stores array size",
+      "A pointer cannot be reassigned"
+    ],
+    "answer": "A reference must normally refer to an object once initialized"
+  },
+  {
+    "subject": "C++",
+    "topic": "Pointers",
+    "difficulty": "Medium",
+    "question": "If int x = 10; and int *p = &x;, what does *p evaluate to?",
+    "options": [
+      "10",
+      "Address of x",
+      "0",
+      "Size of x"
+    ],
+    "answer": "10"
+  },
+  {
+    "subject": "C++",
+    "topic": "Pointers",
+    "difficulty": "Medium",
+    "question": "What type is int **p;?",
+    "options": [
+      "Pointer to pointer to int",
+      "Pointer to array only",
+      "Integer reference",
+      "Function pointer"
+    ],
+    "answer": "Pointer to pointer to int"
+  },
+  {
+    "subject": "C++",
+    "topic": "Functions",
+    "difficulty": "Medium",
+    "question": "What is function overloading?",
+    "options": [
+      "Defining multiple functions with the same name but different parameter lists",
+      "Calling a function recursively",
+      "Replacing a function at runtime",
+      "Making every function inline"
+    ],
+    "answer": "Defining multiple functions with the same name but different parameter lists"
+  },
+  {
+    "subject": "C++",
+    "topic": "Functions",
+    "difficulty": "Medium",
+    "question": "Which keyword suggests that a function may be expanded at the call site?",
+    "options": [
+      "inline",
+      "expand",
+      "macro",
+      "fast"
+    ],
+    "answer": "inline"
+  },
+  {
+    "subject": "C++",
+    "topic": "Functions",
+    "difficulty": "Medium",
+    "question": "What is a default argument?",
+    "options": [
+      "A value used when the caller omits that argument",
+      "A global variable",
+      "A constructor only parameter",
+      "A compile-time error value"
+    ],
+    "answer": "A value used when the caller omits that argument"
+  },
+  {
+    "subject": "C++",
+    "topic": "Classes",
+    "difficulty": "Medium",
+    "question": "What does encapsulation mean in OOP?",
+    "options": [
+      "Bundling data and behavior while controlling access",
+      "Creating only global variables",
+      "Copying every object",
+      "Replacing inheritance"
+    ],
+    "answer": "Bundling data and behavior while controlling access"
+  },
+  {
+    "subject": "C++",
+    "topic": "Inheritance",
+    "difficulty": "Medium",
+    "question": "What does inheritance allow a derived class to do?",
+    "options": [
+      "Reuse and extend members of a base class",
+      "Delete all base class members",
+      "Avoid constructors completely",
+      "Store only static data"
+    ],
+    "answer": "Reuse and extend members of a base class"
+  },
+  {
+    "subject": "C++",
+    "topic": "Inheritance",
+    "difficulty": "Medium",
+    "question": "Which syntax indicates public inheritance from Base?",
+    "options": [
+      "class Derived : public Base",
+      "class Derived -> Base",
+      "class Derived inherits Base",
+      "class Derived(Base)"
+    ],
+    "answer": "class Derived : public Base"
+  },
+  {
+    "subject": "C++",
+    "topic": "Polymorphism",
+    "difficulty": "Medium",
+    "question": "What is runtime polymorphism commonly implemented with in C++?",
+    "options": [
+      "Virtual functions",
+      "Macros only",
+      "Namespaces",
+      "Templates only"
+    ],
+    "answer": "Virtual functions"
+  },
+  {
+    "subject": "C++",
+    "topic": "Polymorphism",
+    "difficulty": "Medium",
+    "question": "Which keyword marks a member function for dynamic dispatch?",
+    "options": [
+      "virtual",
+      "dynamic",
+      "overrideonly",
+      "runtime"
+    ],
+    "answer": "virtual"
+  },
+  {
+    "subject": "C++",
+    "topic": "Polymorphism",
+    "difficulty": "Medium",
+    "question": "Which specifier can be used on a derived member function to verify that it overrides a base virtual function?",
+    "options": [
+      "override",
+      "extends",
+      "virtualize",
+      "replace"
+    ],
+    "answer": "override"
+  },
+  {
+    "subject": "C++",
+    "topic": "Constructors",
+    "difficulty": "Medium",
+    "question": "What is a copy constructor used for?",
+    "options": [
+      "Constructing an object from another object of the same type",
+      "Deleting an object",
+      "Creating a namespace",
+      "Comparing two objects"
+    ],
+    "answer": "Constructing an object from another object of the same type"
+  },
+  {
+    "subject": "C++",
+    "topic": "Constructors",
+    "difficulty": "Medium",
+    "question": "Which constructor is designed to take resources from a temporary object?",
+    "options": [
+      "Move constructor",
+      "Default constructor",
+      "Copy constructor",
+      "Friend constructor"
+    ],
+    "answer": "Move constructor"
+  },
+  {
+    "subject": "C++",
+    "topic": "Destructors",
+    "difficulty": "Medium",
+    "question": "When is a destructor normally called?",
+    "options": [
+      "When an object's lifetime ends",
+      "Only when new is called",
+      "Before the constructor",
+      "Only for global variables"
+    ],
+    "answer": "When an object's lifetime ends"
+  },
+  {
+    "subject": "C++",
+    "topic": "Operator Overloading",
+    "difficulty": "Medium",
+    "question": "What does operator overloading allow?",
+    "options": [
+      "Defining behavior of operators for user-defined types",
+      "Creating new operator symbols",
+      "Changing operator precedence",
+      "Overloading only arithmetic types"
+    ],
+    "answer": "Defining behavior of operators for user-defined types"
+  },
+  {
+    "subject": "C++",
+    "topic": "STL",
+    "difficulty": "Medium",
+    "question": "Which vector member function adds an element to the end?",
+    "options": [
+      "push_back()",
+      "append_front()",
+      "insert_end()",
+      "enqueue()"
+    ],
+    "answer": "push_back()"
+  },
+  {
+    "subject": "C++",
+    "topic": "STL",
+    "difficulty": "Medium",
+    "question": "Which vector member function returns the number of stored elements?",
+    "options": [
+      "size()",
+      "lengthof()",
+      "countall()",
+      "capacityonly()"
+    ],
+    "answer": "size()"
+  },
+  {
+    "subject": "C++",
+    "topic": "STL",
+    "difficulty": "Medium",
+    "question": "What does std::sort require for its usual overload on a sequence?",
+    "options": [
+      "Random-access iterators",
+      "Only linked-list iterators",
+      "A hash table",
+      "A queue interface"
+    ],
+    "answer": "Random-access iterators"
+  },
+  {
+    "subject": "C++",
+    "topic": "STL",
+    "difficulty": "Medium",
+    "question": "Which header provides std::sort?",
+    "options": [
+      "algorithm",
+      "vector",
+      "iostream",
+      "utility"
+    ],
+    "answer": "algorithm"
+  },
+  {
+    "subject": "C++",
+    "topic": "Templates",
+    "difficulty": "Medium",
+    "question": "What is a function template used for?",
+    "options": [
+      "Writing generic functions that work with multiple types",
+      "Creating only virtual functions",
+      "Defining namespaces",
+      "Replacing constructors"
+    ],
+    "answer": "Writing generic functions that work with multiple types"
+  },
+  {
+    "subject": "C++",
+    "topic": "Templates",
+    "difficulty": "Medium",
+    "question": "Which keyword is commonly used to declare a template type parameter?",
+    "options": [
+      "typename",
+      "typeof",
+      "generic",
+      "typevar"
+    ],
+    "answer": "typename"
+  },
+  {
+    "subject": "C++",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "Which keyword is used to signal an exception?",
+    "options": [
+      "throw",
+      "raise",
+      "error",
+      "except"
+    ],
+    "answer": "throw"
+  },
+  {
+    "subject": "C++",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "Which block handles an exception thrown from a try block?",
+    "options": [
+      "catch",
+      "except",
+      "handle",
+      "error"
+    ],
+    "answer": "catch"
+  },
+  {
+    "subject": "C++",
+    "topic": "Memory",
+    "difficulty": "Medium",
+    "question": "Which operator dynamically allocates an object in C++?",
+    "options": [
+      "new",
+      "malloconly",
+      "create",
+      "alloc"
+    ],
+    "answer": "new"
+  },
+  {
+    "subject": "C++",
+    "topic": "Memory",
+    "difficulty": "Medium",
+    "question": "Which operator releases memory allocated with new for a single object?",
+    "options": [
+      "delete",
+      "freeonly",
+      "release",
+      "dispose"
+    ],
+    "answer": "delete"
+  },
+  {
+    "subject": "C++",
+    "topic": "Memory",
+    "difficulty": "Medium",
+    "question": "Which operator pair is used for a dynamically allocated array?",
+    "options": [
+      "new[] and delete[]",
+      "new and free",
+      "malloc and delete",
+      "alloc[] and release[]"
+    ],
+    "answer": "new[] and delete[]"
+  },
+  {
+    "subject": "C++",
+    "topic": "Smart Pointers",
+    "difficulty": "Medium",
+    "question": "Which smart pointer represents exclusive ownership of an object?",
+    "options": [
+      "std::unique_ptr",
+      "std::shared_ptr",
+      "std::weak_ptr",
+      "std::raw_ptr"
+    ],
+    "answer": "std::unique_ptr"
+  },
+  {
+    "subject": "C++",
+    "topic": "Smart Pointers",
+    "difficulty": "Medium",
+    "question": "Which smart pointer uses reference counting for shared ownership?",
+    "options": [
+      "std::shared_ptr",
+      "std::unique_ptr",
+      "std::weak_ptr only",
+      "std::auto_ptr only"
+    ],
+    "answer": "std::shared_ptr"
+  },
+  {
+    "subject": "C++",
+    "topic": "Files",
+    "difficulty": "Medium",
+    "question": "Which class is commonly used to read from files?",
+    "options": [
+      "std::ifstream",
+      "std::ofstream",
+      "std::cout",
+      "std::istreambufonly"
+    ],
+    "answer": "std::ifstream"
+  },
+  {
+    "subject": "C++",
+    "topic": "Files",
+    "difficulty": "Medium",
+    "question": "Which class is commonly used to write to files?",
+    "options": [
+      "std::ofstream",
+      "std::ifstream",
+      "std::cin",
+      "std::sstreamonly"
+    ],
+    "answer": "std::ofstream"
+  },
+  {
+    "subject": "C++",
+    "topic": "Range For",
+    "difficulty": "Medium",
+    "question": "What is a range-based for loop designed to do?",
+    "options": [
+      "Iterate over elements of a range or container",
+      "Allocate an array",
+      "Create a template",
+      "Catch exceptions"
+    ],
+    "answer": "Iterate over elements of a range or container"
+  },
+  {
+    "subject": "C++",
+    "topic": "RAII",
+    "difficulty": "Hard",
+    "question": "What is RAII in C++ mainly used for?",
+    "options": [
+      "Tying resource lifetime to object lifetime",
+      "Running functions recursively",
+      "Replacing templates",
+      "Disabling destructors"
+    ],
+    "answer": "Tying resource lifetime to object lifetime"
+  },
+  {
+    "subject": "C++",
+    "topic": "RAII",
+    "difficulty": "Hard",
+    "question": "Why is RAII useful for exception safety?",
+    "options": [
+      "Destructors release owned resources during stack unwinding",
+      "Exceptions disable destructors",
+      "Resources become global automatically",
+      "It prevents all exceptions"
+    ],
+    "answer": "Destructors release owned resources during stack unwinding"
+  },
+  {
+    "subject": "C++",
+    "topic": "Move Semantics",
+    "difficulty": "Hard",
+    "question": "What does std::move actually do?",
+    "options": [
+      "Casts an expression to an rvalue category enabling move operations",
+      "Physically moves memory immediately",
+      "Deletes the source object",
+      "Copies an object twice"
+    ],
+    "answer": "Casts an expression to an rvalue category enabling move operations"
+  },
+  {
+    "subject": "C++",
+    "topic": "Move Semantics",
+    "difficulty": "Hard",
+    "question": "Which reference type can bind directly to a temporary object?",
+    "options": [
+      "Rvalue reference T&&",
+      "Non-const lvalue reference T& only",
+      "Pointer T* only",
+      "Array reference only"
+    ],
+    "answer": "Rvalue reference T&&"
+  },
+  {
+    "subject": "C++",
+    "topic": "Value Categories",
+    "difficulty": "Hard",
+    "question": "What is an lvalue generally associated with?",
+    "options": [
+      "An object with an identifiable location",
+      "A temporary with no identity only",
+      "A compile-time constant only",
+      "A type alias"
+    ],
+    "answer": "An object with an identifiable location"
+  },
+  {
+    "subject": "C++",
+    "topic": "Value Categories",
+    "difficulty": "Hard",
+    "question": "Which expression is typically an rvalue?",
+    "options": [
+      "A temporary result such as x + y",
+      "A named variable x",
+      "A named reference r",
+      "A dereferenced pointer *p"
+    ],
+    "answer": "A temporary result such as x + y"
+  },
+  {
+    "subject": "C++",
+    "topic": "Virtual Functions",
+    "difficulty": "Hard",
+    "question": "Why should a polymorphic base class usually have a virtual destructor?",
+    "options": [
+      "So deleting a derived object through a base pointer destroys the complete object correctly",
+      "To make constructors virtual",
+      "To enable templates",
+      "To prevent inheritance"
+    ],
+    "answer": "So deleting a derived object through a base pointer destroys the complete object correctly"
+  },
+  {
+    "subject": "C++",
+    "topic": "Virtual Functions",
+    "difficulty": "Hard",
+    "question": "What does '= 0' on a virtual member function declaration indicate?",
+    "options": [
+      "A pure virtual function",
+      "A deleted function",
+      "A constexpr function",
+      "An inline function"
+    ],
+    "answer": "A pure virtual function"
+  },
+  {
+    "subject": "C++",
+    "topic": "Abstract Classes",
+    "difficulty": "Hard",
+    "question": "What makes a class abstract in C++?",
+    "options": [
+      "Having at least one pure virtual function",
+      "Having only private data",
+      "Using templates",
+      "Having a destructor"
+    ],
+    "answer": "Having at least one pure virtual function"
+  },
+  {
+    "subject": "C++",
+    "topic": "Multiple Inheritance",
+    "difficulty": "Hard",
+    "question": "What problem can virtual inheritance help solve?",
+    "options": [
+      "Duplicate base subobjects in the diamond inheritance pattern",
+      "Template specialization",
+      "Memory leaks from new",
+      "Operator precedence"
+    ],
+    "answer": "Duplicate base subobjects in the diamond inheritance pattern"
+  },
+  {
+    "subject": "C++",
+    "topic": "Object Model",
+    "difficulty": "Hard",
+    "question": "What is object slicing?",
+    "options": [
+      "Losing derived-class parts when copying a derived object into a base object by value",
+      "Deleting half an array",
+      "Splitting a string",
+      "Converting a pointer to void*"
+    ],
+    "answer": "Losing derived-class parts when copying a derived object into a base object by value"
+  },
+  {
+    "subject": "C++",
+    "topic": "Templates",
+    "difficulty": "Hard",
+    "question": "What is template specialization used for?",
+    "options": [
+      "Providing custom behavior for particular template arguments",
+      "Turning every function into virtual",
+      "Avoiding type checking",
+      "Replacing namespaces"
+    ],
+    "answer": "Providing custom behavior for particular template arguments"
+  },
+  {
+    "subject": "C++",
+    "topic": "Templates",
+    "difficulty": "Hard",
+    "question": "What is SFINAE associated with?",
+    "options": [
+      "Discarding invalid template substitutions from overload resolution without immediate hard failure",
+      "Runtime garbage collection",
+      "Exception propagation",
+      "Virtual inheritance"
+    ],
+    "answer": "Discarding invalid template substitutions from overload resolution without immediate hard failure"
+  },
+  {
+    "subject": "C++",
+    "topic": "Templates",
+    "difficulty": "Hard",
+    "question": "What is a variadic template?",
+    "options": [
+      "A template that can accept a variable number of template arguments",
+      "A template with no parameters",
+      "A template restricted to integers",
+      "A virtual template function"
+    ],
+    "answer": "A template that can accept a variable number of template arguments"
+  },
+  {
+    "subject": "C++",
+    "topic": "Type Deduction",
+    "difficulty": "Hard",
+    "question": "What does auto request in a variable declaration?",
+    "options": [
+      "Type deduction from the initializer",
+      "Automatic heap allocation",
+      "Automatic virtual dispatch",
+      "Automatic exception handling"
+    ],
+    "answer": "Type deduction from the initializer"
+  },
+  {
+    "subject": "C++",
+    "topic": "Type Deduction",
+    "difficulty": "Hard",
+    "question": "What does decltype(expr) provide?",
+    "options": [
+      "The type determined from an expression according to decltype rules",
+      "The runtime value of expr",
+      "The size of expr only",
+      "A string containing the type name"
+    ],
+    "answer": "The type determined from an expression according to decltype rules"
+  },
+  {
+    "subject": "C++",
+    "topic": "Const Correctness",
+    "difficulty": "Hard",
+    "question": "What does a trailing const on int get() const; mean for a non-static member function?",
+    "options": [
+      "The function does not modify the object's non-mutable data members through this",
+      "The return value is always constant",
+      "The function is static",
+      "The function cannot be overridden"
+    ],
+    "answer": "The function does not modify the object's non-mutable data members through this"
+  },
+  {
+    "subject": "C++",
+    "topic": "Const Correctness",
+    "difficulty": "Hard",
+    "question": "What does mutable allow for a data member?",
+    "options": [
+      "Modification even inside a const member function",
+      "Automatic thread safety",
+      "Dynamic allocation only",
+      "Changing the member's type"
+    ],
+    "answer": "Modification even inside a const member function"
+  },
+  {
+    "subject": "C++",
+    "topic": "Smart Pointers",
+    "difficulty": "Hard",
+    "question": "What problem does std::weak_ptr help avoid in shared ownership graphs?",
+    "options": [
+      "Reference cycles that prevent objects from being destroyed",
+      "Stack overflow",
+      "Template instantiation",
+      "Object slicing"
+    ],
+    "answer": "Reference cycles that prevent objects from being destroyed"
+  },
+  {
+    "subject": "C++",
+    "topic": "Smart Pointers",
+    "difficulty": "Hard",
+    "question": "What is the main benefit of std::make_unique?",
+    "options": [
+      "It constructs an object and returns a unique_ptr managing it",
+      "It converts shared_ptr into raw pointer",
+      "It creates a global object",
+      "It disables destructors"
+    ],
+    "answer": "It constructs an object and returns a unique_ptr managing it"
+  },
+  {
+    "subject": "C++",
+    "topic": "Containers",
+    "difficulty": "Hard",
+    "question": "Why can inserting into a std::vector invalidate iterators?",
+    "options": [
+      "A reallocation may move the underlying storage",
+      "Vectors are linked lists",
+      "Iterators are always invalid after reads",
+      "The standard forbids stable iterators in every container"
+    ],
+    "answer": "A reallocation may move the underlying storage"
+  },
+  {
+    "subject": "C++",
+    "topic": "Containers",
+    "difficulty": "Hard",
+    "question": "Which standard associative container stores unique keys in sorted order?",
+    "options": [
+      "std::set",
+      "std::unordered_multiset",
+      "std::vector",
+      "std::queue"
+    ],
+    "answer": "std::set"
+  },
+  {
+    "subject": "C++",
+    "topic": "Containers",
+    "difficulty": "Hard",
+    "question": "Which container typically provides average O(1) key lookup using hashing?",
+    "options": [
+      "std::unordered_map",
+      "std::map",
+      "std::list",
+      "std::deque"
+    ],
+    "answer": "std::unordered_map"
+  },
+  {
+    "subject": "C++",
+    "topic": "Iterators",
+    "difficulty": "Hard",
+    "question": "Which iterator category supports arithmetic such as it + n?",
+    "options": [
+      "Random-access iterator",
+      "Input iterator only",
+      "Output iterator only",
+      "Forward iterator only"
+    ],
+    "answer": "Random-access iterator"
+  },
+  {
+    "subject": "C++",
+    "topic": "Algorithms",
+    "difficulty": "Hard",
+    "question": "What requirement does std::lower_bound have for meaningful binary-search behavior?",
+    "options": [
+      "The range must be partitioned or sorted according to the comparison",
+      "The range must be a linked list",
+      "The range must contain unique values",
+      "The range must be reversed"
+    ],
+    "answer": "The range must be partitioned or sorted according to the comparison"
+  },
+  {
+    "subject": "C++",
+    "topic": "Lambdas",
+    "difficulty": "Hard",
+    "question": "What does the capture list [=] mean in a C++ lambda?",
+    "options": [
+      "Capture used automatic variables by value",
+      "Capture everything by reference",
+      "Capture no variables",
+      "Capture only this by pointer"
+    ],
+    "answer": "Capture used automatic variables by value"
+  },
+  {
+    "subject": "C++",
+    "topic": "Lambdas",
+    "difficulty": "Hard",
+    "question": "What does the capture list [&] mean in a C++ lambda?",
+    "options": [
+      "Capture used automatic variables by reference",
+      "Capture everything by value",
+      "Capture no variables",
+      "Capture only globals"
+    ],
+    "answer": "Capture used automatic variables by reference"
+  },
+  {
+    "subject": "C++",
+    "topic": "Exceptions",
+    "difficulty": "Hard",
+    "question": "What is stack unwinding?",
+    "options": [
+      "Destroying automatic objects while control leaves scopes during exception propagation",
+      "Expanding the runtime stack manually",
+      "Copying every exception object",
+      "Resetting the heap"
+    ],
+    "answer": "Destroying automatic objects while control leaves scopes during exception propagation"
+  },
+  {
+    "subject": "C++",
+    "topic": "Exceptions",
+    "difficulty": "Hard",
+    "question": "What does noexcept on a function indicate?",
+    "options": [
+      "The function is declared not to allow exceptions to escape",
+      "The function must return void",
+      "The function cannot allocate memory",
+      "The function is constexpr"
+    ],
+    "answer": "The function is declared not to allow exceptions to escape"
+  },
+  {
+    "subject": "C++",
+    "topic": "Memory",
+    "difficulty": "Hard",
+    "question": "What is placement new used for?",
+    "options": [
+      "Constructing an object in a caller-provided memory location",
+      "Allocating two objects at once",
+      "Deleting an object without destructor",
+      "Creating virtual functions"
+    ],
+    "answer": "Constructing an object in a caller-provided memory location"
+  },
+  {
+    "subject": "C++",
+    "topic": "Concurrency",
+    "difficulty": "Hard",
+    "question": "Which standard type provides mutual exclusion around shared data?",
+    "options": [
+      "std::mutex",
+      "std::vector",
+      "std::futureonly",
+      "std::atomic_flag_only"
+    ],
+    "answer": "std::mutex"
+  },
+  {
+    "subject": "C++",
+    "topic": "Concurrency",
+    "difficulty": "Hard",
+    "question": "Which wrapper locks a mutex on construction and unlocks it on destruction?",
+    "options": [
+      "std::lock_guard",
+      "std::thread_guard",
+      "std::mutex_ptr",
+      "std::scoped_array"
+    ],
+    "answer": "std::lock_guard"
+  },
+  {
+    "subject": "C++",
+    "topic": "Concurrency",
+    "difficulty": "Hard",
+    "question": "What is a data race?",
+    "options": [
+      "Two conflicting unsynchronized accesses to the same memory location, with at least one write",
+      "Two threads reading separate constants",
+      "Two functions with the same name",
+      "Two objects in the same vector"
+    ],
+    "answer": "Two conflicting unsynchronized accesses to the same memory location, with at least one write"
+  }
+]
