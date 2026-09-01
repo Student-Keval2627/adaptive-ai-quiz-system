@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "Algorithms",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is an algorithm?",
+    "options": [
+      "A finite sequence of steps to solve a problem",
+      "A programming language",
+      "A database table",
+      "A hardware device"
+    ],
+    "answer": "A finite sequence of steps to solve a problem"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Complexity",
+    "difficulty": "Easy",
+    "question": "Which notation is commonly used to describe an upper bound on running time?",
+    "options": [
+      "Big O",
+      "Big Data",
+      "Theta only",
+      "Sigma"
+    ],
+    "answer": "Big O"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Complexity",
+    "difficulty": "Easy",
+    "question": "Which complexity represents constant time?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n²)"
+    ],
+    "answer": "O(1)"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Complexity",
+    "difficulty": "Easy",
+    "question": "Which complexity represents linear time?",
+    "options": [
+      "O(n)",
+      "O(1)",
+      "O(log n)",
+      "O(n²)"
+    ],
+    "answer": "O(n)"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Searching",
+    "difficulty": "Easy",
+    "question": "Which search checks elements one by one until the target is found?",
+    "options": [
+      "Linear Search",
+      "Binary Search",
+      "DFS",
+      "Hash Search"
+    ],
+    "answer": "Linear Search"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Searching",
+    "difficulty": "Easy",
+    "question": "Binary search normally requires the data to be in what state?",
+    "options": [
+      "Sorted",
+      "Encrypted",
+      "Random",
+      "Duplicated"
+    ],
+    "answer": "Sorted"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Searching",
+    "difficulty": "Easy",
+    "question": "What is the average time complexity of binary search?",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(n²)",
+      "O(1)"
+    ],
+    "answer": "O(log n)"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Sorting",
+    "difficulty": "Easy",
+    "question": "Which sorting algorithm repeatedly compares adjacent elements and swaps them if needed?",
+    "options": [
+      "Bubble Sort",
+      "Merge Sort",
+      "Quick Sort",
+      "Heap Sort"
+    ],
+    "answer": "Bubble Sort"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Sorting",
+    "difficulty": "Easy",
+    "question": "Which sorting algorithm repeatedly selects the smallest remaining element?",
+    "options": [
+      "Selection Sort",
+      "Bubble Sort",
+      "Merge Sort",
+      "Counting Sort"
+    ],
+    "answer": "Selection Sort"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Sorting",
+    "difficulty": "Easy",
+    "question": "Which sorting algorithm builds a sorted portion by inserting one element at a time?",
+    "options": [
+      "Insertion Sort",
+      "Quick Sort",
+      "Heap Sort",
+      "Radix Sort"
+    ],
+    "answer": "Insertion Sort"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Recursion",
+    "difficulty": "Easy",
+    "question": "What must a recursive algorithm have to terminate correctly?",
+    "options": [
+      "A base case",
+      "A global variable",
+      "A queue",
+      "A hash table"
+    ],
+    "answer": "A base case"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Recursion",
+    "difficulty": "Easy",
+    "question": "What data structure is naturally used by recursive function calls?",
+    "options": [
+      "Call stack",
+      "Queue",
+      "Heap only",
+      "Graph"
+    ],
+    "answer": "Call stack"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Graphs",
+    "difficulty": "Easy",
+    "question": "Which graph traversal explores level by level?",
+    "options": [
+      "BFS",
+      "DFS",
+      "Binary Search",
+      "Merge Sort"
+    ],
+    "answer": "BFS"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Graphs",
+    "difficulty": "Easy",
+    "question": "Which graph traversal explores deeply before backtracking?",
+    "options": [
+      "DFS",
+      "BFS",
+      "Linear Search",
+      "Bubble Sort"
+    ],
+    "answer": "DFS"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Graphs",
+    "difficulty": "Easy",
+    "question": "Which data structure is commonly used by BFS?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Heap",
+      "Set only"
+    ],
+    "answer": "Queue"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Graphs",
+    "difficulty": "Easy",
+    "question": "Which data structure is commonly used by iterative DFS?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Array only",
+      "Hash map only"
+    ],
+    "answer": "Stack"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Greedy",
+    "difficulty": "Easy",
+    "question": "What does a greedy algorithm generally do?",
+    "options": [
+      "Makes the locally best choice at each step",
+      "Tries every possible solution",
+      "Always uses recursion",
+      "Always sorts descending"
+    ],
+    "answer": "Makes the locally best choice at each step"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Dynamic Programming",
+    "difficulty": "Easy",
+    "question": "Dynamic programming is especially useful when subproblems are what?",
+    "options": [
+      "Overlapping",
+      "Unrelated",
+      "Infinite only",
+      "Always sorted"
+    ],
+    "answer": "Overlapping"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Dynamic Programming",
+    "difficulty": "Easy",
+    "question": "What is memoization?",
+    "options": [
+      "Caching results of solved subproblems",
+      "Sorting an array",
+      "Deleting duplicates",
+      "Traversing a graph"
+    ],
+    "answer": "Caching results of solved subproblems"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Divide and Conquer",
+    "difficulty": "Easy",
+    "question": "Which sorting algorithm is a classic divide-and-conquer algorithm?",
+    "options": [
+      "Merge Sort",
+      "Bubble Sort",
+      "Selection Sort",
+      "Linear Search"
+    ],
+    "answer": "Merge Sort"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Divide and Conquer",
+    "difficulty": "Easy",
+    "question": "Which search algorithm uses divide and conquer on a sorted array?",
+    "options": [
+      "Binary Search",
+      "Linear Search",
+      "DFS",
+      "BFS"
+    ],
+    "answer": "Binary Search"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Two Pointers",
+    "difficulty": "Easy",
+    "question": "The two-pointer technique commonly uses how many indices or references?",
+    "options": [
+      "Two",
+      "One",
+      "Three",
+      "Four"
+    ],
+    "answer": "Two"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Sliding Window",
+    "difficulty": "Easy",
+    "question": "What does the sliding window technique usually track?",
+    "options": [
+      "A contiguous range of elements",
+      "Every permutation",
+      "A tree path only",
+      "Only graph edges"
+    ],
+    "answer": "A contiguous range of elements"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Hashing",
+    "difficulty": "Easy",
+    "question": "What is hashing commonly used for in algorithms?",
+    "options": [
+      "Fast lookup by key",
+      "Only sorting",
+      "Only recursion",
+      "Graph coloring"
+    ],
+    "answer": "Fast lookup by key"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Stacks",
+    "difficulty": "Easy",
+    "question": "Which problem is commonly solved using a stack?",
+    "options": [
+      "Balanced parentheses",
+      "Shortest path in weighted graph",
+      "Binary search",
+      "Counting frequencies only"
+    ],
+    "answer": "Balanced parentheses"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Queues",
+    "difficulty": "Easy",
+    "question": "Which traversal often uses a queue?",
+    "options": [
+      "Breadth-First Search",
+      "Depth-First Search only",
+      "Binary Search",
+      "Quick Sort"
+    ],
+    "answer": "Breadth-First Search"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Trees",
+    "difficulty": "Easy",
+    "question": "Which traversal visits root, then left subtree, then right subtree?",
+    "options": [
+      "Preorder",
+      "Inorder",
+      "Postorder",
+      "Level order"
+    ],
+    "answer": "Preorder"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Trees",
+    "difficulty": "Easy",
+    "question": "Which traversal visits left subtree, root, then right subtree?",
+    "options": [
+      "Inorder",
+      "Preorder",
+      "Postorder",
+      "Level order"
+    ],
+    "answer": "Inorder"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Trees",
+    "difficulty": "Easy",
+    "question": "Which traversal visits left subtree, right subtree, then root?",
+    "options": [
+      "Postorder",
+      "Preorder",
+      "Inorder",
+      "Level order"
+    ],
+    "answer": "Postorder"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Shortest Path",
+    "difficulty": "Easy",
+    "question": "Which algorithm finds shortest paths in an unweighted graph?",
+    "options": [
+      "BFS",
+      "DFS",
+      "Bubble Sort",
+      "Selection Sort"
+    ],
+    "answer": "BFS"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Sorting",
+    "difficulty": "Easy",
+    "question": "Which sorting algorithm has a worst-case time complexity of O(n²)?",
+    "options": [
+      "Bubble Sort",
+      "Merge Sort",
+      "Heap Sort",
+      "Counting Sort"
+    ],
+    "answer": "Bubble Sort"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Complexity",
+    "difficulty": "Easy",
+    "question": "Which is generally faster-growing as n increases?",
+    "options": [
+      "O(n²)",
+      "O(n)",
+      "O(log n)",
+      "O(1)"
+    ],
+    "answer": "O(n²)"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Complexity",
+    "difficulty": "Easy",
+    "question": "Which is generally more efficient for large n?",
+    "options": [
+      "O(log n)",
+      "O(n²)",
+      "O(2^n)",
+      "O(n!)"
+    ],
+    "answer": "O(log n)"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Brute Force",
+    "difficulty": "Easy",
+    "question": "What does brute force usually mean?",
+    "options": [
+      "Trying all or many possible candidates directly",
+      "Using only greedy choices",
+      "Using only recursion",
+      "Using hardware acceleration"
+    ],
+    "answer": "Trying all or many possible candidates directly"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Sorting",
+    "difficulty": "Medium",
+    "question": "What is the worst-case time complexity of Merge Sort?",
+    "options": [
+      "O(n log n)",
+      "O(n²)",
+      "O(log n)",
+      "O(n)"
+    ],
+    "answer": "O(n log n)"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Sorting",
+    "difficulty": "Medium",
+    "question": "What is the average-case time complexity of Quick Sort?",
+    "options": [
+      "O(n log n)",
+      "O(n²)",
+      "O(n)",
+      "O(log n)"
+    ],
+    "answer": "O(n log n)"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Sorting",
+    "difficulty": "Medium",
+    "question": "What is the worst-case time complexity of Quick Sort?",
+    "options": [
+      "O(n²)",
+      "O(n log n)",
+      "O(log n)",
+      "O(1)"
+    ],
+    "answer": "O(n²)"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Sorting",
+    "difficulty": "Medium",
+    "question": "Which sorting algorithm is stable in its standard form?",
+    "options": [
+      "Merge Sort",
+      "Heap Sort",
+      "Selection Sort",
+      "Quick Sort"
+    ],
+    "answer": "Merge Sort"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Sorting",
+    "difficulty": "Medium",
+    "question": "Which sorting algorithm is typically in-place and uses a heap?",
+    "options": [
+      "Heap Sort",
+      "Merge Sort",
+      "Counting Sort",
+      "Radix Sort"
+    ],
+    "answer": "Heap Sort"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Searching",
+    "difficulty": "Medium",
+    "question": "What is the worst-case time complexity of linear search?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(1)",
+      "O(n²)"
+    ],
+    "answer": "O(n)"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Binary Search",
+    "difficulty": "Medium",
+    "question": "What common bug can occur when computing mid as (low + high) / 2 in some languages?",
+    "options": [
+      "Integer overflow",
+      "Stack overflow",
+      "Memory leak",
+      "Hash collision"
+    ],
+    "answer": "Integer overflow"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Binary Search",
+    "difficulty": "Medium",
+    "question": "Which safer midpoint formula avoids low + high overflow?",
+    "options": [
+      "low + (high - low) / 2",
+      "high - low / 2",
+      "(low * high) / 2",
+      "low / high"
+    ],
+    "answer": "low + (high - low) / 2"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Two Pointers",
+    "difficulty": "Medium",
+    "question": "Which problem is often solved efficiently with two pointers on a sorted array?",
+    "options": [
+      "Finding two values with a target sum",
+      "Topological sorting",
+      "Minimum spanning tree",
+      "Heap construction"
+    ],
+    "answer": "Finding two values with a target sum"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Sliding Window",
+    "difficulty": "Medium",
+    "question": "What is a common use of a fixed-size sliding window?",
+    "options": [
+      "Finding the maximum sum of any subarray of length k",
+      "Finding a minimum spanning tree",
+      "Sorting linked lists",
+      "Building a heap"
+    ],
+    "answer": "Finding the maximum sum of any subarray of length k"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Prefix Sum",
+    "difficulty": "Medium",
+    "question": "What does a prefix sum array help answer efficiently?",
+    "options": [
+      "Range sum queries",
+      "Graph coloring",
+      "Heap deletion",
+      "String hashing only"
+    ],
+    "answer": "Range sum queries"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Hashing",
+    "difficulty": "Medium",
+    "question": "Which approach can solve Two Sum in average O(n) time?",
+    "options": [
+      "Hash map",
+      "Nested loops only",
+      "Bubble sort only",
+      "DFS"
+    ],
+    "answer": "Hash map"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Graphs",
+    "difficulty": "Medium",
+    "question": "What is the time complexity of BFS on an adjacency-list graph?",
+    "options": [
+      "O(V + E)",
+      "O(V²E)",
+      "O(log V)",
+      "O(E²)"
+    ],
+    "answer": "O(V + E)"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Graphs",
+    "difficulty": "Medium",
+    "question": "What is the time complexity of DFS on an adjacency-list graph?",
+    "options": [
+      "O(V + E)",
+      "O(V²) always",
+      "O(log V)",
+      "O(E log E)"
+    ],
+    "answer": "O(V + E)"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Topological Sort",
+    "difficulty": "Medium",
+    "question": "Topological sorting is defined for which kind of graph?",
+    "options": [
+      "Directed acyclic graph",
+      "Undirected complete graph",
+      "Any cyclic graph",
+      "Weighted tree only"
+    ],
+    "answer": "Directed acyclic graph"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Topological Sort",
+    "difficulty": "Medium",
+    "question": "Which algorithm can perform topological sorting using indegrees and a queue?",
+    "options": [
+      "Kahn's Algorithm",
+      "Dijkstra's Algorithm",
+      "Prim's Algorithm",
+      "Floyd-Warshall"
+    ],
+    "answer": "Kahn's Algorithm"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Shortest Path",
+    "difficulty": "Medium",
+    "question": "Which algorithm finds shortest paths from a source when all edge weights are non-negative?",
+    "options": [
+      "Dijkstra's Algorithm",
+      "Bellman-Ford only",
+      "DFS",
+      "Kruskal's Algorithm"
+    ],
+    "answer": "Dijkstra's Algorithm"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Shortest Path",
+    "difficulty": "Medium",
+    "question": "Which algorithm can handle negative edge weights for single-source shortest paths?",
+    "options": [
+      "Bellman-Ford",
+      "Dijkstra only",
+      "Prim",
+      "Kruskal"
+    ],
+    "answer": "Bellman-Ford"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Shortest Path",
+    "difficulty": "Medium",
+    "question": "Which algorithm computes all-pairs shortest paths using dynamic programming?",
+    "options": [
+      "Floyd-Warshall",
+      "BFS",
+      "Kruskal",
+      "Binary Search"
+    ],
+    "answer": "Floyd-Warshall"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Minimum Spanning Tree",
+    "difficulty": "Medium",
+    "question": "Which algorithm builds a minimum spanning tree by repeatedly choosing the cheapest edge that does not create a cycle?",
+    "options": [
+      "Kruskal's Algorithm",
+      "Dijkstra's Algorithm",
+      "Floyd-Warshall",
+      "Binary Search"
+    ],
+    "answer": "Kruskal's Algorithm"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Minimum Spanning Tree",
+    "difficulty": "Medium",
+    "question": "Which algorithm grows a minimum spanning tree from a starting vertex?",
+    "options": [
+      "Prim's Algorithm",
+      "Bellman-Ford",
+      "Merge Sort",
+      "KMP"
+    ],
+    "answer": "Prim's Algorithm"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Union Find",
+    "difficulty": "Medium",
+    "question": "Which data structure is commonly used by Kruskal's Algorithm to detect cycles?",
+    "options": [
+      "Disjoint Set Union",
+      "Queue",
+      "Trie",
+      "Deque only"
+    ],
+    "answer": "Disjoint Set Union"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Dynamic Programming",
+    "difficulty": "Medium",
+    "question": "What is tabulation in dynamic programming?",
+    "options": [
+      "Bottom-up computation of subproblem results",
+      "Recursive search with no cache",
+      "Graph traversal only",
+      "Hash collision handling"
+    ],
+    "answer": "Bottom-up computation of subproblem results"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Dynamic Programming",
+    "difficulty": "Medium",
+    "question": "Which classic problem is often solved with dynamic programming?",
+    "options": [
+      "0/1 Knapsack",
+      "Binary Search",
+      "Simple linear scan",
+      "Stack push"
+    ],
+    "answer": "0/1 Knapsack"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Dynamic Programming",
+    "difficulty": "Medium",
+    "question": "Which problem asks for the longest common subsequence between two sequences?",
+    "options": [
+      "LCS",
+      "MST",
+      "BFS",
+      "Heapify"
+    ],
+    "answer": "LCS"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Greedy",
+    "difficulty": "Medium",
+    "question": "Which problem is commonly solved greedily by sorting activities by finishing time?",
+    "options": [
+      "Activity Selection",
+      "0/1 Knapsack",
+      "Longest Common Subsequence",
+      "Matrix Chain Multiplication"
+    ],
+    "answer": "Activity Selection"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Greedy",
+    "difficulty": "Medium",
+    "question": "Which version of knapsack is optimally solved by a greedy strategy based on value-to-weight ratio?",
+    "options": [
+      "Fractional Knapsack",
+      "0/1 Knapsack",
+      "Unbounded Subset Sum",
+      "Matrix Chain Multiplication"
+    ],
+    "answer": "Fractional Knapsack"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Recursion",
+    "difficulty": "Medium",
+    "question": "What is backtracking?",
+    "options": [
+      "Exploring choices and undoing them when they cannot lead to a solution",
+      "Only sorting recursively",
+      "Only graph traversal",
+      "Caching every result"
+    ],
+    "answer": "Exploring choices and undoing them when they cannot lead to a solution"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Backtracking",
+    "difficulty": "Medium",
+    "question": "Which classic problem is often solved with backtracking?",
+    "options": [
+      "N-Queens",
+      "Binary Search",
+      "Merge Sort",
+      "Dijkstra"
+    ],
+    "answer": "N-Queens"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Strings",
+    "difficulty": "Medium",
+    "question": "Which algorithm searches for a pattern in a string using a prefix-function style preprocessing table?",
+    "options": [
+      "KMP",
+      "Dijkstra",
+      "Prim",
+      "Heap Sort"
+    ],
+    "answer": "KMP"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Strings",
+    "difficulty": "Medium",
+    "question": "What is the main purpose of the LPS array in KMP?",
+    "options": [
+      "Avoid rechecking characters after a mismatch",
+      "Sort characters",
+      "Build a suffix tree",
+      "Count vowels"
+    ],
+    "answer": "Avoid rechecking characters after a mismatch"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Trees",
+    "difficulty": "Medium",
+    "question": "Which traversal of a binary search tree visits keys in sorted order?",
+    "options": [
+      "Inorder",
+      "Preorder",
+      "Postorder",
+      "Level order only"
+    ],
+    "answer": "Inorder"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Heaps",
+    "difficulty": "Medium",
+    "question": "What is the time complexity of inserting into a binary heap?",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(1) always",
+      "O(n²)"
+    ],
+    "answer": "O(log n)"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Complexity",
+    "difficulty": "Hard",
+    "question": "What does amortized analysis study?",
+    "options": [
+      "Average cost per operation over a worst-case sequence of operations",
+      "Average input value",
+      "Only best-case runtime",
+      "Only memory complexity"
+    ],
+    "answer": "Average cost per operation over a worst-case sequence of operations"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Complexity",
+    "difficulty": "Hard",
+    "question": "What is the amortized time complexity of appending to a dynamic array with geometric resizing?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n²)"
+    ],
+    "answer": "O(1)"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Complexity",
+    "difficulty": "Hard",
+    "question": "Which notation gives an asymptotically tight bound?",
+    "options": [
+      "Theta",
+      "Big O only",
+      "Omega only",
+      "Sigma"
+    ],
+    "answer": "Theta"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Complexity",
+    "difficulty": "Hard",
+    "question": "Which notation describes an asymptotic lower bound?",
+    "options": [
+      "Omega",
+      "Theta only",
+      "Big O",
+      "Delta"
+    ],
+    "answer": "Omega"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Recurrences",
+    "difficulty": "Hard",
+    "question": "What is the time complexity of the recurrence T(n)=2T(n/2)+O(n)?",
+    "options": [
+      "O(n log n)",
+      "O(n²)",
+      "O(log n)",
+      "O(n)"
+    ],
+    "answer": "O(n log n)"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Recurrences",
+    "difficulty": "Hard",
+    "question": "Which theorem is commonly used to solve divide-and-conquer recurrences?",
+    "options": [
+      "Master Theorem",
+      "Bayes Theorem",
+      "Pigeonhole Principle",
+      "CAP Theorem"
+    ],
+    "answer": "Master Theorem"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Quick Sort",
+    "difficulty": "Hard",
+    "question": "Why does randomized pivot selection improve Quick Sort in practice?",
+    "options": [
+      "It reduces the chance of consistently poor partitions on adversarial input",
+      "It guarantees O(n) worst-case time",
+      "It removes recursion",
+      "It makes the algorithm stable"
+    ],
+    "answer": "It reduces the chance of consistently poor partitions on adversarial input"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Quick Select",
+    "difficulty": "Hard",
+    "question": "What does Quickselect find efficiently on average?",
+    "options": [
+      "The k-th smallest element",
+      "A minimum spanning tree",
+      "All shortest paths",
+      "A topological order"
+    ],
+    "answer": "The k-th smallest element"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Quick Select",
+    "difficulty": "Hard",
+    "question": "What is the average time complexity of Quickselect?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(log n)",
+      "O(n²) always"
+    ],
+    "answer": "O(n)"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Graphs",
+    "difficulty": "Hard",
+    "question": "Why does Dijkstra's Algorithm fail with negative-weight edges?",
+    "options": [
+      "Its greedy finalized-distance assumption can become invalid",
+      "It cannot use a priority queue",
+      "It requires an undirected graph",
+      "It cannot process cycles"
+    ],
+    "answer": "Its greedy finalized-distance assumption can become invalid"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Graphs",
+    "difficulty": "Hard",
+    "question": "Which algorithm can detect a reachable negative-weight cycle?",
+    "options": [
+      "Bellman-Ford",
+      "Dijkstra",
+      "Prim",
+      "BFS"
+    ],
+    "answer": "Bellman-Ford"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Graphs",
+    "difficulty": "Hard",
+    "question": "What is a strongly connected component in a directed graph?",
+    "options": [
+      "A maximal set of vertices where each is reachable from every other",
+      "Any pair of adjacent vertices",
+      "A tree root and its children",
+      "A set of isolated vertices only"
+    ],
+    "answer": "A maximal set of vertices where each is reachable from every other"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Graphs",
+    "difficulty": "Hard",
+    "question": "Which algorithm is commonly used to find strongly connected components?",
+    "options": [
+      "Kosaraju's Algorithm",
+      "Kruskal's Algorithm",
+      "Binary Search",
+      "Heap Sort"
+    ],
+    "answer": "Kosaraju's Algorithm"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Graphs",
+    "difficulty": "Hard",
+    "question": "Which DFS-based algorithm can also find strongly connected components in one traversal framework?",
+    "options": [
+      "Tarjan's Algorithm",
+      "Prim's Algorithm",
+      "Floyd-Warshall",
+      "Selection Sort"
+    ],
+    "answer": "Tarjan's Algorithm"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Bridges",
+    "difficulty": "Hard",
+    "question": "What is a bridge in an undirected graph?",
+    "options": [
+      "An edge whose removal increases the number of connected components",
+      "Any weighted edge",
+      "The longest edge",
+      "An edge in every cycle"
+    ],
+    "answer": "An edge whose removal increases the number of connected components"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Articulation Points",
+    "difficulty": "Hard",
+    "question": "What is an articulation point?",
+    "options": [
+      "A vertex whose removal increases the number of connected components",
+      "A vertex of maximum degree only",
+      "A leaf vertex",
+      "A source in every DAG"
+    ],
+    "answer": "A vertex whose removal increases the number of connected components"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Topological Sort",
+    "difficulty": "Hard",
+    "question": "What does failure to process all vertices in Kahn's Algorithm indicate?",
+    "options": [
+      "The directed graph contains a cycle",
+      "The graph is disconnected only",
+      "The graph has negative edges",
+      "The graph is weighted"
+    ],
+    "answer": "The directed graph contains a cycle"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Dynamic Programming",
+    "difficulty": "Hard",
+    "question": "What is the state in a dynamic programming solution?",
+    "options": [
+      "A compact representation of information needed to define a subproblem",
+      "The programming language mode",
+      "Only the final answer",
+      "A random variable"
+    ],
+    "answer": "A compact representation of information needed to define a subproblem"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Dynamic Programming",
+    "difficulty": "Hard",
+    "question": "Which optimization can reduce 2D dynamic programming memory to 1D when each row depends only on the previous row?",
+    "options": [
+      "Rolling array optimization",
+      "Path compression",
+      "Heapify",
+      "Binary lifting"
+    ],
+    "answer": "Rolling array optimization"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Dynamic Programming",
+    "difficulty": "Hard",
+    "question": "What is the time complexity of the classic DP solution for LCS of strings of lengths m and n?",
+    "options": [
+      "O(mn)",
+      "O(m+n)",
+      "O(log mn)",
+      "O(2^n) always"
+    ],
+    "answer": "O(mn)"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Dynamic Programming",
+    "difficulty": "Hard",
+    "question": "Which classic problem uses interval DP over subarray or matrix ranges?",
+    "options": [
+      "Matrix Chain Multiplication",
+      "Binary Search",
+      "BFS",
+      "Selection Sort"
+    ],
+    "answer": "Matrix Chain Multiplication"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Greedy",
+    "difficulty": "Hard",
+    "question": "What property is typically needed for a greedy algorithm to be globally optimal?",
+    "options": [
+      "Greedy-choice property",
+      "Only recursion",
+      "Only sorting stability",
+      "Only negative weights"
+    ],
+    "answer": "Greedy-choice property"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Minimum Spanning Tree",
+    "difficulty": "Hard",
+    "question": "What is the cut property used to justify in MST algorithms?",
+    "options": [
+      "A lightest edge crossing a cut can be safe for an MST",
+      "Every cycle edge belongs to the MST",
+      "All graph edges must be equal",
+      "MSTs require directed graphs"
+    ],
+    "answer": "A lightest edge crossing a cut can be safe for an MST"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Union Find",
+    "difficulty": "Hard",
+    "question": "What does path compression improve in Disjoint Set Union?",
+    "options": [
+      "Find operations by flattening parent chains",
+      "Sorting speed",
+      "Graph edge weights",
+      "Queue capacity"
+    ],
+    "answer": "Find operations by flattening parent chains"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Union Find",
+    "difficulty": "Hard",
+    "question": "Which heuristic is commonly paired with path compression?",
+    "options": [
+      "Union by rank or size",
+      "Binary search",
+      "Memoization",
+      "Topological sorting"
+    ],
+    "answer": "Union by rank or size"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Strings",
+    "difficulty": "Hard",
+    "question": "What is the time complexity of KMP pattern matching for text length n and pattern length m?",
+    "options": [
+      "O(n + m)",
+      "O(nm)",
+      "O(log n)",
+      "O(n² + m²)"
+    ],
+    "answer": "O(n + m)"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Strings",
+    "difficulty": "Hard",
+    "question": "What is the Z-algorithm commonly used for?",
+    "options": [
+      "Linear-time string pattern preprocessing and matching tasks",
+      "Heap balancing",
+      "Graph coloring",
+      "Minimum spanning trees"
+    ],
+    "answer": "Linear-time string pattern preprocessing and matching tasks"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Tries",
+    "difficulty": "Hard",
+    "question": "What is a trie especially useful for?",
+    "options": [
+      "Prefix-based string lookup",
+      "Shortest paths in weighted graphs",
+      "Numerical integration",
+      "Heap sorting"
+    ],
+    "answer": "Prefix-based string lookup"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Segment Trees",
+    "difficulty": "Hard",
+    "question": "What is a segment tree commonly used for?",
+    "options": [
+      "Range queries with efficient updates",
+      "Only graph traversal",
+      "String tokenization",
+      "Hash collisions"
+    ],
+    "answer": "Range queries with efficient updates"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Segment Trees",
+    "difficulty": "Hard",
+    "question": "What is the typical query time complexity of a segment tree?",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(1) always",
+      "O(n²)"
+    ],
+    "answer": "O(log n)"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Fenwick Tree",
+    "difficulty": "Hard",
+    "question": "What is a Fenwick Tree commonly used for?",
+    "options": [
+      "Prefix sums with efficient updates",
+      "Graph coloring",
+      "Pattern matching",
+      "Sorting linked lists"
+    ],
+    "answer": "Prefix sums with efficient updates"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Fenwick Tree",
+    "difficulty": "Hard",
+    "question": "What is the typical update complexity of a Fenwick Tree?",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(1)",
+      "O(n²)"
+    ],
+    "answer": "O(log n)"
+  },
+  {
+    "subject": "Algorithms",
+    "topic": "Binary Lifting",
+    "difficulty": "Hard",
+    "question": "What is binary lifting commonly used for in trees?",
+    "options": [
+      "Fast ancestor and LCA queries",
+      "Sorting nodes",
+      "Finding MST edges",
+      "String hashing"
+    ],
+    "answer": "Fast ancestor and LCA queries"
+  }
+]
