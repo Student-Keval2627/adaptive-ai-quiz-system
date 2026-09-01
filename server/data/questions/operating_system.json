@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "Operating Systems",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is the main role of an operating system?",
+    "options": [
+      "Manage hardware and software resources",
+      "Compile only C programs",
+      "Design web pages",
+      "Store only database tables"
+    ],
+    "answer": "Manage hardware and software resources"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which of the following is an operating system?",
+    "options": [
+      "Linux",
+      "HTML",
+      "MySQL",
+      "Java"
+    ],
+    "answer": "Linux"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Kernel",
+    "difficulty": "Easy",
+    "question": "What is the kernel?",
+    "options": [
+      "The core part of an operating system",
+      "A web browser",
+      "A database table",
+      "A compiler keyword"
+    ],
+    "answer": "The core part of an operating system"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Processes",
+    "difficulty": "Easy",
+    "question": "What is a process?",
+    "options": [
+      "A program in execution",
+      "A file only",
+      "A database row",
+      "A CPU register"
+    ],
+    "answer": "A program in execution"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Processes",
+    "difficulty": "Easy",
+    "question": "What is a program before it starts executing?",
+    "options": [
+      "A passive set of instructions",
+      "A running process",
+      "A thread only",
+      "A scheduler"
+    ],
+    "answer": "A passive set of instructions"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Processes",
+    "difficulty": "Easy",
+    "question": "Which state means a process is currently using the CPU?",
+    "options": [
+      "Running",
+      "Ready",
+      "Waiting",
+      "Terminated"
+    ],
+    "answer": "Running"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Processes",
+    "difficulty": "Easy",
+    "question": "Which state means a process is waiting to be assigned the CPU?",
+    "options": [
+      "Ready",
+      "Running",
+      "Terminated",
+      "New only"
+    ],
+    "answer": "Ready"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Processes",
+    "difficulty": "Easy",
+    "question": "Which state means a process is waiting for an event such as I/O completion?",
+    "options": [
+      "Waiting",
+      "Running",
+      "Ready",
+      "New"
+    ],
+    "answer": "Waiting"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Threads",
+    "difficulty": "Easy",
+    "question": "What is a thread?",
+    "options": [
+      "A lightweight unit of execution within a process",
+      "A separate operating system",
+      "A disk block",
+      "A page table"
+    ],
+    "answer": "A lightweight unit of execution within a process"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Threads",
+    "difficulty": "Easy",
+    "question": "Threads in the same process usually share what?",
+    "options": [
+      "Address space and resources",
+      "Different executables only",
+      "Different kernels",
+      "Different disks only"
+    ],
+    "answer": "Address space and resources"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Scheduling",
+    "difficulty": "Easy",
+    "question": "Which scheduling algorithm serves processes in arrival order?",
+    "options": [
+      "FCFS",
+      "SJF",
+      "Round Robin",
+      "Priority"
+    ],
+    "answer": "FCFS"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Scheduling",
+    "difficulty": "Easy",
+    "question": "What does FCFS stand for?",
+    "options": [
+      "First Come First Serve",
+      "Fast CPU First Schedule",
+      "First Core First System",
+      "Fixed Cycle Fair Scheduling"
+    ],
+    "answer": "First Come First Serve"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Scheduling",
+    "difficulty": "Easy",
+    "question": "Which scheduling algorithm gives each process a fixed time slice?",
+    "options": [
+      "Round Robin",
+      "FCFS",
+      "SJF",
+      "Priority only"
+    ],
+    "answer": "Round Robin"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Scheduling",
+    "difficulty": "Easy",
+    "question": "What is a time quantum in Round Robin scheduling?",
+    "options": [
+      "The maximum CPU time given per turn",
+      "The total process lifetime",
+      "The disk access time",
+      "The page size"
+    ],
+    "answer": "The maximum CPU time given per turn"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Scheduling",
+    "difficulty": "Easy",
+    "question": "Which scheduling algorithm chooses the process with the shortest CPU burst?",
+    "options": [
+      "SJF",
+      "FCFS",
+      "Round Robin",
+      "FIFO memory"
+    ],
+    "answer": "SJF"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Scheduling",
+    "difficulty": "Easy",
+    "question": "Which scheduler selects a process from the ready queue for CPU execution?",
+    "options": [
+      "Short-term scheduler",
+      "Long-term scheduler",
+      "I/O scheduler only",
+      "Disk formatter"
+    ],
+    "answer": "Short-term scheduler"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Memory",
+    "difficulty": "Easy",
+    "question": "What is RAM mainly used for?",
+    "options": [
+      "Temporary storage for active programs and data",
+      "Permanent archival only",
+      "Network routing",
+      "User authentication only"
+    ],
+    "answer": "Temporary storage for active programs and data"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Memory",
+    "difficulty": "Easy",
+    "question": "What is virtual memory?",
+    "options": [
+      "A technique that gives processes a large logical address space using memory and storage",
+      "A type of CPU register",
+      "A network cache",
+      "A file permission"
+    ],
+    "answer": "A technique that gives processes a large logical address space using memory and storage"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Paging",
+    "difficulty": "Easy",
+    "question": "What is a page?",
+    "options": [
+      "A fixed-size block of virtual memory",
+      "A CPU instruction",
+      "A process state",
+      "A file name"
+    ],
+    "answer": "A fixed-size block of virtual memory"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Paging",
+    "difficulty": "Easy",
+    "question": "What is a frame?",
+    "options": [
+      "A fixed-size block of physical memory",
+      "A thread",
+      "A file descriptor",
+      "A system call"
+    ],
+    "answer": "A fixed-size block of physical memory"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Paging",
+    "difficulty": "Easy",
+    "question": "What is a page fault?",
+    "options": [
+      "An event when a needed page is not currently in physical memory",
+      "A syntax error",
+      "A CPU overheating event",
+      "A network failure"
+    ],
+    "answer": "An event when a needed page is not currently in physical memory"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "File Systems",
+    "difficulty": "Easy",
+    "question": "What does a file system manage?",
+    "options": [
+      "Files and directories on storage devices",
+      "CPU registers only",
+      "Network packets only",
+      "Database queries only"
+    ],
+    "answer": "Files and directories on storage devices"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "File Systems",
+    "difficulty": "Easy",
+    "question": "What is a directory?",
+    "options": [
+      "A structure used to organize files and other directories",
+      "A CPU queue",
+      "A memory frame",
+      "A process control block"
+    ],
+    "answer": "A structure used to organize files and other directories"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "System Calls",
+    "difficulty": "Easy",
+    "question": "What is a system call?",
+    "options": [
+      "A controlled way for a program to request a service from the OS kernel",
+      "A user-defined function only",
+      "A database procedure",
+      "A network hostname"
+    ],
+    "answer": "A controlled way for a program to request a service from the OS kernel"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "System Calls",
+    "difficulty": "Easy",
+    "question": "Which operation typically requires a system call?",
+    "options": [
+      "Opening a file",
+      "Adding two local integers",
+      "Comparing two variables",
+      "Calling a local function"
+    ],
+    "answer": "Opening a file"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Deadlocks",
+    "difficulty": "Easy",
+    "question": "What is a deadlock?",
+    "options": [
+      "Processes wait indefinitely for resources held by one another",
+      "A process finishes normally",
+      "A CPU executes too fast",
+      "A file is deleted"
+    ],
+    "answer": "Processes wait indefinitely for resources held by one another"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Synchronization",
+    "difficulty": "Easy",
+    "question": "What is a critical section?",
+    "options": [
+      "A part of code that accesses shared data and must be synchronized",
+      "A boot file",
+      "A disk partition",
+      "A scheduling queue only"
+    ],
+    "answer": "A part of code that accesses shared data and must be synchronized"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Synchronization",
+    "difficulty": "Easy",
+    "question": "What is a mutex used for?",
+    "options": [
+      "Mutual exclusion around shared resources",
+      "Memory paging",
+      "Disk formatting",
+      "Process creation only"
+    ],
+    "answer": "Mutual exclusion around shared resources"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Synchronization",
+    "difficulty": "Easy",
+    "question": "What is a semaphore?",
+    "options": [
+      "A synchronization primitive using a counter",
+      "A CPU cache line",
+      "A page table entry",
+      "A file system block"
+    ],
+    "answer": "A synchronization primitive using a counter"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Booting",
+    "difficulty": "Easy",
+    "question": "What does booting mean?",
+    "options": [
+      "Starting the computer and loading the operating system",
+      "Deleting the operating system",
+      "Formatting RAM",
+      "Shutting down only"
+    ],
+    "answer": "Starting the computer and loading the operating system"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Interrupts",
+    "difficulty": "Easy",
+    "question": "What is an interrupt?",
+    "options": [
+      "A signal that causes the CPU to temporarily handle an event",
+      "A permanent CPU failure",
+      "A file type",
+      "A page replacement algorithm"
+    ],
+    "answer": "A signal that causes the CPU to temporarily handle an event"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "CPU Modes",
+    "difficulty": "Easy",
+    "question": "Which CPU mode has privileged access to hardware resources?",
+    "options": [
+      "Kernel mode",
+      "User mode",
+      "Guest mode only",
+      "Idle mode"
+    ],
+    "answer": "Kernel mode"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "CPU Modes",
+    "difficulty": "Easy",
+    "question": "Which CPU mode normally runs ordinary applications?",
+    "options": [
+      "User mode",
+      "Kernel mode",
+      "Supervisor-only mode",
+      "Boot mode"
+    ],
+    "answer": "User mode"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "IPC",
+    "difficulty": "Easy",
+    "question": "What does IPC stand for?",
+    "options": [
+      "Inter-Process Communication",
+      "Internal Program Control",
+      "Integrated Process Cache",
+      "Input Processing Channel"
+    ],
+    "answer": "Inter-Process Communication"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Processes",
+    "difficulty": "Medium",
+    "question": "What is stored in a Process Control Block?",
+    "options": [
+      "Process state, registers, scheduling and management information",
+      "Only source code",
+      "Only user passwords",
+      "Only file names"
+    ],
+    "answer": "Process state, registers, scheduling and management information"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Processes",
+    "difficulty": "Medium",
+    "question": "What is a context switch?",
+    "options": [
+      "Saving one process state and restoring another so the CPU can switch execution",
+      "Changing a file extension",
+      "Moving data between disks",
+      "Changing user passwords"
+    ],
+    "answer": "Saving one process state and restoring another so the CPU can switch execution"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Processes",
+    "difficulty": "Medium",
+    "question": "Why does a context switch have overhead?",
+    "options": [
+      "CPU time is spent saving and restoring execution state",
+      "It always copies the entire disk",
+      "It recompiles the program",
+      "It clears all memory"
+    ],
+    "answer": "CPU time is spent saving and restoring execution state"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Scheduling",
+    "difficulty": "Medium",
+    "question": "What is turnaround time?",
+    "options": [
+      "Completion time minus arrival time",
+      "First response time only",
+      "CPU burst time only",
+      "Waiting time only"
+    ],
+    "answer": "Completion time minus arrival time"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Scheduling",
+    "difficulty": "Medium",
+    "question": "What is waiting time?",
+    "options": [
+      "Total time a process spends in the ready queue",
+      "Total CPU execution time",
+      "Time spent only in I/O",
+      "Completion time plus arrival time"
+    ],
+    "answer": "Total time a process spends in the ready queue"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Scheduling",
+    "difficulty": "Medium",
+    "question": "What is response time?",
+    "options": [
+      "Time from arrival until the process first gets CPU service",
+      "Time from arrival to final completion",
+      "Total I/O time",
+      "Time between context switches only"
+    ],
+    "answer": "Time from arrival until the process first gets CPU service"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Scheduling",
+    "difficulty": "Medium",
+    "question": "What problem can occur with priority scheduling?",
+    "options": [
+      "Starvation of low-priority processes",
+      "Every process gets equal CPU time",
+      "No context switches occur",
+      "Page faults disappear"
+    ],
+    "answer": "Starvation of low-priority processes"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Scheduling",
+    "difficulty": "Medium",
+    "question": "What is aging in CPU scheduling?",
+    "options": [
+      "Gradually increasing the priority of waiting processes to reduce starvation",
+      "Making processes older in memory",
+      "Reducing time quantum continuously",
+      "Deleting old jobs"
+    ],
+    "answer": "Gradually increasing the priority of waiting processes to reduce starvation"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Scheduling",
+    "difficulty": "Medium",
+    "question": "What is preemptive scheduling?",
+    "options": [
+      "The OS can interrupt a running process and give the CPU to another process",
+      "A process keeps the CPU until it finishes or blocks",
+      "Only one process is allowed",
+      "Scheduling happens only at boot"
+    ],
+    "answer": "The OS can interrupt a running process and give the CPU to another process"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Scheduling",
+    "difficulty": "Medium",
+    "question": "What is non-preemptive scheduling?",
+    "options": [
+      "A running process keeps the CPU until it terminates or blocks",
+      "The CPU interrupts every process after a fixed quantum",
+      "Only high-priority jobs can run",
+      "The scheduler never uses a ready queue"
+    ],
+    "answer": "A running process keeps the CPU until it terminates or blocks"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Memory",
+    "difficulty": "Medium",
+    "question": "What is internal fragmentation?",
+    "options": [
+      "Unused space inside an allocated memory block",
+      "Free memory split into many external holes",
+      "Memory used by the kernel only",
+      "A page fault"
+    ],
+    "answer": "Unused space inside an allocated memory block"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Memory",
+    "difficulty": "Medium",
+    "question": "What is external fragmentation?",
+    "options": [
+      "Free memory is split into small noncontiguous holes",
+      "Unused space inside one fixed allocation only",
+      "A disk scheduling problem",
+      "A CPU scheduling problem"
+    ],
+    "answer": "Free memory is split into small noncontiguous holes"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Memory",
+    "difficulty": "Medium",
+    "question": "Which allocation strategy chooses the first free block large enough for a request?",
+    "options": [
+      "First Fit",
+      "Best Fit",
+      "Worst Fit",
+      "Next Page"
+    ],
+    "answer": "First Fit"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Memory",
+    "difficulty": "Medium",
+    "question": "Which allocation strategy chooses the smallest free block that is large enough?",
+    "options": [
+      "Best Fit",
+      "First Fit",
+      "Worst Fit",
+      "Quick Sort"
+    ],
+    "answer": "Best Fit"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Memory",
+    "difficulty": "Medium",
+    "question": "Which allocation strategy chooses the largest available free block?",
+    "options": [
+      "Worst Fit",
+      "Best Fit",
+      "First Fit",
+      "Next Fit only"
+    ],
+    "answer": "Worst Fit"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Paging",
+    "difficulty": "Medium",
+    "question": "What does a page table map?",
+    "options": [
+      "Virtual pages to physical frames",
+      "Files to directories",
+      "Processes to CPUs only",
+      "Users to passwords"
+    ],
+    "answer": "Virtual pages to physical frames"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Paging",
+    "difficulty": "Medium",
+    "question": "What is a TLB?",
+    "options": [
+      "A cache of recent virtual-to-physical address translations",
+      "A disk scheduler",
+      "A thread queue",
+      "A file descriptor table only"
+    ],
+    "answer": "A cache of recent virtual-to-physical address translations"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Paging",
+    "difficulty": "Medium",
+    "question": "What is demand paging?",
+    "options": [
+      "Loading a page into memory only when it is needed",
+      "Loading every page at program start",
+      "Disabling virtual memory",
+      "Using only contiguous allocation"
+    ],
+    "answer": "Loading a page into memory only when it is needed"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Page Replacement",
+    "difficulty": "Medium",
+    "question": "Which page replacement algorithm removes the page that has not been used for the longest time?",
+    "options": [
+      "LRU",
+      "FIFO",
+      "Optimal",
+      "Random only"
+    ],
+    "answer": "LRU"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Page Replacement",
+    "difficulty": "Medium",
+    "question": "Which page replacement algorithm removes the oldest loaded page?",
+    "options": [
+      "FIFO",
+      "LRU",
+      "Optimal",
+      "MRU only"
+    ],
+    "answer": "FIFO"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Page Replacement",
+    "difficulty": "Medium",
+    "question": "Which page replacement algorithm uses future knowledge and gives the theoretical minimum page faults?",
+    "options": [
+      "Optimal",
+      "FIFO",
+      "LRU",
+      "Clock"
+    ],
+    "answer": "Optimal"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Deadlocks",
+    "difficulty": "Medium",
+    "question": "Which condition means each process holds at least one resource while waiting for another?",
+    "options": [
+      "Hold and wait",
+      "Mutual exclusion",
+      "No preemption",
+      "Circular wait"
+    ],
+    "answer": "Hold and wait"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Deadlocks",
+    "difficulty": "Medium",
+    "question": "Which deadlock condition means resources cannot be forcibly taken away?",
+    "options": [
+      "No preemption",
+      "Hold and wait",
+      "Circular wait",
+      "Mutual exclusion"
+    ],
+    "answer": "No preemption"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Deadlocks",
+    "difficulty": "Medium",
+    "question": "Which deadlock condition means a circular chain of waiting processes exists?",
+    "options": [
+      "Circular wait",
+      "No preemption",
+      "Mutual exclusion",
+      "Hold and wait"
+    ],
+    "answer": "Circular wait"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Deadlocks",
+    "difficulty": "Medium",
+    "question": "Which algorithm is commonly used for deadlock avoidance?",
+    "options": [
+      "Banker's Algorithm",
+      "Round Robin",
+      "FIFO page replacement",
+      "SCAN disk scheduling"
+    ],
+    "answer": "Banker's Algorithm"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Synchronization",
+    "difficulty": "Medium",
+    "question": "What is a race condition?",
+    "options": [
+      "Program outcome depends on timing of unsynchronized concurrent operations",
+      "Two processes have the same priority",
+      "A process finishes too quickly",
+      "Two files share a name"
+    ],
+    "answer": "Program outcome depends on timing of unsynchronized concurrent operations"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Synchronization",
+    "difficulty": "Medium",
+    "question": "What does a binary semaphore typically allow?",
+    "options": [
+      "Values representing locked or unlocked states",
+      "Unlimited counter values only",
+      "Only file operations",
+      "Only process creation"
+    ],
+    "answer": "Values representing locked or unlocked states"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "IPC",
+    "difficulty": "Medium",
+    "question": "Which IPC mechanism lets processes communicate by reading and writing a shared memory region?",
+    "options": [
+      "Shared memory",
+      "Round Robin",
+      "Paging",
+      "Spooling"
+    ],
+    "answer": "Shared memory"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "IPC",
+    "difficulty": "Medium",
+    "question": "Which IPC mechanism sends discrete messages between processes?",
+    "options": [
+      "Message passing",
+      "Paging",
+      "Segmentation",
+      "Disk scheduling"
+    ],
+    "answer": "Message passing"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "File Systems",
+    "difficulty": "Medium",
+    "question": "What is a file descriptor in Unix-like systems?",
+    "options": [
+      "An integer handle used by a process to refer to an open file or I/O resource",
+      "A file name extension",
+      "A disk partition number",
+      "A page table entry"
+    ],
+    "answer": "An integer handle used by a process to refer to an open file or I/O resource"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "File Systems",
+    "difficulty": "Medium",
+    "question": "What does an inode commonly store in Unix-like file systems?",
+    "options": [
+      "File metadata and references to file data blocks",
+      "The file name only",
+      "Only file contents",
+      "User passwords"
+    ],
+    "answer": "File metadata and references to file data blocks"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Disk Scheduling",
+    "difficulty": "Medium",
+    "question": "Which disk scheduling algorithm services requests in arrival order?",
+    "options": [
+      "FCFS",
+      "SCAN",
+      "C-SCAN",
+      "SSTF"
+    ],
+    "answer": "FCFS"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Disk Scheduling",
+    "difficulty": "Medium",
+    "question": "Which disk scheduling algorithm selects the request closest to the current head position?",
+    "options": [
+      "SSTF",
+      "FCFS",
+      "SCAN",
+      "Round Robin"
+    ],
+    "answer": "SSTF"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Scheduling",
+    "difficulty": "Hard",
+    "question": "Why can SJF minimize average waiting time when burst lengths are known?",
+    "options": [
+      "It executes shorter jobs earlier, reducing accumulated waiting",
+      "It always prevents starvation",
+      "It uses no context switches",
+      "It is always preemptive"
+    ],
+    "answer": "It executes shorter jobs earlier, reducing accumulated waiting"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Scheduling",
+    "difficulty": "Hard",
+    "question": "What is Shortest Remaining Time First?",
+    "options": [
+      "The preemptive version of SJF",
+      "A non-preemptive FCFS variant",
+      "A page replacement policy",
+      "A disk scheduling policy"
+    ],
+    "answer": "The preemptive version of SJF"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Scheduling",
+    "difficulty": "Hard",
+    "question": "What happens if the Round Robin time quantum is extremely large?",
+    "options": [
+      "Its behavior approaches FCFS",
+      "It becomes SJF",
+      "It eliminates the ready queue",
+      "It becomes priority scheduling"
+    ],
+    "answer": "Its behavior approaches FCFS"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Scheduling",
+    "difficulty": "Hard",
+    "question": "What is a multilevel feedback queue designed to do?",
+    "options": [
+      "Move processes between queues based on observed behavior and scheduling policy",
+      "Store page table entries",
+      "Manage file permissions",
+      "Avoid all page faults"
+    ],
+    "answer": "Move processes between queues based on observed behavior and scheduling policy"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Real-Time Systems",
+    "difficulty": "Hard",
+    "question": "What distinguishes a hard real-time system?",
+    "options": [
+      "Missing a deadline can be considered system failure",
+      "Deadlines are only suggestions",
+      "It never uses interrupts",
+      "It cannot use multiple processes"
+    ],
+    "answer": "Missing a deadline can be considered system failure"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Real-Time Systems",
+    "difficulty": "Hard",
+    "question": "Which scheduling algorithm assigns higher priority to tasks with shorter periods in periodic real-time systems?",
+    "options": [
+      "Rate Monotonic Scheduling",
+      "Round Robin",
+      "FCFS",
+      "SSTF"
+    ],
+    "answer": "Rate Monotonic Scheduling"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Real-Time Systems",
+    "difficulty": "Hard",
+    "question": "Which real-time scheduling strategy dynamically prioritizes the task with the nearest deadline?",
+    "options": [
+      "Earliest Deadline First",
+      "Priority aging only",
+      "FCFS",
+      "Lottery scheduling only"
+    ],
+    "answer": "Earliest Deadline First"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Virtual Memory",
+    "difficulty": "Hard",
+    "question": "What is thrashing?",
+    "options": [
+      "The system spends excessive time paging instead of executing useful work",
+      "The CPU executes too many arithmetic instructions",
+      "The disk is formatted repeatedly",
+      "Processes terminate too early"
+    ],
+    "answer": "The system spends excessive time paging instead of executing useful work"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Virtual Memory",
+    "difficulty": "Hard",
+    "question": "What is the working set of a process?",
+    "options": [
+      "The set of pages actively used during a recent time window",
+      "All pages on disk",
+      "Only code pages",
+      "Only stack pages"
+    ],
+    "answer": "The set of pages actively used during a recent time window"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Page Replacement",
+    "difficulty": "Hard",
+    "question": "What is Belady's anomaly?",
+    "options": [
+      "Increasing the number of page frames can increase page faults for some algorithms such as FIFO",
+      "LRU always performs worse than FIFO",
+      "More memory always causes more faults",
+      "Optimal replacement can have infinite faults"
+    ],
+    "answer": "Increasing the number of page frames can increase page faults for some algorithms such as FIFO"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Page Replacement",
+    "difficulty": "Hard",
+    "question": "Which class of page replacement algorithms does not exhibit Belady's anomaly?",
+    "options": [
+      "Stack algorithms such as LRU",
+      "FIFO only",
+      "Random replacement",
+      "Second chance always"
+    ],
+    "answer": "Stack algorithms such as LRU"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Paging",
+    "difficulty": "Hard",
+    "question": "Why are multi-level page tables used?",
+    "options": [
+      "To reduce memory overhead for sparse virtual address spaces",
+      "To eliminate page faults entirely",
+      "To disable TLBs",
+      "To make all pages contiguous"
+    ],
+    "answer": "To reduce memory overhead for sparse virtual address spaces"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Paging",
+    "difficulty": "Hard",
+    "question": "What is an inverted page table?",
+    "options": [
+      "A page table with entries indexed by physical frames rather than per-process virtual pages",
+      "A reversed file system directory",
+      "A cache of disk sectors",
+      "A table used only by compilers"
+    ],
+    "answer": "A page table with entries indexed by physical frames rather than per-process virtual pages"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Memory",
+    "difficulty": "Hard",
+    "question": "What is copy-on-write?",
+    "options": [
+      "Processes initially share pages and copy them only when one attempts to modify them",
+      "Every process gets an immediate full memory copy",
+      "Pages are copied on every read",
+      "Memory is never shared"
+    ],
+    "answer": "Processes initially share pages and copy them only when one attempts to modify them"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Memory",
+    "difficulty": "Hard",
+    "question": "Why is copy-on-write useful after fork() in Unix-like systems?",
+    "options": [
+      "It avoids immediately duplicating all process memory pages",
+      "It eliminates process creation",
+      "It prevents child processes from writing",
+      "It disables virtual memory"
+    ],
+    "answer": "It avoids immediately duplicating all process memory pages"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Deadlocks",
+    "difficulty": "Hard",
+    "question": "What is a safe state in deadlock avoidance?",
+    "options": [
+      "A state in which some order exists for all processes to complete without deadlock",
+      "A state with no running processes",
+      "A state with all resources free only",
+      "A state with no waiting processes ever"
+    ],
+    "answer": "A state in which some order exists for all processes to complete without deadlock"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Deadlocks",
+    "difficulty": "Hard",
+    "question": "What is deadlock prevention?",
+    "options": [
+      "Designing resource-allocation rules so at least one necessary deadlock condition cannot hold",
+      "Detecting deadlocks after they happen only",
+      "Ignoring deadlocks",
+      "Restarting the CPU periodically"
+    ],
+    "answer": "Designing resource-allocation rules so at least one necessary deadlock condition cannot hold"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Deadlocks",
+    "difficulty": "Hard",
+    "question": "What is deadlock detection and recovery?",
+    "options": [
+      "Allow deadlocks to occur, detect them, then take corrective action",
+      "Prevent all waiting",
+      "Use only one process",
+      "Disable resource sharing"
+    ],
+    "answer": "Allow deadlocks to occur, detect them, then take corrective action"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Synchronization",
+    "difficulty": "Hard",
+    "question": "What does the test-and-set instruction help implement?",
+    "options": [
+      "Low-level mutual exclusion locks",
+      "Page replacement",
+      "Disk scheduling",
+      "File naming"
+    ],
+    "answer": "Low-level mutual exclusion locks"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Synchronization",
+    "difficulty": "Hard",
+    "question": "What is busy waiting?",
+    "options": [
+      "Repeatedly checking a condition while consuming CPU time",
+      "Sleeping until an interrupt",
+      "Waiting for disk I/O without CPU use",
+      "Swapping a process to disk"
+    ],
+    "answer": "Repeatedly checking a condition while consuming CPU time"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Synchronization",
+    "difficulty": "Hard",
+    "question": "What is a monitor in concurrency control?",
+    "options": [
+      "A high-level synchronization construct combining shared data and procedures with mutual exclusion",
+      "A hardware display",
+      "A page table cache",
+      "A disk block"
+    ],
+    "answer": "A high-level synchronization construct combining shared data and procedures with mutual exclusion"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Synchronization",
+    "difficulty": "Hard",
+    "question": "What problem do condition variables solve inside monitors or mutex-based designs?",
+    "options": [
+      "Allow threads to sleep until a specific condition becomes true",
+      "Replace virtual memory",
+      "Perform disk scheduling",
+      "Create processes"
+    ],
+    "answer": "Allow threads to sleep until a specific condition becomes true"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Threads",
+    "difficulty": "Hard",
+    "question": "What is a benefit of user-level threads?",
+    "options": [
+      "Thread operations can be fast because they may avoid kernel transitions",
+      "They always run in parallel on multiple CPUs",
+      "They cannot block",
+      "They require no runtime support"
+    ],
+    "answer": "Thread operations can be fast because they may avoid kernel transitions"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Threads",
+    "difficulty": "Hard",
+    "question": "What is a benefit of kernel-level threads?",
+    "options": [
+      "The OS can schedule threads independently across CPUs",
+      "They never require context switches",
+      "They share no process resources",
+      "They cannot block on system calls"
+    ],
+    "answer": "The OS can schedule threads independently across CPUs"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "File Systems",
+    "difficulty": "Hard",
+    "question": "What is journaling in a file system?",
+    "options": [
+      "Recording intended metadata or data changes in a log to aid crash recovery",
+      "Compressing all files automatically",
+      "Encrypting file names only",
+      "Removing directories"
+    ],
+    "answer": "Recording intended metadata or data changes in a log to aid crash recovery"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "File Systems",
+    "difficulty": "Hard",
+    "question": "What is a hard link in Unix-like systems?",
+    "options": [
+      "Another directory entry referring to the same underlying inode",
+      "A shortcut containing a pathname only",
+      "A copy of the entire file",
+      "A network mount"
+    ],
+    "answer": "Another directory entry referring to the same underlying inode"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "File Systems",
+    "difficulty": "Hard",
+    "question": "What is a symbolic link?",
+    "options": [
+      "A special file that stores a path to another file or directory",
+      "Another name for the same inode always",
+      "A duplicate physical block",
+      "A file descriptor"
+    ],
+    "answer": "A special file that stores a path to another file or directory"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Disk Scheduling",
+    "difficulty": "Hard",
+    "question": "How does SCAN disk scheduling work?",
+    "options": [
+      "The disk head moves in one direction servicing requests, then reverses direction",
+      "It serves requests strictly by arrival order",
+      "It always chooses the nearest request only",
+      "It jumps randomly between requests"
+    ],
+    "answer": "The disk head moves in one direction servicing requests, then reverses direction"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Disk Scheduling",
+    "difficulty": "Hard",
+    "question": "How does C-SCAN differ from SCAN?",
+    "options": [
+      "It services requests in one direction and then returns quickly to the beginning without servicing on the return",
+      "It always chooses the nearest request",
+      "It reverses and services in both directions",
+      "It ignores request order"
+    ],
+    "answer": "It services requests in one direction and then returns quickly to the beginning without servicing on the return"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "I/O",
+    "difficulty": "Hard",
+    "question": "What is DMA used for?",
+    "options": [
+      "Transfer data between devices and memory with reduced CPU involvement",
+      "Schedule CPU processes",
+      "Translate virtual addresses",
+      "Create file permissions"
+    ],
+    "answer": "Transfer data between devices and memory with reduced CPU involvement"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Protection",
+    "difficulty": "Hard",
+    "question": "What is an access control list?",
+    "options": [
+      "A list specifying which users or subjects have which permissions on an object",
+      "A CPU scheduling queue",
+      "A page replacement table",
+      "A process stack"
+    ],
+    "answer": "A list specifying which users or subjects have which permissions on an object"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Security",
+    "difficulty": "Hard",
+    "question": "What is the principle of least privilege?",
+    "options": [
+      "Give each user or process only the permissions necessary for its task",
+      "Give administrators full permissions to everyone",
+      "Disable user accounts",
+      "Run every program in kernel mode"
+    ],
+    "answer": "Give each user or process only the permissions necessary for its task"
+  },
+  {
+    "subject": "Operating Systems",
+    "topic": "Virtualization",
+    "difficulty": "Hard",
+    "question": "What is a hypervisor?",
+    "options": [
+      "Software or firmware that creates and manages virtual machines",
+      "A file system driver",
+      "A page replacement algorithm",
+      "A shell command"
+    ],
+    "answer": "Software or firmware that creates and manages virtual machines"
+  }
+]
