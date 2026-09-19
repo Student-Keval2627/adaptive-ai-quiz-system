@@ -7,17 +7,17 @@
   position: relative;
   overflow-x: hidden;
 
-  color: #f8f1e9;
+  color: #bb9bf3;
 
   background:
     radial-gradient(
       circle at 12% 10%,
-      rgba(255, 103, 48, 0.075),
+      rgba(130, 71, 232, 0.075),
       transparent 28%
     ),
     radial-gradient(
       circle at 90% 75%,
-      rgba(255, 179, 71, 0.05),
+      rgba(144, 91, 235, 0.05),
       transparent 27%
     ),
     #090909;
@@ -44,7 +44,7 @@
   top: -230px;
   left: 8%;
 
-  background: #ff6437;
+  background: #864de9;
 
   animation:
     achievementGlowOne 9s ease-in-out infinite alternate;
@@ -57,7 +57,7 @@
   right: -260px;
   bottom: -120px;
 
-  background: #ffb347;
+  background: #905beb;
 
   animation:
     achievementGlowTwo 11s ease-in-out infinite alternate;
@@ -82,7 +82,7 @@
   background: rgba(10, 10, 9, 0.74);
 
   border-bottom:
-    1px solid rgba(255, 245, 230, 0.055);
+    1px solid rgba(187, 155, 243, 0.055);
 
   backdrop-filter: blur(22px);
 
@@ -102,7 +102,7 @@
 
   border-radius: 10px;
 
-  color: #8e867d;
+  color: #7c818f;
 
   background: rgba(255, 255, 255, 0.02);
 
@@ -118,12 +118,12 @@
 .achievements-back-button:hover {
   transform: translateX(-3px);
 
-  color: #fff5eb;
+  color: #bb9bf3;
 
-  background: rgba(255, 112, 67, 0.045);
+  background: rgba(141, 88, 234, 0.045);
 
   border-color:
-    rgba(255, 123, 65, 0.18);
+    rgba(140, 86, 234, 0.18);
 }
 
 /* =========================================================
@@ -151,13 +151,13 @@
   background:
     linear-gradient(
       145deg,
-      #ff8a50,
-      #ff6436,
-      #df4c26
+      #9563ec,
+      #864ce9,
+      #6921e4
     );
 
   box-shadow:
-    0 8px 25px rgba(255, 94, 43, 0.22);
+    0 8px 25px rgba(127, 66, 232, 0.22);
 }
 
 .achievements-brand strong {
@@ -173,7 +173,7 @@
 
   margin-top: 2px;
 
-  color: #655f59;
+  color: #575b67;
 
   font-size: 8px;
 
@@ -198,18 +198,18 @@
 
   border-radius: 10px;
 
-  color: #fff8f0;
+  color: #bb9bf3;
 
   background:
     linear-gradient(
       135deg,
-      #ff8550,
-      #ff6436 58%,
-      #e65028
+      #9563ec,
+      #864ce9 58%,
+      #6e29e5
     );
 
   box-shadow:
-    0 10px 25px rgba(255, 91, 42, 0.18);
+    0 10px 25px rgba(126, 65, 232, 0.18);
 
   font-size: 9px;
   font-weight: 700;
@@ -223,7 +223,7 @@
   transform: translateY(-2px);
 
   box-shadow:
-    0 15px 34px rgba(255, 91, 42, 0.28);
+    0 15px 34px rgba(126, 65, 232, 0.28);
 }
 
 /* =========================================================
@@ -273,12 +273,12 @@
 
   border-radius: 7px;
 
-  color: #ff9965;
+  color: #a276ee;
 
-  background: rgba(255, 112, 67, 0.055);
+  background: rgba(141, 88, 234, 0.055);
 
   border:
-    1px solid rgba(255, 123, 65, 0.12);
+    1px solid rgba(140, 86, 234, 0.12);
 
   font-size: 9px;
   font-weight: 700;
@@ -295,16 +295,16 @@
 
   letter-spacing: -3px;
 
-  color: #fff8ef;
+  color: #bb9bf3;
 }
 
 .achievements-hero h1 span {
   background:
     linear-gradient(
       90deg,
-      #ff7d49,
-      #ffae4d,
-      #ffd36e
+      #915deb,
+      #9361eb,
+      #7be2f2
     );
 
   -webkit-background-clip: text;
@@ -318,7 +318,7 @@
 
   margin-top: 18px;
 
-  color: #857e75;
+  color: #737887;
 
   font-size: 13px;
 
@@ -349,7 +349,7 @@
     );
 
   border:
-    1px solid rgba(255, 182, 82, 0.1);
+    1px solid rgba(151, 101, 236, 0.1);
 }
 
 .achievement-level-icon {
@@ -363,13 +363,13 @@
 
   border-radius: 16px;
 
-  color: #ffba53;
+  color: #9766ec;
 
   background:
-    rgba(255, 185, 82, 0.07);
+    rgba(151, 101, 236, 0.07);
 
   border:
-    1px solid rgba(255, 185, 82, 0.1);
+    1px solid rgba(151, 101, 236, 0.1);
 
   animation:
     achievementCrownPulse 3s ease-in-out infinite;
@@ -380,7 +380,7 @@
 }
 
 .achievement-level-content > span {
-  color: #74665a;
+  color: #5a6174;
 
   font-size: 7px;
   font-weight: 700;
@@ -391,7 +391,7 @@
 .achievement-level-content h3 {
   margin-top: 3px;
 
-  color: #f4ece4;
+  color: #bb9bf3;
 
   font-family: "Manrope", sans-serif;
 
@@ -399,7 +399,7 @@
 }
 
 .achievement-level-content p {
-  color: #786f67;
+  color: #676b78;
 
   font-size: 8px;
 }
@@ -418,7 +418,7 @@
 }
 
 .achievement-xp-row strong {
-  color: #777069;
+  color: #676c79;
 }
 
 .achievement-xp-track {
@@ -441,9 +441,9 @@
   background:
     linear-gradient(
       90deg,
-      #ff663d,
-      #ffad4d,
-      #ffd166
+      #8a52ea,
+      #9361eb,
+      #74e1f1
     );
 
   animation:
@@ -477,7 +477,7 @@
     );
 
   border:
-    1px solid rgba(255, 245, 230, 0.065);
+    1px solid rgba(187, 155, 243, 0.065);
 
   transition:
     transform 0.3s ease,
@@ -491,7 +491,7 @@
   transform: translateY(-5px);
 
   border-color:
-    rgba(255, 129, 66, 0.16);
+    rgba(141, 87, 234, 0.16);
 }
 
 .achievement-stat-icon {
@@ -505,16 +505,16 @@
 
   border-radius: 10px;
 
-  color: #ff9b58;
+  color: #9a6aed;
 
   background:
-    rgba(255, 142, 76, 0.065);
+    rgba(147, 96, 235, 0.065);
 }
 
 .achievement-stat-card > strong {
   display: block;
 
-  color: #fff7ee;
+  color: #bb9bf3;
 
   font-family: "Manrope", sans-serif;
 
@@ -522,7 +522,7 @@
 }
 
 .achievement-stat-card small {
-  color: #756d65;
+  color: #646976;
 
   font-size: 10px;
 }
@@ -532,7 +532,7 @@
 
   margin-top: 2px;
 
-  color: #afa69d;
+  color: #9da2af;
 
   font-size: 10px;
 }
@@ -540,7 +540,7 @@
 .achievement-stat-card p {
   margin-top: 5px;
 
-  color: #625c56;
+  color: #555863;
 
   font-size: 8px;
 }
@@ -565,12 +565,12 @@
   background:
     linear-gradient(
       100deg,
-      rgba(255, 112, 67, 0.065),
+      rgba(141, 88, 234, 0.065),
       rgba(20, 18, 16, 0.93)
     );
 
   border:
-    1px solid rgba(255, 132, 72, 0.11);
+    1px solid rgba(144, 92, 235, 0.11);
 
   animation:
     achievementCardEnter 0.7s ease both;
@@ -592,14 +592,14 @@
 
   border-radius: 14px;
 
-  color: #ffb44f;
+  color: #9562ec;
 
   background:
-    rgba(255, 180, 79, 0.075);
+    rgba(149, 98, 236, 0.075);
 }
 
 .recent-achievement-left span {
-  color: #a56a4d;
+  color: #601bd7;
 
   font-size: 7px;
   font-weight: 700;
@@ -610,7 +610,7 @@
 .recent-achievement-left h2 {
   margin-top: 3px;
 
-  color: #f2eae2;
+  color: #bb9bf3;
 
   font-size: 14px;
 }
@@ -618,7 +618,7 @@
 .recent-achievement-left p {
   margin-top: 3px;
 
-  color: #746d66;
+  color: #646976;
 
   font-size: 8px;
 }
@@ -633,10 +633,10 @@
 
   border-radius: 8px;
 
-  color: #ffb452;
+  color: #9765ec;
 
   background:
-    rgba(255, 180, 82, 0.055);
+    rgba(151, 101, 236, 0.055);
 
   font-size: 8px;
   font-weight: 700;
@@ -661,7 +661,7 @@
     );
 
   border:
-    1px solid rgba(255, 245, 230, 0.065);
+    1px solid rgba(187, 155, 243, 0.065);
 
   animation:
     achievementCardEnter 0.7s ease both;
@@ -674,7 +674,7 @@
 }
 
 .achievements-panel-header span {
-  color: #655e58;
+  color: #575b66;
 
   font-size: 7px;
   font-weight: 700;
@@ -685,7 +685,7 @@
 .achievements-panel-header h2 {
   margin-top: 4px;
 
-  color: #f3ece4;
+  color: #bb9bf3;
 
   font-family: "Manrope", sans-serif;
 
@@ -697,10 +697,10 @@
 
   border-radius: 7px;
 
-  color: #ff9862;
+  color: #a073ee;
 
   background:
-    rgba(255, 112, 67, 0.05);
+    rgba(141, 88, 234, 0.05);
 
   font-size: 8px;
 }
@@ -745,10 +745,10 @@
 
 .achievement-unlocked:hover {
   border-color:
-    rgba(255, 143, 75, 0.17);
+    rgba(146, 95, 235, 0.17);
 
   background:
-    rgba(255, 112, 67, 0.02);
+    rgba(141, 88, 234, 0.02);
 }
 
 .achievement-locked {
@@ -770,14 +770,14 @@
 
   border-radius: 11px;
 
-  color: #ffac4f;
+  color: #9562ec;
 
   background:
-    rgba(255, 174, 79, 0.065);
+    rgba(149, 98, 236, 0.065);
 }
 
 .achievement-locked .achievement-icon {
-  color: #70675e;
+  color: #5e6370;
 
   background:
     rgba(255, 255, 255, 0.025);
@@ -805,7 +805,7 @@
 }
 
 .locked-state {
-  color: #777069;
+  color: #676c79;
 
   background:
     rgba(255, 255, 255, 0.025);
@@ -816,7 +816,7 @@
 
   margin-top: 15px;
 
-  color: #655e58;
+  color: #575b66;
 
   font-size: 7px;
   font-weight: 700;
@@ -839,7 +839,7 @@
 
   margin-top: 6px;
 
-  color: #69625b;
+  color: #5a5e6a;
 
   font-size: 8px;
 
@@ -852,13 +852,13 @@
   display: flex;
   justify-content: space-between;
 
-  color: #625b55;
+  color: #545863;
 
   font-size: 7px;
 }
 
 .achievement-progress-info strong {
-  color: #9e735d;
+  color: #697392;
 }
 
 .achievement-progress-track {
@@ -882,9 +882,9 @@
   background:
     linear-gradient(
       90deg,
-      #ff643d,
-      #ffac4e,
-      #ffd166
+      #8a52ea,
+      #9461ec,
+      #74e1f1
     );
 
   animation:
@@ -921,7 +921,7 @@
     );
 
   border:
-    1px solid rgba(255, 245, 230, 0.065);
+    1px solid rgba(187, 155, 243, 0.065);
 }
 
 .achievement-next-left {
@@ -940,14 +940,14 @@
 
   border-radius: 13px;
 
-  color: #ffac4e;
+  color: #9461ec;
 
   background:
-    rgba(255, 174, 78, 0.06);
+    rgba(148, 97, 236, 0.06);
 }
 
 .achievement-next-left span {
-  color: #655e58;
+  color: #575b66;
 
   font-size: 7px;
   font-weight: 700;
@@ -966,7 +966,7 @@
 .achievement-next-left p {
   margin-top: 3px;
 
-  color: #6b645d;
+  color: #5c606c;
 
   font-size: 8px;
 }
@@ -977,7 +977,7 @@
 
   margin-bottom: 7px;
 
-  color: #6f6861;
+  color: #606470;
 
   font-size: 7px;
 }
@@ -1005,8 +1005,8 @@
   background:
     linear-gradient(
       90deg,
-      #ff633d,
-      #ffad4d
+      #8a52ea,
+      #9361eb
     );
 }
 
@@ -1022,14 +1022,14 @@
 
   border-radius: 9px;
 
-  color: #fff7ef;
+  color: #bb9bf3;
 
   background:
     linear-gradient(
       135deg,
-      #ff8550,
-      #ff6436,
-      #e65028
+      #9563ec,
+      #864ce9,
+      #6e29e5
     );
 
   font-size: 8px;
@@ -1044,7 +1044,7 @@
   transform: translateY(-2px);
 
   box-shadow:
-    0 14px 30px rgba(255, 91, 42, 0.25);
+    0 14px 30px rgba(126, 65, 232, 0.25);
 }
 
 /* =========================================================
@@ -1109,7 +1109,7 @@
     transform: scale(1.07);
 
     box-shadow:
-      0 0 25px rgba(255, 180, 70, 0.09);
+      0 0 25px rgba(143, 90, 235, 0.09);
   }
 }
 

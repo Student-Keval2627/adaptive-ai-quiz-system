@@ -9,17 +9,17 @@
 
   overflow-x: hidden;
 
-  color: #f8f1e9;
+  color: #bb9bf3;
 
   background:
     radial-gradient(
       circle at 10% 10%,
-      rgba(255, 103, 48, 0.075),
+      rgba(130, 71, 232, 0.075),
       transparent 28%
     ),
     radial-gradient(
       circle at 90% 75%,
-      rgba(255, 179, 71, 0.05),
+      rgba(144, 91, 235, 0.05),
       transparent 27%
     ),
     #090909;
@@ -48,7 +48,7 @@
   top: -230px;
   left: 8%;
 
-  background: #ff6437;
+  background: #864de9;
 
   animation:
     settingsGlowOne
@@ -62,7 +62,7 @@
   right: -260px;
   bottom: -120px;
 
-  background: #ffb347;
+  background: #905beb;
 
   animation:
     settingsGlowTwo
@@ -90,9 +90,9 @@
 
   border-bottom:
     1px solid rgba(
-      255,
-      245,
-      230,
+      187,
+      155,
+      243,
       0.055
     );
 
@@ -115,7 +115,7 @@
 
   border-radius: 10px;
 
-  color: #8e867d;
+  color: #7c818f;
 
   background:
     rgba(255, 255, 255, 0.02);
@@ -138,13 +138,13 @@
   transform:
     translateX(-3px);
 
-  color: #fff5eb;
+  color: #bb9bf3;
 
   background:
-    rgba(255, 112, 67, 0.045);
+    rgba(141, 88, 234, 0.045);
 
   border-color:
-    rgba(255, 123, 65, 0.18);
+    rgba(140, 86, 234, 0.18);
 }
 
 /* =========================================================
@@ -172,14 +172,14 @@
   background:
     linear-gradient(
       145deg,
-      #ff8a50,
-      #ff6436,
-      #df4c26
+      #9563ec,
+      #864ce9,
+      #6921e4
     );
 
   box-shadow:
     0 8px 25px
-    rgba(255, 94, 43, 0.22);
+    rgba(127, 66, 232, 0.22);
 }
 
 .settings-brand strong {
@@ -197,7 +197,7 @@
 
   margin-top: 2px;
 
-  color: #655f59;
+  color: #575b67;
 
   font-size: 8px;
 
@@ -222,14 +222,14 @@
 
   border-radius: 10px;
 
-  color: #fff8f0;
+  color: #bb9bf3;
 
   background:
     linear-gradient(
       135deg,
-      #ff8550,
-      #ff6436,
-      #e65028
+      #9563ec,
+      #864ce9,
+      #6e29e5
     );
 
   font-size: 9px;
@@ -237,7 +237,7 @@
 
   box-shadow:
     0 10px 25px
-    rgba(255, 91, 42, 0.18);
+    rgba(126, 65, 232, 0.18);
 
   transition: 0.25s ease;
 }
@@ -248,7 +248,7 @@
 
   box-shadow:
     0 15px 34px
-    rgba(255, 91, 42, 0.28);
+    rgba(126, 65, 232, 0.28);
 }
 
 /* =========================================================
@@ -305,16 +305,16 @@
 
   border-radius: 7px;
 
-  color: #ff9965;
+  color: #a276ee;
 
   background:
-    rgba(255, 112, 67, 0.055);
+    rgba(141, 88, 234, 0.055);
 
   border:
     1px solid rgba(
-      255,
-      123,
-      65,
+      140,
+      86,
+      234,
       0.12
     );
 
@@ -340,16 +340,16 @@
 
   letter-spacing: -3px;
 
-  color: #fff8ef;
+  color: #bb9bf3;
 }
 
 .settings-hero h1 span {
   background:
     linear-gradient(
       90deg,
-      #ff7d49,
-      #ffae4d,
-      #ffd36e
+      #915deb,
+      #9361eb,
+      #7be2f2
     );
 
   -webkit-background-clip:
@@ -366,7 +366,7 @@
 
   margin-top: 18px;
 
-  color: #857e75;
+  color: #737887;
 
   font-size: 13px;
 
@@ -408,9 +408,9 @@
 
   border:
     1px solid rgba(
-      255,
-      140,
-      80,
+      149,
+      99,
+      236,
       0.08
     );
 }
@@ -426,10 +426,10 @@
 
   border-radius: 15px;
 
-  color: #ff9760;
+  color: #9f71ee;
 
   background:
-    rgba(255, 112, 67, 0.07);
+    rgba(141, 88, 234, 0.07);
 
   animation:
     settingsAiPulse
@@ -442,7 +442,7 @@
 }
 
 .settings-ai-card span {
-  color: #715f54;
+  color: #545b71;
 
   font-size: 7px;
   font-weight: 700;
@@ -463,7 +463,7 @@
 .settings-ai-card p {
   margin-top: 3px;
 
-  color: #706861;
+  color: #606471;
 
   font-size: 8px;
 }
@@ -524,9 +524,9 @@
 
   border:
     1px solid rgba(
-      255,
-      245,
-      230,
+      187,
+      155,
+      243,
       0.065
     );
 
@@ -544,7 +544,7 @@
 }
 
 .settings-panel-header span {
-  color: #655e58;
+  color: #575b66;
 
   font-size: 7px;
   font-weight: 700;
@@ -555,7 +555,7 @@
 .settings-panel-header h2 {
   margin-top: 4px;
 
-  color: #f3ece4;
+  color: #bb9bf3;
 
   font-family:
     "Manrope",
@@ -565,7 +565,7 @@
 }
 
 .settings-panel-header > svg {
-  color: #ff8d58;
+  color: #9a6aed;
 }
 
 /* =========================================================
@@ -611,13 +611,13 @@
 
   border-radius: 10px;
 
-  color: #ff8e59;
+  color: #9b6bed;
 
   background:
     rgba(
-      255,
-      112,
-      67,
+      141,
+      88,
+      234,
       0.06
     );
 }
@@ -625,7 +625,7 @@
 .settings-option strong {
   display: block;
 
-  color: #d8d0c7;
+  color: #c8ccd7;
 
   font-size: 10px;
 }
@@ -633,7 +633,7 @@
 .settings-option p {
   margin-top: 4px;
 
-  color: #69625b;
+  color: #5a5e6a;
 
   font-size: 8px;
 
@@ -656,7 +656,7 @@
 
   border-radius: 9px;
 
-  color: #c8bfb6;
+  color: #b6bbc8;
 
   background: #151412;
 
@@ -676,9 +676,9 @@
 .settings-select:focus {
   border-color:
     rgba(
-      255,
-      125,
-      64,
+      140,
+      85,
+      234,
       0.25
     );
 }
@@ -717,7 +717,7 @@
 
   border-radius: 50%;
 
-  background: #716a63;
+  background: #626672;
 
   transition:
     transform 0.25s ease,
@@ -727,9 +727,9 @@
 .settings-toggle-active {
   background:
     rgba(
-      255,
-      112,
-      67,
+      141,
+      88,
+      234,
       0.18
     );
 }
@@ -741,16 +741,16 @@
   background:
     linear-gradient(
       135deg,
-      #ff955f,
-      #f05d31
+      #9e71ed,
+      #7a3ae7
     );
 
   box-shadow:
     0 0 12px
     rgba(
-      255,
-      102,
-      51,
+      132,
+      73,
+      233,
       0.3
     );
 }
@@ -776,9 +776,9 @@
     linear-gradient(
       100deg,
       rgba(
-        255,
-        112,
-        67,
+        141,
+        88,
+        234,
         0.045
       ),
       rgba(
@@ -791,9 +791,9 @@
 
   border:
     1px solid rgba(
-      255,
-      130,
-      70,
+      143,
+      90,
+      235,
       0.09
     );
 
@@ -820,19 +820,19 @@
 
   border-radius: 14px;
 
-  color: #ff9560;
+  color: #9f71ee;
 
   background:
     rgba(
-      255,
-      112,
-      67,
+      141,
+      88,
+      234,
       0.07
     );
 }
 
 .settings-summary-left span {
-  color: #786054;
+  color: #565e76;
 
   font-size: 7px;
   font-weight: 700;
@@ -853,7 +853,7 @@
 
   margin-top: 4px;
 
-  color: #706861;
+  color: #606471;
 
   font-size: 8px;
 
@@ -895,7 +895,7 @@
 .settings-summary-values span {
   display: block;
 
-  color: #615a54;
+  color: #535762;
 
   font-size: 7px;
 }
@@ -905,7 +905,7 @@
 
   margin-top: 4px;
 
-  color: #c8bfb6;
+  color: #b6bbc8;
 
   font-size: 9px;
 }
@@ -946,15 +946,15 @@
 
   border:
     1px solid rgba(
-      255,
-      245,
-      230,
+      187,
+      155,
+      243,
       0.065
     );
 }
 
 .settings-actions-card span {
-  color: #655e58;
+  color: #575b66;
 
   font-size: 7px;
   font-weight: 700;
@@ -973,7 +973,7 @@
 .settings-actions-card p {
   margin-top: 4px;
 
-  color: #68615b;
+  color: #5a5e69;
 
   font-size: 8px;
 }
@@ -1005,7 +1005,7 @@
 }
 
 .settings-reset-button {
-  color: #9c938b;
+  color: #8b8f9c;
 
   background:
     rgba(
@@ -1025,13 +1025,13 @@
 }
 
 .settings-reset-button:hover {
-  color: #fff2e7;
+  color: #bb9bf3;
 
   background:
     rgba(
-      255,
-      112,
-      67,
+      141,
+      88,
+      234,
       0.04
     );
 }
@@ -1042,9 +1042,9 @@
   background:
     linear-gradient(
       135deg,
-      #ff8550,
-      #ff6436,
-      #e65028
+      #9563ec,
+      #864ce9,
+      #6e29e5
     );
 }
 
@@ -1055,9 +1055,9 @@
   box-shadow:
     0 14px 30px
     rgba(
-      255,
-      91,
-      42,
+      126,
+      65,
+      232,
       0.22
     );
 }
@@ -1191,9 +1191,9 @@
     box-shadow:
       0 0 25px
       rgba(
-        255,
-        105,
-        48,
+        130,
+        71,
+        232,
         0.1
       );
   }

@@ -7,17 +7,17 @@
   position: relative;
   overflow: hidden;
 
-  color: #fff8ef;
+  color: #bb9bf3;
 
   background:
     radial-gradient(
       circle at 15% 15%,
-      rgba(255, 103, 48, 0.09),
+      rgba(130, 71, 232, 0.09),
       transparent 30%
     ),
     radial-gradient(
       circle at 90% 80%,
-      rgba(255, 180, 70, 0.055),
+      rgba(143, 90, 235, 0.055),
       transparent 28%
     ),
     #090909;
@@ -39,7 +39,7 @@
   left: -150px;
   top: -180px;
 
-  background: #ff6538;
+  background: #874ee9;
 
   animation:
     authGlowOne 9s ease-in-out infinite alternate;
@@ -52,7 +52,7 @@
   right: -180px;
   bottom: -180px;
 
-  background: #ffad45;
+  background: #8f59eb;
 
   animation:
     authGlowTwo 11s ease-in-out infinite alternate;
@@ -114,14 +114,14 @@
   background:
     linear-gradient(
       145deg,
-      #ff8950,
-      #ff6436,
-      #df4d27
+      #9563ec,
+      #864ce9,
+      #6922e4
     );
 
   box-shadow:
     0 12px 35px
-    rgba(255, 94, 43, 0.22);
+    rgba(127, 66, 232, 0.22);
 }
 
 .auth-brand strong {
@@ -139,7 +139,7 @@
 
   margin-top: 3px;
 
-  color: #655f59;
+  color: #575b67;
 
   font-size: 8px;
 
@@ -161,14 +161,14 @@
 
   border-radius: 7px;
 
-  color: #ff9560;
+  color: #9f71ee;
 
   background:
-    rgba(255, 112, 67, 0.055);
+    rgba(141, 88, 234, 0.055);
 
   border:
     1px solid
-    rgba(255, 123, 65, 0.11);
+    rgba(140, 86, 234, 0.11);
 
   font-size: 9px;
   font-weight: 700;
@@ -195,9 +195,9 @@
   background:
     linear-gradient(
       90deg,
-      #ff7d49,
-      #ffad4d,
-      #ffd166
+      #915deb,
+      #9361eb,
+      #74e1f1
     );
 
   background-clip: text;
@@ -209,7 +209,7 @@
 
   margin-top: 21px;
 
-  color: #827b73;
+  color: #717684;
 
   font-size: 13px;
 
@@ -247,7 +247,7 @@
 .auth-features strong {
   display: block;
 
-  color: #d9d1c8;
+  color: #c9cdd8;
 
   font-size: 9px;
 }
@@ -257,7 +257,7 @@
 
   margin-top: 5px;
 
-  color: #625c56;
+  color: #555863;
 
   font-size: 7px;
 
@@ -287,7 +287,7 @@
 
   border:
     1px solid
-    rgba(255, 245, 230, 0.075);
+    rgba(187, 155, 243, 0.075);
 
   background:
     linear-gradient(
@@ -310,7 +310,7 @@
 }
 
 .auth-card-heading > span {
-  color: #a56b4e;
+  color: #601bd8;
 
   font-size: 8px;
   font-weight: 700;
@@ -321,7 +321,7 @@
 .auth-card-heading h2 {
   margin-top: 6px;
 
-  color: #f6eee6;
+  color: #bb9bf3;
 
   font-family:
     "Manrope",
@@ -335,7 +335,7 @@
 .auth-card-heading p {
   margin-top: 7px;
 
-  color: #6d665f;
+  color: #5e626e;
 
   font-size: 9px;
 }
@@ -353,7 +353,7 @@
 
   margin-bottom: 7px;
 
-  color: #8a827a;
+  color: #787d8c;
 
   font-size: 8px;
   font-weight: 600;
@@ -386,20 +386,20 @@
 
 .auth-input-wrapper:focus-within {
   border-color:
-    rgba(255, 125, 64, 0.24);
+    rgba(140, 85, 234, 0.24);
 
   background:
-    rgba(255, 112, 67, 0.025);
+    rgba(141, 88, 234, 0.025);
 
   box-shadow:
     0 0 0 3px
-    rgba(255, 112, 67, 0.025);
+    rgba(141, 88, 234, 0.025);
 }
 
 .auth-input-wrapper > svg {
   flex-shrink: 0;
 
-  color: #9a705b;
+  color: #67718e;
 }
 
 .auth-input-wrapper input {
@@ -418,20 +418,20 @@
 }
 
 .auth-input-wrapper input::placeholder {
-  color: #4f4a45;
+  color: #444750;
 }
 
 .auth-password-toggle {
   display: grid;
   place-items: center;
 
-  color: #665f58;
+  color: #575b67;
 
   background: transparent;
 }
 
 .auth-password-toggle:hover {
-  color: #ff8d58;
+  color: #9a6aed;
 }
 
 /* =========================================================
@@ -483,14 +483,14 @@
   background:
     linear-gradient(
       135deg,
-      #ff8751,
-      #ff6436 58%,
-      #e65028
+      #9664ec,
+      #864ce9 58%,
+      #6e29e5
     );
 
   box-shadow:
     0 14px 32px
-    rgba(255, 91, 42, 0.2);
+    rgba(126, 65, 232, 0.2);
 
   font-size: 10px;
   font-weight: 700;
@@ -506,7 +506,7 @@
 
   box-shadow:
     0 19px 40px
-    rgba(255, 91, 42, 0.3);
+    rgba(126, 65, 232, 0.3);
 }
 
 .auth-submit-button:disabled {
@@ -538,7 +538,7 @@
 }
 
 .auth-divider p {
-  color: #514c47;
+  color: #464952;
 
   font-size: 6px;
   font-weight: 700;
@@ -547,7 +547,7 @@
 }
 
 .auth-switch-text {
-  color: #6c655f;
+  color: #5d616e;
 
   text-align: center;
 
@@ -555,7 +555,7 @@
 }
 
 .auth-switch-text a {
-  color: #ff8d58;
+  color: #9a6aed;
 
   font-weight: 700;
 
@@ -563,7 +563,7 @@
 }
 
 .auth-switch-text a:hover {
-  color: #ffad63;
+  color: #a174ee;
 }
 
 /* =========================================================

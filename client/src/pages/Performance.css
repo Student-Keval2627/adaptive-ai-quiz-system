@@ -9,17 +9,17 @@
 
   overflow-x: hidden;
 
-  color: #f8f1e9;
+  color: #bb9bf3;
 
   background:
     radial-gradient(
       circle at 10% 10%,
-      rgba(255, 103, 48, 0.07),
+      rgba(130, 71, 232, 0.07),
       transparent 28%
     ),
     radial-gradient(
       circle at 90% 70%,
-      rgba(255, 179, 71, 0.05),
+      rgba(144, 91, 235, 0.05),
       transparent 26%
     ),
     #090909;
@@ -48,7 +48,7 @@
   top: -220px;
   left: 10%;
 
-  background: #ff6236;
+  background: #864ce9;
 
   animation:
     performanceGlowOne 9s ease-in-out infinite alternate;
@@ -61,7 +61,7 @@
   right: -260px;
   bottom: -120px;
 
-  background: #ffb347;
+  background: #905beb;
 
   animation:
     performanceGlowTwo 11s ease-in-out infinite alternate;
@@ -84,7 +84,7 @@
   justify-content: space-between;
 
   border-bottom:
-    1px solid rgba(255, 245, 230, 0.055);
+    1px solid rgba(187, 155, 243, 0.055);
 
   background:
     rgba(10, 10, 9, 0.72);
@@ -107,7 +107,7 @@
 
   border-radius: 10px;
 
-  color: #8e867d;
+  color: #7c818f;
 
   background:
     rgba(255, 255, 255, 0.02);
@@ -124,13 +124,13 @@
 .performance-back-button:hover {
   transform: translateX(-3px);
 
-  color: #fff5eb;
+  color: #bb9bf3;
 
   background:
-    rgba(255, 112, 67, 0.045);
+    rgba(141, 88, 234, 0.045);
 
   border-color:
-    rgba(255, 123, 65, 0.18);
+    rgba(140, 86, 234, 0.18);
 }
 
 /* =========================================================
@@ -158,14 +158,14 @@
   background:
     linear-gradient(
       145deg,
-      #ff8a50,
-      #ff6436,
-      #df4c26
+      #9563ec,
+      #864ce9,
+      #6921e4
     );
 
   box-shadow:
     0 8px 25px
-    rgba(255, 94, 43, 0.22);
+    rgba(127, 66, 232, 0.22);
 }
 
 .performance-brand strong {
@@ -183,7 +183,7 @@
 
   margin-top: 2px;
 
-  color: #655f59;
+  color: #575b67;
 
   font-size: 8px;
 
@@ -208,19 +208,19 @@
 
   border-radius: 10px;
 
-  color: #fff8f0;
+  color: #bb9bf3;
 
   background:
     linear-gradient(
       135deg,
-      #ff8550,
-      #ff6436 58%,
-      #e65028
+      #9563ec,
+      #864ce9 58%,
+      #6e29e5
     );
 
   box-shadow:
     0 10px 25px
-    rgba(255, 91, 42, 0.17);
+    rgba(126, 65, 232, 0.17);
 
   font-size: 9px;
   font-weight: 700;
@@ -235,7 +235,7 @@
 
   box-shadow:
     0 15px 34px
-    rgba(255, 91, 42, 0.27);
+    rgba(126, 65, 232, 0.27);
 }
 
 /* =========================================================
@@ -287,13 +287,13 @@
 
   border-radius: 7px;
 
-  color: #ff9965;
+  color: #a276ee;
 
   background:
-    rgba(255, 112, 67, 0.055);
+    rgba(141, 88, 234, 0.055);
 
   border:
-    1px solid rgba(255, 123, 65, 0.12);
+    1px solid rgba(140, 86, 234, 0.12);
 
   font-size: 9px;
   font-weight: 700;
@@ -313,16 +313,16 @@
 
   letter-spacing: -3px;
 
-  color: #fff8ef;
+  color: #bb9bf3;
 }
 
 .performance-hero h1 span {
   background:
     linear-gradient(
       90deg,
-      #ff7d49,
-      #ffae4d,
-      #ffd36e
+      #915deb,
+      #9361eb,
+      #7be2f2
     );
 
   -webkit-background-clip: text;
@@ -336,7 +336,7 @@
 
   margin-top: 18px;
 
-  color: #857e75;
+  color: #737887;
 
   font-size: 13px;
 
@@ -363,7 +363,7 @@
     rgba(20, 19, 17, 0.84);
 
   border:
-    1px solid rgba(255, 245, 230, 0.065);
+    1px solid rgba(187, 155, 243, 0.065);
 }
 
 .performance-score-ring {
@@ -381,8 +381,8 @@
 
   background:
     conic-gradient(
-      #ff683f 0%,
-      #ffad4d 84%,
+      #8b54ea 0%,
+      #9361eb 84%,
       rgba(255, 255, 255, 0.05) 84%
     );
 
@@ -420,7 +420,7 @@
 }
 
 .performance-score-info > span {
-  color: #695f58;
+  color: #585c69;
 
   font-size: 7px;
   font-weight: 700;
@@ -441,7 +441,7 @@
 .performance-score-info p {
   margin-top: 5px;
 
-  color: #746c64;
+  color: #636875;
 
   font-size: 8px;
 
@@ -476,7 +476,7 @@
     );
 
   border:
-    1px solid rgba(255, 245, 230, 0.065);
+    1px solid rgba(187, 155, 243, 0.065);
 
   transition:
     transform 0.3s ease,
@@ -502,7 +502,7 @@
   transform: translateY(-5px);
 
   border-color:
-    rgba(255, 129, 66, 0.16);
+    rgba(141, 87, 234, 0.16);
 }
 
 .performance-stat-top {
@@ -520,10 +520,10 @@
 
   border-radius: 10px;
 
-  color: #ff8e59;
+  color: #9b6bed;
 
   background:
-    rgba(255, 112, 67, 0.07);
+    rgba(141, 88, 234, 0.07);
 }
 
 .performance-stat-trend {
@@ -553,7 +553,7 @@
     "Manrope",
     sans-serif;
 
-  color: #fff7ee;
+  color: #bb9bf3;
 
   font-size: 23px;
 }
@@ -563,7 +563,7 @@
 
   margin-top: 2px;
 
-  color: #b0a79e;
+  color: #9ea3b0;
 
   font-size: 10px;
 }
@@ -571,7 +571,7 @@
 .performance-stat-card p {
   margin-top: 5px;
 
-  color: #625c56;
+  color: #555863;
 
   font-size: 8px;
 }
@@ -598,7 +598,7 @@
   border-radius: 17px;
 
   border:
-    1px solid rgba(255, 245, 230, 0.065);
+    1px solid rgba(187, 155, 243, 0.065);
 
   background:
     linear-gradient(
@@ -620,7 +620,7 @@
 .performance-panel-header span {
   display: block;
 
-  color: #655e58;
+  color: #575b66;
 
   font-size: 7px;
   font-weight: 700;
@@ -635,7 +635,7 @@
     "Manrope",
     sans-serif;
 
-  color: #f3ece4;
+  color: #bb9bf3;
 
   font-size: 16px;
 }
@@ -679,7 +679,7 @@
 
   font-size: 28px;
 
-  color: #fff7ed;
+  color: #bb9bf3;
 }
 
 .performance-chart-summary span {
@@ -687,13 +687,13 @@
 
   margin-top: 2px;
 
-  color: #69625b;
+  color: #5a5e6a;
 
   font-size: 8px;
 }
 
 .performance-chart-summary p {
-  color: #69625b;
+  color: #5a5e6a;
 
   font-size: 8px;
 }
@@ -717,7 +717,7 @@
 
   padding-bottom: 24px;
 
-  color: #4e4944;
+  color: #43464f;
 
   font-size: 7px;
 }
@@ -770,7 +770,7 @@
 .performance-bar-value {
   margin-bottom: 5px;
 
-  color: #9b7969;
+  color: #6e7896;
 
   font-size: 7px;
 
@@ -809,14 +809,14 @@
   background:
     linear-gradient(
       to top,
-      #e8512b,
-      #ff7f46,
-      #ffb34f
+      #712ee5,
+      #8f5aeb,
+      #9562ec
     );
 
   box-shadow:
     0 0 14px
-    rgba(255, 102, 50, 0.16);
+    rgba(131, 73, 232, 0.16);
 
   animation:
     performanceBarGrow 1s ease both;
@@ -827,7 +827,7 @@
 .performance-bar-column > span {
   margin-top: 9px;
 
-  color: #5e5852;
+  color: #51545f;
 
   font-size: 7px;
   font-weight: 700;
@@ -847,10 +847,10 @@
 
   border-radius: 6px;
 
-  color: #ff9160;
+  color: #9f71ee;
 
   background:
-    rgba(255, 112, 67, 0.055);
+    rgba(141, 88, 234, 0.055);
 
   font-size: 8px;
 }
@@ -873,7 +873,7 @@
   border-radius: 50%;
 
   border:
-    1px solid rgba(255, 127, 67, 0.13);
+    1px solid rgba(141, 88, 234, 0.13);
 }
 
 .ring-large {
@@ -881,7 +881,7 @@
   height: 120px;
 
   border-top-color:
-    rgba(255, 128, 67, 0.55);
+    rgba(141, 88, 234, 0.55);
 
   animation:
     performanceSpin 13s linear infinite;
@@ -909,13 +909,13 @@
 
   border-radius: 18px;
 
-  color: #ff9460;
+  color: #9f71ee;
 
   background:
-    rgba(255, 112, 67, 0.075);
+    rgba(141, 88, 234, 0.075);
 
   border:
-    1px solid rgba(255, 123, 65, 0.13);
+    1px solid rgba(140, 86, 234, 0.13);
 
   animation:
     performanceAiPulse 3s ease-in-out infinite;
@@ -931,20 +931,20 @@
   border-radius: 10px;
 
   background:
-    rgba(255, 112, 67, 0.03);
+    rgba(141, 88, 234, 0.03);
 
   border:
-    1px solid rgba(255, 112, 67, 0.065);
+    1px solid rgba(141, 88, 234, 0.065);
 }
 
 .performance-ai-message > svg {
   flex-shrink: 0;
 
-  color: #ff8d59;
+  color: #9b6bed;
 }
 
 .performance-ai-message strong {
-  color: #bbb2a9;
+  color: #a9aebb;
 
   font-size: 9px;
 }
@@ -952,7 +952,7 @@
 .performance-ai-message p {
   margin-top: 4px;
 
-  color: #6f6861;
+  color: #606470;
 
   font-size: 8px;
 
@@ -978,7 +978,7 @@
 }
 
 .performance-ai-focus span {
-  color: #615a54;
+  color: #535762;
 
   font-size: 7px;
   font-weight: 700;
@@ -989,7 +989,7 @@
 
   margin-top: 4px;
 
-  color: #d5ccc4;
+  color: #c4c8d5;
 
   font-size: 10px;
 }
@@ -997,13 +997,13 @@
 .performance-ai-focus p {
   margin-top: 2px;
 
-  color: #655f59;
+  color: #575b67;
 
   font-size: 8px;
 }
 
 .performance-ai-focus-score {
-  color: #ff9965;
+  color: #a276ee;
 
   font-family:
     "Manrope",
@@ -1027,13 +1027,13 @@
 
   border-radius: 9px;
 
-  color: #f6ded1;
+  color: #bb9bf3;
 
   background:
-    rgba(255, 112, 67, 0.065);
+    rgba(141, 88, 234, 0.065);
 
   border:
-    1px solid rgba(255, 123, 65, 0.1);
+    1px solid rgba(140, 86, 234, 0.1);
 
   font-size: 9px;
   font-weight: 700;
@@ -1047,7 +1047,7 @@
   transform: translateY(-2px);
 
   background:
-    rgba(255, 112, 67, 0.12);
+    rgba(141, 88, 234, 0.12);
 }
 
 /* =========================================================
@@ -1064,7 +1064,7 @@
 
   gap: 5px;
 
-  color: #7f766e;
+  color: #6d7280;
 
   background: transparent;
 
@@ -1072,7 +1072,7 @@
 }
 
 .performance-text-button:hover {
-  color: #ff8e59;
+  color: #9b6bed;
 }
 
 .performance-subject-list {
@@ -1109,7 +1109,7 @@
   padding-left: 14px;
 
   background:
-    rgba(255, 112, 67, 0.018);
+    rgba(141, 88, 234, 0.018);
 }
 
 .performance-subject-main {
@@ -1130,10 +1130,10 @@
 
   border-radius: 10px;
 
-  color: #ff8e59;
+  color: #9b6bed;
 
   background:
-    rgba(255, 112, 67, 0.06);
+    rgba(141, 88, 234, 0.06);
 }
 
 .performance-subject-name strong {
@@ -1149,7 +1149,7 @@
 
   margin-top: 3px;
 
-  color: #625b55;
+  color: #545863;
 
   font-size: 8px;
 }
@@ -1163,7 +1163,7 @@
 
 .performance-subject-progress-top span,
 .performance-subject-progress-top strong {
-  color: #6c645d;
+  color: #5c606d;
 
   font-size: 7px;
 }
@@ -1187,9 +1187,9 @@
   background:
     linear-gradient(
       90deg,
-      #ff643d,
-      #ff9e4b,
-      #ffd166
+      #8a52ea,
+      #925feb,
+      #74e1f1
     );
 
   animation:
@@ -1199,7 +1199,7 @@
 .performance-subject-stat span {
   display: block;
 
-  color: #554f49;
+  color: #494c55;
 
   font-size: 7px;
   font-weight: 700;
@@ -1210,7 +1210,7 @@
 
   margin-top: 4px;
 
-  color: #c8bfb6;
+  color: #b6bbc8;
 
   font-size: 10px;
 }
@@ -1234,10 +1234,10 @@
 }
 
 .performance-status-improving {
-  color: #ffb457;
+  color: #9a69ed;
 
   background:
-    rgba(255, 180, 87, 0.055);
+    rgba(154, 105, 237, 0.055);
 }
 
 .performance-status-needs-practice {
@@ -1268,7 +1268,7 @@
   border-radius: 15px;
 
   border:
-    1px solid rgba(255, 245, 230, 0.06);
+    1px solid rgba(187, 155, 243, 0.06);
 
   background:
     linear-gradient(
@@ -1286,7 +1286,7 @@
   transform: translateY(-4px);
 
   border-color:
-    rgba(255, 128, 66, 0.15);
+    rgba(141, 87, 234, 0.15);
 }
 
 .performance-insight-icon {
@@ -1302,10 +1302,10 @@
 }
 
 .strong-icon {
-  color: #ffb350;
+  color: #9563ec;
 
   background:
-    rgba(255, 179, 80, 0.06);
+    rgba(149, 99, 236, 0.06);
 }
 
 .focus-icon {
@@ -1316,14 +1316,14 @@
 }
 
 .time-icon {
-  color: #ff8d58;
+  color: #9a6aed;
 
   background:
-    rgba(255, 141, 88, 0.06);
+    rgba(154, 106, 237, 0.06);
 }
 
 .performance-insight-card > span {
-  color: #5f5852;
+  color: #515560;
 
   font-size: 7px;
   font-weight: 700;
@@ -1346,7 +1346,7 @@
 .performance-insight-card p {
   margin-top: 6px;
 
-  color: #69625b;
+  color: #5a5e6a;
 
   font-size: 8px;
 
@@ -1374,8 +1374,8 @@
   background:
     linear-gradient(
       90deg,
-      #ff633d,
-      #ffad4d
+      #8a52ea,
+      #9361eb
     );
 }
 
@@ -1476,7 +1476,7 @@
 
     box-shadow:
       0 0 25px
-      rgba(255, 105, 48, 0.1);
+      rgba(130, 71, 232, 0.1);
   }
 }
 
