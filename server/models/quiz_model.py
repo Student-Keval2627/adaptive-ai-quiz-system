@@ -1956,7 +1956,7 @@ def normalize_question_ids(
 # USER QUESTION HISTORY
 # =========================================================
 
-def get_seen_question_ids(
+def get_mastered_question_ids(
     user_id,
     subject=None,
 ):
@@ -1968,21 +1968,18 @@ def get_seen_question_ids(
         return []
 
     query = {
-        "userId":
-            object_user_id,
+        "userId": object_user_id,
+        "isCorrect": True,
     }
 
     if subject:
-        query[
-            "subject"
-        ] = subject
+        query["subject"] = subject
 
     cursor = (
-        question_history_collection
-        .find(
+        question_history_collection.find(
             query,
             {
-                "questionId": 1
+                "questionId": 1,
             },
         )
     )
@@ -1991,9 +1988,7 @@ def get_seen_question_ids(
 
     for item in cursor:
         question_id = safe_object_id(
-            item.get(
-                "questionId"
-            )
+            item.get("questionId")
         )
 
         if question_id:
@@ -2002,7 +1997,6 @@ def get_seen_question_ids(
             )
 
     return question_ids
-
 
 # =========================================================
 # RECORD SERVED QUESTION
@@ -2092,7 +2086,121 @@ def record_question_seen(
         "success": True,
     }
 
+# =========================================================
+# RECORD QUESTION ANSWER
+# =========================================================
 
+def record_question_answer(
+    user_id,
+    question_id,
+    selected_answer,
+):
+    object_user_id = safe_object_id(
+        user_id
+    )
+
+    object_question_id = safe_object_id(
+        question_id
+    )
+
+    if (
+        not object_user_id or
+        not object_question_id
+    ):
+        return {
+            "success": False,
+            "message":
+                "Invalid user or question ID",
+        }
+
+    question = questions_collection.find_one(
+        {
+            "_id": object_question_id,
+        }
+    )
+
+    if not question:
+        return {
+            "success": False,
+            "message":
+                "Question not found",
+        }
+
+    correct_answer = question.get(
+        "answer"
+    )
+
+    is_correct = (
+        selected_answer ==
+        correct_answer
+    )
+
+    now = datetime.now(
+        timezone.utc
+    )
+
+    update_fields = {
+        "subject":
+            question.get(
+                "subject",
+                "",
+            ),
+        "topic":
+            question.get(
+                "topic",
+                "General",
+            ),
+        "difficulty":
+            question.get(
+                "difficulty",
+                "Medium",
+            ),
+        "lastSelectedAnswer":
+            selected_answer,
+        "lastAnswerCorrect":
+            is_correct,
+        "lastAnsweredAt":
+            now,
+    }
+
+    if is_correct:
+        update_fields["isCorrect"] = True
+        update_fields["masteredAt"] = now
+
+    else:
+        update_fields[
+            "hasIncorrectAnswer"
+        ] = True
+
+        update_fields[
+            "lastIncorrectAt"
+        ] = now
+
+    question_history_collection.update_one(
+        {
+            "userId":
+                object_user_id,
+            "questionId":
+                object_question_id,
+        },
+        {
+            "$set":
+                update_fields,
+            "$setOnInsert": {
+                "firstSeenAt":
+                    now,
+                "timesSeen":
+                    0,
+            },
+        },
+        upsert=True,
+    )
+
+    return {
+        "success": True,
+        "correct":
+            is_correct,
+    }
 # =========================================================
 # RANDOM SAMPLE
 # =========================================================
@@ -2174,7 +2282,7 @@ def get_questions(
             question_id
         for question_id in (
             excluded_ids +
-            seen_ids
+            mastered_ids
         )
     }
 

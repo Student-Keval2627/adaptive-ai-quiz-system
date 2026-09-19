@@ -25,6 +25,15 @@ from utils.quiz_engine import (
     get_next_adaptive_question,
     start_adaptive_quiz,
 )
+from models.quiz_model import (
+    check_question_answer,
+    find_question_by_id,
+    get_available_subjects,
+    get_questions,
+    get_subject_question_counts,
+    record_question_answer,
+    record_question_seen,
+)
 
 
 # =========================================================
@@ -705,6 +714,13 @@ def next_question():
                     "Selected answer is not a valid option",
             }
         ), 400
+        record_question_answer(
+        user_id=user_id,
+        question_id=
+            previous_question_id,
+        selected_answer=
+            selected_answer,
+    )
 
     adaptive_result = (
         get_next_adaptive_question(
@@ -997,4 +1013,10 @@ def check_answer():
             "success": True,
             **result,
         }
+    )
+    record_question_answer(
+        user_id=user_id,
+        question_id=question_id,
+        selected_answer=
+            selected_answer,
     )
