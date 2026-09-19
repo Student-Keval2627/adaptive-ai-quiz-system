@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Principles",
+    "difficulty": "Easy",
+    "question": "Which Cyber Security concept is described as: Confidentiality, integrity, and availability form the three core information-security goals?",
+    "options": [
+      "CIA Triad",
+      "Authentication",
+      "Asymmetric encryption",
+      "Malware"
+    ],
+    "answer": "CIA Triad"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Principles",
+    "difficulty": "Easy",
+    "question": "Which description best explains CIA Triad?",
+    "options": [
+      "Confidentiality, integrity, and availability form the three core information-security goals",
+      "Authentication verifies that a user or system is who it claims to be",
+      "Asymmetric encryption uses a mathematically related public and private key pair",
+      "Malware is software intentionally designed to damage, disrupt, spy on, or gain unauthorized access"
+    ],
+    "answer": "Confidentiality, integrity, and availability form the three core information-security goals"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Principles",
+    "difficulty": "Easy",
+    "question": "What is a primary application of CIA Triad?",
+    "options": [
+      "evaluating whether a security design protects secrecy, correctness, and access",
+      "confirming an identity before allowing a sign-in",
+      "securely exchanging secrets without first sharing one private key",
+      "describing malicious code such as trojans, spyware, and worms"
+    ],
+    "answer": "evaluating whether a security design protects secrecy, correctness, and access"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Principles",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for evaluating whether a security design protects secrecy, correctness, and access?",
+    "options": [
+      "Authentication",
+      "Asymmetric encryption",
+      "Malware",
+      "CIA Triad"
+    ],
+    "answer": "CIA Triad"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Identity",
+    "difficulty": "Easy",
+    "question": "Which Cyber Security concept is described as: Authentication verifies that a user or system is who it claims to be?",
+    "options": [
+      "Authentication",
+      "Authorization",
+      "Digital signature",
+      "Ransomware"
+    ],
+    "answer": "Authentication"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Identity",
+    "difficulty": "Easy",
+    "question": "Which description best explains Authentication?",
+    "options": [
+      "Authentication verifies that a user or system is who it claims to be",
+      "Authorization determines which resources an authenticated identity may access",
+      "A digital signature provides origin authentication and integrity using a private key",
+      "Ransomware denies access to data or systems and demands payment for restoration"
+    ],
+    "answer": "Authentication verifies that a user or system is who it claims to be"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Identity",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Authentication?",
+    "options": [
+      "confirming an identity before allowing a sign-in",
+      "enforcing permissions after a user signs in",
+      "proving that a message came from a signer and was not altered",
+      "responding to malicious encryption of organizational files"
+    ],
+    "answer": "confirming an identity before allowing a sign-in"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Identity",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for confirming an identity before allowing a sign-in?",
+    "options": [
+      "Authorization",
+      "Digital signature",
+      "Ransomware",
+      "Authentication"
+    ],
+    "answer": "Authentication"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Identity",
+    "difficulty": "Easy",
+    "question": "Which Cyber Security concept is described as: Authorization determines which resources an authenticated identity may access?",
+    "options": [
+      "Authorization",
+      "Multi-factor authentication",
+      "Firewall",
+      "SQL injection"
+    ],
+    "answer": "Authorization"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Identity",
+    "difficulty": "Easy",
+    "question": "Which description best explains Authorization?",
+    "options": [
+      "Authorization determines which resources an authenticated identity may access",
+      "Multi-factor authentication requires evidence from more than one factor category",
+      "A firewall permits or blocks network traffic according to configured rules",
+      "SQL injection manipulates database queries through untrusted input"
+    ],
+    "answer": "Authorization determines which resources an authenticated identity may access"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Identity",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Authorization?",
+    "options": [
+      "enforcing permissions after a user signs in",
+      "reducing account takeover risk when a password is stolen",
+      "controlling connections between trusted and untrusted networks",
+      "preventing attackers from changing a query by using parameterized statements"
+    ],
+    "answer": "enforcing permissions after a user signs in"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Identity",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for enforcing permissions after a user signs in?",
+    "options": [
+      "Multi-factor authentication",
+      "Firewall",
+      "SQL injection",
+      "Authorization"
+    ],
+    "answer": "Authorization"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Identity",
+    "difficulty": "Easy",
+    "question": "Which Cyber Security concept is described as: Multi-factor authentication requires evidence from more than one factor category?",
+    "options": [
+      "Multi-factor authentication",
+      "Hashing",
+      "Intrusion detection system",
+      "Cross-site scripting"
+    ],
+    "answer": "Multi-factor authentication"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Identity",
+    "difficulty": "Easy",
+    "question": "Which description best explains Multi-factor authentication?",
+    "options": [
+      "Multi-factor authentication requires evidence from more than one factor category",
+      "Hashing produces a fixed-length one-way digest from input data",
+      "An intrusion detection system monitors activity and raises alerts about suspicious behavior",
+      "Cross-site scripting injects untrusted script content into pages viewed by other users"
+    ],
+    "answer": "Multi-factor authentication requires evidence from more than one factor category"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Identity",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Multi-factor authentication?",
+    "options": [
+      "reducing account takeover risk when a password is stolen",
+      "verifying file integrity or storing password verifiers",
+      "detecting possible attacks without automatically blocking every event",
+      "protecting browser users through output encoding and content security controls"
+    ],
+    "answer": "reducing account takeover risk when a password is stolen"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Identity",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for reducing account takeover risk when a password is stolen?",
+    "options": [
+      "Hashing",
+      "Intrusion detection system",
+      "Cross-site scripting",
+      "Multi-factor authentication"
+    ],
+    "answer": "Multi-factor authentication"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Easy",
+    "question": "Which Cyber Security concept is described as: Hashing produces a fixed-length one-way digest from input data?",
+    "options": [
+      "Hashing",
+      "Encryption",
+      "Intrusion prevention system",
+      "Cross-site request forgery"
+    ],
+    "answer": "Hashing"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Easy",
+    "question": "Which description best explains Hashing?",
+    "options": [
+      "Hashing produces a fixed-length one-way digest from input data",
+      "Encryption transforms readable data into ciphertext using a key",
+      "An intrusion prevention system detects and actively blocks malicious traffic",
+      "Cross-site request forgery tricks an authenticated browser into sending an unwanted request"
+    ],
+    "answer": "Hashing produces a fixed-length one-way digest from input data"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Hashing?",
+    "options": [
+      "verifying file integrity or storing password verifiers",
+      "protecting information from unauthorized reading",
+      "stopping known network attacks in real time",
+      "protecting state-changing requests with anti-forgery tokens"
+    ],
+    "answer": "verifying file integrity or storing password verifiers"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for verifying file integrity or storing password verifiers?",
+    "options": [
+      "Encryption",
+      "Intrusion prevention system",
+      "Cross-site request forgery",
+      "Hashing"
+    ],
+    "answer": "Hashing"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Easy",
+    "question": "Which Cyber Security concept is described as: Encryption transforms readable data into ciphertext using a key?",
+    "options": [
+      "Encryption",
+      "Symmetric encryption",
+      "Phishing",
+      "Zero Trust"
+    ],
+    "answer": "Encryption"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Easy",
+    "question": "Which description best explains Encryption?",
+    "options": [
+      "Encryption transforms readable data into ciphertext using a key",
+      "Symmetric encryption uses the same secret key to encrypt and decrypt data",
+      "Phishing uses deceptive communication to trick people into revealing information or taking unsafe actions",
+      "Zero Trust continuously verifies access and assumes no network location is automatically trusted"
+    ],
+    "answer": "Encryption transforms readable data into ciphertext using a key"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Encryption?",
+    "options": [
+      "protecting information from unauthorized reading",
+      "efficiently protecting large amounts of data with a shared key",
+      "stealing credentials through a fake login message",
+      "requiring explicit verification for every protected resource request"
+    ],
+    "answer": "protecting information from unauthorized reading"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for protecting information from unauthorized reading?",
+    "options": [
+      "Symmetric encryption",
+      "Phishing",
+      "Zero Trust",
+      "Encryption"
+    ],
+    "answer": "Encryption"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Easy",
+    "question": "Which Cyber Security concept is described as: Symmetric encryption uses the same secret key to encrypt and decrypt data?",
+    "options": [
+      "Symmetric encryption",
+      "Asymmetric encryption",
+      "Malware",
+      "Least privilege"
+    ],
+    "answer": "Symmetric encryption"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Easy",
+    "question": "Which description best explains Symmetric encryption?",
+    "options": [
+      "Symmetric encryption uses the same secret key to encrypt and decrypt data",
+      "Asymmetric encryption uses a mathematically related public and private key pair",
+      "Malware is software intentionally designed to damage, disrupt, spy on, or gain unauthorized access",
+      "Least privilege grants only the minimum access necessary for a task"
+    ],
+    "answer": "Symmetric encryption uses the same secret key to encrypt and decrypt data"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Symmetric encryption?",
+    "options": [
+      "efficiently protecting large amounts of data with a shared key",
+      "securely exchanging secrets without first sharing one private key",
+      "describing malicious code such as trojans, spyware, and worms",
+      "limiting damage if an account or process is compromised"
+    ],
+    "answer": "efficiently protecting large amounts of data with a shared key"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for efficiently protecting large amounts of data with a shared key?",
+    "options": [
+      "Asymmetric encryption",
+      "Malware",
+      "Least privilege",
+      "Symmetric encryption"
+    ],
+    "answer": "Symmetric encryption"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Easy",
+    "question": "Which Cyber Security concept is described as: Asymmetric encryption uses a mathematically related public and private key pair?",
+    "options": [
+      "Asymmetric encryption",
+      "Digital signature",
+      "Ransomware",
+      "Vulnerability assessment"
+    ],
+    "answer": "Asymmetric encryption"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Easy",
+    "question": "Which description best explains Asymmetric encryption?",
+    "options": [
+      "Asymmetric encryption uses a mathematically related public and private key pair",
+      "A digital signature provides origin authentication and integrity using a private key",
+      "Ransomware denies access to data or systems and demands payment for restoration",
+      "A vulnerability assessment systematically identifies and prioritizes known weaknesses"
+    ],
+    "answer": "Asymmetric encryption uses a mathematically related public and private key pair"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Asymmetric encryption?",
+    "options": [
+      "securely exchanging secrets without first sharing one private key",
+      "proving that a message came from a signer and was not altered",
+      "responding to malicious encryption of organizational files",
+      "building a ranked list of systems that need security fixes"
+    ],
+    "answer": "securely exchanging secrets without first sharing one private key"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for securely exchanging secrets without first sharing one private key?",
+    "options": [
+      "Digital signature",
+      "Ransomware",
+      "Vulnerability assessment",
+      "Asymmetric encryption"
+    ],
+    "answer": "Asymmetric encryption"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Medium",
+    "question": "Which Cyber Security concept is described as: A digital signature provides origin authentication and integrity using a private key?",
+    "options": [
+      "Digital signature",
+      "Firewall",
+      "SQL injection",
+      "Penetration testing"
+    ],
+    "answer": "Digital signature"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Medium",
+    "question": "Which description best explains Digital signature?",
+    "options": [
+      "A digital signature provides origin authentication and integrity using a private key",
+      "A firewall permits or blocks network traffic according to configured rules",
+      "SQL injection manipulates database queries through untrusted input",
+      "Penetration testing safely simulates attacks to demonstrate exploitable weaknesses"
+    ],
+    "answer": "A digital signature provides origin authentication and integrity using a private key"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Digital signature?",
+    "options": [
+      "proving that a message came from a signer and was not altered",
+      "controlling connections between trusted and untrusted networks",
+      "preventing attackers from changing a query by using parameterized statements",
+      "validating the real-world impact of security vulnerabilities"
+    ],
+    "answer": "proving that a message came from a signer and was not altered"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Cryptography",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for proving that a message came from a signer and was not altered?",
+    "options": [
+      "Firewall",
+      "SQL injection",
+      "Penetration testing",
+      "Digital signature"
+    ],
+    "answer": "Digital signature"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Network Security",
+    "difficulty": "Medium",
+    "question": "Which Cyber Security concept is described as: A firewall permits or blocks network traffic according to configured rules?",
+    "options": [
+      "Firewall",
+      "Intrusion detection system",
+      "Cross-site scripting",
+      "SIEM"
+    ],
+    "answer": "Firewall"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Network Security",
+    "difficulty": "Medium",
+    "question": "Which description best explains Firewall?",
+    "options": [
+      "A firewall permits or blocks network traffic according to configured rules",
+      "An intrusion detection system monitors activity and raises alerts about suspicious behavior",
+      "Cross-site scripting injects untrusted script content into pages viewed by other users",
+      "Security information and event management centralizes and correlates security logs"
+    ],
+    "answer": "A firewall permits or blocks network traffic according to configured rules"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Network Security",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Firewall?",
+    "options": [
+      "controlling connections between trusted and untrusted networks",
+      "detecting possible attacks without automatically blocking every event",
+      "protecting browser users through output encoding and content security controls",
+      "detecting patterns across events from many systems"
+    ],
+    "answer": "controlling connections between trusted and untrusted networks"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Network Security",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for controlling connections between trusted and untrusted networks?",
+    "options": [
+      "Intrusion detection system",
+      "Cross-site scripting",
+      "SIEM",
+      "Firewall"
+    ],
+    "answer": "Firewall"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Network Security",
+    "difficulty": "Medium",
+    "question": "Which Cyber Security concept is described as: An intrusion detection system monitors activity and raises alerts about suspicious behavior?",
+    "options": [
+      "Intrusion detection system",
+      "Intrusion prevention system",
+      "Cross-site request forgery",
+      "Incident response"
+    ],
+    "answer": "Intrusion detection system"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Network Security",
+    "difficulty": "Medium",
+    "question": "Which description best explains Intrusion detection system?",
+    "options": [
+      "An intrusion detection system monitors activity and raises alerts about suspicious behavior",
+      "An intrusion prevention system detects and actively blocks malicious traffic",
+      "Cross-site request forgery tricks an authenticated browser into sending an unwanted request",
+      "Incident response prepares for, detects, contains, eradicates, and recovers from security events"
+    ],
+    "answer": "An intrusion detection system monitors activity and raises alerts about suspicious behavior"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Network Security",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Intrusion detection system?",
+    "options": [
+      "detecting possible attacks without automatically blocking every event",
+      "stopping known network attacks in real time",
+      "protecting state-changing requests with anti-forgery tokens",
+      "coordinating actions after a confirmed breach"
+    ],
+    "answer": "detecting possible attacks without automatically blocking every event"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Network Security",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for detecting possible attacks without automatically blocking every event?",
+    "options": [
+      "Intrusion prevention system",
+      "Cross-site request forgery",
+      "Incident response",
+      "Intrusion detection system"
+    ],
+    "answer": "Intrusion detection system"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Network Security",
+    "difficulty": "Medium",
+    "question": "Which Cyber Security concept is described as: An intrusion prevention system detects and actively blocks malicious traffic?",
+    "options": [
+      "Intrusion prevention system",
+      "Phishing",
+      "Zero Trust",
+      "Network segmentation"
+    ],
+    "answer": "Intrusion prevention system"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Network Security",
+    "difficulty": "Medium",
+    "question": "Which description best explains Intrusion prevention system?",
+    "options": [
+      "An intrusion prevention system detects and actively blocks malicious traffic",
+      "Phishing uses deceptive communication to trick people into revealing information or taking unsafe actions",
+      "Zero Trust continuously verifies access and assumes no network location is automatically trusted",
+      "Network segmentation divides a network into controlled zones"
+    ],
+    "answer": "An intrusion prevention system detects and actively blocks malicious traffic"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Network Security",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Intrusion prevention system?",
+    "options": [
+      "stopping known network attacks in real time",
+      "stealing credentials through a fake login message",
+      "requiring explicit verification for every protected resource request",
+      "limiting lateral movement after one device is compromised"
+    ],
+    "answer": "stopping known network attacks in real time"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Network Security",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for stopping known network attacks in real time?",
+    "options": [
+      "Phishing",
+      "Zero Trust",
+      "Network segmentation",
+      "Intrusion prevention system"
+    ],
+    "answer": "Intrusion prevention system"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Threats",
+    "difficulty": "Medium",
+    "question": "Which Cyber Security concept is described as: Phishing uses deceptive communication to trick people into revealing information or taking unsafe actions?",
+    "options": [
+      "Phishing",
+      "Malware",
+      "Least privilege",
+      "CIA Triad"
+    ],
+    "answer": "Phishing"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Threats",
+    "difficulty": "Medium",
+    "question": "Which description best explains Phishing?",
+    "options": [
+      "Phishing uses deceptive communication to trick people into revealing information or taking unsafe actions",
+      "Malware is software intentionally designed to damage, disrupt, spy on, or gain unauthorized access",
+      "Least privilege grants only the minimum access necessary for a task",
+      "Confidentiality, integrity, and availability form the three core information-security goals"
+    ],
+    "answer": "Phishing uses deceptive communication to trick people into revealing information or taking unsafe actions"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Threats",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Phishing?",
+    "options": [
+      "stealing credentials through a fake login message",
+      "describing malicious code such as trojans, spyware, and worms",
+      "limiting damage if an account or process is compromised",
+      "evaluating whether a security design protects secrecy, correctness, and access"
+    ],
+    "answer": "stealing credentials through a fake login message"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Threats",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for stealing credentials through a fake login message?",
+    "options": [
+      "Malware",
+      "Least privilege",
+      "CIA Triad",
+      "Phishing"
+    ],
+    "answer": "Phishing"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Threats",
+    "difficulty": "Medium",
+    "question": "Which Cyber Security concept is described as: Malware is software intentionally designed to damage, disrupt, spy on, or gain unauthorized access?",
+    "options": [
+      "Malware",
+      "Ransomware",
+      "Vulnerability assessment",
+      "Authentication"
+    ],
+    "answer": "Malware"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Threats",
+    "difficulty": "Medium",
+    "question": "Which description best explains Malware?",
+    "options": [
+      "Malware is software intentionally designed to damage, disrupt, spy on, or gain unauthorized access",
+      "Ransomware denies access to data or systems and demands payment for restoration",
+      "A vulnerability assessment systematically identifies and prioritizes known weaknesses",
+      "Authentication verifies that a user or system is who it claims to be"
+    ],
+    "answer": "Malware is software intentionally designed to damage, disrupt, spy on, or gain unauthorized access"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Threats",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Malware?",
+    "options": [
+      "describing malicious code such as trojans, spyware, and worms",
+      "responding to malicious encryption of organizational files",
+      "building a ranked list of systems that need security fixes",
+      "confirming an identity before allowing a sign-in"
+    ],
+    "answer": "describing malicious code such as trojans, spyware, and worms"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Threats",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for describing malicious code such as trojans, spyware, and worms?",
+    "options": [
+      "Ransomware",
+      "Vulnerability assessment",
+      "Authentication",
+      "Malware"
+    ],
+    "answer": "Malware"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Threats",
+    "difficulty": "Medium",
+    "question": "Which Cyber Security concept is described as: Ransomware denies access to data or systems and demands payment for restoration?",
+    "options": [
+      "Ransomware",
+      "SQL injection",
+      "Penetration testing",
+      "Authorization"
+    ],
+    "answer": "Ransomware"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Threats",
+    "difficulty": "Medium",
+    "question": "Which description best explains Ransomware?",
+    "options": [
+      "Ransomware denies access to data or systems and demands payment for restoration",
+      "SQL injection manipulates database queries through untrusted input",
+      "Penetration testing safely simulates attacks to demonstrate exploitable weaknesses",
+      "Authorization determines which resources an authenticated identity may access"
+    ],
+    "answer": "Ransomware denies access to data or systems and demands payment for restoration"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Threats",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Ransomware?",
+    "options": [
+      "responding to malicious encryption of organizational files",
+      "preventing attackers from changing a query by using parameterized statements",
+      "validating the real-world impact of security vulnerabilities",
+      "enforcing permissions after a user signs in"
+    ],
+    "answer": "responding to malicious encryption of organizational files"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Threats",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for responding to malicious encryption of organizational files?",
+    "options": [
+      "SQL injection",
+      "Penetration testing",
+      "Authorization",
+      "Ransomware"
+    ],
+    "answer": "Ransomware"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Application Security",
+    "difficulty": "Medium",
+    "question": "Which Cyber Security concept is described as: SQL injection manipulates database queries through untrusted input?",
+    "options": [
+      "SQL injection",
+      "Cross-site scripting",
+      "SIEM",
+      "Multi-factor authentication"
+    ],
+    "answer": "SQL injection"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Application Security",
+    "difficulty": "Medium",
+    "question": "Which description best explains SQL injection?",
+    "options": [
+      "SQL injection manipulates database queries through untrusted input",
+      "Cross-site scripting injects untrusted script content into pages viewed by other users",
+      "Security information and event management centralizes and correlates security logs",
+      "Multi-factor authentication requires evidence from more than one factor category"
+    ],
+    "answer": "SQL injection manipulates database queries through untrusted input"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Application Security",
+    "difficulty": "Medium",
+    "question": "What is a primary application of SQL injection?",
+    "options": [
+      "preventing attackers from changing a query by using parameterized statements",
+      "protecting browser users through output encoding and content security controls",
+      "detecting patterns across events from many systems",
+      "reducing account takeover risk when a password is stolen"
+    ],
+    "answer": "preventing attackers from changing a query by using parameterized statements"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Application Security",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for preventing attackers from changing a query by using parameterized statements?",
+    "options": [
+      "Cross-site scripting",
+      "SIEM",
+      "Multi-factor authentication",
+      "SQL injection"
+    ],
+    "answer": "SQL injection"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Application Security",
+    "difficulty": "Medium",
+    "question": "Which Cyber Security concept is described as: Cross-site scripting injects untrusted script content into pages viewed by other users?",
+    "options": [
+      "Cross-site scripting",
+      "Cross-site request forgery",
+      "Incident response",
+      "Hashing"
+    ],
+    "answer": "Cross-site scripting"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Application Security",
+    "difficulty": "Medium",
+    "question": "Which description best explains Cross-site scripting?",
+    "options": [
+      "Cross-site scripting injects untrusted script content into pages viewed by other users",
+      "Cross-site request forgery tricks an authenticated browser into sending an unwanted request",
+      "Incident response prepares for, detects, contains, eradicates, and recovers from security events",
+      "Hashing produces a fixed-length one-way digest from input data"
+    ],
+    "answer": "Cross-site scripting injects untrusted script content into pages viewed by other users"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Application Security",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Cross-site scripting?",
+    "options": [
+      "protecting browser users through output encoding and content security controls",
+      "protecting state-changing requests with anti-forgery tokens",
+      "coordinating actions after a confirmed breach",
+      "verifying file integrity or storing password verifiers"
+    ],
+    "answer": "protecting browser users through output encoding and content security controls"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Application Security",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for protecting browser users through output encoding and content security controls?",
+    "options": [
+      "Cross-site request forgery",
+      "Incident response",
+      "Hashing",
+      "Cross-site scripting"
+    ],
+    "answer": "Cross-site scripting"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Application Security",
+    "difficulty": "Medium",
+    "question": "Which Cyber Security concept is described as: Cross-site request forgery tricks an authenticated browser into sending an unwanted request?",
+    "options": [
+      "Cross-site request forgery",
+      "Zero Trust",
+      "Network segmentation",
+      "Encryption"
+    ],
+    "answer": "Cross-site request forgery"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Application Security",
+    "difficulty": "Medium",
+    "question": "Which description best explains Cross-site request forgery?",
+    "options": [
+      "Cross-site request forgery tricks an authenticated browser into sending an unwanted request",
+      "Zero Trust continuously verifies access and assumes no network location is automatically trusted",
+      "Network segmentation divides a network into controlled zones",
+      "Encryption transforms readable data into ciphertext using a key"
+    ],
+    "answer": "Cross-site request forgery tricks an authenticated browser into sending an unwanted request"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Application Security",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Cross-site request forgery?",
+    "options": [
+      "protecting state-changing requests with anti-forgery tokens",
+      "requiring explicit verification for every protected resource request",
+      "limiting lateral movement after one device is compromised",
+      "protecting information from unauthorized reading"
+    ],
+    "answer": "protecting state-changing requests with anti-forgery tokens"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Application Security",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for protecting state-changing requests with anti-forgery tokens?",
+    "options": [
+      "Zero Trust",
+      "Network segmentation",
+      "Encryption",
+      "Cross-site request forgery"
+    ],
+    "answer": "Cross-site request forgery"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Architecture",
+    "difficulty": "Hard",
+    "question": "Which Cyber Security concept is described as: Zero Trust continuously verifies access and assumes no network location is automatically trusted?",
+    "options": [
+      "Zero Trust",
+      "Least privilege",
+      "CIA Triad",
+      "Symmetric encryption"
+    ],
+    "answer": "Zero Trust"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Architecture",
+    "difficulty": "Hard",
+    "question": "Which description best explains Zero Trust?",
+    "options": [
+      "Zero Trust continuously verifies access and assumes no network location is automatically trusted",
+      "Least privilege grants only the minimum access necessary for a task",
+      "Confidentiality, integrity, and availability form the three core information-security goals",
+      "Symmetric encryption uses the same secret key to encrypt and decrypt data"
+    ],
+    "answer": "Zero Trust continuously verifies access and assumes no network location is automatically trusted"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Architecture",
+    "difficulty": "Hard",
+    "question": "What is a primary application of Zero Trust?",
+    "options": [
+      "requiring explicit verification for every protected resource request",
+      "limiting damage if an account or process is compromised",
+      "evaluating whether a security design protects secrecy, correctness, and access",
+      "efficiently protecting large amounts of data with a shared key"
+    ],
+    "answer": "requiring explicit verification for every protected resource request"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Architecture",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for requiring explicit verification for every protected resource request?",
+    "options": [
+      "Least privilege",
+      "CIA Triad",
+      "Symmetric encryption",
+      "Zero Trust"
+    ],
+    "answer": "Zero Trust"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Architecture",
+    "difficulty": "Hard",
+    "question": "Which Cyber Security concept is described as: Least privilege grants only the minimum access necessary for a task?",
+    "options": [
+      "Least privilege",
+      "Vulnerability assessment",
+      "Authentication",
+      "Asymmetric encryption"
+    ],
+    "answer": "Least privilege"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Architecture",
+    "difficulty": "Hard",
+    "question": "Which description best explains Least privilege?",
+    "options": [
+      "Least privilege grants only the minimum access necessary for a task",
+      "A vulnerability assessment systematically identifies and prioritizes known weaknesses",
+      "Authentication verifies that a user or system is who it claims to be",
+      "Asymmetric encryption uses a mathematically related public and private key pair"
+    ],
+    "answer": "Least privilege grants only the minimum access necessary for a task"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Architecture",
+    "difficulty": "Hard",
+    "question": "What is a primary application of Least privilege?",
+    "options": [
+      "limiting damage if an account or process is compromised",
+      "building a ranked list of systems that need security fixes",
+      "confirming an identity before allowing a sign-in",
+      "securely exchanging secrets without first sharing one private key"
+    ],
+    "answer": "limiting damage if an account or process is compromised"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Architecture",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for limiting damage if an account or process is compromised?",
+    "options": [
+      "Vulnerability assessment",
+      "Authentication",
+      "Asymmetric encryption",
+      "Least privilege"
+    ],
+    "answer": "Least privilege"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Testing",
+    "difficulty": "Hard",
+    "question": "Which Cyber Security concept is described as: A vulnerability assessment systematically identifies and prioritizes known weaknesses?",
+    "options": [
+      "Vulnerability assessment",
+      "Penetration testing",
+      "Authorization",
+      "Digital signature"
+    ],
+    "answer": "Vulnerability assessment"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Testing",
+    "difficulty": "Hard",
+    "question": "Which description best explains Vulnerability assessment?",
+    "options": [
+      "A vulnerability assessment systematically identifies and prioritizes known weaknesses",
+      "Penetration testing safely simulates attacks to demonstrate exploitable weaknesses",
+      "Authorization determines which resources an authenticated identity may access",
+      "A digital signature provides origin authentication and integrity using a private key"
+    ],
+    "answer": "A vulnerability assessment systematically identifies and prioritizes known weaknesses"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Testing",
+    "difficulty": "Hard",
+    "question": "What is a primary application of Vulnerability assessment?",
+    "options": [
+      "building a ranked list of systems that need security fixes",
+      "validating the real-world impact of security vulnerabilities",
+      "enforcing permissions after a user signs in",
+      "proving that a message came from a signer and was not altered"
+    ],
+    "answer": "building a ranked list of systems that need security fixes"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Testing",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for building a ranked list of systems that need security fixes?",
+    "options": [
+      "Penetration testing",
+      "Authorization",
+      "Digital signature",
+      "Vulnerability assessment"
+    ],
+    "answer": "Vulnerability assessment"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Testing",
+    "difficulty": "Hard",
+    "question": "Which Cyber Security concept is described as: Penetration testing safely simulates attacks to demonstrate exploitable weaknesses?",
+    "options": [
+      "Penetration testing",
+      "SIEM",
+      "Multi-factor authentication",
+      "Firewall"
+    ],
+    "answer": "Penetration testing"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Testing",
+    "difficulty": "Hard",
+    "question": "Which description best explains Penetration testing?",
+    "options": [
+      "Penetration testing safely simulates attacks to demonstrate exploitable weaknesses",
+      "Security information and event management centralizes and correlates security logs",
+      "Multi-factor authentication requires evidence from more than one factor category",
+      "A firewall permits or blocks network traffic according to configured rules"
+    ],
+    "answer": "Penetration testing safely simulates attacks to demonstrate exploitable weaknesses"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Testing",
+    "difficulty": "Hard",
+    "question": "What is a primary application of Penetration testing?",
+    "options": [
+      "validating the real-world impact of security vulnerabilities",
+      "detecting patterns across events from many systems",
+      "reducing account takeover risk when a password is stolen",
+      "controlling connections between trusted and untrusted networks"
+    ],
+    "answer": "validating the real-world impact of security vulnerabilities"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Security Testing",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for validating the real-world impact of security vulnerabilities?",
+    "options": [
+      "SIEM",
+      "Multi-factor authentication",
+      "Firewall",
+      "Penetration testing"
+    ],
+    "answer": "Penetration testing"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Monitoring",
+    "difficulty": "Hard",
+    "question": "Which Cyber Security concept is described as: Security information and event management centralizes and correlates security logs?",
+    "options": [
+      "SIEM",
+      "Incident response",
+      "Hashing",
+      "Intrusion detection system"
+    ],
+    "answer": "SIEM"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Monitoring",
+    "difficulty": "Hard",
+    "question": "Which description best explains SIEM?",
+    "options": [
+      "Security information and event management centralizes and correlates security logs",
+      "Incident response prepares for, detects, contains, eradicates, and recovers from security events",
+      "Hashing produces a fixed-length one-way digest from input data",
+      "An intrusion detection system monitors activity and raises alerts about suspicious behavior"
+    ],
+    "answer": "Security information and event management centralizes and correlates security logs"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Monitoring",
+    "difficulty": "Hard",
+    "question": "What is a primary application of SIEM?",
+    "options": [
+      "detecting patterns across events from many systems",
+      "coordinating actions after a confirmed breach",
+      "verifying file integrity or storing password verifiers",
+      "detecting possible attacks without automatically blocking every event"
+    ],
+    "answer": "detecting patterns across events from many systems"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Monitoring",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for detecting patterns across events from many systems?",
+    "options": [
+      "Incident response",
+      "Hashing",
+      "Intrusion detection system",
+      "SIEM"
+    ],
+    "answer": "SIEM"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Operations",
+    "difficulty": "Hard",
+    "question": "Which Cyber Security concept is described as: Incident response prepares for, detects, contains, eradicates, and recovers from security events?",
+    "options": [
+      "Incident response",
+      "Network segmentation",
+      "Encryption",
+      "Intrusion prevention system"
+    ],
+    "answer": "Incident response"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Operations",
+    "difficulty": "Hard",
+    "question": "Which description best explains Incident response?",
+    "options": [
+      "Incident response prepares for, detects, contains, eradicates, and recovers from security events",
+      "Network segmentation divides a network into controlled zones",
+      "Encryption transforms readable data into ciphertext using a key",
+      "An intrusion prevention system detects and actively blocks malicious traffic"
+    ],
+    "answer": "Incident response prepares for, detects, contains, eradicates, and recovers from security events"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Operations",
+    "difficulty": "Hard",
+    "question": "What is a primary application of Incident response?",
+    "options": [
+      "coordinating actions after a confirmed breach",
+      "limiting lateral movement after one device is compromised",
+      "protecting information from unauthorized reading",
+      "stopping known network attacks in real time"
+    ],
+    "answer": "coordinating actions after a confirmed breach"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Operations",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for coordinating actions after a confirmed breach?",
+    "options": [
+      "Network segmentation",
+      "Encryption",
+      "Intrusion prevention system",
+      "Incident response"
+    ],
+    "answer": "Incident response"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Network Security",
+    "difficulty": "Hard",
+    "question": "Which Cyber Security concept is described as: Network segmentation divides a network into controlled zones?",
+    "options": [
+      "Network segmentation",
+      "CIA Triad",
+      "Symmetric encryption",
+      "Phishing"
+    ],
+    "answer": "Network segmentation"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Network Security",
+    "difficulty": "Hard",
+    "question": "Which description best explains Network segmentation?",
+    "options": [
+      "Network segmentation divides a network into controlled zones",
+      "Confidentiality, integrity, and availability form the three core information-security goals",
+      "Symmetric encryption uses the same secret key to encrypt and decrypt data",
+      "Phishing uses deceptive communication to trick people into revealing information or taking unsafe actions"
+    ],
+    "answer": "Network segmentation divides a network into controlled zones"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Network Security",
+    "difficulty": "Hard",
+    "question": "What is a primary application of Network segmentation?",
+    "options": [
+      "limiting lateral movement after one device is compromised",
+      "evaluating whether a security design protects secrecy, correctness, and access",
+      "efficiently protecting large amounts of data with a shared key",
+      "stealing credentials through a fake login message"
+    ],
+    "answer": "limiting lateral movement after one device is compromised"
+  },
+  {
+    "subject": "Cyber Security",
+    "topic": "Network Security",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for limiting lateral movement after one device is compromised?",
+    "options": [
+      "CIA Triad",
+      "Symmetric encryption",
+      "Phishing",
+      "Network segmentation"
+    ],
+    "answer": "Network segmentation"
+  }
+]
