@@ -26,6 +26,10 @@ from models.quiz_attempt_model import (
     create_quiz_attempt_indexes,
 )
 
+from models.certificate_model import (
+    create_certificate_indexes,
+)
+
 from models.result_model import (
     create_result_indexes,
 )
@@ -129,6 +133,10 @@ def initialize_database():
         (
             "quiz attempt indexes",
             create_quiz_attempt_indexes,
+        ),
+        (
+            "certificate indexes",
+            create_certificate_indexes,
         ),
         (
             "result indexes",
