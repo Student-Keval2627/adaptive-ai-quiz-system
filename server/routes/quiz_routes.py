@@ -5,6 +5,11 @@ from flask import (
     session,
 )
 
+from models.certificate_model import (
+    get_user_certificates,
+    issue_subject_certificate,
+)
+
 from models.quiz_attempt_model import (
     add_question_to_attempt,
     create_quiz_attempt,
@@ -199,6 +204,44 @@ def get_subjects():
                 ),
             "subjects":
                 subjects,
+        }
+    )
+
+
+# =========================================================
+# USER CERTIFICATES
+# =========================================================
+
+@quiz_bp.get("/certificates")
+def certificates():
+    user_id = (
+        get_logged_in_user_id()
+    )
+
+    if not user_id:
+        return jsonify(
+            {
+                "success": False,
+                "message":
+                    "Login required",
+            }
+        ), 401
+
+    user_certificates = (
+        get_user_certificates(
+            user_id
+        )
+    )
+
+    return jsonify(
+        {
+            "success": True,
+            "count":
+                len(
+                    user_certificates
+                ),
+            "certificates":
+                user_certificates,
         }
     )
 
@@ -1049,6 +1092,7 @@ def check_answer():
     )
 
     milestone = None
+    certificate = None
 
     if (
         history_result.get(
@@ -1088,6 +1132,62 @@ def check_answer():
                 ),
         }
 
+    if (
+        history_result.get(
+            "newlyMastered"
+        )
+        and mastery_progress.get(
+            "subjectCompleted"
+        )
+        and mastery_progress.get(
+            "totalCompleted"
+        ) == mastery_progress.get(
+            "totalTarget"
+        )
+    ):
+        certificate = (
+            issue_subject_certificate(
+                user_id=user_id,
+                subject=subject_name,
+                completed_questions=
+                    mastery_progress.get(
+                        "totalCompleted",
+                        0,
+                    ),
+            )
+        )
+
+        if certificate:
+            milestone = {
+                "type":
+                    "SUBJECT_CERTIFICATE_EARNED",
+                "subject":
+                    subject_name,
+                "level":
+                    "Mastery",
+                "completed":
+                    mastery_progress.get(
+                        "totalCompleted",
+                        1000,
+                    ),
+                "target":
+                    mastery_progress.get(
+                        "totalTarget",
+                        1000,
+                    ),
+                "certificateId":
+                    certificate.get(
+                        "certificateId"
+                    ),
+                "message":
+                    (
+                        "Congratulations! You have "
+                        f"completed all 1000 "
+                        f"{subject_name} questions "
+                        "and earned your certificate."
+                    ),
+            }
+
     return jsonify(
         {
             "success": True,
@@ -1096,5 +1196,7 @@ def check_answer():
                 mastery_progress,
             "milestone":
                 milestone,
+            "certificate":
+                certificate,
         }
     )
