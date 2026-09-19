@@ -12,17 +12,17 @@
   background:
     radial-gradient(
       circle at 10% 10%,
-      rgba(130, 71, 232, 0.07),
+      rgba(239, 199, 16, 0.07),
       transparent 27%
     ),
     radial-gradient(
       circle at 90% 75%,
-      rgba(144, 91, 235, 0.05),
+      rgba(239, 199, 16, 0.05),
       transparent 26%
     ),
-    #090909;
+    #080b24;
 
-  color: #bb9bf3;
+  color: #f7f8fa;
 }
 
 /* =========================================================
@@ -48,7 +48,7 @@
   left: 8%;
   top: -230px;
 
-  background: #864de9;
+  background: #efc710;
 
   animation:
     weakGlowOne 9s ease-in-out infinite alternate;
@@ -61,7 +61,7 @@
   right: -250px;
   bottom: -100px;
 
-  background: #905beb;
+  background: #efc710;
 
   animation:
     weakGlowTwo 11s ease-in-out infinite alternate;
@@ -84,10 +84,10 @@
   justify-content: space-between;
 
   background:
-    rgba(10, 10, 9, 0.74);
+    rgba(12, 17, 54, 0.74);
 
   border-bottom:
-    1px solid rgba(187, 155, 243, 0.055);
+    1px solid rgba(107, 123, 140, 0.055);
 
   backdrop-filter: blur(22px);
 
@@ -107,7 +107,7 @@
 
   border-radius: 10px;
 
-  color: #7c818f;
+  color: #6b7b8c;
 
   background:
     rgba(255, 255, 255, 0.02);
@@ -124,13 +124,13 @@
 .weak-back-button:hover {
   transform: translateX(-3px);
 
-  color: #bb9bf3;
+  color: #f7f8fa;
 
   background:
-    rgba(141, 88, 234, 0.045);
+    rgba(239, 199, 16, 0.045);
 
   border-color:
-    rgba(140, 86, 234, 0.18);
+    rgba(239, 199, 16, 0.18);
 }
 
 /* =========================================================
@@ -158,14 +158,14 @@
   background:
     linear-gradient(
       145deg,
-      #9563ec,
-      #864ce9,
-      #6921e4
+      #efc710,
+      #efc710,
+      #efc710
     );
 
   box-shadow:
     0 8px 25px
-    rgba(127, 66, 232, 0.22);
+    rgba(239, 199, 16, 0.22);
 }
 
 .weak-brand strong {
@@ -183,7 +183,7 @@
 
   margin-top: 2px;
 
-  color: #575b67;
+  color: #6b7b8c;
 
   font-size: 8px;
 
@@ -208,19 +208,19 @@
 
   border-radius: 10px;
 
-  color: #bb9bf3;
+  color: #f7f8fa;
 
   background:
     linear-gradient(
       135deg,
-      #9563ec,
-      #864ce9 58%,
-      #6e29e5
+      #efc710,
+      #efc710 58%,
+      #efc710
     );
 
   box-shadow:
     0 10px 25px
-    rgba(126, 65, 232, 0.18);
+    rgba(239, 199, 16, 0.18);
 
   font-size: 9px;
   font-weight: 700;
@@ -235,7 +235,7 @@
 
   box-shadow:
     0 15px 34px
-    rgba(126, 65, 232, 0.28);
+    rgba(239, 199, 16, 0.28);
 }
 
 /* =========================================================
@@ -287,13 +287,13 @@
 
   border-radius: 7px;
 
-  color: #a276ee;
+  color: #efc710;
 
   background:
-    rgba(141, 88, 234, 0.055);
+    rgba(239, 199, 16, 0.055);
 
   border:
-    1px solid rgba(140, 86, 234, 0.12);
+    1px solid rgba(239, 199, 16, 0.12);
 
   font-size: 9px;
   font-weight: 700;
@@ -313,16 +313,16 @@
 
   letter-spacing: -3px;
 
-  color: #bb9bf3;
+  color: #f7f8fa;
 }
 
 .weak-hero h1 span {
   background:
     linear-gradient(
       90deg,
-      #915deb,
-      #9361eb,
-      #7be2f2
+      #efc710,
+      #efc710,
+      #6b7b8c
     );
 
   -webkit-background-clip: text;
@@ -336,7 +336,7 @@
 
   margin-top: 18px;
 
-  color: #737887;
+  color: #6b7b8c;
 
   font-size: 13px;
 
@@ -360,10 +360,10 @@
   border-radius: 17px;
 
   background:
-    rgba(20, 19, 17, 0.87);
+    rgba(12, 17, 54, 0.87);
 
   border:
-    1px solid rgba(187, 155, 243, 0.065);
+    1px solid rgba(107, 123, 140, 0.065);
 }
 
 .weak-hero-card-icon {
@@ -388,7 +388,7 @@
 }
 
 .weak-hero-card span {
-  color: #545c74;
+  color: #6b7b8c;
 
   font-size: 7px;
   font-weight: 700;
@@ -401,7 +401,7 @@
 
   margin-top: 4px;
 
-  color: #e9e1d8;
+  color: #f7f8fa;
 
   font-size: 11px;
 }
@@ -409,13 +409,13 @@
 .weak-hero-card p {
   margin-top: 3px;
 
-  color: #5a5e6a;
+  color: #6b7b8c;
 
   font-size: 8px;
 }
 
 .weak-hero-score {
-  color: #9b6ced;
+  color: #efc710;
 
   font-family:
     "Manrope",
@@ -448,12 +448,12 @@
   background:
     linear-gradient(
       145deg,
-      rgba(21, 20, 18, 0.94),
-      rgba(12, 12, 11, 0.91)
+      rgba(12, 17, 54, 0.94),
+      rgba(12, 17, 54, 0.91)
     );
 
   border:
-    1px solid rgba(187, 155, 243, 0.065);
+    1px solid rgba(107, 123, 140, 0.065);
 
   transition:
     transform 0.3s ease,
@@ -479,7 +479,7 @@
   transform: translateY(-5px);
 
   border-color:
-    rgba(141, 87, 234, 0.16);
+    rgba(239, 199, 16, 0.16);
 }
 
 .weak-summary-icon {
@@ -493,10 +493,10 @@
 
   border-radius: 10px;
 
-  color: #9b6ced;
+  color: #efc710;
 
   background:
-    rgba(141, 88, 234, 0.07);
+    rgba(239, 199, 16, 0.07);
 }
 
 .weak-summary-card > strong {
@@ -506,7 +506,7 @@
     "Manrope",
     sans-serif;
 
-  color: #bb9bf3;
+  color: #f7f8fa;
 
   font-size: 23px;
 }
@@ -516,7 +516,7 @@
 
   margin-top: 2px;
 
-  color: #9da2af;
+  color: #6b7b8c;
 
   font-size: 10px;
 }
@@ -524,7 +524,7 @@
 .weak-summary-card p {
   margin-top: 5px;
 
-  color: #555863;
+  color: #6b7b8c;
 
   font-size: 8px;
 }
@@ -553,12 +553,12 @@
   background:
     linear-gradient(
       145deg,
-      rgba(20, 19, 17, 0.94),
-      rgba(11, 11, 10, 0.92)
+      rgba(12, 17, 54, 0.94),
+      rgba(12, 17, 54, 0.92)
     );
 
   border:
-    1px solid rgba(187, 155, 243, 0.065);
+    1px solid rgba(107, 123, 140, 0.065);
 
   animation:
     weakCardEnter 0.7s ease both;
@@ -571,7 +571,7 @@
 }
 
 .weak-panel-header span {
-  color: #575b66;
+  color: #6b7b8c;
 
   font-size: 7px;
   font-weight: 700;
@@ -582,7 +582,7 @@
 .weak-panel-header h2 {
   margin-top: 4px;
 
-  color: #bb9bf3;
+  color: #f7f8fa;
 
   font-family:
     "Manrope",
@@ -592,7 +592,7 @@
 }
 
 .weak-panel-header > svg {
-  color: #9969ec;
+  color: #efc710;
 }
 
 /* =========================================================
@@ -629,10 +629,10 @@
   transform: translateX(4px);
 
   border-color:
-    rgba(141, 87, 234, 0.15);
+    rgba(239, 199, 16, 0.15);
 
   background:
-    rgba(141, 88, 234, 0.02);
+    rgba(239, 199, 16, 0.02);
 }
 
 .weak-topic-top {
@@ -661,14 +661,14 @@
 
   border-radius: 10px;
 
-  color: #9b6bed;
+  color: #efc710;
 
   background:
-    rgba(141, 88, 234, 0.06);
+    rgba(239, 199, 16, 0.06);
 }
 
 .weak-topic-main span {
-  color: #575b66;
+  color: #6b7b8c;
 
   font-size: 7px;
 }
@@ -676,7 +676,7 @@
 .weak-topic-main h3 {
   margin-top: 3px;
 
-  color: #e9e1d8;
+  color: #f7f8fa;
 
   font-size: 11px;
 }
@@ -698,10 +698,10 @@
 }
 
 .weak-priority-medium {
-  color: #9a69ed;
+  color: #efc710;
 
   background:
-    rgba(154, 105, 237, 0.06);
+    rgba(239, 199, 16, 0.06);
 }
 
 .weak-priority-low {
@@ -714,7 +714,7 @@
 .weak-topic-description {
   margin-top: 13px;
 
-  color: #606470;
+  color: #6b7b8c;
 
   font-size: 8px;
 
@@ -732,7 +732,7 @@
 .weak-topic-performance span {
   display: block;
 
-  color: #4d505a;
+  color: #6b7b8c;
 
   font-size: 7px;
 }
@@ -742,7 +742,7 @@
 
   margin-top: 3px;
 
-  color: #b6bbc8;
+  color: #6b7b8c;
 
   font-size: 10px;
 }
@@ -768,9 +768,9 @@
   background:
     linear-gradient(
       90deg,
-      #8a52ea,
-      #925feb,
-      #74e1f1
+      #efc710,
+      #efc710,
+      #6b7b8c
     );
 
   animation:
@@ -787,7 +787,7 @@
 
   gap: 6px;
 
-  color: #6a7493;
+  color: #6b7b8c;
 
   background: transparent;
 
@@ -802,7 +802,7 @@
 .weak-practice-button:hover {
   transform: translateX(3px);
 
-  color: #9a6aed;
+  color: #efc710;
 }
 
 /* =========================================================
@@ -819,10 +819,10 @@
 
   border-radius: 6px;
 
-  color: #9f71ee;
+  color: #efc710;
 
   background:
-    rgba(141, 88, 234, 0.055);
+    rgba(239, 199, 16, 0.055);
 
   font-size: 8px;
 }
@@ -845,7 +845,7 @@
   border-radius: 50%;
 
   border:
-    1px solid rgba(141, 88, 234, 0.14);
+    1px solid rgba(239, 199, 16, 0.14);
 }
 
 .weak-ring-one {
@@ -853,7 +853,7 @@
   height: 125px;
 
   border-top-color:
-    rgba(141, 88, 234, 0.55);
+    rgba(239, 199, 16, 0.55);
 
   animation:
     weakSpin 14s linear infinite;
@@ -881,13 +881,13 @@
 
   border-radius: 18px;
 
-  color: #9f71ee;
+  color: #efc710;
 
   background:
-    rgba(141, 88, 234, 0.075);
+    rgba(239, 199, 16, 0.075);
 
   border:
-    1px solid rgba(140, 86, 234, 0.13);
+    1px solid rgba(239, 199, 16, 0.13);
 
   animation:
     weakAiPulse 3s ease-in-out infinite;
@@ -903,20 +903,20 @@
   border-radius: 10px;
 
   background:
-    rgba(141, 88, 234, 0.03);
+    rgba(239, 199, 16, 0.03);
 
   border:
-    1px solid rgba(141, 88, 234, 0.065);
+    1px solid rgba(239, 199, 16, 0.065);
 }
 
 .weak-ai-message > svg {
   flex-shrink: 0;
 
-  color: #9b6bed;
+  color: #efc710;
 }
 
 .weak-ai-message strong {
-  color: #aeb3c1;
+  color: #6b7b8c;
 
   font-size: 9px;
 }
@@ -924,7 +924,7 @@
 .weak-ai-message p {
   margin-top: 4px;
 
-  color: #606470;
+  color: #6b7b8c;
 
   font-size: 8px;
 
@@ -972,10 +972,10 @@
 
   border-radius: 8px;
 
-  color: #9b6bed;
+  color: #efc710;
 
   background:
-    rgba(141, 88, 234, 0.055);
+    rgba(239, 199, 16, 0.055);
 
   font-size: 7px;
   font-weight: 700;
@@ -984,7 +984,7 @@
 .weak-plan-item strong {
   display: block;
 
-  color: #abafbd;
+  color: #6b7b8c;
 
   font-size: 8px;
 }
@@ -994,7 +994,7 @@
 
   margin-top: 3px;
 
-  color: #51545f;
+  color: #6b7b8c;
 
   font-size: 7px;
 }
@@ -1017,19 +1017,19 @@
 
   border-radius: 9px;
 
-  color: #bb9bf3;
+  color: #f7f8fa;
 
   background:
     linear-gradient(
       135deg,
-      #9563ec,
-      #864ce9 58%,
-      #6e29e5
+      #efc710,
+      #efc710 58%,
+      #efc710
     );
 
   box-shadow:
     0 12px 27px
-    rgba(126, 65, 232, 0.17);
+    rgba(239, 199, 16, 0.17);
 
   font-size: 9px;
   font-weight: 700;
@@ -1044,7 +1044,7 @@
 
   box-shadow:
     0 17px 36px
-    rgba(126, 65, 232, 0.27);
+    rgba(239, 199, 16, 0.27);
 }
 
 /* =========================================================
@@ -1122,7 +1122,7 @@
 
     box-shadow:
       0 0 25px
-      rgba(130, 71, 232, 0.1);
+      rgba(239, 199, 16, 0.1);
   }
 }
 

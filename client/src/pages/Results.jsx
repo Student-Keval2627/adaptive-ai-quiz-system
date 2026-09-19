@@ -565,7 +565,7 @@ function Results() {
             "100vh",
 
           background:
-            "#090909",
+            "#080b24",
 
           display:
             "grid",
@@ -574,7 +574,7 @@ function Results() {
             "center",
 
           color:
-            "#ff8d58",
+            "#efc710",
         }}
       >
         Loading result analysis...

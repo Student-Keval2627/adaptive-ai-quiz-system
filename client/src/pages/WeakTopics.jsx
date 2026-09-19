@@ -337,7 +337,7 @@ function WeakTopics() {
             "100vh",
 
           background:
-            "#090909",
+            "#080b24",
 
           display:
             "grid",
@@ -346,7 +346,7 @@ function WeakTopics() {
             "center",
 
           color:
-            "#ff8d58",
+            "#efc710",
         }}
       >
         Analyzing weak topics...
@@ -857,7 +857,7 @@ function WeakTopics() {
                     "center",
 
                   color:
-                    "#716a63",
+                    "#6b7b8c",
 
                   fontSize:
                     "10px",
@@ -970,7 +970,7 @@ function WeakTopics() {
                       "block",
 
                     color:
-                      "#716a63",
+                      "#6b7b8c",
 
                     fontSize:
                       "9px",
@@ -985,7 +985,7 @@ function WeakTopics() {
                 <strong
                   style={{
                     color:
-                      "#eee7e0",
+                      "#f7f8fa",
 
                     fontSize:
                       "12px",

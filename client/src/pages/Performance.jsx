@@ -930,9 +930,9 @@ function Performance() {
           minHeight:
             "100vh",
           background:
-            "#090909",
+            "#080b24",
           color:
-            "#ff8d58",
+            "#efc710",
           display:
             "grid",
           placeItems:
@@ -1330,7 +1330,7 @@ function Performance() {
                 border:
                   "1px solid rgba(255,255,255,0.06)",
                 color:
-                  "#8b837b",
+                  "#6b7b8c",
                 fontSize:
                   "9px",
                 lineHeight:
@@ -1566,7 +1566,7 @@ function Performance() {
                             display:
                               "block",
                             color:
-                              "#eee7e0",
+                              "#f7f8fa",
                             fontSize:
                               "12px",
                             marginBottom:
@@ -1579,7 +1579,7 @@ function Performance() {
                         <span
                           style={{
                             color:
-                              "#756e67",
+                              "#6b7b8c",
                             fontSize:
                               "9px",
                           }}
@@ -1591,7 +1591,7 @@ function Performance() {
                       <span
                         style={{
                           color:
-                            "#8e867e",
+                            "#6b7b8c",
                           fontSize:
                             "9px",
                         }}
@@ -1630,7 +1630,7 @@ function Performance() {
                             borderRadius:
                               "999px",
                             background:
-                              "linear-gradient(90deg, #ff8d58, #f0b07f)",
+                              "linear-gradient(90deg, #efc710, #efc710)",
                           }}
                         />
                       </div>
@@ -1638,7 +1638,7 @@ function Performance() {
                       <strong
                         style={{
                           color:
-                            "#ff9f70",
+                            "#efc710",
                           textAlign:
                             "right",
                           fontSize:
@@ -1660,7 +1660,7 @@ function Performance() {
                 textAlign:
                   "center",
                 color:
-                  "#716a63",
+                  "#6b7b8c",
                 fontSize:
                   "10px",
               }}
@@ -1733,7 +1733,7 @@ function Performance() {
                       display:
                         "block",
                       color:
-                        "#766f68",
+                        "#6b7b8c",
                       fontSize:
                         "9px",
                       letterSpacing:
@@ -1750,7 +1750,7 @@ function Performance() {
                       display:
                         "block",
                       color:
-                        "#f3ece6",
+                        "#f7f8fa",
                       fontSize:
                         "24px",
                       marginBottom:
@@ -1765,7 +1765,7 @@ function Performance() {
                       margin:
                         "0 0 12px",
                       color:
-                        "#7d756d",
+                        "#6b7b8c",
                       fontSize:
                         "9px",
                     }}
@@ -1797,7 +1797,7 @@ function Performance() {
                         borderRadius:
                           "999px",
                         background:
-                          "linear-gradient(90deg, #ff8d58, #f0b07f)",
+                          "linear-gradient(90deg, #efc710, #efc710)",
                       }}
                     />
                   </div>

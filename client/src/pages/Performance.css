@@ -9,20 +9,20 @@
 
   overflow-x: hidden;
 
-  color: #bb9bf3;
+  color: #f7f8fa;
 
   background:
     radial-gradient(
       circle at 10% 10%,
-      rgba(130, 71, 232, 0.07),
+      rgba(239, 199, 16, 0.07),
       transparent 28%
     ),
     radial-gradient(
       circle at 90% 70%,
-      rgba(144, 91, 235, 0.05),
+      rgba(239, 199, 16, 0.05),
       transparent 26%
     ),
-    #090909;
+    #080b24;
 }
 
 /* =========================================================
@@ -48,7 +48,7 @@
   top: -220px;
   left: 10%;
 
-  background: #864ce9;
+  background: #efc710;
 
   animation:
     performanceGlowOne 9s ease-in-out infinite alternate;
@@ -61,7 +61,7 @@
   right: -260px;
   bottom: -120px;
 
-  background: #905beb;
+  background: #efc710;
 
   animation:
     performanceGlowTwo 11s ease-in-out infinite alternate;
@@ -84,10 +84,10 @@
   justify-content: space-between;
 
   border-bottom:
-    1px solid rgba(187, 155, 243, 0.055);
+    1px solid rgba(107, 123, 140, 0.055);
 
   background:
-    rgba(10, 10, 9, 0.72);
+    rgba(12, 17, 54, 0.72);
 
   backdrop-filter: blur(22px);
 
@@ -107,7 +107,7 @@
 
   border-radius: 10px;
 
-  color: #7c818f;
+  color: #6b7b8c;
 
   background:
     rgba(255, 255, 255, 0.02);
@@ -124,13 +124,13 @@
 .performance-back-button:hover {
   transform: translateX(-3px);
 
-  color: #bb9bf3;
+  color: #f7f8fa;
 
   background:
-    rgba(141, 88, 234, 0.045);
+    rgba(239, 199, 16, 0.045);
 
   border-color:
-    rgba(140, 86, 234, 0.18);
+    rgba(239, 199, 16, 0.18);
 }
 
 /* =========================================================
@@ -158,14 +158,14 @@
   background:
     linear-gradient(
       145deg,
-      #9563ec,
-      #864ce9,
-      #6921e4
+      #efc710,
+      #efc710,
+      #efc710
     );
 
   box-shadow:
     0 8px 25px
-    rgba(127, 66, 232, 0.22);
+    rgba(239, 199, 16, 0.22);
 }
 
 .performance-brand strong {
@@ -183,7 +183,7 @@
 
   margin-top: 2px;
 
-  color: #575b67;
+  color: #6b7b8c;
 
   font-size: 8px;
 
@@ -208,19 +208,19 @@
 
   border-radius: 10px;
 
-  color: #bb9bf3;
+  color: #f7f8fa;
 
   background:
     linear-gradient(
       135deg,
-      #9563ec,
-      #864ce9 58%,
-      #6e29e5
+      #efc710,
+      #efc710 58%,
+      #efc710
     );
 
   box-shadow:
     0 10px 25px
-    rgba(126, 65, 232, 0.17);
+    rgba(239, 199, 16, 0.17);
 
   font-size: 9px;
   font-weight: 700;
@@ -235,7 +235,7 @@
 
   box-shadow:
     0 15px 34px
-    rgba(126, 65, 232, 0.27);
+    rgba(239, 199, 16, 0.27);
 }
 
 /* =========================================================
@@ -287,13 +287,13 @@
 
   border-radius: 7px;
 
-  color: #a276ee;
+  color: #efc710;
 
   background:
-    rgba(141, 88, 234, 0.055);
+    rgba(239, 199, 16, 0.055);
 
   border:
-    1px solid rgba(140, 86, 234, 0.12);
+    1px solid rgba(239, 199, 16, 0.12);
 
   font-size: 9px;
   font-weight: 700;
@@ -313,16 +313,16 @@
 
   letter-spacing: -3px;
 
-  color: #bb9bf3;
+  color: #f7f8fa;
 }
 
 .performance-hero h1 span {
   background:
     linear-gradient(
       90deg,
-      #915deb,
-      #9361eb,
-      #7be2f2
+      #efc710,
+      #efc710,
+      #6b7b8c
     );
 
   -webkit-background-clip: text;
@@ -336,7 +336,7 @@
 
   margin-top: 18px;
 
-  color: #737887;
+  color: #6b7b8c;
 
   font-size: 13px;
 
@@ -360,10 +360,10 @@
   border-radius: 17px;
 
   background:
-    rgba(20, 19, 17, 0.84);
+    rgba(12, 17, 54, 0.84);
 
   border:
-    1px solid rgba(187, 155, 243, 0.065);
+    1px solid rgba(107, 123, 140, 0.065);
 }
 
 .performance-score-ring {
@@ -381,8 +381,8 @@
 
   background:
     conic-gradient(
-      #8b54ea 0%,
-      #9361eb 84%,
+      #efc710 0%,
+      #efc710 84%,
       rgba(255, 255, 255, 0.05) 84%
     );
 
@@ -402,7 +402,7 @@
 
   border-radius: 50%;
 
-  background: #11100f;
+  background: #0c1136;
 }
 
 .performance-score-ring strong {
@@ -414,13 +414,13 @@
 }
 
 .performance-score-ring span {
-  color: #ae7960;
+  color: #6b7b8c;
 
   font-size: 9px;
 }
 
 .performance-score-info > span {
-  color: #585c69;
+  color: #6b7b8c;
 
   font-size: 7px;
   font-weight: 700;
@@ -433,7 +433,7 @@
 
   margin-top: 4px;
 
-  color: #eee6dd;
+  color: #f7f8fa;
 
   font-size: 12px;
 }
@@ -441,7 +441,7 @@
 .performance-score-info p {
   margin-top: 5px;
 
-  color: #636875;
+  color: #6b7b8c;
 
   font-size: 8px;
 
@@ -471,12 +471,12 @@
   background:
     linear-gradient(
       145deg,
-      rgba(21, 20, 18, 0.94),
-      rgba(12, 12, 11, 0.91)
+      rgba(12, 17, 54, 0.94),
+      rgba(12, 17, 54, 0.91)
     );
 
   border:
-    1px solid rgba(187, 155, 243, 0.065);
+    1px solid rgba(107, 123, 140, 0.065);
 
   transition:
     transform 0.3s ease,
@@ -502,7 +502,7 @@
   transform: translateY(-5px);
 
   border-color:
-    rgba(141, 87, 234, 0.16);
+    rgba(239, 199, 16, 0.16);
 }
 
 .performance-stat-top {
@@ -520,10 +520,10 @@
 
   border-radius: 10px;
 
-  color: #9b6bed;
+  color: #efc710;
 
   background:
-    rgba(141, 88, 234, 0.07);
+    rgba(239, 199, 16, 0.07);
 }
 
 .performance-stat-trend {
@@ -553,7 +553,7 @@
     "Manrope",
     sans-serif;
 
-  color: #bb9bf3;
+  color: #f7f8fa;
 
   font-size: 23px;
 }
@@ -563,7 +563,7 @@
 
   margin-top: 2px;
 
-  color: #9ea3b0;
+  color: #6b7b8c;
 
   font-size: 10px;
 }
@@ -571,7 +571,7 @@
 .performance-stat-card p {
   margin-top: 5px;
 
-  color: #555863;
+  color: #6b7b8c;
 
   font-size: 8px;
 }
@@ -598,13 +598,13 @@
   border-radius: 17px;
 
   border:
-    1px solid rgba(187, 155, 243, 0.065);
+    1px solid rgba(107, 123, 140, 0.065);
 
   background:
     linear-gradient(
       145deg,
-      rgba(20, 19, 17, 0.94),
-      rgba(11, 11, 10, 0.92)
+      rgba(12, 17, 54, 0.94),
+      rgba(12, 17, 54, 0.92)
     );
 
   animation:
@@ -620,7 +620,7 @@
 .performance-panel-header span {
   display: block;
 
-  color: #575b66;
+  color: #6b7b8c;
 
   font-size: 7px;
   font-weight: 700;
@@ -635,7 +635,7 @@
     "Manrope",
     sans-serif;
 
-  color: #bb9bf3;
+  color: #f7f8fa;
 
   font-size: 16px;
 }
@@ -679,7 +679,7 @@
 
   font-size: 28px;
 
-  color: #bb9bf3;
+  color: #f7f8fa;
 }
 
 .performance-chart-summary span {
@@ -687,13 +687,13 @@
 
   margin-top: 2px;
 
-  color: #5a5e6a;
+  color: #6b7b8c;
 
   font-size: 8px;
 }
 
 .performance-chart-summary p {
-  color: #5a5e6a;
+  color: #6b7b8c;
 
   font-size: 8px;
 }
@@ -717,7 +717,7 @@
 
   padding-bottom: 24px;
 
-  color: #43464f;
+  color: #6b7b8c;
 
   font-size: 7px;
 }
@@ -770,7 +770,7 @@
 .performance-bar-value {
   margin-bottom: 5px;
 
-  color: #6e7896;
+  color: #6b7b8c;
 
   font-size: 7px;
 
@@ -809,14 +809,14 @@
   background:
     linear-gradient(
       to top,
-      #712ee5,
-      #8f5aeb,
-      #9562ec
+      #efc710,
+      #efc710,
+      #efc710
     );
 
   box-shadow:
     0 0 14px
-    rgba(131, 73, 232, 0.16);
+    rgba(239, 199, 16, 0.16);
 
   animation:
     performanceBarGrow 1s ease both;
@@ -827,7 +827,7 @@
 .performance-bar-column > span {
   margin-top: 9px;
 
-  color: #51545f;
+  color: #6b7b8c;
 
   font-size: 7px;
   font-weight: 700;
@@ -847,10 +847,10 @@
 
   border-radius: 6px;
 
-  color: #9f71ee;
+  color: #efc710;
 
   background:
-    rgba(141, 88, 234, 0.055);
+    rgba(239, 199, 16, 0.055);
 
   font-size: 8px;
 }
@@ -873,7 +873,7 @@
   border-radius: 50%;
 
   border:
-    1px solid rgba(141, 88, 234, 0.13);
+    1px solid rgba(239, 199, 16, 0.13);
 }
 
 .ring-large {
@@ -881,7 +881,7 @@
   height: 120px;
 
   border-top-color:
-    rgba(141, 88, 234, 0.55);
+    rgba(239, 199, 16, 0.55);
 
   animation:
     performanceSpin 13s linear infinite;
@@ -909,13 +909,13 @@
 
   border-radius: 18px;
 
-  color: #9f71ee;
+  color: #efc710;
 
   background:
-    rgba(141, 88, 234, 0.075);
+    rgba(239, 199, 16, 0.075);
 
   border:
-    1px solid rgba(140, 86, 234, 0.13);
+    1px solid rgba(239, 199, 16, 0.13);
 
   animation:
     performanceAiPulse 3s ease-in-out infinite;
@@ -931,20 +931,20 @@
   border-radius: 10px;
 
   background:
-    rgba(141, 88, 234, 0.03);
+    rgba(239, 199, 16, 0.03);
 
   border:
-    1px solid rgba(141, 88, 234, 0.065);
+    1px solid rgba(239, 199, 16, 0.065);
 }
 
 .performance-ai-message > svg {
   flex-shrink: 0;
 
-  color: #9b6bed;
+  color: #efc710;
 }
 
 .performance-ai-message strong {
-  color: #a9aebb;
+  color: #6b7b8c;
 
   font-size: 9px;
 }
@@ -952,7 +952,7 @@
 .performance-ai-message p {
   margin-top: 4px;
 
-  color: #606470;
+  color: #6b7b8c;
 
   font-size: 8px;
 
@@ -978,7 +978,7 @@
 }
 
 .performance-ai-focus span {
-  color: #535762;
+  color: #6b7b8c;
 
   font-size: 7px;
   font-weight: 700;
@@ -989,7 +989,7 @@
 
   margin-top: 4px;
 
-  color: #c4c8d5;
+  color: #6b7b8c;
 
   font-size: 10px;
 }
@@ -997,13 +997,13 @@
 .performance-ai-focus p {
   margin-top: 2px;
 
-  color: #575b67;
+  color: #6b7b8c;
 
   font-size: 8px;
 }
 
 .performance-ai-focus-score {
-  color: #a276ee;
+  color: #efc710;
 
   font-family:
     "Manrope",
@@ -1027,13 +1027,13 @@
 
   border-radius: 9px;
 
-  color: #bb9bf3;
+  color: #f7f8fa;
 
   background:
-    rgba(141, 88, 234, 0.065);
+    rgba(239, 199, 16, 0.065);
 
   border:
-    1px solid rgba(140, 86, 234, 0.1);
+    1px solid rgba(239, 199, 16, 0.1);
 
   font-size: 9px;
   font-weight: 700;
@@ -1047,7 +1047,7 @@
   transform: translateY(-2px);
 
   background:
-    rgba(141, 88, 234, 0.12);
+    rgba(239, 199, 16, 0.12);
 }
 
 /* =========================================================
@@ -1064,7 +1064,7 @@
 
   gap: 5px;
 
-  color: #6d7280;
+  color: #6b7b8c;
 
   background: transparent;
 
@@ -1072,7 +1072,7 @@
 }
 
 .performance-text-button:hover {
-  color: #9b6bed;
+  color: #efc710;
 }
 
 .performance-subject-list {
@@ -1109,7 +1109,7 @@
   padding-left: 14px;
 
   background:
-    rgba(141, 88, 234, 0.018);
+    rgba(239, 199, 16, 0.018);
 }
 
 .performance-subject-main {
@@ -1130,16 +1130,16 @@
 
   border-radius: 10px;
 
-  color: #9b6bed;
+  color: #efc710;
 
   background:
-    rgba(141, 88, 234, 0.06);
+    rgba(239, 199, 16, 0.06);
 }
 
 .performance-subject-name strong {
   display: block;
 
-  color: #e9e2da;
+  color: #f7f8fa;
 
   font-size: 10px;
 }
@@ -1149,7 +1149,7 @@
 
   margin-top: 3px;
 
-  color: #545863;
+  color: #6b7b8c;
 
   font-size: 8px;
 }
@@ -1163,7 +1163,7 @@
 
 .performance-subject-progress-top span,
 .performance-subject-progress-top strong {
-  color: #5c606d;
+  color: #6b7b8c;
 
   font-size: 7px;
 }
@@ -1187,9 +1187,9 @@
   background:
     linear-gradient(
       90deg,
-      #8a52ea,
-      #925feb,
-      #74e1f1
+      #efc710,
+      #efc710,
+      #6b7b8c
     );
 
   animation:
@@ -1199,7 +1199,7 @@
 .performance-subject-stat span {
   display: block;
 
-  color: #494c55;
+  color: #6b7b8c;
 
   font-size: 7px;
   font-weight: 700;
@@ -1210,7 +1210,7 @@
 
   margin-top: 4px;
 
-  color: #b6bbc8;
+  color: #6b7b8c;
 
   font-size: 10px;
 }
@@ -1234,10 +1234,10 @@
 }
 
 .performance-status-improving {
-  color: #9a69ed;
+  color: #efc710;
 
   background:
-    rgba(154, 105, 237, 0.055);
+    rgba(239, 199, 16, 0.055);
 }
 
 .performance-status-needs-practice {
@@ -1268,13 +1268,13 @@
   border-radius: 15px;
 
   border:
-    1px solid rgba(187, 155, 243, 0.06);
+    1px solid rgba(107, 123, 140, 0.06);
 
   background:
     linear-gradient(
       145deg,
-      rgba(20, 19, 17, 0.92),
-      rgba(12, 12, 11, 0.91)
+      rgba(12, 17, 54, 0.92),
+      rgba(12, 17, 54, 0.91)
     );
 
   transition:
@@ -1286,7 +1286,7 @@
   transform: translateY(-4px);
 
   border-color:
-    rgba(141, 87, 234, 0.15);
+    rgba(239, 199, 16, 0.15);
 }
 
 .performance-insight-icon {
@@ -1302,10 +1302,10 @@
 }
 
 .strong-icon {
-  color: #9563ec;
+  color: #efc710;
 
   background:
-    rgba(149, 99, 236, 0.06);
+    rgba(239, 199, 16, 0.06);
 }
 
 .focus-icon {
@@ -1316,14 +1316,14 @@
 }
 
 .time-icon {
-  color: #9a6aed;
+  color: #efc710;
 
   background:
-    rgba(154, 106, 237, 0.06);
+    rgba(239, 199, 16, 0.06);
 }
 
 .performance-insight-card > span {
-  color: #515560;
+  color: #6b7b8c;
 
   font-size: 7px;
   font-weight: 700;
@@ -1334,7 +1334,7 @@
 .performance-insight-card h3 {
   margin-top: 5px;
 
-  color: #eee7df;
+  color: #f7f8fa;
 
   font-family:
     "Manrope",
@@ -1346,7 +1346,7 @@
 .performance-insight-card p {
   margin-top: 6px;
 
-  color: #5a5e6a;
+  color: #6b7b8c;
 
   font-size: 8px;
 
@@ -1374,8 +1374,8 @@
   background:
     linear-gradient(
       90deg,
-      #8a52ea,
-      #9361eb
+      #efc710,
+      #efc710
     );
 }
 
@@ -1476,7 +1476,7 @@
 
     box-shadow:
       0 0 25px
-      rgba(130, 71, 232, 0.1);
+      rgba(239, 199, 16, 0.1);
   }
 }
 

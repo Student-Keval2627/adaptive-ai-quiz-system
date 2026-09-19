@@ -940,13 +940,13 @@ function Dashboard() {
           minHeight:
             "100vh",
           background:
-            "#090909",
+            "#080b24",
           display:
             "grid",
           placeItems:
             "center",
           color:
-            "#ff8d58",
+            "#efc710",
           fontFamily:
             "Manrope, sans-serif",
         }}
@@ -1225,7 +1225,7 @@ function Dashboard() {
                     letterSpacing:
                       "1.2px",
                     color:
-                      "#766f68",
+                      "#6b7b8c",
                     fontWeight:
                       700,
                   }}
@@ -1238,7 +1238,7 @@ function Dashboard() {
                     display:
                       "block",
                     color:
-                      "#f2ede8",
+                      "#f7f8fa",
                     fontSize:
                       "14px",
                     marginBottom:
@@ -1252,7 +1252,7 @@ function Dashboard() {
                 <span
                   style={{
                     color:
-                      "#8b837b",
+                      "#6b7b8c",
                     fontSize:
                       "10px",
                   }}
@@ -1284,7 +1284,7 @@ function Dashboard() {
                     letterSpacing:
                       "1.2px",
                     color:
-                      "#766f68",
+                      "#6b7b8c",
                     fontWeight:
                       700,
                   }}
@@ -1297,7 +1297,7 @@ function Dashboard() {
                     display:
                       "block",
                     color:
-                      "#f2ede8",
+                      "#f7f8fa",
                     fontSize:
                       "14px",
                     marginBottom:
@@ -1311,7 +1311,7 @@ function Dashboard() {
                 <span
                   style={{
                     color:
-                      "#8b837b",
+                      "#6b7b8c",
                     fontSize:
                       "10px",
                   }}
@@ -1343,7 +1343,7 @@ function Dashboard() {
                     letterSpacing:
                       "1.2px",
                     color:
-                      "#8b7567",
+                      "#6b7b8c",
                     fontWeight:
                       700,
                   }}
@@ -1356,7 +1356,7 @@ function Dashboard() {
                     display:
                       "block",
                     color:
-                      "#ff9f70",
+                      "#efc710",
                     fontSize:
                       "14px",
                     marginBottom:
@@ -1372,7 +1372,7 @@ function Dashboard() {
                     display:
                       "block",
                     color:
-                      "#8b837b",
+                      "#6b7b8c",
                     fontSize:
                       "10px",
                     lineHeight:
@@ -1433,7 +1433,7 @@ function Dashboard() {
                               display:
                                 "block",
                               color:
-                                "#e9e3dd",
+                                "#f7f8fa",
                               fontSize:
                                 "11px",
                             }}
@@ -1444,7 +1444,7 @@ function Dashboard() {
                           <span
                             style={{
                               color:
-                                "#716a63",
+                                "#6b7b8c",
                               fontSize:
                                 "9px",
                             }}
@@ -1456,7 +1456,7 @@ function Dashboard() {
                         <span
                           style={{
                             color:
-                              "#8e867e",
+                              "#6b7b8c",
                             fontSize:
                               "9px",
                           }}
@@ -1495,7 +1495,7 @@ function Dashboard() {
                               borderRadius:
                                 "999px",
                               background:
-                                "linear-gradient(90deg, #ff8d58, #f0b07f)",
+                                "linear-gradient(90deg, #efc710, #efc710)",
                             }}
                           />
                         </div>
@@ -1503,7 +1503,7 @@ function Dashboard() {
                         <strong
                           style={{
                             color:
-                              "#ff9f70",
+                              "#efc710",
                             textAlign:
                               "right",
                             fontSize:
@@ -1950,7 +1950,7 @@ function Dashboard() {
                   textAlign:
                     "center",
                   color:
-                    "#716a63",
+                    "#6b7b8c",
                   fontSize:
                     "10px",
                 }}
