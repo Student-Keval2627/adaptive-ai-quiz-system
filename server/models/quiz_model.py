@@ -64,8 +64,8 @@ PLANNED_SUBJECTS = [
     "Cyber Security",
     "Cloud Computing",
     "Data Science",
-    
 ]
+
 QUESTION_VARIANT_PROMPTS = [
     "Foundation check: {question}",
     "Concept review: {question}",
@@ -1395,6 +1395,8 @@ def build_question_variant(
         "answer":
             source_question["answer"],
     }
+
+
 # =========================================================
 # EXPAND SUBJECT QUESTION BANK
 # =========================================================
@@ -1486,6 +1488,8 @@ def expand_subject_question_bank(
             )
 
     return expanded_questions
+
+
 # =========================================================
 # BUILD COMPLETE QUESTION BANK
 # =========================================================
@@ -1526,8 +1530,12 @@ def build_complete_question_bank():
         # built-in version of the same question.
         question_map[key] = question
 
-    return list(
+    base_questions = list(
         question_map.values()
+    )
+
+    return expand_subject_question_bank(
+        base_questions
     )
 
 
