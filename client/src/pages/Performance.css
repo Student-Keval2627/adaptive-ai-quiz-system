@@ -14,15 +14,15 @@
   background:
     radial-gradient(
       circle at 10% 10%,
-      rgba(239, 199, 16, 0.07),
+      rgba(255, 255, 255, 0.07),
       transparent 28%
     ),
     radial-gradient(
       circle at 90% 70%,
-      rgba(239, 199, 16, 0.05),
+      rgba(255, 255, 255, 0.05),
       transparent 26%
     ),
-    #080b24;
+    #080808;
 }
 
 /* =========================================================
@@ -48,7 +48,7 @@
   top: -220px;
   left: 10%;
 
-  background: #efc710;
+  background: #ffffff;
 
   animation:
     performanceGlowOne 9s ease-in-out infinite alternate;
@@ -61,7 +61,7 @@
   right: -260px;
   bottom: -120px;
 
-  background: #efc710;
+  background: #ffffff;
 
   animation:
     performanceGlowTwo 11s ease-in-out infinite alternate;
@@ -84,10 +84,10 @@
   justify-content: space-between;
 
   border-bottom:
-    1px solid rgba(107, 123, 140, 0.055);
+    1px solid rgba(163, 163, 163, 0.055);
 
   background:
-    rgba(12, 17, 54, 0.72);
+    rgba(17, 17, 17, 0.72);
 
   backdrop-filter: blur(22px);
 
@@ -107,7 +107,7 @@
 
   border-radius: 10px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   background:
     rgba(255, 255, 255, 0.02);
@@ -127,10 +127,10 @@
   color: #f7f8fa;
 
   background:
-    rgba(239, 199, 16, 0.045);
+    rgba(255, 255, 255, 0.045);
 
   border-color:
-    rgba(239, 199, 16, 0.18);
+    rgba(255, 255, 255, 0.18);
 }
 
 /* =========================================================
@@ -158,14 +158,14 @@
   background:
     linear-gradient(
       145deg,
-      #efc710,
-      #efc710,
-      #efc710
+      #ffffff,
+      #ffffff,
+      #ffffff
     );
 
   box-shadow:
     0 8px 25px
-    rgba(239, 199, 16, 0.22);
+    rgba(255, 255, 255, 0.22);
 }
 
 .performance-brand strong {
@@ -183,7 +183,7 @@
 
   margin-top: 2px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 8px;
 
@@ -213,14 +213,14 @@
   background:
     linear-gradient(
       135deg,
-      #efc710,
-      #efc710 58%,
-      #efc710
+      #ffffff,
+      #ffffff 58%,
+      #ffffff
     );
 
   box-shadow:
     0 10px 25px
-    rgba(239, 199, 16, 0.17);
+    rgba(255, 255, 255, 0.17);
 
   font-size: 9px;
   font-weight: 700;
@@ -235,7 +235,7 @@
 
   box-shadow:
     0 15px 34px
-    rgba(239, 199, 16, 0.27);
+    rgba(255, 255, 255, 0.27);
 }
 
 /* =========================================================
@@ -287,13 +287,13 @@
 
   border-radius: 7px;
 
-  color: #efc710;
+  color: #ffffff;
 
   background:
-    rgba(239, 199, 16, 0.055);
+    rgba(255, 255, 255, 0.055);
 
   border:
-    1px solid rgba(239, 199, 16, 0.12);
+    1px solid rgba(255, 255, 255, 0.12);
 
   font-size: 9px;
   font-weight: 700;
@@ -320,9 +320,9 @@
   background:
     linear-gradient(
       90deg,
-      #efc710,
-      #efc710,
-      #6b7b8c
+      #ffffff,
+      #ffffff,
+      #a3a3a3
     );
 
   -webkit-background-clip: text;
@@ -336,7 +336,7 @@
 
   margin-top: 18px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 13px;
 
@@ -360,10 +360,10 @@
   border-radius: 17px;
 
   background:
-    rgba(12, 17, 54, 0.84);
+    rgba(17, 17, 17, 0.84);
 
   border:
-    1px solid rgba(107, 123, 140, 0.065);
+    1px solid rgba(163, 163, 163, 0.065);
 }
 
 .performance-score-ring {
@@ -381,8 +381,8 @@
 
   background:
     conic-gradient(
-      #efc710 0%,
-      #efc710 84%,
+      #ffffff 0%,
+      #ffffff 84%,
       rgba(255, 255, 255, 0.05) 84%
     );
 
@@ -402,7 +402,7 @@
 
   border-radius: 50%;
 
-  background: #0c1136;
+  background: #111111;
 }
 
 .performance-score-ring strong {
@@ -414,13 +414,13 @@
 }
 
 .performance-score-ring span {
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 9px;
 }
 
 .performance-score-info > span {
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 7px;
   font-weight: 700;
@@ -441,7 +441,7 @@
 .performance-score-info p {
   margin-top: 5px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 8px;
 
@@ -471,12 +471,12 @@
   background:
     linear-gradient(
       145deg,
-      rgba(12, 17, 54, 0.94),
-      rgba(12, 17, 54, 0.91)
+      rgba(17, 17, 17, 0.94),
+      rgba(17, 17, 17, 0.91)
     );
 
   border:
-    1px solid rgba(107, 123, 140, 0.065);
+    1px solid rgba(163, 163, 163, 0.065);
 
   transition:
     transform 0.3s ease,
@@ -502,7 +502,7 @@
   transform: translateY(-5px);
 
   border-color:
-    rgba(239, 199, 16, 0.16);
+    rgba(255, 255, 255, 0.16);
 }
 
 .performance-stat-top {
@@ -520,10 +520,10 @@
 
   border-radius: 10px;
 
-  color: #efc710;
+  color: #ffffff;
 
   background:
-    rgba(239, 199, 16, 0.07);
+    rgba(255, 255, 255, 0.07);
 }
 
 .performance-stat-trend {
@@ -563,7 +563,7 @@
 
   margin-top: 2px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 10px;
 }
@@ -571,7 +571,7 @@
 .performance-stat-card p {
   margin-top: 5px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 8px;
 }
@@ -598,13 +598,13 @@
   border-radius: 17px;
 
   border:
-    1px solid rgba(107, 123, 140, 0.065);
+    1px solid rgba(163, 163, 163, 0.065);
 
   background:
     linear-gradient(
       145deg,
-      rgba(12, 17, 54, 0.94),
-      rgba(12, 17, 54, 0.92)
+      rgba(17, 17, 17, 0.94),
+      rgba(17, 17, 17, 0.92)
     );
 
   animation:
@@ -620,7 +620,7 @@
 .performance-panel-header span {
   display: block;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 7px;
   font-weight: 700;
@@ -687,13 +687,13 @@
 
   margin-top: 2px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 8px;
 }
 
 .performance-chart-summary p {
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 8px;
 }
@@ -717,7 +717,7 @@
 
   padding-bottom: 24px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 7px;
 }
@@ -770,7 +770,7 @@
 .performance-bar-value {
   margin-bottom: 5px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 7px;
 
@@ -809,14 +809,14 @@
   background:
     linear-gradient(
       to top,
-      #efc710,
-      #efc710,
-      #efc710
+      #ffffff,
+      #ffffff,
+      #ffffff
     );
 
   box-shadow:
     0 0 14px
-    rgba(239, 199, 16, 0.16);
+    rgba(255, 255, 255, 0.16);
 
   animation:
     performanceBarGrow 1s ease both;
@@ -827,7 +827,7 @@
 .performance-bar-column > span {
   margin-top: 9px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 7px;
   font-weight: 700;
@@ -847,10 +847,10 @@
 
   border-radius: 6px;
 
-  color: #efc710;
+  color: #ffffff;
 
   background:
-    rgba(239, 199, 16, 0.055);
+    rgba(255, 255, 255, 0.055);
 
   font-size: 8px;
 }
@@ -873,7 +873,7 @@
   border-radius: 50%;
 
   border:
-    1px solid rgba(239, 199, 16, 0.13);
+    1px solid rgba(255, 255, 255, 0.13);
 }
 
 .ring-large {
@@ -881,7 +881,7 @@
   height: 120px;
 
   border-top-color:
-    rgba(239, 199, 16, 0.55);
+    rgba(255, 255, 255, 0.55);
 
   animation:
     performanceSpin 13s linear infinite;
@@ -909,13 +909,13 @@
 
   border-radius: 18px;
 
-  color: #efc710;
+  color: #ffffff;
 
   background:
-    rgba(239, 199, 16, 0.075);
+    rgba(255, 255, 255, 0.075);
 
   border:
-    1px solid rgba(239, 199, 16, 0.13);
+    1px solid rgba(255, 255, 255, 0.13);
 
   animation:
     performanceAiPulse 3s ease-in-out infinite;
@@ -931,20 +931,20 @@
   border-radius: 10px;
 
   background:
-    rgba(239, 199, 16, 0.03);
+    rgba(255, 255, 255, 0.03);
 
   border:
-    1px solid rgba(239, 199, 16, 0.065);
+    1px solid rgba(255, 255, 255, 0.065);
 }
 
 .performance-ai-message > svg {
   flex-shrink: 0;
 
-  color: #efc710;
+  color: #ffffff;
 }
 
 .performance-ai-message strong {
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 9px;
 }
@@ -952,7 +952,7 @@
 .performance-ai-message p {
   margin-top: 4px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 8px;
 
@@ -978,7 +978,7 @@
 }
 
 .performance-ai-focus span {
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 7px;
   font-weight: 700;
@@ -989,7 +989,7 @@
 
   margin-top: 4px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 10px;
 }
@@ -997,13 +997,13 @@
 .performance-ai-focus p {
   margin-top: 2px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 8px;
 }
 
 .performance-ai-focus-score {
-  color: #efc710;
+  color: #ffffff;
 
   font-family:
     "Manrope",
@@ -1030,10 +1030,10 @@
   color: #f7f8fa;
 
   background:
-    rgba(239, 199, 16, 0.065);
+    rgba(255, 255, 255, 0.065);
 
   border:
-    1px solid rgba(239, 199, 16, 0.1);
+    1px solid rgba(255, 255, 255, 0.1);
 
   font-size: 9px;
   font-weight: 700;
@@ -1047,7 +1047,7 @@
   transform: translateY(-2px);
 
   background:
-    rgba(239, 199, 16, 0.12);
+    rgba(255, 255, 255, 0.12);
 }
 
 /* =========================================================
@@ -1064,7 +1064,7 @@
 
   gap: 5px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   background: transparent;
 
@@ -1072,7 +1072,7 @@
 }
 
 .performance-text-button:hover {
-  color: #efc710;
+  color: #ffffff;
 }
 
 .performance-subject-list {
@@ -1109,7 +1109,7 @@
   padding-left: 14px;
 
   background:
-    rgba(239, 199, 16, 0.018);
+    rgba(255, 255, 255, 0.018);
 }
 
 .performance-subject-main {
@@ -1130,10 +1130,10 @@
 
   border-radius: 10px;
 
-  color: #efc710;
+  color: #ffffff;
 
   background:
-    rgba(239, 199, 16, 0.06);
+    rgba(255, 255, 255, 0.06);
 }
 
 .performance-subject-name strong {
@@ -1149,7 +1149,7 @@
 
   margin-top: 3px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 8px;
 }
@@ -1163,7 +1163,7 @@
 
 .performance-subject-progress-top span,
 .performance-subject-progress-top strong {
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 7px;
 }
@@ -1187,9 +1187,9 @@
   background:
     linear-gradient(
       90deg,
-      #efc710,
-      #efc710,
-      #6b7b8c
+      #ffffff,
+      #ffffff,
+      #a3a3a3
     );
 
   animation:
@@ -1199,7 +1199,7 @@
 .performance-subject-stat span {
   display: block;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 7px;
   font-weight: 700;
@@ -1210,7 +1210,7 @@
 
   margin-top: 4px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 10px;
 }
@@ -1234,10 +1234,10 @@
 }
 
 .performance-status-improving {
-  color: #efc710;
+  color: #ffffff;
 
   background:
-    rgba(239, 199, 16, 0.055);
+    rgba(255, 255, 255, 0.055);
 }
 
 .performance-status-needs-practice {
@@ -1268,13 +1268,13 @@
   border-radius: 15px;
 
   border:
-    1px solid rgba(107, 123, 140, 0.06);
+    1px solid rgba(163, 163, 163, 0.06);
 
   background:
     linear-gradient(
       145deg,
-      rgba(12, 17, 54, 0.92),
-      rgba(12, 17, 54, 0.91)
+      rgba(17, 17, 17, 0.92),
+      rgba(17, 17, 17, 0.91)
     );
 
   transition:
@@ -1286,7 +1286,7 @@
   transform: translateY(-4px);
 
   border-color:
-    rgba(239, 199, 16, 0.15);
+    rgba(255, 255, 255, 0.15);
 }
 
 .performance-insight-icon {
@@ -1302,10 +1302,10 @@
 }
 
 .strong-icon {
-  color: #efc710;
+  color: #ffffff;
 
   background:
-    rgba(239, 199, 16, 0.06);
+    rgba(255, 255, 255, 0.06);
 }
 
 .focus-icon {
@@ -1316,14 +1316,14 @@
 }
 
 .time-icon {
-  color: #efc710;
+  color: #ffffff;
 
   background:
-    rgba(239, 199, 16, 0.06);
+    rgba(255, 255, 255, 0.06);
 }
 
 .performance-insight-card > span {
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 7px;
   font-weight: 700;
@@ -1346,7 +1346,7 @@
 .performance-insight-card p {
   margin-top: 6px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 8px;
 
@@ -1374,8 +1374,8 @@
   background:
     linear-gradient(
       90deg,
-      #efc710,
-      #efc710
+      #ffffff,
+      #ffffff
     );
 }
 
@@ -1476,7 +1476,7 @@
 
     box-shadow:
       0 0 25px
-      rgba(239, 199, 16, 0.1);
+      rgba(255, 255, 255, 0.1);
   }
 }
 

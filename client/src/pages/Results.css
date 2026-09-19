@@ -14,15 +14,15 @@
   background:
     radial-gradient(
       circle at 10% 15%,
-      rgba(239, 199, 16, 0.075),
+      rgba(255, 255, 255, 0.075),
       transparent 27%
     ),
     radial-gradient(
       circle at 90% 75%,
-      rgba(239, 199, 16, 0.05),
+      rgba(255, 255, 255, 0.05),
       transparent 27%
     ),
-    #080b24;
+    #080808;
 }
 
 /* =========================================================
@@ -48,7 +48,7 @@
   top: -220px;
   left: 10%;
 
-  background: #efc710;
+  background: #ffffff;
 
   animation:
     resultsGlowOne 9s ease-in-out infinite alternate;
@@ -61,7 +61,7 @@
   right: -250px;
   bottom: -100px;
 
-  background: #efc710;
+  background: #ffffff;
 
   animation:
     resultsGlowTwo 11s ease-in-out infinite alternate;
@@ -84,10 +84,10 @@
   justify-content: space-between;
 
   border-bottom:
-    1px solid rgba(107, 123, 140, 0.055);
+    1px solid rgba(163, 163, 163, 0.055);
 
   background:
-    rgba(12, 17, 54, 0.72);
+    rgba(17, 17, 17, 0.72);
 
   backdrop-filter: blur(22px);
 
@@ -107,7 +107,7 @@
 
   border-radius: 10px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   background:
     rgba(255, 255, 255, 0.02);
@@ -127,10 +127,10 @@
   color: #f7f8fa;
 
   border-color:
-    rgba(239, 199, 16, 0.18);
+    rgba(255, 255, 255, 0.18);
 
   background:
-    rgba(239, 199, 16, 0.045);
+    rgba(255, 255, 255, 0.045);
 }
 
 .results-brand {
@@ -154,14 +154,14 @@
   background:
     linear-gradient(
       145deg,
-      #efc710,
-      #efc710,
-      #efc710
+      #ffffff,
+      #ffffff,
+      #ffffff
     );
 
   box-shadow:
     0 8px 25px
-    rgba(239, 199, 16, 0.22);
+    rgba(255, 255, 255, 0.22);
 }
 
 .results-brand strong {
@@ -179,7 +179,7 @@
 
   margin-top: 2px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 8px;
 
@@ -251,13 +251,13 @@
 
   border-radius: 7px;
 
-  color: #efc710;
+  color: #ffffff;
 
   background:
-    rgba(239, 199, 16, 0.055);
+    rgba(255, 255, 255, 0.055);
 
   border:
-    1px solid rgba(239, 199, 16, 0.12);
+    1px solid rgba(255, 255, 255, 0.12);
 
   font-size: 9px;
   font-weight: 700;
@@ -284,9 +284,9 @@
   background:
     linear-gradient(
       90deg,
-      #efc710,
-      #efc710,
-      #6b7b8c
+      #ffffff,
+      #ffffff,
+      #a3a3a3
     );
 
   -webkit-background-clip: text;
@@ -300,7 +300,7 @@
 
   margin-top: 18px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 13px;
 
@@ -331,13 +331,13 @@
   border-radius: 19px;
 
   border:
-    1px solid rgba(107, 123, 140, 0.07);
+    1px solid rgba(163, 163, 163, 0.07);
 
   background:
     linear-gradient(
       145deg,
-      rgba(12, 17, 54, 0.95),
-      rgba(12, 17, 54, 0.93)
+      rgba(17, 17, 17, 0.95),
+      rgba(17, 17, 17, 0.93)
     );
 
   box-shadow:
@@ -371,7 +371,7 @@
 
   gap: 7px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 8px;
   font-weight: 700;
@@ -380,7 +380,7 @@
 }
 
 .results-card-label svg {
-  color: #efc710;
+  color: #ffffff;
 }
 
 .results-score-circle {
@@ -404,8 +404,8 @@
 
   background:
     conic-gradient(
-      #efc710 0deg,
-      #efc710 var(--score-angle),
+      #ffffff 0deg,
+      #ffffff var(--score-angle),
       rgba(255, 255, 255, 0.045)
         var(--score-angle),
       rgba(255, 255, 255, 0.045)
@@ -414,7 +414,7 @@
 
   box-shadow:
     0 0 45px
-    rgba(239, 199, 16, 0.11);
+    rgba(255, 255, 255, 0.11);
 
   animation:
     resultCircleEnter 0.85s ease both;
@@ -433,11 +433,11 @@
   border-radius: 50%;
 
   background:
-    #0c1136;
+    #111111;
 
   box-shadow:
     inset 0 0 28px
-    rgba(239, 199, 16, 0.04);
+    rgba(255, 255, 255, 0.04);
 }
 
 .results-score-inner strong {
@@ -453,7 +453,7 @@
 }
 
 .results-score-inner span {
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 15px;
 }
@@ -471,7 +471,7 @@
 .results-score-text p {
   margin-top: 9px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 10px;
 
@@ -497,20 +497,20 @@
   border-radius: 11px;
 
   background:
-    rgba(239, 199, 16, 0.035);
+    rgba(255, 255, 255, 0.035);
 
   border:
-    1px solid rgba(239, 199, 16, 0.07);
+    1px solid rgba(255, 255, 255, 0.07);
 }
 
 .results-subject-pill > svg {
-  color: #efc710;
+  color: #ffffff;
 }
 
 .results-subject-pill span {
   display: block;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 7px;
   font-weight: 700;
@@ -523,7 +523,7 @@
 
   margin-top: 3px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 10px;
 }
@@ -541,7 +541,7 @@
 .results-section-header span {
   display: block;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 8px;
   font-weight: 700;
@@ -562,7 +562,7 @@
 }
 
 .results-section-header svg {
-  color: #efc710;
+  color: #ffffff;
 }
 
 /* =========================================================
@@ -607,7 +607,7 @@
   transform: translateY(-3px);
 
   border-color:
-    rgba(239, 199, 16, 0.14);
+    rgba(255, 255, 255, 0.14);
 }
 
 .result-stat-icon {
@@ -623,10 +623,10 @@
 }
 
 .result-stat-score {
-  color: #efc710;
+  color: #ffffff;
 
   background:
-    rgba(239, 199, 16, 0.06);
+    rgba(255, 255, 255, 0.06);
 }
 
 .result-stat-correct {
@@ -644,16 +644,16 @@
 }
 
 .result-stat-accuracy {
-  color: #efc710;
+  color: #ffffff;
 
   background:
-    rgba(239, 199, 16, 0.06);
+    rgba(255, 255, 255, 0.06);
 }
 
 .result-stat-box span {
   display: block;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 8px;
 }
@@ -673,7 +673,7 @@
 }
 
 .result-stat-box small {
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 9px;
 }
@@ -699,13 +699,13 @@
 }
 
 .results-performance-heading span {
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 9px;
 }
 
 .results-performance-heading strong {
-  color: #efc710;
+  color: #ffffff;
 
   font-size: 9px;
 }
@@ -729,14 +729,14 @@
   background:
     linear-gradient(
       90deg,
-      #efc710,
-      #efc710,
-      #6b7b8c
+      #ffffff,
+      #ffffff,
+      #a3a3a3
     );
 
   box-shadow:
     0 0 14px
-    rgba(239, 199, 16, 0.22);
+    rgba(255, 255, 255, 0.22);
 
   animation:
     performanceGrow 1.2s ease both;
@@ -748,7 +748,7 @@
   display: flex;
   justify-content: space-between;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 7px;
 }
@@ -769,10 +769,10 @@
   border-radius: 12px;
 
   background:
-    rgba(239, 199, 16, 0.035);
+    rgba(255, 255, 255, 0.035);
 
   border:
-    1px solid rgba(239, 199, 16, 0.075);
+    1px solid rgba(255, 255, 255, 0.075);
 }
 
 .results-ai-icon {
@@ -786,17 +786,17 @@
 
   border-radius: 11px;
 
-  color: #efc710;
+  color: #ffffff;
 
   background:
-    rgba(239, 199, 16, 0.07);
+    rgba(255, 255, 255, 0.07);
 
   animation:
     resultsAiPulse 3s ease-in-out infinite;
 }
 
 .results-ai-insight span {
-  color: #efc710;
+  color: #ffffff;
 
   font-size: 7px;
   font-weight: 700;
@@ -807,7 +807,7 @@
 .results-ai-insight h3 {
   margin-top: 5px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 11px;
 }
@@ -815,7 +815,7 @@
 .results-ai-insight p {
   margin-top: 6px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 9px;
 
@@ -858,17 +858,17 @@
 
   border-radius: 14px;
 
-  color: #efc710;
+  color: #ffffff;
 
   background:
-    rgba(239, 199, 16, 0.07);
+    rgba(255, 255, 255, 0.07);
 
   border:
-    1px solid rgba(239, 199, 16, 0.09);
+    1px solid rgba(255, 255, 255, 0.09);
 }
 
 .results-next-content span {
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 7px;
   font-weight: 700;
@@ -893,7 +893,7 @@
 
   max-width: 450px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 9px;
 
@@ -936,7 +936,7 @@
 }
 
 .results-secondary-button {
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   background:
     rgba(255, 255, 255, 0.02);
@@ -951,10 +951,10 @@
   color: #f7f8fa;
 
   background:
-    rgba(239, 199, 16, 0.04);
+    rgba(255, 255, 255, 0.04);
 
   border-color:
-    rgba(239, 199, 16, 0.14);
+    rgba(255, 255, 255, 0.14);
 }
 
 .results-primary-button {
@@ -963,14 +963,14 @@
   background:
     linear-gradient(
       135deg,
-      #efc710,
-      #efc710 58%,
-      #efc710
+      #ffffff,
+      #ffffff 58%,
+      #ffffff
     );
 
   box-shadow:
     0 12px 28px
-    rgba(239, 199, 16, 0.19);
+    rgba(255, 255, 255, 0.19);
 }
 
 .results-primary-button:hover {
@@ -978,7 +978,7 @@
 
   box-shadow:
     0 17px 38px
-    rgba(239, 199, 16, 0.28);
+    rgba(255, 255, 255, 0.28);
 }
 
 /* =========================================================
@@ -1062,7 +1062,7 @@
 
     box-shadow:
       0 0 22px
-      rgba(239, 199, 16, 0.09);
+      rgba(255, 255, 255, 0.09);
   }
 }
 

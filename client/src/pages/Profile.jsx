@@ -1249,7 +1249,7 @@ function Profile() {
             "100vh",
 
           background:
-            "#080b24",
+            "#080808",
 
           display:
             "grid",
@@ -1258,7 +1258,7 @@ function Profile() {
             "center",
 
           color:
-            "#efc710",
+            "#ffffff",
         }}
       >
         <div
@@ -2033,7 +2033,7 @@ function Profile() {
                   "11px",
 
                 color:
-                  "#6b7b8c",
+                  "#a3a3a3",
               }}
             >
               {editing
@@ -2054,7 +2054,7 @@ function Profile() {
                   "11px",
 
                 color:
-                  "#6b7b8c",
+                  "#a3a3a3",
               }}
             >
               Click a subject card to add or remove it from your learning profile.

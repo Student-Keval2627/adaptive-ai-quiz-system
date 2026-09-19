@@ -12,15 +12,15 @@
   background:
     radial-gradient(
       circle at 15% 15%,
-      rgba(239, 199, 16, 0.09),
+      rgba(255, 255, 255, 0.09),
       transparent 30%
     ),
     radial-gradient(
       circle at 90% 80%,
-      rgba(239, 199, 16, 0.055),
+      rgba(255, 255, 255, 0.055),
       transparent 28%
     ),
-    #080b24;
+    #080808;
 }
 
 .auth-glow {
@@ -39,7 +39,7 @@
   left: -150px;
   top: -180px;
 
-  background: #efc710;
+  background: #ffffff;
 
   animation:
     authGlowOne 9s ease-in-out infinite alternate;
@@ -52,7 +52,7 @@
   right: -180px;
   bottom: -180px;
 
-  background: #efc710;
+  background: #ffffff;
 
   animation:
     authGlowTwo 11s ease-in-out infinite alternate;
@@ -114,14 +114,14 @@
   background:
     linear-gradient(
       145deg,
-      #efc710,
-      #efc710,
-      #efc710
+      #ffffff,
+      #ffffff,
+      #ffffff
     );
 
   box-shadow:
     0 12px 35px
-    rgba(239, 199, 16, 0.22);
+    rgba(255, 255, 255, 0.22);
 }
 
 .auth-brand strong {
@@ -139,7 +139,7 @@
 
   margin-top: 3px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 8px;
 
@@ -161,14 +161,14 @@
 
   border-radius: 7px;
 
-  color: #efc710;
+  color: #ffffff;
 
   background:
-    rgba(239, 199, 16, 0.055);
+    rgba(255, 255, 255, 0.055);
 
   border:
     1px solid
-    rgba(239, 199, 16, 0.11);
+    rgba(255, 255, 255, 0.11);
 
   font-size: 9px;
   font-weight: 700;
@@ -195,9 +195,9 @@
   background:
     linear-gradient(
       90deg,
-      #efc710,
-      #efc710,
-      #6b7b8c
+      #ffffff,
+      #ffffff,
+      #a3a3a3
     );
 
   background-clip: text;
@@ -209,7 +209,7 @@
 
   margin-top: 21px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 13px;
 
@@ -247,7 +247,7 @@
 .auth-features strong {
   display: block;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 9px;
 }
@@ -257,7 +257,7 @@
 
   margin-top: 5px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 7px;
 
@@ -287,13 +287,13 @@
 
   border:
     1px solid
-    rgba(107, 123, 140, 0.075);
+    rgba(163, 163, 163, 0.075);
 
   background:
     linear-gradient(
       145deg,
-      rgba(12, 17, 54, 0.96),
-      rgba(12, 17, 54, 0.95)
+      rgba(17, 17, 17, 0.96),
+      rgba(17, 17, 17, 0.95)
     );
 
   box-shadow:
@@ -310,7 +310,7 @@
 }
 
 .auth-card-heading > span {
-  color: #efc710;
+  color: #ffffff;
 
   font-size: 8px;
   font-weight: 700;
@@ -335,7 +335,7 @@
 .auth-card-heading p {
   margin-top: 7px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 9px;
 }
@@ -353,7 +353,7 @@
 
   margin-bottom: 7px;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 8px;
   font-weight: 600;
@@ -386,20 +386,20 @@
 
 .auth-input-wrapper:focus-within {
   border-color:
-    rgba(239, 199, 16, 0.24);
+    rgba(255, 255, 255, 0.24);
 
   background:
-    rgba(239, 199, 16, 0.025);
+    rgba(255, 255, 255, 0.025);
 
   box-shadow:
     0 0 0 3px
-    rgba(239, 199, 16, 0.025);
+    rgba(255, 255, 255, 0.025);
 }
 
 .auth-input-wrapper > svg {
   flex-shrink: 0;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 }
 
 .auth-input-wrapper input {
@@ -418,20 +418,20 @@
 }
 
 .auth-input-wrapper input::placeholder {
-  color: #6b7b8c;
+  color: #a3a3a3;
 }
 
 .auth-password-toggle {
   display: grid;
   place-items: center;
 
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   background: transparent;
 }
 
 .auth-password-toggle:hover {
-  color: #efc710;
+  color: #ffffff;
 }
 
 /* =========================================================
@@ -483,14 +483,14 @@
   background:
     linear-gradient(
       135deg,
-      #efc710,
-      #efc710 58%,
-      #efc710
+      #ffffff,
+      #ffffff 58%,
+      #ffffff
     );
 
   box-shadow:
     0 14px 32px
-    rgba(239, 199, 16, 0.2);
+    rgba(255, 255, 255, 0.2);
 
   font-size: 10px;
   font-weight: 700;
@@ -506,7 +506,7 @@
 
   box-shadow:
     0 19px 40px
-    rgba(239, 199, 16, 0.3);
+    rgba(255, 255, 255, 0.3);
 }
 
 .auth-submit-button:disabled {
@@ -538,7 +538,7 @@
 }
 
 .auth-divider p {
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   font-size: 6px;
   font-weight: 700;
@@ -547,7 +547,7 @@
 }
 
 .auth-switch-text {
-  color: #6b7b8c;
+  color: #a3a3a3;
 
   text-align: center;
 
@@ -555,7 +555,7 @@
 }
 
 .auth-switch-text a {
-  color: #efc710;
+  color: #ffffff;
 
   font-weight: 700;
 
@@ -563,7 +563,7 @@
 }
 
 .auth-switch-text a:hover {
-  color: #efc710;
+  color: #ffffff;
 }
 
 /* =========================================================

@@ -930,9 +930,9 @@ function Performance() {
           minHeight:
             "100vh",
           background:
-            "#080b24",
+            "#080808",
           color:
-            "#efc710",
+            "#ffffff",
           display:
             "grid",
           placeItems:
@@ -1330,7 +1330,7 @@ function Performance() {
                 border:
                   "1px solid rgba(255,255,255,0.06)",
                 color:
-                  "#6b7b8c",
+                  "#a3a3a3",
                 fontSize:
                   "9px",
                 lineHeight:
@@ -1579,7 +1579,7 @@ function Performance() {
                         <span
                           style={{
                             color:
-                              "#6b7b8c",
+                              "#a3a3a3",
                             fontSize:
                               "9px",
                           }}
@@ -1591,7 +1591,7 @@ function Performance() {
                       <span
                         style={{
                           color:
-                            "#6b7b8c",
+                            "#a3a3a3",
                           fontSize:
                             "9px",
                         }}
@@ -1630,7 +1630,7 @@ function Performance() {
                             borderRadius:
                               "999px",
                             background:
-                              "linear-gradient(90deg, #efc710, #efc710)",
+                              "linear-gradient(90deg, #ffffff, #ffffff)",
                           }}
                         />
                       </div>
@@ -1638,7 +1638,7 @@ function Performance() {
                       <strong
                         style={{
                           color:
-                            "#efc710",
+                            "#ffffff",
                           textAlign:
                             "right",
                           fontSize:
@@ -1660,7 +1660,7 @@ function Performance() {
                 textAlign:
                   "center",
                 color:
-                  "#6b7b8c",
+                  "#a3a3a3",
                 fontSize:
                   "10px",
               }}
@@ -1733,7 +1733,7 @@ function Performance() {
                       display:
                         "block",
                       color:
-                        "#6b7b8c",
+                        "#a3a3a3",
                       fontSize:
                         "9px",
                       letterSpacing:
@@ -1765,7 +1765,7 @@ function Performance() {
                       margin:
                         "0 0 12px",
                       color:
-                        "#6b7b8c",
+                        "#a3a3a3",
                       fontSize:
                         "9px",
                     }}
@@ -1797,7 +1797,7 @@ function Performance() {
                         borderRadius:
                           "999px",
                         background:
-                          "linear-gradient(90deg, #efc710, #efc710)",
+                          "linear-gradient(90deg, #ffffff, #ffffff)",
                       }}
                     />
                   </div>

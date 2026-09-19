@@ -940,13 +940,13 @@ function Dashboard() {
           minHeight:
             "100vh",
           background:
-            "#080b24",
+            "#080808",
           display:
             "grid",
           placeItems:
             "center",
           color:
-            "#efc710",
+            "#ffffff",
           fontFamily:
             "Manrope, sans-serif",
         }}
@@ -1225,7 +1225,7 @@ function Dashboard() {
                     letterSpacing:
                       "1.2px",
                     color:
-                      "#6b7b8c",
+                      "#a3a3a3",
                     fontWeight:
                       700,
                   }}
@@ -1252,7 +1252,7 @@ function Dashboard() {
                 <span
                   style={{
                     color:
-                      "#6b7b8c",
+                      "#a3a3a3",
                     fontSize:
                       "10px",
                   }}
@@ -1284,7 +1284,7 @@ function Dashboard() {
                     letterSpacing:
                       "1.2px",
                     color:
-                      "#6b7b8c",
+                      "#a3a3a3",
                     fontWeight:
                       700,
                   }}
@@ -1311,7 +1311,7 @@ function Dashboard() {
                 <span
                   style={{
                     color:
-                      "#6b7b8c",
+                      "#a3a3a3",
                     fontSize:
                       "10px",
                   }}
@@ -1343,7 +1343,7 @@ function Dashboard() {
                     letterSpacing:
                       "1.2px",
                     color:
-                      "#6b7b8c",
+                      "#a3a3a3",
                     fontWeight:
                       700,
                   }}
@@ -1356,7 +1356,7 @@ function Dashboard() {
                     display:
                       "block",
                     color:
-                      "#efc710",
+                      "#ffffff",
                     fontSize:
                       "14px",
                     marginBottom:
@@ -1372,7 +1372,7 @@ function Dashboard() {
                     display:
                       "block",
                     color:
-                      "#6b7b8c",
+                      "#a3a3a3",
                     fontSize:
                       "10px",
                     lineHeight:
@@ -1444,7 +1444,7 @@ function Dashboard() {
                           <span
                             style={{
                               color:
-                                "#6b7b8c",
+                                "#a3a3a3",
                               fontSize:
                                 "9px",
                             }}
@@ -1456,7 +1456,7 @@ function Dashboard() {
                         <span
                           style={{
                             color:
-                              "#6b7b8c",
+                              "#a3a3a3",
                             fontSize:
                               "9px",
                           }}
@@ -1495,7 +1495,7 @@ function Dashboard() {
                               borderRadius:
                                 "999px",
                               background:
-                                "linear-gradient(90deg, #efc710, #efc710)",
+                                "linear-gradient(90deg, #ffffff, #ffffff)",
                             }}
                           />
                         </div>
@@ -1503,7 +1503,7 @@ function Dashboard() {
                         <strong
                           style={{
                             color:
-                              "#efc710",
+                              "#ffffff",
                             textAlign:
                               "right",
                             fontSize:
@@ -1950,7 +1950,7 @@ function Dashboard() {
                   textAlign:
                     "center",
                   color:
-                    "#6b7b8c",
+                    "#a3a3a3",
                   fontSize:
                     "10px",
                 }}

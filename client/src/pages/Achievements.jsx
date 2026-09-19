@@ -661,8 +661,8 @@ function Achievements() {
           minHeight: "100vh",
           display: "grid",
           placeItems: "center",
-          background: "#080b24",
-          color: "#efc710",
+          background: "#080808",
+          color: "#ffffff",
         }}
       >
         Loading achievements...
