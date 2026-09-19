@@ -17,7 +17,9 @@ from models.quiz_model import (
     find_question_by_id,
     get_available_subjects,
     get_questions,
+    get_subject_mastery_progress,
     get_subject_question_counts,
+    record_question_answer,
     record_question_seen,
 )
 
@@ -25,16 +27,6 @@ from utils.quiz_engine import (
     get_next_adaptive_question,
     start_adaptive_quiz,
 )
-from models.quiz_model import (
-    check_question_answer,
-    find_question_by_id,
-    get_available_subjects,
-    get_questions,
-    get_subject_question_counts,
-    record_question_answer,
-    record_question_seen,
-)
-
 
 # =========================================================
 # BLUEPRINT
@@ -1029,9 +1021,80 @@ def check_answer():
             }
         ), 500
 
+    subject_name = (
+        result.get(
+            "subject"
+        )
+        or attempt.get(
+            "subject",
+            "",
+        )
+    )
+
+    mastery_progress = (
+        get_subject_mastery_progress(
+            user_id=user_id,
+            subject=subject_name,
+        )
+    )
+
+    low_progress = (
+        mastery_progress.get(
+            "levels",
+            {},
+        ).get(
+            "Easy",
+            {},
+        )
+    )
+
+    milestone = None
+
+    if (
+        history_result.get(
+            "newlyMastered"
+        )
+        and result.get(
+            "difficulty"
+        ) == "Easy"
+        and low_progress.get(
+            "completed"
+        ) == low_progress.get(
+            "target"
+        )
+    ):
+        milestone = {
+            "type":
+                "LOW_LEVEL_PASSED",
+            "subject":
+                subject_name,
+            "level":
+                "Low",
+            "completed":
+                low_progress.get(
+                    "completed",
+                    300,
+                ),
+            "target":
+                low_progress.get(
+                    "target",
+                    300,
+                ),
+            "message":
+                (
+                    "Congratulations! You have "
+                    f"passed the Low level in "
+                    f"{subject_name}."
+                ),
+        }
+
     return jsonify(
         {
             "success": True,
             **result,
+            "masteryProgress":
+                mastery_progress,
+            "milestone":
+                milestone,
         }
     )
