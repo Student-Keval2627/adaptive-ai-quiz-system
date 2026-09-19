@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "Cloud Computing",
+    "topic": "Service Models",
+    "difficulty": "Easy",
+    "question": "Which Cloud Computing concept is described as: Infrastructure as a Service provides virtualized compute, storage, and networking resources?",
+    "options": [
+      "Infrastructure as a Service",
+      "Platform as a Service",
+      "Container",
+      "Block storage"
+    ],
+    "answer": "Infrastructure as a Service"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Service Models",
+    "difficulty": "Easy",
+    "question": "Which description best explains Infrastructure as a Service?",
+    "options": [
+      "Infrastructure as a Service provides virtualized compute, storage, and networking resources",
+      "Platform as a Service provides a managed application platform and runtime",
+      "A container packages an application and dependencies while sharing the host kernel",
+      "Block storage exposes raw storage volumes that operating systems can format and mount"
+    ],
+    "answer": "Infrastructure as a Service provides virtualized compute, storage, and networking resources"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Service Models",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Infrastructure as a Service?",
+    "options": [
+      "running custom operating systems without owning physical servers",
+      "deploying code without managing the underlying operating system",
+      "shipping a consistent lightweight application environment",
+      "providing a low-latency disk for a virtual machine or database"
+    ],
+    "answer": "running custom operating systems without owning physical servers"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Service Models",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for running custom operating systems without owning physical servers?",
+    "options": [
+      "Platform as a Service",
+      "Container",
+      "Block storage",
+      "Infrastructure as a Service"
+    ],
+    "answer": "Infrastructure as a Service"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Service Models",
+    "difficulty": "Easy",
+    "question": "Which Cloud Computing concept is described as: Platform as a Service provides a managed application platform and runtime?",
+    "options": [
+      "Platform as a Service",
+      "Software as a Service",
+      "Kubernetes",
+      "Content delivery network"
+    ],
+    "answer": "Platform as a Service"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Service Models",
+    "difficulty": "Easy",
+    "question": "Which description best explains Platform as a Service?",
+    "options": [
+      "Platform as a Service provides a managed application platform and runtime",
+      "Software as a Service delivers a complete application over a network",
+      "Kubernetes automates deployment, scaling, and management of containerized applications",
+      "A content delivery network caches content at geographically distributed edge locations"
+    ],
+    "answer": "Platform as a Service provides a managed application platform and runtime"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Service Models",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Platform as a Service?",
+    "options": [
+      "deploying code without managing the underlying operating system",
+      "using business software through a browser without installing its server",
+      "coordinating containers across a cluster",
+      "reducing latency for users far from the origin server"
+    ],
+    "answer": "deploying code without managing the underlying operating system"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Service Models",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for deploying code without managing the underlying operating system?",
+    "options": [
+      "Software as a Service",
+      "Kubernetes",
+      "Content delivery network",
+      "Platform as a Service"
+    ],
+    "answer": "Platform as a Service"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Service Models",
+    "difficulty": "Easy",
+    "question": "Which Cloud Computing concept is described as: Software as a Service delivers a complete application over a network?",
+    "options": [
+      "Software as a Service",
+      "Public cloud",
+      "Serverless computing",
+      "Region"
+    ],
+    "answer": "Software as a Service"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Service Models",
+    "difficulty": "Easy",
+    "question": "Which description best explains Software as a Service?",
+    "options": [
+      "Software as a Service delivers a complete application over a network",
+      "A public cloud offers provider-operated resources shared securely among customers",
+      "Serverless computing runs event-driven code while the provider manages servers and scaling",
+      "A cloud region is a geographic area containing multiple isolated infrastructure locations"
+    ],
+    "answer": "Software as a Service delivers a complete application over a network"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Service Models",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Software as a Service?",
+    "options": [
+      "using business software through a browser without installing its server",
+      "obtaining on-demand infrastructure from a commercial cloud provider",
+      "executing short functions without provisioning instances",
+      "choosing where workloads and data are geographically hosted"
+    ],
+    "answer": "using business software through a browser without installing its server"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Service Models",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for using business software through a browser without installing its server?",
+    "options": [
+      "Public cloud",
+      "Serverless computing",
+      "Region",
+      "Software as a Service"
+    ],
+    "answer": "Software as a Service"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Deployment Models",
+    "difficulty": "Easy",
+    "question": "Which Cloud Computing concept is described as: A public cloud offers provider-operated resources shared securely among customers?",
+    "options": [
+      "Public cloud",
+      "Private cloud",
+      "Auto scaling",
+      "Availability zone"
+    ],
+    "answer": "Public cloud"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Deployment Models",
+    "difficulty": "Easy",
+    "question": "Which description best explains Public cloud?",
+    "options": [
+      "A public cloud offers provider-operated resources shared securely among customers",
+      "A private cloud dedicates cloud infrastructure to one organization",
+      "Auto scaling adjusts resource capacity according to demand or policy",
+      "An availability zone is an isolated location within a cloud region"
+    ],
+    "answer": "A public cloud offers provider-operated resources shared securely among customers"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Deployment Models",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Public cloud?",
+    "options": [
+      "obtaining on-demand infrastructure from a commercial cloud provider",
+      "meeting organization-specific control or isolation requirements",
+      "adding instances during traffic spikes and removing them later",
+      "spreading an application across failure-independent facilities"
+    ],
+    "answer": "obtaining on-demand infrastructure from a commercial cloud provider"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Deployment Models",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for obtaining on-demand infrastructure from a commercial cloud provider?",
+    "options": [
+      "Private cloud",
+      "Auto scaling",
+      "Availability zone",
+      "Public cloud"
+    ],
+    "answer": "Public cloud"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Deployment Models",
+    "difficulty": "Easy",
+    "question": "Which Cloud Computing concept is described as: A private cloud dedicates cloud infrastructure to one organization?",
+    "options": [
+      "Private cloud",
+      "Hybrid cloud",
+      "Load balancing",
+      "Virtual private cloud"
+    ],
+    "answer": "Private cloud"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Deployment Models",
+    "difficulty": "Easy",
+    "question": "Which description best explains Private cloud?",
+    "options": [
+      "A private cloud dedicates cloud infrastructure to one organization",
+      "A hybrid cloud integrates private infrastructure with public-cloud services",
+      "Load balancing distributes requests across multiple healthy service instances",
+      "A virtual private cloud is a logically isolated cloud network"
+    ],
+    "answer": "A private cloud dedicates cloud infrastructure to one organization"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Deployment Models",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Private cloud?",
+    "options": [
+      "meeting organization-specific control or isolation requirements",
+      "keeping sensitive workloads private while bursting other work to public resources",
+      "preventing one server from receiving all incoming traffic",
+      "defining private address ranges, routes, and subnets for workloads"
+    ],
+    "answer": "meeting organization-specific control or isolation requirements"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Deployment Models",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for meeting organization-specific control or isolation requirements?",
+    "options": [
+      "Hybrid cloud",
+      "Load balancing",
+      "Virtual private cloud",
+      "Private cloud"
+    ],
+    "answer": "Private cloud"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Deployment Models",
+    "difficulty": "Easy",
+    "question": "Which Cloud Computing concept is described as: A hybrid cloud integrates private infrastructure with public-cloud services?",
+    "options": [
+      "Hybrid cloud",
+      "Virtualization",
+      "Object storage",
+      "Cloud IAM"
+    ],
+    "answer": "Hybrid cloud"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Deployment Models",
+    "difficulty": "Easy",
+    "question": "Which description best explains Hybrid cloud?",
+    "options": [
+      "A hybrid cloud integrates private infrastructure with public-cloud services",
+      "Virtualization allows multiple isolated virtual machines to share physical hardware",
+      "Object storage keeps data as objects addressed by keys in scalable buckets",
+      "Cloud identity and access management controls identities, roles, and permissions"
+    ],
+    "answer": "A hybrid cloud integrates private infrastructure with public-cloud services"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Deployment Models",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Hybrid cloud?",
+    "options": [
+      "keeping sensitive workloads private while bursting other work to public resources",
+      "consolidating servers while retaining separate operating systems",
+      "storing images, backups, and static files at large scale",
+      "granting a service only the cloud actions it needs"
+    ],
+    "answer": "keeping sensitive workloads private while bursting other work to public resources"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Deployment Models",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for keeping sensitive workloads private while bursting other work to public resources?",
+    "options": [
+      "Virtualization",
+      "Object storage",
+      "Cloud IAM",
+      "Hybrid cloud"
+    ],
+    "answer": "Hybrid cloud"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Compute",
+    "difficulty": "Easy",
+    "question": "Which Cloud Computing concept is described as: Virtualization allows multiple isolated virtual machines to share physical hardware?",
+    "options": [
+      "Virtualization",
+      "Container",
+      "Block storage",
+      "Multi-tenancy"
+    ],
+    "answer": "Virtualization"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Compute",
+    "difficulty": "Easy",
+    "question": "Which description best explains Virtualization?",
+    "options": [
+      "Virtualization allows multiple isolated virtual machines to share physical hardware",
+      "A container packages an application and dependencies while sharing the host kernel",
+      "Block storage exposes raw storage volumes that operating systems can format and mount",
+      "Multi-tenancy lets multiple customers share infrastructure with logical isolation"
+    ],
+    "answer": "Virtualization allows multiple isolated virtual machines to share physical hardware"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Compute",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Virtualization?",
+    "options": [
+      "consolidating servers while retaining separate operating systems",
+      "shipping a consistent lightweight application environment",
+      "providing a low-latency disk for a virtual machine or database",
+      "efficiently serving separate customers from a common platform"
+    ],
+    "answer": "consolidating servers while retaining separate operating systems"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Compute",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for consolidating servers while retaining separate operating systems?",
+    "options": [
+      "Container",
+      "Block storage",
+      "Multi-tenancy",
+      "Virtualization"
+    ],
+    "answer": "Virtualization"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Compute",
+    "difficulty": "Easy",
+    "question": "Which Cloud Computing concept is described as: A container packages an application and dependencies while sharing the host kernel?",
+    "options": [
+      "Container",
+      "Kubernetes",
+      "Content delivery network",
+      "Elasticity"
+    ],
+    "answer": "Container"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Compute",
+    "difficulty": "Easy",
+    "question": "Which description best explains Container?",
+    "options": [
+      "A container packages an application and dependencies while sharing the host kernel",
+      "Kubernetes automates deployment, scaling, and management of containerized applications",
+      "A content delivery network caches content at geographically distributed edge locations",
+      "Elasticity is the ability to rapidly add or remove resources as demand changes"
+    ],
+    "answer": "A container packages an application and dependencies while sharing the host kernel"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Compute",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Container?",
+    "options": [
+      "shipping a consistent lightweight application environment",
+      "coordinating containers across a cluster",
+      "reducing latency for users far from the origin server",
+      "matching capacity to a changing workload and avoiding idle resources"
+    ],
+    "answer": "shipping a consistent lightweight application environment"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Compute",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for shipping a consistent lightweight application environment?",
+    "options": [
+      "Kubernetes",
+      "Content delivery network",
+      "Elasticity",
+      "Container"
+    ],
+    "answer": "Container"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Orchestration",
+    "difficulty": "Medium",
+    "question": "Which Cloud Computing concept is described as: Kubernetes automates deployment, scaling, and management of containerized applications?",
+    "options": [
+      "Kubernetes",
+      "Serverless computing",
+      "Region",
+      "High availability"
+    ],
+    "answer": "Kubernetes"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Orchestration",
+    "difficulty": "Medium",
+    "question": "Which description best explains Kubernetes?",
+    "options": [
+      "Kubernetes automates deployment, scaling, and management of containerized applications",
+      "Serverless computing runs event-driven code while the provider manages servers and scaling",
+      "A cloud region is a geographic area containing multiple isolated infrastructure locations",
+      "High availability minimizes downtime through redundancy and fault-tolerant design"
+    ],
+    "answer": "Kubernetes automates deployment, scaling, and management of containerized applications"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Orchestration",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Kubernetes?",
+    "options": [
+      "coordinating containers across a cluster",
+      "executing short functions without provisioning instances",
+      "choosing where workloads and data are geographically hosted",
+      "keeping a service operating when an instance fails"
+    ],
+    "answer": "coordinating containers across a cluster"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Orchestration",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for coordinating containers across a cluster?",
+    "options": [
+      "Serverless computing",
+      "Region",
+      "High availability",
+      "Kubernetes"
+    ],
+    "answer": "Kubernetes"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Compute",
+    "difficulty": "Medium",
+    "question": "Which Cloud Computing concept is described as: Serverless computing runs event-driven code while the provider manages servers and scaling?",
+    "options": [
+      "Serverless computing",
+      "Auto scaling",
+      "Availability zone",
+      "Disaster recovery"
+    ],
+    "answer": "Serverless computing"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Compute",
+    "difficulty": "Medium",
+    "question": "Which description best explains Serverless computing?",
+    "options": [
+      "Serverless computing runs event-driven code while the provider manages servers and scaling",
+      "Auto scaling adjusts resource capacity according to demand or policy",
+      "An availability zone is an isolated location within a cloud region",
+      "Disaster recovery restores systems and data after a major disruption"
+    ],
+    "answer": "Serverless computing runs event-driven code while the provider manages servers and scaling"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Compute",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Serverless computing?",
+    "options": [
+      "executing short functions without provisioning instances",
+      "adding instances during traffic spikes and removing them later",
+      "spreading an application across failure-independent facilities",
+      "meeting recovery-time and recovery-point objectives after an outage"
+    ],
+    "answer": "executing short functions without provisioning instances"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Compute",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for executing short functions without provisioning instances?",
+    "options": [
+      "Auto scaling",
+      "Availability zone",
+      "Disaster recovery",
+      "Serverless computing"
+    ],
+    "answer": "Serverless computing"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Scalability",
+    "difficulty": "Medium",
+    "question": "Which Cloud Computing concept is described as: Auto scaling adjusts resource capacity according to demand or policy?",
+    "options": [
+      "Auto scaling",
+      "Load balancing",
+      "Virtual private cloud",
+      "Infrastructure as Code"
+    ],
+    "answer": "Auto scaling"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Scalability",
+    "difficulty": "Medium",
+    "question": "Which description best explains Auto scaling?",
+    "options": [
+      "Auto scaling adjusts resource capacity according to demand or policy",
+      "Load balancing distributes requests across multiple healthy service instances",
+      "A virtual private cloud is a logically isolated cloud network",
+      "Infrastructure as Code defines infrastructure in version-controlled machine-readable files"
+    ],
+    "answer": "Auto scaling adjusts resource capacity according to demand or policy"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Scalability",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Auto scaling?",
+    "options": [
+      "adding instances during traffic spikes and removing them later",
+      "preventing one server from receiving all incoming traffic",
+      "defining private address ranges, routes, and subnets for workloads",
+      "creating repeatable cloud environments through automation"
+    ],
+    "answer": "adding instances during traffic spikes and removing them later"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Scalability",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for adding instances during traffic spikes and removing them later?",
+    "options": [
+      "Load balancing",
+      "Virtual private cloud",
+      "Infrastructure as Code",
+      "Auto scaling"
+    ],
+    "answer": "Auto scaling"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Networking",
+    "difficulty": "Medium",
+    "question": "Which Cloud Computing concept is described as: Load balancing distributes requests across multiple healthy service instances?",
+    "options": [
+      "Load balancing",
+      "Object storage",
+      "Cloud IAM",
+      "Observability"
+    ],
+    "answer": "Load balancing"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Networking",
+    "difficulty": "Medium",
+    "question": "Which description best explains Load balancing?",
+    "options": [
+      "Load balancing distributes requests across multiple healthy service instances",
+      "Object storage keeps data as objects addressed by keys in scalable buckets",
+      "Cloud identity and access management controls identities, roles, and permissions",
+      "Observability uses metrics, logs, and traces to understand internal system behavior"
+    ],
+    "answer": "Load balancing distributes requests across multiple healthy service instances"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Networking",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Load balancing?",
+    "options": [
+      "preventing one server from receiving all incoming traffic",
+      "storing images, backups, and static files at large scale",
+      "granting a service only the cloud actions it needs",
+      "diagnosing a distributed cloud application from its telemetry"
+    ],
+    "answer": "preventing one server from receiving all incoming traffic"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Networking",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for preventing one server from receiving all incoming traffic?",
+    "options": [
+      "Object storage",
+      "Cloud IAM",
+      "Observability",
+      "Load balancing"
+    ],
+    "answer": "Load balancing"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Storage",
+    "difficulty": "Medium",
+    "question": "Which Cloud Computing concept is described as: Object storage keeps data as objects addressed by keys in scalable buckets?",
+    "options": [
+      "Object storage",
+      "Block storage",
+      "Multi-tenancy",
+      "Infrastructure as a Service"
+    ],
+    "answer": "Object storage"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Storage",
+    "difficulty": "Medium",
+    "question": "Which description best explains Object storage?",
+    "options": [
+      "Object storage keeps data as objects addressed by keys in scalable buckets",
+      "Block storage exposes raw storage volumes that operating systems can format and mount",
+      "Multi-tenancy lets multiple customers share infrastructure with logical isolation",
+      "Infrastructure as a Service provides virtualized compute, storage, and networking resources"
+    ],
+    "answer": "Object storage keeps data as objects addressed by keys in scalable buckets"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Storage",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Object storage?",
+    "options": [
+      "storing images, backups, and static files at large scale",
+      "providing a low-latency disk for a virtual machine or database",
+      "efficiently serving separate customers from a common platform",
+      "running custom operating systems without owning physical servers"
+    ],
+    "answer": "storing images, backups, and static files at large scale"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Storage",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for storing images, backups, and static files at large scale?",
+    "options": [
+      "Block storage",
+      "Multi-tenancy",
+      "Infrastructure as a Service",
+      "Object storage"
+    ],
+    "answer": "Object storage"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Storage",
+    "difficulty": "Medium",
+    "question": "Which Cloud Computing concept is described as: Block storage exposes raw storage volumes that operating systems can format and mount?",
+    "options": [
+      "Block storage",
+      "Content delivery network",
+      "Elasticity",
+      "Platform as a Service"
+    ],
+    "answer": "Block storage"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Storage",
+    "difficulty": "Medium",
+    "question": "Which description best explains Block storage?",
+    "options": [
+      "Block storage exposes raw storage volumes that operating systems can format and mount",
+      "A content delivery network caches content at geographically distributed edge locations",
+      "Elasticity is the ability to rapidly add or remove resources as demand changes",
+      "Platform as a Service provides a managed application platform and runtime"
+    ],
+    "answer": "Block storage exposes raw storage volumes that operating systems can format and mount"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Storage",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Block storage?",
+    "options": [
+      "providing a low-latency disk for a virtual machine or database",
+      "reducing latency for users far from the origin server",
+      "matching capacity to a changing workload and avoiding idle resources",
+      "deploying code without managing the underlying operating system"
+    ],
+    "answer": "providing a low-latency disk for a virtual machine or database"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Storage",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for providing a low-latency disk for a virtual machine or database?",
+    "options": [
+      "Content delivery network",
+      "Elasticity",
+      "Platform as a Service",
+      "Block storage"
+    ],
+    "answer": "Block storage"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Networking",
+    "difficulty": "Medium",
+    "question": "Which Cloud Computing concept is described as: A content delivery network caches content at geographically distributed edge locations?",
+    "options": [
+      "Content delivery network",
+      "Region",
+      "High availability",
+      "Software as a Service"
+    ],
+    "answer": "Content delivery network"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Networking",
+    "difficulty": "Medium",
+    "question": "Which description best explains Content delivery network?",
+    "options": [
+      "A content delivery network caches content at geographically distributed edge locations",
+      "A cloud region is a geographic area containing multiple isolated infrastructure locations",
+      "High availability minimizes downtime through redundancy and fault-tolerant design",
+      "Software as a Service delivers a complete application over a network"
+    ],
+    "answer": "A content delivery network caches content at geographically distributed edge locations"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Networking",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Content delivery network?",
+    "options": [
+      "reducing latency for users far from the origin server",
+      "choosing where workloads and data are geographically hosted",
+      "keeping a service operating when an instance fails",
+      "using business software through a browser without installing its server"
+    ],
+    "answer": "reducing latency for users far from the origin server"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Networking",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for reducing latency for users far from the origin server?",
+    "options": [
+      "Region",
+      "High availability",
+      "Software as a Service",
+      "Content delivery network"
+    ],
+    "answer": "Content delivery network"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Global Infrastructure",
+    "difficulty": "Medium",
+    "question": "Which Cloud Computing concept is described as: A cloud region is a geographic area containing multiple isolated infrastructure locations?",
+    "options": [
+      "Region",
+      "Availability zone",
+      "Disaster recovery",
+      "Public cloud"
+    ],
+    "answer": "Region"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Global Infrastructure",
+    "difficulty": "Medium",
+    "question": "Which description best explains Region?",
+    "options": [
+      "A cloud region is a geographic area containing multiple isolated infrastructure locations",
+      "An availability zone is an isolated location within a cloud region",
+      "Disaster recovery restores systems and data after a major disruption",
+      "A public cloud offers provider-operated resources shared securely among customers"
+    ],
+    "answer": "A cloud region is a geographic area containing multiple isolated infrastructure locations"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Global Infrastructure",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Region?",
+    "options": [
+      "choosing where workloads and data are geographically hosted",
+      "spreading an application across failure-independent facilities",
+      "meeting recovery-time and recovery-point objectives after an outage",
+      "obtaining on-demand infrastructure from a commercial cloud provider"
+    ],
+    "answer": "choosing where workloads and data are geographically hosted"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Global Infrastructure",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for choosing where workloads and data are geographically hosted?",
+    "options": [
+      "Availability zone",
+      "Disaster recovery",
+      "Public cloud",
+      "Region"
+    ],
+    "answer": "Region"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Global Infrastructure",
+    "difficulty": "Medium",
+    "question": "Which Cloud Computing concept is described as: An availability zone is an isolated location within a cloud region?",
+    "options": [
+      "Availability zone",
+      "Virtual private cloud",
+      "Infrastructure as Code",
+      "Private cloud"
+    ],
+    "answer": "Availability zone"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Global Infrastructure",
+    "difficulty": "Medium",
+    "question": "Which description best explains Availability zone?",
+    "options": [
+      "An availability zone is an isolated location within a cloud region",
+      "A virtual private cloud is a logically isolated cloud network",
+      "Infrastructure as Code defines infrastructure in version-controlled machine-readable files",
+      "A private cloud dedicates cloud infrastructure to one organization"
+    ],
+    "answer": "An availability zone is an isolated location within a cloud region"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Global Infrastructure",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Availability zone?",
+    "options": [
+      "spreading an application across failure-independent facilities",
+      "defining private address ranges, routes, and subnets for workloads",
+      "creating repeatable cloud environments through automation",
+      "meeting organization-specific control or isolation requirements"
+    ],
+    "answer": "spreading an application across failure-independent facilities"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Global Infrastructure",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for spreading an application across failure-independent facilities?",
+    "options": [
+      "Virtual private cloud",
+      "Infrastructure as Code",
+      "Private cloud",
+      "Availability zone"
+    ],
+    "answer": "Availability zone"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Networking",
+    "difficulty": "Medium",
+    "question": "Which Cloud Computing concept is described as: A virtual private cloud is a logically isolated cloud network?",
+    "options": [
+      "Virtual private cloud",
+      "Cloud IAM",
+      "Observability",
+      "Hybrid cloud"
+    ],
+    "answer": "Virtual private cloud"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Networking",
+    "difficulty": "Medium",
+    "question": "Which description best explains Virtual private cloud?",
+    "options": [
+      "A virtual private cloud is a logically isolated cloud network",
+      "Cloud identity and access management controls identities, roles, and permissions",
+      "Observability uses metrics, logs, and traces to understand internal system behavior",
+      "A hybrid cloud integrates private infrastructure with public-cloud services"
+    ],
+    "answer": "A virtual private cloud is a logically isolated cloud network"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Networking",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Virtual private cloud?",
+    "options": [
+      "defining private address ranges, routes, and subnets for workloads",
+      "granting a service only the cloud actions it needs",
+      "diagnosing a distributed cloud application from its telemetry",
+      "keeping sensitive workloads private while bursting other work to public resources"
+    ],
+    "answer": "defining private address ranges, routes, and subnets for workloads"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Networking",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for defining private address ranges, routes, and subnets for workloads?",
+    "options": [
+      "Cloud IAM",
+      "Observability",
+      "Hybrid cloud",
+      "Virtual private cloud"
+    ],
+    "answer": "Virtual private cloud"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Identity",
+    "difficulty": "Hard",
+    "question": "Which Cloud Computing concept is described as: Cloud identity and access management controls identities, roles, and permissions?",
+    "options": [
+      "Cloud IAM",
+      "Multi-tenancy",
+      "Infrastructure as a Service",
+      "Virtualization"
+    ],
+    "answer": "Cloud IAM"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Identity",
+    "difficulty": "Hard",
+    "question": "Which description best explains Cloud IAM?",
+    "options": [
+      "Cloud identity and access management controls identities, roles, and permissions",
+      "Multi-tenancy lets multiple customers share infrastructure with logical isolation",
+      "Infrastructure as a Service provides virtualized compute, storage, and networking resources",
+      "Virtualization allows multiple isolated virtual machines to share physical hardware"
+    ],
+    "answer": "Cloud identity and access management controls identities, roles, and permissions"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Identity",
+    "difficulty": "Hard",
+    "question": "What is a primary application of Cloud IAM?",
+    "options": [
+      "granting a service only the cloud actions it needs",
+      "efficiently serving separate customers from a common platform",
+      "running custom operating systems without owning physical servers",
+      "consolidating servers while retaining separate operating systems"
+    ],
+    "answer": "granting a service only the cloud actions it needs"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Identity",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for granting a service only the cloud actions it needs?",
+    "options": [
+      "Multi-tenancy",
+      "Infrastructure as a Service",
+      "Virtualization",
+      "Cloud IAM"
+    ],
+    "answer": "Cloud IAM"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Architecture",
+    "difficulty": "Hard",
+    "question": "Which Cloud Computing concept is described as: Multi-tenancy lets multiple customers share infrastructure with logical isolation?",
+    "options": [
+      "Multi-tenancy",
+      "Elasticity",
+      "Platform as a Service",
+      "Container"
+    ],
+    "answer": "Multi-tenancy"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Architecture",
+    "difficulty": "Hard",
+    "question": "Which description best explains Multi-tenancy?",
+    "options": [
+      "Multi-tenancy lets multiple customers share infrastructure with logical isolation",
+      "Elasticity is the ability to rapidly add or remove resources as demand changes",
+      "Platform as a Service provides a managed application platform and runtime",
+      "A container packages an application and dependencies while sharing the host kernel"
+    ],
+    "answer": "Multi-tenancy lets multiple customers share infrastructure with logical isolation"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Architecture",
+    "difficulty": "Hard",
+    "question": "What is a primary application of Multi-tenancy?",
+    "options": [
+      "efficiently serving separate customers from a common platform",
+      "matching capacity to a changing workload and avoiding idle resources",
+      "deploying code without managing the underlying operating system",
+      "shipping a consistent lightweight application environment"
+    ],
+    "answer": "efficiently serving separate customers from a common platform"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Architecture",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for efficiently serving separate customers from a common platform?",
+    "options": [
+      "Elasticity",
+      "Platform as a Service",
+      "Container",
+      "Multi-tenancy"
+    ],
+    "answer": "Multi-tenancy"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Scalability",
+    "difficulty": "Hard",
+    "question": "Which Cloud Computing concept is described as: Elasticity is the ability to rapidly add or remove resources as demand changes?",
+    "options": [
+      "Elasticity",
+      "High availability",
+      "Software as a Service",
+      "Kubernetes"
+    ],
+    "answer": "Elasticity"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Scalability",
+    "difficulty": "Hard",
+    "question": "Which description best explains Elasticity?",
+    "options": [
+      "Elasticity is the ability to rapidly add or remove resources as demand changes",
+      "High availability minimizes downtime through redundancy and fault-tolerant design",
+      "Software as a Service delivers a complete application over a network",
+      "Kubernetes automates deployment, scaling, and management of containerized applications"
+    ],
+    "answer": "Elasticity is the ability to rapidly add or remove resources as demand changes"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Scalability",
+    "difficulty": "Hard",
+    "question": "What is a primary application of Elasticity?",
+    "options": [
+      "matching capacity to a changing workload and avoiding idle resources",
+      "keeping a service operating when an instance fails",
+      "using business software through a browser without installing its server",
+      "coordinating containers across a cluster"
+    ],
+    "answer": "matching capacity to a changing workload and avoiding idle resources"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Scalability",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for matching capacity to a changing workload and avoiding idle resources?",
+    "options": [
+      "High availability",
+      "Software as a Service",
+      "Kubernetes",
+      "Elasticity"
+    ],
+    "answer": "Elasticity"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Reliability",
+    "difficulty": "Hard",
+    "question": "Which Cloud Computing concept is described as: High availability minimizes downtime through redundancy and fault-tolerant design?",
+    "options": [
+      "High availability",
+      "Disaster recovery",
+      "Public cloud",
+      "Serverless computing"
+    ],
+    "answer": "High availability"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Reliability",
+    "difficulty": "Hard",
+    "question": "Which description best explains High availability?",
+    "options": [
+      "High availability minimizes downtime through redundancy and fault-tolerant design",
+      "Disaster recovery restores systems and data after a major disruption",
+      "A public cloud offers provider-operated resources shared securely among customers",
+      "Serverless computing runs event-driven code while the provider manages servers and scaling"
+    ],
+    "answer": "High availability minimizes downtime through redundancy and fault-tolerant design"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Reliability",
+    "difficulty": "Hard",
+    "question": "What is a primary application of High availability?",
+    "options": [
+      "keeping a service operating when an instance fails",
+      "meeting recovery-time and recovery-point objectives after an outage",
+      "obtaining on-demand infrastructure from a commercial cloud provider",
+      "executing short functions without provisioning instances"
+    ],
+    "answer": "keeping a service operating when an instance fails"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Reliability",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for keeping a service operating when an instance fails?",
+    "options": [
+      "Disaster recovery",
+      "Public cloud",
+      "Serverless computing",
+      "High availability"
+    ],
+    "answer": "High availability"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Reliability",
+    "difficulty": "Hard",
+    "question": "Which Cloud Computing concept is described as: Disaster recovery restores systems and data after a major disruption?",
+    "options": [
+      "Disaster recovery",
+      "Infrastructure as Code",
+      "Private cloud",
+      "Auto scaling"
+    ],
+    "answer": "Disaster recovery"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Reliability",
+    "difficulty": "Hard",
+    "question": "Which description best explains Disaster recovery?",
+    "options": [
+      "Disaster recovery restores systems and data after a major disruption",
+      "Infrastructure as Code defines infrastructure in version-controlled machine-readable files",
+      "A private cloud dedicates cloud infrastructure to one organization",
+      "Auto scaling adjusts resource capacity according to demand or policy"
+    ],
+    "answer": "Disaster recovery restores systems and data after a major disruption"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Reliability",
+    "difficulty": "Hard",
+    "question": "What is a primary application of Disaster recovery?",
+    "options": [
+      "meeting recovery-time and recovery-point objectives after an outage",
+      "creating repeatable cloud environments through automation",
+      "meeting organization-specific control or isolation requirements",
+      "adding instances during traffic spikes and removing them later"
+    ],
+    "answer": "meeting recovery-time and recovery-point objectives after an outage"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Reliability",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for meeting recovery-time and recovery-point objectives after an outage?",
+    "options": [
+      "Infrastructure as Code",
+      "Private cloud",
+      "Auto scaling",
+      "Disaster recovery"
+    ],
+    "answer": "Disaster recovery"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Automation",
+    "difficulty": "Hard",
+    "question": "Which Cloud Computing concept is described as: Infrastructure as Code defines infrastructure in version-controlled machine-readable files?",
+    "options": [
+      "Infrastructure as Code",
+      "Observability",
+      "Hybrid cloud",
+      "Load balancing"
+    ],
+    "answer": "Infrastructure as Code"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Automation",
+    "difficulty": "Hard",
+    "question": "Which description best explains Infrastructure as Code?",
+    "options": [
+      "Infrastructure as Code defines infrastructure in version-controlled machine-readable files",
+      "Observability uses metrics, logs, and traces to understand internal system behavior",
+      "A hybrid cloud integrates private infrastructure with public-cloud services",
+      "Load balancing distributes requests across multiple healthy service instances"
+    ],
+    "answer": "Infrastructure as Code defines infrastructure in version-controlled machine-readable files"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Automation",
+    "difficulty": "Hard",
+    "question": "What is a primary application of Infrastructure as Code?",
+    "options": [
+      "creating repeatable cloud environments through automation",
+      "diagnosing a distributed cloud application from its telemetry",
+      "keeping sensitive workloads private while bursting other work to public resources",
+      "preventing one server from receiving all incoming traffic"
+    ],
+    "answer": "creating repeatable cloud environments through automation"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Automation",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for creating repeatable cloud environments through automation?",
+    "options": [
+      "Observability",
+      "Hybrid cloud",
+      "Load balancing",
+      "Infrastructure as Code"
+    ],
+    "answer": "Infrastructure as Code"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Operations",
+    "difficulty": "Hard",
+    "question": "Which Cloud Computing concept is described as: Observability uses metrics, logs, and traces to understand internal system behavior?",
+    "options": [
+      "Observability",
+      "Infrastructure as a Service",
+      "Virtualization",
+      "Object storage"
+    ],
+    "answer": "Observability"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Operations",
+    "difficulty": "Hard",
+    "question": "Which description best explains Observability?",
+    "options": [
+      "Observability uses metrics, logs, and traces to understand internal system behavior",
+      "Infrastructure as a Service provides virtualized compute, storage, and networking resources",
+      "Virtualization allows multiple isolated virtual machines to share physical hardware",
+      "Object storage keeps data as objects addressed by keys in scalable buckets"
+    ],
+    "answer": "Observability uses metrics, logs, and traces to understand internal system behavior"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Operations",
+    "difficulty": "Hard",
+    "question": "What is a primary application of Observability?",
+    "options": [
+      "diagnosing a distributed cloud application from its telemetry",
+      "running custom operating systems without owning physical servers",
+      "consolidating servers while retaining separate operating systems",
+      "storing images, backups, and static files at large scale"
+    ],
+    "answer": "diagnosing a distributed cloud application from its telemetry"
+  },
+  {
+    "subject": "Cloud Computing",
+    "topic": "Operations",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for diagnosing a distributed cloud application from its telemetry?",
+    "options": [
+      "Infrastructure as a Service",
+      "Virtualization",
+      "Object storage",
+      "Observability"
+    ],
+    "answer": "Observability"
+  }
+]
