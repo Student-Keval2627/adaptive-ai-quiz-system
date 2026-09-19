@@ -6,6 +6,7 @@
 
 :root {
   font-family: "DM Sans", sans-serif;
+  color-scheme: dark;
 
   /* Core palette: gold, deep navy and slate. */
   --gold: #efc710;
@@ -58,6 +59,30 @@
   box-sizing: border-box;
 }
 
+::selection {
+  color: var(--navy-deep);
+  background: var(--gold);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--navy-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 3px solid var(--navy-deep);
+  border-radius: 999px;
+  background: var(--slate);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -92,6 +117,25 @@ input {
 button {
   border: none;
   cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(239, 199, 16, 0.72);
+  outline-offset: 3px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--slate);
+  opacity: 0.82;
 }
 
 button,
@@ -178,6 +222,20 @@ a {
   background: rgba(239, 199, 16, 0.17);
 
   animation-delay: -4s;
+}
+
+/* Keep decorative lighting subtle so content remains the focus. */
+.background-orb,
+.auth-glow,
+.quiz-background-glow,
+.results-glow,
+.performance-glow,
+.weak-glow,
+.achievement-glow-one,
+.achievement-glow-two,
+.profile-glow,
+.settings-glow {
+  opacity: 0.09;
 }
 
 /* =========================================================
