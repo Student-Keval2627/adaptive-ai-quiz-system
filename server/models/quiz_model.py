@@ -22,22 +22,21 @@ from database import (
 # QUESTION BANK CONFIG
 # =========================================================
 
-QUESTION_BANK_VERSION = 3
+QUESTION_BANK_VERSION = 4
 
-QUESTION_DATA_DIR = (
-    Path(__file__)
-    .resolve()
-    .parent
-    .parent
-    / "data"
-    / "questions"
-)
+QUESTIONS_PER_SUBJECT = 1000
 
-VALID_DIFFICULTIES = [
-    "Easy",
-    "Medium",
-    "Hard",
-]
+DIFFICULTY_QUESTION_TARGETS = {
+    "Easy": 300,      # Low level
+    "Medium": 400,    # Mid level
+    "Hard": 300,      # High level
+}
+
+DIFFICULTY_DISPLAY_NAMES = {
+    "Easy": "Low",
+    "Medium": "Mid",
+    "Hard": "High",
+}
 
 PLANNED_SUBJECTS = [
     "Python",
@@ -62,6 +61,27 @@ PLANNED_SUBJECTS = [
     "Git & GitHub",
     "Software Engineering",
     "Computer Architecture",
+    "Cyber Security",
+    "Cloud Computing",
+    "Data Science",
+    
+]
+QUESTION_VARIANT_PROMPTS = [
+    "Foundation check: {question}",
+    "Concept review: {question}",
+    "Quick assessment: {question}",
+    "Select the most accurate response: {question}",
+    "Knowledge checkpoint: {question}",
+    "Practice challenge: {question}",
+    "Technical interview check: {question}",
+    "Revision question: {question}",
+    "Applied learning check: {question}",
+    "Core concept test: {question}",
+    "Skill validation: {question}",
+    "Mastery checkpoint: {question}",
+    "Exam practice: {question}",
+    "Focused review: {question}",
+    "Final concept check: {question}",
 ]
 
 
