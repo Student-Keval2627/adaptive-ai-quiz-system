@@ -1,0 +1,403 @@
+/* =========================================================
+   MINIMAL BLACK & WHITE DESIGN LAYER
+========================================================= */
+
+:root {
+  --mono-bg: #080808;
+  --mono-surface: #111111;
+  --mono-surface-hover: #171717;
+  --mono-border: rgba(255, 255, 255, 0.1);
+  --mono-border-strong: rgba(255, 255, 255, 0.22);
+  --mono-text: #f5f5f5;
+  --mono-muted: #a3a3a3;
+  --mono-white: #ffffff;
+}
+
+body {
+  background: var(--mono-bg);
+}
+
+.auth-page,
+.quiz-page,
+.quiz-running-page,
+.results-page,
+.performance-page,
+.weak-page,
+.achievements-page,
+.profile-page,
+.settings-page {
+  color: var(--mono-text) !important;
+  background: var(--mono-bg) !important;
+}
+
+.grid-background,
+.background-orb,
+.auth-glow,
+.quiz-background-glow,
+.results-glow,
+.performance-glow,
+.weak-glow,
+.achievements-glow,
+.profile-glow,
+.settings-glow {
+  display: none !important;
+}
+
+/* Navigation */
+
+.sidebar {
+  background: #080808 !important;
+  border-right: 1px solid var(--mono-border) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.brand-logo,
+.auth-brand-icon,
+.quiz-brand-icon,
+.results-brand-icon,
+.performance-brand-icon,
+.weak-brand-icon,
+.achievements-brand-icon,
+.profile-brand-icon,
+.settings-brand-icon {
+  color: #080808 !important;
+  background: var(--mono-white) !important;
+  border: 1px solid var(--mono-white) !important;
+  box-shadow: none !important;
+}
+
+.sidebar-link {
+  color: var(--mono-muted) !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+
+.sidebar-link:hover {
+  color: var(--mono-white) !important;
+  background: var(--mono-surface) !important;
+  border-color: var(--mono-border) !important;
+  transform: none !important;
+}
+
+.sidebar-link.active {
+  color: #080808 !important;
+  background: var(--mono-white) !important;
+  border-color: var(--mono-white) !important;
+}
+
+.sidebar-link.active svg {
+  color: #080808 !important;
+}
+
+.active-indicator {
+  background: #080808 !important;
+  box-shadow: none !important;
+}
+
+.topbar,
+.quiz-topbar,
+.quiz-running-topbar,
+.results-topbar,
+.performance-topbar,
+.weak-topbar,
+.achievements-topbar,
+.profile-topbar,
+.settings-topbar {
+  background: rgba(8, 8, 8, 0.94) !important;
+  border-bottom: 1px solid var(--mono-border) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(14px) !important;
+}
+
+/* Flat surfaces */
+
+:where(
+  .auth-card,
+  .hero,
+  .panel,
+  .learning-panel,
+  .focus-panel,
+  .brain-card,
+  .quiz-setup-card,
+  .quiz-question-card,
+  .quiz-info-card,
+  .results-panel,
+  .performance-panel,
+  .weak-panel,
+  .achievements-panel,
+  .profile-panel,
+  .settings-panel,
+  [class$="-stat-card"],
+  [class$="-subject-card"],
+  [class$="-insight-card"],
+  [class$="-level-card"]
+) {
+  background: var(--mono-surface) !important;
+  border: 1px solid var(--mono-border) !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+:where(
+  .panel,
+  .learning-panel,
+  .focus-panel,
+  .brain-card,
+  .quiz-setup-card,
+  .quiz-question-card,
+  .quiz-info-card,
+  [class$="-stat-card"],
+  [class$="-subject-card"],
+  [class$="-insight-card"]
+):hover {
+  background: var(--mono-surface-hover) !important;
+  border-color: var(--mono-border-strong) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.hero::before,
+.hero::after,
+.auth-card::before,
+.quiz-setup-card::before,
+.quiz-question-card::before {
+  display: none !important;
+}
+
+/* Buttons */
+
+:where(
+  .primary-button,
+  .auth-submit-button,
+  .quiz-start-button,
+  .quiz-check-button,
+  .results-primary-button,
+  .performance-start-button,
+  .performance-practice-button,
+  .weak-start-button,
+  .weak-practice-button,
+  .weak-main-practice-button,
+  .achievements-start-button,
+  .achievement-practice-button,
+  .profile-start-button,
+  .profile-practice-button,
+  .profile-save-button,
+  .settings-main-save-button,
+  .focus-button,
+  .table-button
+) {
+  color: #080808 !important;
+  background: var(--mono-white) !important;
+  border: 1px solid var(--mono-white) !important;
+  border-radius: 9px !important;
+  box-shadow: none !important;
+}
+
+:where(
+  .primary-button,
+  .auth-submit-button,
+  .quiz-start-button,
+  .quiz-check-button,
+  .results-primary-button,
+  .performance-start-button,
+  .performance-practice-button,
+  .weak-start-button,
+  .weak-practice-button,
+  .weak-main-practice-button,
+  .achievements-start-button,
+  .achievement-practice-button,
+  .profile-start-button,
+  .profile-practice-button,
+  .profile-save-button,
+  .settings-main-save-button,
+  .focus-button,
+  .table-button
+):hover {
+  color: #080808 !important;
+  background: #e5e5e5 !important;
+  border-color: #e5e5e5 !important;
+  box-shadow: none !important;
+  transform: translateY(-1px) !important;
+}
+
+:where(
+  .secondary-button,
+  .results-secondary-button,
+  .profile-edit-button,
+  .settings-reset-button,
+  [class$="-back-button"]
+) {
+  color: var(--mono-text) !important;
+  background: transparent !important;
+  border: 1px solid var(--mono-border-strong) !important;
+  border-radius: 9px !important;
+  box-shadow: none !important;
+}
+
+:where(
+  .secondary-button,
+  .results-secondary-button,
+  .profile-edit-button,
+  .settings-reset-button,
+  [class$="-back-button"]
+):hover {
+  color: var(--mono-white) !important;
+  background: var(--mono-surface-hover) !important;
+  border-color: rgba(255, 255, 255, 0.34) !important;
+  transform: none !important;
+}
+
+/* Forms */
+
+.auth-input-wrapper,
+.profile-field input,
+.settings-field input,
+.settings-field select,
+.quiz-select-label select,
+input,
+select,
+textarea {
+  color: var(--mono-text) !important;
+  background: #0d0d0d !important;
+  border-color: var(--mono-border) !important;
+  box-shadow: none !important;
+}
+
+.auth-input-wrapper:focus-within,
+.profile-field input:focus,
+.settings-field input:focus,
+.settings-field select:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Quiz choices and progress */
+
+.quiz-option {
+  color: var(--mono-text) !important;
+  background: #0d0d0d !important;
+  border: 1px solid var(--mono-border) !important;
+  box-shadow: none !important;
+}
+
+.quiz-option:hover:not(:disabled),
+.quiz-option-selected {
+  color: var(--mono-white) !important;
+  background: var(--mono-surface-hover) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  transform: none !important;
+}
+
+.quiz-option-letter {
+  color: var(--mono-text) !important;
+  background: transparent !important;
+  border: 1px solid var(--mono-border-strong) !important;
+}
+
+.quiz-option-selected .quiz-option-letter {
+  color: #080808 !important;
+  background: var(--mono-white) !important;
+  border-color: var(--mono-white) !important;
+}
+
+.quiz-option-correct {
+  color: #d9f99d !important;
+  background: rgba(139, 209, 124, 0.08) !important;
+  border-color: rgba(139, 209, 124, 0.5) !important;
+}
+
+.quiz-option-correct .quiz-option-letter {
+  color: #080808 !important;
+  background: #8bd17c !important;
+  border-color: #8bd17c !important;
+}
+
+.quiz-option-wrong {
+  color: #fecaca !important;
+  background: rgba(255, 105, 78, 0.08) !important;
+  border-color: rgba(255, 105, 78, 0.5) !important;
+}
+
+.quiz-option-wrong .quiz-option-letter {
+  color: #080808 !important;
+  background: #ff7454 !important;
+  border-color: #ff7454 !important;
+}
+
+.progress-track,
+.mini-progress,
+[class$="-track"] {
+  background: #242424 !important;
+}
+
+.progress-fill,
+[class$="-fill"] {
+  background: var(--mono-white) !important;
+  box-shadow: none !important;
+}
+
+/* Labels, icons and decorative rings */
+
+.hero-badge,
+.auth-badge,
+.quiz-hero-badge,
+[class$="-hero-badge"],
+.ai-mini-badge,
+[class$="-ai-badge"] {
+  color: var(--mono-text) !important;
+  background: #151515 !important;
+  border: 1px solid var(--mono-border) !important;
+  box-shadow: none !important;
+}
+
+.brain-ring,
+.focus-circle,
+[class$="-ai-ring"],
+[class$="-score-ring"] {
+  border-color: var(--mono-border-strong) !important;
+  box-shadow: none !important;
+}
+
+.floating-pill {
+  color: var(--mono-text) !important;
+  background: #151515 !important;
+  border: 1px solid var(--mono-border) !important;
+  box-shadow: none !important;
+}
+
+/* Remove ornamental movement while keeping useful transitions. */
+
+.brand-logo::before,
+.auth-brand-icon::before,
+.button-play::after {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .background-orb,
+  .floating-pill,
+  .brain-ring,
+  .focus-circle {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 650px) {
+  :where(
+    .auth-card,
+    .hero,
+    .panel,
+    .quiz-setup-card,
+    .quiz-question-card,
+    [class$="-stat-card"]
+  ) {
+    border-radius: 12px !important;
+  }
+}
