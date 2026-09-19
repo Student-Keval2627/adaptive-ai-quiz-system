@@ -685,6 +685,14 @@ function Quiz() {
 
 
   const [
+    milestoneMessage,
+    setMilestoneMessage,
+  ] = useState(
+    ""
+  );
+
+
+  const [
     score,
     setScore,
   ] = useState(
@@ -1020,6 +1028,11 @@ function Quiz() {
         );
 
 
+        setMilestoneMessage(
+          ""
+        );
+
+
         setScore(
           0
         );
@@ -1151,6 +1164,12 @@ function Quiz() {
 
         setAnswerChecked(
           true
+        );
+
+
+        setMilestoneMessage(
+          data.milestone?.message ||
+          ""
         );
 
 
@@ -1334,6 +1353,11 @@ function Quiz() {
 
         setCorrectAnswer(
           null
+        );
+
+
+        setMilestoneMessage(
+          ""
         );
 
 
@@ -2256,6 +2280,27 @@ function Quiz() {
                   {isCorrect
                     ? "Correct. Your next question will adapt to this answer."
                     : `Correct answer: ${correctAnswer}. The next question will adapt to your performance.`}
+                </p>
+
+              </div>
+
+            </div>
+          )}
+
+
+          {milestoneMessage && (
+            <div className="quiz-feedback quiz-feedback-correct">
+
+              <Trophy size={18} />
+
+              <div>
+
+                <strong>
+                  Low level completed!
+                </strong>
+
+                <p>
+                  {milestoneMessage}
                 </p>
 
               </div>
