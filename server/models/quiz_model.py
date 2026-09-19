@@ -1617,6 +1617,17 @@ def create_question_indexes():
         ]
     )
 
+    question_history_collection.create_index(
+        [
+            ("userId", 1),
+            ("subject", 1),
+            ("difficulty", 1),
+            ("isCorrect", 1),
+        ],
+        name=
+            "user_subject_mastery_progress",
+    )
+
 
 # =========================================================
 # SAFE QUESTION BANK SYNC
@@ -2126,6 +2137,28 @@ def record_question_answer(
                 "Question not found",
         }
 
+    existing_history = (
+        question_history_collection
+        .find_one(
+            {
+                "userId":
+                    object_user_id,
+                "questionId":
+                    object_question_id,
+            },
+            {
+                "isCorrect": 1,
+            },
+        )
+    )
+
+    already_mastered = bool(
+        existing_history
+        and existing_history.get(
+            "isCorrect"
+        )
+    )
+
     correct_answer = question.get(
         "answer"
     )
@@ -2200,7 +2233,121 @@ def record_question_answer(
         "success": True,
         "correct":
             is_correct,
+        "newlyMastered":
+            (
+                is_correct and
+                not already_mastered
+            ),
     }
+
+
+# =========================================================
+# SUBJECT MASTERY PROGRESS
+# =========================================================
+
+def get_subject_mastery_progress(
+    user_id,
+    subject,
+):
+    object_user_id = safe_object_id(
+        user_id
+    )
+
+    subject = str(
+        subject or ""
+    ).strip()
+
+    levels = {}
+
+    for difficulty in VALID_DIFFICULTIES:
+        target = (
+            DIFFICULTY_QUESTION_TARGETS[
+                difficulty
+            ]
+        )
+
+        completed = 0
+
+        if (
+            object_user_id and
+            subject
+        ):
+            completed = (
+                question_history_collection
+                .count_documents(
+                    {
+                        "userId":
+                            object_user_id,
+                        "subject":
+                            subject,
+                        "difficulty":
+                            difficulty,
+                        "isCorrect":
+                            True,
+                    }
+                )
+            )
+
+        completed = min(
+            int(completed),
+            target,
+        )
+
+        percentage = round(
+            (
+                completed /
+                target
+            ) * 100
+        ) if target else 0
+
+        levels[difficulty] = {
+            "name":
+                DIFFICULTY_DISPLAY_NAMES[
+                    difficulty
+                ],
+            "completed":
+                completed,
+            "target":
+                target,
+            "percentage":
+                percentage,
+            "passed":
+                completed >= target,
+        }
+
+    total_completed = sum(
+        level["completed"]
+        for level in levels.values()
+    )
+
+    total_percentage = round(
+        (
+            total_completed /
+            QUESTIONS_PER_SUBJECT
+        ) * 100
+    )
+
+    return {
+        "subject":
+            subject,
+        "totalCompleted":
+            total_completed,
+        "totalTarget":
+            QUESTIONS_PER_SUBJECT,
+        "percentage":
+            total_percentage,
+        "levels":
+            levels,
+        "lowLevelPassed":
+            levels["Easy"]["passed"],
+        "subjectCompleted":
+            (
+                total_completed >=
+                QUESTIONS_PER_SUBJECT
+            ),
+    }
+
+
 # =========================================================
 # RANDOM SAMPLE
 # =========================================================
