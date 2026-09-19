@@ -3,6 +3,6 @@ const configuredApiBase = String(
 ).trim();
 
 export const API_BASE = configuredApiBase.replace(
-  /\\\/+$/,
+  /\/+$/,
   ""
 );
