@@ -22,7 +22,7 @@ from database import (
 # QUESTION BANK CONFIG
 # =========================================================
 
-QUESTION_BANK_VERSION = 4
+QUESTION_BANK_VERSION = 5
 
 QUESTIONS_PER_SUBJECT = 1000
 
