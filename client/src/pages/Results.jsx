@@ -1,3 +1,5 @@
+import { API_BASE } from "../config/api";
+
 import {
   useEffect,
   useMemo,
@@ -27,10 +29,6 @@ import {
 } from "lucide-react";
 
 import "./Results.css";
-
-
-const API_BASE =
-  "http://127.0.0.1:5000";
 
 
 function Results() {

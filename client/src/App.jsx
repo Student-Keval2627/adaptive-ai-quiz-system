@@ -1,3 +1,5 @@
+import { API_BASE } from "./config/api";
+
 import {
   BrowserRouter,
   Navigate,
@@ -20,10 +22,6 @@ import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-
-
-const API_BASE =
-  "http://127.0.0.1:5000";
 
 
 /* =========================================================

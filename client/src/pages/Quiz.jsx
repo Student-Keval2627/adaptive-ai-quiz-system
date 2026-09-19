@@ -1,3 +1,5 @@
+import { API_BASE } from "../config/api";
+
 import {
   useEffect,
   useState,
@@ -26,10 +28,6 @@ import {
 } from "lucide-react";
 
 import "./Quiz.css";
-
-
-const API_BASE =
-  "http://127.0.0.1:5000";
 
 
 const defaultQuizSettings = {

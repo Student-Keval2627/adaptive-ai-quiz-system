@@ -1,3 +1,5 @@
+import { API_BASE } from "../config/api";
+
 import {
   LayoutDashboard,
   BrainCircuit,
@@ -29,9 +31,6 @@ import {
   useLocation,
   useNavigate,
 } from "react-router-dom";
-
-const API_BASE =
-  "http://127.0.0.1:5000";
 
 const FALLBACK_SUBJECTS = [
   "Python",
