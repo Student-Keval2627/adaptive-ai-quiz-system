@@ -1321,7 +1321,80 @@ def load_external_questions():
 
     return loaded_questions
 
+# =========================================================
+# BUILD QUESTION VARIANT
+# =========================================================
 
+def build_question_variant(
+    source_question,
+    variant_index,
+):
+    prompt_index = (
+        variant_index
+        % len(
+            QUESTION_VARIANT_PROMPTS
+        )
+    )
+
+    round_number = (
+        variant_index
+        // len(
+            QUESTION_VARIANT_PROMPTS
+        )
+    ) + 1
+
+    prompt = QUESTION_VARIANT_PROMPTS[
+        prompt_index
+    ]
+
+    question_text = prompt.format(
+        question=source_question[
+            "question"
+        ]
+    )
+
+    if round_number > 1:
+        question_text = (
+            f"{question_text} "
+            f"(Practice round {round_number})"
+        )
+
+    options = list(
+        source_question[
+            "options"
+        ]
+    )
+
+    if options:
+        rotation = (
+            variant_index
+            % len(options)
+        )
+
+        options = (
+            options[rotation:]
+            + options[:rotation]
+        )
+
+    return {
+        "subject":
+            source_question["subject"],
+
+        "topic":
+            source_question["topic"],
+
+        "difficulty":
+            source_question["difficulty"],
+
+        "question":
+            question_text,
+
+        "options":
+            options,
+
+        "answer":
+            source_question["answer"],
+    }
 # =========================================================
 # BUILD COMPLETE QUESTION BANK
 # =========================================================
