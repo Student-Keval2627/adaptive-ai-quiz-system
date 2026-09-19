@@ -12,6 +12,7 @@ import {
 import {
   ArrowLeft,
   ArrowRight,
+  Award,
   BrainCircuit,
   Check,
   ChevronRight,
@@ -20,6 +21,7 @@ import {
   Flame,
   LoaderCircle,
   Play,
+  Printer,
   Sparkles,
   Target,
   Trophy,
@@ -693,6 +695,14 @@ function Quiz() {
 
 
   const [
+    certificate,
+    setCertificate,
+  ] = useState(
+    null
+  );
+
+
+  const [
     score,
     setScore,
   ] = useState(
@@ -1033,6 +1043,11 @@ function Quiz() {
         );
 
 
+        setCertificate(
+          null
+        );
+
+
         setScore(
           0
         );
@@ -1168,8 +1183,16 @@ function Quiz() {
 
 
         setMilestoneMessage(
-          data.milestone?.message ||
-          ""
+          data.milestone?.type ===
+            "LOW_LEVEL_PASSED"
+            ? data.milestone.message
+            : ""
+        );
+
+
+        setCertificate(
+          data.certificate ||
+          null
         );
 
 
@@ -2028,6 +2051,137 @@ function Quiz() {
 
       <div className="quiz-background-glow glow-one" />
       <div className="quiz-background-glow glow-two" />
+
+
+      {certificate && (
+        <div
+          className="quiz-certificate-overlay"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Subject mastery certificate"
+        >
+
+          <section className="quiz-certificate-modal">
+
+            <div className="quiz-certificate-inner">
+
+              <div className="quiz-certificate-brand">
+                <BrainCircuit size={28} />
+                <span>
+                  NeuraQuiz
+                </span>
+              </div>
+
+
+              <Award
+                className="quiz-certificate-award"
+                size={54}
+              />
+
+
+              <p className="quiz-certificate-kicker">
+                Certificate of Mastery
+              </p>
+
+
+              <h2>
+                {certificate.studentName}
+              </h2>
+
+
+              <p className="quiz-certificate-copy">
+                has successfully mastered
+              </p>
+
+
+              <h3>
+                {certificate.subject}
+              </h3>
+
+
+              <p className="quiz-certificate-copy">
+                by correctly completing all{" "}
+                <strong>
+                  {certificate.completedQuestions}
+                </strong>{" "}
+                unique questions across Low,
+                Mid and High levels.
+              </p>
+
+
+              <div className="quiz-certificate-meta">
+
+                <div>
+                  <span>
+                    Certificate ID
+                  </span>
+
+                  <strong>
+                    {certificate.certificateId}
+                  </strong>
+                </div>
+
+
+                <div>
+                  <span>
+                    Issued on
+                  </span>
+
+                  <strong>
+                    {certificate.issuedAt
+                      ? new Date(
+                          certificate.issuedAt
+                        ).toLocaleDateString()
+                      : "Today"}
+                  </strong>
+                </div>
+
+              </div>
+
+
+              <div className="quiz-certificate-signature">
+                <span />
+                <strong>
+                  NeuraQuiz Learning Platform
+                </strong>
+              </div>
+
+            </div>
+
+
+            <div className="quiz-certificate-actions">
+
+              <button
+                type="button"
+                className="quiz-certificate-close"
+                onClick={() =>
+                  setCertificate(
+                    null
+                  )
+                }
+              >
+                <X size={17} />
+                Close
+              </button>
+
+
+              <button
+                type="button"
+                className="quiz-certificate-print"
+                onClick={() =>
+                  window.print()
+                }
+              >
+                <Printer size={17} />
+                Print / Save PDF
+              </button>
+
+            </div>
+
+          </section>
+
+        </div>
+      )}
 
 
       <header className="quiz-running-topbar">
