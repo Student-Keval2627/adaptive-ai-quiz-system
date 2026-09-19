@@ -89,7 +89,10 @@
     rgba(10, 10, 9, 0.74);
 
   border-bottom:
-    1px solid rgba(187, 155, 243,
+    1px solid rgba(
+      187,
+      155,
+      243,
       0.055
     );
 
@@ -118,7 +121,10 @@
     rgba(255, 255, 255, 0.02);
 
   border:
-    1px solid rgba(255, 255, 255,
+    1px solid rgba(
+      255,
+      255,
+      255,
       0.055
     );
 
@@ -305,7 +311,10 @@
     rgba(141, 88, 234, 0.055);
 
   border:
-    1px solid rgba(140, 86, 234,
+    1px solid rgba(
+      140,
+      86,
+      234,
       0.12
     );
 
@@ -383,16 +392,25 @@
   background:
     linear-gradient(
       145deg,
-      rgba(22, 20, 18,
+      rgba(
+        22,
+        20,
+        18,
         0.95
       ),
-      rgba(12, 12, 11,
+      rgba(
+        12,
+        12,
+        11,
         0.93
       )
     );
 
   border:
-    1px solid rgba(149, 99, 236,
+    1px solid rgba(
+      149,
+      99,
+      236,
       0.08
     );
 }
@@ -458,7 +476,10 @@
   color: #8bd17c;
 
   background:
-    rgba(139, 209, 124,
+    rgba(
+      139,
+      209,
+      124,
       0.055
     );
 
@@ -487,16 +508,25 @@
   background:
     linear-gradient(
       145deg,
-      rgba(20, 19, 17,
+      rgba(
+        20,
+        19,
+        17,
         0.94
       ),
-      rgba(11, 11, 10,
+      rgba(
+        11,
+        11,
+        10,
         0.92
       )
     );
 
   border:
-    1px solid rgba(187, 155, 243,
+    1px solid rgba(
+      187,
+      155,
+      243,
       0.065
     );
 
@@ -555,7 +585,10 @@
   gap: 20px;
 
   border-top:
-    1px solid rgba(255, 255, 255,
+    1px solid rgba(
+      255,
+      255,
+      255,
       0.04
     );
 }
@@ -581,7 +614,10 @@
   color: #9b6bed;
 
   background:
-    rgba(141, 88, 234,
+    rgba(
+      141,
+      88,
+      234,
       0.06
     );
 }
@@ -625,7 +661,10 @@
   background: #151412;
 
   border:
-    1px solid rgba(255, 255, 255,
+    1px solid rgba(
+      255,
+      255,
+      255,
       0.06
     );
 
@@ -636,7 +675,10 @@
 
 .settings-select:focus {
   border-color:
-    rgba(140, 85, 234,
+    rgba(
+      140,
+      85,
+      234,
       0.25
     );
 }
@@ -656,7 +698,10 @@
   border-radius: 100px;
 
   background:
-    rgba(255, 255, 255,
+    rgba(
+      255,
+      255,
+      255,
       0.07
     );
 
@@ -681,7 +726,10 @@
 
 .settings-toggle-active {
   background:
-    rgba(141, 88, 234,
+    rgba(
+      141,
+      88,
+      234,
       0.18
     );
 }
@@ -699,7 +747,10 @@
 
   box-shadow:
     0 0 12px
-    rgba(132, 73, 233,
+    rgba(
+      132,
+      73,
+      233,
       0.3
     );
 }
@@ -724,16 +775,25 @@
   background:
     linear-gradient(
       100deg,
-      rgba(141, 88, 234,
+      rgba(
+        141,
+        88,
+        234,
         0.045
       ),
-      rgba(17, 16, 15,
+      rgba(
+        17,
+        16,
+        15,
         0.94
       )
     );
 
   border:
-    1px solid rgba(143, 90, 235,
+    1px solid rgba(
+      143,
+      90,
+      235,
       0.09
     );
 
@@ -763,7 +823,10 @@
   color: #9f71ee;
 
   background:
-    rgba(141, 88, 234,
+    rgba(
+      141,
+      88,
+      234,
       0.07
     );
 }
@@ -813,12 +876,18 @@
   text-align: center;
 
   background:
-    rgba(255, 255, 255,
+    rgba(
+      255,
+      255,
+      255,
       0.018
     );
 
   border:
-    1px solid rgba(255, 255, 255,
+    1px solid rgba(
+      255,
+      255,
+      255,
       0.045
     );
 }
@@ -861,16 +930,25 @@
   background:
     linear-gradient(
       145deg,
-      rgba(20, 19, 17,
+      rgba(
+        20,
+        19,
+        17,
         0.94
       ),
-      rgba(11, 11, 10,
+      rgba(
+        11,
+        11,
+        10,
         0.92
       )
     );
 
   border:
-    1px solid rgba(187, 155, 243,
+    1px solid rgba(
+      187,
+      155,
+      243,
       0.065
     );
 }
@@ -930,12 +1008,18 @@
   color: #8b8f9c;
 
   background:
-    rgba(255, 255, 255,
+    rgba(
+      255,
+      255,
+      255,
       0.02
     );
 
   border:
-    1px solid rgba(255, 255, 255,
+    1px solid rgba(
+      255,
+      255,
+      255,
       0.055
     );
 }
@@ -944,7 +1028,10 @@
   color: #bb9bf3;
 
   background:
-    rgba(141, 88, 234,
+    rgba(
+      141,
+      88,
+      234,
       0.04
     );
 }
@@ -967,7 +1054,10 @@
 
   box-shadow:
     0 14px 30px
-    rgba(126, 65, 232,
+    rgba(
+      126,
+      65,
+      232,
       0.22
     );
 }
@@ -995,12 +1085,18 @@
   color: #91cf86;
 
   background:
-    rgba(139, 209, 124,
+    rgba(
+      139,
+      209,
+      124,
       0.05
     );
 
   border:
-    1px solid rgba(139, 209, 124,
+    1px solid rgba(
+      139,
+      209,
+      124,
       0.08
     );
 
@@ -1094,7 +1190,10 @@
 
     box-shadow:
       0 0 25px
-      rgba(130, 71, 232,
+      rgba(
+        130,
+        71,
+        232,
         0.1
       );
   }
