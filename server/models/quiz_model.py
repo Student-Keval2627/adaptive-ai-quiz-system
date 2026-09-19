@@ -1396,6 +1396,97 @@ def build_question_variant(
             source_question["answer"],
     }
 # =========================================================
+# EXPAND SUBJECT QUESTION BANK
+# =========================================================
+
+def expand_subject_question_bank(
+    questions,
+):
+    grouped_questions = {}
+
+    for question in questions:
+        key = (
+            question["subject"],
+            question["difficulty"],
+        )
+
+        grouped_questions.setdefault(
+            key,
+            [],
+        ).append(
+            question
+        )
+
+    expanded_questions = []
+
+    for subject in PLANNED_SUBJECTS:
+        for difficulty in VALID_DIFFICULTIES:
+            target = (
+                DIFFICULTY_QUESTION_TARGETS[
+                    difficulty
+                ]
+            )
+
+            source_questions = sorted(
+                grouped_questions.get(
+                    (
+                        subject,
+                        difficulty,
+                    ),
+                    [],
+                ),
+                key=lambda item:
+                    item["question"].lower(),
+            )
+
+            if not source_questions:
+                continue
+
+            difficulty_questions = list(
+                source_questions[:target]
+            )
+
+            variant_number = 0
+
+            while (
+                len(difficulty_questions)
+                < target
+            ):
+                source_index = (
+                    variant_number
+                    % len(source_questions)
+                )
+
+                source_question = (
+                    source_questions[
+                        source_index
+                    ]
+                )
+
+                variant_index = (
+                    variant_number
+                    // len(source_questions)
+                )
+
+                variant = (
+                    build_question_variant(
+                        source_question,
+                        variant_index,
+                    )
+                )
+
+                difficulty_questions.append(
+                    variant
+                )
+
+                variant_number += 1
+
+            expanded_questions.extend(
+                difficulty_questions
+            )
+
+    return expanded_questions
+# =========================================================
 # BUILD COMPLETE QUESTION BANK
 # =========================================================
 
