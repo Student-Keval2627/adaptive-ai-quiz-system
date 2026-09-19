@@ -73,6 +73,10 @@ quiz_attempts_collection = db[
     "quiz_attempts"
 ]
 
+certificates_collection = db[
+    "certificates"
+]
+
 
 # =========================================================
 # QUESTION HISTORY
