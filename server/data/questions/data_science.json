@@ -1,0 +1,1302 @@
+[
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Easy",
+    "question": "Which Data Science concept is described as: Data cleaning detects and corrects inaccurate, inconsistent, or incomplete data?",
+    "options": [
+      "Data cleaning",
+      "Exploratory data analysis",
+      "Regression",
+      "Regularization"
+    ],
+    "answer": "Data cleaning"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Easy",
+    "question": "Which description best explains Data cleaning?",
+    "options": [
+      "Data cleaning detects and corrects inaccurate, inconsistent, or incomplete data",
+      "Exploratory data analysis summarizes and visualizes data to discover patterns and anomalies",
+      "Regression predicts a continuous numeric value",
+      "Regularization penalizes model complexity to reduce overfitting"
+    ],
+    "answer": "Data cleaning detects and corrects inaccurate, inconsistent, or incomplete data"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Data cleaning?",
+    "options": [
+      "improving dataset quality before analysis",
+      "understanding a dataset before formal modeling",
+      "estimating a house price from its attributes",
+      "discouraging excessively large model coefficients"
+    ],
+    "answer": "improving dataset quality before analysis"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for improving dataset quality before analysis?",
+    "options": [
+      "Exploratory data analysis",
+      "Regression",
+      "Regularization",
+      "Data cleaning"
+    ],
+    "answer": "Data cleaning"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Analysis",
+    "difficulty": "Easy",
+    "question": "Which Data Science concept is described as: Exploratory data analysis summarizes and visualizes data to discover patterns and anomalies?",
+    "options": [
+      "Exploratory data analysis",
+      "Feature engineering",
+      "Clustering",
+      "Normalization"
+    ],
+    "answer": "Exploratory data analysis"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Analysis",
+    "difficulty": "Easy",
+    "question": "Which description best explains Exploratory data analysis?",
+    "options": [
+      "Exploratory data analysis summarizes and visualizes data to discover patterns and anomalies",
+      "Feature engineering creates or transforms variables to improve a model's representation of a problem",
+      "Clustering groups observations so similar items are placed together",
+      "Normalization commonly rescales numeric values into a fixed range"
+    ],
+    "answer": "Exploratory data analysis summarizes and visualizes data to discover patterns and anomalies"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Analysis",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Exploratory data analysis?",
+    "options": [
+      "understanding a dataset before formal modeling",
+      "turning raw timestamps into useful calendar features",
+      "segmenting customers without predefined group labels",
+      "placing features on a comparable bounded scale"
+    ],
+    "answer": "understanding a dataset before formal modeling"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Analysis",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for understanding a dataset before formal modeling?",
+    "options": [
+      "Feature engineering",
+      "Clustering",
+      "Normalization",
+      "Exploratory data analysis"
+    ],
+    "answer": "Exploratory data analysis"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Easy",
+    "question": "Which Data Science concept is described as: Feature engineering creates or transforms variables to improve a model's representation of a problem?",
+    "options": [
+      "Feature engineering",
+      "Train-test split",
+      "Dimensionality reduction",
+      "Standardization"
+    ],
+    "answer": "Feature engineering"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Easy",
+    "question": "Which description best explains Feature engineering?",
+    "options": [
+      "Feature engineering creates or transforms variables to improve a model's representation of a problem",
+      "A train-test split separates model fitting data from unseen evaluation data",
+      "Dimensionality reduction represents data using fewer variables while preserving important structure",
+      "Standardization centers a feature and scales it using its standard deviation"
+    ],
+    "answer": "Feature engineering creates or transforms variables to improve a model's representation of a problem"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Feature engineering?",
+    "options": [
+      "turning raw timestamps into useful calendar features",
+      "estimating how a model generalizes beyond its training examples",
+      "visualizing high-dimensional data or reducing redundant features",
+      "transforming a numeric feature to approximately zero mean and unit variance"
+    ],
+    "answer": "turning raw timestamps into useful calendar features"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for turning raw timestamps into useful calendar features?",
+    "options": [
+      "Train-test split",
+      "Dimensionality reduction",
+      "Standardization",
+      "Feature engineering"
+    ],
+    "answer": "Feature engineering"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Easy",
+    "question": "Which Data Science concept is described as: A train-test split separates model fitting data from unseen evaluation data?",
+    "options": [
+      "Train-test split",
+      "Supervised learning",
+      "Overfitting",
+      "Missing-value imputation"
+    ],
+    "answer": "Train-test split"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Easy",
+    "question": "Which description best explains Train-test split?",
+    "options": [
+      "A train-test split separates model fitting data from unseen evaluation data",
+      "Supervised learning learns a mapping from inputs to known target labels or values",
+      "Overfitting occurs when a model learns training-specific noise and generalizes poorly",
+      "Missing-value imputation replaces absent values using a defined strategy"
+    ],
+    "answer": "A train-test split separates model fitting data from unseen evaluation data"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Train-test split?",
+    "options": [
+      "estimating how a model generalizes beyond its training examples",
+      "training a predictor from labeled examples",
+      "explaining excellent training results but weak test performance",
+      "allowing analysis when some observations have incomplete fields"
+    ],
+    "answer": "estimating how a model generalizes beyond its training examples"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for estimating how a model generalizes beyond its training examples?",
+    "options": [
+      "Supervised learning",
+      "Overfitting",
+      "Missing-value imputation",
+      "Train-test split"
+    ],
+    "answer": "Train-test split"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Learning Methods",
+    "difficulty": "Easy",
+    "question": "Which Data Science concept is described as: Supervised learning learns a mapping from inputs to known target labels or values?",
+    "options": [
+      "Supervised learning",
+      "Unsupervised learning",
+      "Underfitting",
+      "Outlier detection"
+    ],
+    "answer": "Supervised learning"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Learning Methods",
+    "difficulty": "Easy",
+    "question": "Which description best explains Supervised learning?",
+    "options": [
+      "Supervised learning learns a mapping from inputs to known target labels or values",
+      "Unsupervised learning searches for structure in data without target labels",
+      "Underfitting occurs when a model is too simple to capture important patterns",
+      "Outlier detection identifies observations that differ strongly from typical patterns"
+    ],
+    "answer": "Supervised learning learns a mapping from inputs to known target labels or values"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Learning Methods",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Supervised learning?",
+    "options": [
+      "training a predictor from labeled examples",
+      "discovering natural groups in unlabeled records",
+      "explaining poor performance on both training and test data",
+      "finding unusual measurements that may be errors or rare events"
+    ],
+    "answer": "training a predictor from labeled examples"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Learning Methods",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for training a predictor from labeled examples?",
+    "options": [
+      "Unsupervised learning",
+      "Underfitting",
+      "Outlier detection",
+      "Supervised learning"
+    ],
+    "answer": "Supervised learning"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Learning Methods",
+    "difficulty": "Easy",
+    "question": "Which Data Science concept is described as: Unsupervised learning searches for structure in data without target labels?",
+    "options": [
+      "Unsupervised learning",
+      "Classification",
+      "Cross-validation",
+      "Confusion matrix"
+    ],
+    "answer": "Unsupervised learning"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Learning Methods",
+    "difficulty": "Easy",
+    "question": "Which description best explains Unsupervised learning?",
+    "options": [
+      "Unsupervised learning searches for structure in data without target labels",
+      "Classification predicts one of a set of discrete categories",
+      "Cross-validation evaluates a model across multiple train-validation partitions",
+      "A confusion matrix counts predicted and actual classes in a classification task"
+    ],
+    "answer": "Unsupervised learning searches for structure in data without target labels"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Learning Methods",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Unsupervised learning?",
+    "options": [
+      "discovering natural groups in unlabeled records",
+      "predicting whether a transaction is fraudulent or legitimate",
+      "obtaining a more stable estimate of model performance",
+      "examining true positives, false positives, true negatives, and false negatives"
+    ],
+    "answer": "discovering natural groups in unlabeled records"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Learning Methods",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for discovering natural groups in unlabeled records?",
+    "options": [
+      "Classification",
+      "Cross-validation",
+      "Confusion matrix",
+      "Unsupervised learning"
+    ],
+    "answer": "Unsupervised learning"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Modeling",
+    "difficulty": "Easy",
+    "question": "Which Data Science concept is described as: Classification predicts one of a set of discrete categories?",
+    "options": [
+      "Classification",
+      "Regression",
+      "Regularization",
+      "Precision"
+    ],
+    "answer": "Classification"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Modeling",
+    "difficulty": "Easy",
+    "question": "Which description best explains Classification?",
+    "options": [
+      "Classification predicts one of a set of discrete categories",
+      "Regression predicts a continuous numeric value",
+      "Regularization penalizes model complexity to reduce overfitting",
+      "Precision is the fraction of predicted positive cases that are actually positive"
+    ],
+    "answer": "Classification predicts one of a set of discrete categories"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Modeling",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Classification?",
+    "options": [
+      "predicting whether a transaction is fraudulent or legitimate",
+      "estimating a house price from its attributes",
+      "discouraging excessively large model coefficients",
+      "measuring how trustworthy positive predictions are"
+    ],
+    "answer": "predicting whether a transaction is fraudulent or legitimate"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Modeling",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for predicting whether a transaction is fraudulent or legitimate?",
+    "options": [
+      "Regression",
+      "Regularization",
+      "Precision",
+      "Classification"
+    ],
+    "answer": "Classification"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Modeling",
+    "difficulty": "Easy",
+    "question": "Which Data Science concept is described as: Regression predicts a continuous numeric value?",
+    "options": [
+      "Regression",
+      "Clustering",
+      "Normalization",
+      "Recall"
+    ],
+    "answer": "Regression"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Modeling",
+    "difficulty": "Easy",
+    "question": "Which description best explains Regression?",
+    "options": [
+      "Regression predicts a continuous numeric value",
+      "Clustering groups observations so similar items are placed together",
+      "Normalization commonly rescales numeric values into a fixed range",
+      "Recall is the fraction of actual positive cases that a model correctly finds"
+    ],
+    "answer": "Regression predicts a continuous numeric value"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Modeling",
+    "difficulty": "Easy",
+    "question": "What is a primary application of Regression?",
+    "options": [
+      "estimating a house price from its attributes",
+      "segmenting customers without predefined group labels",
+      "placing features on a comparable bounded scale",
+      "measuring how completely positive cases are detected"
+    ],
+    "answer": "estimating a house price from its attributes"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Modeling",
+    "difficulty": "Easy",
+    "question": "Which concept is most directly used for estimating a house price from its attributes?",
+    "options": [
+      "Clustering",
+      "Normalization",
+      "Recall",
+      "Regression"
+    ],
+    "answer": "Regression"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Modeling",
+    "difficulty": "Medium",
+    "question": "Which Data Science concept is described as: Clustering groups observations so similar items are placed together?",
+    "options": [
+      "Clustering",
+      "Dimensionality reduction",
+      "Standardization",
+      "F1 score"
+    ],
+    "answer": "Clustering"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Modeling",
+    "difficulty": "Medium",
+    "question": "Which description best explains Clustering?",
+    "options": [
+      "Clustering groups observations so similar items are placed together",
+      "Dimensionality reduction represents data using fewer variables while preserving important structure",
+      "Standardization centers a feature and scales it using its standard deviation",
+      "The F1 score is the harmonic mean of precision and recall"
+    ],
+    "answer": "Clustering groups observations so similar items are placed together"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Modeling",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Clustering?",
+    "options": [
+      "segmenting customers without predefined group labels",
+      "visualizing high-dimensional data or reducing redundant features",
+      "transforming a numeric feature to approximately zero mean and unit variance",
+      "balancing precision and recall in one classification metric"
+    ],
+    "answer": "segmenting customers without predefined group labels"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Modeling",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for segmenting customers without predefined group labels?",
+    "options": [
+      "Dimensionality reduction",
+      "Standardization",
+      "F1 score",
+      "Clustering"
+    ],
+    "answer": "Clustering"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Medium",
+    "question": "Which Data Science concept is described as: Dimensionality reduction represents data using fewer variables while preserving important structure?",
+    "options": [
+      "Dimensionality reduction",
+      "Overfitting",
+      "Missing-value imputation",
+      "ROC-AUC"
+    ],
+    "answer": "Dimensionality reduction"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Medium",
+    "question": "Which description best explains Dimensionality reduction?",
+    "options": [
+      "Dimensionality reduction represents data using fewer variables while preserving important structure",
+      "Overfitting occurs when a model learns training-specific noise and generalizes poorly",
+      "Missing-value imputation replaces absent values using a defined strategy",
+      "ROC-AUC summarizes ranking performance across classification thresholds"
+    ],
+    "answer": "Dimensionality reduction represents data using fewer variables while preserving important structure"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Dimensionality reduction?",
+    "options": [
+      "visualizing high-dimensional data or reducing redundant features",
+      "explaining excellent training results but weak test performance",
+      "allowing analysis when some observations have incomplete fields",
+      "comparing binary classifiers without selecting one threshold first"
+    ],
+    "answer": "visualizing high-dimensional data or reducing redundant features"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for visualizing high-dimensional data or reducing redundant features?",
+    "options": [
+      "Overfitting",
+      "Missing-value imputation",
+      "ROC-AUC",
+      "Dimensionality reduction"
+    ],
+    "answer": "Dimensionality reduction"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Model Quality",
+    "difficulty": "Medium",
+    "question": "Which Data Science concept is described as: Overfitting occurs when a model learns training-specific noise and generalizes poorly?",
+    "options": [
+      "Overfitting",
+      "Underfitting",
+      "Outlier detection",
+      "Data leakage"
+    ],
+    "answer": "Overfitting"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Model Quality",
+    "difficulty": "Medium",
+    "question": "Which description best explains Overfitting?",
+    "options": [
+      "Overfitting occurs when a model learns training-specific noise and generalizes poorly",
+      "Underfitting occurs when a model is too simple to capture important patterns",
+      "Outlier detection identifies observations that differ strongly from typical patterns",
+      "Data leakage occurs when training uses information unavailable at real prediction time"
+    ],
+    "answer": "Overfitting occurs when a model learns training-specific noise and generalizes poorly"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Model Quality",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Overfitting?",
+    "options": [
+      "explaining excellent training results but weak test performance",
+      "explaining poor performance on both training and test data",
+      "finding unusual measurements that may be errors or rare events",
+      "detecting unrealistically strong validation results caused by forbidden information"
+    ],
+    "answer": "explaining excellent training results but weak test performance"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Model Quality",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for explaining excellent training results but weak test performance?",
+    "options": [
+      "Underfitting",
+      "Outlier detection",
+      "Data leakage",
+      "Overfitting"
+    ],
+    "answer": "Overfitting"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Model Quality",
+    "difficulty": "Medium",
+    "question": "Which Data Science concept is described as: Underfitting occurs when a model is too simple to capture important patterns?",
+    "options": [
+      "Underfitting",
+      "Cross-validation",
+      "Confusion matrix",
+      "Reproducibility"
+    ],
+    "answer": "Underfitting"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Model Quality",
+    "difficulty": "Medium",
+    "question": "Which description best explains Underfitting?",
+    "options": [
+      "Underfitting occurs when a model is too simple to capture important patterns",
+      "Cross-validation evaluates a model across multiple train-validation partitions",
+      "A confusion matrix counts predicted and actual classes in a classification task",
+      "Reproducibility means an analysis can be rerun with the same data, code, environment, and results"
+    ],
+    "answer": "Underfitting occurs when a model is too simple to capture important patterns"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Model Quality",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Underfitting?",
+    "options": [
+      "explaining poor performance on both training and test data",
+      "obtaining a more stable estimate of model performance",
+      "examining true positives, false positives, true negatives, and false negatives",
+      "making a data-science result independently repeatable"
+    ],
+    "answer": "explaining poor performance on both training and test data"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Model Quality",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for explaining poor performance on both training and test data?",
+    "options": [
+      "Cross-validation",
+      "Confusion matrix",
+      "Reproducibility",
+      "Underfitting"
+    ],
+    "answer": "Underfitting"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Medium",
+    "question": "Which Data Science concept is described as: Cross-validation evaluates a model across multiple train-validation partitions?",
+    "options": [
+      "Cross-validation",
+      "Regularization",
+      "Precision",
+      "Data cleaning"
+    ],
+    "answer": "Cross-validation"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Medium",
+    "question": "Which description best explains Cross-validation?",
+    "options": [
+      "Cross-validation evaluates a model across multiple train-validation partitions",
+      "Regularization penalizes model complexity to reduce overfitting",
+      "Precision is the fraction of predicted positive cases that are actually positive",
+      "Data cleaning detects and corrects inaccurate, inconsistent, or incomplete data"
+    ],
+    "answer": "Cross-validation evaluates a model across multiple train-validation partitions"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Cross-validation?",
+    "options": [
+      "obtaining a more stable estimate of model performance",
+      "discouraging excessively large model coefficients",
+      "measuring how trustworthy positive predictions are",
+      "improving dataset quality before analysis"
+    ],
+    "answer": "obtaining a more stable estimate of model performance"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for obtaining a more stable estimate of model performance?",
+    "options": [
+      "Regularization",
+      "Precision",
+      "Data cleaning",
+      "Cross-validation"
+    ],
+    "answer": "Cross-validation"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Model Quality",
+    "difficulty": "Medium",
+    "question": "Which Data Science concept is described as: Regularization penalizes model complexity to reduce overfitting?",
+    "options": [
+      "Regularization",
+      "Normalization",
+      "Recall",
+      "Exploratory data analysis"
+    ],
+    "answer": "Regularization"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Model Quality",
+    "difficulty": "Medium",
+    "question": "Which description best explains Regularization?",
+    "options": [
+      "Regularization penalizes model complexity to reduce overfitting",
+      "Normalization commonly rescales numeric values into a fixed range",
+      "Recall is the fraction of actual positive cases that a model correctly finds",
+      "Exploratory data analysis summarizes and visualizes data to discover patterns and anomalies"
+    ],
+    "answer": "Regularization penalizes model complexity to reduce overfitting"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Model Quality",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Regularization?",
+    "options": [
+      "discouraging excessively large model coefficients",
+      "placing features on a comparable bounded scale",
+      "measuring how completely positive cases are detected",
+      "understanding a dataset before formal modeling"
+    ],
+    "answer": "discouraging excessively large model coefficients"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Model Quality",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for discouraging excessively large model coefficients?",
+    "options": [
+      "Normalization",
+      "Recall",
+      "Exploratory data analysis",
+      "Regularization"
+    ],
+    "answer": "Regularization"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Medium",
+    "question": "Which Data Science concept is described as: Normalization commonly rescales numeric values into a fixed range?",
+    "options": [
+      "Normalization",
+      "Standardization",
+      "F1 score",
+      "Feature engineering"
+    ],
+    "answer": "Normalization"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Medium",
+    "question": "Which description best explains Normalization?",
+    "options": [
+      "Normalization commonly rescales numeric values into a fixed range",
+      "Standardization centers a feature and scales it using its standard deviation",
+      "The F1 score is the harmonic mean of precision and recall",
+      "Feature engineering creates or transforms variables to improve a model's representation of a problem"
+    ],
+    "answer": "Normalization commonly rescales numeric values into a fixed range"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Normalization?",
+    "options": [
+      "placing features on a comparable bounded scale",
+      "transforming a numeric feature to approximately zero mean and unit variance",
+      "balancing precision and recall in one classification metric",
+      "turning raw timestamps into useful calendar features"
+    ],
+    "answer": "placing features on a comparable bounded scale"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for placing features on a comparable bounded scale?",
+    "options": [
+      "Standardization",
+      "F1 score",
+      "Feature engineering",
+      "Normalization"
+    ],
+    "answer": "Normalization"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Medium",
+    "question": "Which Data Science concept is described as: Standardization centers a feature and scales it using its standard deviation?",
+    "options": [
+      "Standardization",
+      "Missing-value imputation",
+      "ROC-AUC",
+      "Train-test split"
+    ],
+    "answer": "Standardization"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Medium",
+    "question": "Which description best explains Standardization?",
+    "options": [
+      "Standardization centers a feature and scales it using its standard deviation",
+      "Missing-value imputation replaces absent values using a defined strategy",
+      "ROC-AUC summarizes ranking performance across classification thresholds",
+      "A train-test split separates model fitting data from unseen evaluation data"
+    ],
+    "answer": "Standardization centers a feature and scales it using its standard deviation"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Standardization?",
+    "options": [
+      "transforming a numeric feature to approximately zero mean and unit variance",
+      "allowing analysis when some observations have incomplete fields",
+      "comparing binary classifiers without selecting one threshold first",
+      "estimating how a model generalizes beyond its training examples"
+    ],
+    "answer": "transforming a numeric feature to approximately zero mean and unit variance"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for transforming a numeric feature to approximately zero mean and unit variance?",
+    "options": [
+      "Missing-value imputation",
+      "ROC-AUC",
+      "Train-test split",
+      "Standardization"
+    ],
+    "answer": "Standardization"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Medium",
+    "question": "Which Data Science concept is described as: Missing-value imputation replaces absent values using a defined strategy?",
+    "options": [
+      "Missing-value imputation",
+      "Outlier detection",
+      "Data leakage",
+      "Supervised learning"
+    ],
+    "answer": "Missing-value imputation"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Medium",
+    "question": "Which description best explains Missing-value imputation?",
+    "options": [
+      "Missing-value imputation replaces absent values using a defined strategy",
+      "Outlier detection identifies observations that differ strongly from typical patterns",
+      "Data leakage occurs when training uses information unavailable at real prediction time",
+      "Supervised learning learns a mapping from inputs to known target labels or values"
+    ],
+    "answer": "Missing-value imputation replaces absent values using a defined strategy"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Missing-value imputation?",
+    "options": [
+      "allowing analysis when some observations have incomplete fields",
+      "finding unusual measurements that may be errors or rare events",
+      "detecting unrealistically strong validation results caused by forbidden information",
+      "training a predictor from labeled examples"
+    ],
+    "answer": "allowing analysis when some observations have incomplete fields"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Preparation",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for allowing analysis when some observations have incomplete fields?",
+    "options": [
+      "Outlier detection",
+      "Data leakage",
+      "Supervised learning",
+      "Missing-value imputation"
+    ],
+    "answer": "Missing-value imputation"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Quality",
+    "difficulty": "Medium",
+    "question": "Which Data Science concept is described as: Outlier detection identifies observations that differ strongly from typical patterns?",
+    "options": [
+      "Outlier detection",
+      "Confusion matrix",
+      "Reproducibility",
+      "Unsupervised learning"
+    ],
+    "answer": "Outlier detection"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Quality",
+    "difficulty": "Medium",
+    "question": "Which description best explains Outlier detection?",
+    "options": [
+      "Outlier detection identifies observations that differ strongly from typical patterns",
+      "A confusion matrix counts predicted and actual classes in a classification task",
+      "Reproducibility means an analysis can be rerun with the same data, code, environment, and results",
+      "Unsupervised learning searches for structure in data without target labels"
+    ],
+    "answer": "Outlier detection identifies observations that differ strongly from typical patterns"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Quality",
+    "difficulty": "Medium",
+    "question": "What is a primary application of Outlier detection?",
+    "options": [
+      "finding unusual measurements that may be errors or rare events",
+      "examining true positives, false positives, true negatives, and false negatives",
+      "making a data-science result independently repeatable",
+      "discovering natural groups in unlabeled records"
+    ],
+    "answer": "finding unusual measurements that may be errors or rare events"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Quality",
+    "difficulty": "Medium",
+    "question": "Which concept is most directly used for finding unusual measurements that may be errors or rare events?",
+    "options": [
+      "Confusion matrix",
+      "Reproducibility",
+      "Unsupervised learning",
+      "Outlier detection"
+    ],
+    "answer": "Outlier detection"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "Which Data Science concept is described as: A confusion matrix counts predicted and actual classes in a classification task?",
+    "options": [
+      "Confusion matrix",
+      "Precision",
+      "Data cleaning",
+      "Classification"
+    ],
+    "answer": "Confusion matrix"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "Which description best explains Confusion matrix?",
+    "options": [
+      "A confusion matrix counts predicted and actual classes in a classification task",
+      "Precision is the fraction of predicted positive cases that are actually positive",
+      "Data cleaning detects and corrects inaccurate, inconsistent, or incomplete data",
+      "Classification predicts one of a set of discrete categories"
+    ],
+    "answer": "A confusion matrix counts predicted and actual classes in a classification task"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "What is a primary application of Confusion matrix?",
+    "options": [
+      "examining true positives, false positives, true negatives, and false negatives",
+      "measuring how trustworthy positive predictions are",
+      "improving dataset quality before analysis",
+      "predicting whether a transaction is fraudulent or legitimate"
+    ],
+    "answer": "examining true positives, false positives, true negatives, and false negatives"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for examining true positives, false positives, true negatives, and false negatives?",
+    "options": [
+      "Precision",
+      "Data cleaning",
+      "Classification",
+      "Confusion matrix"
+    ],
+    "answer": "Confusion matrix"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "Which Data Science concept is described as: Precision is the fraction of predicted positive cases that are actually positive?",
+    "options": [
+      "Precision",
+      "Recall",
+      "Exploratory data analysis",
+      "Regression"
+    ],
+    "answer": "Precision"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "Which description best explains Precision?",
+    "options": [
+      "Precision is the fraction of predicted positive cases that are actually positive",
+      "Recall is the fraction of actual positive cases that a model correctly finds",
+      "Exploratory data analysis summarizes and visualizes data to discover patterns and anomalies",
+      "Regression predicts a continuous numeric value"
+    ],
+    "answer": "Precision is the fraction of predicted positive cases that are actually positive"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "What is a primary application of Precision?",
+    "options": [
+      "measuring how trustworthy positive predictions are",
+      "measuring how completely positive cases are detected",
+      "understanding a dataset before formal modeling",
+      "estimating a house price from its attributes"
+    ],
+    "answer": "measuring how trustworthy positive predictions are"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for measuring how trustworthy positive predictions are?",
+    "options": [
+      "Recall",
+      "Exploratory data analysis",
+      "Regression",
+      "Precision"
+    ],
+    "answer": "Precision"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "Which Data Science concept is described as: Recall is the fraction of actual positive cases that a model correctly finds?",
+    "options": [
+      "Recall",
+      "F1 score",
+      "Feature engineering",
+      "Clustering"
+    ],
+    "answer": "Recall"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "Which description best explains Recall?",
+    "options": [
+      "Recall is the fraction of actual positive cases that a model correctly finds",
+      "The F1 score is the harmonic mean of precision and recall",
+      "Feature engineering creates or transforms variables to improve a model's representation of a problem",
+      "Clustering groups observations so similar items are placed together"
+    ],
+    "answer": "Recall is the fraction of actual positive cases that a model correctly finds"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "What is a primary application of Recall?",
+    "options": [
+      "measuring how completely positive cases are detected",
+      "balancing precision and recall in one classification metric",
+      "turning raw timestamps into useful calendar features",
+      "segmenting customers without predefined group labels"
+    ],
+    "answer": "measuring how completely positive cases are detected"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for measuring how completely positive cases are detected?",
+    "options": [
+      "F1 score",
+      "Feature engineering",
+      "Clustering",
+      "Recall"
+    ],
+    "answer": "Recall"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "Which Data Science concept is described as: The F1 score is the harmonic mean of precision and recall?",
+    "options": [
+      "F1 score",
+      "ROC-AUC",
+      "Train-test split",
+      "Dimensionality reduction"
+    ],
+    "answer": "F1 score"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "Which description best explains F1 score?",
+    "options": [
+      "The F1 score is the harmonic mean of precision and recall",
+      "ROC-AUC summarizes ranking performance across classification thresholds",
+      "A train-test split separates model fitting data from unseen evaluation data",
+      "Dimensionality reduction represents data using fewer variables while preserving important structure"
+    ],
+    "answer": "The F1 score is the harmonic mean of precision and recall"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "What is a primary application of F1 score?",
+    "options": [
+      "balancing precision and recall in one classification metric",
+      "comparing binary classifiers without selecting one threshold first",
+      "estimating how a model generalizes beyond its training examples",
+      "visualizing high-dimensional data or reducing redundant features"
+    ],
+    "answer": "balancing precision and recall in one classification metric"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for balancing precision and recall in one classification metric?",
+    "options": [
+      "ROC-AUC",
+      "Train-test split",
+      "Dimensionality reduction",
+      "F1 score"
+    ],
+    "answer": "F1 score"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "Which Data Science concept is described as: ROC-AUC summarizes ranking performance across classification thresholds?",
+    "options": [
+      "ROC-AUC",
+      "Data leakage",
+      "Supervised learning",
+      "Overfitting"
+    ],
+    "answer": "ROC-AUC"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "Which description best explains ROC-AUC?",
+    "options": [
+      "ROC-AUC summarizes ranking performance across classification thresholds",
+      "Data leakage occurs when training uses information unavailable at real prediction time",
+      "Supervised learning learns a mapping from inputs to known target labels or values",
+      "Overfitting occurs when a model learns training-specific noise and generalizes poorly"
+    ],
+    "answer": "ROC-AUC summarizes ranking performance across classification thresholds"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "What is a primary application of ROC-AUC?",
+    "options": [
+      "comparing binary classifiers without selecting one threshold first",
+      "detecting unrealistically strong validation results caused by forbidden information",
+      "training a predictor from labeled examples",
+      "explaining excellent training results but weak test performance"
+    ],
+    "answer": "comparing binary classifiers without selecting one threshold first"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Evaluation",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for comparing binary classifiers without selecting one threshold first?",
+    "options": [
+      "Data leakage",
+      "Supervised learning",
+      "Overfitting",
+      "ROC-AUC"
+    ],
+    "answer": "ROC-AUC"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Quality",
+    "difficulty": "Hard",
+    "question": "Which Data Science concept is described as: Data leakage occurs when training uses information unavailable at real prediction time?",
+    "options": [
+      "Data leakage",
+      "Reproducibility",
+      "Unsupervised learning",
+      "Underfitting"
+    ],
+    "answer": "Data leakage"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Quality",
+    "difficulty": "Hard",
+    "question": "Which description best explains Data leakage?",
+    "options": [
+      "Data leakage occurs when training uses information unavailable at real prediction time",
+      "Reproducibility means an analysis can be rerun with the same data, code, environment, and results",
+      "Unsupervised learning searches for structure in data without target labels",
+      "Underfitting occurs when a model is too simple to capture important patterns"
+    ],
+    "answer": "Data leakage occurs when training uses information unavailable at real prediction time"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Quality",
+    "difficulty": "Hard",
+    "question": "What is a primary application of Data leakage?",
+    "options": [
+      "detecting unrealistically strong validation results caused by forbidden information",
+      "making a data-science result independently repeatable",
+      "discovering natural groups in unlabeled records",
+      "explaining poor performance on both training and test data"
+    ],
+    "answer": "detecting unrealistically strong validation results caused by forbidden information"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Data Quality",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for detecting unrealistically strong validation results caused by forbidden information?",
+    "options": [
+      "Reproducibility",
+      "Unsupervised learning",
+      "Underfitting",
+      "Data leakage"
+    ],
+    "answer": "Data leakage"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Workflow",
+    "difficulty": "Hard",
+    "question": "Which Data Science concept is described as: Reproducibility means an analysis can be rerun with the same data, code, environment, and results?",
+    "options": [
+      "Reproducibility",
+      "Data cleaning",
+      "Classification",
+      "Cross-validation"
+    ],
+    "answer": "Reproducibility"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Workflow",
+    "difficulty": "Hard",
+    "question": "Which description best explains Reproducibility?",
+    "options": [
+      "Reproducibility means an analysis can be rerun with the same data, code, environment, and results",
+      "Data cleaning detects and corrects inaccurate, inconsistent, or incomplete data",
+      "Classification predicts one of a set of discrete categories",
+      "Cross-validation evaluates a model across multiple train-validation partitions"
+    ],
+    "answer": "Reproducibility means an analysis can be rerun with the same data, code, environment, and results"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Workflow",
+    "difficulty": "Hard",
+    "question": "What is a primary application of Reproducibility?",
+    "options": [
+      "making a data-science result independently repeatable",
+      "improving dataset quality before analysis",
+      "predicting whether a transaction is fraudulent or legitimate",
+      "obtaining a more stable estimate of model performance"
+    ],
+    "answer": "making a data-science result independently repeatable"
+  },
+  {
+    "subject": "Data Science",
+    "topic": "Workflow",
+    "difficulty": "Hard",
+    "question": "Which concept is most directly used for making a data-science result independently repeatable?",
+    "options": [
+      "Data cleaning",
+      "Classification",
+      "Cross-validation",
+      "Reproducibility"
+    ],
+    "answer": "Reproducibility"
+  }
+]
