@@ -1,27 +1,60 @@
+"""Strict offline verification for the production question bank."""
+
 from collections import Counter, defaultdict
 from pathlib import Path
 import json
 import sys
+
 
 SERVER_DIR = Path(__file__).resolve().parents[1]
 
 if str(SERVER_DIR) not in sys.path:
     sys.path.insert(0, str(SERVER_DIR))
 
-from models.quiz_model import (
+from models.quiz_model import (  # noqa: E402
+    DIFFICULTY_QUESTION_TARGETS,
     PLANNED_SUBJECTS,
     QUESTION_DATA_DIR,
+    QUESTIONS_PER_SUBJECT,
     VALID_DIFFICULTIES,
     build_complete_question_bank,
 )
 
+
 def clean(value):
     return str(value if value is not None else "").strip()
+
+
+def question_key(subject, question):
+    return (
+        " ".join(clean(subject).lower().split()),
+        " ".join(clean(question).lower().split()),
+    )
+
 
 def main():
     errors = []
     raw_count = 0
-    json_files = sorted(QUESTION_DATA_DIR.rglob("*.json"))
+    raw_subject_counts = Counter()
+    raw_difficulty_counts = defaultdict(Counter)
+    subject_files = defaultdict(set)
+    raw_seen = set()
+    json_files = sorted(QUESTION_DATA_DIR.glob("*.json"))
+
+    if len(json_files) != len(PLANNED_SUBJECTS):
+        errors.append(
+            "Expected "
+            f"{len(PLANNED_SUBJECTS)} JSON files, found {len(json_files)}"
+        )
+
+    required = {
+        "subject",
+        "topic",
+        "difficulty",
+        "question",
+        "options",
+        "answer",
+    }
 
     for file_path in json_files:
         try:
@@ -34,68 +67,117 @@ def main():
             errors.append(f"{file_path.name}: root must be a list")
             continue
 
-        for i, q in enumerate(data, start=1):
+        file_subjects = set()
+
+        for index, question in enumerate(data, start=1):
             raw_count += 1
-            loc = f"{file_path.name} #{i}"
+            location = f"{file_path.name} #{index}"
 
-            if not isinstance(q, dict):
-                errors.append(f"{loc}: item is not an object")
+            if not isinstance(question, dict):
+                errors.append(f"{location}: item is not an object")
                 continue
 
-            required = {
-                "subject",
-                "topic",
-                "difficulty",
-                "question",
-                "options",
-                "answer",
-            }
-
-            missing = required - set(q.keys())
+            missing = required - set(question)
             if missing:
-                errors.append(f"{loc}: missing keys {sorted(missing)}")
+                errors.append(f"{location}: missing keys {sorted(missing)}")
                 continue
 
-            options = q.get("options")
-            answer = clean(q.get("answer"))
+            subject = clean(question.get("subject"))
+            topic = clean(question.get("topic"))
+            difficulty = clean(question.get("difficulty"))
+            text = clean(question.get("question"))
+            options = question.get("options")
+            answer = clean(question.get("answer"))
 
-            if clean(q.get("difficulty")) not in VALID_DIFFICULTIES:
-                errors.append(f"{loc}: invalid difficulty")
+            file_subjects.add(subject)
+            subject_files[subject].add(file_path.name)
+            raw_subject_counts[subject] += 1
+            raw_difficulty_counts[subject][difficulty] += 1
+
+            if subject not in PLANNED_SUBJECTS:
+                errors.append(f"{location}: unexpected subject {subject!r}")
+            if not topic:
+                errors.append(f"{location}: topic is empty")
+            if difficulty not in VALID_DIFFICULTIES:
+                errors.append(f"{location}: invalid difficulty {difficulty!r}")
+            if not text:
+                errors.append(f"{location}: question is empty")
+
+            key = question_key(subject, text)
+            if key in raw_seen:
+                errors.append(f"{location}: duplicate raw question")
+            raw_seen.add(key)
 
             if not isinstance(options, list) or len(options) != 4:
-                errors.append(f"{loc}: exactly 4 options required")
+                errors.append(f"{location}: exactly 4 options required")
                 continue
 
-            normalized = [clean(x) for x in options]
+            normalized_options = [clean(option) for option in options]
 
-            if len(set(normalized)) != 4:
-                errors.append(f"{loc}: duplicate options")
+            if any(not option for option in normalized_options):
+                errors.append(f"{location}: options cannot be empty")
+            if len(set(normalized_options)) != 4:
+                errors.append(f"{location}: duplicate options")
+            if answer not in normalized_options:
+                errors.append(f"{location}: answer not in options")
 
-            if answer not in normalized:
-                errors.append(f"{loc}: answer not in options")
+        if len(file_subjects) != 1:
+            errors.append(
+                f"{file_path.name}: expected one subject, found "
+                f"{sorted(file_subjects)}"
+            )
 
-    bank = build_complete_question_bank()
+    for subject in PLANNED_SUBJECTS:
+        if len(subject_files[subject]) != 1:
+            errors.append(
+                f"{subject}: expected one JSON file, found "
+                f"{sorted(subject_files[subject])}"
+            )
 
-    subject_counts = Counter()
-    difficulty_counts = defaultdict(Counter)
-    seen = set()
+        if raw_subject_counts[subject] != QUESTIONS_PER_SUBJECT:
+            errors.append(
+                f"{subject}: expected {QUESTIONS_PER_SUBJECT} raw questions, "
+                f"found {raw_subject_counts[subject]}"
+            )
 
-    for q in bank:
-        subject = clean(q.get("subject"))
-        difficulty = clean(q.get("difficulty"))
-        question = clean(q.get("question"))
+        for difficulty, target in DIFFICULTY_QUESTION_TARGETS.items():
+            actual = raw_difficulty_counts[subject][difficulty]
+            if actual != target:
+                errors.append(
+                    f"{subject}/{difficulty}: expected {target}, found {actual}"
+                )
 
-        key = (subject.lower(), question.lower())
+    try:
+        bank = build_complete_question_bank()
+    except Exception as exc:
+        errors.append(f"Unable to build final bank: {exc}")
+        bank = []
 
-        if key in seen:
-            errors.append(f"Duplicate final bank question: {subject} - {question}")
+    final_subject_counts = Counter()
+    final_difficulty_counts = defaultdict(Counter)
+    final_seen = set()
 
-        seen.add(key)
-        subject_counts[subject] += 1
-        difficulty_counts[subject][difficulty] += 1
+    for question in bank:
+        subject = clean(question.get("subject"))
+        difficulty = clean(question.get("difficulty"))
+        text = clean(question.get("question"))
+        key = question_key(subject, text)
+
+        if key in final_seen:
+            errors.append(f"Duplicate final question: {subject} - {text}")
+
+        final_seen.add(key)
+        final_subject_counts[subject] += 1
+        final_difficulty_counts[subject][difficulty] += 1
+
+    expected_total = len(PLANNED_SUBJECTS) * QUESTIONS_PER_SUBJECT
+    if raw_count != expected_total:
+        errors.append(f"Expected {expected_total} raw questions, found {raw_count}")
+    if len(bank) != expected_total:
+        errors.append(f"Expected {expected_total} final questions, found {len(bank)}")
 
     print("=" * 72)
-    print("NEURAQUIZ QUESTION BANK VERIFICATION V2")
+    print("NEURAQUIZ QUESTION BANK VERIFICATION V3")
     print("=" * 72)
     print(f"JSON files found        : {len(json_files)}")
     print(f"Raw JSON questions      : {raw_count}")
@@ -105,42 +187,30 @@ def main():
     print(f"{'Subject':32}{'Easy':>8}{'Medium':>10}{'Hard':>8}{'Total':>8}")
     print("-" * 72)
 
-    below_100 = {}
-
     for subject in PLANNED_SUBJECTS:
-        e = difficulty_counts[subject].get("Easy", 0)
-        m = difficulty_counts[subject].get("Medium", 0)
-        h = difficulty_counts[subject].get("Hard", 0)
-        total = subject_counts[subject]
-
-        print(f"{subject:32}{e:>8}{m:>10}{h:>8}{total:>8}")
-
-        if total < 100:
-            below_100[subject] = total
+        easy = final_difficulty_counts[subject].get("Easy", 0)
+        medium = final_difficulty_counts[subject].get("Medium", 0)
+        hard = final_difficulty_counts[subject].get("Hard", 0)
+        total = final_subject_counts[subject]
+        print(f"{subject:32}{easy:>8}{medium:>10}{hard:>8}{total:>8}")
 
     print("-" * 72)
 
-    if below_100:
-        print("SUBJECTS BELOW 100:")
-        for subject, count in below_100.items():
-            print(f"- {subject}: {count}")
-
     if errors:
-        print()
-        print("VALIDATION ERRORS:")
-        for error in errors[:50]:
+        print("\nVALIDATION ERRORS:")
+        for error in errors[:100]:
             print("[ERROR]", error)
+        if len(errors) > 100:
+            print(f"... and {len(errors) - 100} more errors")
+        print("\nFAIL: Review the output above.")
+        return 1
 
-        if len(errors) > 50:
-            print(f"... and {len(errors) - 50} more errors")
+    print(
+        "\nPASS: 25,000 raw questions are valid, duplicate-free, and "
+        "match every subject and difficulty target."
+    )
+    return 0
 
-    print()
-    if not errors and not below_100:
-        print("PASS: Question bank is valid, duplicate-free, and every planned subject has at least 100 questions.")
-        return 0
-
-    print("FAIL: Review the output above.")
-    return 1
 
 if __name__ == "__main__":
     raise SystemExit(main())
