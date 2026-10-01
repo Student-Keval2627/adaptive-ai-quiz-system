@@ -1,4 +1,4 @@
-import { API_BASE } from "../config/api";
+import { API_BASE, apiFetch } from "../config/api";
 
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -84,7 +84,7 @@ function Register() {
       setLoading(true);
       setError("");
 
-      const response = await fetch(
+      const response = await apiFetch(
         `${API_BASE}/api/auth/register`,
         {
           method: "POST",

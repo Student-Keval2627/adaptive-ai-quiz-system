@@ -1,4 +1,4 @@
-import { API_BASE } from "../config/api";
+import { API_BASE, apiFetch } from "../config/api";
 
 import {
   useEffect,
@@ -783,7 +783,7 @@ function Quiz() {
 
 
           const response =
-            await fetch(
+            await apiFetch(
               `${API_BASE}/api/quiz/subjects`,
               {
                 credentials:
@@ -942,7 +942,7 @@ function Quiz() {
 
 
         const response =
-          await fetch(
+          await apiFetch(
             `${API_BASE}/api/quiz/start`,
             {
               method:
@@ -1127,7 +1127,7 @@ function Quiz() {
 
 
         const response =
-          await fetch(
+          await apiFetch(
             `${API_BASE}/api/quiz/check`,
             {
               method:
@@ -1288,7 +1288,7 @@ function Quiz() {
 
 
         const response =
-          await fetch(
+          await apiFetch(
             `${API_BASE}/api/quiz/next`,
             {
               method:
@@ -1428,7 +1428,7 @@ function Quiz() {
 
 
         const response =
-          await fetch(
+          await apiFetch(
             `${API_BASE}/api/results`,
             {
               method:

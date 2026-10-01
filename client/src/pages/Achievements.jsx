@@ -1,4 +1,4 @@
-import { API_BASE } from "../config/api";
+import { API_BASE, apiFetch } from "../config/api";
 
 import {
   useEffect,
@@ -143,7 +143,7 @@ function Achievements() {
         setLoading(true);
         setError("");
 
-        const response = await fetch(
+        const response = await apiFetch(
           `${API_BASE}/api/auth/me`,
           {
             credentials: "include",

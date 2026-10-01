@@ -1,4 +1,4 @@
-import { API_BASE } from "../config/api";
+import { API_BASE, apiFetch } from "../config/api";
 
 import {
   useEffect,
@@ -86,7 +86,7 @@ function Results() {
           ============================================== */
 
           const resultResponse =
-            await fetch(
+            await apiFetch(
               `${API_BASE}/api/results?limit=50`,
               {
                 credentials:
@@ -163,7 +163,7 @@ function Results() {
           ============================================== */
 
           const userResponse =
-            await fetch(
+            await apiFetch(
               `${API_BASE}/api/auth/me`,
               {
                 credentials:

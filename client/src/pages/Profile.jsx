@@ -1,4 +1,4 @@
-import { API_BASE } from "../config/api";
+import { API_BASE, apiFetch } from "../config/api";
 
 import {
   useEffect,
@@ -258,7 +258,7 @@ function Profile() {
           ============================================== */
 
           const userResponse =
-            await fetch(
+            await apiFetch(
               `${API_BASE}/api/auth/me`,
               {
                 credentials:
@@ -359,7 +359,7 @@ function Profile() {
           ) {
             try {
               const subjectResponse =
-                await fetch(
+                await apiFetch(
                   `${API_BASE}/api/auth/subjects`,
                   {
                     credentials:
@@ -474,7 +474,7 @@ function Profile() {
           ============================================== */
 
           const resultResponse =
-            await fetch(
+            await apiFetch(
               `${API_BASE}/api/results?limit=100`,
               {
                 credentials:
@@ -664,7 +664,7 @@ function Profile() {
 
 
         const response =
-          await fetch(
+          await apiFetch(
             `${API_BASE}/api/auth/profile`,
             {
               method: "PUT",
@@ -805,7 +805,7 @@ function Profile() {
         setLoggingOut(true);
 
 
-        await fetch(
+        await apiFetch(
           `${API_BASE}/api/auth/logout`,
           {
             method: "POST",

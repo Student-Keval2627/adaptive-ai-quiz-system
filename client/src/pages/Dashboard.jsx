@@ -1,4 +1,4 @@
-import { API_BASE } from "../config/api";
+import { API_BASE, apiFetch } from "../config/api";
 
 import {
   LayoutDashboard,
@@ -487,7 +487,7 @@ function Dashboard() {
           );
 
           const userResponse =
-            await fetch(
+            await apiFetch(
               `${API_BASE}/api/auth/me`,
               {
                 credentials:
@@ -548,7 +548,7 @@ function Dashboard() {
           ) {
             try {
               const subjectResponse =
-                await fetch(
+                await apiFetch(
                   `${API_BASE}/api/quiz/subjects`,
                   {
                     credentials:
@@ -609,7 +609,7 @@ function Dashboard() {
             analyticsResponse,
           ] =
             await Promise.all([
-              fetch(
+              apiFetch(
                 `${API_BASE}/api/results?limit=100`,
                 {
                   credentials:
@@ -617,7 +617,7 @@ function Dashboard() {
                 }
               ),
 
-              fetch(
+              apiFetch(
                 `${API_BASE}/api/analytics/topics`,
                 {
                   credentials:

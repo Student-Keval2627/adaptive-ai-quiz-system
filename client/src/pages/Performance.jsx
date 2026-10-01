@@ -1,4 +1,4 @@
-import { API_BASE } from "../config/api";
+import { API_BASE, apiFetch } from "../config/api";
 
 import {
   useEffect,
@@ -265,7 +265,7 @@ function Performance() {
           setError("");
 
           const userResponse =
-            await fetch(
+            await apiFetch(
               `${API_BASE}/api/auth/me`,
               {
                 credentials:
@@ -309,7 +309,7 @@ function Performance() {
             analyticsResponse,
             subjectResponse,
           ] = await Promise.all([
-            fetch(
+            apiFetch(
               `${API_BASE}/api/results?limit=100`,
               {
                 credentials:
@@ -317,7 +317,7 @@ function Performance() {
               }
             ),
 
-            fetch(
+            apiFetch(
               `${API_BASE}/api/analytics/topics`,
               {
                 credentials:
@@ -325,7 +325,7 @@ function Performance() {
               }
             ),
 
-            fetch(
+            apiFetch(
               `${API_BASE}/api/quiz/subjects`,
               {
                 credentials:

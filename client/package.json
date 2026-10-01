@@ -4,11 +4,16 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "prepare:questions": "node scripts/copy-question-bank.mjs",
+    "predev": "npm run prepare:questions",
     "dev": "vite",
+    "prebuild": "npm run prepare:questions",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {
+    "firebase": "^12.19.0",
     "lucide-react": "^1.37.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",

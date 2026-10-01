@@ -1,4 +1,4 @@
-import { API_BASE } from "./config/api";
+import { API_BASE, apiFetch } from "./config/api";
 
 import {
   BrowserRouter,
@@ -50,7 +50,7 @@ function ProtectedRoute({
       async () => {
         try {
           const response =
-            await fetch(
+            await apiFetch(
               `${API_BASE}/api/auth/me`,
               {
                 credentials:

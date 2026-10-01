@@ -1,4 +1,4 @@
-import { API_BASE } from "../config/api";
+import { API_BASE, apiFetch } from "../config/api";
 
 import {
   useEffect,
@@ -118,7 +118,7 @@ function WeakTopics() {
           ============================================== */
 
           const userResponse =
-            await fetch(
+            await apiFetch(
               `${API_BASE}/api/auth/me`,
               {
                 credentials:
@@ -168,7 +168,7 @@ function WeakTopics() {
             analyticsResponse,
             weakResponse,
           ] = await Promise.all([
-            fetch(
+            apiFetch(
               `${API_BASE}/api/analytics/topics`,
               {
                 credentials:
@@ -176,7 +176,7 @@ function WeakTopics() {
               }
             ),
 
-            fetch(
+            apiFetch(
               `${API_BASE}/api/analytics/weak-topics?limit=10`,
               {
                 credentials:
